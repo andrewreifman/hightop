@@ -14,3 +14,14 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+
+##
+*.*~
+~*.*
