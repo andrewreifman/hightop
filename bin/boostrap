@@ -21,8 +21,6 @@ add_git_remote_if_needed() {
 
 # Brew packages
 brew_install_if_needed postgresql
-brew_install_if_needed redis
-brew_install_if_needed elasticsearch
 brew_install_if_needed heroku-toolbelt
 
 # database.yml
