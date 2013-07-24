@@ -6,4 +6,30 @@ html
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   body
+  
+.navbar.navbar-inverse.navbar-fixed-top
+.navbar-inner
+.container
+  button.btn.btn-navbar data-target=".nav-collapse" data-toggle="collapse" type="button"
+    span.icon-bar
+    span.icon-bar
+    span.icon-bar
+  a.brand href="./index.html"
+  .nav-collapse.collapse
+    ul.nav
+      li.active
+        a href="./index.html"
+      li
+        a href="./getting-started.html"
+      li
+        a href="./scaffolding.html"
+      li
+        a href="./base-css.html"
+      li
+        a href="./components.html"
+      li
+        a href="./javascript.html"
+      li
+        a href="./customize.html"
+
     = yield
