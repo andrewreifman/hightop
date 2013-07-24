@@ -37,6 +37,8 @@ gem 'slim-rails'
 
 gem 'compass-rails'
 
+# Adds datatables gem
+gem 'jquery-datatables-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
