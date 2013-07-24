@@ -35,10 +35,16 @@ end
 gem 'foreman'
 gem 'slim-rails'
 
+# Adds compass gem
 gem 'compass-rails'
 
 # Adds datatables gem
 gem 'jquery-datatables-rails'
+
+# Adds twitter bootstrap gem
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                              :github => 'anjlab/bootstrap-rails',
+                              :branch => '3.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

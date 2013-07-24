@@ -10,6 +10,8 @@
  *
  *= require_self
  *= require normalize
+ *= require twitter/bootstrap
  *= require style
+ *= require dataTables/jquery.dataTables
  *= require_tree .
  */

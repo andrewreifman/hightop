@@ -2,8 +2,27 @@ doctype
 html
   head
     title Se7en
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato", media: "all", "data-turbolinks-track" => true
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   body
+
+    header
+      .admin-bar
+        .left
+          .logo
+          .searchbar
+
+        .right
+          ul.admin-nav
+            li
+              = link_to "Link", charts_path
+
     = yield
+
+    footer
+      a.top-link href="link.html" rel="Link"
+        = image_tag ""
+        Happy there
+
