@@ -35,6 +35,9 @@ end
 gem 'foreman'
 gem 'slim-rails'
 
+gem 'compass-rails'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
