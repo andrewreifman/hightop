@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require dataTables/jquery.dataTables
-//= require twitter/bootstrap
+//= require bootstrap
 //= require_tree .
 
 

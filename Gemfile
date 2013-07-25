@@ -42,9 +42,7 @@ gem 'compass-rails'
 gem 'jquery-datatables-rails'
 
 # Adds twitter bootstrap gem
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                              :github => 'anjlab/bootstrap-rails',
-                              :branch => '3.0.0'
+gem 'bootstrap-sass', '~> 2.3.2.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
