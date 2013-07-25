@@ -33,3 +33,5 @@ $ ->
 	  spotRadius: 6
 	  composite: true
 
+$ ->
+  $(".chart").easyPieChart {}
