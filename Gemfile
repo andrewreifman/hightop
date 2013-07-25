@@ -47,6 +47,9 @@ gem 'bootstrap-sass', '~> 2.3.2.1'
 # Adds font awesome icon font
 gem "font-awesome-rails"
 
+# Adds Sparkline gem
+gem 'jquery-sparkline-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
