@@ -1,15 +1,40 @@
-h1 Hello World,
-h2 It's nice to meet you.
-h3 Other planets are great
-p But you are the only
-ul
-	li One that I love
-	li Sincerely, Human.
+.container-fluid
+	.row-fluid
+		.span12
+			.span3
+				.stats-container
+					.number 86%
+					.text Overall growth
+			.span3
+				.stats-container
+					.number 86%
+					.text Overall growth
+			.span3
+				.stats-container
+					.number 86%
+					.text Overall growth
+			.span3
+				.stats-container
+					.number 86%
+					.text Overall growth
 
-.row
-	.span8.linechart
-		span#linecharts Loading...
 
+
+	.row-fluid
+		.span8.widget-container
+				.heading 
+					| Line chart
+					.pull-right.btn-group data-toggle="buttons-radio"
+						 button.btn.btn-primary.active type="button" Day
+						 button.btn.btn-primary type="button" Week
+						 button.btn.btn-primary type="button" Month
+
+				span#linecharts Loading...
+
+		.span4
+			.widget-container
+				.heading 
+					| Bar graph
 
 
 h2 It's nice to meet you.
