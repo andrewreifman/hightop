@@ -44,6 +44,9 @@ gem 'jquery-datatables-rails'
 # Adds twitter bootstrap gem
 gem 'bootstrap-sass', '~> 2.3.2.1'
 
+# Adds font awesome icon font
+gem "font-awesome-rails"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
