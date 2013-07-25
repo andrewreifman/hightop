@@ -34,4 +34,9 @@ $ ->
 	  composite: true
 
 $ ->
-  $(".chart").easyPieChart {}
+  $(".chart").easyPieChart
+  	size: 200
+  	lineWidth: 20
+  	lineCap: "square"
+  	barColor: "#81e970"
+  	animate: 800
