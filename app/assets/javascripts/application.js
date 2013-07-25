@@ -15,6 +15,9 @@
 //= require turbolinks
 //= require dataTables/jquery.dataTables
 //= require bootstrap
+//= require jquery.easy-pie-chart
+//= require jquery.vmap.min
+//= require excanvas.min
 //= require_tree .
 
 

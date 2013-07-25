@@ -12,5 +12,6 @@
  *= require normalize
  *= require style
  *= require dataTables/jquery.dataTables
+ *= require jquery.easy-pie-chart
  *= require_tree .
  */
