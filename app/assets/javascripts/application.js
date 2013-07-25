@@ -17,6 +17,10 @@
 //= require bootstrap
 //= require jquery.sparkline.min
 //= require main
+//= require jquery.easy-pie-chart
+//= require jquery.vmap.min
+//= require excanvas.min
+
 //= require_tree .
 
 
