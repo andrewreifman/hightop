@@ -15,6 +15,8 @@
 //= require turbolinks
 //= require dataTables/jquery.dataTables
 //= require bootstrap
+//= require jquery.sparkline.min
+//= require main
 //= require_tree .
 
 
