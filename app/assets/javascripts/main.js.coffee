@@ -33,6 +33,28 @@ $ ->
 	  spotRadius: 6
 	  composite: true
 
+	  $("#barcharts").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180, 300, 180, 200],
+		 type: "bar"
+		 height: "40px"
+		 barSpacing: 3
+		 barWidth: 8
+		 barColor: "#acaeaf"
+
+		 $("#barcharts2").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180, 300, 180, 200],
+		 type: "bar"
+		 height: "40px"
+		 barSpacing: 3
+		 barWidth: 8
+		 barColor: "#acaeaf"
+
+		 $("#barcharts3").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180, 300, 180, 200],
+		 type: "bar"
+		 height: "40px"
+		 barSpacing: 3
+		 barWidth: 8
+		 barColor: "#acaeaf"
+
+
 $ ->
   $(".chart").easyPieChart
   	size: 200
@@ -40,3 +62,6 @@ $ ->
   	lineCap: "square"
   	barColor: "#81e970"
   	animate: 800
+
+
+
