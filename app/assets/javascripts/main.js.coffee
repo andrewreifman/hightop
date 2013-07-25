@@ -57,7 +57,7 @@ $ ->
 
 $ ->
   $(".chart").easyPieChart
-  	size: 200
+  	size: 240
   	lineWidth: 20
   	lineCap: "square"
   	barColor: "#81e970"
