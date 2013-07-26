@@ -18,24 +18,65 @@
 					.number 24%
 					.text Growth
 
-
-
 	.row-fluid
 		.span8.widget-container
 				.heading 
-					| Line chart
+					i.icon-bar-chart Line chart
 					.pull-right.btn-group data-toggle="buttons-radio"
 						 button.btn.btn-primary.active type="button" Day
 						 button.btn.btn-primary type="button" Week
 						 button.btn.btn-primary type="button" Month
-
 				span#linecharts Loading...
 
 		.span4
 			.widget-container
-				.heading Bar graph
-				.chart data-percent="73" 73
+				.heading 
+					| Bar graph 
+					i.icon-refresh.pull-right 
+				.inline.text-center
+					.chart.pie-number data-percent="73" 73%
 
+	.row-fluid
+		.span12
+			.span4.widget-container-sm
+				.heading 
+					i.icon-refresh Bar graph 
+				span#barcharts Loading...
+			.span4.widget-container-sm
+				.heading 
+					i.icon-refresh Bar graph 
+				span#barcharts2 Loading...
+			.span4.widget-container-sm
+				.heading 
+					i.icon-refresh Bar graph 
+				span#barcharts3 Loading...
 
+	.row-fluid
+		.span12
+			.span6
+				.widget-container
+					.heading 
+						i.icon-list Bar graph 
+						i.icon-plus.pull-right 
+					.widget-scroll
+						ul
+							li List1
+							li List2
+							li List1
+							li List2
+							li List1
+							li List2
+							li List1
+							li List2
+							li List1
+							li List2
+							li List1
+							li List2
+							li List1
+							li List2
+							li List1
+							li List2
 
-h2 It's nice to meet you.
+			.span6
+				.widget-container Trial
+					
