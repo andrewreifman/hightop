@@ -9,17 +9,25 @@
 @import "bootstrap-responsive"
 @import font-awesome
 
+$blue: #007aff
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  outline: 0 !important
+
 body
   font-family: 'Lato', sans-serif
   background: #eee
-  padding-top: 110px
+  padding-top: 140px
 
 .navbar
-  background: rgba(248,248,248,.94)
+  background: rgba(248,248,248,.92)
   box-shadow: 0 1px 1px rgba(0,0,0,.1)
 
   .container-fluid.top-bar
-    height: 45px
+    height: 46px
     border-bottom: 1px solid #e6e6e6
 
     .logo
@@ -53,35 +61,209 @@ body
 
         > a
           display: block
+          height: 100%
+          padding: 8px 0 0 8px
+
+          &:hover
+            background: #eee
 
           > span
             background: url(../assets/admin-sprite.png) no-repeat top left
             display: block
             width: 28px
             height: 28px
-            margin: 8px 0 0 8px
             text-indent: -9999em
 
+        &.open, &.active, &.open.active
+          > a
+            background-color: #eee
+            span
+              background-position: left bottom
+
+        &.messages
+          a > span
+            background-position: -28px top
+
+          &.open, &.active, &.open.active
+            > a
+              background-color: #eee
+              span
+                background-position: -28px bottom
+
+        &.settings
+          a > span
+            background-position: -56px top
+
+          &.open, &.active, &.open.active
+            > a
+              background-color: #eee
+              span
+                background-position: -56px bottom
+
+        &.user
+          width: auto
+          margin-left: 5px
+
+          > a
+            padding: 5px 10px 0
+            color: #999
+
+          img
+            border-radius: 50%
+            margin-right: 8px
+
+          .caret
+            vertical-align: middle
+            margin: -2px 0 0 8px
+            border-top-color: #999
+
+  .container-fluid.main-nav
+    height: 66px
+
+    .nav
+      text-align: center
+      width: 100%
+      height: 100%
+
+      > li
+        float: none
+        display: inline-block
+        text-align: center
+        margin: 0 10px
+
+        > a
+          display: block
+          height: 100%
+          text-align: center
+          padding: 10px 15px 0
+          font-size: 12px
+          font-weight: 400
+          color: #999
+
+          span
+            background: url(../assets/nav-sprite.png) no-repeat top left
+            display: block
+            width: 28px
+            height: 28px
+            margin: 0 auto 2px
+
+          .caret
+            margin-left: 6px
+            margin-right: -6px
+            border-top-color: #999
+
+          &.current
+            color: $blue
+
+            span
+              background-position: left bottom
+
+            .caret
+              border-top-color: $blue
+
+          &:hover
+            background: #eee
+
+        .dropdown-menu
+          text-align: left
+
+        &.ui
+          a
+            span
+              background-position: -28px top
+
+            &.current span
+              background-position: -28px bottom
+
+        &.forms
+          a
+            span
+              background-position: -56px top
+
+            &.current span
+              background-position: -56px bottom
+
+        &.charts
+          a
+            span
+              background-position: -84px top
+
+            &.current span
+              background-position: -84px bottom
+
+        &.pages
+          a
+            span
+              background-position: -112px top
+
+            &.current span
+              background-position: -112px bottom
+
+        &.gallery
+          a
+            span
+              background-position: -140px top
+
+            &.current span
+              background-position: -140px bottom
 
   .nav > li > a
     padding: 0
 
-.dropdown-menu.right
-  left: auto
-  right: 0px
-  
-  &:before
-    left: auto !important
-    right: 9px
-  
-  &:after
-    left: auto !important
-    right: 10px
+  .nav > li > .dropdown-menu:before,
+  .nav > li > .dropdown-menu:after
+    display: none
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Dropdown Styles
+/*-----------------------------------------------------------------------------------*/
+.dropdown-menu
+  margin-top: 1px
+  border-radius: 0
+  box-shadow: 0 1px 2px rgba(0,0,0,.2)
+  background: rgba(255,255,255,.95)
+  border: 0
+  padding: 0
+
+  > li
+    > a
+      padding: 10px 15px 10px 2px
+      border-bottom: 1px solid #e2e2e2
+      color: #999
+      font-size: 12px
+      margin-left: 14px
+
+      &:hover
+        border-bottom-color: $blue
+        color: $blue
+        background: transparent
+
+      i
+        margin-right: 10px
+        font-size: 18px
+        vertical-align: middle
+
+    &:last-child
+      > a
+        border: 0
+
+  &.right
+    left: auto
+    right: 0px
+    
+    &:before
+      left: auto !important
+      right: 9px
+    
+    &:after
+      left: auto !important
+      right: 10px
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  Statistics Figures
 /*-----------------------------------------------------------------------------------*/
-
 .stats-container
   height: 120px
   background: white
@@ -104,7 +286,6 @@ body
 /*-----------------------------------------------------------------------------------*/
 /*  Widget-Container
 /*-----------------------------------------------------------------------------------*/
-
 .widget-container
   height: 320px
   background: white
