@@ -82,7 +82,7 @@ html
                 li= link_to "Icons", icons_path
                 li= link_to "Widgets", widgets_path
                 li= link_to "Typography", typo_path
-                li= link_to "Grid", grid_path
+                li= link_to "Grid Layout", grid_path
             li.forms
               = link_to forms_path, class: cp(forms_path) do
                 span
@@ -100,4 +100,5 @@ html
                 span
                 | Gallery
 
-    = yield
+    .container-fluid
+      = yield

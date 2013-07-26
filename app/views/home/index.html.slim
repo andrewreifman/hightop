@@ -1,82 +1,81 @@
-.container-fluid
-	.row-fluid
-		.span12
-			.span3
-				.stats-container
-					.number 86%
-					.text Overall growth
-			.span3
-				.stats-container
-					.number 613
-					.text Unique visitors this month
-			.span3
-				.stats-container
-					.number 1024
-					.text Sales
-			.span3
-				.stats-container
-					.number 24%
-					.text Growth
+.row-fluid
+	.span12
+		.span3
+			.stats-container
+				.number 86%
+				.text Overall growth
+		.span3
+			.stats-container
+				.number 613
+				.text Unique visitors this month
+		.span3
+			.stats-container
+				.number 1024
+				.text Sales
+		.span3
+			.stats-container
+				.number 24%
+				.text Growth
 
-	.row-fluid
-		.span8.widget-container
-				.heading 
-					i.icon-bar-chart Line chart
-					.pull-right.btn-group data-toggle="buttons-radio"
-						 button.btn.btn-primary.active type="button" Day
-						 button.btn.btn-primary type="button" Week
-						 button.btn.btn-primary type="button" Month
-				span#linecharts Loading...
+.row-fluid
+	.span8.widget-container
+			.heading 
+				i.icon-bar-chart Line chart
+				.pull-right.btn-group data-toggle="buttons-radio"
+					 button.btn.btn-primary.active type="button" Day
+					 button.btn.btn-primary type="button" Week
+					 button.btn.btn-primary type="button" Month
+			span#linecharts Loading...
 
-		.span4
+	.span4
+		.widget-container
+			.heading 
+				| Bar graph
+				i.icon-refresh.pull-right 
+			.inline.text-center
+				.chart.pie-number data-percent="73" 73%
+
+.row-fluid
+	.span12
+		.span4.widget-container-sm
+			.heading 
+				i.icon-refresh Bar graph 
+			span#barcharts Loading...
+		.span4.widget-container-sm
+			.heading 
+				i.icon-refresh Bar graph 
+			span#barcharts2 Loading...
+		.span4.widget-container-sm
+			.heading 
+				i.icon-refresh Bar graph 
+			span#barcharts3 Loading...
+
+.row-fluid
+	.span12
+		.span6
 			.widget-container
 				.heading 
-					| Bar graph 
-					i.icon-refresh.pull-right 
-				.inline.text-center
-					.chart.pie-number data-percent="73" 73%
+					i.icon-list Bar graph 
+					i.icon-plus.pull-right 
+				.widget-scroll
+					ul
+						li List1
+						li List2
+						li List1
+						li List2
+						li List1
+						li List2
+						li List1
+						li List2
+						li List1
+						li List2
+						li List1
+						li List2
+						li List1
+						li List2
+						li List1
+						li List2
 
-	.row-fluid
-		.span12
-			.span4.widget-container-sm
-				.heading 
-					i.icon-refresh Bar graph 
-				span#barcharts Loading...
-			.span4.widget-container-sm
-				.heading 
-					i.icon-refresh Bar graph 
-				span#barcharts2 Loading...
-			.span4.widget-container-sm
-				.heading 
-					i.icon-refresh Bar graph 
-				span#barcharts3 Loading...
-
-	.row-fluid
-		.span12
-			.span6
-				.widget-container
-					.heading 
-						i.icon-list Bar graph 
-						i.icon-plus.pull-right 
-					.widget-scroll
-						ul
-							li List1
-							li List2
-							li List1
-							li List2
-							li List1
-							li List2
-							li List1
-							li List2
-							li List1
-							li List2
-							li List1
-							li List2
-							li List1
-							li List2
-							li List1
-							li List2
-
-			.span6
-				.widget-container Trial
-					
+		.span6
+			.widget-container Trial
+				
