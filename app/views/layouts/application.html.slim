@@ -57,7 +57,7 @@ html
                     i.icon-gear
                     | Account Settings
                 li
-                  = link_to "#" do
+                  = link_to login_path do
                     i.icon-signout
                     | Logout
 
@@ -69,20 +69,22 @@ html
         .nav-collapse.collapse
           ul.nav
             li.dashboard
-              = link_to "#", class: "" do
+              = link_to root_path, class: cp(root_path) do
                 span
                 | Dashboard
             li.dropdown.ui
-              = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp(root_path) do
+              = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp(ui_path) do
                 span
                 | UI
                 b.caret
               ul.dropdown-menu
-                li= link_to "Item 1"
-                li= link_to "Item 2"
-                li= link_to "Item 3"
+                li= link_to "Buttons", buttons_path
+                li= link_to "Icons", icons_path
+                li= link_to "Widgets", widgets_path
+                li= link_to "Typography", typo_path
+                li= link_to "Grid", grid_path
             li.forms
-              = link_to "#", class: "" do
+              = link_to forms_path, class: cp(forms_path) do
                 span
                 | Forms
             li.charts
@@ -90,11 +92,11 @@ html
                 span
                 | Charts
             li.pages
-              = link_to "#", class: "" do
+              = link_to maps_path, class: cp(maps_path) do
                 span
                 | Pages
             li.gallery
-              = link_to "#", class: "" do
+              = link_to gallery_path, class: cp(gallery_path) do
                 span
                 | Gallery
 
