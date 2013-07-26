@@ -1,9 +1,5 @@
 $ ->
 
-	###
-	This code runs when everything has been loaded on the page
-	###
-
 	$("#linecharts").sparkline [160, 240, 250, 280, 300, 250, 230, 200, 280, 380, 400, 360, 300, 220, 200, 150, 100, 100, 180, 180, 200, 160, 220, 140],
 	  type: "line"
 	  width: "100%"
@@ -33,29 +29,28 @@ $ ->
 	  spotRadius: 6
 	  composite: true
 
-	  $("#barcharts").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180, 300, 180, 200],
-		 type: "bar"
-		 height: "40px"
-		 barSpacing: 3
-		 barWidth: 8
-		 barColor: "#acaeaf"
+	$("#barcharts").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180, 300, 180, 200],
+		type: "bar"
+		height: "40px"
+		barSpacing: 3
+		barWidth: 8
+		barColor: "#acaeaf"
 
-		 $("#barcharts2").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180, 300, 180, 200],
-		 type: "bar"
-		 height: "40px"
-		 barSpacing: 3
-		 barWidth: 8
-		 barColor: "#acaeaf"
+	$("#barcharts2").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180, 300, 180, 200],
+		type: "bar"
+		height: "40px"
+		barSpacing: 3
+		barWidth: 8
+		barColor: "#acaeaf"
 
-		 $("#barcharts3").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180, 300, 180, 200],
-		 type: "bar"
-		 height: "40px"
-		 barSpacing: 3
-		 barWidth: 8
-		 barColor: "#acaeaf"
+	$("#barcharts3").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180, 300, 180, 200],
+		type: "bar"
+		height: "40px"
+		barSpacing: 3
+		barWidth: 8
+		barColor: "#acaeaf"
 
 
-$ ->
   $(".chart").easyPieChart
   	size: 240
   	lineWidth: 20

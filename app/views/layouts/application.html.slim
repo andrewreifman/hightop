@@ -21,21 +21,23 @@ html
           ul.nav
             li.dropdown.notifications
               a.dropdown-toggle data-toggle="dropdown" href="#"
-                | Notifications
+                span Notifications
+                p.counter 4
               ul.dropdown-menu
                 li= link_to "Item 1"
                 li= link_to "Item 2"
                 li= link_to "Item 3"
             li.dropdown.messages
               a.dropdown-toggle data-toggle="dropdown" href="#"
-                | Messages
+                span Messages
+                p.counter 3
               ul.dropdown-menu
                 li= link_to "Item 1"
                 li= link_to "Item 2"
                 li= link_to "Item 3"
             li.dropdown.settings
               a.dropdown-toggle data-toggle="dropdown" href="#"
-                | Settings
+                span Settings
               ul.dropdown-menu
                 li= link_to "Item 1"
                 li= link_to "Item 2"
@@ -66,14 +68,34 @@ html
       .container-fluid.main-nav
         .nav-collapse.collapse
           ul.nav
-            li.dropdown.general
-              a.dropdown-toggle data-toggle="dropdown" href="#"
+            li.dashboard
+              = link_to "#", class: "" do
                 span
-                | General
+                | Dashboard
+            li.dropdown.ui
+              = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp(root_path) do
+                span
+                | UI
                 b.caret
               ul.dropdown-menu
                 li= link_to "Item 1"
                 li= link_to "Item 2"
                 li= link_to "Item 3"
+            li.forms
+              = link_to "#", class: "" do
+                span
+                | Forms
+            li.charts
+              = link_to charts_path, class: cp(charts_path) do
+                span
+                | Charts
+            li.pages
+              = link_to "#", class: "" do
+                span
+                | Pages
+            li.gallery
+              = link_to "#", class: "" do
+                span
+                | Gallery
 
     = yield
