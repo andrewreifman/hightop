@@ -63,6 +63,7 @@ body
           display: block
           height: 100%
           padding: 8px 0 0 8px
+          position: relative
 
           &:hover
             background: #eee
@@ -73,6 +74,21 @@ body
             width: 28px
             height: 28px
             text-indent: -9999em
+
+          p.counter
+            position: absolute
+            top: 5px
+            left: -2px
+            height: 18px
+            min-width: 18px
+            padding: 0 5px
+            border-radius: 9px
+            background: #e62828
+            text-align: center
+            line-height: 16px
+            color: #FFF
+            font-size: 11px
+            font-weight: 100
 
         &.open, &.active, &.open.active
           > a

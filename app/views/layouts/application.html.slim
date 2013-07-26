@@ -22,6 +22,7 @@ html
             li.dropdown.notifications
               a.dropdown-toggle data-toggle="dropdown" href="#"
                 span Notifications
+                p.counter 4
               ul.dropdown-menu
                 li= link_to "Item 1"
                 li= link_to "Item 2"
@@ -29,6 +30,7 @@ html
             li.dropdown.messages
               a.dropdown-toggle data-toggle="dropdown" href="#"
                 span Messages
+                p.counter 3
               ul.dropdown-menu
                 li= link_to "Item 1"
                 li= link_to "Item 2"
@@ -84,7 +86,7 @@ html
                 span
                 | Forms
             li.charts
-              = link_to "#", class: cp(charts_path) do
+              = link_to charts_path, class: cp(charts_path) do
                 span
                 | Charts
             li.pages
