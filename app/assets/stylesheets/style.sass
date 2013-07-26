@@ -5,6 +5,9 @@
 
 // @import compass/reset
 
+$brown: #5f4942
+$orange: #e99819
+
 @import "bootstrap"
 @import "bootstrap-responsive"
 @import font-awesome
@@ -307,7 +310,7 @@ h1
   font-size: 5em
   font-weight: 100
   color: #007aff
-  line-height: 1em
+  line-height: 1.1em
   text-align: center
 
 .text
@@ -345,6 +348,12 @@ h1
   margin: 0 0 20 0
 
 .widget-scroll
+  position:relative
+
+.widget-scroll .heading
+  position:absolute!important
+
+.widget-scroll .scroll-content
   height: 220px
   overflow-y: scroll
   overfow: hidden
@@ -355,6 +364,7 @@ h1
 .easyPieChart
   position: relative
   text-align: center
+  margin: 0 auto
 
   canvas
     position: absolute
@@ -477,3 +487,7 @@ h1
       span.icon-bar
         background-color: #FFF
         box-shadow: none
+
+
+.ico
+  text-align: center
