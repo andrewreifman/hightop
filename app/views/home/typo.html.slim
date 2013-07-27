@@ -2,8 +2,29 @@
   h1 Typography
 
 .row-fluid
-  .span6
-    .widget-container
+  .widget-container.fluid-height.clearfix
+    .span4
+      .heading 
+        i.icon-book
+        | Sample Text With Lead
+      .widget-content.padded
+        p.lead Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit.
+
+        p Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor.
+
+        p Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius. 
+
+    .span4
+      .heading 
+        i.icon-book
+        | Sample Text
+      .widget-content.padded
+        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo.
+
+        p Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor.
+        p Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat.
+
+    .span4
       .heading 
         i.icon-font
         | Headings
@@ -15,27 +36,15 @@
         h5 h5. Heading 5
         h6 h6. Heading 6
 
-  .span6
-    .widget-container
-      .heading 
-        i.icon-book
-        | Sample Text
-      .widget-content.padded
-        p.lead Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id. 
-
-        p Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl.
-
-        p Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo. Integer leo pede, ornare a, lacinia eu, vulputate vel, nisl.
-
 .row-fluid
   .span4
-    .widget-container
+    .widget-container.fluid-height
       .heading
         i.icon-list-ul
         | Unordered List
       .widget-content.padded
         ul
-          li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+          li Lorem ipsum dolor sit amet, consectetuer.
           li Aliquam tincidunt mauris eu risus.
           li Vestibulum auctor dapibus neque.
           li Nunc dignissim risus id metus.
@@ -43,17 +52,17 @@
           li Vivamus vestibulum nulla nec ante.
           li Praesent placerat risus quis eros.
           li Fusce pellentesque suscipit nibh.
-          li Integer vitae libero ac risus egestas placerat.
+          li Integer vitae libero ac risus egestas.
           li Vestibulum commodo felis quis tortor.
 
   .span4
-    .widget-container
+    .widget-container.fluid-height
       .heading
         i.icon-list-ol
         | Ordered List
       .widget-content.padded
         ol
-          li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+          li Lorem ipsum dolor sit amet, consectetuer.
           li Aliquam tincidunt mauris eu risus.
           li Vestibulum auctor dapibus neque.
           li Nunc dignissim risus id metus.
@@ -61,17 +70,17 @@
           li Vivamus vestibulum nulla nec ante.
           li Praesent placerat risus quis eros.
           li Fusce pellentesque suscipit nibh.
-          li Integer vitae libero ac risus egestas placerat.
+          li Integer vitae libero ac risus egestas.
           li Vestibulum commodo felis quis tortor.
 
   .span4
-    .widget-container
+    .widget-container.fluid-height
       .heading
         i.icon-reorder
         | Unstyled List
       .widget-content.padded
         ul.no-style
-          li Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+          li Lorem ipsum dolor sit amet, consectetuer adipis.
           li Aliquam tincidunt mauris eu risus.
           li Vestibulum auctor dapibus neque.
           li Nunc dignissim risus id metus.
@@ -83,24 +92,37 @@
           li Vestibulum commodo felis quis tortor.
 
 .row-fluid
-  .span6
-    .widget-container
+  .widget-container.fluid-height.clearfix
+    .span3
+      .heading 
+        i.icon-home
+        | Address
+      .widget-content.padded
+        dl
+          dt Description lists
+          dd A description list is perfect for defining terms.
+          dt Euismod
+          dd Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus.
+          dt Malesuada porta
+          dd Etiam porta sem malesuada magna mollis euismod.
+
+
+    .span6
       .heading 
         i.icon-quote-left
         | Blockquotes
       .widget-content.padded
         blockquote
           p
-            | Lorem ipsum velit ullamco anim pariatur proident eu deserunt laborum. Lorem ipsum ad in nostrud adipisicing cupidatat anim officia ad id cupidatat veniam quis elit ullamco Excepteur ullamco.
+            | Lorem ipsum velit ullamco anim pariatur proident eu deserunt laborum. Lorem ipsum ad in nostrud adipisicing cupidatat anim officia ad id cupidatat veniam quis elit ullamco.
           small @JohnDoe
 
         blockquote.pull-right
           p
-            | Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. 
+            | Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est.
           small @JaneDoe
 
-  .span6
-    .widget-container
+    .span3
       .heading 
         i.icon-home
         | Address
