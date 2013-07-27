@@ -2,7 +2,7 @@ doctype
 html
   head
     title Se7en
-    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:100,300,400,700", media: "all", "data-turbolinks-track" => true
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:100,300,400,700", media: "all"
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
@@ -19,7 +19,7 @@ html
 
         .nav-collapse.collapse.pull-right
           ul.nav
-            li.dropdown.notifications
+            li.dropdown.notifications.hidden-phone
               a.dropdown-toggle data-toggle="dropdown" href="#"
                 span Notifications
                 p.counter 4
@@ -27,7 +27,7 @@ html
                 li= link_to "Item 1"
                 li= link_to "Item 2"
                 li= link_to "Item 3"
-            li.dropdown.messages
+            li.dropdown.messages.hidden-phone
               a.dropdown-toggle data-toggle="dropdown" href="#"
                 span Messages
                 p.counter 3
@@ -35,7 +35,7 @@ html
                 li= link_to "Item 1"
                 li= link_to "Item 2"
                 li= link_to "Item 3"
-            li.dropdown.settings
+            li.dropdown.settings.hidden-phone
               a.dropdown-toggle data-toggle="dropdown" href="#"
                 span Settings
               ul.dropdown-menu

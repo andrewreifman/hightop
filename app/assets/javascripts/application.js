@@ -16,11 +16,10 @@
 //= require dataTables/jquery.dataTables
 //= require bootstrap
 //= require jquery.sparkline.min
-//= require main
 //= require jquery.easy-pie-chart
 //= require jquery.vmap.min
 //= require excanvas.min
-
+//= require main
 //= require_tree .
 
 
