@@ -51,12 +51,21 @@ $(document).ready ->
 		barColor: "#acaeaf"
 
 
-  $(".chart").easyPieChart
-  	size: 240
-  	lineWidth: 20
+  $(".pie-chart1").easyPieChart
+  	size: 220
+  	lineWidth: 12
   	lineCap: "square"
   	barColor: "#81e970"
   	animate: 800
+  	scaleColor: false
+
+  $(".pie-chart2").easyPieChart
+  	size: 220
+  	lineWidth: 12
+  	lineCap: "square"
+  	barColor: "#f46f50"
+  	animate: 800
+  	scaleColor: false
 
 
 

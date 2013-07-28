@@ -10,12 +10,20 @@ $orange: #e99819
 
 @import "bootstrap"
 @import "bootstrap-responsive"
-@import font-awesome
+@import "font-awesome"
 
 /*-----------------------------------------------------------------------------------*/
 /*  Mixins/variables
 /*-----------------------------------------------------------------------------------*/
 $blue: #007aff
+
+@mixin inline-block
+  display: inline-block
+  *display: inline
+  zoom: 1
+
+.inline
+  @include inline-block
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -359,9 +367,10 @@ dl
 .stats-container
   height: 120px
   background: white
-  border: 1px solid #d8d8d8
-  margin: 0 0 20 0
-  padding: 10 0 0 0
+  // border: 1px solid #d8d8d8
+  box-shadow: 0 1px 1px rgba(0,0,0,.1)
+  margin: 0 0 20px 0
+  padding: 10px 0 0 0
 
 .number
   font-size: 5em
@@ -388,6 +397,12 @@ dl
   &.fluid-height
     height: auto
 
+  &.small
+    height: 120px
+    background: white
+    border: 1px solid #d8d8d8
+    margin: 0 0 20 0
+
   .heading
     background: rgba(255, 255, 255, 0.5)
     padding: 12px 15px
@@ -397,17 +412,13 @@ dl
 
     [class^="icon-"], [class*="icon-"]
       margin-right: 10px
+      &.pull-right
+        margin-right: 0px
 
   .widget-content
     overflow: auto
     &.padded
       padding: 10px 15px 10px
-
-.widget-container-sm
-  height: 120px
-  background: white
-  border: 1px solid #d8d8d8
-  margin: 0 0 20 0
 
 .widget-scroll
   position:relative
@@ -431,19 +442,18 @@ dl
 .easyPieChart
   position: relative
   text-align: center
-  margin: 0 auto
+  margin: 5px auto 0
 
   canvas
     position: absolute
     top: 0
     left: 0
 
-.inline
-  display: inline-block
-
 .pie-number
-  font-size: 3em
+  font-size: 4.5em
   font-weight: 100
+  letter-spacing: -.05em
+  color: #BBB
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -538,23 +548,164 @@ dl
 
 
 /*-----------------------------------------------------------------------------------*/
+/*  Responsive Styles
+/*-----------------------------------------------------------------------------------*/
+.row-fluid
+  [class*="span"]
+    width: 100%
+    min-height: 30px
+    margin: 0
+    padding: 0 10px
+    &:first-child
+      padding-left: 0
+    &:last-child
+      padding-right: 0
+    &:only-child
+      padding: 0
+  .controls-row [class*="span"] + [class*="span"]
+    margin-left: 2.127659574468085%
+  .span12
+    width: 100%
+    *width: 100%
+  .span11
+    width: 91.66%
+    *width: 91.66%
+  .span10
+    width: 83.33%
+    *width: 83.33%
+  .span9
+    width: 75%
+    *width: 75%
+  .span8
+    width: 66.66%
+    *width: 66.66%
+  .span7
+    width: 58.33%
+    *width: 58.33%
+  .span6
+    width: 50%
+    *width: 50%
+  .span5
+    width: 41.66%
+    *width: 41.66%
+  .span4
+    width: 33.33%
+    *width: 33.33%
+  .span3
+    width: 25%
+    *width: 25%
+  .span2
+    width: 16.66%
+    *width: 16.66%
+  .span1
+    width: 8.33%
+    *width: 8.33%
+  .offset12
+    margin-left: 104.25531914893617%
+    *margin-left: 104.14893617021275%
+    &:first-child
+      margin-left: 102.12765957446808%
+      *margin-left: 102.02127659574467%
+  .offset11
+    margin-left: 95.74468085106382%
+    *margin-left: 95.6382978723404%
+    &:first-child
+      margin-left: 93.61702127659574%
+      *margin-left: 93.51063829787232%
+  .offset10
+    margin-left: 87.23404255319149%
+    *margin-left: 87.12765957446807%
+    &:first-child
+      margin-left: 85.1063829787234%
+      *margin-left: 84.99999999999999%
+  .offset9
+    margin-left: 78.72340425531914%
+    *margin-left: 78.61702127659572%
+    &:first-child
+      margin-left: 76.59574468085106%
+      *margin-left: 76.48936170212764%
+  .offset8
+    margin-left: 70.2127659574468%
+    *margin-left: 70.10638297872339%
+    &:first-child
+      margin-left: 68.08510638297872%
+      *margin-left: 67.9787234042553%
+  .offset7
+    margin-left: 61.70212765957446%
+    *margin-left: 61.59574468085106%
+    &:first-child
+      margin-left: 59.574468085106375%
+      *margin-left: 59.46808510638297%
+  .offset6
+    margin-left: 53.191489361702125%
+    *margin-left: 53.085106382978715%
+    &:first-child
+      margin-left: 51.063829787234035%
+      *margin-left: 50.95744680851063%
+  .offset5
+    margin-left: 44.68085106382979%
+    *margin-left: 44.57446808510638%
+    &:first-child
+      margin-left: 42.5531914893617%
+      *margin-left: 42.4468085106383%
+  .offset4
+    margin-left: 36.170212765957444%
+    *margin-left: 36.06382978723405%
+    &:first-child
+      margin-left: 34.04255319148936%
+      *margin-left: 33.93617021276596%
+  .offset3
+    margin-left: 27.659574468085104%
+    *margin-left: 27.5531914893617%
+    &:first-child
+      margin-left: 25.53191489361702%
+      *margin-left: 25.425531914893618%
+  .offset2
+    margin-left: 19.148936170212764%
+    *margin-left: 19.04255319148936%
+    &:first-child
+      margin-left: 17.02127659574468%
+      *margin-left: 16.914893617021278%
+  .offset1
+    margin-left: 10.638297872340425%
+    *margin-left: 10.53191489361702%
+    &:first-child
+      margin-left: 8.51063829787234%
+      *margin-left: 8.404255319148938%
+
+
+/*-----------------------------------------------------------------------------------*/
 /*  Mobile Styles
 /*-----------------------------------------------------------------------------------*/
-.navbar
-  .container-fluid.top-bar
-    .logo
-      margin: 6px 15px 0 12px
+@media (max-width: 979px)
+  body
+    padding-top: 0
+  .navbar
+    .container-fluid.top-bar
+      .logo
+        margin: 6px 15px 0 12px
 
-    .btn-navbar
-      background: $blue
-      border: 0
-      box-shadow: none
-      margin-top: 9px
-
-      span.icon-bar
-        background-color: #FFF
+      .btn-navbar
+        background: $blue
+        border: 0
         box-shadow: none
+        margin-top: 9px
 
+        span.icon-bar
+          background-color: #FFF
+          box-shadow: none
+
+@media (max-width: 767px)
+  .row-fluid 
+    [class*="span"]
+      display: block
+      float: none
+      width: 100%
+      padding: 0
+    
+    [class*="offset"]:first-child
+      padding: 0
+  
 
 .ico
   text-align: center
