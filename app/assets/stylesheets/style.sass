@@ -91,7 +91,6 @@ dl
   text-shadow: none
 
 
-
 /*-----------------------------------------------------------------------------------*/
 /*  Header Styles
 /*-----------------------------------------------------------------------------------*/
@@ -369,19 +368,18 @@ dl
   background: white
   // border: 1px solid #d8d8d8
   box-shadow: 0 1px 1px rgba(0,0,0,.1)
-  margin: 0 0 20px 0
-  padding: 10px 0 0 0
+  padding: 8px 0 0 0
+  text-align: center
 
 .number
   font-size: 5em
   font-weight: 100
   color: #007aff
   line-height: 1.1em
-  text-align: center
 
 .text
-  text-align: center
-  font-weight: 200
+  font-weight: 300
+  color: #999
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -392,16 +390,13 @@ dl
   background: white
   // border: 1px solid #d8d8d8
   box-shadow: 0 1px 2px rgba(0,0,0,.1)
-  margin: 0 0 20 0
 
   &.fluid-height
     height: auto
 
   &.small
     height: 120px
-    background: white
-    border: 1px solid #d8d8d8
-    margin: 0 0 20 0
+    // border: 1px solid #d8d8d8
 
   .heading
     background: rgba(255, 255, 255, 0.5)
@@ -435,6 +430,14 @@ dl
   h1
     color: #000
     font-weight: 400
+
+/*-----------------------------------------------------------------------------------*/
+/*  jQuery Sparkline Tooltip fix
+/*-----------------------------------------------------------------------------------*/
+.jqstooltip
+  -webkit-box-sizing: content-box
+  -moz-box-sizing: content-box
+  box-sizing: content-box
 
 /*-----------------------------------------------------------------------------------*/
 /*  jQuery Easy Pie Chart Styles
@@ -551,6 +554,7 @@ dl
 /*  Responsive Styles
 /*-----------------------------------------------------------------------------------*/
 .row-fluid
+  margin-bottom: 20px
   [class*="span"]
     width: 100%
     min-height: 30px
