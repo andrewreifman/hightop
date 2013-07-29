@@ -1,0 +1,40 @@
+.row-fluid
+	.span6
+		.widget-container
+			.heading Standard Buttons
+			/! Standard gray button with gradient
+			button.btn.btn-default type="button" Default
+			/! Provides extra visual weight and identifies the primary action in a set of buttons
+			button.btn.btn-primary type="button" Primary
+			/! Indicates a successful or positive action
+			button.btn.btn-success type="button" Success
+			/! Contextual button for informational alert messages
+			button.btn.btn-info type="button" Contextual
+			/! Indicates caution should be taken with this action
+			button.btn.btn-warning type="button" Caution
+			/! Indicates a dangerous or potentially negative action
+			button.btn.btn-danger type="button" Danger
+	.span6
+		.widget-container
+			.heading Dropdown Buttons
+			/! Large button group
+			.btn-group
+			  button.btn.btn-default.btn-large.dropdown-toggle data-toggle="dropdown" type="button"
+			    | Large button
+			    span.caret
+			  ul.dropdown-menu
+			    | \...
+			/! Small button group
+			.btn-group
+			  button.btn.btn-default.btn-small.dropdown-toggle data-toggle="dropdown" type="button"
+			    | Small button
+			    span.caret
+			  ul.dropdown-menu
+			    | \...
+
+			.btn-group.dropup 
+			  button.btn.btn-default type="button" Dropup
+			  button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button" 
+			    span.caret Dropup
+			  ul.dropdown-menu
+			    /! Dropdown menu links
