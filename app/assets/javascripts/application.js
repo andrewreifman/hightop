@@ -20,6 +20,3 @@
 //= require jquery.vmap.min
 //= require excanvas.min
 //= require main
-//= require_tree .
-
-
