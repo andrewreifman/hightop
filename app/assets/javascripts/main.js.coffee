@@ -68,4 +68,24 @@ $(document).ready ->
   	scaleColor: false
 
 
+	$(".navbar").mouseover ->
+	  $(".navbar").removeClass "closed"
+
+	$ ->
+		lastScrollTop = 0
+		delta = 50
+		$(window).scroll (event) ->
+			st = $(this).scrollTop()
+			return  if Math.abs(lastScrollTop - st) <= delta
+			if st > lastScrollTop
+				# downscroll code
+				$('.navbar').addClass "closed"
+				$(".main-nav").css overflow: "hidden"
+			else
+				# upscroll code
+				$('.navbar').removeClass "closed", ->
+					$(".main-nav").css overflow: "visible"
+			lastScrollTop = st
+
+
 

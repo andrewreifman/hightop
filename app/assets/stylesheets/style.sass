@@ -97,6 +97,16 @@ dl
   background: rgba(248,248,248,.94)
   box-shadow: 0 1px 1px rgba(0,0,0,.15)
   padding: 0
+  min-height: 45px
+  height: 112px
+  -webkit-transition: all .3s
+
+  &.closed
+    height: 45px
+
+    .container-fluid.main-nav
+      .nav-collapse
+        margin-top: -76px !important
 
   .container-fluid.top-bar
     height: 46px
@@ -207,92 +217,97 @@ dl
   .container-fluid.main-nav
     height: 66px
 
-    .nav
-      text-align: center
+    .nav-collapse
+      margin-top: 0px
       width: 100%
-      height: 100%
+      -webkit-transition: all .3s
 
-      > li
-        float: none
-        display: inline-block
+      .nav
         text-align: center
-        margin: 0 10px
+        width: 100%
+        height: 100%
 
-        > a
-          display: block
-          height: 100%
+        > li
+          float: none
+          display: inline-block
           text-align: center
-          padding: 10px 15px 0
-          font-size: 12px
-          font-weight: 400
-          color: #999
+          margin: 0 10px
 
-          span
-            background: url(../assets/nav-sprite.png) no-repeat top left
+          > a
             display: block
-            width: 28px
-            height: 28px
-            margin: 0 auto 2px
-
-          .caret
-            margin-left: 6px
-            margin-right: -6px
-            border-top-color: #999
-
-          &.current
-            color: $blue
+            height: 100%
+            text-align: center
+            padding: 10px 15px 0
+            font-size: 12px
+            font-weight: 400
+            color: #999
 
             span
-              background-position: left bottom
+              background: url(../assets/nav-sprite.png) no-repeat top left
+              display: block
+              width: 28px
+              height: 28px
+              margin: 0 auto 2px
 
             .caret
-              border-top-color: $blue
+              margin-left: 6px
+              margin-right: -6px
+              border-top-color: #999
 
-          &:hover
-            background: #eee
+            &.current
+              color: $blue
 
-        .dropdown-menu
-          text-align: left
+              span
+                background-position: left bottom
 
-        &.ui
-          a
-            span
-              background-position: -28px top
+              .caret
+                border-top-color: $blue
 
-            &.current span
-              background-position: -28px bottom
+            &:hover
+              background: #eee
 
-        &.forms
-          a
-            span
-              background-position: -56px top
+          .dropdown-menu
+            text-align: left
 
-            &.current span
-              background-position: -56px bottom
+          &.ui
+            a
+              span
+                background-position: -28px top
 
-        &.charts
-          a
-            span
-              background-position: -84px top
+              &.current span
+                background-position: -28px bottom
 
-            &.current span
-              background-position: -84px bottom
+          &.forms
+            a
+              span
+                background-position: -56px top
 
-        &.pages
-          a
-            span
-              background-position: -112px top
+              &.current span
+                background-position: -56px bottom
 
-            &.current span
-              background-position: -112px bottom
+          &.charts
+            a
+              span
+                background-position: -84px top
 
-        &.gallery
-          a
-            span
-              background-position: -140px top
+              &.current span
+                background-position: -84px bottom
 
-            &.current span
-              background-position: -140px bottom
+          &.pages
+            a
+              span
+                background-position: -112px top
+
+              &.current span
+                background-position: -112px bottom
+
+          &.gallery
+            a
+              span
+                background-position: -140px top
+
+              &.current span
+                background-position: -140px bottom
 
   .nav > li > a
     padding: 0
