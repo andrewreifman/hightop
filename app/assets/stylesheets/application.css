@@ -13,5 +13,4 @@
  *= require bootstrap.min
  *= require style
  *= require dataTables/jquery.dataTables
- *= require_tree .
  */
