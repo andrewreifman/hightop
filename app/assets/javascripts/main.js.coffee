@@ -70,6 +70,9 @@ $(document).ready ->
 
 	$(".navbar").mouseover ->
 	  $(".navbar").removeClass "closed"
+	  setTimeout (->
+	  	$(".navbar").css overflow: "visible"
+	  ), 350
 
 	$ ->
 		lastScrollTop = 0
@@ -80,11 +83,13 @@ $(document).ready ->
 			if st > lastScrollTop
 				# downscroll code
 				$('.navbar').addClass "closed"
-				$(".main-nav").css overflow: "hidden"
+				$(".navbar").css overflow: "hidden"
 			else
 				# upscroll code
-				$('.navbar').removeClass "closed", ->
-					$(".main-nav").css overflow: "visible"
+				$('.navbar').removeClass "closed"
+				setTimeout (->
+					$(".navbar").css overflow: "visible"
+				), 350
 			lastScrollTop = st
 
 
