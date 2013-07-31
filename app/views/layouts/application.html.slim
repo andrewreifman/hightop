@@ -12,7 +12,7 @@ html
 
     .navbar.navbar-fixed-top
       .container-fluid.top-bar
-        button.btn.btn-navbar data-target=".nav-collapse" data-toggle="collapse" type="button"
+        button.navbar-toggle data-target=".nav-collapse" data-toggle="collapse" type="button"
           span.icon-bar
           span.icon-bar
           span.icon-bar
@@ -62,8 +62,8 @@ html
                     | Logout
 
         = link_to "se7en", root_path, class: 'logo'
-        form.navbar-form
-          input.span3 placeholder="Search" type="text"
+        form.navbar-form.form-inline.col-lg-2
+          input.form-control placeholder="Search" type="text"
 
       .container-fluid.main-nav
         .nav-collapse.collapse

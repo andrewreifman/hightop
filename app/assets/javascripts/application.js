@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require dataTables/jquery.dataTables
-//= require bootstrap
+//= require bootstrap.min
 //= require jquery.sparkline.min
 //= require jquery.easy-pie-chart
 //= require jquery.vmap.min
