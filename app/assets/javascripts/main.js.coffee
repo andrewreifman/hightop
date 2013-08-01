@@ -32,25 +32,25 @@ $(document).ready ->
 	  spotRadius: 6
 	  composite: true
 
-	$("#barcharts").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180, 300, 180, 200],
+	$("#barcharts").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180],
 		type: "bar"
-		height: "40px"
-		barSpacing: 3
-		barWidth: 8
+		height: "50px"
+		barSpacing: 7
+		barWidth: 9
 		barColor: "#acaeaf"
 
-	$("#barcharts2").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180, 300, 180, 200],
+	$("#barcharts2").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180],
 		type: "bar"
-		height: "40px"
-		barSpacing: 3
-		barWidth: 8
+		height: "50px"
+		barSpacing: 7
+		barWidth: 9
 		barColor: "#acaeaf"
 
-	$("#barcharts3").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180, 300, 180, 200],
+	$("#barcharts3").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180],
 		type: "bar"
-		height: "40px"
-		barSpacing: 3
-		barWidth: 8
+		height: "50px"
+		barSpacing: 7
+		barWidth: 9
 		barColor: "#acaeaf"
 
 
