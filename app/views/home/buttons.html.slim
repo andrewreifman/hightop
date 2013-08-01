@@ -1,7 +1,9 @@
+
 .row
 	.col-lg-12
+		h1 Buttons
 		.widget-container
-			.heading Standard Buttons
+			.heading Standard
 			.row
 			button.btn.btn-large.btn-default type="button" Default
 			button.btn.btn-large.btn-primary type="button" Primary
@@ -9,55 +11,55 @@
 			button.btn.btn-large.btn-info type="button" Contextual
 			button.btn.btn-large.btn-warning type="button" Caution
 			button.btn.btn-large.btn-danger type="button" Danger
-
-			<br>
 			.row
 			button.btn.btn-default type="button" Default
-			/! Provides extra visual weight and identifies the primary action in a set of buttons
 			button.btn.btn-primary type="button" Primary
-			/! Indicates a successful or positive action
 			button.btn.btn-success type="button" Success
-			/! Contextual button for informational alert messages
 			button.btn.btn-info type="button" Contextual
-			/! Indicates caution should be taken with this action
 			button.btn.btn-warning type="button" Caution
-			/! Indicates a dangerous or potentially negative action
 			button.btn.btn-danger type="button" Danger
-			<br>
+			.row
 			button.btn.btn-mini.btn-default type="button" Default
-			/! Provides extra visual weight and identifies the primary action in a set of buttons
 			button.btn.btn-mini.btn-primary type="button" Primary
-			/! Indicates a successful or positive action
 			button.btn.btn-mini.btn-success type="button" Success
-			/! Contextual button for informational alert messages
 			button.btn.btn-mini.btn-info type="button" Contextual
-			/! Indicates caution should be taken with this action
 			button.btn.btn-mini.btn-warning type="button" Caution
-			/! Indicates a dangerous or potentially negative action
 			button.btn.btn-mini.btn-danger type="button" Danger
+
+			.row
+			button.btn.btn-large.btn-default-outline type="button" Default
+			button.btn.btn-large.btn-primary-outline type="button" Primary
+			button.btn.btn-large.btn-success-outline type="button" Success
+			button.btn.btn-large.btn-info-outline type="button" Contextual
+			button.btn.btn-large.btn-warning-outline type="button" Caution
+			button.btn.btn-large.btn-danger-outline type="button" Danger
+			.row
+			button.btn.btn-default-outline type="button" Default
+			button.btn.btn-primary-outline type="button" Primary
+			button.btn.btn-success-outline type="button" Success
+			button.btn.btn-info-outline type="button" Contextual
+			button.btn.btn-warning-outline type="button" Caution
+			button.btn.btn-danger-outline type="button" Danger
+			.row
+			button.btn.btn-mini.btn-default-outline type="button" Default
+			button.btn.btn-mini.btn-primary-outline type="button" Primary
+			button.btn.btn-mini.btn-success-outline type="button" Success
+			button.btn.btn-mini.btn-info-outline type="button" Contextual
+			button.btn.btn-mini.btn-warning-outline type="button" Caution
+			button.btn.btn-mini.btn-danger-outline type="button" Danger
 
 
 	.col-lg-6
 		.widget-container
-			.heading Dropdown Buttons
-			/! Large button group
-			.btn-group
-			  button.btn.btn-default.btn-large.dropdown-toggle data-toggle="dropdown" type="button"
-			    | Large button
-			    span.caret
-			  ul.dropdown-menu
-			    | \...
-			/! Small button group
-			.btn-group
-			  button.btn.btn-default.btn-small.dropdown-toggle data-toggle="dropdown" type="button"
-			    | Small button
-			    span.caret
-			  ul.dropdown-menu
-			    | \...
-
-			.btn-group.dropup 
-			  button.btn.btn-default type="button" Dropup
-			  button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button" 
-			    span.caret Dropup
-			  ul.dropdown-menu
-			    /! Dropdown menu links
+			.dropdown 
+			| menu
+			  ul.dropdown-menu aria-labelledby="dropdownMenu" role="menu"
+			    li
+			      a href="#" tabindex="-1"
+			    li
+			      a href="#" tabindex="-1"
+			    li
+			      a href="#" tabindex="-1"
+			    li.divider
+			    li
+			      a href="#" tabindex="-1"
