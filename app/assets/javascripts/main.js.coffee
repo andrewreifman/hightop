@@ -3,6 +3,8 @@ $(document).on "ready page:change", ->
 
 $(document).ready ->
 
+  $(".data-table").dataTable();
+
 	$("#linecharts").sparkline [160, 240, 250, 280, 300, 250, 230, 200, 280, 380, 400, 360, 300, 220, 200, 150, 100, 100, 180, 180, 200, 160, 220, 140],
 	  type: "line"
 	  width: "100%"
