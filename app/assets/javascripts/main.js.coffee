@@ -1,14 +1,12 @@
-$(document).on "ready page:change", ->
-  $("[data-toggle='dropdown']").dropdown()
-
 $(document).ready ->
-
-  $(".data-table").dataTable();
-
+	
+	# =============================================================================
+	#   Sparkline JS
+	# =============================================================================
 	$("#linecharts").sparkline [160, 240, 250, 280, 300, 250, 230, 200, 280, 380, 400, 360, 300, 220, 200, 150, 100, 100, 180, 180, 200, 160, 220, 140],
 	  type: "line"
 	  width: "100%"
-	  height: "70%"
+	  height: "245"
 	  lineColor: "#a5e1ff"
 	  fillColor: "rgba(241, 251, 255, 0.9)"
 	  lineWidth: 2
@@ -22,7 +20,7 @@ $(document).ready ->
 	$("#linecharts").sparkline [100, 280, 150, 180, 220, 180, 130, 180, 180, 280, 260, 260, 200, 120, 200, 150, 100, 100, 180, 180, 200, 160, 220, 140],
 	  type: "line"
 	  width: "100%"
-	  height: "70%"
+	  height: "245"
 	  lineColor: "#cfee74"
 	  fillColor: "rgba(244, 252, 225, 0.5)"
 	  lineWidth: 2
@@ -56,6 +54,9 @@ $(document).ready ->
 		barColor: "#acaeaf"
 
 
+	# =============================================================================
+	#   Easy Pie Chart
+	# =============================================================================
   $(".pie-chart1").easyPieChart
   	size: 220
   	lineWidth: 12
@@ -73,6 +74,9 @@ $(document).ready ->
   	scaleColor: false
 
 
+  # =============================================================================
+  #   Navbar scroll animation
+  # =============================================================================
 	$(".navbar").mouseover ->
 	  $(".navbar").removeClass "closed"
 	  setTimeout (->
@@ -96,6 +100,16 @@ $(document).ready ->
 					$(".navbar").css overflow: "visible"
 				), 350
 			lastScrollTop = st
+
+
+	# =============================================================================
+	#   DataTables
+	# =============================================================================
+	$(".data-table").dataTable();
+
+
+$(document).on "ready page:change", ->
+  $("[data-toggle='dropdown']").dropdown()
 
 
 

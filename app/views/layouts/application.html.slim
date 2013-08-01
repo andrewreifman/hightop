@@ -1,7 +1,7 @@
 doctype
 html
   head
-    title Se7en
+    title se7en
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:100,300,400,700", media: "all"
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
@@ -87,6 +87,10 @@ html
               = link_to forms_path, class: cp(forms_path) do
                 span
                 | Forms
+            li.tables
+              = link_to tables_path, class: cp(tables_path) do
+                span
+                | Tables
             li.charts
               = link_to charts_path, class: cp(charts_path) do
                 span

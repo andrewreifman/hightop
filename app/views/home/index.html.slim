@@ -1,37 +1,36 @@
 .row
-	.col-lg-3
-		.stats-container
-			.number 86%
-			.text Overall growth
-	.col-lg-3
-		.stats-container
-			.number 613
-			.text Unique visitors this month
-	.col-lg-3
-		.stats-container
-			.number 1024
-			.text Sales
-	.col-lg-3
-		.stats-container
-			.number 24%
-			.text Growth
+	.col-lg-12
+		.widget-container.stats-container
+			.col-lg-3
+				.number 86%
+				.text Overall growth
+			.col-lg-3
+				.number 613
+				.text Unique visitors this month
+			.col-lg-3
+				.number 1024
+				.text Sales
+			.col-lg-3
+				.number 24%
+				.text Growth
 
 .row
 	.col-lg-6
 		.widget-container
 			.heading 
-				i.icon-bar-chart 
-				| Line chart
 				.pull-right.btn-group data-toggle="buttons-radio"
-					 button.btn.btn-primary.active type="button" Day
-					 button.btn.btn-primary type="button" Week
-					 button.btn.btn-primary type="button" Month
+					 button.btn.btn-primary-outline.active type="button" Day
+					 button.btn.btn-primary-outline type="button" Week
+					 button.btn.btn-primary-outline type="button" Month
+				i.icon-bar-chart
+				| Line chart
 			.widget-content.padded
 				#linecharts Loading...
 
 	.col-lg-3
 		.widget-container
 			.heading 
+				i.icon-adjust
 				| Pie graph 1
 				i.icon-refresh.pull-right
 			.widget-content.padded
@@ -39,6 +38,7 @@
 	.col-lg-3
 		.widget-container
 			.heading 
+				i.icon-adjust
 				| Pie graph 2
 				i.icon-refresh.pull-right
 			.widget-content.padded
@@ -48,33 +48,36 @@
 	.col-lg-4
 		.widget-container.small
 			.heading 
-				i.icon-refresh 
+				i.icon-signal 
 				| Bar graph 
+				i.icon-refresh.pull-right
 			.widget-content.padded
 				#barcharts Loading...
 	.col-lg-4
 		.widget-container.small
 			.heading 
-				i.icon-refresh 
-				| Bar graph 
+				i.icon-signal 
+				| Bar graph
+				i.icon-refresh.pull-right
 			.widget-content.padded
 				#barcharts2 Loading...
 	.col-lg-4
 		.widget-container.small
 			.heading 
-				i.icon-refresh 
+				i.icon-signal 
 				| Bar graph
+				i.icon-refresh.pull-right
 			.widget-content.padded
 				#barcharts3 Loading...
 
 .row
 	.col-lg-6
-		.widget-container
+		.widget-container.scrollable.list-widget
 			.heading 
 				i.icon-list 
-				| Bar graph 
+				| List 
 				i.icon-plus.pull-right 
-			.widget-scroll
+			.widget-content
 				ul
 					li List1
 					li List2
