@@ -95,7 +95,7 @@ dl
 /*  Header Styles
 /*-----------------------------------------------------------------------------------*/
 .navbar
-  background: rgba(248,248,248,.94)
+  background: rgba(255,255,255,.94)
   box-shadow: 0 1px 1px rgba(0,0,0,.15)
   padding: 0
   min-height: 45px
@@ -327,10 +327,7 @@ dl
 /*-----------------------------------------------------------------------------------*/
 .btn
   font-weight: 300
-  margin-right: 5px
-  margin-left: 5px
-  margin-bottom: 20px
-
+  margin: 20px 5px 20px 20px
   webkit-transition: border-color 0.2s linear
   transition: border-color 0.2s linear
 
@@ -514,7 +511,7 @@ dl
   min-height: 320px
   background: white
   box-shadow: 0 1px 2px rgba(0,0,0,.1)
-
+  border-radius: 2px
   &.fluid-height
     height: auto
 
@@ -527,13 +524,20 @@ dl
     color: $blue
     font-size: 15px
     width: 100%
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15)
     font-weight: 300
+    margin: 0 0 12px 0
 
     [class^="icon-"], [class*="icon-"]
       margin-right: 10px
+
       &.pull-right
         margin-right: 0px
+        opacity: 0.5
+
+      &:hover
+        cursor: pointer
+        opacity: 1
 
   .widget-content
     overflow: auto
@@ -624,7 +628,7 @@ dl
 /*-----------------------------------------------------------------------------------*/
 .chart-number
   font-size: 2.5em
-  font-weight: 200
+  font-weight: 100
   text-align: center
 
   i
@@ -716,14 +720,14 @@ dl
 .jqvmap-label
   position: absolute
   display: none
-  -webkit-border-radius: 3px
-  -moz-border-radius: 3px
-  border-radius: 3px
-  background: #292929
-  color: white
+  -webkit-border-radius: 1px
+  -moz-border-radius: 1px
+  border-radius: 1px
+  background: #fafafa
+  color: #818385
   font-family: sans-serif, Verdana
   font-size: smaller
-  padding: 3px
+  padding: 4px
 
 .jqvmap-zoomin, .jqvmap-zoomout
   position: absolute
