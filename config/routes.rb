@@ -5,6 +5,7 @@ Se7en::Application.routes.draw do
   get "icons" => 'home#icons'
   get "login" => 'home#login'
   get "maps" => 'home#maps'
+  get "components" => 'home#components'
   get "tables" => 'home#tables'
   get "typo" => 'home#typo'
   get "ui" => 'home#ui'
