@@ -116,7 +116,7 @@ html .fc,
 
 .fc-widget-header,    /* <th>, usually */
 .fc-widget-content {  /* <td>, usually */
-	border: 1px solid #ddd;
+	border: 1px solid #e2e2e2;
 	}
 	
 .fc-state-highlight { /* <td> today cell */ /* TODO: add .fc-today to <th> */
@@ -143,20 +143,19 @@ html .fc,
 	line-height: 1.9em;
 	white-space: nowrap;
 	cursor: pointer;
+
 	}
 	
 .fc-state-default { /* non-theme */
-	border: 1px solid;
+
 	}
 
 .fc-state-default.fc-corner-left { /* non-theme */
-	border-top-left-radius: 4px;
-	border-bottom-left-radius: 4px;
+		border-radius:2px;
 	}
 
 .fc-state-default.fc-corner-right { /* non-theme */
-	border-top-right-radius: 4px;
-	border-bottom-right-radius: 4px;
+		border-radius:2px;
 	}
 
 /*
@@ -173,7 +172,7 @@ html .fc,
 
 .fc-button-prev .fc-text-arrow,
 .fc-button-next .fc-text-arrow { /* for &lsaquo; &rsaquo; */
-	font-weight: bold;
+	font-weight: 200;
 	}
 	
 /* icon (for jquery ui) */
@@ -198,44 +197,41 @@ html .fc,
 */
 
 .fc-state-default {
-	background-color: #f5f5f5;
-	background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-	background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-	background-repeat: repeat-x;
-	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-	color: #333;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	color: #007aff;
+	background: none;
+	border: 1px solid #007aff;
+	font-weight:200;
+	transition: background 0.1s linear;
+
 	}
 
 .fc-state-hover,
 .fc-state-down,
 .fc-state-active,
 .fc-state-disabled {
-	color: #333333;
-	background-color: #e6e6e6;
+	color: #333;
+	background-color: #fafafa;
+	border-color: #333333;
+	opacity:0.8;
+	font-weight:200;
 	}
 
 .fc-state-hover {
-	color: #333333;
-	text-decoration: none;
-	background-position: 0 -15px;
-	-webkit-transition: background-position 0.1s linear;
-	   -moz-transition: background-position 0.1s linear;
-	     -o-transition: background-position 0.1s linear;
-	        transition: background-position 0.1s linear;
+	background-color: #007aff;
+	background-image: none;
+	border-color: #1684b2;
+	outline: 0;
+	color: white;
 	}
 
 .fc-state-down,
 .fc-state-active {
-	background-color: #cccccc;
+	background-color: #007aff;
 	background-image: none;
+	border-color: #1684b2;
 	outline: 0;
-	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+	color: white;
+
 	}
 
 .fc-state-disabled {
@@ -252,12 +248,20 @@ html .fc,
 ------------------------------------------------------------------------*/
 	 
 .fc-event {
-	border: 1px solid #3a87ad; /* default BORDER color */
-	background-color: #3a87ad; /* default BACKGROUND color */
-	color: #fff;               /* default TEXT color */
-	font-size: .85em;
+	border: 1px solid #d1eeff; /* default BORDER color */
+	background-color: #d1eeff; /* default BACKGROUND color */
+	color: #2a8ac6;               /* default TEXT color */
+	font-size: .95em;
 	cursor: default;
+	opacity: 0.7;
+	border-left:2px solid #2a8ac6;
+	font-weight:200;
+
 	}
+
+.fc-event:hover {
+	opacity: 1;
+}
 
 a.fc-event {
 	text-decoration: none;
@@ -280,7 +284,7 @@ a.fc-event,
 	
 .fc-event-time,
 .fc-event-title {
-	padding: 0 1px;
+	padding: 0 2px;
 	}
 	
 .fc .ui-resizable-handle {
@@ -298,22 +302,15 @@ a.fc-event,
 ------------------------------------------------------------------------*/
 
 .fc-event-hori {
-	border-width: 1px 0;
-	margin-bottom: 1px;
+	margin-bottom: 3px;
 	}
 
 .fc-ltr .fc-event-hori.fc-event-start,
 .fc-rtl .fc-event-hori.fc-event-end {
-	border-left-width: 1px;
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
 	}
 
 .fc-ltr .fc-event-hori.fc-event-end,
 .fc-rtl .fc-event-hori.fc-event-start {
-	border-right-width: 1px;
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
 	}
 	
 /* resizable */
@@ -350,6 +347,8 @@ table.fc-border-separate {
 .fc-border-separate th,
 .fc-border-separate td {
 	border-width: 1px 0 0 1px;
+	font-weight:400;
+	font-size: .85em;
 	}
 	
 .fc-border-separate th.fc-last,
@@ -360,11 +359,13 @@ table.fc-border-separate {
 .fc-border-separate tr.fc-last th,
 .fc-border-separate tr.fc-last td {
 	border-bottom-width: 1px;
+	padding: 2px 0 2px 0;
 	}
 	
 .fc-border-separate tbody tr.fc-first td,
 .fc-border-separate tbody tr.fc-first th {
 	border-top-width: 0;
+
 	}
 	
 	
@@ -388,6 +389,7 @@ table.fc-border-separate {
 .fc-grid .fc-day-number {
 	float: right;
 	padding: 0 2px;
+	font-weight: 200;
 	}
 	
 .fc-grid .fc-other-month .fc-day-number {
