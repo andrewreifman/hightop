@@ -15,6 +15,8 @@
 //= require jquery.vmap.min
 //= require jquery.vmap.sampledata
 //= require jquery.vmap.world
+//= require fullcalendar.min
+//= require gcal
 //= require turbolinks
 //= require dataTables/jquery.dataTables
 //= require bootstrap.min
