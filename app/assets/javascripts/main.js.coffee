@@ -134,7 +134,7 @@ $(document).on "ready page:change", ->
 	#   Full Calendar
 	# =============================================================================
 
-	  $(document).ready ->
+	$(document).ready ->
   date = new Date()
   d = date.getDate()
   m = date.getMonth()
@@ -182,8 +182,8 @@ $(document).on "ready page:change", ->
       allDay: false
     ,
       title: "Lunch"
-      start: new Date(y, m, d, 12, 0)
-      end: new Date(y, m, d, 14, 0)
+      start: new Date(y, m, d, 14, 0)
+      end: new Date(y, m, d, 16, 0)
       allDay: false
     ,
       title: "Birthday Party"
