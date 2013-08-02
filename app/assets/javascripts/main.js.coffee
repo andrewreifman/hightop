@@ -3,10 +3,10 @@ $(document).ready ->
 	# =============================================================================
 	#   Sparkline JS
 	# =============================================================================
-	$("#linecharts").sparkline [160, 240, 250, 280, 300, 250, 230, 200, 280, 380, 400, 360, 300, 220, 200, 150, 100, 100, 180, 180, 200, 160, 220, 140],
+	$("#linechart-1").sparkline [160, 240, 250, 280, 300, 250, 230, 200, 280, 380, 400, 360, 300, 220, 200, 150, 100, 100, 180, 180, 200, 160, 220, 140],
 	  type: "line"
 	  width: "100%"
-	  height: "245"
+	  height: "232"
 	  lineColor: "#a5e1ff"
 	  fillColor: "rgba(241, 251, 255, 0.9)"
 	  lineWidth: 2
@@ -17,10 +17,10 @@ $(document).ready ->
 	  highlightLineColor: "#cccccc"
 	  spotRadius: 6
 
-	$("#linecharts").sparkline [100, 280, 150, 180, 220, 180, 130, 180, 180, 280, 260, 260, 200, 120, 200, 150, 100, 100, 180, 180, 200, 160, 220, 140],
+	$("#linechart-1").sparkline [100, 280, 150, 180, 220, 180, 130, 180, 180, 280, 260, 260, 200, 120, 200, 150, 100, 100, 180, 180, 200, 160, 220, 140],
 	  type: "line"
 	  width: "100%"
-	  height: "245"
+	  height: "232"
 	  lineColor: "#cfee74"
 	  fillColor: "rgba(244, 252, 225, 0.5)"
 	  lineWidth: 2
@@ -32,26 +32,26 @@ $(document).ready ->
 	  spotRadius: 6
 	  composite: true
 
-	$("#barcharts").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180],
+	$("#barcharts").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
 		type: "bar"
-		height: "50px"
-		barSpacing: 7
-		barWidth: 9
+		height: "80"
+		barSpacing: 6
+		barWidth: 12
+		barColor: "#8fdbda"
+
+	$("#barcharts2").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
+		type: "bar"
+		height: "80"
+		barSpacing: 6
+		barWidth: 12
 		barColor: "#acaeaf"
 
-	$("#barcharts2").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180],
+	$("#barcharts3").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
 		type: "bar"
-		height: "50px"
-		barSpacing: 7
-		barWidth: 9
-		barColor: "#acaeaf"
-
-	$("#barcharts3").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120, 180],
-		type: "bar"
-		height: "50px"
-		barSpacing: 7
-		barWidth: 9
-		barColor: "#acaeaf"
+		height: "80"
+		barSpacing: 6
+		barWidth: 12
+		barColor: "#f0ad4e"
 
 
 	# =============================================================================

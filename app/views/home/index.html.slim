@@ -2,30 +2,61 @@
 	.col-lg-12
 		.widget-container.stats-container
 			.col-lg-3
-				.number 86%
+				.number
+					.icon.globe
+					| 86 
+					small %
 				.text Overall growth
 			.col-lg-3
-				.number 613
+				.number 
+					.icon.visitors
+					| 613
 				.text Unique visitors this month
 			.col-lg-3
-				.number 1024
+				.number 
+					.icon.money
+					small $
+					| 1,024
 				.text Sales
 			.col-lg-3
-				.number 24%
+				.number 
+					.icon.chat
+					| 24 
+					small %
 				.text Growth
 
 .row
 	.col-lg-6
 		.widget-container
 			.heading 
-				.pull-right.btn-group data-toggle="buttons-radio"
-					 button.btn.btn-mini.btn-primary-outline.active type="button" Day
-					 button.btn.btn-mini.btn-primary-outline type="button" Week
-					 button.btn.btn-mini.btn-primary-outline type="button" Month
+				.pull-right.btn-group data-toggle="buttons"
+					label.btn.btn-mini.btn-primary-outline.active 
+						| Day
+						input#option1 name="options" type="radio"
+					label.btn.btn-mini.btn-primary-outline 
+						| Week
+						input#option2 name="options" type="radio"
+					label.btn.btn-mini.btn-primary-outline 
+						| Month
+						input#option3 name="options" type="radio"
 				i.icon-bar-chart
 				| Line chart
 			.widget-content.padded
-				#linecharts Loading...
+				.chart-graph.line-chart
+					#linechart-1 Loading...
+					ul.chart-text-axis 
+						li 1
+						li 2
+						li 3
+						li 4
+						li 5 
+						li 6 
+						li 7 
+						li 8 
+						li 9 
+						li 10 
+						li 11
+						li 12
 
 	.col-lg-3
 		.widget-container
@@ -33,7 +64,7 @@
 				i.icon-adjust
 				| Pie graph 1
 				i.icon-refresh.pull-right
-			.widget-content.padded
+			.widget-content
 				.pie-chart1.pie-chart.pie-number data-percent="73" 73%
 	.col-lg-3
 		.widget-container
@@ -41,7 +72,7 @@
 				i.icon-adjust
 				| Pie graph 2
 				i.icon-refresh.pull-right
-			.widget-content.padded
+			.widget-content
 				.pie-chart2.pie-chart.pie-number data-percent="36" 26%
 
 .row
@@ -52,15 +83,27 @@
 				| Bar graph 
 				i.icon-refresh.pull-right
 			.widget-content.padded
-				.row
-					.col-lg-4
+				.bar-chart-widget
+					.bar-chart-info
 						.chart-number 
-							i.icon-long-arrow-up.icon-1x 
+							i.icon-long-arrow-up
 							| 246
 						.chart-text Views Today
-					.col-lg-8
+					.chart-graph
 						#barcharts Loading...
-						.chart-text-axis 12 1 2 3 4 5 6 7 8 9 10 11
+						ul.chart-text-axis 
+							li 1
+							li 2
+							li 3
+							li 4
+							li 5 
+							li 6 
+							li 7 
+							li 8 
+							li 9 
+							li 10 
+							li 11
+							li 12
 	.col-lg-4
 		.widget-container.small
 			.heading 
@@ -68,15 +111,27 @@
 				| Bar graph
 				i.icon-refresh.pull-right
 			.widget-content.padded
-				.row
-					.col-lg-4
+				.bar-chart-widget
+					.bar-chart-info
 						.chart-number 
-							i.icon-long-arrow-down.icon-1x 
+							i.icon-long-arrow-down
 							| 42%
 						.chart-text Growth
-					.col-lg-8
+					.chart-graph
 						#barcharts2 Loading...
-						.chart-text-axis 12 1 2 3 4 5 6 7 8 9 10 11
+						ul.chart-text-axis 
+							li 1
+							li 2
+							li 3
+							li 4
+							li 5 
+							li 6 
+							li 7 
+							li 8 
+							li 9 
+							li 10 
+							li 11
+							li 12
 	.col-lg-4
 		.widget-container.small
 			.heading 
@@ -84,14 +139,26 @@
 				| Bar graph
 				i.icon-refresh.pull-right
 			.widget-content.padded
-				.row
-					.col-lg-4
+				.bar-chart-widget
+					.bar-chart-info
 						.chart-number 
-							i.icon-long-arrow-up.icon-1x 
+							i.icon-long-arrow-up
 							| $630
 						.chart-text Today's Sales
-					.col-lg-8
+					.chart-graph
 						#barcharts3 Loading...
-						.chart-text-axis 12 1 2 3 4 5 6 7 8 9 10 11
+						ul.chart-text-axis 
+							li 1
+							li 2
+							li 3
+							li 4
+							li 5 
+							li 6 
+							li 7 
+							li 8 
+							li 9 
+							li 10 
+							li 11
+							li 12
 
 
