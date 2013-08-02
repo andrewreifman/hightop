@@ -28,9 +28,6 @@ $blue: #007aff
 /*  Document Setup
 /*-----------------------------------------------------------------------------------*/
 *
-  -webkit-box-sizing: border-box
-  -moz-box-sizing: border-box
-  box-sizing: border-box
   outline: 0 !important
 
 body
@@ -109,6 +106,8 @@ dl
     height: 46px
     border-bottom: 1px solid #e6e6e6
     padding: 0 10px 0 20px
+    width: 100%
+    float: left
 
     .logo
       background: url(../assets/se7en-logo.png) no-repeat 0 0
@@ -117,7 +116,6 @@ dl
       float: left
       text-indent: -9999em
       margin: 14px 10px 0 0
-      vertical-align: middle
 
     form
       input[type="text"]
@@ -327,133 +325,169 @@ dl
 /*-----------------------------------------------------------------------------------*/
 .btn
   font-weight: 300
-  margin: 20px 5px 20px 20px
-  webkit-transition: border-color 0.2s linear
-  transition: border-color 0.2s linear
-
-  &:hover
-    box-shadow: inset 0 3px 6px rgba(0,0,0,0.1)
-
-  &:active
-
+  margin: 0 10px 15px 0
   -webkit-transition: all 0.15s
   transition: all 0.15s
 
   &.active
-
     box-shadow: none
 
+  .caret
+    margin: -2px 0 0 8px
+
 .btn-default
-  background: #616363
+  background: #BBB
+  border-color: #BBB
+  &:hover, &.active
+    background: #FFF
+    color: #AAA
+    border-color: #BBB
+
+    .caret
+      border-top-color: #BBB
 
 .btn-primary
   background: $blue
+  border-color: $blue
+  &:hover, &.active
+    background: #FFF
+    color: $blue
+    border-color: $blue
+
+    .caret
+      border-top-color: $blue
 
 .btn-success
   background: #60c560
+  border-color: #60c560
+  &:hover, &.active
+    background: #FFF
+    color: #60c560
+    border-color: #60c560
+
+    .caret
+      border-top-color: #BBB
+
+.btn-info
+  &:hover, &.active
+    background: #FFF
+    color: #5bc0de
+    border-color: #5bc0de
+
+    .caret
+      border-top-color: #5bc0de
+
+.btn-warning
+  &:hover, &.active
+    background: #FFF
+    color: #f0ad4e
+    border-color: #f0ad4e
+
+    .caret
+      border-top-color: #f0ad4e
+
+.btn-danger
+  &:hover, &.active
+    background: #FFF
+    color: #d9534f
+    border-color: #d9534f
+
+    .caret
+      border-top-color: #d9534f
 
 .btn-default-outline
-  color: #999999
-  background: none
-  border: 1px solid #999999
+  color: #999
+  background: #FFF
+  border: 1px solid #BBB
 
-  &:hover
-    background: none
-    border-color: #474949
-    color: #474949
+  .caret
+    border-top-color: #BBB
 
-  &:active
-    background: none
-    border-color: $blue
-    color: $blue
+  &:hover, &.active
+    background: #BBB
+    color: #FFF
+
+    .caret
+      border-top-color: #FFF
 
 .btn-primary-outline
   color: $blue
-  background: none
+  background: #FFF
   border: 1px solid $blue
+
+  .caret
+    border-top-color: $blue
 
   &:hover, &.active
     background: $blue
     color: #FFF
 
+    .caret
+      border-top-color: #FFF
+
 .btn-success-outline
-  color: #5cb85c
-  background: none
-  border: 1px solid #5cb85c
+  color: #60c560
+  background: #FFF
+  border: 1px solid #60c560
 
-  &:focus 
-    background: none
-    border-color: #4cae4c
+  .caret
+    border-top-color: #60c560
 
-  &:hover
-    background: none
-    border-color: #4cae4c
-    color: #4cae4c
+  &:hover, &.active
+    background: #60c560
+    color: #FFF
 
-  &:active
-    background: none
-    border-color: #4cae4c
-    color: #4cae4c
-
+    .caret
+      border-top-color: #FFF
 
 .btn-info-outline
   color: #5bc0de
-  background: none
+  background: #FFF
   border: 1px solid #5bc0de
 
-  &:focus 
-    background: none
-    border-color: #46b8da
+  .caret
+    border-top-color: #5bc0de
 
-  &:hover
-    background: none
-    border-color: #46b8da
-    color: #46b8da
+  &:hover, &.active
+    background: #5bc0de
+    color: #FFF
 
-  &:active
-    background: none
-    border-color: #46b8da
-    color: #46b8da
+    .caret
+      border-top-color: #FFF
 
 .btn-warning-outline
   color: #f0ad4e
-  background: none
+  background: #FFF
   border: 1px solid #f0ad4e
 
-  &:focus 
-    background: none
-    border-color: #ec971f
+  .caret
+    border-top-color: #f0ad4e
 
-  &:hover
-    background: none
-    border-color: #ec971f
-    color: #ec971f
+  &:hover, &.active
+    background: #f0ad4e
+    color: #FFF
 
-  &:active
-    background: none
-    border-color: #ec971f
-    color: #ec971f
+    .caret
+      border-top-color: #FFF
 
 .btn-danger-outline
   color: #d9534f
-  background: none
+  background: #FFF
   border: 1px solid #d9534f
 
-  &:focus 
-    background: none
-    border-color: #c9302c
+  .caret
+    border-top-color: #d9534f
 
-  &:hover
-    background: none
-    border-color: #c9302c
-    color: #c9302c
+  &:hover, &.active
+    background: #d9534f
+    color: #FFF
 
-  &:active
-    background: none
-    border-color: #c9302c
-    color: #c9302c
+    .caret
+      border-top-color: #FFF
 
 .btn-group
+  margin: 0 10px 15px 0
+
   > .btn
     margin: 0
 
@@ -511,8 +545,10 @@ dl
   min-height: 320px
   background: white
   box-shadow: 0 1px 2px rgba(0,0,0,.1)
+
   &.fluid-height
     height: auto
+    min-height: 0
 
   &.small
     min-height: 120px
@@ -523,8 +559,8 @@ dl
     color: $blue
     font-size: 15px
     width: 100%
-    font-weight: 300
-    margin: 0 0 12px 0
+    font-weight: 400
+    margin: 0 0 10px 0
 
     [class^="icon-"], [class*="icon-"]
       margin-right: 10px
@@ -538,7 +574,6 @@ dl
         opacity: 1
 
   .widget-content
-    overflow: auto
     width: 100%
 
   &.scrollable
@@ -709,7 +744,7 @@ dl
     .widget-container
       color: #999
       padding: 10px 15px 12px
-
+      min-height: 0
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -770,6 +805,9 @@ dl
 /*-----------------------------------------------------------------------------------*/
 .row
   margin: 0 10px 0
+
+  .row
+    margin: 0 5px 0
 
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12
   padding: 0 10px
