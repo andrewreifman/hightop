@@ -9,54 +9,50 @@
         | User Profile
 
       .widget-content.padded
-        .form-group
-          .col-lg-3
-            label.control-label Photo
-          
-          .col-lg-9
-            .bg-light.pull-left.text-center.media-large.thumb-large
-              i.icon-user.inline.icon-3x.m-t-large.m-b-large
-        .form-group
-          label.col-lg-3.control-label Email
-          .col-lg-8
-            input.bg-focus.form-control data-required="true" data-type="email" name="email" placeholder="test@example.com" type="text"
-        
-        .form-group
-          label.col-lg-3.control-label Password
-          .col-lg-8
-            input.bg-focus.form-control name="password" placeholder="Password" type="password"
-              .line.line-dashed.m-t-large
-
-        .form-group
-          label.col-lg-3.control-label Username
-          .col-lg-8
-            input.form-control data-required="true" name="username" placeholder="Username" type="text"
-        .form-group
-          label.col-lg-3.control-label Account
-          .col-lg-4
-            select.form-control name="account"
-              option value="1"
-              option value="0"
-        .form-group
-          label.col-lg-3.control-label Registered
-          .col-lg-9
-            input.combodate.form-control data-format="DD-MM-YYYY" data-template="D MMM YYYY" name="datetime" type="text" value="21-12-2012"
-        .form-group
-          label.col-lg-3.control-label Profile
-          .col-lg-8
-            textarea.form-control data-rangelength="[20,200]" data-trigger="keyup" placeholder="Profile" rows="5"
+        form
+          fieldset
+            legend John Smith
+            .form-group
+              label for="exampleInputFile"
+              input#exampleInputFile type="file"
+                p.help-block Example block-level help text here.
+            .form-group
+              label for="exampleInputEmail" Email
+              input#exampleInputEmail.form-control placeholder="Enter email" type="text"
+            .form-group
+              label for="exampleInputPassword" Password
+              input#exampleInputPassword.form-control placeholder="Password" type="password"
+            .form-group
+              label for="exampleInputPassword" Profile
+              textarea class="form-control" rows="3"
+            .form-group
+              label Industry
+              select.form-control
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
             .checkbox
               label
-                input name="agree" type="checkbox"
-                  | Agree
-                  | the
-                  a href="#"
-                    | terms
-                    | and
-                    | policy
-        .form-group
-          .col-lg-9.col-offset-3
-            button.btn.btn-white type="submit"
-            button.btn.btn-primary type="submit"
-              | Save
-              | changes
+                input type="checkbox"
+                  | I agree to the terms and conditions
+            button.btn.btn-primary-outline type="submit" Submit
+            button.btn.btn-default-outline type="submit" Cancel
+
+  .col-lg-6
+    .widget-container
+      .heading 
+        i.icon-adjust
+        | Validations
+
+      .widget-content.padded
+        .form-group.has-warning
+          label.control-label for="inputWarning" Warning
+          input#inputWarning.form-control type="text"
+        .form-group.has-error
+          label.control-label for="inputError" Error
+          input#inputError.form-control type="text"
+        .form-group.has-success
+          label.control-label for="inputSuccess" Success
+          input#inputSuccess.form-control type="text"
