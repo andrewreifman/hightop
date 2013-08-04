@@ -1,28 +1,66 @@
 .page-title
   h1 Gallery
+.row
+	.col-lg-12
+		.widget-container.gallery
+					.heading 
+						i.icon-signal 
+						| Hover Effect
+						i.icon-refresh.pull-right
+					.widget-content
+						#grid.main
+						  .view
+						    .view-back
+						      .pull-right.padded.i.icon-thumbs-up.icon-2x
+						      .pull-right.padded.i.icon-trash.icon-2x
+						      a href="http://www.flickr.com/photos/ag2r/5439506585/in/photostream"
+						    = image_tag "/assets/image1.png"
+						  .view
+						    .view-back
+						      span data-icon="A"
+						      span data-icon="B"
+						      a href="http://www.flickr.com/photos/ag2r/5629018757/in/photostream"
+						    = image_tag "/assets/image2.png"
+						  .view
+						    .view-back
+						      span data-icon="A"
+						      span data-icon="B"
+						      a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream"
+						    = image_tag "/assets/image3.png"
+						  .view
+						    .view-back
+						      span data-icon="A"
+						      span data-icon="B"
+						      a href="http://www.flickr.com/photos/ag2r/6131126901/in/photostream"
+						    = image_tag "/assets/image4.png"
 
-#grid.main
-  .view
-    .view-back
-      span data-icon="A"
-      span data-icon="B"
-      a href="http://www.flickr.com/photos/ag2r/5439506585/in/photostream"
-    = image_tag "/assets/image1.png"
-  .view
-    .view-back
-      span data-icon="A"
-      span data-icon="B"
-      a href="http://www.flickr.com/photos/ag2r/5629018757/in/photostream"
-    = image_tag "/assets/image2.png"
-  .view
-    .view-back
-      span data-icon="A"
-      span data-icon="B"
-      a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream"
-    = image_tag "/assets/image3.png"
-  .view
-    .view-back
-      span data-icon="A"
-      span data-icon="B"
-      a href="http://www.flickr.com/photos/ag2r/6131126901/in/photostream"
-    = image_tag "/assets/image4.png"
+.row
+	.widget-container.large
+				.heading 
+					i.icon-signal 
+					| Sorting and Filtering
+					i.icon-refresh.pull-right
+				.widget-content
+					ul.list-inline#filters
+					  li
+					    a data-filter="*" href="#"
+					  li
+					    a data-filter=".metal" href="#" Metal
+					  li
+					    a data-filter=".transition" href="#" Transition
+					  li
+					    a data-filter=".alkali, .alkaline-earth" href="#" Alkali
+					  li
+					    a data-filter=":not(.transition)" href="#" Not
+					  li
+					    a data-filter=".metal:not(.transition)" href="#" Metal
+
+					#container
+					  .element.transition.metal ...
+					  .element.post-transition.metal ...
+					  .element.alkali.metal ...
+					  .element.transition.metal ...
+					  .element.lanthanoid.metal.inner-transition ...
+					  .element.halogen.nonmetal ...
+					  .element.alkaline-earth.metal ...
+					  | \...

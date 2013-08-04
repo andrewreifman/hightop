@@ -19,5 +19,6 @@
  *= require style_common
  *= require style1
  *= require dataTables/jquery.dataTables
+ *= require isostyle
  *= require style
  */

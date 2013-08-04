@@ -218,7 +218,22 @@ $(document).ready ->
 	      $("#rootwizard").find(".bar").css width: $percent + "%"
 
 
+	# =============================================================================
+	#   Hoverfold - Gallery Effect
+	# =============================================================================
 
 	$("#grid").hoverfold()
+
+	# =============================================================================
+	#   Isotope
+	# =============================================================================
+
+	$container = $("#container")
+	$container.isotope {}
+	$("#filters a").click ->
+	  selector = $(this).attr("data-filter")
+	  $container.isotope filter: selector
+	  false
+
 
 

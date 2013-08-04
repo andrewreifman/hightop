@@ -25,5 +25,6 @@
 //= require jquery.easy-pie-chart
 //= require excanvas.min
 //= require jquery.hoverfold
+//= require jquery.isotope.min
 //= require modernizr.custom
 //= require main
