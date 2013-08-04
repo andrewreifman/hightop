@@ -12,6 +12,8 @@
  *= require normalize
  *= require bootstrap.min
  *= require fullcalendar
+ *= require prettify
+ *= require wizard
  *= require dataTables/jquery.dataTables
  *= require style
  */

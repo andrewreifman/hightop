@@ -17,6 +17,7 @@
 //= require jquery.vmap.world
 //= require fullcalendar.min
 //= require gcal
+//= require prettify
 //= require jquery.bootstrap.wizard.min
 //= require dataTables/jquery.dataTables
 //= require bootstrap.min

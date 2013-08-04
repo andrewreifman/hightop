@@ -195,3 +195,29 @@ $(document).ready ->
     ]
   )
 
+
+# =============================================================================
+#   Boostrap Wizard
+# =============================================================================
+
+  $("#rootwizard").bootstrapWizard
+    onNext: (tab, navigation, index) ->
+      if index is 2
+        
+        # Make sure we entered the name
+        unless $("#name").val()
+          alert "You must enter your name"
+          $("#name").focus()
+          return false
+      
+      # Set the name for the next tab
+      $("#tab3").html "Hello, " + $("#name").val()
+
+    onTabShow: (tab, navigation, index) ->
+      $total = navigation.find("li").length
+      $current = index + 1
+      $percent = ($current / $total) * 100
+      $("#rootwizard").find(".bar").css width: $percent + "%"
+
+
+
