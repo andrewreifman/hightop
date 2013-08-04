@@ -339,7 +339,14 @@ small
     box-shadow: none
 
   .caret
-    margin: -2px 0 0 8px
+    margin: -2px 0 0 6px
+
+  [class^="icon-"], &[class*="icon-"]
+    display: inline-block
+    margin-right: 10px
+    margin-top: -4px
+    font-size: 18px
+    vertical-align: middle
 
 .btn-default
   background: #BBB
@@ -496,6 +503,35 @@ small
 
   > .btn
     margin: 0
+
+    &+ .dropdown-toggle
+      margin-left: 1px
+      padding: 16px 10px
+
+      .caret
+        margin: 0
+
+      &[class^="-outline"], &[class*="-outline"]
+        margin-left: -1px
+
+  &.dropup .btn-default:hover .caret, &.dropup .btn-default-outline .caret
+    border-bottom-color: #BBB
+  &.dropup .btn-primary:hover .caret, &.dropup .btn-primary-outline .caret
+    border-bottom-color: $blue
+  &.dropup .btn-success:hover .caret, &.dropup .btn-success-outline .caret
+    border-bottom-color: #60c560
+  &.dropup .btn-info:hover .caret, &.dropup .btn-info-outline .caret
+    border-bottom-color: #5bc0de
+  &.dropup .btn-warning:hover .caret, &.dropup .btn-warning-outline .caret
+    border-bottom-color: #f0ad4e
+  &.dropup .btn-danger:hover .caret, &.dropup .btn-danger-outline .caret
+    border-bottom-color: #d9534f
+
+  &.dropup 
+    .btn:hover
+      &[class^="-outline"], &[class*="-outline"]
+        .caret
+          border-bottom-color: #FFF
 
 /*-----------------------------------------------------------------------------------*/
 /*  Dropdown Styles
@@ -683,7 +719,6 @@ small
 /*-----------------------------------------------------------------------------------*/
 /*  Stats Styles
 /*-----------------------------------------------------------------------------------*/
-
 .chart-list
   text-decoration: none
   display: inline
@@ -702,8 +737,8 @@ small
 
   .bar-chart-info
     display: inline-block
-    vertical-align: top
-    margin: 10px 30px 0 -10px
+    vertical-align: middle
+    margin: 0 20px 15px -10px
     text-align: center
 
     &.visible-lg
