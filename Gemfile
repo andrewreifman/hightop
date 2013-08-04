@@ -48,6 +48,9 @@ gem 'jquery-datatables-rails'
 # Adds font awesome icon font
 gem "font-awesome-rails"
 
+# Allows modern css to work on older IE browsers
+gem 'selectivizr-rails'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
