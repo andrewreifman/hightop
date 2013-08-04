@@ -19,16 +19,26 @@
 		.widget-container
 			.heading 
 				.pull-right.btn-group data-toggle="buttons-radio"
-					 button.btn.btn-mini.btn-primary-outline.active type="button" Day
+					 button.btn.btn-mini.btn-primary-outline type="button" Day
 					 button.btn.btn-mini.btn-primary-outline type="button" Week
-					 button.btn.btn-mini.btn-primary-outline type="button" Month
+					 button.btn.btn-mini.btn-primary-outline.active type="button" Month
 				i.icon-bar-chart
 				| Line chart
 			.widget-content.padded
 				#linecharts Loading...
-				ul
-				li 1
-				li 2
+				ul.list-inline.chart-list
+					li.chart-list-item Jan
+					li.chart-list-item  Feb
+					li.chart-list-item  Mar
+					li.chart-list-item  Apr
+					li.chart-list-item  May
+					li.chart-list-item  Jun
+					li.chart-list-item  Jul
+					li.chart-list-item  Aug
+					li.chart-list-item  Sep
+					li.chart-list-item  Oct
+					li.chart-list-item  Nov
+					li.chart-list-item  Dec
 
 	.col-lg-3
 		.widget-container
@@ -38,6 +48,7 @@
 				i.icon-refresh.pull-right
 			.widget-content.padded
 				.pie-chart1.pie-chart.pie-number data-percent="73" 73%
+			p.pie-text Key performance metric
 	.col-lg-3
 		.widget-container
 			.heading 
@@ -46,6 +57,7 @@
 				i.icon-refresh.pull-right
 			.widget-content.padded
 				.pie-chart2.pie-chart.pie-number data-percent="36" 26%
+			p.pie-text Key performance metric
 
 .row
 	.col-lg-4
