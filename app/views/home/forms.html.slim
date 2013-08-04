@@ -1,59 +1,58 @@
+.page-title
+  h1 Forms
+
 .row
-  .col-lg-12
-    h1 Forms
-  .row
-    .col-lg-6
-      .widget-container
+  .col-lg-6
+    .widget-container.fluid-height.clearfix
+      .heading 
+        i.icon-adjust
+        | User Profile
 
-          .heading 
-            i.icon-adjust
-            | User Profile
-            i.icon-refresh.pull-right
-          form.padded
-            fieldset
-              legend John Smith
-              .form-group
-                label for="exampleInputFile"
-                input#exampleInputFile type="file"
-                  p.help-block Example block-level help text here.
-              .form-group
-                label for="exampleInputEmail" Email
-                input#exampleInputEmail.form-control placeholder="Enter email" type="text"
-              .form-group
-                label for="exampleInputPassword" Password
-                input#exampleInputPassword.form-control placeholder="Password" type="password"
-              .form-group
-                label for="exampleInputPassword" Profile
-                textarea class="form-control" rows="3"
-              .form-group
-                label Industry
-                select.form-control
-                  option 1
-                  option 2
-                  option 3
-                  option 4
-                  option 5
-              .checkbox
-                label
-                  input type="checkbox"
-                    | I agree to the terms and conditions
-              button.btn.btn-default-outline type="submit" Cancel
-              button.btn.btn-primary-outline type="submit" Submit
+      .widget-content.padded
+        form
+          fieldset
+            legend John Smith
+            .form-group
+              label for="exampleInputFile"
+              input#exampleInputFile type="file"
+                p.help-block Example block-level help text here.
+            .form-group
+              label for="exampleInputEmail" Email
+              input#exampleInputEmail.form-control placeholder="Enter email" type="text"
+            .form-group
+              label for="exampleInputPassword" Password
+              input#exampleInputPassword.form-control placeholder="Password" type="password"
+            .form-group
+              label for="exampleInputPassword" Profile
+              textarea class="form-control" rows="3"
+            .form-group
+              label Industry
+              select.form-control
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+            .checkbox
+              label
+                input type="checkbox"
+                  | I agree to the terms and conditions
+            button.btn.btn-primary-outline type="submit" Submit
+            button.btn.btn-default-outline type="submit" Cancel
 
-    .col-lg-6
-      .widget-container
+  .col-lg-6
+    .widget-container
+      .heading 
+        i.icon-adjust
+        | Validations
 
-          .heading 
-            i.icon-adjust
-            | Validations
-            i.icon-refresh.pull-right
-
-          .form-group.has-warning.padded
-            label.control-label for="inputWarning" Warning
-            input#inputWarning.form-control type="text"
-          .form-group.has-error.padded
-            label.control-label for="inputError" Error
-            input#inputError.form-control type="text"
-          .form-group.has-success.padded
-            label.control-label for="inputSuccess" Success
-            input#inputSuccess.form-control type="text"
+      .widget-content.padded
+        .form-group.has-warning
+          label.control-label for="inputWarning" Warning
+          input#inputWarning.form-control type="text"
+        .form-group.has-error
+          label.control-label for="inputError" Error
+          input#inputError.form-control type="text"
+        .form-group.has-success
+          label.control-label for="inputSuccess" Success
+          input#inputSuccess.form-control type="text"
