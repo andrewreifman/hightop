@@ -14,6 +14,10 @@
  *= require fullcalendar
  *= require prettify
  *= require wizard
+ *= require bookblock
+ *= require book1
+ *= require style_common
+ *= require style1
  *= require dataTables/jquery.dataTables
  *= require style
  */

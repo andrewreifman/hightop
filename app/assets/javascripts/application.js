@@ -24,4 +24,6 @@
 //= require jquery.sparkline.min
 //= require jquery.easy-pie-chart
 //= require excanvas.min
+//= require jquery.hoverfold
+//= require modernizr.custom
 //= require main

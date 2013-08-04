@@ -8,8 +8,6 @@ development:
   database: se7en_development
   pool: 5
   timeout: 5000
-  username: postgres
-  password: postgres
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -25,5 +23,3 @@ production:
   database: se7en_production
   pool: 5
   timeout: 5000
-  username: 
-  password: 
