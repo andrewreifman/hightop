@@ -796,6 +796,48 @@ small
 
 
 /*-----------------------------------------------------------------------------------*/
+/*  Gallery Hover Effect
+/*-----------------------------------------------------------------------------------*/
+.hovereffect
+  background: #bbbbbb
+  color: white
+  padding: 30px 26px 32px 26px
+  foat: left
+  cursor: pointer
+  border: 1px solid #a4a4a4
+  -webkit-transition: all .2s
+  -moz-transition: all .2s
+  transition: all .2s
+
+  &:hover
+    border: 1px solid $blue
+    background: #fff
+    color: $blue
+
+.hovereffect-primary
+  background: $blue
+  border: 1px solid $blue
+  color: white
+  padding: 32px 26px 34px 26px
+  foat: left
+  cursor: pointer
+
+  &:hover
+    border: 1px solid $blue
+    background: #fff
+    color: $blue
+
+.gallery-item
+  width: 30%
+  height: 204px
+  margin: 10px
+  float: left
+  position: relative
+  border: 8px solid #fff
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.05)
+  background: #333
+
+/*-----------------------------------------------------------------------------------*/
 /*  List widget
 /*-----------------------------------------------------------------------------------*/
 .list
@@ -975,7 +1017,6 @@ small
 /*-----------------------------------------------------------------------------------*/
 /*  Full Calendar
 /*-----------------------------------------------------------------------------------*/
-
 
 /*-----------------------------------------------------------------------------------*/
 /*  Rollodex Styles

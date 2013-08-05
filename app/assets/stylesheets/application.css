@@ -11,7 +11,6 @@
  *= require_self
  *= require isostyle
  *= require normalize
- *= require bootstrap.min
  *= require fullcalendar
  *= require bookblock
  *= require book1
@@ -21,5 +20,6 @@
  *= require preview_component 
  *= require prettify
  *= require wizard
+ *= require bootstrap.min
  *= require style
  */

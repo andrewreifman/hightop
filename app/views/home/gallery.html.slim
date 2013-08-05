@@ -11,64 +11,55 @@
 						#grid.main
 						  .view
 						    .view-back
-						      .pull-right.padded.i.icon-thumbs-up.icon-2x
-						      .pull-right.padded.i.icon-trash.icon-2x
-						      a href="http://www.flickr.com/photos/ag2r/5439506585/in/photostream"
+						      .hovereffect.pull-right.i.icon-thumbs-up.icon-2x
+						      .hovereffect.pull-right.i.icon-trash.icon-2x
+						      .hovereffect-primary.pull-right.i.icon-long-arrow-right.icon-2x
 						    = image_tag "/assets/image1.png"
 						  .view
 						    .view-back
-						      span data-icon="A"
-						      span data-icon="B"
-						      a href="http://www.flickr.com/photos/ag2r/5629018757/in/photostream"
+						      .hovereffect.pull-right.i.icon-thumbs-up.icon-2x
+						      .hovereffect.pull-right.i.icon-trash.icon-2x
+						      .hovereffect-primary.pull-right.i.icon-long-arrow-right.icon-2x
 						    = image_tag "/assets/image2.png"
 						  .view
 						    .view-back
-						      span data-icon="A"
-						      span data-icon="B"
-						      a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream"
+						      .hovereffect.pull-right.i.icon-thumbs-up.icon-2x
+						      .hovereffect.pull-right.i.icon-trash.icon-2x
+						      .hovereffect-primary.pull-right.i.icon-long-arrow-right.icon-2x
 						    = image_tag "/assets/image3.png"
 						  .view
 						    .view-back
-						      span data-icon="A"
-						      span data-icon="B"
-						      a href="http://www.flickr.com/photos/ag2r/6131126901/in/photostream"
+						      .hovereffect.pull-right.i.icon-thumbs-up.icon-2x
+						      .hovereffect.pull-right.i.icon-trash.icon-2x
+						      .hovereffect-primary.pull-right.i.icon-long-arrow-right.icon-2x
 						    = image_tag "/assets/image4.png"
 
 .row
-	.col-lg-12
+	.col-lg-6
 		.widget-container.large
 					.heading 
 						i.icon-signal 
 						| Sorting and Filtering
 						i.icon-refresh.pull-right
 					.widget-content
-						ul.list-inline#filters
-						  li
-						    a data-filter="*" href="#"
-						  li
-						    a data-filter=".metal" href="#" Metal
-						  li
-						    a data-filter=".transition" href="#" Transition
-						  li
-						    a data-filter=".alkali, .alkaline-earth" href="#" Alkali
-						  li
-						    a data-filter=":not(.transition)" href="#" Not
-						  li
-						    a data-filter=".metal:not(.transition)" href="#" Metal
-
+					.row
+						.list-inline#filters.btn-group.pull-right
+							a.btn.btn-default-outline data-filter=".metal" href="#" All
+							a.btn.btn-default-outline data-filter=".transition" href="#" Transition
+							a.btn.btn-default-outline data-filter=".alkali, .alkaline-earth" href="#" Alkali
+							a.btn.btn-default-outline data-filter=":not(.transition)" href="#" Not
+						.row
 						#container
-						  .element.transition.metal ...
-						  .element.post-transition.metal ...
-						  .element.alkali.metal ...
-						  .element.transition.metal ...
-						  .element.lanthanoid.metal.inner-transition ...
-						  .element.halogen.nonmetal ...
-						  .element.alkaline-earth.metal ...
-						  | \...
+						  .gallery-item.transition.metal ...
+						  .gallery-item.post-transition.metal ...
+						  .gallery-item.alkali.metal ...
+						  .gallery-item.transition.metal ...
+						  .gallery-item.halogen.nonmetal ...
+						  .gallery-item.alkaline-earth.metal ...
 
 
 
-.row
+
 	.col-lg-6
 		.widget-container.large
 					.heading 
