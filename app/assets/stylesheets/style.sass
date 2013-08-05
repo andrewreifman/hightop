@@ -32,6 +32,7 @@ $blue: #007aff
 
 body
   font-family: 'Lato', sans-serif
+  color: #666
   background: #eee
   padding-top: 140px
 
@@ -41,8 +42,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
   font-weight: 300
 
 p
-  margin-bottom: 15px
-
   &.lead
     font-weight: 300
 
@@ -569,6 +568,17 @@ small
 
 
 /*-----------------------------------------------------------------------------------*/
+/*  Label styles
+/*-----------------------------------------------------------------------------------*/
+.label
+  font-size: 85%
+  line-height: 1.4
+
+  &.label-success
+    background-color: #60c560
+
+
+/*-----------------------------------------------------------------------------------*/
 /*  Widget-Container
 /*-----------------------------------------------------------------------------------*/
 .widget-container
@@ -588,6 +598,7 @@ small
 
   .heading
     background: rgba(255, 255, 255, 0.92)
+    height: 50px
     padding: 15px 15px
     color: $blue
     font-size: 15px
@@ -621,7 +632,7 @@ small
     .widget-content
       overflow-y: scroll
       height: 100%
-      padding-top: 46px
+      padding-top: 50px
 
 .padded
   padding: 12px 15px
@@ -787,7 +798,7 @@ small
 /*-----------------------------------------------------------------------------------*/
 /*  List widget
 /*-----------------------------------------------------------------------------------*/
-.list-widget
+.list
   ul
     list-style: none
     padding-left: 15px
@@ -800,6 +811,70 @@ small
 
       &:last-child
         border: 0
+
+      &:only-child
+        border-bottom: 1px solid #e2e2e2
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Task widget
+/*-----------------------------------------------------------------------------------*/
+.task-widget
+  label
+    font-weight: normal
+    margin: 0
+
+  .task-input
+    display: none
+
+  input[type="checkbox"] + .task-checkbox
+    font-family: "FontAwesome"
+    font-size: 20px
+    width: 30px
+    height: 20px
+    line-height: 1.1
+    display: inline-block
+    vertical-align: middle
+    color: #BBB
+    cursor: pointer
+
+    &:before
+      content: "\f096"
+
+  input[type="checkbox"]:checked + .task-checkbox
+    color: $blue
+
+    &:before
+      content: "\f046"
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Ratings widget
+/*-----------------------------------------------------------------------------------*/
+.rating-widget
+  ul
+    li
+      padding-bottom: 4px
+
+      .reviewer-info
+        margin-bottom: 10px
+
+        img
+          margin-right: 8px
+
+        em
+          color: #AAA
+          font-size: .85em
+          margin-left: 4px
+
+        .star-rating
+          i
+            margin-left: 2px
+            font-size: 20px
+            color: #CCC
+
+            &.icon-star, &.icon-star-half-empty
+              color: #f7c310
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -852,17 +927,21 @@ small
 /*-----------------------------------------------------------------------------------*/
 /*  jQuery Map Styles
 /*-----------------------------------------------------------------------------------*/
+.map
+  margin: 0 auto
+  position: relative
+  overflow: hidden
+
 .jqvmap-label
   position: absolute
   display: none
-  -webkit-border-radius: 1px
-  -moz-border-radius: 1px
-  border-radius: 1px
-  background: #fafafa
-  color: #818385
+  background: #FFF
+  background: rgba(255,255,255,.95)
+  color: #666
   font-family: sans-serif, Verdana
   font-size: smaller
-  padding: 4px
+  padding: 4px 6px
+  box-shadow: 0 0 2px rgba(0,0,0,.2)
 
 .jqvmap-zoomin, .jqvmap-zoomout
   position: absolute
@@ -892,6 +971,7 @@ small
   width: 100%
   height: 500px
 
+
 /*-----------------------------------------------------------------------------------*/
 /*  Full Calendar
 /*-----------------------------------------------------------------------------------*/
@@ -901,7 +981,7 @@ small
 /*  Rollodex Styles
 /*-----------------------------------------------------------------------------------*/
 .rollodex
-  min-height: 600px
+  min-height: 500px
 
 .roll-title
   background: #efefef
@@ -912,10 +992,6 @@ small
 
 .roll-item 
   padding: 20px 0 20px 0
-  text-align: center
-
-
-
 
 
 /*-----------------------------------------------------------------------------------*/

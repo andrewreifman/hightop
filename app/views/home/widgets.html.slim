@@ -2,8 +2,8 @@
   h1 Widgets
 
 .row
-	.col-lg-12
-		.widget-container.scrollable.list-widget
+	.col-lg-6
+		.widget-container.scrollable.list.task-widget
 			.heading 
 				i.icon-list 
 				| Task list 
@@ -12,173 +12,237 @@
 				ul
 					li
 						.label.label-success.pull-right Approved
-						.icon-ok-sign.icon-large.text-active.ext-primary 
-						|  Distribute latest marketing
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							| Distribute latest marketing
 					li
 						.label.label-success.pull-right Approved
-						.icon-ok-sign.icon-large.text-active.ext-primary 
-						|  Create the latest mockup
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							| Create the latest mockup
 					li
 						.label.label.pull-right Pending
-						.icon-ok-sign.icon-large.text-active.ext-primary 
-						|  Code the latest features
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							| Code the latest features
 					li
 						.label.label-danger.pull-right Attention Required
-						.icon-ok-sign.icon-large.text-active.ext-primary 
-						|  Coffee time
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							| Coffee time
 					li
 						.label.label-success.pull-right Approved
-						.icon-ok-sign.icon-large.text-active.ext-primary 
-						|  Distribute latest marketing
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							| Distribute latest marketing
 					li
 						.label.label-success.pull-right Approved
-						.icon-ok-sign.icon-large.text-active.ext-primary 
-						|  Distribute latest marketing
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							| Distribute latest marketing
 					li
 						.label.label-success.pull-right Approved
-						.icon-ok-sign.icon-large.text-active.ext-primary 
-						|  Distribute latest marketing
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							| Distribute latest marketing
 					li
 						.label.label-success.pull-right Approved
-						.icon-ok-sign.icon-large.text-active.ext-primary 
-						|  Distribute latest marketing
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							| Distribute latest marketing
 
-.row
 	.col-lg-6
-		.widget-container.scrollable.list-widget 
+		.widget-container.scrollable.list.rating-widget
 			.heading 
 				i.icon-comment
-				| Comments
+				| Recent Ratings
+				i.icon-refresh.pull-right 
+			.widget-content
+				ul
+					li
+						.reviewer-info
+							.star-rating.pull-right
+								i.icon-star
+								i.icon-star
+								i.icon-star
+								i.icon-star-empty
+								i.icon-star-empty
+			 				= image_tag "/assets/avatar-male.jpg", :size => "30x30"
+			 				= link_to "John Smith", "" 
+			 				em  on 8/20/2013
+			 			.review-text
+			 				p Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					li
+						.reviewer-info
+							.star-rating.pull-right
+								i.icon-star
+								i.icon-star
+								i.icon-star
+								i.icon-star-empty
+								i.icon-star-empty
+			 				= image_tag "/assets/avatar-male.jpg", :size => "30x30"
+			 				= link_to "John Smith", "" 
+			 				em  on 8/20/2013
+			 			.review-text
+			 				p Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy.
+					li
+						.reviewer-info
+							.star-rating.pull-right
+								i.icon-star
+								i.icon-star
+								i.icon-star
+								i.icon-star-empty
+								i.icon-star-empty
+			 				= image_tag "/assets/avatar-male.jpg", :size => "30x30"
+			 				= link_to "John Smith", "" 
+			 				em  on 8/20/2013
+			 			.review-text
+			 				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+
+							p Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+					li
+						.reviewer-info
+							.star-rating.pull-right
+								i.icon-star
+								i.icon-star
+								i.icon-star
+								i.icon-star-empty
+								i.icon-star-empty
+			 				= image_tag "/assets/avatar-male.jpg", :size => "30x30"
+			 				= link_to "John Smith", "" 
+			 				em  on 8/20/2013
+			 			.review-text
+			 				p Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					li
+						.reviewer-info
+							.star-rating.pull-right
+								i.icon-star
+								i.icon-star
+								i.icon-star
+								i.icon-star-empty
+								i.icon-star-empty
+			 				= image_tag "/assets/avatar-male.jpg", :size => "30x30"
+			 				= link_to "John Smith", "" 
+			 				em  on 8/20/2013
+			 			.review-text
+			 				p Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy.
+					li
+						.reviewer-info
+							.star-rating.pull-right
+								i.icon-star
+								i.icon-star
+								i.icon-star
+								i.icon-star-empty
+								i.icon-star-empty
+			 				= image_tag "/assets/avatar-male.jpg", :size => "30x30"
+			 				= link_to "John Smith", "" 
+			 				em  on 8/20/2013
+			 			.review-text
+			 				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+
+							p Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+
+.row
+	.col-lg-8
+		.widget-container
+			.heading 
+				i.icon-map-marker
+				| Interactive global map
 				i.icon-plus.pull-right 
 				i.icon-refresh.pull-right 
 			.widget-content
-				.row
-					.col-lg-2
-			 			= image_tag "/assets/avatar-male.jpg"
-			 		.col-lg-10
-			 			| Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-			 			button.btn.btn-mini.btn-default-outline type="button" Reply
-			 	.row
-			 		.col-lg-2
-			  			= image_tag "/assets/avatar-male.jpg"
-			  		.col-lg-10
-			  			| Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-			  			button.btn.btn-mini.btn-default-outline type="button" Reply
-			  	.row
-					.col-lg-2
-			 			= image_tag "/assets/avatar-male.jpg"
-			 		.col-lg-10
-			 			| Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-			 			button.btn.btn-mini.btn-default-outline type="button" Replys
-
-
-	.col-lg-6
-			.widget-container
-				.heading 
-					i.icon-map-marker
-					| Interactive global map
-					i.icon-plus.pull-right 
-					i.icon-refresh.pull-right 
-				.widget-content
-				 	#vmap style="width: 80%; height: 300px; margin:0 auto; position:relative; overflow: hidden;"
-
-
-
-.row
-	.col-lg-10
-		.widget-container
-					.heading 
-						i.icon-calendar
-						| Calendar
-						i.icon-plus.pull-right 
-						i.icon-refresh.pull-right 
-					.widget-content.padded
-						#calendar style="width: 80%; margin: 0 auto;"
-
-	.col-lg-2
+			 	#vmap.map style="height: 450px;"
+	
+	.col-lg-4
 		.widget-container.scrollable.rollodex
-					.heading 
-						i.icon-comment
-						| Rollodex
-						i.icon-plus.pull-right 
-						i.icon-search.pull-right
-						i.icon-refresh.pull-right
-					.widget-content
-						.roll-title A
-						ul.list-unstyled
-							li.roll-item 
-								= image_tag "/assets/avatar-male.jpg"
-								| John Averton
-							li.roll-item 
-								= image_tag "/assets/avatar-male.jpg"
-								| John Averton	
+			.heading 
+				i.icon-comment
+				| Rollodex
+				i.icon-plus.pull-right 
+				i.icon-search.pull-right
+				i.icon-refresh.pull-right
+			.widget-content
+				.roll-title A
+				ul.list-unstyled
+					li.roll-item 
+						= image_tag "/assets/avatar-male.jpg"
+						| John Averton
+					li.roll-item 
+						= image_tag "/assets/avatar-male.jpg"
+						| John Averton	
+					li.roll-item 
+						= image_tag "/assets/avatar-male.jpg"
+						| John Averton
+				
+				.roll-title B
+				ul.list-unstyled
+					li.roll-item 
+						= image_tag "/assets/avatar-male.jpg"
+						| John Averton
+					li.roll-item 
+						= image_tag "/assets/avatar-male.jpg"
+						| John Averton	
 
-							li.roll-item 
-								= image_tag "/assets/avatar-male.jpg"
-								| John Averton
-								
-						
-						.roll-title B
-						ul.list-unstyled
-							li.roll-item 
-								= image_tag "/assets/avatar-male.jpg"
-								| John Averton
-							li.roll-item 
-								= image_tag "/assets/avatar-male.jpg"
-								| John Averton	
+					li.roll-item 
+						= image_tag "/assets/avatar-male.jpg"
+						| John Averton
 
-							li.roll-item 
-								= image_tag "/assets/avatar-male.jpg"
-								| John Averton
-		
-						.roll-title C
-						ul.list-unstyled
-							li.roll-item 
-								= image_tag "/assets/avatar-male.jpg"
-								| John Averton
-							li.roll-item 
-								= image_tag "/assets/avatar-male.jpg"
-								| John Averton	
+				.roll-title C
+				ul.list-unstyled
+					li.roll-item 
+						= image_tag "/assets/avatar-male.jpg"
+						| John Averton
+					li.roll-item 
+						= image_tag "/assets/avatar-male.jpg"
+						| John Averton	
 
-							li.roll-item 
-								= image_tag "/assets/avatar-male.jpg"
-								| John Averton
+					li.roll-item 
+						= image_tag "/assets/avatar-male.jpg"
+						| John Averton
 
-							.roll-title D
-							.roll-title E
-							ul.list-unstyled
-								li.roll-item 
-									= image_tag "/assets/avatar-male.jpg"
-									| John Averton
-							.roll-title F
-							.roll-title G
-							.roll-title H
-							.roll-title I
-							.roll-title J
-							ul.list-unstyled
-								li.roll-item 
-									= image_tag "/assets/avatar-male.jpg"
-									| John Averton
-							.roll-title K
-							.roll-title L
-							.roll-title M
-							.roll-title N
-							.roll-title O
-							.roll-title P
-							.roll-title Q
-							.roll-title R
-							.roll-title S
-							ul.list-unstyled
-								li.roll-item 
-									= image_tag "/assets/avatar-male.jpg"
-									| John Averton
-								li.roll-item 
-									= image_tag "/assets/avatar-male.jpg"
-									| John Averton									
-							.roll-title T
-							.roll-title U
-							.roll-title V
-							.roll-title W
-							.roll-title X
-							.roll-title Y
-							.roll-title Z
+					.roll-title D
+					.roll-title E
+					ul.list-unstyled
+						li.roll-item 
+							= image_tag "/assets/avatar-male.jpg"
+							| John Averton
+					.roll-title F
+					.roll-title G
+					.roll-title H
+					.roll-title I
+					.roll-title J
+					ul.list-unstyled
+						li.roll-item 
+							= image_tag "/assets/avatar-male.jpg"
+							| John Averton
+					.roll-title K
+					.roll-title L
+					.roll-title M
+					.roll-title N
+					.roll-title O
+					.roll-title P
+					.roll-title Q
+					.roll-title R
+					.roll-title S
+					ul.list-unstyled
+						li.roll-item 
+							= image_tag "/assets/avatar-male.jpg"
+							| John Averton
+						li.roll-item 
+							= image_tag "/assets/avatar-male.jpg"
+							| John Averton									
+					.roll-title T
+					.roll-title U
+					.roll-title V
+					.roll-title W
+					.roll-title X
+					.roll-title Y
+					.roll-title Z
