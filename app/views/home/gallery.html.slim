@@ -35,32 +35,64 @@
 						    = image_tag "/assets/image4.png"
 
 .row
-	.widget-container.large
-				.heading 
-					i.icon-signal 
-					| Sorting and Filtering
-					i.icon-refresh.pull-right
-				.widget-content
-					ul.list-inline#filters
-					  li
-					    a data-filter="*" href="#"
-					  li
-					    a data-filter=".metal" href="#" Metal
-					  li
-					    a data-filter=".transition" href="#" Transition
-					  li
-					    a data-filter=".alkali, .alkaline-earth" href="#" Alkali
-					  li
-					    a data-filter=":not(.transition)" href="#" Not
-					  li
-					    a data-filter=".metal:not(.transition)" href="#" Metal
+	.col-lg-12
+		.widget-container.large
+					.heading 
+						i.icon-signal 
+						| Sorting and Filtering
+						i.icon-refresh.pull-right
+					.widget-content
+						ul.list-inline#filters
+						  li
+						    a data-filter="*" href="#"
+						  li
+						    a data-filter=".metal" href="#" Metal
+						  li
+						    a data-filter=".transition" href="#" Transition
+						  li
+						    a data-filter=".alkali, .alkaline-earth" href="#" Alkali
+						  li
+						    a data-filter=":not(.transition)" href="#" Not
+						  li
+						    a data-filter=".metal:not(.transition)" href="#" Metal
 
-					#container
-					  .element.transition.metal ...
-					  .element.post-transition.metal ...
-					  .element.alkali.metal ...
-					  .element.transition.metal ...
-					  .element.lanthanoid.metal.inner-transition ...
-					  .element.halogen.nonmetal ...
-					  .element.alkaline-earth.metal ...
-					  | \...
+						#container
+						  .element.transition.metal ...
+						  .element.post-transition.metal ...
+						  .element.alkali.metal ...
+						  .element.transition.metal ...
+						  .element.lanthanoid.metal.inner-transition ...
+						  .element.halogen.nonmetal ...
+						  .element.alkaline-earth.metal ...
+						  | \...
+
+
+
+.row
+	.col-lg-6
+		.widget-container.large
+					.heading 
+						i.icon-signal 
+						| Carousel
+						i.icon-refresh.pull-right
+					.widget-content.padded
+						#carousel-example-generic.carousel.slide
+						  /! Indicators
+						  ol.carousel-indicators
+						    li.active data-slide-to="0" data-target="#carousel-example-generic"
+						    li data-slide-to="1" data-target="#carousel-example-generic"
+						    li data-slide-to="2" data-target="#carousel-example-generic"
+						  /! Wrapper for slides
+						  .carousel-inner
+						    .item.active
+						      = image_tag "/assets/image5.png"
+						    .item
+						      = image_tag "/assets/image6.png"
+						    .item
+						      = image_tag "/assets/image7.png"
+						  /! Controls
+						  a.left.carousel-control data-slide="prev" href="#carousel-example-generic"
+						    span.icon-prev
+						  a.right.carousel-control data-slide="next" href="#carousel-example-generic"
+						    span.icon-next
+
