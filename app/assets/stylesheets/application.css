@@ -9,16 +9,17 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require isostyle
  *= require normalize
  *= require bootstrap.min
  *= require fullcalendar
- *= require prettify
- *= require wizard
  *= require bookblock
  *= require book1
  *= require style_common
  *= require style1
  *= require dataTables/jquery.dataTables
- *= require isostyle
+ *= require preview_component 
+ *= require prettify
+ *= require wizard
  *= require style
  */
