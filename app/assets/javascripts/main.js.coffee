@@ -211,15 +211,12 @@ $(document).ready ->
     $("#rootwizard").find(".bar").css width: $percent + "%"
 
 
-
-
-
-
 	# =============================================================================
 	#   Hoverfold - Gallery Effect
 	# =============================================================================
 
 	$("#grid").hoverfold()
+
 
 	# =============================================================================
 	#   Isotope
@@ -231,5 +228,14 @@ $(document).ready ->
 	  selector = $(this).attr("data-filter")
 	  $container.isotope filter: selector
 	  false
+
+
+  # =============================================================================
+  #   Scrollbar Styling JS
+  # =============================================================================
+  $('.scrollbar').ClassyScroll
+    autoHide: 'true'
+    autoHideTime: 400
+    sliderOpacity: 1
 
 

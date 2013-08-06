@@ -20,6 +20,7 @@
  *= require preview_component 
  *= require prettify
  *= require wizard
+ *= require classyscroll
  *= require bootstrap.min
  *= require style
  */
