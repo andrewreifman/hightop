@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.mousewheel
 //= require jquery.classyscroll
 //= require jquery.vmap.min
 //= require jquery.vmap.sampledata

@@ -234,8 +234,7 @@ $(document).ready ->
   #   Scrollbar Styling JS
   # =============================================================================
   $('.scrollbar').ClassyScroll
-    autoHide: 'true'
-    autoHideTime: 400
     sliderOpacity: 1
+    wheelSpeed: 2
 
 
