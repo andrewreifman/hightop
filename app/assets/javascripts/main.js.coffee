@@ -203,7 +203,6 @@ $(document).ready ->
 	# =============================================================================
 	#   Boostrap Wizard
 	# =============================================================================
-
   $("#rootwizard").bootstrapWizard onTabShow: (tab, navigation, index) ->
     $total = navigation.find("li").length
     $current = index + 1
@@ -234,9 +233,8 @@ $(document).ready ->
   #   Scrollbar Styling JS
   # =============================================================================
   $('.scrollbar').ClassyScroll
-    autoHide: 'true'
-    autoHideTime: 400
     sliderOpacity: 1
+    wheelSpeed: 2
 
 
 
