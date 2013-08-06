@@ -34,36 +34,6 @@
 				      .hovereffect.pull-right.i.icon-trash.icon-2x
 				      .hovereffect-primary.pull-right.i.icon-long-arrow-right.icon-2x
 				    = image_tag "/assets/image4.png"
-					.heading 
-						i.icon-signal 
-						| Hover Effect
-						i.icon-refresh.pull-right
-					.widget-content.clearfix
-						#grid.main
-						  .view
-						    .view-back
-						      .hovereffect.pull-right.i.icon-thumbs-up.icon-2x
-						      .hovereffect.pull-right.i.icon-trash.icon-2x
-						      .hovereffect-primary.pull-right.i.icon-long-arrow-right.icon-2x
-						    = image_tag "/assets/image1.png"
-						  .view
-						    .view-back
-						      .hovereffect.pull-right.i.icon-thumbs-up.icon-2x
-						      .hovereffect.pull-right.i.icon-trash.icon-2x
-						      .hovereffect-primary.pull-right.i.icon-long-arrow-right.icon-2x
-						    = image_tag "/assets/image2.png"
-						  .view
-						    .view-back
-						      .hovereffect.pull-right.i.icon-thumbs-up.icon-2x
-						      .hovereffect.pull-right.i.icon-trash.icon-2x
-						      .hovereffect-primary.pull-right.i.icon-long-arrow-right.icon-2x
-						    = image_tag "/assets/image3.png"
-						  .view
-						    .view-back
-						      .hovereffect.pull-right.i.icon-thumbs-up.icon-2x
-						      .hovereffect.pull-right.i.icon-trash.icon-2x
-						      .hovereffect-primary.pull-right.i.icon-long-arrow-right.icon-2x
-						    = image_tag "/assets/image4.png"
 
 .row
 	.col-lg-6
@@ -71,22 +41,28 @@
 			.heading 
 				i.icon-signal 
 				| Sorting and Filtering
-				i.icon-refresh.pull-right
+				.list-inline#filters.btn-group.pull-right
+					a.btn.btn-mini.btn-primary-outline data-filter=".metal" href="#" All
+					a.btn.btn-mini.btn-primary-outline data-filter=".transition" href="#" Transition
+					a.btn.btn-mini.btn-primary-outline data-filter=".alkali, .alkaline-earth" href="#" Alkali
+					a.btn.btn-mini.btn-primary-outline data-filter=":not(.transition)" href="#" Not
 			.widget-content
 			.row
-				.list-inline#filters.btn-group.pull-right
-					a.btn.btn-default-outline data-filter=".metal" href="#" All
-					a.btn.btn-default-outline data-filter=".transition" href="#" Transition
-					a.btn.btn-default-outline data-filter=".alkali, .alkaline-earth" href="#" Alkali
-					a.btn.btn-default-outline data-filter=":not(.transition)" href="#" Not
+				
 				.row
 				#container
-				  .gallery-item.transition.metal ...
-				  .gallery-item.post-transition.metal ...
-				  .gallery-item.alkali.metal ...
-				  .gallery-item.transition.metal ...
-				  .gallery-item.halogen.nonmetal ...
-				  .gallery-item.alkaline-earth.metal ...
+				  .gallery-item.transition.metal 
+				  	= image_tag "/assets/image-iso.png"
+				  .gallery-item.post-transition.meta
+				  	= image_tag "/assets/image-iso2.jpg"
+				  .gallery-item.alkali.metal 
+				  	= image_tag "/assets/image-iso3.png"	
+				  .gallery-item.transition.metal
+				  	= image_tag "/assets/image-iso.png"	
+				  .gallery-item.halogen.nonmetal
+				  	= image_tag "/assets/image-iso2.jpg"	
+				  .gallery-item.alkaline-earth.metal
+				  	= image_tag "/assets/image-iso.png"	
 
 	.col-lg-6
 		.widget-container.large

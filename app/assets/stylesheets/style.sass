@@ -842,14 +842,21 @@ small
     color: $blue
 
 .gallery-item
-  width: 204px
-  height: 204px
+  width: 180px
+  height: 136px
   margin: 10px
   float: left
   position: relative
   border: 8px solid #fff
   box-shadow: 1px 1px 2px rgba(0,0,0,0.05)
   background: #333
+    
+  img
+    width: 100%
+
+@media (max-width: 450px)
+  .gallery-item
+    width: 300px
 
 /*-----------------------------------------------------------------------------------*/
 /*  List widget
