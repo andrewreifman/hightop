@@ -36,8 +36,10 @@ end
 gem 'foreman'
 gem 'slim-rails'
 
-# Adds compass gem
-gem 'compass-rails'
+# Adds compass gem - assets group only required for compass
+group :assets do
+  gem 'compass-rails', '~> 2.0.alpha.0'
+end
 
 # Adds datatables gem
 gem 'jquery-datatables-rails'
