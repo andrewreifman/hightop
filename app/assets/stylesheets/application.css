@@ -12,8 +12,6 @@
  *= require isostyle
  *= require normalize
  *= require fullcalendar
- *= require bookblock
- *= require book1
  *= require style_common
  *= require style1
  *= require dataTables/jquery.dataTables
