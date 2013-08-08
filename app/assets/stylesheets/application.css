@@ -14,7 +14,7 @@
  *= require fullcalendar
  *= require style_common
  *= require style1
- *= require dataTables/jquery.dataTables
+ *= require datatables
  *= require preview_component 
  *= require prettify
  *= require wizard
