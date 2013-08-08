@@ -2,7 +2,7 @@
 #   Sparkline Linechart JS
 # =============================================================================
 linechartResize = ->
-  $("#linechart-1").sparkline [160, 240, 250, 280, 300, 250, 230, 200, 280, 380, 400, 360, 300, 220, 200, 150, 100, 100, 180, 180, 200, 160, 220, 140],
+  $("#linechart-1").sparkline [160, 240, 250, 280, 300, 250, 230, 200, 280, 380, 400, 360, 300, 220, 200, 150, 40, 70, 180, 110, 200, 160, 200, 220],
     type: "line"
     width: "100%"
     height: "226"
@@ -15,8 +15,9 @@ linechartResize = ->
     highlightSpotColor: "#80cff4"
     highlightLineColor: "#cccccc"
     spotRadius: 6
+    chartRangeMin: 0
 
-  $("#linechart-1").sparkline [100, 280, 150, 180, 220, 180, 130, 180, 180, 280, 260, 260, 200, 120, 200, 150, 100, 100, 180, 180, 200, 160, 220, 140],
+  $("#linechart-1").sparkline [100, 280, 150, 180, 220, 180, 130, 180, 180, 280, 260, 260, 200, 120, 200, 150, 100, 100, 180, 180, 200, 160, 180, 120],
     type: "line"
     width: "100%"
     height: "226"
@@ -29,6 +30,61 @@ linechartResize = ->
     highlightSpotColor: "#b9e72a"
     highlightLineColor: "#cccccc"
     spotRadius: 6
+    chartRangeMin: 0
+    composite: true
+
+  $("#linechart-2").sparkline [160, 240, 250, 280, 300, 250, 230, 200, 280, 380, 400, 360, 300, 220, 200, 150, 100, 100, 180, 180, 200, 160, 220, 140],
+    type: "line"
+    width: "100%"
+    height: "226"
+    lineColor: "#a5e1ff"
+    fillColor: "rgba(241, 251, 255, 0.9)"
+    lineWidth: 2
+    spotColor: "#a5e1ff"
+    minSpotColor: "#bee3f6"
+    maxSpotColor: "#a5e1ff"
+    highlightSpotColor: "#80cff4"
+    highlightLineColor: "#cccccc"
+    spotRadius: 6
+    chartRangeMin: 0
+
+  $("#linechart-3").sparkline [100, 280, 150, 180, 220, 180, 130, 180, 180, 280, 260, 260, 200, 120, 200, 150, 100, 100, 180, 180, 200, 160, 220, 140],
+    type: "line"
+    width: "100%"
+    height: "226"
+    lineColor: "#cfee74"
+    fillColor: "rgba(244, 252, 225, 0.5)"
+    lineWidth: 2
+    spotColor: "#b9e72a"
+    minSpotColor: "#bfe646"
+    maxSpotColor: "#b9e72a"
+    highlightSpotColor: "#b9e72a"
+    highlightLineColor: "#cccccc"
+    spotRadius: 6
+    chartRangeMin: 0
+
+
+  $("#composite-chart-1").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
+    type: "bar"
+    height: "226"
+    barSpacing: 10
+    barWidth: 26
+    barColor: "#8fdbda"
+
+  $("#composite-chart-1").sparkline [100, 280, 150, 180, 220, 180, 130, 180, 180, 280, 260, 260],
+    type: "line"
+    width: "100%"
+    height: "226"
+    lineColor: "#cfee74"
+    fillColor: "rgba(244, 252, 225, 0.5)"
+    lineWidth: 2
+    spotColor: "#b9e72a"
+    minSpotColor: "#bfe646"
+    maxSpotColor: "#b9e72a"
+    highlightSpotColor: "#b9e72a"
+    highlightLineColor: "#cccccc"
+    spotRadius: 6
+    chartRangeMin: 0
     composite: true
 
 $(document).ready ->
@@ -54,6 +110,12 @@ $(document).ready ->
 		barWidth: 12
 		barColor: "#f0ad4e"
 
+  $("#pie-chart").sparkline [2,8,6,10],
+    type: "pie"
+    height: "220"
+    width: "220"
+    offset: "+90"
+    sliceColors: ["#a0eeed","#81e970","#f5af50","#f46f50"]
 
 	# =============================================================================
 	#   Easy Pie Chart
@@ -73,6 +135,14 @@ $(document).ready ->
   	barColor: "#f46f50"
   	animate: 800
   	scaleColor: false
+
+  $(".pie-chart3").easyPieChart
+    size: 220
+    lineWidth: 12
+    lineCap: "square"
+    barColor: "#fab43b"
+    animate: 800
+    scaleColor: false
 
 
   # =============================================================================
