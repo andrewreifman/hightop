@@ -57,7 +57,8 @@ html .fc,
 .fc-header-title h2 {
 	margin-top: 0;
 	white-space: nowrap;
-	}
+	font-size: 26px;
+}
 	
 .fc .fc-header-space {
 	padding-left: 10px;
@@ -133,7 +134,6 @@ html .fc,
 
 /* Buttons
 ------------------------------------------------------------------------*/
-
 .fc-button {
 	position: relative;
 	display: inline-block;
@@ -143,20 +143,23 @@ html .fc,
 	line-height: 1.9em;
 	white-space: nowrap;
 	cursor: pointer;
-
-	}
+}
 	
 .fc-state-default { /* non-theme */
 
 	}
 
 .fc-state-default.fc-corner-left { /* non-theme */
-		border-radius:2px;
-	}
+	border-radius:4px 0 0 4px;
+}
 
 .fc-state-default.fc-corner-right { /* non-theme */
-		border-radius:2px;
-	}
+	border-radius:0 4px 4px 0;
+}
+
+.fc-state-default.fc-button-today {
+	border-radius: 4px
+}
 
 /*
 	Our default prev/next buttons use HTML entities like &lsaquo; &rsaquo; &laquo; &raquo;
@@ -164,16 +167,16 @@ html .fc,
 */
 
 .fc-text-arrow {
-	margin: 0 .1em;
+	margin: 0;
 	font-size: 2em;
-	font-family: "Courier New", Courier, monospace;
+	font-family: Courier, monospace;
 	vertical-align: baseline; /* for IE7 */
-	}
+}
 
 .fc-button-prev .fc-text-arrow,
 .fc-button-next .fc-text-arrow { /* for &lsaquo; &rsaquo; */
 	font-weight: 200;
-	}
+}
 	
 /* icon (for jquery ui) */
 	
@@ -248,16 +251,15 @@ html .fc,
 ------------------------------------------------------------------------*/
 	 
 .fc-event {
-	border: 1px solid #d1eeff; /* default BORDER color */
-	background-color: #d1eeff; /* default BACKGROUND color */
-	color: #2a8ac6;               /* default TEXT color */
+	background-color: #d1eeff;
+	color: #2a8ac6;
 	font-size: .95em;
 	cursor: default;
 	opacity: 0.7;
 	border-left:2px solid #2a8ac6;
-	font-weight:200;
-
-	}
+	font-weight:400;
+	padding: 2px 0;
+}
 
 .fc-event:hover {
 	opacity: 1;
@@ -284,8 +286,8 @@ a.fc-event,
 	
 .fc-event-time,
 .fc-event-title {
-	padding: 0 2px;
-	}
+	padding: 0 4px;
+}
 	
 .fc .ui-resizable-handle {
 	display: block;
@@ -302,8 +304,8 @@ a.fc-event,
 ------------------------------------------------------------------------*/
 
 .fc-event-hori {
-	margin-bottom: 3px;
-	}
+	margin-bottom: 4px;
+}
 
 .fc-ltr .fc-event-hori.fc-event-start,
 .fc-rtl .fc-event-hori.fc-event-end {
@@ -389,8 +391,8 @@ table.fc-border-separate {
 .fc-grid .fc-day-number {
 	float: right;
 	padding: 0 2px;
-	font-weight: 200;
-	}
+	font-weight: 400;
+}
 	
 .fc-grid .fc-other-month .fc-day-number {
 	opacity: 0.3;

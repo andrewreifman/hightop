@@ -12,13 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.mousewheel
+//= require jquery.classyscroll
 //= require jquery.vmap.min
 //= require jquery.vmap.sampledata
 //= require jquery.vmap.world
 //= require fullcalendar.min
 //= require gcal
 //= require prettify
-//= require jquery.bootstrap.wizard.min
 //= require dataTables/jquery.dataTables
 //= require bootstrap.min
 //= require jquery.sparkline.min

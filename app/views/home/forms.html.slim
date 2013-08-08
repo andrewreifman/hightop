@@ -2,110 +2,161 @@
   h1 Forms
 
 .row
-  .col-lg-12
-    .widget-container.fluid-height.clearfix
-      .heading 
-        i.icon-adjust
-        | Step by Step Guide
-        #rootwizard
-          .navbar2
-            .navbar-inner2
-              .container
-                ul
-                  li
-                    a data-toggle="tab" href="#tab1" 1
-                  li
-                    a data-toggle="tab" href="#tab2" 2
-                  li
-                    a data-toggle="tab" href="#tab3" 3
-                  li
-                    a data-toggle="tab" href="#tab4" 4
-                  li
-                    a data-toggle="tab" href="#tab5" 5
-                  li
-                    a data-toggle="tab" href="#tab6" 6
-                  li
-                    a data-toggle="tab" href="#tab7" 7
-              #bar.progress.progress-striped.active 
-                .bar style="width:0px;" 
-              .tab-content
-                #tab1.tab-pane
-                  | 1
-                #tab2.tab-pane
-                  | 2
-                #tab3.tab-pane
-                  | 3
-                #tab4.tab-pane
-                  | 4
-                #tab5.tab-pane
-                  | 5
-                #tab6.tab-pane
-                  | 6
-                #tab7.tab-pane
-                  | 7
-                ul.pager.wizard
-                  li.previous.first style="display:none;"
-                    a href="javascript:;"
-                  li.previous
-                    a href="javascript:;"
-                  li.next.last style="display:none;"
-                    a href="javascript:;"
-                  li.next
-                    a href="javascript:;"
-
-
-.row
   .col-lg-6
     .widget-container.fluid-height.clearfix
       .heading 
         i.icon-adjust
-        | User Profile
+        | Form Components
 
       .widget-content.padded
-        form
-          fieldset
-            legend John Smith
+        .col-lg-12
+          form.form-horizontal action="#"
             .form-group
-              label for="exampleInputFile"
-              input#exampleInputFile type="file"
-                p.help-block Example block-level help text here.
+              label.control-label.col-lg-2 Input
+              .col-lg-10
+                input.form-control placeholder="Text" type="text"
             .form-group
-              label for="exampleInputEmail" Email
-              input#exampleInputEmail.form-control placeholder="Enter email" type="text"
+              label.control-label.col-lg-2 Dropdown
+              .col-lg-10
+                select.form-control
+                  option value="Category 1" Option 1
+                  option value="Category 2" Option 2
+                  option value="Category 3" Option 3
+                  option value="Category 4" Option 4
             .form-group
-              label for="exampleInputPassword" Password
-              input#exampleInputPassword.form-control placeholder="Password" type="password"
+              label.control-label.col-lg-2 Dropdown
+              .col-lg-10
+                select.form-control multiple=""
+                  option value="Category 1" Option 1
+                  option value="Category 2" Option 2
+                  option value="Category 3" Option 3
+                  option value="Category 4" Option 4
+
+            fieldset disabled=""
+              .form-group
+                label.control-label.col-lg-2 for="disabledInput" Disabled Input
+                .col-lg-10
+                  input#disabledInput.form-control placeholder="Disabled input" type="text"
+              .form-group
+                label.control-label.col-lg-2 for="disabledInput" Disabled Select
+                .col-lg-10
+                  select#disabledSelect.form-control
+                    option Disabled select
+
             .form-group
-              label for="exampleInputPassword" Profile
-              textarea class="form-control" rows="3"
+              label.control-label.col-lg-2 Radio Buttons
+              .col-lg-10
+                label.radio
+                  input name="optionsRadios1" type="radio" value="option1"
+                  | Option 1
+                label.radio
+                  input checked="" name="optionsRadios1" type="radio" value="option2"
+                  | Option 2
+                label.radio
+                  input name="optionsRadios1" type="radio" value="option3"
+                  | Option 3
+                label.radio
+                  input name="optionsRadios1" type="radio" value="option4"
+                  | Option 4
+
             .form-group
-              label Industry
-              select.form-control
-                option 1
-                option 2
-                option 3
-                option 4
-                option 5
-            .checkbox
-              label
-                input type="checkbox"
-                  | I agree to the terms and conditions
-            button.btn.btn-primary-outline type="submit" Submit
-            button.btn.btn-default-outline type="submit" Cancel
+              label.control-label.col-lg-2 Radio Buttons
+              .col-lg-10
+                label.radio-inline
+                  input name="optionsRadios2" type="radio" value="option1"
+                  | Option 1
+                label.radio-inline
+                  input checked="" name="optionsRadios2" type="radio" value="option2"
+                  | Option 2
+                label.radio-inline
+                  input name="optionsRadios2" type="radio" value="option3"
+                  | Option 3
+            .form-group
+              label.control-label.col-lg-2 Checkbox
+              .col-lg-10
+                label.checkbox
+                  input type="checkbox" value=""
+                  | Checkbox 1
+                label.checkbox
+                  input type="checkbox" value=""
+                  | Checkbox 2
+                label.checkbox
+                  input type="checkbox" value=""
+                  | Checkbox 3
+            .form-group
+              label.control-label.col-lg-2 Checkbox
+              .col-lg-10
+                label.checkbox-inline
+                  input type="checkbox" value=""
+                  | Checkbox 1
+                label.checkbox-inline
+                  input type="checkbox" value=""
+                  | Checkbox 2
+                label.checkbox-inline
+                  input type="checkbox" value=""
+                  | Checkbox 3
+
+            .form-group
+              label.control-label.col-lg-2 Textarea
+              .col-lg-10
+                textarea.form-control rows="3"
+
+            .form-actions.col-offset-2
+              button.btn.btn-primary type="submit" Submit
+              button.btn.btn-default-outline Cancel
 
   .col-lg-6
-    .widget-container
-      .heading 
-        i.icon-adjust
-        | Validations
+    .row
+      .col-lg-12
+        .widget-container.fluid-height.clearfix
+          .heading 
+            i.icon-adjust
+            | User Profile
 
-      .widget-content.padded
-        .form-group.has-warning
-          label.control-label for="inputWarning" Warning
-          input#inputWarning.form-control type="text"
-        .form-group.has-error
-          label.control-label for="inputError" Error
-          input#inputError.form-control type="text"
-        .form-group.has-success
-          label.control-label for="inputSuccess" Success
-          input#inputSuccess.form-control type="text"
+          .widget-content.padded
+            form
+              fieldset
+                .form-group
+                  label for="exampleInputFile"
+                  input#exampleInputFile type="file"
+                    p.help-block Example block-level help text here.
+                .form-group
+                  label for="exampleInputEmail" Email
+                  input#exampleInputEmail.form-control placeholder="Enter email" type="text"
+                .form-group
+                  label for="exampleInputPassword" Password
+                  input#exampleInputPassword.form-control placeholder="Password" type="password"
+                .form-group
+                  label for="exampleInputPassword" Profile
+                  textarea class="form-control" rows="3"
+                .form-group
+                  label Industry
+                  select.form-control
+                    option 1
+                    option 2
+                    option 3
+                    option 4
+                    option 5
+                .form-group
+                  label.checkbox
+                    input type="checkbox"
+                    | I agree to the terms and conditions
+                button.btn.btn-primary type="submit" Submit
+                button.btn.btn-default-outline Cancel
+
+      .col-lg-12
+        .widget-container
+          .heading 
+            i.icon-adjust
+            | Validations
+
+          .widget-content.padded
+            .form-group.has-warning
+              label.control-label for="inputWarning" Warning
+              input#inputWarning.form-control type="text"
+            .form-group.has-error
+              label.control-label for="inputError" Error
+              input#inputError.form-control type="text"
+            .form-group.has-success
+              label.control-label for="inputSuccess" Success
+              input#inputSuccess.form-control type="text"
