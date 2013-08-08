@@ -121,6 +121,7 @@ small
 
     .logo
       background: url(../assets/se7en-logo.png) no-repeat 0 0
+      @include image2x("../assets/se7en-logo@2x.png", 54px, 16px)
       width: 54px
       height: 16px
       float: left
@@ -133,6 +134,7 @@ small
         border-color: #e6e6e6
         box-shadow: none
         background: #FFF url(../assets/icon-search.png) no-repeat center left
+        @include image2x("../assets/icon-search@2x.png", 18px, 12px)
         padding-left: 24px
         margin-top: 1px
 
@@ -680,6 +682,7 @@ small
 
       .icon
         background: url(../assets/info-data-sprite.png) no-repeat left top
+        @include image2x("../assets/info-data-sprite@2x.png", 50px, 38px)
         width: 50px
         height: 38px
         display: inline-block
