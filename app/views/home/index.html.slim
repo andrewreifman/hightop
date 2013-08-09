@@ -159,3 +159,60 @@
 							li 12
 
 
+.row
+  .col-lg-6
+		.widget-container
+			.heading 
+				i.icon-map-marker
+				| Interactive global map
+				i.icon-plus.pull-right 
+				i.icon-refresh.pull-right 
+			.widget-content
+			 	#vmap.map style="height: 450px;"
+
+  .col-lg-6
+		.widget-container.scrollable.chat
+			.heading 
+				i.icon-comments
+				| Chat Widget
+				i.icon-smile.pull-right
+			.widget-content.padded.scrollbar
+				ul
+					li
+						= image_tag "/assets/avatar-male.jpg", :size => "50x50"
+						.bubble
+							= link_to "John Smith", "", class: "user-name"
+							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+							em.time 
+								i.icon-time
+								| 10 min ago
+					li.current-user
+						= image_tag "/assets/avatar-female.jpg", :size => "50x50"
+						.bubble
+							= link_to "Jane Smith", "", class: "user-name"
+							p.message Donec odio. Quisque volutpat mattis eros.
+							em.time 
+								i.icon-time
+								| 10 min ago
+					li
+						= image_tag "/assets/avatar-male.jpg", :size => "50x50"
+						.bubble
+							= link_to "John Smith", "", class: "user-name"
+							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+							em.time 
+								i.icon-time
+								| 10 min ago
+					li
+						= image_tag "/assets/avatar-male.jpg", :size => "50x50"
+						.bubble
+							= link_to "John Smith", "", class: "user-name"
+							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+							em.time 
+								i.icon-time
+								| 10 min ago
+
+			.post-message
+				input type="text" placeholder="Write your message here…" class="form-control"
+				input type="submit" value="Post" class="btn btn-primary"
+
+
