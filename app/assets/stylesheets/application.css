@@ -9,11 +9,9 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require isostyle
+ *= require isotope
  *= require normalize
  *= require fullcalendar
- *= require style_common
- *= require style1
  *= require datatables
  *= require preview_component 
  *= require prettify

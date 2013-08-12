@@ -4265,7 +4265,7 @@ a.list-group-item.active > .badge,
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 1px;
+  margin: 1px 5px;
   text-indent: -999px;
   cursor: pointer;
   border: 1px solid #ffffff;
@@ -4276,6 +4276,8 @@ a.list-group-item.active > .badge,
   width: 12px;
   height: 12px;
   margin: 0;
+  margin-right: 5px;
+  margin-left: 5px;
   background-color: #ffffff;
 }
 
