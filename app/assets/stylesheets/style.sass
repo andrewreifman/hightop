@@ -28,6 +28,11 @@ $blue: #007aff
     background-image: url($image)
     background-size: $width $height
 
+@mixin transition($effect, $time)
+  -webkit-transition: $effect $time
+  -moz-transition: $effect $time
+  transition: $effect $time
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  Document Setup
@@ -105,9 +110,7 @@ small
   padding: 0
   min-height: 45px
   height: 112px
-  -webkit-transition: all .3s
-  -moz-transition: all .3s
-  transition: all .3s
+  @include transition(all, .3s)
 
   &.closed
     height: 45px
@@ -137,6 +140,10 @@ small
         @include image2x("../assets/icon-search@2x.png", 18px, 12px)
         padding-left: 24px
         margin-top: 1px
+        @include transition(all, .5s)
+
+        &:focus
+          border-color: $blue
 
     .nav
       height: 100%
@@ -152,9 +159,11 @@ small
           height: 100%
           padding: 8px 0 0 8px
           position: relative
+          @include transition(all, .3s)
 
           &:hover
             background: #eee
+            background: rgba(0,0,0,.05)
 
           > span
             background: url(../assets/admin-sprite.png) no-repeat top left
@@ -248,6 +257,7 @@ small
             font-size: 12px
             font-weight: 400
             color: #999
+            @include transition(all, .3s)
 
             span
               background: url(../assets/nav-sprite.png) no-repeat top left
@@ -273,7 +283,7 @@ small
 
             &:hover
               background: #eee
-              background: rgba(0,0,0,.05)
+              background: rgba(0,0,0,.04)
 
           .dropdown-menu
             text-align: left
@@ -341,8 +351,7 @@ small
 .btn
   font-weight: 300
   margin: 0 10px 15px 0
-  -webkit-transition: all 0.15s
-  transition: all 0.15s
+  @include transition(all, .15s)
 
   &.active
     box-shadow: none
@@ -510,6 +519,9 @@ small
 .btn-group
   margin: 0 10px 15px 0
 
+  &.pull-right
+    margin-right: 0
+
   > .btn
     margin: 0
 
@@ -582,15 +594,15 @@ small
 /*-----------------------------------------------------------------------------------*/
 .table
   margin-bottom: 10px
-  
+
   th
     font-size: 14px
 
   td
     font-size: 14px
 
-.table-bordered > thead > tr > th
-  border-bottom-width: 2px
+.table > thead > tr > th
+  border-bottom: 2px solid #DDD
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -864,46 +876,75 @@ small
 
 
 /*-----------------------------------------------------------------------------------*/
-/*  Gallery Hover Effect
+/*  Gallery with Captions
 /*-----------------------------------------------------------------------------------*/
-.hovereffect
-  background: #bbbbbb
-  color: white
-  padding: 30px 26px 32px 26px
-  foat: left
-  cursor: pointer
-  border: 1px solid #a4a4a4
-  -webkit-transition: all .2s
-  -moz-transition: all .2s
-  transition: all .2s
+.gallery-grid
+  list-style: none
+  padding: 0
+  margin: 0
 
-  &:hover
-    border: 1px solid $blue
-    background: #fff
-    color: $blue
+  li
+    float: left
+    width: 350px
+    margin: 10px
+    position: relative
+    overflow: hidden
 
-.hovereffect-primary
-  background: $blue
-  border: 1px solid $blue
-  color: white
-  padding: 32px 26px 34px 26px
-  foat: left
-  cursor: pointer
+    figure
+      margin: 0
+      position: relative
+      
+      img
+        max-width: 100%
+        display: block
+        position: relative
+        @include transition(top, .25s)
 
-  &:hover
-    border: 1px solid $blue
-    background: #fff
-    color: $blue
+    figcaption
+      width: 100%
+      position: absolute
+      bottom: -50%
+      left: 0
+      padding: 20px
+      background: $blue
+      color: #FFF
+      @include transition(all, .25s)
+
+      h3
+        margin: 0
+        padding: 0
+        color: #fff
+
+      span
+        margin-top: 5px
+        display: inline-block
+
+      a
+        margin: 0 0 0 15px
+        border: 1px solid #FFF
+
+    &:hover
+      figure img
+        top: -50px
+
+      figcaption
+        bottom: 0
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Gallery with Filter
+/*-----------------------------------------------------------------------------------*/
+.gallery-filters a
+  &.selected
+    background: $blue
+    color: #FFF
 
 .gallery-item
-  width: 180px
-  height: 136px
+  width: 200px
+  height: 150px
   margin: 10px
-  float: left
+  border: 1px solid #EEE
   position: relative
-  border: 8px solid #fff
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.05)
-  background: #333
     
   img
     width: 100%
@@ -911,6 +952,21 @@ small
 @media (max-width: 450px)
   .gallery-item
     width: 300px
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Carousel
+/*-----------------------------------------------------------------------------------*/
+.carousel-control .glyphicon, .carousel-control .icon-angle-left, .carousel-control .icon-angle-right
+  position: absolute
+  top: 50%
+  left: 50%
+  z-index: 5
+  display: inline-block
+  height: 40px
+  font-size: 40px
+  margin-top: -20px
+  margin-left: -10px
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -1124,9 +1180,7 @@ small
       margin-bottom: 0 !important
       cursor: pointer
       color: #666
-      -webkit-transition: all .2s
-      -moz-transition: all .2s
-      transition: all .2s
+      @include transition(all, .2s)
 
       [class^="icon-"], [class*="icon-"]
         width: 32px
@@ -1135,9 +1189,7 @@ small
         text-align: center
         margin-right: 10px
         vertical-align: middle
-        -webkit-transition: all .12s
-        -moz-transition: all .12s
-        transition: all .12s
+        @include transition(all, .12s)
 
       &:hover
         background-color: #f6f6f6
@@ -1257,6 +1309,46 @@ label
   .form-control
     border-color: #60c560
 
+.radio + .radio:last-child, .checkbox + .checkbox:last-child
+  margin-bottom: 0
+
+/*-----------------------------------------------------------------------------------*/
+/*  Accordion Styles
+/*-----------------------------------------------------------------------------------*/
+.accordion-heading .accordion-toggle
+  background: #f9fafa
+
+.accordion-group
+  margin: 0px
+  border-radius: 0px
+  border: 0px
+  border-bottom: 1px solid #f1f1f1
+
+/*-----------------------------------------------------------------------------------*/
+/*  Modal Styles
+/*-----------------------------------------------------------------------------------*/
+.modal-content 
+  border-radius: 0px
+.modal-content
+  box-shadow: none
+  background: rgba(255, 255, 255, 0.94)
+
+.modal-footer 
+  .btn
+    margin: 0 10px 0px 0
+
+.modal-footer
+  border: 0px
+  padding: 19px 20px 30px
+
+.modal-header
+  background: #f1f1f1
+
+/*-----------------------------------------------------------------------------------*/
+/*  Tab Styles
+/*-----------------------------------------------------------------------------------*/  
+.nav-tabs > li > a
+  border-radius: 0px 
 
 /*-----------------------------------------------------------------------------------*/
 /*  Responsive Styles

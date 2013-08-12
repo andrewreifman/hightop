@@ -1,22 +1,12 @@
 .page-title
   h1 Components
 
-p progress bar
-p modal
-p collapse
-p popover
-p alerts
-p tooltip
-p tabs
-p badges
-p pagination
-
 .row
 	.col-lg-6
 		.widget-container.large
 			.heading 
 				i.icon-signal 
-				| Thumbnails
+				| Popover
 				i.icon-refresh.pull-right
 			.widget-content.padded
 				a.btn.btn-lg.btn-danger data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover" href="#" title="" pop
@@ -33,94 +23,125 @@ p pagination
 	.col-lg-6
 		.widget-container.large
 			.heading 
-				i.icon-signal 
-				| Thumbnails
+				i.icon-warning-sign 
+				| Alerts
 				i.icon-refresh.pull-right
 			.widget-content.padded
-				ul.breadcrumb
-				  li
-				    a href="#" First
-				  li
-				    a href="#" Second
-				  li.active Data
+				.alert.alert-danger Danger
+				.alert.alert-success Success
+				.alert.alert-info Information
+				.alert.alert Note
+
 
 .row
 	.col-lg-6
-		.widget-container.large
-			.heading 
-				i.icon-signal 
-				| Tabs
-				i.icon-refresh.pull-right
-				#accordion2.accordion
-				  .accordion-group
-				    .accordion-heading
-				      a.accordion-toggle data-parent="#accordion2" data-toggle="collapse" href="#collapseOne"
-				        | Collapsible Group Item #1
-				    #collapseOne.accordion-body.collapse.in
-				      .accordion-inner
-				        | \...
-				  .accordion-group
-				    .accordion-heading
-				      a.accordion-toggle data-parent="#accordion2" data-toggle="collapse" href="#collapseTwo"
-				        | Collapsible Group Item #2
-				    #collapseTwo.accordion-body.collapse
-				      .accordion-inner
-				        | \...
-				  .accordion-group
-				    .accordion-heading
-				      a.accordion-toggle data-parent="#accordion2" data-toggle="collapse" href="#collapseThree"
-				        | Collapsible Group Item #3
-				    #collapseThree.accordion-body.collapse
-				      .accordion-inner
-				        | \...
-
-	.col-lg-6
-		.widget-container.large
-			.heading 
-				i.icon-signal 
-				| Tabs
-				i.icon-refresh.pull-right
-				a.btn.btn-primary.btn-lg data-toggle="modal" href="#myModal" Modal
-				#myModal.modal.fade
-				  .modal-dialog
-				    .modal-content
-				      .modal-header
-				        button.close aria-hidden="true" data-dismiss="modal" type="button"
-				        h4.modal-title Modal title
-				      .modal-body
-				        | \...
-				      .modal-footer
-				        button.btn.btn-default data-dismiss="modal" type="button"
-				        button.btn.btn-primary type="button"
-
-.row
-	.col-lg-6
-		.widget-container.large
-			.heading 
-				i.icon-signal 
-				| Tabs
-				i.icon-refresh.pull-right
-			.widget-content.padded
-				ul.nav.nav-tabs
+			.widget-container.large
+				.heading 
+					i.icon-sitemap 
+					| Tabs
+					i.icon-refresh.pull-right
+				
+				ul#tabs.nav.nav-tabs data-tabs="tabs"
 				  li.active
-				    a href="#" Tab1
+				    a data-toggle="tab" href="#red" Overview
 				  li
-				    a href="#" Tab2
+				    a data-toggle="tab" href="#orange" Performance
 				  li
-				    a href="#" Tab3
+				    a data-toggle="tab" href="#yellow" Device Data
+				#my-tab-content.tab-content.padded
+				  #red.tab-pane.active
+				    h1 Overview
+				    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
+				  #orange.tab-pane
+				    h1 Performance
+				    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
+				  #yellow.tab-pane
+				    h1 Device Data
+				    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
+
 
 	.col-lg-6
 		.widget-container.large
 			.heading 
-				i.icon-signal 
+				i.icon-fullscreen
+				| Modal
+				i.icon-refresh.pull-right
+			.widget-content.padded
+				a.btn.btn-primary.btn-lg data-toggle="modal" href="#myModal" Animated Modal
+			#myModal.modal.fade
+				.modal-dialog
+					.modal-content
+						.modal-header
+							button.close aria-hidden="true" data-dismiss="modal" type="button" &times;
+							h4.modal-title Se7en
+						.modal-body
+							h1 Welcome
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor. Aenean ac aliquet dolor. Ut porta ultrices justo a tempor. Curabitur eget magna mattis risus accumsan aliquet et a lorem. Pellentesque hendrerit dapibus urna, adipiscing ultrices velit accumsan eget. Fusce eget ultrices turpis, vitae facilisis orci. Curabitur scelerisque consequat vulputate. Aenean felis orci, porttitor ut eros vel, egestas ultricies nunc. Duis suscipit elementum tincidunt.
+						.modal-footer
+							button.btn.btn-default data-dismiss="modal" type="button" Close
+							button.btn.btn-primary type="button" Save Changes
+
+.row
+	.col-lg-6
+			.widget-container.large
+					.heading 
+						i.icon-collapse 
+						| Accordion
+						i.icon-refresh.pull-right
+					.widget-content
+						.accordion-group
+						.accordion-heading
+							a.accordion-toggle data-parent="#accordion2" data-toggle="collapse" href="#collapseOne" Step 1
+						#collapseOne.accordion-body.collapse.in
+						  .accordion-inner
+						    h2 Introduction
+						    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor. Aenean ac aliquet dolor. Ut porta ultrices justo a tempor. Curabitur eget magna mattis risus accumsan aliquet et a lorem. Pellentesque hendrerit dapibus urna, adipiscing ultrices velit accumsan eget. Fusce eget ultrices turpis, vitae facilisis orci. Curabitur scelerisque consequat vulputate. Aenean felis orci, porttitor ut eros vel, egestas ultricies nunc. Duis suscipit elementum tincidunt.
+						.accordion-group
+						.accordion-heading
+						  a.accordion-toggle data-parent="#accordion2" data-toggle="collapse" href="#collapseTwo"
+						    | Step 2
+						#collapseTwo.accordion-body.collapse
+						  .accordion-inner
+						  	h2 Setup
+						    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor. Aenean ac aliquet dolor. Ut porta ultrices justo a tempor. Curabitur eget magna mattis risus accumsan aliquet et a lorem. Pellentesque hendrerit dapibus urna, adipiscing ultrices velit accumsan eget. Fusce eget ultrices turpis, vitae facilisis orci. Curabitur scelerisque consequat vulputate. Aenean felis orci, porttitor ut eros vel, egestas ultricies nunc. Duis suscipit elementum tincidunt.
+						.accordion-group
+						.accordion-heading
+						  a.accordion-toggle data-parent="#accordion2" data-toggle="collapse" href="#collapseThree"
+						    | Step 3
+						#collapseThree.accordion-body.collapse
+						  .accordion-inner
+						  	h2 Review and Complete
+						    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor. Aenean ac aliquet dolor. Ut porta ultrices justo a tempor. Curabitur eget magna mattis risus accumsan aliquet et a lorem. Pellentesque hendrerit dapibus urna, adipiscing ultrices velit accumsan eget. Fusce eget ultrices turpis, vitae facilisis orci. Curabitur scelerisque consequat vulputate. Aenean felis orci, porttitor ut eros vel, egestas ultricies nunc. Duis suscipit elementum tincidunt.
+
+
+	.col-lg-6
+		.widget-container.large
+			.heading 
+				i.icon-spinner 
 				| Progress bars
 				i.icon-refresh.pull-right
 			.widget-content.padded
+				p General
 				.progress
-				  .progress-bar.progress-bar-info style="width: 20%"
+				  .progress-bar style="width: 50%"
 				.progress
-				  .progress-bar.progress-bar-success style="width: 40%"
+				  .progress-bar.progress-bar-success style="width: 50%"
 				.progress
-				  .progress-bar.progress-bar-warning style="width: 60%"
+				  .progress-bar.progress-bar-warning style="width: 50%"
 				.progress
-				  .progress-bar.progress-bar-danger style="width: 80%"
+				  .progress-bar.progress-bar-danger style="width: 50%"
+				p Animated
+				.progress.progress-striped.active
+  					.progress-bar style="width: 50%"
+				.progress.progress-striped.active
+  					.progress-bar.progress-bar-success style="width: 50%"
+  				.progress.progress-striped.active
+  					.progress-bar.progress-bar-warning style="width: 50%"
+  				.progress.progress-striped.active
+  					.progress-bar.progress-bar-danger style="width: 50%"
+
+  				p Stacked
+  				.progress
+  				  .progress-bar.progress-bar-success style="width: 30%"
+  				  .progress-bar.progress-bar-warning style="width: 20%"
+  				  .progress-bar.progress-bar style="width: 30%"

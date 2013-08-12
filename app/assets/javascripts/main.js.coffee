@@ -184,6 +184,12 @@ $(document).ready ->
 	$("#dataTable1").dataTable
     "sPaginationType": "full_numbers"
 
+  # =============================================================================
+  #   Bootstrap Tabs
+  # =============================================================================
+  $ ->
+  $("#myTab a:last").tab "show"
+
 
 	# =============================================================================
 	#   jQuery VMap
@@ -282,12 +288,14 @@ $(document).ready ->
 	#   Isotope
 	# =============================================================================
 
-	$container = $("#container")
+	$container = $(".gallery-container")
 	$container.isotope {}
-	$("#filters a").click ->
-	  selector = $(this).attr("data-filter")
-	  $container.isotope filter: selector
-	  false
+	$(".gallery-filters a").click ->
+    selector = $(this).attr("data-filter")
+    $(".gallery-filters a.selected").removeClass "selected"
+    $(this).addClass "selected"
+    $container.isotope filter: selector
+    false
 
 
   # =============================================================================
@@ -297,10 +305,8 @@ $(document).ready ->
     sliderOpacity: 1
     wheelSpeed: 2
 
-
-
   # =============================================================================
-  #   Scrollbar Styling JS
+  #   Popover JS
   # =============================================================================
   $('#popover').popover()
 

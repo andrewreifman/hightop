@@ -3,81 +3,81 @@
 
 .row
 	.col-lg-12
-		.widget-container.gallery
+		.widget-container.fluid-height
 			.heading 
 				i.icon-signal 
-				| Hover Effect
-				i.icon-refresh.pull-right
-			.widget-content.clearfix
-				#grid.main
-				  .view
-				    .view-back
-				      .hovereffect.pull-right.i.icon-thumbs-up.icon-2x
-				      .hovereffect.pull-right.i.icon-trash.icon-2x
-				      .hovereffect-primary.pull-right.i.icon-long-arrow-right.icon-2x
-				    = image_tag "/assets/image1.png"
-				  .view
-				    .view-back
-				      .hovereffect.pull-right.i.icon-thumbs-up.icon-2x
-				      .hovereffect.pull-right.i.icon-trash.icon-2x
-				      .hovereffect-primary.pull-right.i.icon-long-arrow-right.icon-2x
-				    = image_tag "/assets/image2.png"
-				  .view
-				    .view-back
-				      .hovereffect.pull-right.i.icon-thumbs-up.icon-2x
-				      .hovereffect.pull-right.i.icon-trash.icon-2x
-				      .hovereffect-primary.pull-right.i.icon-long-arrow-right.icon-2x
-				    = image_tag "/assets/image3.png"
-				  .view
-				    .view-back
-				      .hovereffect.pull-right.i.icon-thumbs-up.icon-2x
-				      .hovereffect.pull-right.i.icon-trash.icon-2x
-				      .hovereffect-primary.pull-right.i.icon-long-arrow-right.icon-2x
-				    = image_tag "/assets/image4.png"
+				| Gallery with Captions
+			
+			.widget-content.padded
+				ul.gallery-grid.clearfix
+				  li
+				    figure
+				    	= image_tag "/assets/caption-image.png"
+			        figcaption
+			          h3 Camera
+			          = link_to "View", "http://dribbble.com/shots/1115632-Camera", class: "btn btn-mini btn-primary pull-right"
+			          span by Jacob Cummings
+				  li
+				    figure
+				    	= image_tag "/assets/caption-image.png"
+			        figcaption
+			          h3 Camera
+			          = link_to "View", "http://dribbble.com/shots/1115632-Camera", class: "btn btn-mini btn-primary pull-right"
+			          span by Jacob Cummings
+				  li
+				    figure
+				    	= image_tag "/assets/caption-image.png"
+			        figcaption
+			          h3 Camera
+			          = link_to "View", "http://dribbble.com/shots/1115632-Camera", class: "btn btn-mini btn-primary pull-right"
+			          span by Jacob Cummings
+				  li
+				    figure
+				    	= image_tag "/assets/caption-image.png"
+			        figcaption
+			          h3 Camera
+			          = link_to "View", "http://dribbble.com/shots/1115632-Camera", class: "btn btn-mini btn-primary pull-right"
+			          span by Jacob Cummings
 
 .row
 	.col-lg-6
-		.widget-container.large
+		.widget-container.fluid-height
 			.heading 
 				i.icon-signal 
 				| Sorting and Filtering
-				.list-inline#filters.btn-group.pull-right
-					a.btn.btn-mini.btn-primary-outline data-filter=".metal" href="#" All
-					a.btn.btn-mini.btn-primary-outline data-filter=".transition" href="#" Transition
-					a.btn.btn-mini.btn-primary-outline data-filter=".alkali, .alkaline-earth" href="#" Alkali
-					a.btn.btn-mini.btn-primary-outline data-filter=":not(.transition)" href="#" Not
-			.widget-content
-			.row
-				
-				.row
-				#container
-				  .gallery-item.transition.metal 
+				.gallery-filters.list-inline.btn-group.pull-right
+					a.btn.btn-mini.btn-primary-outline.selected data-filter="*" href="#" All
+					a.btn.btn-mini.btn-primary-outline data-filter=".filter1" href="#" Filter 1
+					a.btn.btn-mini.btn-primary-outline data-filter=".filter2" href="#" Filter 2
+			
+			.widget-content.padded
+				.gallery-container
+				  a.gallery-item.filter1 href="#"
 				  	= image_tag "/assets/image-iso.png"
-				  .gallery-item.post-transition.meta
+				  a.gallery-item.filter1 href="#"
 				  	= image_tag "/assets/image-iso2.jpg"
-				  .gallery-item.alkali.metal 
+				  a.gallery-item.filter2 href="#"
 				  	= image_tag "/assets/image-iso3.png"	
-				  .gallery-item.transition.metal
+				  a.gallery-item.filter1 href="#"
 				  	= image_tag "/assets/image-iso.png"	
-				  .gallery-item.halogen.nonmetal
+				  a.gallery-item.filter2 href="#"
 				  	= image_tag "/assets/image-iso2.jpg"	
-				  .gallery-item.alkaline-earth.metal
+				  a.gallery-item.filter2 href="#"
 				  	= image_tag "/assets/image-iso.png"	
 
 	.col-lg-6
-		.widget-container.large
+		.widget-container
 			.heading 
 				i.icon-signal 
 				| Carousel
-				i.icon-refresh.pull-right
+
 			.widget-content.padded
 				#carousel-example-generic.carousel.slide
-				  /! Indicators
 				  ol.carousel-indicators
 				    li.active data-slide-to="0" data-target="#carousel-example-generic"
 				    li data-slide-to="1" data-target="#carousel-example-generic"
 				    li data-slide-to="2" data-target="#carousel-example-generic"
-				  /! Wrapper for slides
+				  
 				  .carousel-inner
 				    .item.active
 				      = image_tag "/assets/image5.png"
@@ -85,9 +85,9 @@
 				      = image_tag "/assets/image6.png"
 				    .item
 				      = image_tag "/assets/image7.png"
-				  /! Controls
+				  
 				  a.left.carousel-control data-slide="prev" href="#carousel-example-generic"
-				    span.icon-prev
+				    span.icon-angle-left
 				  a.right.carousel-control data-slide="next" href="#carousel-example-generic"
-				    span.icon-next
+				    span.icon-angle-right
 
