@@ -288,12 +288,14 @@ $ ->
 	#   Isotope
 	# =============================================================================
 
-	$container = $("#container")
+	$container = $(".gallery-container")
 	$container.isotope {}
-	$("#filters a").click ->
-	  selector = $(this).attr("data-filter")
-	  $container.isotope filter: selector
-	  false
+	$(".gallery-filters a").click ->
+    selector = $(this).attr("data-filter")
+    $(".gallery-filters a.selected").removeClass "selected"
+    $(this).addClass "selected"
+    $container.isotope filter: selector
+    false
 
 
   # =============================================================================
@@ -306,7 +308,7 @@ $ ->
 
 
   # =============================================================================
-  #   Scrollbar Styling JS
+  #   Popover JS
   # =============================================================================
   $('#popover').popover()
 
