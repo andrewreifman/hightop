@@ -876,6 +876,62 @@ small
 
 
 /*-----------------------------------------------------------------------------------*/
+/*  Gallery with Captions
+/*-----------------------------------------------------------------------------------*/
+.gallery-grid
+  list-style: none
+  padding: 0
+  margin: 0
+
+  li
+    float: left
+    width: 350px
+    margin: 10px
+    position: relative
+    overflow: hidden
+
+    figure
+      margin: 0
+      position: relative
+      
+      img
+        max-width: 100%
+        display: block
+        position: relative
+        @include transition(top, .25s)
+
+    figcaption
+      width: 100%
+      position: absolute
+      bottom: -50%
+      left: 0
+      padding: 20px
+      background: $blue
+      color: #FFF
+      @include transition(all, .25s)
+
+      h3
+        margin: 0
+        padding: 0
+        color: #fff
+
+      span
+        margin-top: 5px
+        display: inline-block
+
+      a
+        margin: 0 0 0 15px
+        border: 1px solid #FFF
+
+    &:hover
+      figure img
+        top: -50px
+
+      figcaption
+        bottom: 0
+
+
+/*-----------------------------------------------------------------------------------*/
 /*  Gallery with Filter
 /*-----------------------------------------------------------------------------------*/
 .gallery-filters a

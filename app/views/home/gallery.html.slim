@@ -2,8 +2,46 @@
   h1 Gallery
 
 .row
+	.col-lg-12
+		.widget-container.fluid-height
+			.heading 
+				i.icon-signal 
+				| Gallery with Captions
+			
+			.widget-content.padded
+				ul.gallery-grid.clearfix
+				  li
+				    figure
+				    	= image_tag "/assets/caption-image.png"
+			        figcaption
+			          h3 Camera
+			          = link_to "View", "http://dribbble.com/shots/1115632-Camera", class: "btn btn-mini btn-primary pull-right"
+			          span by Jacob Cummings
+				  li
+				    figure
+				    	= image_tag "/assets/caption-image.png"
+			        figcaption
+			          h3 Camera
+			          = link_to "View", "http://dribbble.com/shots/1115632-Camera", class: "btn btn-mini btn-primary pull-right"
+			          span by Jacob Cummings
+				  li
+				    figure
+				    	= image_tag "/assets/caption-image.png"
+			        figcaption
+			          h3 Camera
+			          = link_to "View", "http://dribbble.com/shots/1115632-Camera", class: "btn btn-mini btn-primary pull-right"
+			          span by Jacob Cummings
+				  li
+				    figure
+				    	= image_tag "/assets/caption-image.png"
+			        figcaption
+			          h3 Camera
+			          = link_to "View", "http://dribbble.com/shots/1115632-Camera", class: "btn btn-mini btn-primary pull-right"
+			          span by Jacob Cummings
+
+.row
 	.col-lg-6
-		.widget-container
+		.widget-container.fluid-height
 			.heading 
 				i.icon-signal 
 				| Sorting and Filtering
@@ -14,21 +52,21 @@
 			
 			.widget-content.padded
 				.gallery-container
-				  .gallery-item.filter1
+				  a.gallery-item.filter1 href="#"
 				  	= image_tag "/assets/image-iso.png"
-				  .gallery-item.filter1
+				  a.gallery-item.filter1 href="#"
 				  	= image_tag "/assets/image-iso2.jpg"
-				  .gallery-item.filter2
+				  a.gallery-item.filter2 href="#"
 				  	= image_tag "/assets/image-iso3.png"	
-				  .gallery-item.filter1
+				  a.gallery-item.filter1 href="#"
 				  	= image_tag "/assets/image-iso.png"	
-				  .gallery-item.filter2
+				  a.gallery-item.filter2 href="#"
 				  	= image_tag "/assets/image-iso2.jpg"	
-				  .gallery-item.filter2
+				  a.gallery-item.filter2 href="#"
 				  	= image_tag "/assets/image-iso.png"	
 
 	.col-lg-6
-		.widget-container.large
+		.widget-container
 			.heading 
 				i.icon-signal 
 				| Carousel
