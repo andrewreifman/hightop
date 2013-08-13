@@ -12,55 +12,72 @@
         .col-lg-12
           form.form-horizontal action="#"
             .form-group
-              label.control-label.col-lg-2 Input
-              .col-lg-10
+              label.control-label.col-lg-3 Input
+              .col-lg-9
                 input.form-control placeholder="Text" type="text"
             .form-group
-              label.control-label.col-lg-2 Dropdown
-              .col-lg-10
+              label.control-label.col-lg-3 Dropdown
+              .col-lg-9
                 select.form-control
                   option value="Category 1" Option 1
                   option value="Category 2" Option 2
                   option value="Category 3" Option 3
                   option value="Category 4" Option 4
             .form-group
-              label.control-label.col-lg-2 Multi-Select Dropdown
-              .col-lg-10
+              label.control-label.col-lg-3 Multi-Select Dropdown
+              .col-lg-9
                 select.form-control multiple=""
                   option value="Category 1" Option 1
                   option value="Category 2" Option 2
                   option value="Category 3" Option 3
                   option value="Category 4" Option 4
             .form-group
-              label.control-label.col-lg-2 Dropdown
-              .col-lg-10
+              label.control-label.col-lg-3 Select2 Dropdown
+              .col-lg-9
                 select.select2able
                   option value="Category 1" Option 1
                   option value="Category 2" Option 2
                   option value="Category 3" Option 3
                   option value="Category 4" Option 4
             .form-group
-              label.control-label.col-lg-2 Multi-Select Dropdown
-              .col-lg-10
+              label.control-label.col-lg-3 Multi-Select2
+              .col-lg-9
                 select.select2able multiple=""
                   option value="Category 1" Option 1
                   option value="Category 2" Option 2
                   option value="Category 3" Option 3
                   option value="Category 4" Option 4
+
+            .form-group
+              label.control-label.col-lg-3 Username Input
+              .col-lg-9
+                .input-group
+                  span.input-group-addon @
+                  input.form-control placeholder="Username" type="text"
+
+            .form-group
+              label.control-label.col-lg-3 Currency Input
+              .col-lg-9
+                .input-group
+                  span.input-group-addon $
+                  input.form-control type="text"
+                    span.input-group-addon .00
+
+
             fieldset disabled=""
               .form-group
-                label.control-label.col-lg-2 for="disabledInput" Disabled Input
-                .col-lg-10
+                label.control-label.col-lg-3 for="disabledInput" Disabled Input
+                .col-lg-9
                   input#disabledInput.form-control placeholder="Disabled input" type="text"
               .form-group
-                label.control-label.col-lg-2 for="disabledInput" Disabled Select
-                .col-lg-10
+                label.control-label.col-lg-3 for="disabledInput" Disabled Select
+                .col-lg-9
                   select#disabledSelect.form-control
                     option Disabled select
 
             .form-group
-              label.control-label.col-lg-2 Radio Buttons
-              .col-lg-10
+              label.control-label.col-lg-3 Radio Buttons
+              .col-lg-9
                 label.radio
                   input name="optionsRadios1" type="radio" value="option1"
                   | Option 1
@@ -75,8 +92,8 @@
                   | Option 4
 
             .form-group
-              label.control-label.col-lg-2 Radio Buttons
-              .col-lg-10
+              label.control-label.col-lg-3 Radio Buttons
+              .col-lg-9
                 label.radio-inline
                   input name="optionsRadios2" type="radio" value="option1"
                   | Option 1
@@ -87,8 +104,8 @@
                   input name="optionsRadios2" type="radio" value="option3"
                   | Option 3
             .form-group
-              label.control-label.col-lg-2 Checkbox
-              .col-lg-10
+              label.control-label.col-lg-3 Checkbox
+              .col-lg-9
                 label.checkbox
                   input type="checkbox" value=""
                   | Checkbox 1
@@ -102,8 +119,8 @@
                   input type="checkbox" value=""
                   | Checkbox 4
             .form-group
-              label.control-label.col-lg-2 Checkbox
-              .col-lg-10
+              label.control-label.col-lg-3 Checkbox
+              .col-lg-9
                 label.checkbox-inline
                   input type="checkbox" value=""
                   | Checkbox 1
@@ -115,11 +132,11 @@
                   | Checkbox 3
 
             .form-group
-              label.control-label.col-lg-2 Textarea
-              .col-lg-10
+              label.control-label.col-lg-3 Textarea
+              .col-lg-9
                 textarea.form-control rows="3"
 
-            .form-actions.col-offset-2
+            .form-actions.col-offset-3
               button.btn.btn-primary type="submit" Submit
               button.btn.btn-default-outline Cancel
 
@@ -135,9 +152,10 @@
             form
               fieldset
                 .form-group
-                  label for="exampleInputFile"
+                  label for="exampleInputFile" User photo
+                  br/
+                  = image_tag "/assets/avatar-female.jpg", :size => "150x150", class: 'form-photo'
                   input#exampleInputFile type="file"
-                    p.help-block Example block-level help text here.
                 .form-group
                   label for="exampleInputEmail" Email
                   input#exampleInputEmail.form-control placeholder="Enter email" type="text"
