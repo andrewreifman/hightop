@@ -4,7 +4,8 @@
 	.col-lg-12
 		ul.breadcrumb
 		  li
-		    a href="#" Home
+		    a href="#"
+				i.icon-home
 		  li
 		    a href="#" UI
 		  li.active Components
@@ -14,7 +15,7 @@
 		.widget-container.large
 			.heading 
 				i.icon-warning-sign 
-				| Alerts
+				| Alerts and Badges
 				i.icon-refresh.pull-right
 			.widget-content.padded
 				.alert.alert-danger 
@@ -37,54 +38,40 @@
 
 .row
 	.col-lg-4
-		.widget-container.large
-			.heading 
-				i.icon-signal 
-				| Pagination
-				i.icon-refresh.pull-right
-			.widget-content.padded.text-center
-					ul.pagination.pagination-lg
-					  li
-					    a href="#" Back
-					  li
-					    a href="#" 1
-					  li
-					    a href="#" 2
-					  li
-					    a href="#" 3
-					  li
-					    a href="#" 4
-					  li
-					    a href="#" 5
-					  li
-					    a href="#" Next
-	.col-lg-4
-		.widget-container.large
-			.heading 
-				i.icon-signal 
-				| Popover
-				i.icon-refresh.pull-right
-			.widget-content.padded
-				.row
-					.col-lg-12
-						.col-lg-4.well
-						.col-lg-4
-							a.btn.btn-lg.btn-primary#popover-top data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-top" title="" style="width:100%" Top popover
-						.col-lg-4.well
-				.row
-					.col-lg-12
-						.col-lg-4
-							a.btn.btn-lg.btn-primary#popover-left data-content="And here's some amazing content. It's very engaging. right?	" data-original-title="A Title" data-toggle="popover-left" title="" style="width:100%" Left popover
-						.col-lg-4.well
-						.col-lg-4
-							a.btn.btn-lg.btn-primary#popover-right data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-right" title="" style="width:100%" Right popover
-				.row
-					.col-lg-12
-						.col-lg-4.well
-						.col-lg-4
-							a.btn.btn-lg.btn-primary#popover-bottom data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-bottom" title="" style="width:100%" Bottom popover
-						.col-lg-4.well				
-				
+		.row
+			.col-lg-12
+				.widget-container.fluid-height
+					.heading 
+						i.icon-signal 
+						| Pagination
+						i.icon-refresh.pull-right
+					.widget-content.padded.text-center
+							ul.pagination.pagination-lg
+							  li
+							    a href="#" Back
+							  li
+							    a href="#" 1
+							  li
+							    a href="#" 2
+							  li
+							    a href="#" 3
+							  li
+							    a href="#" 4
+							  li
+							    a href="#" 5
+							  li
+							    a href="#" Next
+		.row
+			.col-lg-12
+				.widget-container.fluid-height
+					.heading 
+						i.icon-signal 
+						| Popover
+						i.icon-refresh.pull-right
+					.widget-content.padded
+						a.btn.btn-lg.btn-primary#popover-top data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-top" title="" style="width:100%" Top popover
+						a.btn.btn-lg.btn-primary#popover-bottom data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-bottom" title="" style="width:100%" Bottom popover		
+						
 	.col-lg-4
 		.widget-container.large
 			.heading 

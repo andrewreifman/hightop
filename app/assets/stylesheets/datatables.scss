@@ -188,9 +188,9 @@ table.display {
   margin: 0 auto;
   clear: both;
   width: 100%;
-  
+
   /* Note Firefox 3.5 and before have a bug with border-collapse
-   * ( https://bugzilla.mozilla.org/show%5Fbug.cgi?id=155955 ) 
+   * ( https://bugzilla.mozilla.org/show%5Fbug.cgi?id=155955 )
    * border-spacing: 0; is one possible option. Conditional-css.com is
    * useful for this kind of thing
    *
@@ -198,7 +198,7 @@ table.display {
    * It subtracts one px relative to the other browsers from the first column, and
    * adds one to the end...
    *
-   * If you want that effect I'd suggest setting a border-top/left on th/td's and 
+   * If you want that effect I'd suggest setting a border-top/left on th/td's and
    * then filling in the gaps with other borders.
    */
 }
@@ -531,4 +531,5 @@ div.box {
   overflow: auto;
   border: 1px solid #8080FF;
   background-color: #E5E5FF;
+}
 }
