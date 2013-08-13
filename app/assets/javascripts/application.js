@@ -28,4 +28,5 @@
 //= require jquery.isotope.min
 //= require modernizr.custom
 //= require fancybox
+//= require select2
 //= require main

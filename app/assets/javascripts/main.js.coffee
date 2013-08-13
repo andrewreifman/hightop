@@ -192,21 +192,17 @@ $(document).ready ->
 
   # =============================================================================
   #   Bootstrap Popover
-  # =============================================================================  
+  # =============================================================================
   $ ->
   $("#popover").popover()
   $("#popover-left").popover
     placement: "left"
-    trigger: "hover"
   $("#popover-top").popover
     placement: "top"
-    trigger: "hover"
   $("#popover-right").popover
     placement: "right"
-    trigger: "hover"
   $("#popover-bottom").popover
     placement: "bottom"
-    trigger: "hover"
 
 	# =============================================================================
 	#   jQuery VMap
@@ -335,3 +331,9 @@ $(document).ready ->
     helpers:
       title:
         type: "outside"
+
+
+  # =============================================================================
+  #   Select2
+  # =============================================================================
+  $('.select2able').select2()
