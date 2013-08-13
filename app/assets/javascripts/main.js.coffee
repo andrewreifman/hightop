@@ -204,6 +204,20 @@ $(document).ready ->
   $("#popover-bottom").popover
     placement: "bottom"
 
+  # =============================================================================
+  #   Bootstrap Tooltip
+  # =============================================================================  
+  $ ->
+  $("#tooltip").tooltip()
+  $("#tooltip-left").tooltip
+    placement: "left"
+  $("#tooltip-top").tooltip
+    placement: "top"
+  $("#tooltip-right").tooltip
+    placement: "right"
+  $("#tooltip-bottom").tooltip
+    placement: "bottom"
+
 	# =============================================================================
 	#   jQuery VMap
 	# =============================================================================
