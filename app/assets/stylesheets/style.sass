@@ -885,14 +885,14 @@ small
 
   li
     float: left
-    width: 350px
-    margin: 10px
+    width: 25%
+    padding: 10px
     position: relative
-    overflow: hidden
 
     figure
       margin: 0
       position: relative
+      overflow: hidden
       
       img
         max-width: 100%
@@ -900,11 +900,12 @@ small
         position: relative
         @include transition(top, .25s)
 
-    figcaption
+    .caption
       width: 100%
+      height: 90px
       position: absolute
-      bottom: -50%
-      left: 0
+      bottom: -90px
+      left: 0px
       padding: 20px
       background: $blue
       color: #FFF
@@ -927,8 +928,21 @@ small
       figure img
         top: -50px
 
-      figcaption
-        bottom: 0
+      .caption
+        bottom: 0px
+
+@media (max-width: 1200px)
+  .gallery-grid li
+    width: 33.33%
+
+@media (max-width: 900px)
+  .gallery-grid li
+    width: 50%
+
+@media (max-width: 600px)
+  .gallery-grid li
+    width: 100%
+    margin: 0 0 15px
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -945,13 +959,59 @@ small
   margin: 10px
   border: 1px solid #EEE
   position: relative
+  background: #000
     
   img
     width: 100%
+    @include transition(opacity, .3s)
+
+  .actions
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+    height: 36px
+    margin-top: -18px
+    text-align: center
+    opacity: 0
+    @include transition(opacity, .3s)
+
+    i
+      display: inline-block
+      margin: 0 4px
+      font-size: 18px
+      color: #FFF
+      width: 36px
+      height: 36px
+      text-align: center
+      line-height: 35px
+      border: 1px solid #FFF
+      border-radius: 50%
+      vertical-align: top
+      @include transition(all, .25s)
+
+      &:hover
+        background: #FFF
+        color: #333
+
+      &.icon-zoom-in
+        font-size: 24px
+        width: 50px
+        height: 50px
+        line-height: 48px
+        margin-top: -7px
+
+  &:hover
+    img
+      opacity: .2
+    .actions
+      opacity: 1
 
 @media (max-width: 450px)
   .gallery-item
-    width: 300px
+    width: 280px
+    height: 210px
+    margin: 0 0 15px
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -1312,6 +1372,47 @@ label
 .radio + .radio:last-child, .checkbox + .checkbox:last-child
   margin-bottom: 0
 
+.form-photo
+  margin: 4px 0 12px
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  select2 Dropdowns
+/*-----------------------------------------------------------------------------------*/
+.select2-container
+  width: 100%
+  height: 36px
+
+  .select2-choice
+    height: 100%
+
+    > .select2-chosen
+      height: 100%
+      line-height: 32px
+
+    .select2-arrow
+      width: 30px
+      text-align: center
+
+      b
+        background: none
+        width: 0
+        height: 0
+        margin: 15px 0 0 -2px
+        display: inline-block
+        vertical-align: middle
+        border-top: 4px solid #444
+        border-right: 4px solid transparent
+        border-left: 4px solid transparent
+
+.select2-container-active .select2-choice, .select2-container-active .select2-choices
+  border-color: $blue
+
+.select2-container-multi .select2-choices
+  background: #FFF
+  border-color: #CCC
+  border-radius: 4px
+  padding-top: 4px
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Well Styles
@@ -1351,6 +1452,30 @@ label
 
 .modal-header
   background: #f1f1f1
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Fancybox
+/*-----------------------------------------------------------------------------------*/
+.fancybox-nav
+  width: 60px
+
+.fancybox-nav span
+  visibility: visible
+  opacity: 0.5
+
+.fancybox-nav:hover span
+  opacity: 1
+
+.fancybox-next
+  right: -80px
+
+.fancybox-prev
+  left: -80px
+
+.fancybox-title
+  text-align: center
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Tab Styles

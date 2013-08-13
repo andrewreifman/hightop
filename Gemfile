@@ -1,3 +1,4 @@
+ruby '2.0.0'
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -52,6 +53,9 @@ gem "font-awesome-rails"
 
 # Allows modern css to work on older IE browsers
 gem 'selectivizr-rails'
+
+# Adds jQuery Fancybox modal assets
+gem 'fancybox2-rails', '~> 0.2.4'
 
 
 # Use ActiveModel has_secure_password

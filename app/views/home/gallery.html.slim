@@ -5,46 +5,42 @@
 	.col-lg-12
 		.widget-container.fluid-height
 			.heading 
-				i.icon-signal 
+				i.icon-picture 
 				| Gallery with Captions
 			
 			.widget-content.padded
 				ul.gallery-grid.clearfix
 				  li
-				    figure
-				    	= image_tag "/assets/caption-image.png"
-			        figcaption
-			          h3 Camera
-			          = link_to "View", "http://dribbble.com/shots/1115632-Camera", class: "btn btn-mini btn-primary pull-right"
-			          span by Jacob Cummings
+						figure
+							= image_tag "/assets/caption-image.png"
+							.caption
+								h3 Camera
+								span by Jacob Cummings
 				  li
-				    figure
-				    	= image_tag "/assets/caption-image.png"
-			        figcaption
-			          h3 Camera
-			          = link_to "View", "http://dribbble.com/shots/1115632-Camera", class: "btn btn-mini btn-primary pull-right"
-			          span by Jacob Cummings
+						figure
+							= image_tag "/assets/caption-image.png"
+							.caption
+								h3 Camera
+								span by Jacob Cummings
 				  li
-				    figure
-				    	= image_tag "/assets/caption-image.png"
-			        figcaption
-			          h3 Camera
-			          = link_to "View", "http://dribbble.com/shots/1115632-Camera", class: "btn btn-mini btn-primary pull-right"
-			          span by Jacob Cummings
+						figure
+							= image_tag "/assets/caption-image.png"
+							.caption
+								h3 Camera
+								span by Jacob Cummings
 				  li
-				    figure
-				    	= image_tag "/assets/caption-image.png"
-			        figcaption
-			          h3 Camera
-			          = link_to "View", "http://dribbble.com/shots/1115632-Camera", class: "btn btn-mini btn-primary pull-right"
-			          span by Jacob Cummings
+						figure
+							= image_tag "/assets/caption-image.png"
+							.caption
+								h3 Camera
+								span by Jacob Cummings
 
 .row
 	.col-lg-6
 		.widget-container.fluid-height
 			.heading 
-				i.icon-signal 
-				| Sorting and Filtering
+				i.icon-th-large 
+				| Filtering and Actions
 				.gallery-filters.list-inline.btn-group.pull-right
 					a.btn.btn-mini.btn-primary-outline.selected data-filter="*" href="#" All
 					a.btn.btn-mini.btn-primary-outline data-filter=".filter1" href="#" Filter 1
@@ -52,23 +48,47 @@
 			
 			.widget-content.padded
 				.gallery-container
-				  a.gallery-item.filter1 href="#"
+				  a.gallery-item.filter1.fancybox href="/assets/image-iso.png" title="This is a caption" rel="gallery1"
 				  	= image_tag "/assets/image-iso.png"
-				  a.gallery-item.filter1 href="#"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+				  a.gallery-item.filter1.fancybox href="/assets/image-iso2.jpg" title="This is a caption" rel="gallery1"
 				  	= image_tag "/assets/image-iso2.jpg"
-				  a.gallery-item.filter2 href="#"
-				  	= image_tag "/assets/image-iso3.png"	
-				  a.gallery-item.filter1 href="#"
-				  	= image_tag "/assets/image-iso.png"	
-				  a.gallery-item.filter2 href="#"
-				  	= image_tag "/assets/image-iso2.jpg"	
-				  a.gallery-item.filter2 href="#"
-				  	= image_tag "/assets/image-iso.png"	
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+				  a.gallery-item.filter2.fancybox href="/assets/image-iso3.png" title="This is a caption" rel="gallery1"
+				  	= image_tag "/assets/image-iso3.png"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+				  a.gallery-item.filter1.fancybox href="/assets/image-iso.png" title="This is a caption" rel="gallery1"
+				  	= image_tag "/assets/image-iso.png"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+				  a.gallery-item.filter2.fancybox href="/assets/image-iso2.jpg" title="This is a caption" rel="gallery1"
+				  	= image_tag "/assets/image-iso2.jpg"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+				  a.gallery-item.filter2.fancybox href="/assets/image-iso.png" title="This is a caption" rel="gallery1"
+				  	= image_tag "/assets/image-iso.png"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
 
 	.col-lg-6
 		.widget-container
 			.heading 
-				i.icon-signal 
+				i.icon-camera 
 				| Carousel
 
 			.widget-content.padded
