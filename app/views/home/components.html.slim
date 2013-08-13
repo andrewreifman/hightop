@@ -39,28 +39,19 @@
 .row
 	.col-lg-4
 		.row
-			.col-lg-12
-				.widget-container.fluid-height
-					.heading 
-						i.icon-signal 
-						| Pagination
-						i.icon-refresh.pull-right
-					.widget-content.padded.text-center
-							ul.pagination.pagination-lg
-							  li
-							    a href="#" Back
-							  li
-							    a href="#" 1
-							  li
-							    a href="#" 2
-							  li
-							    a href="#" 3
-							  li
-							    a href="#" 4
-							  li
-							    a href="#" 5
-							  li
-							    a href="#" Next
+				.col-lg-12
+					.widget-container.fluid-height
+						.heading 
+							i.icon-signal 
+							| Tooltip
+							i.icon-refresh.pull-right
+						.widget-content.padded
+							.row
+								.col-lg-12
+										a.btn.btn-lg.btn-default#tooltip-top data-toggle="tooltip" title="Tooltip content" style="width:100%" Top popover
+										a.btn.btn-lg.btn-default#tooltip-bottom data-toggle="tooltip-bottom" title="Tooltip content" style="width:100%" Bottom popover
+
+
 		.row
 			.col-lg-12
 				.widget-container.fluid-height
@@ -73,114 +64,122 @@
 						a.btn.btn-lg.btn-primary#popover-bottom data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-bottom" title="" style="width:100%" Bottom popover		
 						
 	.col-lg-4
-		.widget-container.large
-			.heading 
-				i.icon-signal 
-				| Tooltip
-				i.icon-refresh.pull-right
-			.widget-content.padded
-				.row
-					.col-lg-12
-						.col-lg-4.well
-						.col-lg-4
-							a.btn.btn-lg.btn-success#tooltip-top data-toggle="tooltip" title="Tooltip content" style="width:100%" Top popover
-						.col-lg-4.well
-				.row
-					.col-lg-12
-						.col-lg-4
-							a.btn.btn-lg.btn-success#tooltip-left data-toggle="tooltip-left" title="Tooltip content" style="width:100%" Left popover
-						.col-lg-4.well
-						.col-lg-4
-							a.btn.btn-lg.btn-success#tooltip-right data-toggle="tooltip-right" title="Tooltip content" style="width:100%" Right popover
-				.row
-					.col-lg-12
-						.col-lg-4.well
-						.col-lg-4
-							a.btn.btn-lg.btn-success#tooltip-bottom data-toggle="tooltip-bottom" title="Tooltip content" style="width:100%" Bottom popover
-						.col-lg-4.well		
+		.row
+			.col-lg-12
+				.widget-container.fluid-height
+					.heading 
+						i.icon-signal 
+						| Pagination
+						i.icon-refresh.pull-right
+					.widget-content.padded.text-center
+							ul.pagination
+							  li
+							    a.icon href="#"
+							    	i.icon-long-arrow-left
+							  li
+							    a.icon href="#"
+							    	i.icon-double-angle-left 
+							  li
+							    a href="#" 1
+							  li
+							    a href="#" 2
+							  li
+							    a href="#" 3
+							  li
+							    a.icon href="#"
+							    	i.icon-double-angle-right 
+
+							  li
+							    a.icon href="#"
+							    	i.icon-long-arrow-right
+
+
+		.row
+			.col-lg-12
+				.widget-container.fluid-height
+					.heading 
+						i.icon-fullscreen
+						| Modal
+						i.icon-refresh.pull-right
+					.widget-content.padded
+						a.btn.btn-primary.btn-lg data-toggle="modal" href="#myModal" Bootstrap Modal
+						a.btn.btn-default.btn-lg.fancybox href="image-iso2.jpg" title="This is a caption" rel="gallery1" Fancybox Modal
+				#myModal.modal.fade
+					.modal-dialog
+						.modal-content
+							.modal-header
+								button.close aria-hidden="true" data-dismiss="modal" type="button" &times;
+								h4.modal-title Se7en
+							.modal-body
+								h1 Welcome
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor. Aenean ac aliquet dolor. Ut porta ultrices justo a tempor. Curabitur eget magna mattis risus accumsan aliquet et a lorem. Pellentesque hendrerit dapibus urna, adipiscing ultrices velit accumsan eget. Fusce eget ultrices turpis, vitae facilisis orci. Curabitur scelerisque consequat vulputate. Aenean felis orci, porttitor ut eros vel, egestas ultricies nunc. Duis suscipit elementum tincidunt.
+							.modal-footer
+								button.btn.btn-default data-dismiss="modal" type="button" Close
+								button.btn.btn-primary type="button" Save Changes
+	.col-lg-4
+		.row
+			.col-lg-12
+					.widget-container.fluid-height
+							.heading 
+								i.icon-collapse 
+								| Accordion
+								i.icon-refresh.pull-right
+							.widget-content
+								.accordion-group
+								.accordion-heading
+									a.accordion-toggle data-parent="#accordion2" data-toggle="collapse" href="#collapseOne" Step 1
+								#collapseOne.accordion-body.collapse.in
+								  .accordion-inner
+								    h2 Introduction
+								    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor. Aenean ac aliquet dolor. Ut porta ultrices justo a tempor. Curabitur eget magna mattis risus accumsan aliquet et a lorem. Pellentesque hendrerit dapibus urna, adipiscing ultrices velit accumsan eget. Fusce eget ultrices turpis, vitae facilisis orci. Curabitur scelerisque consequat vulputate. Aenean felis orci, porttitor ut eros vel, egestas ultricies nunc. Duis suscipit elementum tincidunt.
+								.accordion-group
+								.accordion-heading
+								  a.accordion-toggle data-parent="#accordion2" data-toggle="collapse" href="#collapseTwo"
+								    | Step 2
+								#collapseTwo.accordion-body.collapse
+								  .accordion-inner
+								  	h2 Setup
+								    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor. Aenean ac aliquet dolor. Ut porta ultrices justo a tempor. Curabitur eget magna mattis risus accumsan aliquet et a lorem. Pellentesque hendrerit dapibus urna, adipiscing ultrices velit accumsan eget. Fusce eget ultrices turpis, vitae facilisis orci. Curabitur scelerisque consequat vulputate. Aenean felis orci, porttitor ut eros vel, egestas ultricies nunc. Duis suscipit elementum tincidunt.
+								.accordion-group
+								.accordion-heading
+								  a.accordion-toggle data-parent="#accordion2" data-toggle="collapse" href="#collapseThree"
+								    | Step 3
+								#collapseThree.accordion-body.collapse
+								  .accordion-inner
+								  	h2 Review and Complete
+								    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor. Aenean ac aliquet dolor. Ut porta ultrices justo a tempor. Curabitur eget magna mattis risus accumsan aliquet et a lorem. Pellentesque hendrerit dapibus urna, adipiscing ultrices velit accumsan eget. Fusce eget ultrices turpis, vitae facilisis orci. Curabitur scelerisque consequat vulputate. Aenean felis orci, porttitor ut eros vel, egestas ultricies nunc. Duis suscipit elementum tincidunt.
+.row
+	.col-lg-6
+			
+
+
 	
 
-
-
 .row
 	.col-lg-6
 			.widget-container.large
-				.heading 
-					i.icon-sitemap 
-					| Tabs
-					i.icon-refresh.pull-right
-				
-				ul#tabs.nav.nav-tabs data-tabs="tabs"
-				  li.active
-				    a data-toggle="tab" href="#red" Overview
-				  li
-				    a data-toggle="tab" href="#orange" Performance
-				  li
-				    a data-toggle="tab" href="#yellow" Device Data
-				#my-tab-content.tab-content.padded
-				  #red.tab-pane.active
-				    h1 Overview
-				    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
-				  #orange.tab-pane
-				    h1 Performance
-				    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
-				  #yellow.tab-pane
-				    h1 Device Data
-				    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
-
-
-	.col-lg-6
-		.widget-container.large
-			.heading 
-				i.icon-fullscreen
-				| Modal
-				i.icon-refresh.pull-right
-			.widget-content.padded
-				a.btn.btn-primary.btn-lg data-toggle="modal" href="#myModal" Animated Modal
-			#myModal.modal.fade
-				.modal-dialog
-					.modal-content
-						.modal-header
-							button.close aria-hidden="true" data-dismiss="modal" type="button" &times;
-							h4.modal-title Se7en
-						.modal-body
-							h1 Welcome
-							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor. Aenean ac aliquet dolor. Ut porta ultrices justo a tempor. Curabitur eget magna mattis risus accumsan aliquet et a lorem. Pellentesque hendrerit dapibus urna, adipiscing ultrices velit accumsan eget. Fusce eget ultrices turpis, vitae facilisis orci. Curabitur scelerisque consequat vulputate. Aenean felis orci, porttitor ut eros vel, egestas ultricies nunc. Duis suscipit elementum tincidunt.
-						.modal-footer
-							button.btn.btn-default data-dismiss="modal" type="button" Close
-							button.btn.btn-primary type="button" Save Changes
-
-.row
-	.col-lg-6
-			.widget-container.large
-					.heading 
-						i.icon-collapse 
-						| Accordion
-						i.icon-refresh.pull-right
-					.widget-content
-						.accordion-group
-						.accordion-heading
-							a.accordion-toggle data-parent="#accordion2" data-toggle="collapse" href="#collapseOne" Step 1
-						#collapseOne.accordion-body.collapse.in
-						  .accordion-inner
-						    h2 Introduction
-						    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor. Aenean ac aliquet dolor. Ut porta ultrices justo a tempor. Curabitur eget magna mattis risus accumsan aliquet et a lorem. Pellentesque hendrerit dapibus urna, adipiscing ultrices velit accumsan eget. Fusce eget ultrices turpis, vitae facilisis orci. Curabitur scelerisque consequat vulputate. Aenean felis orci, porttitor ut eros vel, egestas ultricies nunc. Duis suscipit elementum tincidunt.
-						.accordion-group
-						.accordion-heading
-						  a.accordion-toggle data-parent="#accordion2" data-toggle="collapse" href="#collapseTwo"
-						    | Step 2
-						#collapseTwo.accordion-body.collapse
-						  .accordion-inner
-						  	h2 Setup
-						    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor. Aenean ac aliquet dolor. Ut porta ultrices justo a tempor. Curabitur eget magna mattis risus accumsan aliquet et a lorem. Pellentesque hendrerit dapibus urna, adipiscing ultrices velit accumsan eget. Fusce eget ultrices turpis, vitae facilisis orci. Curabitur scelerisque consequat vulputate. Aenean felis orci, porttitor ut eros vel, egestas ultricies nunc. Duis suscipit elementum tincidunt.
-						.accordion-group
-						.accordion-heading
-						  a.accordion-toggle data-parent="#accordion2" data-toggle="collapse" href="#collapseThree"
-						    | Step 3
-						#collapseThree.accordion-body.collapse
-						  .accordion-inner
-						  	h2 Review and Complete
-						    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor. Aenean ac aliquet dolor. Ut porta ultrices justo a tempor. Curabitur eget magna mattis risus accumsan aliquet et a lorem. Pellentesque hendrerit dapibus urna, adipiscing ultrices velit accumsan eget. Fusce eget ultrices turpis, vitae facilisis orci. Curabitur scelerisque consequat vulputate. Aenean felis orci, porttitor ut eros vel, egestas ultricies nunc. Duis suscipit elementum tincidunt.
+							.heading 
+								i.icon-sitemap 
+								| Tabs
+								i.icon-refresh.pull-right
+							
+							ul#tabs.nav.nav-tabs data-tabs="tabs"
+							  li.active
+							    a data-toggle="tab" href="#red" Overview
+							  li
+							    a data-toggle="tab" href="#orange" Performance
+							  li
+							    a data-toggle="tab" href="#yellow" Device Data
+							#my-tab-content.tab-content.padded
+							  #red.tab-pane.active
+							    h1 Overview
+							    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
+							  #orange.tab-pane
+							    h1 Performance
+							    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
+							  #yellow.tab-pane
+							    h1 Device Data
+							    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
 
 
 	.col-lg-6
