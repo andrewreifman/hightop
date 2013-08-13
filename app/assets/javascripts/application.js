@@ -28,4 +28,5 @@
 //= require jquery.hoverfold
 //= require jquery.isotope.min
 //= require modernizr.custom
+//= require select2
 //= require main
