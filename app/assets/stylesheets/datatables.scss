@@ -237,6 +237,8 @@ table.display td.center {
 .dataTable th {
   color: #007aff;
   position: relative;
+  cursor: pointer;
+  font-weight: normal;
 
   &.sorting {
     &:after, &:before {
