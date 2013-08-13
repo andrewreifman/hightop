@@ -17,6 +17,7 @@
  *= require prettify
  *= require wizard
  *= require classyscroll
+ *= require fancybox
  *= require bootstrap.min
  *= require style
  */
