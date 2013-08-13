@@ -4,16 +4,16 @@
 			.col-lg-4
 				.number
 					.icon.globe
-					| 86 
+					| 86
 					small %
 				.text Overall growth
 			.col-lg-4
-				.number 
+				.number
 					.icon.visitors
 					| 613
 				.text Unique visitors
 			.col-lg-4
-				.number 
+				.number
 					.icon.money
 					small $
 					| 1,024
@@ -23,15 +23,15 @@
 .row
 	.col-lg-6
 		.widget-container
-			.heading 
+			.heading
 				.pull-right.btn-group data-toggle="buttons"
-					label.btn.btn-mini.btn-primary-outline.active 
+					label.btn.btn-mini.btn-primary-outline.active
 						| Day
 						input#option1 name="options" type="radio"
-					label.btn.btn-mini.btn-primary-outline 
+					label.btn.btn-mini.btn-primary-outline
 						| Week
 						input#option2 name="options" type="radio"
-					label.btn.btn-mini.btn-primary-outline 
+					label.btn.btn-mini.btn-primary-outline
 						| Month
 						input#option3 name="options" type="radio"
 				i.icon-bar-chart
@@ -39,23 +39,23 @@
 			.widget-content.padded
 				.chart-graph.line-chart
 					#linechart-1 Loading...
-					ul.chart-text-axis 
+					ul.chart-text-axis
 						li 1
 						li 2
 						li 3
 						li 4
-						li 5 
-						li 6 
-						li 7 
-						li 8 
-						li 9 
-						li 10 
+						li 5
+						li 6
+						li 7
+						li 8
+						li 9
+						li 10
 						li 11
 						li 12
 
 	.col-lg-3
 		.widget-container
-			.heading 
+			.heading
 				i.icon-adjust
 				| Pie graph 1
 				i.icon-refresh.pull-right
@@ -63,7 +63,7 @@
 				.pie-chart1.pie-chart.pie-number data-percent="73" 73%
 	.col-lg-3
 		.widget-container
-			.heading 
+			.heading
 				i.icon-adjust
 				| Pie graph 2
 				i.icon-refresh.pull-right
@@ -73,83 +73,83 @@
 .row
 	.col-lg-4
 		.widget-container.small
-			.heading 
-				i.icon-signal 
+			.heading
+				i.icon-signal
 				| Views Today
 				i.icon-refresh.pull-right
 			.widget-content.padded
 				.bar-chart-widget
 					.bar-chart-info
-						.chart-number 
+						.chart-number
 							i.icon-long-arrow-up
 							| 246
 					.chart-graph
 						#barcharts Loading...
-						ul.chart-text-axis 
+						ul.chart-text-axis
 							li 1
 							li 2
 							li 3
 							li 4
-							li 5 
-							li 6 
-							li 7 
-							li 8 
-							li 9 
-							li 10 
+							li 5
+							li 6
+							li 7
+							li 8
+							li 9
+							li 10
 							li 11
 							li 12
 	.col-lg-4
 		.widget-container.small
-			.heading 
-				i.icon-signal 
+			.heading
+				i.icon-signal
 				| Growth
 				i.icon-refresh.pull-right
 			.widget-content.padded
 				.bar-chart-widget
 					.bar-chart-info
-						.chart-number 
+						.chart-number
 							i.icon-long-arrow-up
 							| 42%
 					.chart-graph
 						#barcharts2 Loading...
-						ul.chart-text-axis 
+						ul.chart-text-axis
 							li 1
 							li 2
 							li 3
 							li 4
-							li 5 
-							li 6 
-							li 7 
-							li 8 
-							li 9 
-							li 10 
+							li 5
+							li 6
+							li 7
+							li 8
+							li 9
+							li 10
 							li 11
 							li 12
 	.col-lg-4
 		.widget-container.small
-			.heading 
-				i.icon-signal 
+			.heading
+				i.icon-signal
 				| Today's Sales
 				i.icon-refresh.pull-right
 			.widget-content.padded
 				.bar-chart-widget
 					.bar-chart-info
-						.chart-number 
+						.chart-number
 							i.icon-long-arrow-up
 							| $630
 					.chart-graph
 						#barcharts3 Loading...
-						ul.chart-text-axis 
+						ul.chart-text-axis
 							li 1
 							li 2
 							li 3
 							li 4
-							li 5 
-							li 6 
-							li 7 
-							li 8 
-							li 9 
-							li 10 
+							li 5
+							li 6
+							li 7
+							li 8
+							li 9
+							li 10
 							li 11
 							li 12
 
@@ -157,52 +157,52 @@
 .row
   .col-lg-6
 		.widget-container
-			.heading 
+			.heading
 				i.icon-map-marker
 				| Interactive global map
-				i.icon-plus.pull-right 
-				i.icon-refresh.pull-right 
+				i.icon-plus.pull-right
+				i.icon-refresh.pull-right
 			.widget-content
 			 	#vmap.map style="height: 450px;"
 
   .col-lg-6
 		.widget-container.scrollable.chat
-			.heading 
+			.heading
 				i.icon-comments
 				| Chat Widget
 				i.icon-smile.pull-right
 			.widget-content.padded.scrollbar
 				ul
 					li
-						= image_tag "/assets/avatar-male.jpg", :size => "50x50"
+						= image_tag "avatar-male.jpg", :size => "50x50"
 						.bubble
 							= link_to "John Smith", "", class: "user-name"
 							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-							em.time 
+							em.time
 								i.icon-time
 								| 10 min ago
 					li.current-user
-						= image_tag "/assets/avatar-female.jpg", :size => "50x50"
+						= image_tag "avatar-female.jpg", :size => "50x50"
 						.bubble
 							= link_to "Jane Smith", "", class: "user-name"
 							p.message Donec odio. Quisque volutpat mattis eros.
-							em.time 
+							em.time
 								i.icon-time
 								| 10 min ago
 					li
-						= image_tag "/assets/avatar-male.jpg", :size => "50x50"
+						= image_tag "avatar-male.jpg", :size => "50x50"
 						.bubble
 							= link_to "John Smith", "", class: "user-name"
 							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
-							em.time 
+							em.time
 								i.icon-time
 								| 10 min ago
 					li
-						= image_tag "/assets/avatar-male.jpg", :size => "50x50"
+						= image_tag "avatar-male.jpg", :size => "50x50"
 						.bubble
 							= link_to "John Smith", "", class: "user-name"
 							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
-							em.time 
+							em.time
 								i.icon-time
 								| 10 min ago
 
