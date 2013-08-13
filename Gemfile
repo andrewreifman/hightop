@@ -57,6 +57,8 @@ gem 'selectivizr-rails'
 # Adds jQuery Fancybox modal assets
 gem 'fancybox2-rails', '~> 0.2.4'
 
+# Static asset serving and logging on Heroku
+gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
