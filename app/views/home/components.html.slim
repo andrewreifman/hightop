@@ -2,35 +2,79 @@
   h1 Components
 
 .row
-	.col-lg-6
+	.col-lg-8
 		.widget-container.large
 			.heading 
 				i.icon-signal 
 				| Popover
 				i.icon-refresh.pull-right
 			.widget-content.padded
-				a.btn.btn-lg.btn-danger data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover" href="#" title="" pop
-				ul.pagination
-					li.disabled
-					span &laquo;
-					li.active
-					span 1
-					li
-					a 2
+				.row
+					.col-lg-12
+						.col-lg-4.well
+						.col-lg-4
+							a.btn.btn-lg.btn-primary#popover-top data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-top" title="" Toggle top popover
+						.col-lg-4.well
+				.row
+					.col-lg-12
+						.col-lg-4
+							a.btn.btn-lg.btn-primary#popover-left data-content="And here's some amazing content. It's very engaging. right?	" data-original-title="A Title" data-toggle="popover-left" title="" Toggle left popover
+						.col-lg-4.well
+						.col-lg-4
+							a.btn.btn-lg.btn-primary#popover-right data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-right" title="" Toggle right popover
+				.row
+					.col-lg-12
+						.col-lg-4.well
+						.col-lg-4
+							a.btn.btn-lg.btn-primary#popover-bottom data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-bottom" title="" Toggle bottom popover
+						.col-lg-4.well				
+				
 
+	
+	.col-lg-4
+		.widget-container.large
+			.heading 
+				i.icon-signal 
+				| hOVER
+				i.icon-refresh.pull-right
+			.widget-content.padded
+					ul.pagination.pagination-lg
+					  li
+					    a href="#" Back
+					  li
+					    a href="#" 1
+					  li
+					    a href="#" 2
+					  li
+					    a href="#" 3
+					  li
+					    a href="#" 4
+					  li
+					    a href="#" 5
+					  li
+					    a href="#" Next
 
-
-	.col-lg-6
+.row
+	.col-lg-12
 		.widget-container.large
 			.heading 
 				i.icon-warning-sign 
 				| Alerts
 				i.icon-refresh.pull-right
 			.widget-content.padded
-				.alert.alert-danger Danger
-				.alert.alert-success Success
-				.alert.alert-info Information
-				.alert.alert Note
+				.alert.alert-danger 
+					| Danger 
+					.badge.pull-right 12
+				.alert.alert-success 
+					| Success
+					.badge.pull-right 42
+				.alert.alert-info 
+					| Information
+					.badge.pull-right 106
+				.alert.alert
+					| Notes
+					.badge.pull-right 2
+
 
 
 .row
