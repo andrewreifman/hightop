@@ -190,6 +190,19 @@ $(document).ready ->
   $ ->
   $("#myTab a:last").tab "show"
 
+  # =============================================================================
+  #   Bootstrap Popover
+  # =============================================================================  
+  $ ->
+  $("#popover").popover()
+  $("#popover-left").popover
+    placement: "left"
+  $("#popover-top").popover
+    placement: "top"
+  $("#popover-right").popover
+    placement: "right"
+  $("#popover-bottom").popover
+    placement: "bottom"
 
 	# =============================================================================
 	#   jQuery VMap

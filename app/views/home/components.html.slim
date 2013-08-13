@@ -1,6 +1,16 @@
 .page-title
   h1 Components
 
+p progress bar
+p modal
+p collapse
+p popover
+p alerts
+p tooltip
+p tabs
+p badges
+p pagination
+
 .row
 	.col-lg-6
 		.widget-container.large
@@ -9,16 +19,10 @@
 				| Popover
 				i.icon-refresh.pull-right
 			.widget-content.padded
-				a.btn.btn-lg.btn-danger data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover" href="#" title="" pop
-				ul.pagination
-					li.disabled
-					span &laquo;
-					li.active
-					span 1
-					li
-					a 2
-
-
+				a.btn.btn-lg.btn-danger#popover-right data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-right" title="" Toggle right popover
+				a.btn.btn-lg.btn-danger#popover-top data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-top" title="" Toggle top popover
+				a.btn.btn-lg.btn-danger#popover-bottom data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-bottom" title="" Toggle bottom popover
+				a.btn.btn-lg.btn-danger#popover-left data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-left" title="" Toggle left popover
 
 	.col-lg-6
 		.widget-container.large
