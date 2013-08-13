@@ -4,7 +4,7 @@
 .row
   .col-lg-6
     .widget-container.fluid-height.clearfix
-      .heading 
+      .heading
         i.icon-adjust
         | Form Components
 
@@ -112,7 +112,7 @@
     .row
       .col-lg-12
         .widget-container.fluid-height.clearfix
-          .heading 
+          .heading
             i.icon-adjust
             | User Profile
 
@@ -149,7 +149,7 @@
 
       .col-lg-12
         .widget-container
-          .heading 
+          .heading
             i.icon-adjust
             | Validations
 
@@ -163,3 +163,58 @@
             .form-group.has-success
               label.control-label for="inputSuccess" Success
               input#inputSuccess.form-control type="text"
+
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-adjust
+        | Demo
+      .widget-content.padded
+        .col-lg-12
+          #rootwizard
+            .navbar
+              .navbar-inner
+                .container
+                  ul
+                    li
+                      a data-toggle="tab" href="#tab1" First
+                    li
+                      a data-toggle="tab" href="#tab2" Second
+                    li
+                      a data-toggle="tab" href="#tab3" Third
+                    li
+                      a data-toggle="tab" href="#tab4" Fourth
+                    li
+                      a data-toggle="tab" href="#tab5" Fifth
+                    li
+                      a data-toggle="tab" href="#tab6" Sixth
+                    li
+                      a data-toggle="tab" href="#tab7" Seventh
+            #bar.progress.progress-striped.active
+              .bar
+            .tab-content
+              #tab1.tab-pane
+                | 1
+              #tab2.tab-pane
+                | 2
+              #tab3.tab-pane
+                | 3
+              #tab4.tab-pane
+                | 4
+              #tab5.tab-pane
+                | 5
+              #tab6.tab-pane
+                | 6
+              #tab7.tab-pane
+                | 7
+              ul.pager.wizard
+                li.previous.first style="display:none;"
+                  a href="javascript:;" First
+                li.previous
+                  a href="javascript:;" Previous
+                li.next.last style="display:none;"
+                  a href="javascript:;" Last
+                li.next
+                  a href="javascript:;" Next

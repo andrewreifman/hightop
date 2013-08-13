@@ -19,9 +19,10 @@
 //= require jquery.vmap.world
 //= require fullcalendar.min
 //= require gcal
-//= require prettify
 //= require dataTables/jquery.dataTables
 //= require bootstrap.min
+//= require jquery.bootstrap.wizard.min
+//= require prettify
 //= require jquery.sparkline.min
 //= require jquery.easy-pie-chart
 //= require excanvas.min
