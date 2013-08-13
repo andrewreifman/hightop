@@ -61,7 +61,7 @@ strong
 a
   color: $blue
 
-ul 
+ul
   &.no-style
     list-style: none
     padding: 0
@@ -73,17 +73,17 @@ li
 blockquote
   padding-bottom: 4px
   margin-bottom: 30px
-  
+
   p
     margin-bottom: 10px
 
   &.pull-right
     text-align: right
 
-dl 
+dl
   margin: 0 0 20px
 
-  dd 
+  dd
     margin-bottom: 15px
 
 small
@@ -123,8 +123,8 @@ small
     float: left
 
     .logo
-      background: url(../assets/se7en-logo.png) no-repeat 0 0
-      @include image2x("../assets/se7en-logo@2x.png", 54px, 16px)
+      background: url(se7en-logo.png) no-repeat 0 0
+      @include image2x("se7en-logo@2x.png", 54px, 16px)
       width: 54px
       height: 16px
       float: left
@@ -136,8 +136,8 @@ small
         height: 30px
         border-color: #e6e6e6
         box-shadow: none
-        background: #FFF url(../assets/icon-search.png) no-repeat center left
-        @include image2x("../assets/icon-search@2x.png", 18px, 12px)
+        background: #FFF url(icon-search.png) no-repeat center left
+        @include image2x("icon-search@2x.png", 18px, 12px)
         padding-left: 24px
         margin-top: 1px
         @include transition(all, .5s)
@@ -166,8 +166,8 @@ small
             background: rgba(0,0,0,.05)
 
           > span
-            background: url(../assets/admin-sprite.png) no-repeat top left
-            @include image2x("../assets/admin-sprite@2x.png", 84px, 56px)
+            background: url(admin-sprite.png) no-repeat top left
+            @include image2x("admin-sprite@2x.png", 84px, 56px)
             display: block
             width: 28px
             height: 28px
@@ -260,8 +260,8 @@ small
             @include transition(all, .3s)
 
             span
-              background: url(../assets/nav-sprite.png) no-repeat top left
-              @include image2x("../assets/nav-sprite@2x.png", 168px, 56px)
+              background: url(nav-sprite.png) no-repeat top left
+              @include image2x("nav-sprite@2x.png", 168px, 56px)
               display: block
               width: 28px
               height: 28px
@@ -548,7 +548,7 @@ small
   &.dropup .btn-danger:hover .caret, &.dropup .btn-danger-outline .caret
     border-bottom-color: #d9534f
 
-  &.dropup 
+  &.dropup
     .btn:hover
       &[class^="-outline"], &[class*="-outline"]
         .caret
@@ -709,8 +709,8 @@ small
       letter-spacing: -.06em
 
       .icon
-        background: url(../assets/info-data-sprite.png) no-repeat left top
-        @include image2x("../assets/info-data-sprite@2x.png", 200px, 38px)
+        background: url(info-data-sprite.png) no-repeat left top
+        @include image2x("info-data-sprite@2x.png", 200px, 38px)
         width: 50px
         height: 38px
         display: inline-block
@@ -746,7 +746,7 @@ small
 
   .chart-text-axis
     margin: 4px 0 0 !important
-    
+
     li
       width: 8.33% !important
       margin: 0 !important
@@ -864,7 +864,7 @@ small
     width: 100%
     margin: 6px 0 0
     list-style: none
-    
+
     li
       font-size: .7em
       font-weight: 400
@@ -893,7 +893,7 @@ small
       margin: 0
       position: relative
       overflow: hidden
-      
+
       img
         max-width: 100%
         display: block
@@ -960,7 +960,7 @@ small
   border: 1px solid #EEE
   position: relative
   background: #000
-    
+
   img
     width: 100%
     @include transition(opacity, .3s)
@@ -1127,7 +1127,7 @@ small
 
     .scrollbar-path-vertical
       bottom: 56px !important
-    
+
     ul
       list-style: none
       padding: 0
@@ -1156,8 +1156,8 @@ small
             position: absolute
             top: 25px
             right: 100%
-            background: url('../assets/chat-left.png') left top no-repeat
-            @include image2x('../assets/chat-left@2x.png', 16px, 18px)
+            background: url('chat-left.png') left top no-repeat
+            @include image2x('chat-left@2x.png', 16px, 18px)
             width: 16px
             height: 18px
             display: block
@@ -1195,8 +1195,8 @@ small
             border: 1px solid #d4e1f0
 
             &:after
-              background: url('../assets/chat-right.png') left top no-repeat
-              @include image2x('../assets/chat-right@2x.png', 16px, 18px)
+              background: url('chat-right.png') left top no-repeat
+              @include image2x('chat-right@2x.png', 16px, 18px)
               left: 100%
               right: auto
 
@@ -1330,7 +1330,7 @@ small
   padding: 2px 0 2px 0
   margin: 1px 0 1px 0
 
-.roll-item 
+.roll-item
   padding: 20px 0 20px 0
 
 
@@ -1348,21 +1348,21 @@ label
   padding-top: 9px
   margin-right: 15px
 
-.has-warning 
+.has-warning
   .help-block, .control-label
     color: #f0ad4e
 
   .form-control
     border-color: #f0ad4e
 
-.has-error 
+.has-error
   .help-block, .control-label
     color: #d9534f
 
   .form-control
     border-color: #d9534f
 
-.has-success 
+.has-success
   .help-block, .control-label
     color: #60c560
 
@@ -1436,13 +1436,13 @@ label
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Modal Styles
 /*-----------------------------------------------------------------------------------*/
-.modal-content 
+.modal-content
   border-radius: 0px
 .modal-content
   box-shadow: none
   background: rgba(255, 255, 255, 0.94)
 
-.modal-footer 
+.modal-footer
   .btn
     margin: 0 10px 0px 0
 
@@ -1479,20 +1479,20 @@ label
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Tab Styles
-/*-----------------------------------------------------------------------------------*/  
+/*-----------------------------------------------------------------------------------*/
 .nav-tabs > li > a
-  border-radius: 0px 
+  border-radius: 0px
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Alert Styles
-/*-----------------------------------------------------------------------------------*/  
+/*-----------------------------------------------------------------------------------*/
 .alert
   border-radius: 0px
   padding: 15 35 15 15
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Badge Styles
-/*-----------------------------------------------------------------------------------*/  
+/*-----------------------------------------------------------------------------------*/
 .badge
   background-color: #949494
   font-weight: 300
@@ -1534,7 +1534,7 @@ label
 
 
 @media (max-width: 767px)
-  
+
 
 .ico
   text-align: center
