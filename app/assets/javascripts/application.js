@@ -29,4 +29,5 @@
 //= require modernizr.custom
 //= require fancybox
 //= require select2
+//= require styleswitcher
 //= require main

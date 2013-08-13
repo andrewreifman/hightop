@@ -3,7 +3,13 @@ html
   head
     title se7en
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:100,300,400,700", media: "all"
-    = stylesheet_link_tag    "application", media: "all"
+    = stylesheet_link_tag "application", media: "all"
+
+    = stylesheet_link_tag "color/green", media: "all", rel: "alternate stylesheet", title: "green-theme"
+    = stylesheet_link_tag "color/orange", media: "all", rel: "alternate stylesheet", title: "orange-theme"
+    = stylesheet_link_tag "color/magenta", media: "all", rel: "alternate stylesheet", title: "magenta-theme"
+    = stylesheet_link_tag "color/gray", media: "all", rel: "alternate stylesheet", title: "gray-theme"
+
     = javascript_include_tag "application"
     = csrf_meta_tags
     meta content="width=device-width, initial-scale=1.0" name="viewport"
@@ -39,9 +45,26 @@ html
               a.dropdown-toggle data-toggle="dropdown" href="#"
                 span Settings
               ul.dropdown-menu
-                li= link_to "Item 1"
-                li= link_to "Item 2"
-                li= link_to "Item 3"
+                li
+                  a.settings-link.blue href="javascript:chooseStyle('none', 30)"
+                    span
+                    | Blue
+                li
+                  a.settings-link.green href="javascript:chooseStyle('green-theme', 30)"
+                    span
+                    | Green
+                li
+                  a.settings-link.orange href="javascript:chooseStyle('orange-theme', 30)"
+                    span
+                    | Orange
+                li
+                  a.settings-link.magenta href="javascript:chooseStyle('magenta-theme', 30)"
+                    span
+                    | Magenta
+                li
+                  a.settings-link.gray href="javascript:chooseStyle('gray-theme', 30)"
+                    span
+                    | Gray
             li.dropdown.user
               = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" do
                 = image_tag "avatar-male.jpg", :size => "34x34"
