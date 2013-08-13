@@ -197,12 +197,16 @@ $(document).ready ->
   $("#popover").popover()
   $("#popover-left").popover
     placement: "left"
+    trigger: "hover"
   $("#popover-top").popover
     placement: "top"
+    trigger: "hover"
   $("#popover-right").popover
     placement: "right"
+    trigger: "hover"
   $("#popover-bottom").popover
     placement: "bottom"
+    trigger: "hover"
 
 	# =============================================================================
 	#   jQuery VMap
