@@ -57,24 +57,35 @@ html
                 li= link_to 
                   i.icon-user 
                   | New user added: Jane Smith
+                  .notifications.label.label-info.pull-right New
                 li= link_to 
                   i.icon-dashboard 
                   | Sales targets available
+                  .notifications.label.label-info.pull-right New
                 li= link_to 
                   i.icon-pencil
                   | New performance metric added
                 li= link_to 
                   i.icon-dashboard 
                   | New growth data available  
-                  span.label.label-default 1 day ago
+                  
             li.dropdown.messages.hidden-phone
               a.dropdown-toggle data-toggle="dropdown" href="#"
                 span Messages
                 p.counter 3
-              ul.dropdown-menu
-                li= link_to "Item 1"
-                li= link_to "Item 2"
-                li= link_to "Item 3"
+              ul.dropdown-menu.messages
+                li= link_to
+                  = image_tag "avatar-male.jpg", :size => "34x34"
+                  | Could we meet today? I wanted...
+                  .notifications.label.label-info.pull-right New
+                li= link_to
+                  = image_tag "avatar-male.jpg", :size => "34x34"
+                  | Important data needs your analysis...
+                  .notifications.label.label-info.pull-right New
+                li= link_to
+                  = image_tag "avatar-male.jpg", :size => "34x34"
+                  | Buy Se7en today, it's a great theme...
+                  .notifications.label.label-info.pull-right New
             li.dropdown.settings.hidden-phone
               a.dropdown-toggle data-toggle="dropdown" href="#"
                 span Settings
