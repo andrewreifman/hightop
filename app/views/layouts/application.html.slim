@@ -30,9 +30,15 @@ html
                 span Notifications
                 p.counter 4
               ul.dropdown-menu
-                li= link_to "Item 1"
-                li= link_to "Item 2"
-                li= link_to "Item 3"
+                li= link_to 
+                  i.icon-user 
+                  | New user added: Jane Smith
+                li= link_to 
+                  i.icon-dashboard 
+                  | Memory capacity near maximum (90%)
+                li= link_to 
+                  i.icon-pencil
+                  | New performance metric added
             li.dropdown.messages.hidden-phone
               a.dropdown-toggle data-toggle="dropdown" href="#"
                 span Messages
