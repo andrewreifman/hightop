@@ -15,120 +15,147 @@ html
     meta content="width=device-width, initial-scale=1.0" name="viewport"
 
   body
+    - if current_page?(root_path)
+      #pt-main.pt-perspective
+        .pt-page.pt-page-1
+          .login
+            .login-container
+              = image_tag "logo-login@2x.png", :size => "100x30"
 
-    .navbar.navbar-fixed-top
-      .container-fluid.top-bar
-        button.navbar-toggle data-target=".nav-collapse" data-toggle="collapse" type="button"
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
+              form
+                .form-group
+                  .input-group
+                    span.input-group-addon
+                      i.icon-envelope
+                    input.form-control placeholder="Email" type="text"
+                .form-group
+                  .input-group
+                    span.input-group-addon
+                      i.icon-key
+                    input.form-control placeholder="Password" type="password"
+                .form-group
+                  label.checkbox
+                    input type="checkbox"
+                    | Remember me
+                input.btn.btn-large.btn-primary type="submit" value="Log in"
+                
+              = link_to "Forgot password?", "#"
 
-        .nav-collapse.collapse.pull-right
-          ul.nav.navbar-nav.pull-right
-            li.dropdown.notifications.hidden-phone
-              a.dropdown-toggle data-toggle="dropdown" href="#"
-                span Notifications
-                p.counter 4
-              ul.dropdown-menu
-                li= link_to 
-                  i.icon-user 
-                  | New user added: Jane Smith
-                li= link_to 
-                  i.icon-dashboard 
-                  | Memory capacity near maximum (90%)
-                li= link_to 
-                  i.icon-pencil
-                  | New performance metric added
-            li.dropdown.messages.hidden-phone
-              a.dropdown-toggle data-toggle="dropdown" href="#"
-                span Messages
-                p.counter 3
-              ul.dropdown-menu
-                li= link_to "Item 1"
-                li= link_to "Item 2"
-                li= link_to "Item 3"
-            li.dropdown.settings.hidden-phone
-              a.dropdown-toggle data-toggle="dropdown" href="#"
-                span Settings
-              ul.dropdown-menu
-                li
-                  a.settings-link.blue href="javascript:chooseStyle('none', 30)"
-                    span
-                    | Blue
-                li
-                  a.settings-link.green href="javascript:chooseStyle('green-theme', 30)"
-                    span
-                    | Green
-                li
-                  a.settings-link.orange href="javascript:chooseStyle('orange-theme', 30)"
-                    span
-                    | Orange
-                li
-                  a.settings-link.magenta href="javascript:chooseStyle('magenta-theme', 30)"
-                    span
-                    | Magenta
-                li
-                  a.settings-link.gray href="javascript:chooseStyle('gray-theme', 30)"
-                    span
-                    | Gray
-            li.dropdown.user
-              = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" do
-                = image_tag "avatar-male.jpg", :size => "34x34"
-                | John Smith
-                b.caret
-              ul.dropdown-menu
-                li
-                  = link_to "#" do
-                    i.icon-user
-                    | My Account
-                li
-                  = link_to "#" do
-                    i.icon-gear
-                    | Account Settings
-                li
-                  = link_to login_path do
-                    i.icon-signout
-                    | Logout
+        .pt-page.pt-page-2
 
-        = link_to "se7en", root_path, class: 'logo'
-        form.navbar-form.form-inline.col-lg-2
-          input.form-control placeholder="Search" type="text"
+          .navbar.navbar-fixed-top
+            .container-fluid.top-bar
+              button.navbar-toggle data-target=".nav-collapse" data-toggle="collapse" type="button"
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
 
-      .container-fluid.main-nav.clearfix
-        .nav-collapse.collapse
-          ul.nav
-            li.dashboard
-              = link_to root_path, class: cp(root_path) do
-                span
-                | Dashboard
-            li.dropdown.ui
-              = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp(ui_path) do
-                span
-                | UI
-                b.caret
-              ul.dropdown-menu
-                li= link_to "Buttons", buttons_path
-                li= link_to "Icons", icons_path
-                li= link_to "Components", components_path
-                li= link_to "Widgets", widgets_path
-                li= link_to "Typography", typo_path
-                li= link_to "Grid Layout", grid_path
-            li.forms
-              = link_to forms_path, class: cp(forms_path) do
-                span
-                | Forms
-            li.tables
-              = link_to tables_path, class: cp(tables_path) do
-                span
-                | Tables
-            li.charts
-              = link_to charts_path, class: cp(charts_path) do
-                span
-                | Charts
-            li.gallery
-              = link_to gallery_path, class: cp(gallery_path) do
-                span
-                | Gallery
+              .nav-collapse.collapse.pull-right
+                ul.nav.navbar-nav.pull-right
+                  li.dropdown.notifications.hidden-phone
+                    a.dropdown-toggle data-toggle="dropdown" href="#"
+                      span Notifications
+                      p.counter 4
+                    ul.dropdown-menu
+                      li= link_to 
+                        i.icon-user 
+                        | New user added: Jane Smith
+                      li= link_to 
+                        i.icon-dashboard 
+                        | Memory capacity near maximum (90%)
+                      li= link_to 
+                        i.icon-pencil
+                        | New performance metric added
+                  li.dropdown.messages.hidden-phone
+                    a.dropdown-toggle data-toggle="dropdown" href="#"
+                      span Messages
+                      p.counter 3
+                    ul.dropdown-menu
+                      li= link_to "Item 1"
+                      li= link_to "Item 2"
+                      li= link_to "Item 3"
+                  li.dropdown.settings.hidden-phone
+                    a.dropdown-toggle data-toggle="dropdown" href="#"
+                      span Settings
+                    ul.dropdown-menu
+                      li
+                        a.settings-link.blue href="javascript:chooseStyle('none', 30)"
+                          span
+                          | Blue
+                      li
+                        a.settings-link.green href="javascript:chooseStyle('green-theme', 30)"
+                          span
+                          | Green
+                      li
+                        a.settings-link.orange href="javascript:chooseStyle('orange-theme', 30)"
+                          span
+                          | Orange
+                      li
+                        a.settings-link.magenta href="javascript:chooseStyle('magenta-theme', 30)"
+                          span
+                          | Magenta
+                      li
+                        a.settings-link.gray href="javascript:chooseStyle('gray-theme', 30)"
+                          span
+                          | Gray
+                  li.dropdown.user
+                    = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" do
+                      = image_tag "avatar-male.jpg", :size => "34x34"
+                      | John Smith
+                      b.caret
+                    ul.dropdown-menu
+                      li
+                        = link_to "#" do
+                          i.icon-user
+                          | My Account
+                      li
+                        = link_to "#" do
+                          i.icon-gear
+                          | Account Settings
+                      li
+                        = link_to login_path do
+                          i.icon-signout
+                          | Logout
 
-    .container-fluid
-      = yield
+              = link_to "se7en", root_path, class: 'logo'
+              form.navbar-form.form-inline.col-lg-2
+                input.form-control placeholder="Search" type="text"
+
+            .container-fluid.main-nav.clearfix
+              .nav-collapse.collapse
+                ul.nav
+                  li.dashboard
+                    = link_to root_path, class: cp(root_path) do
+                      span
+                      | Dashboard
+                  li.dropdown.ui
+                    = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp(ui_path) do
+                      span
+                      | UI
+                      b.caret
+                    ul.dropdown-menu
+                      li= link_to "Buttons", buttons_path
+                      li= link_to "Icons", icons_path
+                      li= link_to "Components", components_path
+                      li= link_to "Widgets", widgets_path
+                      li= link_to "Typography", typo_path
+                      li= link_to "Grid Layout", grid_path
+                  li.forms
+                    = link_to forms_path, class: cp(forms_path) do
+                      span
+                      | Forms
+                  li.tables
+                    = link_to tables_path, class: cp(tables_path) do
+                      span
+                      | Tables
+                  li.charts
+                    = link_to charts_path, class: cp(charts_path) do
+                      span
+                      | Charts
+                  li.gallery
+                    = link_to gallery_path, class: cp(gallery_path) do
+                      span
+                      | Gallery
+
+          .container-fluid
+            = yield

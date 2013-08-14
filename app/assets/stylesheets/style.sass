@@ -103,6 +103,120 @@ small
 
 
 /*-----------------------------------------------------------------------------------*/
+/*  Login
+/*-----------------------------------------------------------------------------------*/
+.login
+  padding: 50px 15px 15px
+  background: #eee
+
+  .login-container
+    max-width: 420px
+    margin: 0 auto
+    text-align: center
+
+    img
+      margin: 40px
+
+    .input-group-addon
+      padding: 8px 16px
+      background: #f4f4f4
+
+    input.form-control
+      height: 48px
+      font-size: 15px
+      box-shadow: none
+
+    .checkbox
+      text-align: left
+      margin-bottom: 30px
+
+    input[type="submit"]
+      display: block
+      width: 100%
+      padding: 10px 0 12px
+      margin-bottom: 25px
+
+      &:hover
+        background: transparent
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Login transition
+/*-----------------------------------------------------------------------------------*/
+.pt-perspective
+  position: relative
+  width: 100%
+  height: 100%
+  -webkit-perspective: 1200px
+  -moz-perspective: 1200px
+  perspective: 1200px
+
+.pt-page
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  visibility: hidden
+  overflow: hidden
+  -webkit-backface-visibility: hidden
+  -moz-backface-visibility: hidden
+  backface-visibility: hidden
+  -webkit-transform: translate3d(0, 0, 0)
+  -moz-transform: translate3d(0, 0, 0)
+  transform: translate3d(0, 0, 0)
+  -webkit-transform-style: preserve-3d
+  -moz-transform-style: preserve-3d
+  transform-style: preserve-3d
+
+.pt-page-current
+  visibility: visible
+  z-index: 1
+
+.no-js
+  .pt-page
+    visibility: visible
+    z-index: 1
+  body
+    overflow: auto
+
+.pt-page-ontop
+  z-index: 999
+
+.pt-page-flipOutRight
+  -webkit-transform-origin: 50% 50%
+  -webkit-animation: flipOutRight .5s both ease-in
+  -moz-transform-origin: 50% 50%
+  -moz-animation: flipOutRight .5s both ease-in
+  transform-origin: 50% 50%
+  animation: flipOutRight .5s both ease-in
+
+.pt-page-flipInLeft
+  -webkit-transform-origin: 50% 50%
+  -webkit-animation: flipInLeft .5s both ease-out
+  -moz-transform-origin: 50% 50%
+  -moz-animation: flipInLeft .5s both ease-out
+  transform-origin: 50% 50%
+  animation: flipInLeft .5s both ease-out
+
+.pt-page-flipOutLeft
+  -webkit-transform-origin: 50% 50%
+  -webkit-animation: flipOutLeft .5s both ease-in
+  -moz-transform-origin: 50% 50%
+  -moz-animation: flipOutLeft .5s both ease-in
+  transform-origin: 50% 50%
+  animation: flipOutLeft .5s both ease-in
+
+.pt-page-flipInRight
+  -webkit-transform-origin: 50% 50%
+  -webkit-animation: flipInRight .5s both ease-out
+  -moz-transform-origin: 50% 50%
+  -moz-animation: flipInRight .5s both ease-out
+  transform-origin: 50% 50%
+  animation: flipInRight .5s both ease-out
+
+
+/*-----------------------------------------------------------------------------------*/
 /*  Header Styles
 /*-----------------------------------------------------------------------------------*/
 .navbar
