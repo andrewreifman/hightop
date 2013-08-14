@@ -23,6 +23,8 @@
  *= require color/orange
  *= require color/magenta
  *= require color/gray
+ *= require jquery.sidr.light
+ *= require jquery.sidr.dark
  *= require bootstrap.min
  *= require style
  */

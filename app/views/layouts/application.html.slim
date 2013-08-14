@@ -68,7 +68,7 @@ html
                 li= link_to 
                   i.icon-dashboard 
                   | New growth data available  
-                  
+      
             li.dropdown.messages.hidden-phone
               a.dropdown-toggle data-toggle="dropdown" href="#"
                 span Messages
@@ -131,6 +131,15 @@ html
 
         = link_to "se7en", root_path, class: 'logo'
         form.navbar-form.form-inline.col-lg-2
+          a#simple-menu.hideme href="#sidr" open
+          #sidr
+            ul
+              li 
+                a href="#" 1
+              li.active
+                a href="#" 2
+              li
+                a href="#" 3
           input.form-control placeholder="Search" type="text"
 
 
