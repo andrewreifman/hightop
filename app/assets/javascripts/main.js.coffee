@@ -323,6 +323,16 @@ $(document).ready ->
 	# =============================================================================
 	#   Isotope
 	# =============================================================================
+  $.Isotope::_getCenteredMasonryColumns = ->
+    @width = @element.width()
+    parentWidth = @element.parent().width()
+    
+    colW = @options.masonry and @options.masonry.columnWidth or @$filteredAtoms.outerWidth(true) or parentWidth
+    cols = Math.floor(parentWidth / colW)
+    cols = Math.max(cols, 1)
+    
+    @masonry.cols = cols
+    @masonry.columnWidth = colW
 
 	$container = $(".gallery-container")
 	$container.isotope {}
@@ -330,7 +340,8 @@ $(document).ready ->
     selector = $(this).attr("data-filter")
     $(".gallery-filters a.selected").removeClass "selected"
     $(this).addClass "selected"
-    $container.isotope filter: selector
+    $container.isotope 
+      filter: selector
     false
 
 
