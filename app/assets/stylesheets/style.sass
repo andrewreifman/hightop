@@ -49,6 +49,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
   font-weight: 300
 
 p
+  margin: 0 0 15px
   &.lead
     font-weight: 300
 
@@ -141,82 +142,6 @@ small
 
 
 /*-----------------------------------------------------------------------------------*/
-/*  Login transition
-/*-----------------------------------------------------------------------------------*/
-.pt-perspective
-  position: relative
-  width: 100%
-  height: 100%
-  -webkit-perspective: 1200px
-  -moz-perspective: 1200px
-  perspective: 1200px
-
-.pt-page
-  width: 100%
-  height: 100%
-  position: absolute
-  top: 0
-  left: 0
-  visibility: hidden
-  overflow: hidden
-  -webkit-backface-visibility: hidden
-  -moz-backface-visibility: hidden
-  backface-visibility: hidden
-  -webkit-transform: translate3d(0, 0, 0)
-  -moz-transform: translate3d(0, 0, 0)
-  transform: translate3d(0, 0, 0)
-  -webkit-transform-style: preserve-3d
-  -moz-transform-style: preserve-3d
-  transform-style: preserve-3d
-
-.pt-page-current
-  visibility: visible
-  z-index: 1
-
-.no-js
-  .pt-page
-    visibility: visible
-    z-index: 1
-  body
-    overflow: auto
-
-.pt-page-ontop
-  z-index: 999
-
-.pt-page-flipOutRight
-  -webkit-transform-origin: 50% 50%
-  -webkit-animation: flipOutRight .5s both ease-in
-  -moz-transform-origin: 50% 50%
-  -moz-animation: flipOutRight .5s both ease-in
-  transform-origin: 50% 50%
-  animation: flipOutRight .5s both ease-in
-
-.pt-page-flipInLeft
-  -webkit-transform-origin: 50% 50%
-  -webkit-animation: flipInLeft .5s both ease-out
-  -moz-transform-origin: 50% 50%
-  -moz-animation: flipInLeft .5s both ease-out
-  transform-origin: 50% 50%
-  animation: flipInLeft .5s both ease-out
-
-.pt-page-flipOutLeft
-  -webkit-transform-origin: 50% 50%
-  -webkit-animation: flipOutLeft .5s both ease-in
-  -moz-transform-origin: 50% 50%
-  -moz-animation: flipOutLeft .5s both ease-in
-  transform-origin: 50% 50%
-  animation: flipOutLeft .5s both ease-in
-
-.pt-page-flipInRight
-  -webkit-transform-origin: 50% 50%
-  -webkit-animation: flipInRight .5s both ease-out
-  -moz-transform-origin: 50% 50%
-  -moz-animation: flipInRight .5s both ease-out
-  transform-origin: 50% 50%
-  animation: flipInRight .5s both ease-out
-
-
-/*-----------------------------------------------------------------------------------*/
 /*  Header Styles
 /*-----------------------------------------------------------------------------------*/
 .navbar
@@ -237,6 +162,20 @@ small
     width: 100%
     float: left
 
+    .navbar-toggle
+      position: absolute
+      top: 9px
+      right: 10px
+      width: 48px
+      height: 32px
+      padding: 8px 12px
+      background-color: transparent
+      border: 1px solid #dddddd
+      border-radius: 4px
+
+      &+ .nav-collapse
+        margin-top: 0
+
     .logo
       background: asset-url('se7en-logo.png') no-repeat 0 0
       @include image2x("se7en-logo@2x.png", 54px, 16px)
@@ -247,6 +186,8 @@ small
       margin: 14px 10px 0 0
 
     form
+      margin-top: 6px
+
       .form-control
         height: 30px
         border-color: #e6e6e6
@@ -376,12 +317,13 @@ small
         text-align: center
         width: 100%
         height: 100%
+        margin: 0
 
         > li
           float: none
           display: inline-block
           text-align: center
-          margin: 0 10px
+          margin: 0 8px
 
           > a
             display: block
@@ -503,6 +445,9 @@ small
 .btn-default
   background: #BBB
   border-color: #BBB
+  color: #FFF
+  .caret
+    border-top-color: #FFF
   &:hover, &.active
     background: #FFF
     color: #AAA
@@ -661,13 +606,21 @@ small
 
     &+ .dropdown-toggle
       margin-left: 1px
-      padding: 16px 10px
+      padding: 14px 10px
 
       .caret
         margin: 0
 
       &[class^="-outline"], &[class*="-outline"]
         margin-left: -1px
+
+  &.dropup
+    .btn .caret
+      border-bottom-color: #FFF
+    .btn:hover
+      &[class^="-outline"], &[class*="-outline"]
+        .caret
+          border-bottom-color: #FFF
 
   &.dropup .btn-default:hover .caret, &.dropup .btn-default-outline .caret
     border-bottom-color: #BBB
@@ -682,11 +635,6 @@ small
   &.dropup .btn-danger:hover .caret, &.dropup .btn-danger-outline .caret
     border-bottom-color: #d9534f
 
-  &.dropup
-    .btn:hover
-      &[class^="-outline"], &[class*="-outline"]
-        .caret
-          border-bottom-color: #FFF
 
 /*-----------------------------------------------------------------------------------*/
 /*  Dropdown Styles
@@ -1493,6 +1441,11 @@ small
 /*-----------------------------------------------------------------------------------*/
 /*  Form styles
 /*-----------------------------------------------------------------------------------*/
+fieldset
+  border: 0
+  margin: 0
+  padding: 0
+
 label
   font-weight: normal
 
