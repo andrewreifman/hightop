@@ -35,3 +35,20 @@ a
 
 .select2-drop-active
   border-color: $green
+
+.dataTable th
+  color: $green
+
+  &.sorting
+    &:after
+      border-top: 5px solid $green
+    &:before
+      border-bottom: 5px solid $green
+
+  &.sorting_asc
+    &:after
+      border-bottom: 5px solid $green
+
+  &.sorting_desc
+    &:after
+      border-top: 5px solid $green
