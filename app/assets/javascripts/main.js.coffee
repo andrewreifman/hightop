@@ -186,6 +186,11 @@ $(document).ready ->
 	# =============================================================================
 	$("#dataTable1").dataTable
     "sPaginationType": "full_numbers"
+    aoColumnDefs: [
+      bSortable: false
+      aTargets: [0,-1] # <-- gets last column and turns off sorting
+    ]
+
 
   # =============================================================================
   #   Bootstrap Tabs
