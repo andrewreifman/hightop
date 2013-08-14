@@ -3,7 +3,6 @@ html
   head
     title se7en
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:100,300,400,700", media: "all"
-    = stylesheet_link_tag "//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.min.css"
     = stylesheet_link_tag "application", media: "all"
 
     = stylesheet_link_tag "color/green", media: "all", rel: "alternate stylesheet", title: "green-theme"
@@ -47,11 +46,6 @@ html
           span.icon-bar
           span.icon-bar
           span.icon-bar
-
-        .pull-left
-          = link_to "se7en", root_path, class: 'logo'
-          form.navbar-form.form-inline.col-lg-2
-            input.form-control placeholder="Search" type="text"
 
         .pull-right
           ul.nav.navbar-nav.pull-right
@@ -120,9 +114,13 @@ html
                     i.icon-signout
                     | Logout
 
+        = link_to "se7en", root_path, class: 'logo'
+        form.navbar-form.form-inline.col-lg-2
+          input.form-control placeholder="Search" type="text"
+
 
       .container-fluid.main-nav.clearfix
-        .nav-collapse.collapse
+        .nav-collapse
           ul.nav
             li.dashboard
               = link_to root_path, class: cp(root_path) do
