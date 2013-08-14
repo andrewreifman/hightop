@@ -163,11 +163,11 @@ small
 
           &:hover
             background: #eee
-            background: rgba(0,0,0,.05)
+            background: rgba(0,0,0,.04)
 
           > span
             background: asset-url('admin-sprite.png') no-repeat top left
-            @include image2x("admin-sprite@2x.png", 84px, 56px)
+            @include image2x("admin-sprite@2x.png", 84px, 168px)
             display: block
             width: 28px
             height: 28px
@@ -192,7 +192,7 @@ small
           > a
             background-color: #eee
             span
-              background-position: left bottom
+              background-position: left -28px
 
         &.messages
           a > span
@@ -202,7 +202,7 @@ small
             > a
               background-color: #eee
               span
-                background-position: -28px bottom
+                background-position: -28px -28px
 
         &.settings
           a > span
@@ -212,7 +212,7 @@ small
             > a
               background-color: #eee
               span
-                background-position: -56px bottom
+                background-position: -56px -28px
 
           .settings-link
             span
@@ -281,7 +281,7 @@ small
 
             span
               background: asset-url('nav-sprite.png') no-repeat top left
-              @include image2x("nav-sprite@2x.png", 168px, 56px)
+              @include image2x("nav-sprite@2x.png", 168px, 168px)
               display: block
               width: 28px
               height: 28px
@@ -296,7 +296,7 @@ small
               color: $blue
 
               span
-                background-position: left bottom
+                background-position: left -28px
 
               .caret
                 border-top-color: $blue
@@ -314,7 +314,7 @@ small
                 background-position: -28px top
 
               &.current span
-                background-position: -28px bottom
+                background-position: -28px -28px
 
           &.forms
             a
@@ -322,7 +322,7 @@ small
                 background-position: -56px top
 
               &.current span
-                background-position: -56px bottom
+                background-position: -56px -28px
 
           &.charts
             a
@@ -330,7 +330,7 @@ small
                 background-position: -84px top
 
               &.current span
-                background-position: -84px bottom
+                background-position: -84px -28px
 
           &.tables
             a
@@ -338,7 +338,7 @@ small
                 background-position: -112px top
 
               &.current span
-                background-position: -112px bottom
+                background-position: -112px -28px
 
           &.gallery
             a
@@ -346,7 +346,7 @@ small
                 background-position: -140px top
 
               &.current span
-                background-position: -140px bottom
+                background-position: -140px -28px
 
   .nav > li > a
     padding: 0
@@ -751,7 +751,7 @@ small
 
       .icon
         background: asset-url('info-data-sprite.png') no-repeat left top
-        @include image2x("info-data-sprite@2x.png", 200px, 38px)
+        @include image2x("info-data-sprite@2x.png", 200px, 190px)
         width: 50px
         height: 38px
         display: inline-block
@@ -762,7 +762,7 @@ small
           background-position: -50px top
         &.money
           background-position: -100px top
-        &.chat
+        &.chat-bubbles
           background-position: -150px top
 
     .text
