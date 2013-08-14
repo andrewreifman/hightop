@@ -25,10 +25,16 @@ $blue: #007aff
     background-image: asset-url($image)
     background-size: $width $height
 
-@mixin transition($effect, $time)
-  -webkit-transition: $effect $time
-  -moz-transition: $effect $time
-  transition: $effect $time
+@mixin transition($properties)
+  -webkit-transition: $properties
+  -moz-transition: $properties
+  transition: $properties
+
+@mixin transform($effect)
+  -webkit-transform: $effect
+  -moz-transform: $effect
+  transform: $effect
+  -o-transform: $effect
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -42,6 +48,7 @@ body
   color: #666
   background: #eee
   padding-top: 140px
+  position: relative
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif
@@ -109,6 +116,21 @@ small
 .login
   padding: 50px 15px 15px
   background: #eee
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 9999
+  box-shadow: 0 0 10px rgba(0,0,0,.25)
+  @include transform(scale(1))
+  -webkit-transition: -webkit-transform .5s, left .6s .6s ease-in-out
+  -moz-transition: -moz-transform .5s, left .6s .6s ease-in-out
+  transition: transform .5s, left .6s .6s ease-in-out
+
+  &.submitted
+    @include transform(scale(.9))
+    left: 100%
 
   .login-container
     max-width: 420px
@@ -131,7 +153,7 @@ small
       text-align: left
       margin-bottom: 30px
 
-    input[type="submit"]
+    .login-submit
       display: block
       width: 100%
       padding: 10px 0 12px
@@ -150,7 +172,7 @@ small
   padding: 0
   min-height: 45px
   height: 112px
-  @include transition(all, .3s)
+  @include transition(all .3s)
 
   &.closed
     height: 45px
@@ -214,7 +236,7 @@ small
           height: 100%
           padding: 8px 0 0 8px
           position: relative
-          @include transition(all, .3s)
+          @include transition(all .3s)
 
           &:hover
             background: #eee
@@ -333,7 +355,7 @@ small
             font-size: 12px
             font-weight: 400
             color: #999
-            @include transition(all, .3s)
+            @include transition(all .3s)
 
             span
               background: asset-url('nav-sprite.png') no-repeat top left
@@ -427,7 +449,7 @@ small
 .btn
   font-weight: 300
   margin: 0 10px 15px 0
-  @include transition(all, .15s)
+  @include transition(all .15s)
 
   &.active
     box-shadow: none
@@ -1001,7 +1023,7 @@ small
         max-width: 100%
         display: block
         position: relative
-        @include transition(top, .25s)
+        @include transition(top .25s)
 
     .caption
       width: 100%
@@ -1012,7 +1034,7 @@ small
       padding: 20px
       background: #767777
       color: #FFF
-      @include transition(all, .25s)
+      @include transition(all .25s)
 
       h3
         margin: 0
@@ -1067,7 +1089,7 @@ small
 
   img
     width: 100%
-    @include transition(opacity, .3s)
+    @include transition(opacity .3s)
 
   .actions
     position: absolute
@@ -1078,7 +1100,7 @@ small
     margin-top: -18px
     text-align: center
     opacity: 0
-    @include transition(opacity, .3s)
+    @include transition(opacity .3s)
 
     i
       display: inline-block
@@ -1092,7 +1114,7 @@ small
       border: 1px solid #FFF
       border-radius: 50%
       vertical-align: top
-      @include transition(all, .25s)
+      @include transition(all .25s)
 
       &:hover
         background: #FFF
@@ -1344,7 +1366,7 @@ small
       margin-bottom: 0 !important
       cursor: pointer
       color: #666
-      @include transition(all, .2s)
+      @include transition(all .2s)
 
       [class^="icon-"], [class*="icon-"]
         width: 32px
@@ -1353,7 +1375,7 @@ small
         text-align: center
         margin-right: 10px
         vertical-align: middle
-        @include transition(all, .12s)
+        @include transition(all .12s)
 
       &:hover
         background-color: #f6f6f6
@@ -1450,7 +1472,7 @@ label
   font-weight: normal
 
 .form-control
-  @include transition(all, .5s)
+  @include transition(all .5s)
 
   &:focus
     border-color: $blue
