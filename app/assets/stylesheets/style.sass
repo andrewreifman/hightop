@@ -49,6 +49,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
   font-weight: 300
 
 p
+  margin: 0 0 15px
   &.lead
     font-weight: 300
 
@@ -103,6 +104,44 @@ small
 
 
 /*-----------------------------------------------------------------------------------*/
+/*  Login
+/*-----------------------------------------------------------------------------------*/
+.login
+  padding: 50px 15px 15px
+  background: #eee
+
+  .login-container
+    max-width: 420px
+    margin: 0 auto
+    text-align: center
+
+    img
+      margin: 40px
+
+    .input-group-addon
+      padding: 8px 16px
+      background: #f4f4f4
+
+    input.form-control
+      height: 48px
+      font-size: 15px
+      box-shadow: none
+
+    .checkbox
+      text-align: left
+      margin-bottom: 30px
+
+    input[type="submit"]
+      display: block
+      width: 100%
+      padding: 10px 0 12px
+      margin-bottom: 25px
+
+      &:hover
+        background: transparent
+
+
+/*-----------------------------------------------------------------------------------*/
 /*  Header Styles
 /*-----------------------------------------------------------------------------------*/
 .navbar
@@ -123,6 +162,20 @@ small
     width: 100%
     float: left
 
+    .navbar-toggle
+      position: absolute
+      top: 9px
+      right: 10px
+      width: 48px
+      height: 32px
+      padding: 8px 12px
+      background-color: transparent
+      border: 1px solid #dddddd
+      border-radius: 4px
+
+      &+ .nav-collapse
+        margin-top: 0
+
     .logo
       background: asset-url('se7en-logo.png') no-repeat 0 0
       @include image2x("se7en-logo@2x.png", 54px, 16px)
@@ -133,6 +186,8 @@ small
       margin: 14px 10px 0 0
 
     form
+      margin-top: 6px
+
       .form-control
         height: 30px
         border-color: #e6e6e6
@@ -262,12 +317,13 @@ small
         text-align: center
         width: 100%
         height: 100%
+        margin: 0
 
         > li
           float: none
           display: inline-block
           text-align: center
-          margin: 0 10px
+          margin: 0 8px
 
           > a
             display: block
@@ -389,6 +445,9 @@ small
 .btn-default
   background: #BBB
   border-color: #BBB
+  color: #FFF
+  .caret
+    border-top-color: #FFF
   &:hover, &.active
     background: #FFF
     color: #AAA
@@ -547,13 +606,21 @@ small
 
     &+ .dropdown-toggle
       margin-left: 1px
-      padding: 16px 10px
+      padding: 14px 10px
 
       .caret
         margin: 0
 
       &[class^="-outline"], &[class*="-outline"]
         margin-left: -1px
+
+  &.dropup
+    .btn .caret
+      border-bottom-color: #FFF
+    .btn:hover
+      &[class^="-outline"], &[class*="-outline"]
+        .caret
+          border-bottom-color: #FFF
 
   &.dropup .btn-default:hover .caret, &.dropup .btn-default-outline .caret
     border-bottom-color: #BBB
@@ -568,11 +635,6 @@ small
   &.dropup .btn-danger:hover .caret, &.dropup .btn-danger-outline .caret
     border-bottom-color: #d9534f
 
-  &.dropup
-    .btn:hover
-      &[class^="-outline"], &[class*="-outline"]
-        .caret
-          border-bottom-color: #FFF
 
 /*-----------------------------------------------------------------------------------*/
 /*  Dropdown Styles
@@ -1379,6 +1441,11 @@ small
 /*-----------------------------------------------------------------------------------*/
 /*  Form styles
 /*-----------------------------------------------------------------------------------*/
+fieldset
+  border: 0
+  margin: 0
+  padding: 0
+
 label
   font-weight: normal
 
@@ -1392,6 +1459,9 @@ label
 .form-horizontal
   .form-group
     margin-bottom: 0
+
+    label
+      margin-bottom: 5px
 
 .radio-inline, .checkbox-inline
   padding-top: 9px

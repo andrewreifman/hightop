@@ -11,10 +11,34 @@ html
     = stylesheet_link_tag "color/gray", media: "all", rel: "alternate stylesheet", title: "gray-theme"
 
     = javascript_include_tag "application"
+    = javascript_include_tag "//netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/js/bootstrap.min.js"
     = csrf_meta_tags
     meta content="width=device-width, initial-scale=1.0" name="viewport"
 
   body
+    - if current_page?(root_path)
+      .login
+        .login-container
+          = image_tag "logo-login@2x.png", :size => "100x30"
+
+          form
+            .form-group
+              .input-group
+                span.input-group-addon
+                  i.icon-envelope
+                input.form-control placeholder="Email" type="text"
+            .form-group
+              .input-group
+                span.input-group-addon
+                  i.icon-key
+                input.form-control placeholder="Password" type="password"
+            .form-group
+              label.checkbox
+                input type="checkbox"
+                | Remember me
+            input.btn.btn-large.btn-primary type="submit" value="Log in"
+            
+          = link_to "Forgot password?", "#"
 
     .navbar.navbar-fixed-top
       .container-fluid.top-bar
@@ -23,7 +47,7 @@ html
           span.icon-bar
           span.icon-bar
 
-        .nav-collapse.collapse.pull-right
+        .pull-right
           ul.nav.navbar-nav.pull-right
             li.dropdown.notifications.hidden-phone
               a.dropdown-toggle data-toggle="dropdown" href="#"
@@ -98,8 +122,9 @@ html
         form.navbar-form.form-inline.col-lg-2
           input.form-control placeholder="Search" type="text"
 
+
       .container-fluid.main-nav.clearfix
-        .nav-collapse.collapse
+        .nav-collapse
           ul.nav
             li.dashboard
               = link_to root_path, class: cp(root_path) do
