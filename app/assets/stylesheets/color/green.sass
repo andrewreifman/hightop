@@ -7,6 +7,35 @@ a
   &:focus
     border-color: $green
 
+.navbar .container-fluid.top-bar .nav > li
+  &.open, &.active, &.open.active
+    > a span
+      background-position: left -56px
+
+  &.messages
+    &.open, &.active, &.open.active
+      > a span
+        background-position: -28px -56px
+
+  &.settings
+    &.open, &.active, &.open.active
+      > a span
+        background-position: -56px -56px
+
+.navbar .container-fluid.main-nav .nav-collapse .nav > li
+  a.current span
+    background-position: left -56px
+  &.ui a.current span
+    background-position: -28px -56px
+  &.forms a.current span
+    background-position: -56px -56px
+  &.charts a.current span
+    background-position: -84px -56px
+  &.tables a.current span
+    background-position: -112px -56px
+  &.gallery a.current span
+    background-position: -140px -56px
+
 .navbar .container-fluid.main-nav .nav-collapse .nav > li > a.current
   color: $green
 
@@ -23,6 +52,19 @@ a
 
 .stats-container [class^="col-"] .number, .stats-container [class*="col-"] .number
   color: $green
+
+.stats-container
+  [class^="col-"], [class*="col-"]
+    .number
+      .icon
+        background-position: left -38px
+
+        &.visitors
+          background-position: -50px -38px
+        &.money
+          background-position: -100px -38px
+        &.chat-bubbles
+          background-position: -150px -38px
 
 .task-widget input[type="checkbox"]:checked + .task-checkbox
   color: $green
