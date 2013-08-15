@@ -742,8 +742,13 @@ small
 
   &.label-success
     background-color: #60c560
+.labels
+  min-height: 180px !important
+  h3
+    margin-bottom: 30px
 
-
+.label-primary
+  background-color: $blue
 /*-----------------------------------------------------------------------------------*/
 /*  Widget-Container
 /*-----------------------------------------------------------------------------------*/
@@ -777,7 +782,7 @@ small
     width: 100%
     font-weight: 300
     margin: 0
-    
+
     [class^="icon-"], [class*="icon-"]
       margin-right: 10px
 
@@ -792,7 +797,6 @@ small
         opacity: 1
   .tabs
     background: #f5f5f5
-    height: 58px
     border-bottom: 1px solid #DDD
 
 
@@ -1589,20 +1593,28 @@ label
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Accordion Styles
 /*-----------------------------------------------------------------------------------*/
-.accordion-heading .accordion-toggle
+.panel-heading .panel-toggle
   background: #f9fafa
+
+.panel-title > a
+  font-weight: 200
+
+  &:hover
+    color: $blue
 
 .accordion-group
   margin: 0px
   border-radius: 0px
-  border: 0px
+
   border-bottom: 1px solid #f1f1f1
 
 .panel-group .panel 
   margin-bottom: 0
   overflow: hidden
   border-radius: 0px
-  border: 0px
+  border: 1px solid #e1e1e1
+  border-left: 0px
+  border-right: 0px
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Modal Styles
@@ -1630,6 +1642,11 @@ label
 .nav-tabs > li > a
   border-radius: 0px 
 
+.nav-tabs
+  margin-top: -8px
+ 
+.nav-tabs > li> a:hover
+
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Alert Styles
 /*-----------------------------------------------------------------------------------*/  
@@ -1643,7 +1660,7 @@ button.close
 /*-----------------------------------------------------------------------------------*/  
 .pagination
   .icon
-    padding: 7px 12px 7px 12px
+    padding: 9px 14px 9px 14px
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Badge Styles
