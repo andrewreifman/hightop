@@ -12,5 +12,6 @@ Se7en::Application.routes.draw do
   get "widgets" => 'home#widgets'
   get "gallery" => 'home#gallery'
   get "grid" => 'home#grid'
+  get "docs" => 'home#docs'
   root to: 'home#index'
 end
