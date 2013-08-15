@@ -42,10 +42,7 @@ html
 
     .navbar.navbar-fixed-top
       .container-fluid.top-bar
-        button.navbar-toggle data-target=".nav-collapse" data-toggle="collapse" type="button"
-          span.icon-bar
-          span.icon-bar
-          span.icon-bar
+
 
         .pull-right
           ul.nav.navbar-nav.pull-right
@@ -129,9 +126,9 @@ html
                     i.icon-signout
                     | Logout
 
+        a#mobilemenu.hideme style="position: fixed" href="#mobilemenu" OPEN
         = link_to "se7en", root_path, class: 'logo'
         form.navbar-form.form-inline.col-lg-2
-          a#mobilemenu.hideme style="position: fixed" href="#mobilemenu" open
           input.form-control placeholder="Search" type="text"
 
 
