@@ -762,6 +762,7 @@ small
   &.gallery
     min-height: 400px
 
+
   &.label-container
     .label
       margin-right: 12px
@@ -776,7 +777,7 @@ small
     width: 100%
     font-weight: 300
     margin: 0
-
+    
     [class^="icon-"], [class*="icon-"]
       margin-right: 10px
 
@@ -789,6 +790,14 @@ small
       &:hover
         cursor: pointer
         opacity: 1
+  .tabs
+    background: #f5f5f5
+    height: 58px
+    border-bottom: 1px solid #DDD
+
+
+
+
 
   .widget-content
     width: 100%
@@ -1589,6 +1598,11 @@ label
   border: 0px
   border-bottom: 1px solid #f1f1f1
 
+.panel-group .panel 
+  margin-bottom: 0
+  overflow: hidden
+  border-radius: 0px
+  border: 0px
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Modal Styles
@@ -1621,8 +1635,9 @@ label
 /*-----------------------------------------------------------------------------------*/  
 .alert
   border-radius: 0px
-  padding: 15 35 15 15
 
+button.close
+  margin-left: 18px
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Pagination
 /*-----------------------------------------------------------------------------------*/  
