@@ -195,13 +195,12 @@ $(document).ready ->
   # =============================================================================
   #   Bootstrap Tabs
   # =============================================================================
-  $ ->
   $("#myTab a:last").tab "show"
+
 
   # =============================================================================
   #   Bootstrap Popover
   # =============================================================================
-  $ ->
   $("#popover").popover()
   $("#popover-left").popover
     placement: "left"
@@ -215,7 +214,6 @@ $(document).ready ->
   # =============================================================================
   #   Bootstrap Tooltip
   # =============================================================================  
-  $ ->
   $("#tooltip").tooltip()
   $("#tooltip-left").tooltip
     placement: "left"
@@ -229,7 +227,6 @@ $(document).ready ->
 	# =============================================================================
 	#   jQuery VMap
 	# =============================================================================
-
 	$("#vmap").vectorMap
 	  map: "world_en"
 	  backgroundColor: null
@@ -246,8 +243,6 @@ $(document).ready ->
 	# =============================================================================
 	#   Full Calendar
 	# =============================================================================
-
-
   date = new Date()
   d = date.getDate()
   m = date.getMonth()
@@ -315,25 +310,12 @@ $(document).ready ->
   # =============================================================================
   #   Sider
   # =============================================================================
-
-
   $("#simple-menu").sidr()
 
 
 	# =============================================================================
 	#   Isotope
 	# =============================================================================
-  $.Isotope::_getCenteredMasonryColumns = ->
-    @width = @element.width()
-    parentWidth = @element.parent().width()
-    
-    colW = @options.masonry and @options.masonry.columnWidth or @$filteredAtoms.outerWidth(true) or parentWidth
-    cols = Math.floor(parentWidth / colW)
-    cols = Math.max(cols, 1)
-    
-    @masonry.cols = cols
-    @masonry.columnWidth = colW
-
 	$container = $(".gallery-container")
 	$container.isotope {}
 	$(".gallery-filters a").click ->
