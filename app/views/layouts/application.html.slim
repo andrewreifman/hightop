@@ -75,15 +75,15 @@ html
                 p.counter 3
               ul.dropdown-menu.messages
                 li= link_to
-                  = image_tag "avatar-male2.jpg", :size => "34x34"
+                  = image_tag "avatar-male2.png", :size => "34x34"
                   | Could we meet today? I wanted...
                   .notifications.label.label-info.pull-right New
                 li= link_to
-                  = image_tag "avatar-female.jpg", :size => "34x34"
+                  = image_tag "avatar-female.png", :size => "34x34"
                   | Important data needs your analysis...
                   .notifications.label.label-info.pull-right New
                 li= link_to
-                  = image_tag "avatar-female2.jpg", :size => "34x34"
+                  = image_tag "avatar-male2.png", :size => "34x34"
                   | Buy Se7en today, it's a great theme...
                   .notifications.label.label-info.pull-right New
             li.dropdown.settings.hidden-phone
@@ -131,15 +131,7 @@ html
 
         = link_to "se7en", root_path, class: 'logo'
         form.navbar-form.form-inline.col-lg-2
-          a#simple-menu.hideme href="#sidr" open
-          #sidr
-            ul
-              li 
-                a href="#" 1
-              li.active
-                a href="#" 2
-              li
-                a href="#" 3
+          a#mobilemenu.hideme style="position: fixed" href="#mobilemenu" open
           input.form-control placeholder="Search" type="text"
 
 
