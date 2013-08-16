@@ -711,6 +711,65 @@ small
     border-radius: 50%
     margin-right: 14px
 
+
+/*-----------------------------------------------------------------------------------*/
+/*  DataTable styles
+/*-----------------------------------------------------------------------------------*/
+.dataTable th
+  padding-right: 20px
+  position: relative
+  font-weight: normal
+
+  &.sorting
+    color: #007aff
+    cursor: pointer
+    &:after, &:before
+      content: ""
+      width: 0
+      height: 0
+      position: absolute
+      right: 12px
+      border-right: 5px solid transparent
+      border-left: 5px solid transparent
+    &:after
+      top: 19px
+      border-top: 5px solid #007aff !important
+    &:before
+      top: 11px
+      border-bottom: 5px solid #007aff !important
+
+  &.sorting_asc
+    color: #007aff
+    cursor: pointer
+    &:after
+      content: ""
+      width: 0
+      height: 0
+      position: absolute
+      right: 12px
+      top: 15px
+      border-bottom: 5px solid #007aff !important
+      border-right: 5px solid transparent
+      border-left: 5px solid transparent
+
+  &.sorting_desc
+    color: #007aff
+    cursor: pointer
+    &:after
+      content: ""
+      width: 0
+      height: 0
+      position: absolute
+      right: 12px
+      top: 15px
+      border-top: 5px solid #007aff !important
+      border-right: 5px solid transparent
+      border-left: 5px solid transparent
+
+th:active
+  outline: none
+
+
 /*-----------------------------------------------------------------------------------*/
 /*  Table styles
 /*-----------------------------------------------------------------------------------*/
@@ -1951,7 +2010,6 @@ button.close
     overflow: hidden !important
     .container-fluid.top-bar
       .logo
-
         text-align: center
         margin-left: 40%
 
@@ -1972,6 +2030,15 @@ button.close
 
 @media (max-width: 767px)
 
+@media (max-width: 600px)
+  .padded
+    padding: 10px
+
+  .table th
+    font-size: 13px
+
+  .dataTables_length, .dataTables_filter, .dataTables_info, .paginate_button.first, .paginate_button.last
+    display: none
 
 .ico
   text-align: center
