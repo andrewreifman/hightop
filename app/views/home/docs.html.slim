@@ -15,7 +15,8 @@
 					
 				.widget-content.padded.text-center
 					= image_tag "sharplogo.png", :size => "300x44"
-					h2 Thanks you for purchasing Se7en. 
+					h2 style="margin-bottom: 20px" Thank you for purchasing Se7en! 
+
 					= image_tag "theme_overview.png", :size => "1024x806"
 					p We strive to support our themes beyond the inital scope of this help file. Please feel free to contact us for help at info@sharpandnimble.com
 					p Created: August 18th, 2013 by Sharp&Nimble
@@ -76,15 +77,65 @@
 			.col-lg-12
 				.heading
 
+					| Features
+
+				.widget-content.padded
+					ul.list-unstyled
+						li 100% Mobile Ready / Responsive Layout
+						li Valid HTML5
+						li Cross-browser compatible (Chrome/Safari/Firefox/IE8+)
+						li SASS and COMPASS ready
+						li Built with Bootstrap3
+						li Image Gallery
+						li and much more
+
+	.col-lg-6
+		.widget-container.fluid-height.clearfix
+			.col-lg-12
+				.heading
+
+					| Plugins
+
+				.widget-content.padded
+					ul.list-unstyled
+						li jQuery, Mousewheel, and scrollspy
+						li Vector maps
+						li gCalendar
+						li Datatables
+						li Sparkline
+						li Easy Pie Chart
+						li Isotope
+						li Modernizr
+						li Fancybox
+						li Select2
+						li Bootstrap
+.row
+	.col-lg-6
+		.widget-container.fluid-height.clearfix
+			.col-lg-12
+				.heading
+
 					| HTML Structure
 
 				.widget-content.padded
 					p The Structure throughout the application remains consistent as you travel from page to page. Highlighted below are some of the page elements that create the structure for Se7en.
 
 					h3 Header
-					h3 Navigation
-					h3 Containers
+					p Se7en requires the use of HTML elements to create the proper CSS for your project. Each widget and component is modular and can be found with the HTML comment tags found throughout the theme.
+					pre 
+						p <-- This is a contained element -->
+						p <-- This is the end of an element -->
 					
+					h3 Navigation
+					p Se7en's custom header and navigation system (including user controls) can be found early in the document
+					pre 
+						p <-- Primary Header -->
+						p "<div></div>"
+					
+					h3 Containers
+					p Se7en requires the use of HTML elements to create the proper CSS for your project. Each widget and component is modular and can be found with the HTML comment tags found throughout the theme.
+					pre 
+						p <-- This is a section or widget -->
 
 	.col-lg-6
 		.widget-container.fluid-height.clearfix
@@ -95,3 +146,7 @@
 
 				.widget-content.padded
 					p The Structure throughout the application remains consistent as you travel from page to page. Highlighted below are some of the page elements that create the structure for Se7en.
+
+					h3 Structure
+					h3 Shortcuts
+					h3 SASS
