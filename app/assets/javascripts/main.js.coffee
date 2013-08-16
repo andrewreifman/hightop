@@ -176,6 +176,14 @@ $(document).ready ->
 			lastScrollTop = st
 
 
+  # =============================================================================
+  #   Mobile Nav
+  # =============================================================================
+  $('.navbar-toggle').click ->
+    $('body, .navbar').toggleClass "nav-open"
+    $('.container-fluid.main-nav').toggleClass "open"
+
+
   linechartResize()
   $(window).resize ->
     linechartResize()

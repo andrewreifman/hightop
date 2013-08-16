@@ -193,18 +193,15 @@ small
 
     .navbar-toggle
       position: absolute
-      top: 9px
-      right: 10px
+      top: 6px
+      left: 10px
       width: 48px
       height: 32px
       padding: 8px 12px
+      margin: 0
       background-color: transparent
       border: 1px solid #dddddd
       border-radius: 4px
-      display: none
-
-      &+ .nav-collapse
-        margin-top: 0
 
     .logo
       background: asset-url('se7en-logo.png') no-repeat 0 0
@@ -2001,34 +1998,143 @@ button.close
   .bar-chart-widget .bar-chart-info .chart-number
     font-size: 5em
 
-  .hideme
-    display: block
-  .navbar-form
-    display: none
-  .navbar
-    height: 45px !important
-    overflow: hidden !important
-    .container-fluid.top-bar
-      .logo
-        text-align: center
-        margin-left: 40%
-
-      .btn-navbar
-        background: $blue
-        border: 0
-        box-shadow: none
-        margin-top: 9px
-
-        span.icon-bar
-          background-color: #FFF
-          box-shadow: none
-      .nav
-        li.user
-          display: none
-      .form-control
-        display: none
 
 @media (max-width: 767px)
+  body
+    left: 0
+    @include transition(left .3s)
+
+    &.nav-open
+      left: 200px
+      overflow-x: hidden
+
+  .navbar
+    height: 45px !important
+    @include transition(left .3s)
+
+    &.nav-open
+      left: 200px
+
+    .container-fluid.top-bar
+      border-bottom: 0
+
+      .logo
+        float: right
+        margin: 13px 5px 0 0
+
+    .container-fluid.main-nav
+      position: fixed
+      left: -200px
+      top: 0
+      height: 100%
+      width: 200px
+      background: #ddd
+      box-shadow: inset -4px 0 0 rgba(0,0,0,.05)
+      @include transition(left .3s)
+
+      &.open
+        left: 0
+
+      .nav-collapse .nav
+        padding-left: 15px
+        text-align: left
+
+        > li
+          display: block
+          text-align: left
+          margin: 0
+
+          > .dropdown-menu
+            display: block
+            position: relative
+            background: none
+            box-shadow: none
+            margin: 0
+            width: 100%
+            float: none
+            border-bottom: 1px solid #BBB
+
+            li a
+              border-color: #BBB
+              margin-left: 15px                
+
+          > a
+            display: block
+            text-align: left
+            padding: 0
+            font-size: 14px
+            line-height: 44px
+            height: 46px
+            color: #999
+            border-bottom: 1px solid #BBB
+
+            &:hover
+              background: none !important
+
+            span
+              display: block
+              float: left
+              margin: 8px 15px 0 0
+
+            .caret
+              display: none
+
+            &.current
+              color: $blue
+
+              span
+                background-position: left -28px
+
+              .caret
+                border-top-color: $blue
+
+            &:hover
+              background: #eee
+              background: rgba(0,0,0,.04)
+
+          .dropdown-menu
+            text-align: left
+
+          &.ui
+            a
+              span
+                background-position: -28px top
+
+              &.current span
+                background-position: -28px -28px
+
+          &.forms
+            a
+              span
+                background-position: -56px top
+
+              &.current span
+                background-position: -56px -28px
+
+          &.charts
+            a
+              span
+                background-position: -84px top
+
+              &.current span
+                background-position: -84px -28px
+
+          &.tables
+            a
+              span
+                background-position: -112px top
+
+              &.current span
+                background-position: -112px -28px
+
+          &.gallery
+            a
+              span
+                background-position: -140px top
+
+              &.current span
+                background-position: -140px -28px
+
 
 @media (max-width: 600px)
   .padded
