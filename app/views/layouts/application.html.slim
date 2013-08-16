@@ -16,36 +16,8 @@ html
     meta content="width=device-width, initial-scale=1.0" name="viewport"
 
   body
-
-<!-- Login Screen -->
-    - if current_page?(root_path)
-      .login
-        .login-container
-          = image_tag "logo-login@2x.png", :size => "100x30"
-
-          form
-            .form-group
-              .input-group
-                span.input-group-addon
-                  i.icon-envelope
-                input.form-control placeholder="Email" type="text"
-            .form-group
-              .input-group
-                span.input-group-addon
-                  i.icon-lock
-                input.form-control placeholder="Password" type="password"
-            .form-group
-              label.checkbox
-                input type="checkbox"
-                | Remember me
-            .btn.btn-lg.btn-primary.login-submit Log in
-            
-          = link_to "Forgot password?", "#"
-<!-- End Login Screen -->
-
     .navbar.navbar-fixed-top
       .container-fluid.top-bar
-
 
         .pull-right
           ul.nav.navbar-nav.pull-right
