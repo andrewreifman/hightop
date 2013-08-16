@@ -24,7 +24,7 @@
                   option value="Category 3" Option 3
                   option value="Category 4" Option 4
             .form-group
-              label.control-label.col-lg-3 Multi-Select Dropdown
+              label.control-label.col-lg-3 Multi-Select
               .col-lg-9
                 select.form-control multiple=""
                   option value="Category 1" Option 1
@@ -60,10 +60,10 @@
                     option Disabled select
 
             .form-group
-              label.control-label.col-lg-3 Toggle
-              .col-lg-9
+              label.control-label.col-lg-3 Toggle Switch
+              .col-lg-9.clearfix
                 .holder
-                  input#check.check-ios name="check" type="checkbox" value="None"
+                  input#check.check-ios name="check" type="checkbox" value="None" checked="checked"
                   label for="check"
                   span
 
@@ -79,6 +79,9 @@
                 label.radio
                   input name="optionsRadios1" type="radio" value="option3"
                   | Option 3
+                label.radio
+                  input name="optionsRadios1" type="radio" value="option4"
+                  | Option 4
 
             .form-group
               label.control-label.col-lg-3 Radio Buttons
@@ -92,6 +95,7 @@
                 label.radio-inline
                   input name="optionsRadios2" type="radio" value="option3"
                   | Option 3
+
             .form-group
               label.control-label.col-lg-3 Checkbox
               .col-lg-9
@@ -104,6 +108,10 @@
                 label.checkbox
                   input type="checkbox" value=""
                   | Checkbox 3
+                label.checkbox
+                  input type="checkbox" value=""
+                  | Checkbox 4
+
             .form-group
               label.control-label.col-lg-3 Checkbox
               .col-lg-9
@@ -176,18 +184,7 @@
               .form-group
                 label for="exampleInputPassword" Profile
                 textarea class="form-control" rows="3"
-              .form-group
-                label Industry
-                select.form-control
-                  option 1
-                  option 2
-                  option 3
-                  option 4
-                  option 5
-              .form-group
-                label.checkbox
-                  input type="checkbox"
-                  | I agree to the terms and conditions
+
               button.btn.btn-primary type="submit" Submit
               button.btn.btn-default-outline Cancel
 

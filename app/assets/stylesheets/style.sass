@@ -178,6 +178,7 @@ small
   padding: 0
   min-height: 45px
   height: 112px
+  border: 0
   @include transition(all .3s)
 
   &.closed
@@ -677,6 +678,7 @@ small
   border: 0
   padding: 0
   min-width: 120px
+  max-width: 300px
 
   > li
     margin: 0    
@@ -721,6 +723,17 @@ small
   td
     font-size: 14px
 
+    &.actions
+      width: 90px
+      padding-right: 0
+
+      .action-buttons
+        width: 80px
+        margin: 0
+
+        a:last-child
+          margin-right: 0
+
 .check
   width: 20px
 
@@ -735,8 +748,6 @@ small
 .table-actions
   margin: 0 6px 0 6px
 
-.actions
-  width: 98px
 
 /*-----------------------------------------------------------------------------------*/
 /*  Label styles
@@ -1170,6 +1181,9 @@ small
 /*-----------------------------------------------------------------------------------*/
 /*  Carousel
 /*-----------------------------------------------------------------------------------*/
+.carousel-inner>.item>img, .carousel-inner>.item>a>img
+  width: 100%
+
 .carousel-control.left, .carousel-control.right
   background: none
   background: rgba(0,0,0,.06)
@@ -1527,6 +1541,9 @@ label
     label
       margin-bottom: 5px
 
+.radio, .checkbox
+  margin: 6px 0 !important
+
 .radio-inline, .checkbox-inline
   padding-top: 9px
   margin-right: 15px
@@ -1560,7 +1577,7 @@ label
 
 .holder
   width: 56px
-  margin: 20px auto
+  height: 28px
   position: relative
 
 .check-ios
@@ -1691,11 +1708,18 @@ label
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Accordion Styles
 /*-----------------------------------------------------------------------------------*/
-.panel-heading .panel-toggle
-  background: #f9fafa
+.panel
+  box-shadow: none
+  
+.panel-heading 
+  padding: 0
+  .panel-toggle
+    background: #f9fafa
 
 .panel-title > a
   font-weight: 200
+  padding: 10px 15px
+  display: block
 
   &:hover
     color: $blue
