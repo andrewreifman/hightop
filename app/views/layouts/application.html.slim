@@ -1,7 +1,7 @@
-doctype
+doctype html
 html
   head
-    title se7en
+    title se7en - Dashboard
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:100,300,400,700", media: "all"
     = stylesheet_link_tag "application", media: "all"
 
@@ -16,6 +16,8 @@ html
     meta content="width=device-width, initial-scale=1.0" name="viewport"
 
   body
+
+<!-- Login Screen -->
     - if current_page?(root_path)
       .login
         .login-container
@@ -39,6 +41,7 @@ html
             .btn.btn-lg.btn-primary.login-submit Log in
             
           = link_to "Forgot password?", "#"
+<!-- End Login Screen -->
 
     .navbar.navbar-fixed-top
       .container-fluid.top-bar
