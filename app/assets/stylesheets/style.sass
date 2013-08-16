@@ -124,14 +124,14 @@ small
   z-index: 9999
   box-shadow: 0 0 5px rgba(0,0,0,.15)
   @include transform(scale(1))
-  -webkit-transition: -webkit-transform .5s, left .6s .6s ease-in-out
-  -moz-transition: -moz-transform .5s, left .6s .6s ease-in-out
-  transition: transform .5s, left .6s .6s ease-in-out
+  -webkit-transition: opacity .6s, -webkit-transform .6s, left .8s .7s cubic-bezier(0.680, -0.550, 0.265, 1.550)
+  -moz-transition: opacity .6s, -moz-transform .6s, left .8s .7s cubic-bezier(0.680, -0.550, 0.265, 1.550)
+  transition: opacity .6s, transform .6s, left .8s .7s cubic-bezier(0.680, -0.550, 0.265, 1.550)
 
   &.submitted
     @include transform(scale(.9))
     left: 100%
-    opacity: 0.85
+    opacity: 0.95
 
   .login-container
     max-width: 420px
@@ -142,8 +142,13 @@ small
       margin: 40px
 
     .input-group-addon
-      padding: 8px 16px
+      padding: 8px 0
       background: #f4f4f4
+      min-width: 48px
+      text-align: center
+
+      i.icon-lock
+        font-size: 18px
 
     input.form-control
       height: 48px
@@ -173,6 +178,7 @@ small
   padding: 0
   min-height: 45px
   height: 112px
+  border: 0
   @include transition(all .3s)
 
   &.closed
@@ -672,6 +678,7 @@ small
   border: 0
   padding: 0
   min-width: 120px
+  max-width: 300px
 
   > li
     margin: 0    
@@ -716,6 +723,17 @@ small
   td
     font-size: 14px
 
+    &.actions
+      width: 90px
+      padding-right: 0
+
+      .action-buttons
+        width: 80px
+        margin: 0
+
+        a:last-child
+          margin-right: 0
+
 .check
   width: 20px
 
@@ -730,8 +748,6 @@ small
 .table-actions
   margin: 0 6px 0 6px
 
-.actions
-  width: 98px
 
 /*-----------------------------------------------------------------------------------*/
 /*  Label styles
@@ -1165,6 +1181,9 @@ small
 /*-----------------------------------------------------------------------------------*/
 /*  Carousel
 /*-----------------------------------------------------------------------------------*/
+.carousel-inner>.item>img, .carousel-inner>.item>a>img
+  width: 100%
+
 .carousel-control.left, .carousel-control.right
   background: none
   background: rgba(0,0,0,.06)
@@ -1522,6 +1541,9 @@ label
     label
       margin-bottom: 5px
 
+.radio, .checkbox
+  margin: 6px 0 !important
+
 .radio-inline, .checkbox-inline
   padding-top: 9px
   margin-right: 15px
@@ -1552,6 +1574,83 @@ label
 
 .form-photo
   margin: 4px 0 12px
+
+.holder
+  width: 56px
+  height: 28px
+  position: relative
+
+.check-ios
+  visibility: hidden
+
+.holder
+  span
+    background-color: #e2e2e2
+    display: block
+    height: 30px
+    width: 54px
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
+    -webkit-border-radius: 15px
+    -moz-border-radius: 15px
+    border-radius: 15px
+    -webkit-transition: all .5s ease
+    -moz-transition: all .5s ease
+    -o-transition: all .5s ease
+    -ms-transition: all .5s ease
+    transition: all .5s ease
+    &:after
+      background-color: #fff
+      content: ''
+      display: block
+      height: 28px
+      width: 52px
+      position: absolute
+      top: 1px
+      left: 1px
+      z-index: 2
+      -webkit-border-radius: 14px
+      -moz-border-radius: 14px
+      border-radius: 14px
+      -webkit-transition: all .4s ease
+      -moz-transition: all .4s ease
+      -o-transition: all .4s ease
+      -ms-transition: all .4s ease
+      transition: all .4s ease
+  label
+    background: #fff
+    cursor: pointer
+    display: block
+    height: 28px
+    width: 28px
+    position: absolute
+    top: 1px
+    left: 1px
+    z-index: 3
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    border-radius: 50%
+    -webkit-transition: all .4s ease
+    -moz-transition: all .4s ease
+    -o-transition: all .4s ease
+    -ms-transition: all .4s ease
+    transition: all .4s ease
+    -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3)
+    -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3)
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3)
+
+.check-ios:checked
+  ~ span
+    background-color: #4FD065
+    &:after
+      height: 0
+      width: 0
+      left: 50%
+      top: 50%
+  + label
+    left: 25px
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -1609,11 +1708,18 @@ label
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Accordion Styles
 /*-----------------------------------------------------------------------------------*/
-.panel-heading .panel-toggle
-  background: #f9fafa
+.panel
+  box-shadow: none
+  
+.panel-heading 
+  padding: 0
+  .panel-toggle
+    background: #f9fafa
 
 .panel-title > a
   font-weight: 200
+  padding: 10px 15px
+  display: block
 
   &:hover
     color: $blue
@@ -1633,13 +1739,22 @@ label
   border-right: 0px
 
 /*-----------------------------------------------------------------------------------*/
+/*  Fancybox Modal Styles
+/*-----------------------------------------------------------------------------------*/
+.fancybox-skin
+  border-radius: 0
+  box-shadow: 0 2px 10px rgba(0,0,0,.4) !important
+  background: #FFF
+  background: rgba(255,255,255,.9)
+
+/*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Modal Styles
 /*-----------------------------------------------------------------------------------*/
 .modal-content
   border-radius: 0px
-.modal-content
   box-shadow: none
   background: rgba(255, 255, 255, 0.94)
+  border: 0
 
 .modal-footer
   .btn
@@ -1689,6 +1804,7 @@ button.close
 /*  Bootstrap Breadcrumb
 /*-----------------------------------------------------------------------------------*/
 .breadcrumb
+  padding: 9px 15px 6px
   border-radius: 0px
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
 
