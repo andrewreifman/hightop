@@ -12,13 +12,12 @@
 			.col-lg-12
 				.heading
 					| Welcome
-					p Need help?
-					p info@sharpandnimble.com
-					p Last updated: August 18th, 2013
+					
 					
 				.widget-content.padded.text-center
 					= image_tag "sharplogo.png", :size => "300x44"
 					h2 style="margin-bottom: 20px" Thank you for purchasing Se7en! 
+
 
 					= image_tag "theme_overview.png", :size => "1024x806"
 
@@ -32,7 +31,7 @@
 					| What is Se7en?
 
 				.widget-content.what.padded
-					h3 Se7en is a best-of-breed administration template. We employ stunning design, the latest technologies and industry best practices to create a one of kind administration template.
+					h3 Se7en is a best-of-breed administration template. We employ stunning design, the latest technologies and industry best practices to create a one of kind administration template suitable for many needs.
 					.row
 
 						.col-lg-4.clearfix
@@ -55,7 +54,7 @@
 							h4
 								i.icon-mobile-phone
 								| Mobile to the core
-							p We spent hours focused on the small details throughout all the elements for Se7en. The theme is build to be easily customizable, easily managed and extended.
+							p With Bootstrap3's mobile focus and our attention to every mobile detail. Se7en provides a one of a kind responsive design and provides a real framework for creating better mobile experiences.
 						.col-lg-4.clearfix
 							h4
 								i.icon-suitcase 
@@ -81,26 +80,30 @@
 
 					| Features
 
-				.widget-content.padded
+				.widget-content.padded.text-center
 					ul.list-unstyled
+						li Clean and Sleek design
 						li 100% Mobile Ready / Responsive Layout
 						li Valid HTML5
 						li Cross-browser compatible (Chrome/Safari/Firefox/IE8+)
 						li SASS and COMPASS ready
 						li Built with Bootstrap3
+						li Clean developer friendly markup
 						li Image Gallery
-						li and much more
+						li Form Elements
+						li Custom Buttons and Colors
+						li and much more...
 
 	.col-lg-6
-		.widget-container.fluid-height.clearfix
+		.widget-container.plugins.fluid-height.clearfix
 			.col-lg-12
 				.heading
 
 					| Plugins
 
-				.widget-content.padded
+				.widget-content.padded.text-center
 					ul.list-unstyled
-						li jQuery, Mousewheel, and scrollspy
+						li jQuery, Mousewheel, and Scrollspy
 						li Vector maps
 						li gCalendar
 						li Datatables
@@ -120,26 +123,185 @@
 					| HTML Structure
 
 				.widget-content.padded
-					p The Structure throughout the application remains consistent as you travel from page to page. Highlighted below are some of the page elements that create the structure for Se7en.
-
-					h3 Header
-					p Se7en requires the use of HTML elements to create the proper CSS for your project. Each widget and component is modular and can be found with the HTML comment tags found throughout the theme.
+					p The Structure throughout the application remains consistent as you travel from page to page. Highlighted below are some of the page elements that create the structure for Se7en. Se7en requires the use of HTML elements to create the proper CSS for your project. Each widget and component is modular and can be found with the HTML comment tags found throughout the theme.
+					h3 Follow The HTML Comments
 					pre 
-						p <-- This is a contained element -->
-						p <-- This is the end of an element -->
+						code
+							textarea.code-container
+								<!-- This is a contained element -->
+								<!-- This is the end of an element -->
 					
-					h3 Navigation
-					p Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains javascript, images, and specific CSS so pay close attention to the structure.
+					h3 Header & Navigation
+					p Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains dynamic visual elements but the content remains easy to modify.
 					pre 
-						textarea style="width:100%"
-							<!-- Primary Header -->
+						code
+							textarea.code-container.large
+								<!-- Navigation -->
+								  .navbar.navbar-fixed-top
+								    .container-fluid.top-bar
+								      .pull-right
+								        ul.nav.navbar-nav.pull-right
+								          li.dropdown.notifications.hidden-xs
+								            a.dropdown-toggle data-toggle="dropdown" href="#"
+								              span Notifications
+								              p.counter 4
+								            ul.dropdown-menu
+								              li= link_to
+								                i.icon-user
+								                | New user added: Jane Smith
+								                .notifications.label.label-info.pull-right New
+								              li= link_to
+								                i.icon-dashboard
+								                | Sales targets available
+								                .notifications.label.label-info.pull-right New
+								              li= link_to
+								                i.icon-pencil
+								                | New performance metric added
+								                .notifications.label.label-info.pull-right New
+								              li= link_to
+								                i.icon-dashboard
+								                | New growth data available
+								                .notifications.label.label-info.pull-right New
+
+								          li.dropdown.messages.hidden-xs
+								            a.dropdown-toggle data-toggle="dropdown" href="#"
+								              span Messages
+								              p.counter 3
+								            ul.dropdown-menu.messages
+								              li= link_to
+								                = image_tag "avatar-male2.png", :size => "34x34"
+								                | Could we meet today? I wanted...
+								              li= link_to
+								                = image_tag "avatar-female.png", :size => "34x34"
+								                | Important data needs your analysis...
+								              li= link_to
+								                = image_tag "avatar-male2.png", :size => "34x34"
+								                | Buy Se7en today, it's a great theme...
+								          li.dropdown.settings.hidden-xs
+								            a.dropdown-toggle data-toggle="dropdown" href="#"
+								              span Settings
+								            ul.dropdown-menu
+								              li
+								                a.settings-link.blue href="javascript:chooseStyle('none', 30)"
+								                  span
+								                  | Blue
+								              li
+								                a.settings-link.green href="javascript:chooseStyle('green-theme', 30)"
+								                  span
+								                  | Green
+								              li
+								                a.settings-link.orange href="javascript:chooseStyle('orange-theme', 30)"
+								                  span
+								                  | Orange
+								              li
+								                a.settings-link.magenta href="javascript:chooseStyle('magenta-theme', 30)"
+								                  span
+								                  | Magenta
+								              li
+								                a.settings-link.gray href="javascript:chooseStyle('gray-theme', 30)"
+								                  span
+								                  | Gray
+								          li.dropdown.user.hidden-xs
+								            = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" do
+								              = image_tag "avatar-male.jpg", :size => "34x34"
+								              | John Smith
+								              b.caret
+								            ul.dropdown-menu
+								              li
+								                = link_to "#" do
+								                  i.icon-user
+								                  | My Account
+								              li
+								                = link_to "#" do
+								                  i.icon-gear
+								                  | Account Settings
+								              li
+								                = link_to login_path do
+								                  i.icon-signout
+								                  | Logout
+
+								      button.navbar-toggle
+								        span.icon-bar
+								        span.icon-bar
+								        span.icon-bar
+
+								      = link_to "se7en", root_path, class: 'logo'
+								      form.navbar-form.form-inline.col-lg-2.hidden-xs
+								        input.form-control placeholder="Search" type="text"
+
+
+								    .container-fluid.main-nav.clearfix
+								      .nav-collapse
+								        ul.nav
+								          li.dashboard
+								            = link_to root_path, class: cp(root_path) do
+								              span
+								              | Dashboard
+								          li.dropdown.ui
+								            = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp(ui_path) do
+								              span
+								              | UI
+								              b.caret
+								            ul.dropdown-menu
+								              li= link_to "Buttons", buttons_path
+								              li= link_to "Icons", icons_path
+								              li= link_to "Components", components_path
+								              li= link_to "Widgets", widgets_path
+								              li= link_to "Typography", typo_path
+								              li= link_to "Grid Layout", grid_path
+								          li.forms
+								            = link_to forms_path, class: cp(forms_path) do
+								              span
+								              | Forms
+								          li.tables
+								            = link_to tables_path, class: cp(tables_path) do
+								              span
+								              | Tables
+								          li.charts
+								            = link_to charts_path, class: cp(charts_path) do
+								              span
+								              | Charts
+								          li.gallery
+								            = link_to gallery_path, class: cp(gallery_path) do
+								              span
+								              | Gallery
+								            <!-- End Navigation -->  
 
 
 					
 					h3 Containers
 					p Each container for all elements is contained with the .widget-container class. Within this class, there is a header and content class. Please place your content in the appropriate area for optimal results. Some containers are modified for specific widgets. If this is the case, you will find an additional class that brings in the appropriate CSS for the modified container.
+
+					P NOTE: In nearly all instances, the widget container will also be accompanied with a Bootstrap-powered grid system to identify the overall size and interaction of that container. Below is an example of the statstics data widget on the dashboard of Se7en.
 					pre 
-						p <-- This is a section or widget -->
+						code
+							textarea.code-container.large	
+								<!-- Statistics -->
+								.col-lg-12
+									.widget-container.stats-container
+										.col-md-3
+											.number
+												.icon.globe
+												| 86
+												small %
+											.text Overall growth
+										.col-md-3
+											.number
+												.icon.visitors
+												| 613
+											.text Unique visitors
+										.col-md-3
+											.number
+												.icon.money
+												small $
+												| 924
+											.text Sales
+										.col-md-3
+											.number
+												.icon.chat-bubbles
+												| 325
+											.text New followers
+											<!-- End Statistics -->
 
 	.col-lg-6
 		.widget-container.fluid-height.clearfix
@@ -149,8 +311,15 @@
 					| CSS Structure
 
 				.widget-content.padded
-					p The Structure throughout the application remains consistent as you travel from page to page. Highlighted below are some of the page elements that create the structure for Se7en.
+					p Much like the HTML for Se7en, the CSS is maintained to be clean and consistent as you travel across the template. Below are some landmarks to look for as you are modifying the theme.
 
 					h3 Structure
+					p This is the text
+					pre
+						code
+							textarea.code-container
+								/*-------------*
+								/* Header Styles
+								/*-------------*
 					h3 Shortcuts
 					h3 SASS
