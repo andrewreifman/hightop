@@ -125,7 +125,7 @@ small
   width: 100%
   height: 100%
   z-index: 9999
-  box-shadow: 0 0 5px rgba(0,0,0,.15)
+  box-shadow: 0 0 6px rgba(0,0,0,.25)
   @include transform(scale(1))
   -webkit-transition: opacity .6s, -webkit-transform .6s, left .8s .7s cubic-bezier(0.680, -0.550, 0.265, 1.550)
   -moz-transition: opacity .6s, -moz-transform .6s, left .8s .7s cubic-bezier(0.680, -0.550, 0.265, 1.550)
@@ -816,17 +816,21 @@ th:active
   line-height: 1.4
   font-weight: 300
   border-radius: 0px
+  margin: 0 5px
 
   &.label-success
     background-color: #60c560
 
 .label-container
-  min-height: 150px !important
+  min-height: 160px !important
   h3
-    margin-bottom: 30px
+    margin-bottom: 25px
+  .label
+    font-weight: 300
 
 .label-primary
   background-color: $blue
+
 /*-----------------------------------------------------------------------------------*/
 /*  Widget-Container
 /*-----------------------------------------------------------------------------------*/
@@ -843,13 +847,7 @@ th:active
     min-height: 120px
 
   &.gallery
-    min-height: 400px
-
-
-  &.label-container
-    .label
-      margin-right: 12px
-      font-weight: 300
+    min-height: 400px    
 
   .heading
     background: rgba(255, 255, 255, 0.94)
@@ -1848,8 +1846,7 @@ button.close
 /*  Bootstrap Pagination
 /*-----------------------------------------------------------------------------------*/  
 .pagination
-  .icon
-    padding: 9px 14px 9px 14px
+  margin: 12px 0
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Badge Styles
@@ -1872,7 +1869,7 @@ button.close
 .popover
   border-radius: 0px
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
-  background: rgba(255, 255, 255, 0.9)
+  background: rgba(255, 255, 255, 0.92)
 
 .popover-title
   border-radius: 0px
@@ -1886,7 +1883,7 @@ button.close
 .popover-content
   padding: 0px
   margin-left: 14px
-  padding: 16 16 16 0
+  padding: 12px 15px 12px 0
 
 
 /*-----------------------------------------------------------------------------------*/
