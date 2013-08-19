@@ -380,24 +380,3 @@ $(document).ready ->
   $('.login-submit').click ->
     $('.login').addClass("submitted")
 
-  # =============================================================================
-  #   Scrollable Styles
-  # =============================================================================
-
-
-    GetVertOffset ".heading" #-- Sets GblTop
-    $(".heading").scroll ->
-      
-      # what is the y position of the scroll?
-      y = $(".scrollable").scrollTop()
-      
-      # whether that's below the start of article?
-      if y >= GblTop
-        
-        # if so, add the fixed class
-        $(".heading").addClass "hideme"
-      else
-        
-        # otherwise, remove it
-        $(".heading").removeClass "hideme"
-
