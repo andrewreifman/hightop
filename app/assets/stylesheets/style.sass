@@ -683,13 +683,13 @@ small
   > li
     margin: 0    
     > a
-      padding: 10px 20px 10px 2px
+      padding: 10px 15px 10px 2px
       border-bottom: 1px solid #e2e2e2
       color: #999
       font-size: 12px
       margin-left: 14px
 
-      &:hover
+      &:hover, &.current
         border-bottom-color: $blue
         color: $blue
         background: transparent
@@ -2063,12 +2063,16 @@ button.close
             margin: 0
             width: 100%
             float: none
-            border-bottom: 1px solid #BBB
+            border-bottom: 1px solid #AAA
 
             li a
-              border-color: #BBB
+              border-color: #AAA
               margin-left: 15px
-              color: #888            
+              color: #777   
+
+              &.current
+                border-bottom-color: $blue
+                color: $blue         
 
           > a
             display: block
@@ -2077,8 +2081,8 @@ button.close
             font-size: 14px
             line-height: 44px
             height: 46px
-            color: #888
-            border-bottom: 1px solid #BBB
+            color: #777
+            border-bottom: 1px solid #AAA
 
             &:hover
               background: none !important
@@ -2087,12 +2091,14 @@ button.close
               display: block
               float: left
               margin: 8px 15px 0 0
+              background-position: left -140px
 
             .caret
               display: none
 
             &.current
               color: $blue
+              border-bottom-color: $blue
 
               span
                 background-position: left -28px
@@ -2108,46 +2114,26 @@ button.close
             text-align: left
 
           &.ui
-            a
-              span
-                background-position: -28px top
-
-              &.current span
-                background-position: -28px -28px
+            a span
+              background-position: -28px -140px
 
           &.forms
-            a
-              span
-                background-position: -56px top
-
-              &.current span
-                background-position: -56px -28px
+            a span
+              background-position: -56px -140px
 
           &.charts
-            a
-              span
-                background-position: -84px top
-
-              &.current span
-                background-position: -84px -28px
+            a span
+              background-position: -84px -140px
 
           &.tables
-            a
-              span
-                background-position: -112px top
-
-              &.current span
-                background-position: -112px -28px
+            a span
+              background-position: -112px -140px
 
           &.gallery
-            a
-              span
-                background-position: -140px top
+            a span
+              background-position: -140px -140px
 
-              &.current span
-                background-position: -140px -28px
-
-  .widget-container .heading
+  .widget-container > div .heading
     padding-left: 5px
 
 
