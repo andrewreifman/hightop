@@ -1,33 +1,21 @@
-.row
-	.col-lg-12
-		.page-title
-			h1 Documentation
-
-
-
+.page-title
+	h1 Documentation
 
 .row
 	.col-lg-12
 		.widget-container.fluid-height.clearfix
 			.col-lg-12
-				.heading
-					| Welcome
-
-
 				.widget-content.padded.text-center
 					= image_tag "sharplogo.png", :size => "300x44"
 					h2 style="margin-bottom: 20px" Thank you for purchasing Se7en!
 
-
 					= image_tag "theme_overview.png", :size => "1024x806"
-
 
 .row
 	.col-lg-12
 		.widget-container.fluid-height.clearfix
 			.col-lg-12
 				.heading
-
 					| What is Se7en?
 
 				.widget-content.what.padded
@@ -75,87 +63,79 @@
 
 .row
 	.col-lg-6
-		.widget-container.fluid-height.clearfix
-			.col-lg-12
-				.heading
+		.widget-container.fluid-height
+			.heading
+				| Features
 
-					| Features
-
-				.widget-content.padded.text-center
-					ul.list-unstyled
-						li Clean and Sleek design
-						li 100% Mobile Ready / Responsive Layout
-						li Valid HTML5
-						li Cross-browser compatible (Chrome/Safari/Firefox/IE8+)
-						li SASS and COMPASS ready
-						li Built with Bootstrap3
-						li Clean developer friendly markup
-						li Image Gallery
-						li Form Elements
-						li Custom Buttons and Colors
-						li and much more...
+			.widget-content.padded.text-center
+				ul.list-unstyled
+					li Clean and Sleek design
+					li 100% Mobile Ready / Responsive Layout
+					li Valid HTML5
+					li Cross-browser compatible (Chrome/Safari/Firefox/IE8+)
+					li SASS and COMPASS ready
+					li Built with Bootstrap3
+					li Clean developer friendly markup
+					li Image Gallery
+					li Form Elements
+					li Custom Buttons and Colors
+					li and much more...
 
 	.col-lg-6
-		.widget-container.plugins.fluid-height.clearfix
-			.col-lg-12
-				.heading
+		.widget-container.plugins.fluid-height
+			.heading
+				| Plugins
 
-					| Plugins
-
-				.widget-content.padded.text-center
-					ul.list-unstyled
-						li jQuery, Mousewheel, and Scrollspy
-						li Vector maps
-						li gCalendar
-						li Datatables
-						li Sparkline
-						li Easy Pie Chart
-						li Isotope
-						li Modernizr
-						li Fancybox
-						li Select2
-						li Bootstrap
+			.widget-content.padded.text-center
+				ul.list-unstyled
+					li jQuery, Mousewheel, and Scrollspy
+					li Vector maps
+					li gCalendar
+					li Datatables
+					li Sparkline
+					li Easy Pie Chart
+					li Isotope
+					li Modernizr
+					li Fancybox
+					li Select2
+					li Bootstrap
 .row
 	.col-lg-6
 		.widget-container.fluid-height.clearfix
-			.col-lg-12
-				.heading
+			.heading
+				| HTML Structure
 
-					| HTML Structure
+			.widget-content.padded
+				p The Structure throughout the application remains consistent as you travel from page to page. Highlighted below are some of the page elements that create the structure for Se7en. Se7en requires the use of HTML elements to create the proper CSS for your project. Each widget and component is modular and can be found with the HTML comment tags found throughout the theme.
+				h3 Follow The HTML Comments
+				= raw Pygments.highlight("<!-- This is a contained element --> <!-- This is the end of an element -->")
 
-				.widget-content.padded
-					p The Structure throughout the application remains consistent as you travel from page to page. Highlighted below are some of the page elements that create the structure for Se7en. Se7en requires the use of HTML elements to create the proper CSS for your project. Each widget and component is modular and can be found with the HTML comment tags found throughout the theme.
-					h3 Follow The HTML Comments
-					= raw Pygments.highlight("<!-- This is a contained element --> <!-- This is the end of an element -->")
+				h3 Header & Navigation
+				p
+					| Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains dynamic visual elements but the content remains easy to modify.
+				= raw Pygments.highlight("#{render partial: 'navigation'}")
 
-					h3 Header & Navigation
-					p
-						| Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains dynamic visual elements but the content remains easy to modify.
-					= raw Pygments.highlight("#{render partial: 'navigation'}")
+				h3 Containers
+				p Each container for all elements is contained with the .widget-container class. Within this class, there is a header and content class. Please place your content in the appropriate area for optimal results. Some containers are modified for specific widgets. If this is the case, you will find an additional class that brings in the appropriate CSS for the modified container.
 
-					h3 Containers
-					p Each container for all elements is contained with the .widget-container class. Within this class, there is a header and content class. Please place your content in the appropriate area for optimal results. Some containers are modified for specific widgets. If this is the case, you will find an additional class that brings in the appropriate CSS for the modified container.
-
-					P NOTE: In nearly all instances, the widget container will also be accompanied with a Bootstrap-powered grid system to identify the overall size and interaction of that container. Below is an example of the statstics data widget on the dashboard of Se7en.
-					= raw Pygments.highlight("#{render partial: 'statistics'}")
+				P NOTE: In nearly all instances, the widget container will also be accompanied with a Bootstrap-powered grid system to identify the overall size and interaction of that container. Below is an example of the statstics data widget on the dashboard of Se7en.
+				= raw Pygments.highlight("#{render partial: 'statistics'}")
 
 	.col-lg-6
 		.widget-container.fluid-height.clearfix
-			.col-lg-12
-				.heading
+			.heading
+				| CSS Structure
 
-					| CSS Structure
+			.widget-content.padded
+				p Much like the HTML for Se7en, the CSS is maintained to be clean and consistent as you travel across the template. Below are some landmarks to look for as you are modifying the theme.
 
-				.widget-content.padded
-					p Much like the HTML for Se7en, the CSS is maintained to be clean and consistent as you travel across the template. Below are some landmarks to look for as you are modifying the theme.
-
-					h3 Structure
-					p This is the text
-					pre
-						code
-							textarea.code-container
-								/*-------------*
-								/* Header Styles
-								/*-------------*
-					h3 Shortcuts
-					h3 SASS
+				h3 Structure
+				p This is the text
+				pre
+					code
+						textarea.code-container
+							/*-------------*
+							/* Header Styles
+							/*-------------*
+				h3 Shortcuts
+				h3 SASS

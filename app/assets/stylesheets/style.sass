@@ -125,7 +125,7 @@ small
   width: 100%
   height: 100%
   z-index: 9999
-  box-shadow: 0 0 5px rgba(0,0,0,.15)
+  box-shadow: 0 0 6px rgba(0,0,0,.25)
   @include transform(scale(1))
   -webkit-transition: opacity .6s, -webkit-transform .6s, left .8s .7s cubic-bezier(0.680, -0.550, 0.265, 1.550)
   -moz-transition: opacity .6s, -moz-transform .6s, left .8s .7s cubic-bezier(0.680, -0.550, 0.265, 1.550)
@@ -233,6 +233,8 @@ small
 
     .nav
       height: 100%
+      position: relative
+      z-index: 100
 
       > li
         height: 100%
@@ -457,7 +459,7 @@ small
 /*-----------------------------------------------------------------------------------*/
 .btn
   font-weight: 300
-  margin: 0 10px 15px 0
+  margin: 0 10px 10px 0
   @include transition(all .15s)
 
   &.active
@@ -637,7 +639,7 @@ small
 
     &+ .dropdown-toggle
       margin-left: 1px
-      padding: 14px 10px
+      padding: 6px 10px
 
       .caret
         margin: 0
@@ -683,13 +685,13 @@ small
   > li
     margin: 0    
     > a
-      padding: 10px 20px 10px 2px
+      padding: 10px 15px 10px 2px
       border-bottom: 1px solid #e2e2e2
       color: #999
       font-size: 12px
       margin-left: 14px
 
-      &:hover
+      &:hover, &.current
         border-bottom-color: $blue
         color: $blue
         background: transparent
@@ -816,17 +818,21 @@ th:active
   line-height: 1.4
   font-weight: 300
   border-radius: 0px
+  margin: 0 5px
 
   &.label-success
     background-color: #60c560
 
 .label-container
-  min-height: 150px !important
+  min-height: 160px !important
   h3
-    margin-bottom: 30px
+    margin-bottom: 25px
+  .label
+    font-weight: 300
 
 .label-primary
   background-color: $blue
+
 /*-----------------------------------------------------------------------------------*/
 /*  Widget-Container
 /*-----------------------------------------------------------------------------------*/
@@ -843,13 +849,7 @@ th:active
     min-height: 120px
 
   &.gallery
-    min-height: 400px
-
-
-  &.label-container
-    .label
-      margin-right: 12px
-      font-weight: 300
+    min-height: 400px    
 
   .heading
     background: rgba(255, 255, 255, 0.94)
@@ -877,16 +877,12 @@ th:active
     background: #f5f5f5
     border-bottom: 1px solid #DDD
 
-
-
-
-
   .widget-content
     width: 100%
 
   &.scrollable
     position: relative
-    height: 320px
+    height: 400px
 
     .heading
       position: absolute
@@ -895,7 +891,7 @@ th:active
       z-index: 10
 
     .shadow
-      box-shadow: 0 1px 2px rgba(0,0,0,.1)
+      box-shadow: 0 2px 2px -1px rgba(0,0,0,.1)
 
     .widget-content
       height: 100%
@@ -1278,8 +1274,6 @@ th:active
 /*  List widget
 /*-----------------------------------------------------------------------------------*/
 .list
-  min-height: 400px
-
   ul
     list-style: none
     padding-left: 15px
@@ -1361,14 +1355,38 @@ th:active
               color: #f7c310
 
 /*-----------------------------------------------------------------------------------*/
+/*  Rollodex Styles
+/*-----------------------------------------------------------------------------------*/
+.rollodex
+  height: 500px !important
+
+  img
+    border-radius: 50%
+
+  ul li
+    &:only-child
+      border: 0
+
+.roll-title
+  background: #efefef
+  width: 100%
+  text-align: center
+  padding: 2px 0 2px 0
+  margin: 1px 0 1px 0
+
+.roll-item
+  padding: 20px 0 20px 0
+
+/*-----------------------------------------------------------------------------------*/
 /*  Chat widget
 /*-----------------------------------------------------------------------------------*/
 .chat
-  min-height: 500px
+  height: 500px !important
 
   .widget-content
     padding-bottom: 66px
     padding-right: 25px
+    padding-top: 60px !important
 
     .scrollbar-path-vertical
       bottom: 56px !important
@@ -1560,26 +1578,6 @@ th:active
 .jqvmap-ajax_response
   width: 100%
   height: 500px
-
-
-/*-----------------------------------------------------------------------------------*/
-/*  Rollodex Styles
-/*-----------------------------------------------------------------------------------*/
-.rollodex
-  min-height: 500px
-
-  img
-    border-radius: 50%
-
-.roll-title
-  background: #efefef
-  width: 100%
-  text-align: center
-  padding: 2px 0 2px 0
-  margin: 1px 0 1px 0
-
-.roll-item
-  padding: 20px 0 20px 0
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -1848,8 +1846,7 @@ button.close
 /*  Bootstrap Pagination
 /*-----------------------------------------------------------------------------------*/  
 .pagination
-  .icon
-    padding: 9px 14px 9px 14px
+  margin: 12px 0
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Badge Styles
@@ -1872,7 +1869,7 @@ button.close
 .popover
   border-radius: 0px
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
-  background: rgba(255, 255, 255, 0.9)
+  background: rgba(255, 255, 255, 0.92)
 
 .popover-title
   border-radius: 0px
@@ -1882,11 +1879,10 @@ button.close
   padding-left: 0px
   border-bottom: 1px solid rgba(0, 0, 0, 0.2)
 
-
 .popover-content
   padding: 0px
   margin-left: 14px
-  padding: 16 16 16 0
+  padding: 12px 15px 12px 0
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -1994,9 +1990,6 @@ button.close
 /*  Mobile Styles
 /*-----------------------------------------------------------------------------------*/
 @media (max-width: 979px)
-  body
-    padding-top: 80px
-
   .stats-container
     height: 470px
     [class^="col-"], [class*="col-"]
@@ -2004,18 +1997,16 @@ button.close
       padding-bottom: 12px
       height: auto
 
-  .bar-chart-widget .bar-chart-info .chart-number
-    font-size: 5em
 
-
-@media (max-width: 767px)
+@media (max-width: 768px)
   body
     left: 0
     @include transition(left .3s)
+    padding-top: 80px
 
     &.nav-open
       left: 200px
-      overflow-x: hidden
+      overflow: hidden
 
   .navbar
     height: 45px !important
@@ -2040,6 +2031,8 @@ button.close
       background: #ddd
       box-shadow: inset -4px 0 0 rgba(0,0,0,.05)
       @include transition(left .3s)
+      overflow-y: auto
+      -webkit-scroll-overflow: touch
 
       &.open
         left: 0
@@ -2061,11 +2054,16 @@ button.close
             margin: 0
             width: 100%
             float: none
-            border-bottom: 1px solid #BBB
+            border-bottom: 1px solid #AAA
 
             li a
-              border-color: #BBB
-              margin-left: 15px                
+              border-color: #AAA
+              margin-left: 15px
+              color: #777   
+
+              &.current
+                border-bottom-color: $blue
+                color: $blue         
 
           > a
             display: block
@@ -2074,8 +2072,8 @@ button.close
             font-size: 14px
             line-height: 44px
             height: 46px
-            color: #999
-            border-bottom: 1px solid #BBB
+            color: #777
+            border-bottom: 1px solid #AAA
 
             &:hover
               background: none !important
@@ -2084,12 +2082,14 @@ button.close
               display: block
               float: left
               margin: 8px 15px 0 0
+              background-position: left -140px
 
             .caret
               display: none
 
             &.current
               color: $blue
+              border-bottom-color: $blue
 
               span
                 background-position: left -28px
@@ -2105,44 +2105,27 @@ button.close
             text-align: left
 
           &.ui
-            a
-              span
-                background-position: -28px top
-
-              &.current span
-                background-position: -28px -28px
+            a span
+              background-position: -28px -140px
 
           &.forms
-            a
-              span
-                background-position: -56px top
-
-              &.current span
-                background-position: -56px -28px
+            a span
+              background-position: -56px -140px
 
           &.charts
-            a
-              span
-                background-position: -84px top
-
-              &.current span
-                background-position: -84px -28px
+            a span
+              background-position: -84px -140px
 
           &.tables
-            a
-              span
-                background-position: -112px top
-
-              &.current span
-                background-position: -112px -28px
+            a span
+              background-position: -112px -140px
 
           &.gallery
-            a
-              span
-                background-position: -140px top
+            a span
+              background-position: -140px -140px
 
-              &.current span
-                background-position: -140px -28px
+  .widget-container > div .heading
+    padding-left: 5px
 
 
 @media (max-width: 600px)
@@ -2154,6 +2137,18 @@ button.close
 
   .dataTables_length, .dataTables_filter, .dataTables_info, .paginate_button.first, .paginate_button.last
     display: none
+
+  .pie-chart ul.chart-key
+    margin: 15px 0 10px
+    padding: 0
+    width: 100%
+
+    li
+      display: inline-block
+      margin: 4px 10px 
+
+  #composite-chart-1 canvas
+    width: 100% !important
 
 .ico
   text-align: center

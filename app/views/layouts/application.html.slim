@@ -16,7 +16,7 @@ html
 
 
   body
-  <!-- Navigation -->
+    <!-- Navigation -->
     .navbar.navbar-fixed-top
       .container-fluid.top-bar
         .pull-right
@@ -28,20 +28,20 @@ html
               ul.dropdown-menu
                 li= link_to
                   i.icon-user
-                  | New user added: Jane Smith
                   .notifications.label.label-info.pull-right New
+                  | New user added: Jane Smith
                 li= link_to
                   i.icon-dashboard
-                  | Sales targets available
                   .notifications.label.label-info.pull-right New
+                  | Sales targets available
                 li= link_to
                   i.icon-pencil
-                  | New performance metric added
                   .notifications.label.label-info.pull-right New
+                  | New performance metric added
                 li= link_to
                   i.icon-dashboard
-                  | New growth data available
                   .notifications.label.label-info.pull-right New
+                  | New growth data available
 
             li.dropdown.messages.hidden-xs
               a.dropdown-toggle data-toggle="dropdown" href="#"
@@ -96,7 +96,7 @@ html
                     i.icon-gear
                     | Account Settings
                 li
-                  = link_to login_path do
+                  = link_to root_url do
                     i.icon-signout
                     | Logout
 
@@ -117,18 +117,18 @@ html
               = link_to root_path, class: cp(root_path) do
                 span
                 | Dashboard
-            li.dropdown.ui
-              = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp(ui_path) do
+            li.dropdown.ui *{ class: "#{cp buttons_path}" }
+              = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp(buttons_path) || cp(icons_path) || cp(components_path) || cp(widgets_path) || cp(typo_path) || cp(grid_path) do
                 span
                 | UI
                 b.caret
               ul.dropdown-menu
-                li= link_to "Buttons", buttons_path
-                li= link_to "Icons", icons_path
-                li= link_to "Components", components_path
-                li= link_to "Widgets", widgets_path
-                li= link_to "Typography", typo_path
-                li= link_to "Grid Layout", grid_path
+                li= link_to "Buttons", buttons_path, class: cp(buttons_path)
+                li= link_to "Icons", icons_path, class: cp(icons_path)
+                li= link_to "Components", components_path, class: cp(components_path)
+                li= link_to "Widgets", widgets_path, class: cp(widgets_path)
+                li= link_to "Typography", typo_path, class: cp(typo_path)
+                li= link_to "Grid Layout", grid_path, class: cp(grid_path)
             li.forms
               = link_to forms_path, class: cp(forms_path) do
                 span
@@ -145,6 +145,7 @@ html
               = link_to gallery_path, class: cp(gallery_path) do
                 span
                 | Gallery
-              <!-- End Navigation -->    
+    <!-- End Navigation --> 
+
     .container-fluid
       = yield

@@ -37,12 +37,11 @@
 		  					.progress-bar.progress-bar-warning style="width: 50%"
 		  				.progress.progress-striped.active
 		  					.progress-bar.progress-bar-danger style="width: 50%"
-
-		  				p Stacked
-		  				.progress
-		  				  .progress-bar.progress-bar-success style="width: 30%"
-		  				  .progress-bar.progress-bar-warning style="width: 20%"
-		  				  .progress-bar.progress-bar style="width: 30%"
+						p Stacked
+						.progress
+							.progress-bar.progress-bar-success style="width: 30%"
+							.progress-bar.progress-bar-warning style="width: 20%"
+							.progress-bar.progress-bar style="width: 30%"
 		
 			.col-lg-12
 				.widget-container.fluid-height
@@ -65,13 +64,13 @@
 						    	| Attachments
 					#my-tab-content.tab-content.padded
 					  #tab1.tab-pane.active
-					    h2 Overview
+					    h3 Overview
 					    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
 					  #tab2.tab-pane
-					    h2 Profile
+					    h3 Profile
 					    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
 					  #tab3.tab-pane
-					    h2 Attachments
+					    h3 Attachments
 					    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque imperdiet auctor purus, non imperdiet sapien dapibus non. Phasellus pretium rutrum elit in cursus. Donec ullamcorper nec massa vel mattis. Curabitur eros metus, dapibus quis est et, dapibus imperdiet dolor.
 
 			.col-lg-12
@@ -96,10 +95,11 @@
 						i.icon-question
 						| Tooltip
 					.widget-content.padded.text-center
-						a.btn.btn.btn-default#tooltip-top data-toggle="tooltip" title="Tooltip content" style="width:100%" Top 
-						a.btn.btn.btn-default#tooltip-right data-toggle="tooltip-right" title="Tooltip content" style="width:40%" Right
-						a.btn.btn.btn-default#tooltip-left data-toggle="tooltip-left" title="Tooltip content" style="width:40%" Left
-						a.btn.btn.btn-default#tooltip-bottom data-toggle="tooltip-bottom" title="Tooltip content" style="width:100%" Bottom popover
+						a.btn.btn.btn-default#tooltip-top data-toggle="tooltip" title="Tooltip content" style="width:45%" Top 
+						br/
+						a.btn.btn.btn-default#tooltip-right data-toggle="tooltip-right" title="Tooltip content" style="width:45%" Right
+						a.btn.btn.btn-default#tooltip-left data-toggle="tooltip-left" title="Tooltip content" style="width:45%" Left
+						a.btn.btn.btn-default#tooltip-bottom data-toggle="tooltip-bottom" title="Tooltip content" style="width:45%" Bottom popover
 
 			.col-lg-6
 				.widget-container.fluid-height
@@ -107,10 +107,11 @@
 						i.icon-comment
 						| Popover
 					.widget-content.padded.text-center
-						a.btn.btn.btn-default#popover-top data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-top" title="" style="width:100%" Top 
-						a.btn.btn.btn-default#popover-right data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-right" title="" style="width:40%" Right
-						a.btn.btn.btn-default#popover-left data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-left" title="" style="width:40%" Left
-						a.btn.btn.btn-default#popover-bottom data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-bottom" title="" style="width:100%" Bottom	
+						a.btn.btn.btn-default#popover-top data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-top" title="" style="width:45%" Top 
+						br/
+						a.btn.btn.btn-default#popover-right data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-right" title="" style="width:45%" Right
+						a.btn.btn.btn-default#popover-left data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-left" title="" style="width:45%" Left
+						a.btn.btn.btn-default#popover-bottom data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-bottom" title="" style="width:45%" Bottom	
 
 	.col-lg-6
 
@@ -143,7 +144,6 @@
 						.heading 
 							i.icon-collapse 
 							| Accordion
-							i.icon-search.pull-right
 						.widget-content
 							#accordion.panel-group
 							  .panel
@@ -180,23 +180,42 @@
 						i.icon-book 
 						| Pagination
 					.widget-content.padded.text-center
-							ul.pagination
-							  li
-							    a.icon href="#"
-							    	i.icon-long-arrow-left
-							  li.active
-							    a href="#" 1
-							  li
-							    a href="#" 2
-							  li
-							    a href="#" 3
-							  li
-							    a href="#" 4
-							  li
-							    a href="#" 5
-							  li
-							    a.icon href="#"
-							    	i.icon-long-arrow-right
+						ul.pagination.pagination-lg
+						  li
+						    a.icon href="#"
+						    	i.icon-long-arrow-left
+						  li.active
+						    a href="#" 1
+						  li
+						    a href="#" 2
+						  li
+						    a href="#" 3
+						  li
+						    a href="#" 4
+						  li
+						    a href="#" 5
+						  li
+						    a.icon href="#"
+						    	i.icon-long-arrow-right
+
+						br/
+						ul.pagination
+						  li
+						    a.icon href="#"
+						    	i.icon-long-arrow-left
+						  li.active
+						    a href="#" 1
+						  li
+						    a href="#" 2
+						  li
+						    a href="#" 3
+						  li
+						    a href="#" 4
+						  li
+						    a href="#" 5
+						  li
+						    a.icon href="#"
+						    	i.icon-long-arrow-right
 
 			.col-lg-12
 				.widget-container.fluid-height
