@@ -8,6 +8,7 @@
 				.widget-content.padded.text-center
 					= image_tag "sharplogo.png", :size => "300x44"
 					h2 style="margin-bottom: 20px" Thank you for purchasing Se7en!
+					p Created August 19, 2013  |  help@sharpandnimble.com
 
 					= image_tag "theme_overview.png", :size => "1024x806"
 
@@ -53,13 +54,7 @@
 							h4
 								i.icon-cogs
 								| Components
-							p Built on Bootstrap, Se7en features a complete responsive framework and mobile optimization. Our components have been polished and  polisehd again to provide world-class finish for any interaction your application might need.
-					.row
-						.col-lg-4.clearfix
-							h4
-								i.icon-camera
-								| Image Gallery
-							p Beautiful galleries are featured as part of the template. Each custom gallery in Se7en is highly expandable and mobile friendly. Try various content types and layouts without tons of effort.
+							p Built on Bootstrap, Se7en features a complete responsive framework and mobile optimization. Our components have been polished and  polisehd again to provide world-class finish for any interaction your application 
 
 .row
 	.col-lg-6
@@ -100,13 +95,13 @@
 					li Select2
 					li Bootstrap
 .row
-	.col-lg-6
+	.col-lg-12
 		.widget-container.fluid-height.clearfix
 			.heading
 				| HTML Structure
 
 			.widget-content.padded
-				p The Structure throughout the application remains consistent as you travel from page to page. Highlighted below are some of the page elements that create the structure for Se7en. Se7en requires the use of HTML elements to create the proper CSS for your project. Each widget and component is modular and can be found with the HTML comment tags found throughout the theme.
+				p This theme contains a fluid layout. All of the information within the main content area is nested within the body. Highlighted below are some of the page elements that create the structure for Se7en. Se7en requires the use of HTML elements to create the proper CSS for your project. Each widget and component is modular and can be found with the HTML comment tags found throughout the theme.
 				h3 Follow The HTML Comments
 				= raw Pygments.highlight("<!-- This is a contained element --> <!-- This is the end of an element -->")
 
@@ -121,7 +116,7 @@
 				P NOTE: In nearly all instances, the widget container will also be accompanied with a Bootstrap-powered grid system to identify the overall size and interaction of that container. Below is an example of the statstics data widget on the dashboard of Se7en.
 				= raw Pygments.highlight("#{render partial: 'statistics'}")
 
-	.col-lg-6
+	.col-lg-12
 		.widget-container.fluid-height.clearfix
 			.heading
 				| CSS Structure
@@ -131,11 +126,38 @@
 
 				h3 Structure
 				p This is the text
-				pre
-					code
-						textarea.code-container
-							/*-------------*
-							/* Header Styles
-							/*-------------*
+				= raw Pygments.highlight("<!-- This is a contained element --> <!-- This is the end of an element -->")
 				h3 Shortcuts
 				h3 SASS
+
+.row
+	.col-lg-6
+		.widget-container.fluid-height
+			.heading
+				| Javascript
+
+			.widget-content.padded.text-center			
+				h3 
+					| Bootstrap3 - 
+					a href="http://getbootstrap.com/javascript/#modals" target="blank" Full documentation
+				p Below are components that you can activate with a short javascript snippet.
+				
+				ul.list-unstyled
+					li Modal
+					= raw Pygments.highlight("$('#myModal').modal(options)")
+					li Dropdown
+					= raw Pygments.highlight("$('.dropdown-toggle').dropdown()")
+					li Scrollspy
+					= raw Pygments.highlight("$('body').scrollspy({ target: '#navbar-example' })")
+					li Tabs
+					= raw Pygments.highlight("$('a[data-toggle=tab']').on('shown.bs.tab', function (e) {  e.target, e.relatedTarget})")
+					li Tooltip
+					= raw Pygments.highlight("$('#example').tooltip(options)")
+					li Popover
+					= raw Pygments.highlight("$('#example').popover(options)")
+					li Buttons via Javascript
+					= raw Pygments.highlight("$('.nav-tabs').button()")
+					li Collapse
+					= raw Pygments.highlight("$('.collapse').collapse()")
+					li Carousel
+					= raw Pygments.highlight("$('.carousel').carousel()")

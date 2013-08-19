@@ -1,3 +1,4 @@
+<!-- ImportJS -->
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -32,3 +33,4 @@
 //= require select2
 //= require styleswitcher
 //= require main
+<!-- End ImportJS -->
