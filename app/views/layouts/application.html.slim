@@ -12,12 +12,13 @@ html
 
     = javascript_include_tag "application"
     = csrf_meta_tags
-    meta content="width=device-width, initial-scale=1.0" name="viewport"
+    meta content="width=device-width, initial-scale=1.0, charset=utf-8" name="viewport"
+
 
   body
+  <!-- Navigation -->
     .navbar.navbar-fixed-top
       .container-fluid.top-bar
-
         .pull-right
           ul.nav.navbar-nav.pull-right
             li.dropdown.notifications.hidden-xs
@@ -144,6 +145,6 @@ html
               = link_to gallery_path, class: cp(gallery_path) do
                 span
                 | Gallery
-
+              <!-- End Navigation -->    
     .container-fluid
       = yield

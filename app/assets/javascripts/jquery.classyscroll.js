@@ -321,7 +321,9 @@
             scrollInterval: 15,
             scrollEasing: 'swing',
             zIndex: 100,
-            onscroll: function () {}
+            onscroll: function () {
+                 $(".heading").addClass('shadow');
+            }
         };
         $.extend(a, s);
         return this.each(function () {

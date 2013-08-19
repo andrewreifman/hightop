@@ -2,7 +2,6 @@
 .login
   .login-container
     = image_tag "logo-login@2x.png", :size => "100x30"
-
     form
       .form-group
         .input-group
@@ -21,9 +20,11 @@
       .btn.btn-lg.btn-primary.login-submit Log in
       
     = link_to "Forgot password?", "#"
-<!-- End Login Screen -->
+	<!-- End Login Screen -->
+
 
 .row
+	<!-- Statistics -->
 	.col-lg-12
 		.widget-container.stats-container
 			.col-md-3
@@ -48,24 +49,26 @@
 					.icon.chat-bubbles
 					| 325
 				.text New followers
+				<!-- End Statistics -->
 
 
 .row
+	<!-- Linechart -->
 	.col-lg-6
 		.widget-container
 			.heading
 				.pull-right.btn-group data-toggle="buttons"
-					label.btn.btn-sm.btn-primary-outline.active
+					label.btn.btn-sm.btn-default-outline.active
 						| Day
 						input#option1 name="options" type="radio"
-					label.btn.btn-sm.btn-primary-outline
+					label.btn.btn-sm.btn-default-outline
 						| Week
 						input#option2 name="options" type="radio"
-					label.btn.btn-sm.btn-primary-outline
+					label.btn.btn-sm.btn-default-outline
 						| Month
 						input#option3 name="options" type="radio"
 				i.icon-bar-chart
-				| Line chart
+				| Growth over time
 			.widget-content.padded
 				.chart-graph.line-chart
 					#linechart-1 Loading...
@@ -82,25 +85,33 @@
 						li 10
 						li 11
 						li 12
+						<!-- End Linechart -->
 
+	<!-- Pie Graph 1 -->
 	.col-lg-3
 		.widget-container
 			.heading
 				i.icon-adjust
-				| Pie graph 1
+				| Retention
 				i.icon-refresh.pull-right
 			.widget-content
 				.pie-chart1.pie-chart.pie-number data-percent="73" 73%
+				<!-- End Pie Graph 1 -->
+
+	<!-- Pie Graph 2 -->			
 	.col-lg-3
 		.widget-container
 			.heading
 				i.icon-adjust
-				| Pie graph 2
+				| New users
 				i.icon-refresh.pull-right
 			.widget-content
 				.pie-chart2.pie-chart.pie-number data-percent="36" 26%
+				<!-- End Pie Graph 2 -->
+
 
 .row
+	<!-- Bar Graph 1 -->
 	.col-lg-4
 		.widget-container.small
 			.heading
@@ -128,6 +139,9 @@
 							li 10
 							li 11
 							li 12
+							<!-- End Bar Graph 1 -->
+	
+	<!-- Bar Graph 2 -->
 	.col-lg-4
 		.widget-container.small
 			.heading
@@ -155,6 +169,9 @@
 							li 10
 							li 11
 							li 12
+							<!-- End Bar Graph 2 -->
+
+	<!-- Bar Graph 3 -->
 	.col-lg-4
 		.widget-container.small
 			.heading
@@ -182,9 +199,12 @@
 							li 10
 							li 11
 							li 12
+							<!-- End Bar Graph 3 -->
+
 
 
 .row
+  <!-- Interactive Map -->
   .col-lg-6
 		.widget-container.map-container
 			.heading
@@ -194,7 +214,9 @@
 				i.icon-refresh.pull-right
 			.widget-content
 			 	#vmap.map style="height: 450px;"
+			 	<!-- End Interactive Map -->
 
+  <!-- Chat -->
   .col-lg-6
 		.widget-container.scrollable.chat
 			.heading
@@ -239,5 +261,6 @@
 			.post-message
 				input type="text" placeholder="Write your message here…" class="form-control"
 				input type="submit" value="Post" class="btn btn-primary"
+				<!-- End Chat -->
 
 
