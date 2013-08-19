@@ -1,6 +1,7 @@
 .page-title
   h1 Gallery
 
+<!-- Gallery with captions -->
 .row
 	.col-lg-12
 		.widget-container.fluid-height
@@ -34,8 +35,10 @@
 							.caption
 								h3 Rainbow
 								span by Cuba Gallery
+<!-- end Gallery with captions -->
 
 .row
+	<!-- Gallery with filtering and actions -->
 	.col-lg-6
 		.widget-container.fluid-height
 			.heading
@@ -90,7 +93,7 @@
 				  		i.icon-trash
 				  		i.icon-zoom-in
 				  		i.icon-pencil
-				  a.gallery-item.filter2.fancybox href="/assets/image-iso8.png" title="This is a caption" rel="gallery1"
+				  a.gallery-item.filter1.fancybox href="/assets/image-iso8.png" title="This is a caption" rel="gallery1"
 				  	= image_tag "image-iso8.png"
 				  	.actions
 				  		i.icon-trash
@@ -102,6 +105,9 @@
 				  		i.icon-trash
 				  		i.icon-zoom-in
 				  		i.icon-pencil
+	<!-- End Gallery with filtering and actions -->
+
+	<!-- Gallery carousel -->
 	.col-lg-6
 		.widget-container
 			.heading
@@ -127,4 +133,5 @@
 				    span.icon-angle-left
 				  a.right.carousel-control data-slide="next" href="#carousel-example-generic"
 				    span.icon-angle-right
+	<!-- End Gallery carousel -->
 
