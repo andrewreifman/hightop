@@ -1,0 +1,46 @@
+<button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="http://se7en.dev/">se7en</a>
+        <form class="navbar-form form-inline col-lg-2 hidden-xs">
+          <input class="form-control" placeholder="Search" type="text" />
+        </form>
+      </div>
+      <div class="container-fluid main-nav clearfix">
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="dashboard"><a href="index.html">
+                            <span></span>Dashboard</a>
+            </li>
+            <li class="dropdown ui current"><a class="current" data-toggle="dropdown" href="buttons#">
+                            <span></span>UI<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="current" href="buttons">Buttons</a>
+                </li>
+                <li>
+                  <a href="icons.html">Icons</a>
+                </li>
+                <li>
+                  <a href="components.html">Components</a>
+                </li>
+                <li>
+                  <a href="widgets.html">Widgets</a>
+                </li>
+                <li>
+                  <a href="typo.html">Typography</a>
+                </li>
+                <li>
+                  <a href="grid.html">Grid Layout</a>
+                </li>
+              </ul>
+            </li>
+            <li class="forms.html"><a href="http://se7en.dev/forms">
+                            <span></span>Forms</a>
+            </li>
+            <li class="tables.html"><a href="http://se7en.dev/tables">
+                            <span></span>Tables</a>
+            </li>
+            <li class="charts.html"><a href="http://se7en.dev/charts">
+                            <span></span>Charts</a>
+            </li>
+            <li class="gallery.html"><a href="http://se7en.dev/gallery">
+                            <span></span>Gallery</a>
+            </li>
