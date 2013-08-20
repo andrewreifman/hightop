@@ -336,7 +336,7 @@ $(document).ready ->
     sliderOpacity: 1
     wheelSpeed: 2
     onscroll: ->
-      $(this).prev().addClass "shadow"
+      $(this).prev().addClass("shadow")
 
   # =============================================================================
   #   Popover JS

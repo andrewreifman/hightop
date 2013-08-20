@@ -320,7 +320,7 @@
       sliderOpacity: 1,
       wheelSpeed: 2,
       onscroll: function() {
-        return $(".heading").addClass("shadow");
+        return $(this).prev().addClass("shadow");
       }
     });
     $('#popover').popover();
