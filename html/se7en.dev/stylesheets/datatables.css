@@ -240,6 +240,7 @@ table.display td.center {
 .dataTables_scrollBody {
   *margin-top: -1px;
   -webkit-overflow-scrolling: touch;
+}
 
 .top .dataTables_info {
   float: none;
