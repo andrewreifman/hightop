@@ -181,6 +181,7 @@ small
   padding: 0
   min-height: 45px
   height: 112px
+  width: 100%
   border: 0
   @include transition(all .3s)
 
@@ -701,6 +702,9 @@ small
         font-size: 18px
         vertical-align: middle
 
+      .label
+        margin: 0 0 0 10px
+
     &:last-child
       > a
         border: 0
@@ -1111,6 +1115,7 @@ th:active
     width: 25%
     padding: 10px
     position: relative
+    margin: 0
 
     figure
       margin: 0
@@ -1166,7 +1171,6 @@ th:active
 @media (max-width: 600px)
   .gallery-grid li
     width: 100%
-    margin: 0 0 15px
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -1301,6 +1305,7 @@ th:active
   label
     font-weight: normal
     margin: 0
+    width: 100%
     cursor: pointer
 
   .task-input
@@ -1556,7 +1561,7 @@ th:active
   left: 10px
   border-radius: 0px
   background: #c2c2c2
-  padding: 8px
+  padding: 8px 6px
   color: white
   width: 22px
   height: 22px
@@ -2130,6 +2135,13 @@ button.close
 
 
 @media (max-width: 600px)
+  .fc-header-right
+    display: none
+
+  .task-widget
+    li
+      &.label
+        display: none
   .padded
     padding: 10px
 
@@ -2153,7 +2165,6 @@ button.close
 
 .ico
   text-align: center
-
 
 
 /*-----------------------------------------------------------------------------------*/
