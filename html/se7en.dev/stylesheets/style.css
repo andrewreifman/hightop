@@ -1091,7 +1091,8 @@ th:active {
 .task-widget label {
   font-weight: normal;
   margin: 0;
-  cursor: pointer; }
+  cursor: pointer;
+  width: 100%; }
 .task-widget .task-input {
   display: none; }
 .task-widget input[type="checkbox"] + .task-checkbox {
@@ -1312,7 +1313,7 @@ th:active {
   left: 10px;
   border-radius: 0px;
   background: #c2c2c2;
-  padding: 8px;
+  padding: 8px 6px;
   color: white;
   width: 22px;
   height: 22px;
