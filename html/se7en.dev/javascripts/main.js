@@ -104,40 +104,50 @@
       barWidth: 12,
       barColor: "#acaeaf"
     });
+    
     $("#barcharts3").sparkline([160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120], {
       type: "bar",
       height: "80",
       barSpacing: 6,
       barWidth: 12,
       barColor: "#f0ad4e"
-    }, $("#pie-chart").sparkline([2, 8, 6, 10], {
+    });
+
+    $("#pie-chart").sparkline([2, 8, 6, 10], {
       type: "pie",
       height: "220",
       width: "220",
       offset: "+90",
       sliceColors: ["#a0eeed", "#81e970", "#f5af50", "#f46f50"]
-    }), $(".pie-chart1").easyPieChart({
+    });
+
+    $(".pie-chart1").easyPieChart({
       size: 220,
       lineWidth: 12,
       lineCap: "square",
       barColor: "#81e970",
       animate: 800,
       scaleColor: false
-    }), $(".pie-chart2").easyPieChart({
+    });
+
+    $(".pie-chart2").easyPieChart({
       size: 220,
       lineWidth: 12,
       lineCap: "square",
       barColor: "#f46f50",
       animate: 800,
       scaleColor: false
-    }), $(".pie-chart3").easyPieChart({
+    });
+
+    $(".pie-chart3").easyPieChart({
       size: 220,
       lineWidth: 12,
       lineCap: "square",
       barColor: "#fab43b",
       animate: 800,
       scaleColor: false
-    }));
+    });
+
     $(".navbar").mouseover(function() {
       $(".navbar").removeClass("closed");
       return setTimeout((function() {
