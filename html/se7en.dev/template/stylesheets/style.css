@@ -574,7 +574,7 @@ small {
       border: 0; }
 
 .notifications {
-  margin-left: 14px; }
+    margin: 0 14px 0 0 !important; }
 
 .messages img {
   border-radius: 50%;
