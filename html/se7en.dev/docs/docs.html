@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      se7en - Dashboard
+    </title>
+    <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all" rel="stylesheet" /><link href="stylesheets/application.css" media="all" rel="stylesheet" />
+    <link href="stylesheets/isotope.css" media="all" rel="stylesheet" />
+    <link href="stylesheets/normalize.css" media="all" rel="stylesheet" />
+    <link href="stylesheets/fullcalendar.css" media="all" rel="stylesheet" />
+    <link href="stylesheets/datatables.css" media="all" rel="stylesheet" />
+    <link href="stylesheets/prettify.css" media="all" rel="stylesheet" />
+    <link href="stylesheets/classyscroll.css" media="all" rel="stylesheet" />
+    <link href="stylesheets/jquery.fancybox.css" media="all" rel="stylesheet" />
+    <link href="stylesheets/select2.css" media="all" rel="stylesheet" />
+    <link href="stylesheets/bootstrap.min.css" media="all" rel="stylesheet" />
+    <link href="stylesheets/fontawesome.css" media="all" rel="stylesheet" />
+    <link href="stylesheets/style.css" media="all" rel="stylesheet" />
+    <link href="stylesheets/color/green.css" media="all" rel="alternate stylesheet" title="green-theme" />
+    <link href="stylesheets/color/orange.css" media="all" rel="alternate stylesheet" title="orange-theme" />
+    <link href="stylesheets/color/magenta.css" media="all" rel="alternate stylesheet" title="magenta-theme" />
+    <link href="stylesheets/color/gray.css" media="all" rel="alternate stylesheet" title="gray-theme" />
+
+    <script src="javascripts/modernizr.custom.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/jquery.mousewheel.js"></script>
+    <script src="javascripts/jquery.classyscroll.js"></script>
+    <script src="javascripts/jquery.vmap.min.js"></script>
+    <script src="javascripts/jquery.vmap.sampledata.js"></script>
+    <script src="javascripts/jquery.vmap.world.js"></script>
+    <script src="javascripts/fullcalendar.min.js"></script>
+    <script src="javascripts/gcal.js"></script>
+    <script src="javascripts/prettify.js"></script>
+    <script src="javascripts/jquery.dataTables.min.js"></script>
+    <script src="javascripts/jquery.fancybox.pack.js"></script>
+    <script src="javascripts/jquery.sparkline.min.js"></script>
+    <script src="javascripts/jquery.easy-pie-chart.js"></script>
+    <script src="javascripts/excanvas.min.js"></script>
+    <script src="javascripts/jquery.isotope.min.js"></script>
+    <script src="javascripts/select2.js"></script>
+    <script src="javascripts/styleswitcher.js"></script>
+    <script src="javascripts/main.js"></script>
+
+    <meta content="width=device-width, initial-scale=1.0" charset="utf-8" name="viewport" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="navbar navbar-fixed-top">
+      <div class="container-fluid top-bar">
+        <div class="pull-right">
+          <ul class="nav navbar-nav pull-right">
+            <li class="dropdown notifications hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="widgets#"><span>Notifications</span>
+                <p class="counter">
+                  4
+                </p>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="widgets">
+                    <i class="icon-user"></i>
+                    <div class="notifications label label-info pull-right">
+                      New
+                    </div>
+                    New user added: Jane Smith
+                  </a>
+                </li>
+                <li>
+                  <a href="widgets">
+                    <i class="icon-dashboard"></i>
+                    <div class="notifications label label-info pull-right">
+                      New
+                    </div>
+                    Sales targets available
+                  </a>
+                </li>
+                <li>
+                  <a href="widgets">
+                    <i class="icon-pencil"></i>
+                    <div class="notifications label label-info pull-right">
+                      New
+                    </div>
+                    New performance metric added
+                  </a>
+                </li>
+                <li>
+                  <a href="widgets">
+                    <i class="icon-dashboard"></i>
+                    <div class="notifications label label-info pull-right">
+                      New
+                    </div>
+                    New growth data available
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown messages hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="widgets#">
+                <span>Messages</span>
+                <p class="counter">3</p>
+              </a>
+              <ul class="dropdown-menu messages">
+                <li>
+                  <a href="widgets">
+                    <img alt="Avatar male2" height="34" src="assets/avatar-male2.png" width="34" />
+                    Could we meet today? I wanted...
+                  </a>
+                </li>
+                <li>
+                  <a href="widgets">
+                    <img alt="Avatar female" height="34" src="assets/avatar-female.png" width="34" />
+                    Important data needs your analysis...
+                  </a>
+                </li>
+                <li>
+                  <a href="widgets">
+                    <img alt="Avatar male2" height="34" src="assets/avatar-male2.png" width="34" />
+                    Buy Se7en today, it's a great theme...
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown settings hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="widgets#">
+                <span>Settings</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="settings-link blue" href="javascript:chooseStyle('none', 30)">
+                    <span></span>
+                    Blue
+                  </a>
+                </li>
+                <li>
+                  <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)">
+                    <span></span>
+                    Green
+                  </a>
+                </li>
+                <li>
+                  <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)">
+                    <span></span>
+                    Orange
+                  </a>
+                </li>
+                <li>
+                  <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)">
+                    <span></span>
+                    Magenta
+                  </a>
+                </li>
+                <li>
+                  <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)">
+                    <span></span>
+                    Gray
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown user hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="widgets#">
+                <img alt="Avatar male" height="34" src="assets/avatar-male.jpg" width="34" />
+                John Smith
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="widgets#">
+                    <i class="icon-user"></i>
+                    My Account
+                  </a>
+                </li>
+                <li>
+                  <a href="widgets#">
+                    <i class="icon-gear"></i>
+                    Account Settings
+                  </a>
+                </li>
+                <li>
+                  <a href="index.html">
+                    <i class="icon-signout"></i>
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <button class="navbar-toggle">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+
+        <a class="logo" href="index.html">se7en</a>
+
+        <form class="navbar-form form-inline col-lg-2 hidden-xs">
+          <input class="form-control" placeholder="Search" type="text" />
+        </form>
+      </div>
+
+      <div class="container-fluid main-nav clearfix">
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="dashboard">
+              <a href="index.html">
+                <span></span>Dashboard
+              </a>
+            </li>
+            <li class="dropdown ui">
+              <a class="current" data-toggle="dropdown" href="#">
+                <span></span>
+                UI
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="buttons.html">Buttons</a>
+                </li>
+                <li>
+                  <a href="icons.html">Icons</a>
+                </li>
+                <li>
+                  <a href="components.html">Components</a>
+                </li>
+                <li>
+                  <a href="widgets.html">Widgets</a>
+                </li>
+                <li>
+                  <a href="typo.html">Typography</a>
+                </li>
+                <li>
+                  <a href="grid.html">Grid Layout</a>
+                </li>
+              </ul>
+            </li>
+            <li class="forms">
+              <a href="forms.html">
+                <span></span>
+                Forms
+              </a>
+            </li>
+            <li class="tables">
+              <a href="tables.html">
+                <span></span>
+                Tables
+              </a>
+            </li>
+            <li class="charts">
+              <a href="charts.html">
+                <span></span>
+                Charts
+              </a>
+            </li>
+            <li class="gallery">
+              <a href="gallery.html">
+                <span></span>
+                Gallery
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Navigation -->
+    <div class="container-fluid"><div class="page-title">
+  <h1>
+    Documentation
+  </h1>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="widget-container fluid-height clearfix">
+      <div class="col-lg-12">
+        <div class="widget-content padded text-center">
+          <img alt="Sharplogo" height="44" src="assets/sharplogo.png" width="300" />
+          <h2 style="margin-bottom: 20px">
+            Thank you for purchasing Se7en!
+          </h2>
+          <p>
+            Created August 19, 2013  |  help@sharpandnimble.com
+          </p>
+          <img alt="Theme overview" height="806" src="assets/theme_overview.png" width="1024" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="widget-container fluid-height clearfix">
+      <div class="col-lg-12">
+        <div class="heading">
+          What is Se7en?
+        </div>
+        <div class="widget-content what padded">
+          <h3>
+            Se7en is a best-of-breed administration template. We employ stunning design, the latest technologies and industry best practices to create a one of kind administration template suitable for many needs.
+          </h3>
+          <div class="row">
+            <div class="col-lg-4 clearfix">
+              <h4>
+                <i class="icon-heart"></i>Built for you!
+              </h4>
+              <p>
+                Se7en is for entreprenuers, freelancers, agencies or any design enthusiast looking for world-class design. Se7en is optimized for both the complete beginner and the experienced developer. Save time and money without sacrificing quality with Se7en.
+              </p>
+            </div>
+            <div class="col-lg-4 clearfix">
+              <h4>
+                <i class="icon-eye-open"></i>Love the details
+              </h4>
+              <p>
+                We spent hours sweating the small stuff. All of our details throughout all elements in Se7en have been considered. The theme is built to perform, be easily customizable, easily managed and extended.
+              </p>
+            </div>
+            <div class="col-lg-4 clearfix">
+              <h4>
+                <i class="icon-signal"></i>Data visualization
+              </h4>
+              <p>
+                Se7en highlights a variety of data visualization options. We searched and found the best javascript powered libraries to take your data to the next level.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 clearfix">
+              <h4>
+                <i class="icon-mobile-phone"></i>Mobile to the core
+              </h4>
+              <p>
+                With Bootstrap3's mobile focus and our attention to every mobile detail. Se7en provides a one of a kind responsive design and provides a real framework for creating better mobile experiences.
+              </p>
+            </div>
+            <div class="col-lg-4 clearfix">
+              <h4>
+                <i class="icon-suitcase"></i>Widgets
+              </h4>
+              <p>
+                We have collected the best widgets on the web for Se7en. From our suite of data visualization tools, to our custom calendar (yes, it works with Google), our interactive map and many others. Power your web application with the best tools in the business.
+              </p>
+            </div>
+            <div class="col-lg-4 clearfix">
+              <h4>
+                <i class="icon-cogs"></i>Components
+              </h4>
+              <p>
+                Built on Bootstrap, Se7en features a complete responsive framework and mobile optimization. Our components have been polished and  polisehd again to provide world-class finish for any interaction your application
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="widget-container fluid-height">
+      <div class="heading">
+        Features
+      </div>
+      <div class="widget-content padded text-center">
+        <ul class="list-unstyled">
+          <li>
+            Clean and Sleek design
+          </li>
+          <li>
+            100% Mobile Ready / Responsive Layout
+          </li>
+          <li>
+            Valid HTML5
+          </li>
+          <li>
+            Cross-browser compatible (Chrome/Safari/Firefox/IE8+)
+          </li>
+          <li>
+            SASS and COMPASS ready
+          </li>
+          <li>
+            Built with Bootstrap3
+          </li>
+          <li>
+            Clean developer friendly markup
+          </li>
+          <li>
+            Image Gallery
+          </li>
+          <li>
+            Form Elements
+          </li>
+          <li>
+            Custom Buttons and Colors
+          </li>
+          <li>
+            and much more...
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="widget-container plugins fluid-height">
+      <div class="heading">
+        Plugins
+      </div>
+      <div class="widget-content padded text-center">
+        <ul class="list-unstyled">
+          <li>
+            jQuery, Mousewheel, and Scrollspy
+          </li>
+          <li>
+            Vector maps
+          </li>
+          <li>
+            gCalendar
+          </li>
+          <li>
+            Datatables
+          </li>
+          <li>
+            Sparkline
+          </li>
+          <li>
+            Easy Pie Chart
+          </li>
+          <li>
+            Isotope
+          </li>
+          <li>
+            Modernizr
+          </li>
+          <li>
+            Fancybox
+          </li>
+          <li>
+            Select2
+          </li>
+          <li>
+            Bootstrap
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="widget-container fluid-height clearfix">
+      <div class="heading">
+        HTML Structure
+      </div>
+      <div class="widget-content padded">
+        <p>
+          This theme contains a fluid layout. All of the information within the main content area is nested within the body. Highlighted below are some of the page elements that create the structure for Se7en. Se7en requires the use of HTML elements to create the proper CSS for your project. Each widget and component is modular and can be found with the HTML comment tags found throughout the theme.
+        </p>
+        <h3>
+          Follow The HTML Comments
+        </h3><div class="highlight"><pre><span class="o">&lt;!--</span> <span class="n">This</span> <span class="n">is</span> <span class="n">a</span> <span class="n">contained</span> <span class="n">element</span> <span class="o">--&gt;</span> <span class="o">&lt;!--</span> <span class="n">This</span> <span class="n">is</span> <span class="n">the</span> <span class="n">end</span> <span class="n">of</span> <span class="n">an</span> <span class="n">element</span> <span class="o">--&gt;</span>
+</pre></div>
+        <h3>
+          Header & Navigation
+        </h3>
+        <p>
+          Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains dynamic visual elements but the content remains easy to modify.
+        </p><div class="highlight"><pre><span class="c">&lt;!-- Navigation --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-fixed-top&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid top-bar&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;pull-right&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav pull-right&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown notifications hidden-xs&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span&gt;</span>Notifications<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;counter&quot;</span><span class="nt">&gt;</span>
+              4
+            <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/docs&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-user&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>New user added: Jane Smith
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;notifications label label-info pull-right&quot;</span><span class="nt">&gt;</span>
+                              New
+                            <span class="nt">&lt;/div&gt;&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/docs&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-dashboard&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>Sales targets available
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;notifications label label-info pull-right&quot;</span><span class="nt">&gt;</span>
+                              New
+                            <span class="nt">&lt;/div&gt;&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/docs&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-pencil&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>New performance metric added
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;notifications label label-info pull-right&quot;</span><span class="nt">&gt;</span>
+                              New
+                            <span class="nt">&lt;/div&gt;&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/docs&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-dashboard&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>New growth data available
+                            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;notifications label label-info pull-right&quot;</span><span class="nt">&gt;</span>
+                              New
+                            <span class="nt">&lt;/div&gt;&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown messages hidden-xs&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span&gt;</span>Messages<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;counter&quot;</span><span class="nt">&gt;</span>
+              3
+            <span class="nt">&lt;/p&gt;</span>
+          <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu messages&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/docs&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">&quot;Avatar male2&quot;</span> <span class="na">height=</span><span class="s">&quot;34&quot;</span> <span class="na">src=</span><span class="s">&quot;/assets/avatar-male2.png&quot;</span> <span class="na">width=</span><span class="s">&quot;34&quot;</span> <span class="nt">/&gt;</span>Could we meet today? I wanted...<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/docs&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">&quot;Avatar female&quot;</span> <span class="na">height=</span><span class="s">&quot;34&quot;</span> <span class="na">src=</span><span class="s">&quot;/assets/avatar-female.png&quot;</span> <span class="na">width=</span><span class="s">&quot;34&quot;</span> <span class="nt">/&gt;</span>Important data needs your analysis...<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/docs&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">&quot;Avatar male2&quot;</span> <span class="na">height=</span><span class="s">&quot;34&quot;</span> <span class="na">src=</span><span class="s">&quot;/assets/avatar-male2.png&quot;</span> <span class="na">width=</span><span class="s">&quot;34&quot;</span> <span class="nt">/&gt;</span>Buy Se7en today, it&#39;s a great theme...<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown settings hidden-xs&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;&lt;span&gt;</span>Settings<span class="nt">&lt;/span&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;settings-link blue&quot;</span> <span class="na">href=</span><span class="s">&quot;javascript:chooseStyle(&#39;none&#39;, 30)&quot;</span><span class="nt">&gt;&lt;span&gt;&lt;/span&gt;</span>Blue<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;settings-link green&quot;</span> <span class="na">href=</span><span class="s">&quot;javascript:chooseStyle(&#39;green-theme&#39;, 30)&quot;</span><span class="nt">&gt;&lt;span&gt;&lt;/span&gt;</span>Green<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;settings-link orange&quot;</span> <span class="na">href=</span><span class="s">&quot;javascript:chooseStyle(&#39;orange-theme&#39;, 30)&quot;</span><span class="nt">&gt;&lt;span&gt;&lt;/span&gt;</span>Orange<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;settings-link magenta&quot;</span> <span class="na">href=</span><span class="s">&quot;javascript:chooseStyle(&#39;magenta-theme&#39;, 30)&quot;</span><span class="nt">&gt;&lt;span&gt;&lt;/span&gt;</span>Magenta<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;settings-link gray&quot;</span> <span class="na">href=</span><span class="s">&quot;javascript:chooseStyle(&#39;gray-theme&#39;, 30)&quot;</span><span class="nt">&gt;&lt;span&gt;&lt;/span&gt;</span>Gray<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown user hidden-xs&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;dropdown-toggle&quot;</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;img</span> <span class="na">alt=</span><span class="s">&quot;Avatar male&quot;</span> <span class="na">height=</span><span class="s">&quot;34&quot;</span> <span class="na">src=</span><span class="s">&quot;/assets/avatar-male.jpg&quot;</span> <span class="na">width=</span><span class="s">&quot;34&quot;</span> <span class="nt">/&gt;</span>John Smith<span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/b&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-user&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>My Account<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-gear&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>Account Settings<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/login&quot;</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">&quot;icon-signout&quot;</span><span class="nt">&gt;&lt;/i&gt;</span>Logout<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;navbar-toggle&quot;</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">&quot;icon-bar&quot;</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;&lt;a</span> <span class="na">class=</span><span class="s">&quot;logo&quot;</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>se7en<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">&quot;navbar-form form-inline col-lg-2 hidden-xs&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;Search&quot;</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/form&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container-fluid main-nav clearfix&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;nav-collapse&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dashboard&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span&gt;&lt;/span&gt;</span>Dashboard<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;dropdown ui&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">data-toggle=</span><span class="s">&quot;dropdown&quot;</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span&gt;&lt;/span&gt;</span>UI<span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">&quot;caret&quot;</span><span class="nt">&gt;&lt;/b&gt;&lt;/a&gt;</span>
+          <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;dropdown-menu&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/buttons&quot;</span><span class="nt">&gt;</span>Buttons<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/icons&quot;</span><span class="nt">&gt;</span>Icons<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/components&quot;</span><span class="nt">&gt;</span>Components<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/widgets&quot;</span><span class="nt">&gt;</span>Widgets<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/typo&quot;</span><span class="nt">&gt;</span>Typography<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+              <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;/grid&quot;</span><span class="nt">&gt;</span>Grid Layout<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+          <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;forms&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/forms&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span&gt;&lt;/span&gt;</span>Forms<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;tables&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/tables&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span&gt;&lt;/span&gt;</span>Tables<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;charts&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/charts&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span&gt;&lt;/span&gt;</span>Charts<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;gallery&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;/gallery&quot;</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;span&gt;&lt;/span&gt;</span>Gallery<span class="nt">&lt;/a&gt;</span><span class="c">&lt;!-- End Navigation --&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+        <h3>
+          Containers
+        </h3>
+        <p>
+          Each container for all elements is contained with the .widget-container class. Within this class, there is a header and content class. Please place your content in the appropriate area for optimal results. Some containers are modified for specific widgets. If this is the case, you will find an additional class that brings in the appropriate CSS for the modified container.
+        </p>
+        <P>NOTE: In nearly all instances, the widget container will also be accompanied with a Bootstrap-powered grid system to identify the overall size and interaction of that container. Below is an example of the statstics data widget on the dashboard of Se7en.</P><div class="highlight"><pre><span class="c">&lt;!-- Statistics --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-lg-12&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;widget-container stats-container&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-3&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;number&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;icon globe&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+        86<span class="nt">&lt;small&gt;</span>%<span class="nt">&lt;/small&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+        Overall growth
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-3&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;number&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;icon visitors&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+        613
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+        Unique visitors
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-3&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;number&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;icon money&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;small&gt;</span>$<span class="nt">&lt;/small&gt;</span>924
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+        Sales
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col-md-3&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;number&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;icon chat-bubbles&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+        325
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;text&quot;</span><span class="nt">&gt;</span>
+        New followers
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!-- End Statistics --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</pre></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="widget-container fluid-height clearfix">
+      <div class="heading">
+        CSS Structure
+      </div>
+      <div class="widget-content padded">
+        <p>
+          Much like the HTML for Se7en, the CSS is maintained to be clean and consistent as you travel across the template. Below are some landmarks to look for as you are modifying the theme.
+        </p>
+        <h3>
+          Structure
+        </h3>
+        <p>
+          This is the text
+        </p><div class="highlight"><pre><span class="nt">h3</span>
+  <span class="na">line-height</span><span class="o">:</span> <span class="mi">1</span><span class="mf">.4</span><span class="kt">em</span>
+</pre></div>
+        <h3>
+          Shortcuts
+        </h3>
+        <h3>
+          SASS
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="widget-container fluid-height">
+      <div class="heading">
+        Javascript
+      </div>
+      <div class="widget-content padded text-center">
+        <h3>
+          Bootstrap3 -<a href="http://getbootstrap.com/javascript/#modals" target="blank">Full documentation</a>
+        </h3>
+        <ul class="list-unstyled">
+          <li>
+            Modal
+          </li><div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#myModal&#39;</span><span class="p">).</span><span class="nx">modal</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+</pre></div>
+          <li>
+            Dropdown
+          </li><div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.dropdown-toggle&#39;</span><span class="p">).</span><span class="nx">dropdown</span><span class="p">()</span>
+</pre></div>
+          <li>
+            Scrollspy
+          </li><div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">).</span><span class="nx">scrollspy</span><span class="p">({</span> <span class="nx">target</span><span class="o">:</span> <span class="s1">&#39;#navbar-example&#39;</span> <span class="p">})</span>
+</pre></div>
+          <li>
+            Tabs
+          </li><div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;a[data-toggle=tab]&#39;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;shown.bs.tab&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>  <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">relatedTarget</span><span class="p">})</span>
+</pre></div>
+          <li>
+            Tooltip
+          </li><div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#example&#39;</span><span class="p">).</span><span class="nx">tooltip</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+</pre></div>
+          <li>
+            Popover
+          </li><div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#example&#39;</span><span class="p">).</span><span class="nx">popover</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+</pre></div>
+          <li>
+            Buttons via Javascript
+          </li><div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.nav-tabs&#39;</span><span class="p">).</span><span class="nx">button</span><span class="p">()</span>
+</pre></div>
+          <li>
+            Collapse
+          </li><div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.collapse&#39;</span><span class="p">).</span><span class="nx">collapse</span><span class="p">()</span>
+</pre></div>
+          <li>
+            Carousel
+          </li><div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.carousel&#39;</span><span class="p">).</span><span class="nx">carousel</span><span class="p">()</span>
+</pre></div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="widget-container fluid-height">
+      <div class="heading">
+        Javascript
+      </div>
+      <div class="widget-content padded text-center">
+        <h3>
+          Sparkline -<a href="http://omnipotent.net/jquery.sparkline/#s-about" target="blank">Full documentation</a>
+        </h3>
+        <p>
+          Below are components that you can activate with a short javascript snippet.
+        </p>
+        <ul class="list-unstyled">
+          <li>
+            Quick Start
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="widget-container fluid-height">
+      <div class="heading">
+        Javascript
+      </div>
+      <div class="widget-content padded text-center">
+        <h3>
+          Vector maps -<a href="http://jqvmap.com/" target="blank">Full documentation</a>
+        </h3>
+        <p>
+          Below are components that you can activate with a short javascript snippet.
+        </p>
+        <ul class="list-unstyled">
+          <li>
+            Quick Start
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="widget-container fluid-height">
+      <div class="heading">
+        Javascript
+      </div>
+      <div class="widget-content padded text-center">
+        <h3>
+          Full Calendar -<a href="http://arshaw.com/fullcalendar/" target="blank">Full documentation</a>
+        </h3>
+        <p>
+          Below are components that you can activate with a short javascript snippet.
+        </p>
+        <ul class="list-unstyled">
+          <li>
+            Quick Start
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="widget-container fluid-height">
+      <div class="heading">
+        Javascript
+      </div>
+      <div class="widget-content padded text-center">
+        <h3>
+          Easy Pie Chart -<a href="http://rendro.github.io/easy-pie-chart/" target="blank">Full documentation</a>
+        </h3>
+        <p>
+          Below are components that you can activate with a short javascript snippet.
+        </p>
+        <ul class="list-unstyled">
+          <li>
+            Quick Start
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="widget-container fluid-height">
+      <div class="heading">
+        Javascript
+      </div>
+      <div class="widget-content padded text-center">
+        <h3>
+          Isotope -<a href="https://datatables.net/" target="blank">Full documentation</a>
+        </h3>
+        <p>
+          Below are components that you can activate with a short javascript snippet.
+        </p>
+        <ul class="list-unstyled">
+          <li>
+            Quick Start
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="widget-container fluid-height">
+      <div class="heading">
+        Javascript
+      </div>
+      <div class="widget-content padded text-center">
+        <h3>
+          Fancybox -<a href="https://datatables.net/" target="blank">Full documentation</a>
+        </h3>
+        <p>
+          Below are components that you can activate with a short javascript snippet.
+        </p>
+        <ul class="list-unstyled">
+          <li>
+            Quick Start
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="widget-container fluid-height">
+      <div class="heading">
+        Javascript
+      </div>
+      <div class="widget-content padded text-center">
+        <h3>
+          Select2 -<a href="https://datatables.net/" target="blank">Full documentation</a>
+        </h3>
+        <p>
+          Below are components that you can activate with a short javascript snippet.
+        </p>
+        <ul class="list-unstyled">
+          <li>
+            Quick Start
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </body>
+</html>
