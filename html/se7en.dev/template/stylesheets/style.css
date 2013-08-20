@@ -3,8 +3,8 @@
 /*  Mixins/variables */
 /*----------------------------------------------------------------------------------- */
 .inline {
-  display: inline-block;
-  *display: inline;
+  display: inline-block !important;
+  *display: inline !important;
   zoom: 1; }
 
 /*----------------------------------------------------------------------------------- */
@@ -574,7 +574,7 @@ small {
       border: 0; }
 
 .notifications {
-  margin-left: 14px; }
+    margin: 0 14px 0 0 !important; }
 
 .messages img {
   border-radius: 50%;
@@ -681,7 +681,9 @@ th:active {
   .label-container h3 {
     margin-bottom: 25px; }
   .label-container .label {
-    font-weight: 300; }
+    font-weight: 300; 
+    display: inline-block;
+    margin-bottom: 12px; }
 
 .label-primary {
   background-color: #007aff; }
@@ -1825,6 +1827,9 @@ button.close {
   .widget-container > div .heading {
     padding-left: 5px; } }
 @media (max-width: 600px) {
+  .tabs-hidden-tab{
+    display: none; }
+
   .fc-header-right {
     display: none; }
 
