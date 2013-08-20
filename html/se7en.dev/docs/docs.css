@@ -1,5 +1,8 @@
 body{
   padding-top: 20px; }
+pre {
+  margin: 6px 0 12px 0;
+}
 .docs h3 {
   margin: 20px 0 10px; }
 
