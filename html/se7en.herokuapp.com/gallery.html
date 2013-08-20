@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      se7en - Dashboard
+    </title>
+    <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all" rel="stylesheet" /><link href="assets/application-3a504bd2cb1c87334a074f570fa594d5.css" media="all" rel="stylesheet" /><link href="http://se7en.herokuapp.com/assets/color/green-52c35ba11d14d5433f34589ec836011d.css" media="all" rel="alternate stylesheet" title="green-theme" /><link href="http://se7en.herokuapp.com/assets/color/orange-e874f6807aa6b3309d535295a334e56e.css" media="all" rel="alternate stylesheet" title="orange-theme" /><link href="http://se7en.herokuapp.com/assets/color/magenta-a316865e15b8328d48da1a80bb58b651.css" media="all" rel="alternate stylesheet" title="magenta-theme" /><link href="http://se7en.herokuapp.com/assets/color/gray-27fbe537808e1516c7d9822e5b931cd3.css" media="all" rel="alternate stylesheet" title="gray-theme" /><script src="assets/application-217981b7bbc17d477439afb263998c5c.js"></script><meta content="authenticity_token" name="csrf-param" />
+    <meta content="1jZZCIdNkUCNawblFYb5m4wPwYB18IgA2cn2EXJ4wT0=" name="csrf-token" />
+    <meta content="width=device-width, initial-scale=1.0, charset=utf-8" name="viewport" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="navbar navbar-fixed-top">
+      <div class="container-fluid top-bar">
+        <div class="pull-right">
+          <ul class="nav navbar-nav pull-right">
+            <li class="dropdown notifications hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="gallery#"><span>Notifications</span>
+                <p class="counter">
+                  4
+                </p>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="gallery">
+                                    <i class="icon-user"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New user added: Jane Smith</a>
+                </li>
+                <li><a href="gallery">
+                                    <i class="icon-dashboard"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    Sales targets available</a>
+                </li>
+                <li><a href="gallery">
+                                    <i class="icon-pencil"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New performance metric added</a>
+                </li>
+                <li><a href="gallery">
+                                    <i class="icon-dashboard"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New growth data available</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown messages hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="gallery#"><span>Messages</span>
+                <p class="counter">
+                  3
+                </p>
+              </a>
+              <ul class="dropdown-menu messages">
+                <li><a href="gallery">
+                                    <img alt="Avatar male2" height="34" src="assets/avatar-male2-37a4de143ef291aa6f7ac19241dafc98.png" width="34" />Could we meet today? I wanted...</a>
+                </li>
+                <li><a href="gallery">
+                                    <img alt="Avatar female" height="34" src="assets/avatar-female-96e6d31022c429e7230a40bbb3ca5362.png" width="34" />Important data needs your analysis...</a>
+                </li>
+                <li><a href="gallery">
+                                    <img alt="Avatar male2" height="34" src="assets/avatar-male2-37a4de143ef291aa6f7ac19241dafc98.png" width="34" />Buy Se7en today, it's a great theme...</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown settings hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="gallery#"><span>Settings</span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="settings-link blue" href="javascript:chooseStyle('none', 30)"><span></span>Blue</a>
+                </li>
+                <li>
+                  <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)"><span></span>Green</a>
+                </li>
+                <li>
+                  <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)"><span></span>Orange</a>
+                </li>
+                <li>
+                  <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)"><span></span>Magenta</a>
+                </li>
+                <li>
+                  <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)"><span></span>Gray</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown user hidden-xs"><a class="dropdown-toggle" data-toggle="dropdown" href="gallery#">
+                            <img alt="Avatar male" height="34" src="assets/avatar-male-411b6fd13a92f00ea1b04581484b638b.jpg" width="34" />John Smith<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="gallery#">
+                                    <i class="icon-user"></i>My Account</a>
+                </li>
+                <li><a href="gallery#">
+                                    <i class="icon-gear"></i>Account Settings</a>
+                </li>
+                <li><a href="http://se7en.herokuapp.com/">
+                                    <i class="icon-signout"></i>Logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="http://se7en.herokuapp.com/">se7en</a>
+        <form class="navbar-form form-inline col-lg-2 hidden-xs">
+          <input class="form-control" placeholder="Search" type="text" />
+        </form>
+      </div>
+      <div class="container-fluid main-nav clearfix">
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="dashboard"><a href="http://se7en.herokuapp.com/">
+                            <span></span>Dashboard</a>
+            </li>
+            <li class="dropdown ui"><a data-toggle="dropdown" href="gallery#">
+                            <span></span>UI<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="http://se7en.herokuapp.com/buttons">Buttons</a>
+                </li>
+                <li>
+                  <a href="http://se7en.herokuapp.com/icons">Icons</a>
+                </li>
+                <li>
+                  <a href="http://se7en.herokuapp.com/components">Components</a>
+                </li>
+                <li>
+                  <a href="http://se7en.herokuapp.com/widgets">Widgets</a>
+                </li>
+                <li>
+                  <a href="http://se7en.herokuapp.com/typo">Typography</a>
+                </li>
+                <li>
+                  <a href="http://se7en.herokuapp.com/grid">Grid Layout</a>
+                </li>
+              </ul>
+            </li>
+            <li class="forms"><a href="http://se7en.herokuapp.com/forms">
+                            <span></span>Forms</a>
+            </li>
+            <li class="tables"><a href="http://se7en.herokuapp.com/tables">
+                            <span></span>Tables</a>
+            </li>
+            <li class="charts"><a href="http://se7en.herokuapp.com/charts">
+                            <span></span>Charts</a>
+            </li>
+            <li class="gallery"><a class="current" href="gallery">
+                            <span></span>Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Navigation --> 
+    <div class="container-fluid">
+      <div class="page-title">
+        <h1>
+          Gallery
+        </h1>
+      </div>
+      <!-- Gallery with captions -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="widget-container fluid-height">
+            <div class="heading">
+              <i class="icon-picture"></i>Captions
+            </div>
+            <div class="widget-content padded">
+              <ul class="gallery-grid clearfix">
+                <li>
+                  <figure>
+                    <img alt="Nature1" src="assets/nature1-529ebe4284453572f46cbd337bb69a62.jpg" />
+                    <div class="caption">
+                      <h3>
+                        Leaf
+                      </h3>
+                      <span>by Cuba Gallery</span>
+                    </div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img alt="Nature3" src="assets/nature3-a64a94408b2d6bae6b1d483fe0c7ddf7.jpg" />
+                    <div class="caption">
+                      <h3>
+                        Farm
+                      </h3>
+                      <span>by Cuba Gallery</span>
+                    </div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img alt="Nature2" src="assets/nature2-de1fd13476c4c1033070c15c5ca21936.jpg" />
+                    <div class="caption">
+                      <h3>
+                        Flower
+                      </h3>
+                      <span>by Cuba Gallery</span>
+                    </div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <img alt="Nature4" src="assets/nature4-0277de60dc59b6154d31ba4e49268093.jpg" />
+                    <div class="caption">
+                      <h3>
+                        Rainbow
+                      </h3>
+                      <span>by Cuba Gallery</span>
+                    </div>
+                  </figure>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end Gallery with captions -->
+      <div class="row">
+        <!-- Gallery with filtering and actions -->
+        <div class="col-lg-6">
+          <div class="widget-container fluid-height">
+            <div class="heading">
+              <i class="icon-th-large"></i>Filtering and Actions
+              <div class="gallery-filters list-inline btn-group pull-right">
+                <a class="btn btn-sm btn-primary-outline selected" data-filter="*" href="gallery#">All</a><a class="btn btn-sm btn-primary-outline" data-filter=".filter1" href="gallery#">Filter 1</a><a class="btn btn-sm btn-primary-outline" data-filter=".filter2" href="gallery#">Filter 2</a>
+              </div>
+            </div>
+            <div class="widget-content padded">
+              <div class="gallery-container">
+                <a class="gallery-item filter1 fancybox" href="http://se7en.herokuapp.com/assets/image-iso5.png" rel="gallery1" title="This is a caption"><img alt="Image iso5" src="assets/image-iso5-1a4bfdec3563425c6fcebde5972e13e6.png" />
+                  <div class="actions">
+                    <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+                  </div>
+                </a><a class="gallery-item filter1 fancybox" href="http://se7en.herokuapp.com/assets/image-iso2.jpg" rel="gallery1" title="This is a caption"><img alt="Image iso2" src="assets/image-iso2-7b1777ee8db58bd072e843bbaa3c7fb8.jpg" />
+                  <div class="actions">
+                    <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+                  </div>
+                </a><a class="gallery-item filter2 fancybox" href="http://se7en.herokuapp.com/assets/image-iso3.png" rel="gallery1" title="This is a caption"><img alt="Image iso3" src="assets/image-iso3-e88b38e22aafe2215781c6aac988e0b7.png" />
+                  <div class="actions">
+                    <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+                  </div>
+                </a><a class="gallery-item filter1 fancybox" href="http://se7en.herokuapp.com/assets/image-iso4.png" rel="gallery1" title="This is a caption"><img alt="Image iso4" src="assets/image-iso4-c9c957abffb78dd54328b164d25330bf.png" />
+                  <div class="actions">
+                    <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+                  </div>
+                </a><a class="gallery-item filter2 fancybox" href="http://se7en.herokuapp.com/assets/image-iso6.png" rel="gallery1" title="This is a caption"><img alt="Image iso6" src="assets/image-iso6-8f352d5e800fcbff36e476aa0f4d9a4a.png" />
+                  <div class="actions">
+                    <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+                  </div>
+                </a><a class="gallery-item filter2 fancybox" href="http://se7en.herokuapp.com/assets/image-iso.png" rel="gallery1" title="This is a caption"><img alt="Image iso" src="assets/image-iso-3964cbcada99a84f08f617d2fa850834.png" />
+                  <div class="actions">
+                    <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+                  </div>
+                </a><a class="gallery-item filter2 fancybox" href="http://se7en.herokuapp.com/assets/image-iso7.png" rel="gallery1" title="This is a caption"><img alt="Image iso7" src="assets/image-iso7-869ac814b3d3d07c69a5886ca1bf008a.png" />
+                  <div class="actions">
+                    <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+                  </div>
+                </a><a class="gallery-item filter1 fancybox" href="http://se7en.herokuapp.com/assets/image-iso8.png" rel="gallery1" title="This is a caption"><img alt="Image iso8" src="assets/image-iso8-646f5c546e517a9b2b593653650ce1ad.png" />
+                  <div class="actions">
+                    <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+                  </div>
+                </a><a class="gallery-item filter2 fancybox" href="http://se7en.herokuapp.com/assets/image-iso9.png" rel="gallery1" title="This is a caption"><img alt="Image iso9" src="assets/image-iso9-ba3a279e46e27f638f7bb00e9071ca3a.png" />
+                  <div class="actions">
+                    <i class="icon-trash"></i><i class="icon-zoom-in"></i><i class="icon-pencil"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Gallery with filtering and actions --><!-- Gallery carousel -->
+        <div class="col-lg-6">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-camera"></i>Carousel
+            </div>
+            <div class="widget-content padded">
+              <div class="carousel slide" id="carousel-example-generic">
+                <ol class="carousel-indicators">
+                  <li class="active" data-slide-to="0" data-target="#carousel-example-generic"></li>
+                  <li data-slide-to="1" data-target="#carousel-example-generic"></li>
+                  <li data-slide-to="2" data-target="#carousel-example-generic"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img alt="Image5" src="assets/image5-331aed089bb2163267a37b2271b3301f.jpg" />
+                  </div>
+                  <div class="item">
+                    <img alt="Image6" src="assets/image6-0163fbe10eba8ab9ae77fdccf21386f6.png" />
+                  </div>
+                  <div class="item">
+                    <img alt="Image7" src="assets/image7-44d39987f15877bfc90e83bd5e6648ac.png" />
+                  </div>
+                </div>
+                <a class="left carousel-control" data-slide="prev" href="gallery#carousel-example-generic"><span class="icon-angle-left"></span></a><a class="right carousel-control" data-slide="next" href="gallery#carousel-example-generic"><span class="icon-angle-right"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Gallery carousel -->
+      </div>
+    </div>
+  </body>
+</html>

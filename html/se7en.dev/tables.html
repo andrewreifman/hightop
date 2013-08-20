@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      se7en - Dashboard
+    </title>
+    <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all" rel="stylesheet" /><link href="assets/application.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/isotope.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/normalize.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/fullcalendar.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/datatables.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/preview_component.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/prettify.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/wizard.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/classyscroll.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.fancybox.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.fancybox-buttons.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.fancybox-thumbs.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/fancybox.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/select2.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/color/green.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/color/orange.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/color/magenta.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/color/gray.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.sidr.light.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.sidr.dark.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/bootstrap.min.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/style.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/pygments.css?body=1" media="all" rel="stylesheet" /><link href="assets/color/green.css?body=1" media="all" rel="alternate stylesheet" title="green-theme" /><link href="assets/color/orange.css?body=1" media="all" rel="alternate stylesheet" title="orange-theme" /><link href="assets/color/magenta.css?body=1" media="all" rel="alternate stylesheet" title="magenta-theme" /><link href="assets/color/gray.css?body=1" media="all" rel="alternate stylesheet" title="gray-theme" /><script src="assets/jquery.js?body=1"></script>
+    <script src="assets/jquery_ujs.js?body=1"></script>
+    <script src="assets/bootstrap.min.js?body=1"></script>
+    <script src="assets/jquery.mousewheel.js?body=1"></script>
+    <script src="assets/jquery.classyscroll.js?body=1"></script>
+    <script src="assets/jquery.vmap.min.js?body=1"></script>
+    <script src="assets/jquery.vmap.sampledata.js?body=1"></script>
+    <script src="assets/jquery.vmap.world.js?body=1"></script>
+    <script src="assets/fullcalendar.min.js?body=1"></script>
+    <script src="assets/gcal.js?body=1"></script>
+    <script src="assets/prettify.js?body=1"></script>
+    <script src="assets/dataTables/jquery.dataTables.js?body=1"></script>
+    <script src="assets/jquery.sparkline.min.js?body=1"></script>
+    <script src="assets/jquery.easy-pie-chart.js?body=1"></script>
+    <script src="assets/excanvas.min.js?body=1"></script>
+    <script src="assets/jquery.isotope.min.js?body=1"></script>
+    <script src="assets/modernizr.custom.js?body=1"></script>
+    <script src="assets/jquery.fancybox.js?body=1"></script>
+    <script src="assets/jquery.fancybox-buttons.js?body=1"></script>
+    <script src="assets/jquery.fancybox-thumbs.js?body=1"></script>
+    <script src="assets/jquery.fancybox-media.js?body=1"></script>
+    <script src="assets/fancybox.js?body=1"></script>
+    <script src="assets/jquery.sidr.min.js?body=1"></script>
+    <script src="assets/select2.js?body=1"></script>
+    <script src="assets/styleswitcher.js?body=1"></script>
+    <script src="assets/main.js?body=1"></script>
+    <script src="assets/application.js?body=1"></script><meta content="authenticity_token" name="csrf-param" />
+    <meta content="rhi/J/vDIKe5Bk6MdLhlgtkL5BognXfxMMnwR+kGaj0=" name="csrf-token" />
+    <meta content="width=device-width, initial-scale=1.0, charset=utf-8" name="viewport" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="navbar navbar-fixed-top">
+      <div class="container-fluid top-bar">
+        <div class="pull-right">
+          <ul class="nav navbar-nav pull-right">
+            <li class="dropdown notifications hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="tables#"><span>Notifications</span>
+                <p class="counter">
+                  4
+                </p>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="tables">
+                                    <i class="icon-user"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New user added: Jane Smith</a>
+                </li>
+                <li><a href="tables">
+                                    <i class="icon-dashboard"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    Sales targets available</a>
+                </li>
+                <li><a href="tables">
+                                    <i class="icon-pencil"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New performance metric added</a>
+                </li>
+                <li><a href="tables">
+                                    <i class="icon-dashboard"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New growth data available</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown messages hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="tables#"><span>Messages</span>
+                <p class="counter">
+                  3
+                </p>
+              </a>
+              <ul class="dropdown-menu messages">
+                <li><a href="tables">
+                                    <img alt="Avatar male2" height="34" src="assets/avatar-male2.png" width="34" />Could we meet today? I wanted...</a>
+                </li>
+                <li><a href="tables">
+                                    <img alt="Avatar female" height="34" src="assets/avatar-female.png" width="34" />Important data needs your analysis...</a>
+                </li>
+                <li><a href="tables">
+                                    <img alt="Avatar male2" height="34" src="assets/avatar-male2.png" width="34" />Buy Se7en today, it's a great theme...</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown settings hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="tables#"><span>Settings</span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="settings-link blue" href="javascript:chooseStyle('none', 30)"><span></span>Blue</a>
+                </li>
+                <li>
+                  <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)"><span></span>Green</a>
+                </li>
+                <li>
+                  <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)"><span></span>Orange</a>
+                </li>
+                <li>
+                  <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)"><span></span>Magenta</a>
+                </li>
+                <li>
+                  <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)"><span></span>Gray</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown user hidden-xs"><a class="dropdown-toggle" data-toggle="dropdown" href="tables#">
+                            <img alt="Avatar male" height="34" src="assets/avatar-male.jpg" width="34" />John Smith<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="tables#">
+                                    <i class="icon-user"></i>My Account</a>
+                </li>
+                <li><a href="tables#">
+                                    <i class="icon-gear"></i>Account Settings</a>
+                </li>
+                <li><a href="http://se7en.dev/">
+                                    <i class="icon-signout"></i>Logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="http://se7en.dev/">se7en</a>
+        <form class="navbar-form form-inline col-lg-2 hidden-xs">
+          <input class="form-control" placeholder="Search" type="text" />
+        </form>
+      </div>
+      <div class="container-fluid main-nav clearfix">
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="dashboard"><a href="http://se7en.dev/">
+                            <span></span>Dashboard</a>
+            </li>
+            <li class="dropdown ui"><a data-toggle="dropdown" href="tables#">
+                            <span></span>UI<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="http://se7en.dev/buttons">Buttons</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/icons">Icons</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/components">Components</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/widgets">Widgets</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/typo">Typography</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/grid">Grid Layout</a>
+                </li>
+              </ul>
+            </li>
+            <li class="forms"><a href="http://se7en.dev/forms">
+                            <span></span>Forms</a>
+            </li>
+            <li class="tables"><a class="current" href="tables">
+                            <span></span>Tables</a>
+            </li>
+            <li class="charts"><a href="http://se7en.dev/charts">
+                            <span></span>Charts</a>
+            </li>
+            <li class="gallery"><a href="http://se7en.dev/gallery">
+                            <span></span>Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Navigation --> 
+    <div class="container-fluid">
+      <div class="page-title">
+        <h1>
+          Tables
+        </h1>
+      </div>
+      <!-- DataTables Example -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="widget-container fluid-height clearfix">
+            <div class="heading">
+              <i class="icon-table"></i>DataTable with Sorting
+            </div>
+            <div class="widget-content padded clearfix">
+              <table class="table table-bordered table-striped" id="dataTable1">
+                <thead>
+                  <th class="check-header hidden-xs"></th>
+                  <th>
+                    First Name
+                  </th>
+                  <th>
+                    Last Name
+                  </th>
+                  <th class="hidden-xs">
+                    Email
+                  </th>
+                  <th class="hidden-xs">
+                    Date Added
+                  </th>
+                  <th class="hidden-xs">
+                    Status
+                  </th>
+                  <th></th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      Robert
+                    </td>
+                    <td>
+                      Kelso
+                    </td>
+                    <td class="hidden-xs">
+                      robert@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      John
+                    </td>
+                    <td>
+                      Dorian
+                    </td>
+                    <td class="hidden-xs">
+                      john@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-warning">Pending</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      Olivia
+                    </td>
+                    <td>
+                      Benson
+                    </td>
+                    <td class="hidden-xs">
+                      olivia@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      Elliot
+                    </td>
+                    <td>
+                      Stabler
+                    </td>
+                    <td class="hidden-xs">
+                      elliot@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      Maggie
+                    </td>
+                    <td>
+                      Smith
+                    </td>
+                    <td class="hidden-xs">
+                      maggie@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-warning">Pending</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      Sara
+                    </td>
+                    <td>
+                      Johnson
+                    </td>
+                    <td class="hidden-xs">
+                      sara@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-danger">Rejected</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      Michael
+                    </td>
+                    <td>
+                      Gold
+                    </td>
+                    <td class="hidden-xs">
+                      michael@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      Rita
+                    </td>
+                    <td>
+                      Johnson
+                    </td>
+                    <td class="hidden-xs">
+                      rita@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      Dexter
+                    </td>
+                    <td>
+                      Morgan
+                    </td>
+                    <td class="hidden-xs">
+                      dexter@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      Ben
+                    </td>
+                    <td>
+                      Miller
+                    </td>
+                    <td class="hidden-xs">
+                      ben@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-warning">Pending</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      Barbara
+                    </td>
+                    <td>
+                      Fisk
+                    </td>
+                    <td class="hidden-xs">
+                      barbara@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-warning">Pending</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      Jack
+                    </td>
+                    <td>
+                      McCoy
+                    </td>
+                    <td class="hidden-xs">
+                      jack@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-danger">Rejected</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      Karen
+                    </td>
+                    <td>
+                      Fuller
+                    </td>
+                    <td class="hidden-xs">
+                      karen@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="check hidden-xs">
+                      <input name="optionsRadios1" type="checkbox" value="option1" />
+                    </td>
+                    <td>
+                      Denise
+                    </td>
+                    <td>
+                      Compton
+                    </td>
+                    <td class="hidden-xs">
+                      denise@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                    <td class="actions">
+                      <div class="action-buttons">
+                        <a class="table-actions" href="tables"><i class="icon-eye-open"></i></a><a class="table-actions" href="tables"><i class="icon-pencil"></i></a><a class="table-actions" href="tables"><i class="icon-trash"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end DataTables Example -->
+      <div class="row">
+        <!-- Basic Table -->
+        <div class="col-lg-6">
+          <div class="widget-container fluid-height clearfix">
+            <div class="heading">
+              <i class="icon-table"></i>Basic Table
+            </div>
+            <div class="widget-content padded clearfix">
+              <table class="table">
+                <thead>
+                  <th>
+                    First Name
+                  </th>
+                  <th>
+                    Last Name
+                  </th>
+                  <th>
+                    Email
+                  </th>
+                  <th class="hidden-xs">
+                    Date Added
+                  </th>
+                  <th class="hidden-xs">
+                    Status
+                  </th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Robert
+                    </td>
+                    <td>
+                      Kelso
+                    </td>
+                    <td>
+                      robert@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      John
+                    </td>
+                    <td>
+                      Dorian
+                    </td>
+                    <td>
+                      john@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-warning">Pending</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Olivia
+                    </td>
+                    <td>
+                      Benson
+                    </td>
+                    <td>
+                      olivia@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Elliot
+                    </td>
+                    <td>
+                      Stabler
+                    </td>
+                    <td>
+                      elliot@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-danger">Rejected</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Maggie
+                    </td>
+                    <td>
+                      Smith
+                    </td>
+                    <td>
+                      maggie@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- end Basic Table --><!-- Bordered Table -->
+        <div class="col-lg-6">
+          <div class="widget-container fluid-height clearfix">
+            <div class="heading">
+              <i class="icon-table"></i>Bordered Table
+            </div>
+            <div class="widget-content padded clearfix">
+              <table class="table table-bordered">
+                <thead>
+                  <th>
+                    First Name
+                  </th>
+                  <th>
+                    Last Name
+                  </th>
+                  <th>
+                    Email
+                  </th>
+                  <th class="hidden-xs">
+                    Date Added
+                  </th>
+                  <th class="hidden-xs">
+                    Status
+                  </th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Robert
+                    </td>
+                    <td>
+                      Kelso
+                    </td>
+                    <td>
+                      robert@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      John
+                    </td>
+                    <td>
+                      Dorian
+                    </td>
+                    <td>
+                      john@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-warning">Pending</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Olivia
+                    </td>
+                    <td>
+                      Benson
+                    </td>
+                    <td>
+                      olivia@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Elliot
+                    </td>
+                    <td>
+                      Stabler
+                    </td>
+                    <td>
+                      elliot@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-danger">Rejected</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Maggie
+                    </td>
+                    <td>
+                      Smith
+                    </td>
+                    <td>
+                      maggie@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- end Bordered Table -->
+      </div>
+      <div class="row">
+        <!-- Striped Table -->
+        <div class="col-lg-6">
+          <div class="widget-container fluid-height clearfix">
+            <div class="heading">
+              <i class="icon-table"></i>Striped Table
+            </div>
+            <div class="widget-content padded clearfix">
+              <table class="table table-striped">
+                <thead>
+                  <th>
+                    First Name
+                  </th>
+                  <th>
+                    Last Name
+                  </th>
+                  <th>
+                    Email
+                  </th>
+                  <th class="hidden-xs">
+                    Date Added
+                  </th>
+                  <th class="hidden-xs">
+                    Status
+                  </th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Robert
+                    </td>
+                    <td>
+                      Kelso
+                    </td>
+                    <td>
+                      robert@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      John
+                    </td>
+                    <td>
+                      Dorian
+                    </td>
+                    <td>
+                      john@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-warning">Pending</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Olivia
+                    </td>
+                    <td>
+                      Benson
+                    </td>
+                    <td>
+                      olivia@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Elliot
+                    </td>
+                    <td>
+                      Stabler
+                    </td>
+                    <td>
+                      elliot@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-danger">Rejected</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Maggie
+                    </td>
+                    <td>
+                      Smith
+                    </td>
+                    <td>
+                      maggie@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- end Striped Table --><!-- Condensed Table -->
+        <div class="col-lg-6">
+          <div class="widget-container fluid-height clearfix">
+            <div class="heading">
+              <i class="icon-table"></i>Condensed Table
+            </div>
+            <div class="widget-content padded clearfix">
+              <table class="table table-condensed">
+                <thead>
+                  <th>
+                    First Name
+                  </th>
+                  <th>
+                    Last Name
+                  </th>
+                  <th>
+                    Email
+                  </th>
+                  <th class="hidden-xs">
+                    Date Added
+                  </th>
+                  <th class="hidden-xs">
+                    Status
+                  </th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Robert
+                    </td>
+                    <td>
+                      Kelso
+                    </td>
+                    <td>
+                      robert@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      John
+                    </td>
+                    <td>
+                      Dorian
+                    </td>
+                    <td>
+                      john@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-warning">Pending</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Olivia
+                    </td>
+                    <td>
+                      Benson
+                    </td>
+                    <td>
+                      olivia@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Elliot
+                    </td>
+                    <td>
+                      Stabler
+                    </td>
+                    <td>
+                      elliot@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-danger">Rejected</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Maggie
+                    </td>
+                    <td>
+                      Smith
+                    </td>
+                    <td>
+                      maggie@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Lavar
+                    </td>
+                    <td>
+                      Burton
+                    </td>
+                    <td>
+                      lavar@gmail.com
+                    </td>
+                    <td class="hidden-xs">
+                      8-15-2013
+                    </td>
+                    <td class="hidden-xs">
+                      <span class="label label-success">Approved</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <!-- end Condensed Table -->
+      </div>
+    </div>
+  </body>
+</html>

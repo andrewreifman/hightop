@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      se7en - Dashboard
+    </title>
+    <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all" rel="stylesheet" /><link href="assets/application.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/isotope.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/normalize.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/fullcalendar.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/datatables.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/preview_component.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/prettify.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/wizard.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/classyscroll.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.fancybox.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.fancybox-buttons.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.fancybox-thumbs.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/fancybox.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/select2.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/color/green.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/color/orange.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/color/magenta.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/color/gray.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.sidr.light.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.sidr.dark.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/bootstrap.min.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/style.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/pygments.css?body=1" media="all" rel="stylesheet" /><link href="assets/color/green.css?body=1" media="all" rel="alternate stylesheet" title="green-theme" /><link href="assets/color/orange.css?body=1" media="all" rel="alternate stylesheet" title="orange-theme" /><link href="assets/color/magenta.css?body=1" media="all" rel="alternate stylesheet" title="magenta-theme" /><link href="assets/color/gray.css?body=1" media="all" rel="alternate stylesheet" title="gray-theme" /><script src="assets/jquery.js?body=1"></script>
+    <script src="assets/jquery_ujs.js?body=1"></script>
+    <script src="assets/bootstrap.min.js?body=1"></script>
+    <script src="assets/jquery.mousewheel.js?body=1"></script>
+    <script src="assets/jquery.classyscroll.js?body=1"></script>
+    <script src="assets/jquery.vmap.min.js?body=1"></script>
+    <script src="assets/jquery.vmap.sampledata.js?body=1"></script>
+    <script src="assets/jquery.vmap.world.js?body=1"></script>
+    <script src="assets/fullcalendar.min.js?body=1"></script>
+    <script src="assets/gcal.js?body=1"></script>
+    <script src="assets/prettify.js?body=1"></script>
+    <script src="assets/dataTables/jquery.dataTables.js?body=1"></script>
+    <script src="assets/jquery.sparkline.min.js?body=1"></script>
+    <script src="assets/jquery.easy-pie-chart.js?body=1"></script>
+    <script src="assets/excanvas.min.js?body=1"></script>
+    <script src="assets/jquery.isotope.min.js?body=1"></script>
+    <script src="assets/modernizr.custom.js?body=1"></script>
+    <script src="assets/jquery.fancybox.js?body=1"></script>
+    <script src="assets/jquery.fancybox-buttons.js?body=1"></script>
+    <script src="assets/jquery.fancybox-thumbs.js?body=1"></script>
+    <script src="assets/jquery.fancybox-media.js?body=1"></script>
+    <script src="assets/fancybox.js?body=1"></script>
+    <script src="assets/jquery.sidr.min.js?body=1"></script>
+    <script src="assets/select2.js?body=1"></script>
+    <script src="assets/styleswitcher.js?body=1"></script>
+    <script src="assets/main.js?body=1"></script>
+    <script src="assets/application.js?body=1"></script><meta content="authenticity_token" name="csrf-param" />
+    <meta content="oxUCYYQK1Gi9sej371qeL67FNg2bjeomXb1JQ8mlmgo=" name="csrf-token" />
+    <meta content="width=device-width, initial-scale=1.0, charset=utf-8" name="viewport" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="navbar navbar-fixed-top">
+      <div class="container-fluid top-bar">
+        <div class="pull-right">
+          <ul class="nav navbar-nav pull-right">
+            <li class="dropdown notifications hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="buttons#"><span>Notifications</span>
+                <p class="counter">
+                  4
+                </p>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="buttons">
+                                    <i class="icon-user"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New user added: Jane Smith</a>
+                </li>
+                <li><a href="buttons">
+                                    <i class="icon-dashboard"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    Sales targets available</a>
+                </li>
+                <li><a href="buttons">
+                                    <i class="icon-pencil"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New performance metric added</a>
+                </li>
+                <li><a href="buttons">
+                                    <i class="icon-dashboard"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New growth data available</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown messages hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="buttons#"><span>Messages</span>
+                <p class="counter">
+                  3
+                </p>
+              </a>
+              <ul class="dropdown-menu messages">
+                <li><a href="buttons">
+                                    <img alt="Avatar male2" height="34" src="assets/avatar-male2.png" width="34" />Could we meet today? I wanted...</a>
+                </li>
+                <li><a href="buttons">
+                                    <img alt="Avatar female" height="34" src="assets/avatar-female.png" width="34" />Important data needs your analysis...</a>
+                </li>
+                <li><a href="buttons">
+                                    <img alt="Avatar male2" height="34" src="assets/avatar-male2.png" width="34" />Buy Se7en today, it's a great theme...</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown settings hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="buttons#"><span>Settings</span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="settings-link blue" href="javascript:chooseStyle('none', 30)"><span></span>Blue</a>
+                </li>
+                <li>
+                  <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)"><span></span>Green</a>
+                </li>
+                <li>
+                  <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)"><span></span>Orange</a>
+                </li>
+                <li>
+                  <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)"><span></span>Magenta</a>
+                </li>
+                <li>
+                  <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)"><span></span>Gray</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown user hidden-xs"><a class="dropdown-toggle" data-toggle="dropdown" href="buttons#">
+                            <img alt="Avatar male" height="34" src="assets/avatar-male.jpg" width="34" />John Smith<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="buttons#">
+                                    <i class="icon-user"></i>My Account</a>
+                </li>
+                <li><a href="buttons#">
+                                    <i class="icon-gear"></i>Account Settings</a>
+                </li>
+                <li><a href="http://se7en.dev/">
+                                    <i class="icon-signout"></i>Logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="http://se7en.dev/">se7en</a>
+        <form class="navbar-form form-inline col-lg-2 hidden-xs">
+          <input class="form-control" placeholder="Search" type="text" />
+        </form>
+      </div>
+      <div class="container-fluid main-nav clearfix">
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="dashboard"><a href="http://se7en.dev/">
+                            <span></span>Dashboard</a>
+            </li>
+            <li class="dropdown ui current"><a class="current" data-toggle="dropdown" href="buttons#">
+                            <span></span>UI<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="current" href="buttons">Buttons</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/icons">Icons</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/components">Components</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/widgets">Widgets</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/typo">Typography</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/grid">Grid Layout</a>
+                </li>
+              </ul>
+            </li>
+            <li class="forms"><a href="http://se7en.dev/forms">
+                            <span></span>Forms</a>
+            </li>
+            <li class="tables"><a href="http://se7en.dev/tables">
+                            <span></span>Tables</a>
+            </li>
+            <li class="charts"><a href="http://se7en.dev/charts">
+                            <span></span>Charts</a>
+            </li>
+            <li class="gallery"><a href="http://se7en.dev/gallery">
+                            <span></span>Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Navigation --> 
+    <div class="container-fluid">
+      <div class="page-title">
+        <h1>
+          Buttons
+        </h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="widget-container fluid-height clearfix">
+            <div class="col-lg-6">
+              <div class="heading">
+                <i class="icon-link"></i>Standard Buttons
+              </div>
+              <div class="widget-content padded">
+                <div class="row">
+                  <button class="btn btn-lg btn-default">Default</button><button class="btn btn-lg btn-primary">Primary</button><button class="btn btn-lg btn-success">Success</button><button class="btn btn-lg btn-info">Info</button><button class="btn btn-lg btn-warning">Caution</button><button class="btn btn-lg btn-danger">Danger</button>
+                </div>
+                <div class="row">
+                  <button class="btn btn-default">Default</button><button class="btn btn-primary">Primary</button><button class="btn btn-success">Success</button><button class="btn btn-info">Info</button><button class="btn btn-warning">Caution</button><button class="btn btn-danger">Danger</button>
+                </div>
+                <div class="row">
+                  <button class="btn btn-xs btn-default">Default</button><button class="btn btn-xs btn-primary">Primary</button><button class="btn btn-xs btn-success">Success</button><button class="btn btn-xs btn-info">Info</button><button class="btn btn-xs btn-warning">Caution</button><button class="btn btn-xs btn-danger">Danger</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="heading">
+                <i class="icon-link"></i>Standard Outlined Buttons
+              </div>
+              <div class="widget-content padded">
+                <div class="row">
+                  <button class="btn btn-lg btn-default-outline">Default</button><button class="btn btn-lg btn-primary-outline">Primary</button><button class="btn btn-lg btn-success-outline">Success</button><button class="btn btn-lg btn-info-outline">Info</button><button class="btn btn-lg btn-warning-outline">Caution</button><button class="btn btn-lg btn-danger-outline">Danger</button>
+                </div>
+                <div class="row">
+                  <button class="btn btn-default-outline">Default</button><button class="btn btn-primary-outline">Primary</button><button class="btn btn-success-outline">Success</button><button class="btn btn-info-outline">Info</button><button class="btn btn-warning-outline">Caution</button><button class="btn btn-danger-outline">Danger</button>
+                </div>
+                <div class="row">
+                  <button class="btn btn-xs btn-default-outline">Default</button><button class="btn btn-xs btn-primary-outline">Primary</button><button class="btn btn-xs btn-success-outline">Success</button><button class="btn btn-xs btn-info-outline">Info</button><button class="btn btn-xs btn-warning-outline">Caution</button><button class="btn btn-xs btn-danger-outline">Danger</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="widget-container fluid-height clearfix">
+            <div class="col-lg-6">
+              <div class="heading">
+                <i class="icon-reorder"></i>Button Dropdowns
+              </div>
+              <div class="widget-content padded">
+                <div class="row">
+                  <div class="btn-group">
+                    <button class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-lg btn-primary dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-lg btn-success dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-lg btn-info dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-lg btn-warning dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-lg btn-danger dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="btn-group">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="btn-group">
+                    <button class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-xs btn-primary dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-xs btn-success dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-xs btn-info dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-xs btn-warning dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-xs btn-danger dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="heading">
+                <i class="icon-reorder"></i>Outlined Button Dropdowns
+              </div>
+              <div class="widget-content padded">
+                <div class="row">
+                  <div class="btn-group">
+                    <button class="btn btn-lg btn-default-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-lg btn-primary-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-lg btn-success-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-lg btn-info-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-lg btn-warning-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-lg btn-danger-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="btn-group">
+                    <button class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-primary-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-success-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-info-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-warning-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-danger-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="btn-group">
+                    <button class="btn btn-xs btn-default-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-xs btn-primary-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-xs btn-success-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-xs btn-info-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-xs btn-warning-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-xs btn-danger-outline dropdown-toggle" data-toggle="dropdown">Action<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="widget-container fluid-height clearfix">
+            <div class="col-lg-6">
+              <div class="heading">
+                <i class="icon-reorder"></i>Split Button Dropdowns
+              </div>
+              <div class="widget-content padded">
+                <div class="row">
+                  <div class="btn-group">
+                    <button class="btn btn-default">Action</button><button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-primary">Action</button><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-success">Action</button><button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-info">Action</button><button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-warning">Action</button><button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-danger">Action</button><button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="btn-group dropup">
+                    <button class="btn btn-default">Action</button><button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropup">
+                    <button class="btn btn-primary">Action</button><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropup">
+                    <button class="btn btn-success">Action</button><button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropup">
+                    <button class="btn btn-info">Action</button><button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropup">
+                    <button class="btn btn-warning">Action</button><button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropup">
+                    <button class="btn btn-danger">Action</button><button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="heading">
+                <i class="icon-reorder"></i>Outlined Split Button Dropdowns
+              </div>
+              <div class="widget-content padded">
+                <div class="row">
+                  <div class="btn-group">
+                    <button class="btn btn-default-outline">Action</button><button class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-primary-outline">Action</button><button class="btn btn-primary-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-success-outline">Action</button><button class="btn btn-success-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-info-outline">Action</button><button class="btn btn-info-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-warning-outline">Action</button><button class="btn btn-warning-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-danger-outline">Action</button><button class="btn btn-danger-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="btn-group dropup">
+                    <button class="btn btn-default-outline">Action</button><button class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropup">
+                    <button class="btn btn-primary-outline">Action</button><button class="btn btn-primary-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropup">
+                    <button class="btn btn-success-outline">Action</button><button class="btn btn-success-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropup">
+                    <button class="btn btn-info-outline">Action</button><button class="btn btn-info-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropup">
+                    <button class="btn btn-warning-outline">Action</button><button class="btn btn-warning-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group dropup">
+                    <button class="btn btn-danger-outline">Action</button><button class="btn btn-danger-outline dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="widget-container fluid-height clearfix">
+            <div class="col-lg-6">
+              <div class="heading">
+                <i class="icon-reorder"></i>Icon Buttons 
+              </div>
+              <div class="widget-content padded">
+                <div class="row">
+                  <button class="btn btn-default"><i class="icon-home"></i>Home</button><button class="btn btn-primary"><i class="icon-user"></i>My Profile</button><button class="btn btn-success"><i class="icon-cog"></i>Settings</button><button class="btn btn-info"><i class="icon-cloud-download"></i>Download</button><button class="btn btn-warning"><i class="icon-warning-sign"></i>Warning</button><button class="btn btn-danger"><i class="icon-trash"></i>Delete</button>
+                </div>
+                <div class="row">
+                  <div class="btn-group">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="icon-reorder"></i>Options<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="icon-reorder"></i>Options<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><i class="icon-reorder"></i>Options<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><i class="icon-reorder"></i>Options<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><i class="icon-reorder"></i>Options<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="heading">
+                <i class="icon-reorder"></i>Outlined Icon Buttons
+              </div>
+              <div class="widget-content padded">
+                <div class="row">
+                  <button class="btn btn-default-outline"><i class="icon-home"></i>Home</button><button class="btn btn-primary-outline"><i class="icon-user"></i>My Profile</button><button class="btn btn-success-outline"><i class="icon-cog"></i>Settings</button><button class="btn btn-info-outline"><i class="icon-cloud-download"></i>Download</button><button class="btn btn-warning-outline"><i class="icon-warning-sign"></i>Warning</button><button class="btn btn-danger-outline"><i class="icon-trash"></i>Delete</button>
+                </div>
+                <div class="row">
+                  <div class="btn-group">
+                    <button class="btn btn-default-outline dropdown-toggle" data-toggle="dropdown"><i class="icon-reorder"></i>Options<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-primary-outline dropdown-toggle" data-toggle="dropdown"><i class="icon-reorder"></i>Options<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-success-outline dropdown-toggle" data-toggle="dropdown"><i class="icon-reorder"></i>Options<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-info-outline dropdown-toggle" data-toggle="dropdown"><i class="icon-reorder"></i>Options<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="btn-group">
+                    <button class="btn btn-warning-outline dropdown-toggle" data-toggle="dropdown"><i class="icon-reorder"></i>Options<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="buttons#"><i class="icon-plus-sign"></i>New Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-edit"></i>Edit Item</a>
+                      </li>
+                      <li>
+                        <a href="buttons#"><i class="icon-remove"></i>Remove Item</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="widget-container fluid-height clearfix">
+            <div class="col-lg-6">
+              <div class="heading">
+                <i class="icon-reorder"></i>Block Buttons
+              </div>
+              <div class="widget-content padded">
+                <button class="btn btn-lg btn-block btn-default">Submit</button><button class="btn btn-lg btn-block btn-primary">Submit</button>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="heading">
+                <i class="icon-reorder"></i>Outlined Block Buttons
+              </div>
+              <div class="widget-content padded">
+                <button class="btn btn-lg btn-block btn-default-outline">Submit</button><button class="btn btn-lg btn-block btn-primary-outline">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
