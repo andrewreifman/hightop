@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      se7en - Dashboard
+    </title>
+    <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all" rel="stylesheet" /><link href="assets/application-3a504bd2cb1c87334a074f570fa594d5.css" media="all" rel="stylesheet" /><link href="http://se7en.herokuapp.com/assets/color/green-52c35ba11d14d5433f34589ec836011d.css" media="all" rel="alternate stylesheet" title="green-theme" /><link href="http://se7en.herokuapp.com/assets/color/orange-e874f6807aa6b3309d535295a334e56e.css" media="all" rel="alternate stylesheet" title="orange-theme" /><link href="http://se7en.herokuapp.com/assets/color/magenta-a316865e15b8328d48da1a80bb58b651.css" media="all" rel="alternate stylesheet" title="magenta-theme" /><link href="http://se7en.herokuapp.com/assets/color/gray-27fbe537808e1516c7d9822e5b931cd3.css" media="all" rel="alternate stylesheet" title="gray-theme" /><script src="assets/application-217981b7bbc17d477439afb263998c5c.js"></script><meta content="authenticity_token" name="csrf-param" />
+    <meta content="4HeUJPrD9WS0RA13rJfAh3aN+qszdpDlz+bJHn/6NRY=" name="csrf-token" />
+    <meta content="width=device-width, initial-scale=1.0, charset=utf-8" name="viewport" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="navbar navbar-fixed-top">
+      <div class="container-fluid top-bar">
+        <div class="pull-right">
+          <ul class="nav navbar-nav pull-right">
+            <li class="dropdown notifications hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="charts#"><span>Notifications</span>
+                <p class="counter">
+                  4
+                </p>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="charts">
+                                    <i class="icon-user"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New user added: Jane Smith</a>
+                </li>
+                <li><a href="charts">
+                                    <i class="icon-dashboard"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    Sales targets available</a>
+                </li>
+                <li><a href="charts">
+                                    <i class="icon-pencil"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New performance metric added</a>
+                </li>
+                <li><a href="charts">
+                                    <i class="icon-dashboard"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New growth data available</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown messages hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="charts#"><span>Messages</span>
+                <p class="counter">
+                  3
+                </p>
+              </a>
+              <ul class="dropdown-menu messages">
+                <li><a href="charts">
+                                    <img alt="Avatar male2" height="34" src="assets/avatar-male2-37a4de143ef291aa6f7ac19241dafc98.png" width="34" />Could we meet today? I wanted...</a>
+                </li>
+                <li><a href="charts">
+                                    <img alt="Avatar female" height="34" src="assets/avatar-female-96e6d31022c429e7230a40bbb3ca5362.png" width="34" />Important data needs your analysis...</a>
+                </li>
+                <li><a href="charts">
+                                    <img alt="Avatar male2" height="34" src="assets/avatar-male2-37a4de143ef291aa6f7ac19241dafc98.png" width="34" />Buy Se7en today, it's a great theme...</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown settings hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="charts#"><span>Settings</span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="settings-link blue" href="javascript:chooseStyle('none', 30)"><span></span>Blue</a>
+                </li>
+                <li>
+                  <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)"><span></span>Green</a>
+                </li>
+                <li>
+                  <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)"><span></span>Orange</a>
+                </li>
+                <li>
+                  <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)"><span></span>Magenta</a>
+                </li>
+                <li>
+                  <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)"><span></span>Gray</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown user hidden-xs"><a class="dropdown-toggle" data-toggle="dropdown" href="charts#">
+                            <img alt="Avatar male" height="34" src="assets/avatar-male-411b6fd13a92f00ea1b04581484b638b.jpg" width="34" />John Smith<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="charts#">
+                                    <i class="icon-user"></i>My Account</a>
+                </li>
+                <li><a href="charts#">
+                                    <i class="icon-gear"></i>Account Settings</a>
+                </li>
+                <li><a href="http://se7en.herokuapp.com/">
+                                    <i class="icon-signout"></i>Logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="http://se7en.herokuapp.com/">se7en</a>
+        <form class="navbar-form form-inline col-lg-2 hidden-xs">
+          <input class="form-control" placeholder="Search" type="text" />
+        </form>
+      </div>
+      <div class="container-fluid main-nav clearfix">
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="dashboard"><a href="http://se7en.herokuapp.com/">
+                            <span></span>Dashboard</a>
+            </li>
+            <li class="dropdown ui"><a data-toggle="dropdown" href="charts#">
+                            <span></span>UI<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="http://se7en.herokuapp.com/buttons">Buttons</a>
+                </li>
+                <li>
+                  <a href="http://se7en.herokuapp.com/icons">Icons</a>
+                </li>
+                <li>
+                  <a href="http://se7en.herokuapp.com/components">Components</a>
+                </li>
+                <li>
+                  <a href="http://se7en.herokuapp.com/widgets">Widgets</a>
+                </li>
+                <li>
+                  <a href="http://se7en.herokuapp.com/typo">Typography</a>
+                </li>
+                <li>
+                  <a href="http://se7en.herokuapp.com/grid">Grid Layout</a>
+                </li>
+              </ul>
+            </li>
+            <li class="forms"><a href="http://se7en.herokuapp.com/forms">
+                            <span></span>Forms</a>
+            </li>
+            <li class="tables"><a href="http://se7en.herokuapp.com/tables">
+                            <span></span>Tables</a>
+            </li>
+            <li class="charts"><a class="current" href="charts">
+                            <span></span>Charts</a>
+            </li>
+            <li class="gallery"><a href="http://se7en.herokuapp.com/gallery">
+                            <span></span>Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Navigation --> 
+    <div class="container-fluid">
+      <div class="page-title">
+        <h1>
+          Charts
+        </h1>
+      </div>
+      <div class="row">
+        <!-- Line Chart -->
+        <div class="col-lg-6">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>Line Charts
+            </div>
+            <div class="widget-content padded">
+              <div class="chart-graph line-chart">
+                <div id="linechart-2">
+                  Loading...
+                </div>
+                <ul class="chart-text-axis">
+                  <li>
+                    1
+                  </li>
+                  <li>
+                    2
+                  </li>
+                  <li>
+                    3
+                  </li>
+                  <li>
+                    4
+                  </li>
+                  <li>
+                    5 
+                  </li>
+                  <li>
+                    6 
+                  </li>
+                  <li>
+                    7 
+                  </li>
+                  <li>
+                    8 
+                  </li>
+                  <li>
+                    9 
+                  </li>
+                  <li>
+                    10 
+                  </li>
+                  <li>
+                    11
+                  </li>
+                  <li>
+                    12
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end Line Chart --><!-- Line Chart -->
+        <div class="col-lg-6">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>Line chart
+            </div>
+            <div class="widget-content padded">
+              <div class="chart-graph line-chart">
+                <div id="linechart-3">
+                  Loading...
+                </div>
+                <ul class="chart-text-axis">
+                  <li>
+                    1
+                  </li>
+                  <li>
+                    2
+                  </li>
+                  <li>
+                    3
+                  </li>
+                  <li>
+                    4
+                  </li>
+                  <li>
+                    5 
+                  </li>
+                  <li>
+                    6 
+                  </li>
+                  <li>
+                    7 
+                  </li>
+                  <li>
+                    8 
+                  </li>
+                  <li>
+                    9 
+                  </li>
+                  <li>
+                    10 
+                  </li>
+                  <li>
+                    11
+                  </li>
+                  <li>
+                    12
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end Line Chart -->
+      </div>
+      <div class="row">
+        <!-- Donut Charts -->
+        <div class="col-lg-8">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>Donut Charts
+            </div>
+            <div class="widget-content clearfix">
+              <div class="col-sm-4">
+                <div class="pie-chart1 pie-chart pie-number" data-percent="87">
+                  87%
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="pie-chart2 pie-chart pie-number" data-percent="26">
+                  26%
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="pie-chart3 pie-chart pie-number" data-percent="54">
+                  54%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end Donut Charts --><!-- Pie Chart -->
+        <div class="col-lg-4">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>Pie Chart
+            </div>
+            <div class="widget-content padded">
+              <div class="pie-chart">
+                <div id="pie-chart"></div>
+                <ul class="chart-key">
+                  <li>
+                    <span class="green"></span>Category 1
+                  </li>
+                  <li>
+                    <span class="orange"></span>Category 2
+                  </li>
+                  <li>
+                    <span class="red"></span>Category 3
+                  </li>
+                  <li>
+                    <span class="blue"></span>Category 4
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end Pie Chart -->
+      </div>
+      <div class="row">
+        <!-- Composite Graph -->
+        <div class="col-lg-6">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>Composite Graph
+            </div>
+            <div class="widget-content padded text-center">
+              <div id="composite-chart-1">
+                Loading...
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end Composite Graph --><!-- Composite Graph -->
+        <div class="col-lg-6">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>Composite Graph
+            </div>
+            <div class="widget-content padded">
+              <div id="linechart-1">
+                Loading...
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end Composite Graph -->
+      </div>
+    </div>
+  </body>
+</html>

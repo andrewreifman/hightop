@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      se7en - Dashboard
+    </title>
+    <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all" rel="stylesheet" /><link href="assets/application.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/isotope.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/normalize.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/fullcalendar.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/datatables.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/preview_component.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/prettify.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/wizard.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/classyscroll.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.fancybox.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.fancybox-buttons.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.fancybox-thumbs.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/fancybox.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/select2.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/color/green.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/color/orange.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/color/magenta.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/color/gray.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.sidr.light.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/jquery.sidr.dark.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/bootstrap.min.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/style.css?body=1" media="all" rel="stylesheet" />
+    <link href="assets/pygments.css?body=1" media="all" rel="stylesheet" /><link href="assets/color/green.css?body=1" media="all" rel="alternate stylesheet" title="green-theme" /><link href="assets/color/orange.css?body=1" media="all" rel="alternate stylesheet" title="orange-theme" /><link href="assets/color/magenta.css?body=1" media="all" rel="alternate stylesheet" title="magenta-theme" /><link href="assets/color/gray.css?body=1" media="all" rel="alternate stylesheet" title="gray-theme" /><script src="assets/jquery.js?body=1"></script>
+    <script src="assets/jquery_ujs.js?body=1"></script>
+    <script src="assets/bootstrap.min.js?body=1"></script>
+    <script src="assets/jquery.mousewheel.js?body=1"></script>
+    <script src="assets/jquery.classyscroll.js?body=1"></script>
+    <script src="assets/jquery.vmap.min.js?body=1"></script>
+    <script src="assets/jquery.vmap.sampledata.js?body=1"></script>
+    <script src="assets/jquery.vmap.world.js?body=1"></script>
+    <script src="assets/fullcalendar.min.js?body=1"></script>
+    <script src="assets/gcal.js?body=1"></script>
+    <script src="assets/prettify.js?body=1"></script>
+    <script src="assets/dataTables/jquery.dataTables.js?body=1"></script>
+    <script src="assets/jquery.sparkline.min.js?body=1"></script>
+    <script src="assets/jquery.easy-pie-chart.js?body=1"></script>
+    <script src="assets/excanvas.min.js?body=1"></script>
+    <script src="assets/jquery.isotope.min.js?body=1"></script>
+    <script src="assets/modernizr.custom.js?body=1"></script>
+    <script src="assets/jquery.fancybox.js?body=1"></script>
+    <script src="assets/jquery.fancybox-buttons.js?body=1"></script>
+    <script src="assets/jquery.fancybox-thumbs.js?body=1"></script>
+    <script src="assets/jquery.fancybox-media.js?body=1"></script>
+    <script src="assets/fancybox.js?body=1"></script>
+    <script src="assets/jquery.sidr.min.js?body=1"></script>
+    <script src="assets/select2.js?body=1"></script>
+    <script src="assets/styleswitcher.js?body=1"></script>
+    <script src="assets/main.js?body=1"></script>
+    <script src="assets/application.js?body=1"></script><meta content="authenticity_token" name="csrf-param" />
+    <meta content="CiZq3eK63/AouSVNiW29QLDQUv7kPYHvQlsjFiPjdY8=" name="csrf-token" />
+    <meta content="width=device-width, initial-scale=1.0, charset=utf-8" name="viewport" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="navbar navbar-fixed-top">
+      <div class="container-fluid top-bar">
+        <div class="pull-right">
+          <ul class="nav navbar-nav pull-right">
+            <li class="dropdown notifications hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="forms#"><span>Notifications</span>
+                <p class="counter">
+                  4
+                </p>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="forms">
+                                    <i class="icon-user"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New user added: Jane Smith</a>
+                </li>
+                <li><a href="forms">
+                                    <i class="icon-dashboard"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    Sales targets available</a>
+                </li>
+                <li><a href="forms">
+                                    <i class="icon-pencil"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New performance metric added</a>
+                </li>
+                <li><a href="forms">
+                                    <i class="icon-dashboard"></i>
+                                    <div class="notifications label label-info pull-right">
+                                      New
+                                    </div>
+                                    New growth data available</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown messages hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="forms#"><span>Messages</span>
+                <p class="counter">
+                  3
+                </p>
+              </a>
+              <ul class="dropdown-menu messages">
+                <li><a href="forms">
+                                    <img alt="Avatar male2" height="34" src="assets/avatar-male2.png" width="34" />Could we meet today? I wanted...</a>
+                </li>
+                <li><a href="forms">
+                                    <img alt="Avatar female" height="34" src="assets/avatar-female.png" width="34" />Important data needs your analysis...</a>
+                </li>
+                <li><a href="forms">
+                                    <img alt="Avatar male2" height="34" src="assets/avatar-male2.png" width="34" />Buy Se7en today, it's a great theme...</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown settings hidden-xs">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="forms#"><span>Settings</span></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="settings-link blue" href="javascript:chooseStyle('none', 30)"><span></span>Blue</a>
+                </li>
+                <li>
+                  <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)"><span></span>Green</a>
+                </li>
+                <li>
+                  <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)"><span></span>Orange</a>
+                </li>
+                <li>
+                  <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)"><span></span>Magenta</a>
+                </li>
+                <li>
+                  <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)"><span></span>Gray</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown user hidden-xs"><a class="dropdown-toggle" data-toggle="dropdown" href="forms#">
+                            <img alt="Avatar male" height="34" src="assets/avatar-male.jpg" width="34" />John Smith<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="forms#">
+                                    <i class="icon-user"></i>My Account</a>
+                </li>
+                <li><a href="forms#">
+                                    <i class="icon-gear"></i>Account Settings</a>
+                </li>
+                <li><a href="http://se7en.dev/">
+                                    <i class="icon-signout"></i>Logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="http://se7en.dev/">se7en</a>
+        <form class="navbar-form form-inline col-lg-2 hidden-xs">
+          <input class="form-control" placeholder="Search" type="text" />
+        </form>
+      </div>
+      <div class="container-fluid main-nav clearfix">
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="dashboard"><a href="http://se7en.dev/">
+                            <span></span>Dashboard</a>
+            </li>
+            <li class="dropdown ui"><a data-toggle="dropdown" href="forms#">
+                            <span></span>UI<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="http://se7en.dev/buttons">Buttons</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/icons">Icons</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/components">Components</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/widgets">Widgets</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/typo">Typography</a>
+                </li>
+                <li>
+                  <a href="http://se7en.dev/grid">Grid Layout</a>
+                </li>
+              </ul>
+            </li>
+            <li class="forms"><a class="current" href="forms">
+                            <span></span>Forms</a>
+            </li>
+            <li class="tables"><a href="http://se7en.dev/tables">
+                            <span></span>Tables</a>
+            </li>
+            <li class="charts"><a href="http://se7en.dev/charts">
+                            <span></span>Charts</a>
+            </li>
+            <li class="gallery"><a href="http://se7en.dev/gallery">
+                            <span></span>Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Navigation --> 
+    <div class="container-fluid"><div class="page-title">
+  <h1>
+    Forms
+  </h1>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="widget-container fluid-height clearfix">
+      <div class="heading">
+        <i class="icon-adjust"></i>Form Components
+      </div>
+      <div class="widget-content padded">
+        <div class="col-lg-12">
+          <form action="forms#" class="form-horizontal">
+            <div class="form-group">
+              <label class="control-label col-lg-3">Input</label>
+              <div class="col-lg-9">
+                <input class="form-control" placeholder="Text" type="text" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-lg-3">Dropdown</label>
+              <div class="col-lg-9">
+                <select class="form-control"><option value="Category 1">Option 1</option><option value="Category 2">Option 2</option><option value="Category 3">Option 3</option><option value="Category 4">Option 4</option></select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-lg-3">Multi-Select</label>
+              <div class="col-lg-9">
+                <select class="form-control" multiple=""><option value="Category 1">Option 1</option><option value="Category 2">Option 2</option><option value="Category 3">Option 3</option><option value="Category 4">Option 4</option></select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-lg-3">Username Input</label>
+              <div class="col-lg-9">
+                <div class="input-group">
+                  <span class="input-group-addon">@</span><input class="form-control" placeholder="Username" type="text" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-lg-3">Currency Input</label>
+              <div class="col-lg-9">
+                <div class="input-group">
+                  <span class="input-group-addon">$</span><input class="form-control" type="text"><span class="input-group-addon">.00</span></input>
+                </div>
+              </div>
+            </div>
+            <fieldset disabled="">
+              <div class="form-group">
+                <label class="control-label col-lg-3" for="disabledInput">Disabled Input</label>
+                <div class="col-lg-9">
+                  <input class="form-control" id="disabledInput" placeholder="Disabled input" type="text" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-lg-3" for="disabledInput">Disabled Select</label>
+                <div class="col-lg-9">
+                  <select class="form-control" id="disabledSelect"><option>Disabled select</option></select>
+                </div>
+              </div>
+            </fieldset>
+            <div class="form-group">
+              <label class="control-label col-lg-3">Toggle Switch</label>
+              <div class="col-lg-9 clearfix">
+                <div class="holder">
+                  <input checked="checked" class="check-ios" id="check" name="check" type="checkbox" value="None" /><label for="check"></label><span></span>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-lg-3">Radio Buttons</label>
+              <div class="col-lg-9">
+                <label class="radio"><input name="optionsRadios1" type="radio" value="option1" />Option 1</label><label class="radio"><input checked="" name="optionsRadios1" type="radio" value="option2" />Option 2</label><label class="radio"><input name="optionsRadios1" type="radio" value="option3" />Option 3</label><label class="radio"><input name="optionsRadios1" type="radio" value="option4" />Option 4</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-lg-3">Radio Buttons</label>
+              <div class="col-lg-9">
+                <label class="radio-inline"><input name="optionsRadios2" type="radio" value="option1" />Option 1</label><label class="radio-inline"><input checked="" name="optionsRadios2" type="radio" value="option2" />Option 2</label><label class="radio-inline"><input name="optionsRadios2" type="radio" value="option3" />Option 3</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-lg-3">Checkbox</label>
+              <div class="col-lg-9">
+                <label class="checkbox"><input type="checkbox" value="" />Checkbox 1</label><label class="checkbox"><input type="checkbox" value="" />Checkbox 2</label><label class="checkbox"><input type="checkbox" value="" />Checkbox 3</label><label class="checkbox"><input type="checkbox" value="" />Checkbox 4</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-lg-3">Checkbox</label>
+              <div class="col-lg-9">
+                <label class="checkbox-inline"><input type="checkbox" value="" />Checkbox 1</label><label class="checkbox-inline"><input type="checkbox" value="" />Checkbox 2</label><label class="checkbox-inline"><input type="checkbox" value="" />Checkbox 3</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-lg-3">Textarea</label>
+              <div class="col-lg-9">
+                <textarea class="form-control" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="form-actions col-lg-offset-3 col-lg-9">
+              <button class="btn btn-primary" type="submit">Submit</button><button class="btn btn-default-outline">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="widget-container fluid-height clearfix">
+          <div class="heading">
+            <i class="icon-adjust"></i>Select2 Dropdowns
+          </div>
+          <div class="widget-content padded">
+            <form>
+              <div class="form-group">
+                <label class="control-label col-lg-3">Select2 Dropdown</label>
+                <div class="col-lg-9">
+                  <select class="select2able"><option value="Category 1">Option 1</option><option value="Category 2">Option 2</option><option value="Category 3">Option 3</option><option value="Category 4">Option 4</option></select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="control-label col-lg-3">Multi-Select2</label>
+                <div class="col-lg-9">
+                  <select class="select2able" multiple=""><option value="Category 1">Option 1</option><option value="Category 2">Option 2</option><option value="Category 3">Option 3</option><option value="Category 4">Option 4</option></select>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="widget-container fluid-height clearfix">
+          <div class="heading">
+            <i class="icon-adjust"></i>User Profile
+          </div>
+          <div class="widget-content padded">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputFile">User photo</label><br /><img alt="Avatar male2 lg" class="form-photo" height="150" src="assets/avatar-male2-lg.png" width="150" /><input id="exampleInputFile" type="file" />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail">Email</label><input class="form-control" id="exampleInputEmail" placeholder="Enter email" type="text" />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword">Password</label><input class="form-control" id="exampleInputPassword" placeholder="Password" type="password" />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword">Profile</label><textarea class="form-control" rows="3"></textarea>
+              </div>
+              <button class="btn btn-primary" type="submit">Submit</button><button class="btn btn-default-outline">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="widget-container">
+          <div class="heading">
+            <i class="icon-adjust"></i>Validations
+          </div>
+          <div class="widget-content padded">
+            <div class="form-group has-warning">
+              <label class="control-label" for="inputWarning">Warning</label><input class="form-control" id="inputWarning" type="text" />
+            </div>
+            <div class="form-group has-error">
+              <label class="control-label" for="inputError">Error</label><input class="form-control" id="inputError" type="text" />
+            </div>
+            <div class="form-group has-success">
+              <label class="control-label" for="inputSuccess">Success</label><input class="form-control" id="inputSuccess" type="text" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </body>
+</html>
