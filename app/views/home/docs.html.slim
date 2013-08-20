@@ -66,15 +66,15 @@
 				ul
 					li Clean and Sleek design
 					li 100% Mobile Ready / Responsive Layout
-					li Valid HTML5
+					li Valid HTML5 and CSS3
 					li Cross-browser compatible (Chrome/Safari/Firefox/IE8+)
 					li SASS and COMPASS ready
 					li Built with Bootstrap3
 					li Clean developer friendly markup
 					li Image Gallery
-					li Form Elements
+					li Retina Ready
 					li Custom Buttons and Colors
-					li and much more...
+					li and much more…
 
 	.col-lg-6
 		.widget-container.plugins.fluid-height.list
@@ -111,12 +111,6 @@
 					| Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains dynamic visual elements but the content remains easy to modify.
 				= raw Pygments.highlight("#{render 'html_structure'}")
 
-				/ h3 Containers
-				/ p Each container for all elements is contained with the .widget-container class. Within this class, there is a header and content class. Please place your content in the appropriate area for optimal results. Some containers are modified for specific widgets. If this is the case, you will find an additional class that brings in the appropriate CSS for the modified container.
-
-				/ P NOTE: In nearly all instances, the widget container will also be accompanied with a Bootstrap-powered grid system to identify the overall size and interaction of that container. Below is an example of the statstics data widget on the dashboard of Se7en.
-				/ = raw Pygments.highlight("#{render partial: 'statistics'}")
-
 	.col-lg-12
 		.widget-container.fluid-height
 			.heading
@@ -126,12 +120,8 @@
 				p Much like the HTML for Se7en, the CSS is maintained to be clean and consistent as you travel across the template. Below are some landmarks to look for as you are modifying the theme.
 
 				h3 Structure
-				p This is the text
-				= raw Pygments.highlight("h3\n  line-height: 1.4em", lexer: 'sass')
+				= raw Pygments.highlight("#{render 'css_structure'}")
 				
-				h3 Shortcuts
-				
-				h3 SASS
 
 	.col-lg-6
 		.widget-container.fluid-height
@@ -173,96 +163,41 @@
 			.heading
 				| Javascript
 
-			.widget-content.padded.text-center
-				h3
-					| Sparkline -
-					a href="http://omnipotent.net/jquery.sparkline/#s-about" target="blank" Full documentation
-				p Below are components that you can activate with a short javascript snippet.
-
+			.widget-content.padded
 				ul.list-unstyled
-					li Quick Start
-
-	.col-lg-6
-		.widget-container.fluid-height
-			.heading
-				| Javascript
-
-			.widget-content.padded.text-center
-				h3
-					| Vector maps -
-					a href="http://jqvmap.com/" target="blank" Full documentation
-				p Below are components that you can activate with a short javascript snippet.
-
-				ul.list-unstyled
-					li Quick Start
-
-	.col-lg-6
-		.widget-container.fluid-height
-			.heading
-				| Javascript
-
-			.widget-content.padded.text-center
-				h3
-					| Full Calendar -
-					a href="http://arshaw.com/fullcalendar/" target="blank" Full documentation
-				p Below are components that you can activate with a short javascript snippet.
-
-				ul.list-unstyled
-					li Quick Start
-
-	.col-lg-6
-		.widget-container.fluid-height
-			.heading
-				| Javascript
-
-			.widget-content.padded.text-center
-				h3
-					| Easy Pie Chart -
-					a href="http://rendro.github.io/easy-pie-chart/" target="blank" Full documentation
-				p Below are components that you can activate with a short javascript snippet.
-
-				ul.list-unstyled
-					li Quick Start
-
-	.col-lg-6
-		.widget-container.fluid-height
-			.heading
-				| Javascript
-
-			.widget-content.padded.text-center
-				h3
-					| Isotope -
-					a href="https://datatables.net/" target="blank" Full documentation
-				p Below are components that you can activate with a short javascript snippet.
-
-				ul.list-unstyled
-					li Quick Start
-
-	.col-lg-6
-		.widget-container.fluid-height
-			.heading
-				| Javascript
-
-			.widget-content.padded.text-center
-				h3
-					| Fancybox -
-					a href="https://datatables.net/" target="blank" Full documentation
-				p Below are components that you can activate with a short javascript snippet.
-
-				ul.list-unstyled
-					li Quick Start
-
-	.col-lg-6
-		.widget-container.fluid-height
-			.heading
-				| Javascript
-
-			.widget-content.padded.text-center
-				h3
-					| Select2 -
-					a href="https://datatables.net/" target="blank" Full documentation
-				p Below are components that you can activate with a short javascript snippet.
-
-				ul.list-unstyled
-					li Quick Start
-
+					li
+						| Sparkline
+						a href="http://omnipotent.net/jquery.sparkline/#s-about" class="pull-right" target="_blank" Full documentation
+						= raw Pygments.highlight("$('.sparkline').sparkline(options)", lexer: 'javascript')
+					li
+						| Vector maps
+						a href="http://jqvmap.com/" class="pull-right" target="blank" Full documentation
+						= raw Pygments.highlight("$('.map').vectorMap(options)", lexer: 'javascript')
+					li
+						| Full Calendar
+						a href="http://arshaw.com/fullcalendar/" class="pull-right" target="_blank" Full documentation
+						= raw Pygments.highlight("$('.calendar').fullCalendar(options)", lexer: 'javascript')
+					li
+						| Easy Pie Chart
+						a href="http://rendro.github.io/easy-pie-chart/" class="pull-right" target="_blank" Full documentation
+						= raw Pygments.highlight("$('.pie-chart').easyPieChart(options)", lexer: 'javascript')
+					li
+						| DataTables
+						a href="https://datatables.net/" class="pull-right" target="_blank" Full documentation
+						= raw Pygments.highlight("$('.dataTable').dataTable(options)", lexer: 'javascript')
+					li
+						| Isotope
+						a href="http://isotope.metafizzy.co/" class="pull-right" target="_blank" Full documentation
+						= raw Pygments.highlight("$('.isotope').isotope(options)", lexer: 'javascript')
+					li
+						| Fancybox
+						a href="http://fancyapps.com/fancybox/" class="pull-right" target="_blank" Full documentation
+						= raw Pygments.highlight("$('.fancybox').fancybox(options)", lexer: 'javascript')
+					li
+						| Select2
+						a href="http://ivaynberg.github.io/select2/" class="pull-right" target="_blank" Full documentation
+						= raw Pygments.highlight("$('.select2').select2(options)", lexer: 'javascript')
+					li
+						| Classy Scroll
+						a href="http://www.class.pm/projects/jquery/classyscroll/" class="pull-right" target="_blank" Full documentation
+						= raw Pygments.highlight("$('.scroll-area').ClassyScroll(options)", lexer: 'javascript')
