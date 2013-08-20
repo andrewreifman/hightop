@@ -241,7 +241,7 @@ $(document).ready ->
 	  color: "#fff"
 	  hoverOpacity: 0.2
 	  selectedColor: "#fff"
-	  enableZoom: false
+	  enableZoom: true
 	  showTooltip: true
 	  values: sample_data
 	  scaleColors: ["#59cdfe", "#0079fe"]

@@ -27,4 +27,5 @@
  *= require jquery.sidr.dark
  *= require bootstrap.min
  *= require style
+ *= require pygments
  */

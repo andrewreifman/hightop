@@ -1546,31 +1546,32 @@ th:active
   background: #FFF
   background: rgba(255,255,255,.95)
   color: #666
-  font-family: sans-serif, Verdana
   font-size: smaller
+  font-weight: 300
   padding: 4px 6px
   box-shadow: 0 0 2px rgba(0,0,0,.2)
 
 .jqvmap-zoomin, .jqvmap-zoomout
   position: absolute
   left: 10px
-  -webkit-border-radius: 3px
-  -moz-border-radius: 3px
-  border-radius: 3px
-  background: #000000
-  padding: 3px
+  border-radius: 0px
+  background: #c2c2c2
+  padding: 8px
   color: white
-  width: 10px
-  height: 10px
+  width: 22px
+  height: 22px
   cursor: pointer
-  line-height: 10px
+  line-height: 5px
   text-align: center
+
+  &:hover, :active
+    background: $blue
 
 .jqvmap-zoomin
   top: 10px
 
 .jqvmap-zoomout
-  top: 30px
+  top: 36px
 
 .jqvmap-region
   cursor: pointer
