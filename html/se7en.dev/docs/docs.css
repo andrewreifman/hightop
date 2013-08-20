@@ -1,0 +1,27 @@
+body{
+  padding-top: 20px; }
+.docs h3 {
+  margin: 20px 0 10px; }
+
+.docs-intro .sharp-nimble {
+  margin: 30px 0 15px;
+  max-width: 80%;
+  height: auto; }
+.docs-intro h2 {
+  margin-bottom: 32px; }
+.docs-intro p {
+  margin-bottom: 25px; }
+.docs-intro .theme-preview {
+  max-width: 100%;
+  height: auto; }
+
+.code-container {
+  width: 100%; }
+
+.docs-what h3 {
+  margin-bottom: 30px; }
+.docs-what [class^="icon-"] {
+  margin-right: 10px;
+  color: #007aff; }
+.docs-what h4 {
+  color: #007aff; }
