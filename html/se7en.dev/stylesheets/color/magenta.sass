@@ -1,0 +1,99 @@
+$magenta: #c741c9
+
+a
+  color: $magenta
+
+.navbar .container-fluid.top-bar form .form-control
+  &:focus
+    border-color: $magenta
+
+.navbar .container-fluid.top-bar .nav > li
+  &.open, &.active, &.open.active
+    > a span
+      background-position: left -112px
+
+  &.messages
+    &.open, &.active, &.open.active
+      > a span
+        background-position: -28px -112px
+
+  &.settings
+    &.open, &.active, &.open.active
+      > a span
+        background-position: -56px -112px
+
+.navbar .container-fluid.main-nav .nav-collapse .nav > li
+  a.current 
+    span
+      background-position: left -112px
+    .caret
+      border-top-color: $magenta
+  &.ui a.current span
+    background-position: -28px -112px
+  &.forms a.current span
+    background-position: -56px -112px
+  &.charts a.current span
+    background-position: -84px -112px
+  &.tables a.current span
+    background-position: -112px -112px
+  &.gallery a.current span
+    background-position: -140px -112px
+
+.navbar .container-fluid.main-nav .nav-collapse .nav > li > a.current
+  color: $magenta
+
+.widget-container .heading
+  color: $magenta
+
+.dropdown-menu li a:hover
+  border-bottom-color: $magenta
+  color: $magenta
+
+.form-control
+  &:focus
+    border-color: $magenta
+
+.stats-container [class^="col-"] .number, .stats-container [class*="col-"] .number
+  color: $magenta
+
+.stats-container
+  [class^="col-"], [class*="col-"]
+    .number
+      .icon
+        background-position: left -114px
+
+        &.visitors
+          background-position: -50px -114px
+        &.money
+          background-position: -100px -114px
+        &.chat-bubbles
+          background-position: -150px -114px
+
+.task-widget input[type="checkbox"]:checked + .task-checkbox
+  color: $magenta
+
+.select2-container-active .select2-choice, .select2-container-active .select2-choices
+  border-color: $magenta
+
+.select2-container-multi.select2-container-active .select2-choices
+  border-color: $magenta
+
+.select2-drop-active
+  border-color: $magenta
+
+.dataTable th
+  color: $magenta
+
+  &.sorting
+    &:after
+      border-top: 5px solid $magenta
+    &:before
+      border-bottom: 5px solid $magenta
+
+  &.sorting_asc
+    &:after
+      border-bottom: 5px solid $magenta
+
+  &.sorting_desc
+    &:after
+      border-top: 5px solid $magenta
