@@ -1,0 +1,4206 @@
+@charset "UTF-8";
+/*
+ *  Font Awesome 3.2.1
+ *  the iconic font designed for Bootstrap
+ *  ------------------------------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation can be
+ *  found at http://fontawesome.io.  Stay up to date on Twitter at
+ *  http://twitter.com/fontawesome.
+ *
+ *  License
+ *  ------------------------------------------------------------------------------
+ *  - The Font Awesome font is licensed under SIL OFL 1.1 -
+ *    http://scripts.sil.org/OFL
+ *  - Font Awesome CSS, LESS, and SASS files are licensed under MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - Font Awesome documentation licensed under CC BY 3.0 -
+ *    http://creativecommons.org/licenses/by/3.0/
+ *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
+ *    "Font Awesome by Dave Gandy - http://fontawesome.io"
+ *
+ *  Author - Dave Gandy
+ *  ------------------------------------------------------------------------------
+ *  Email: dave@fontawesome.io
+ *  Twitter: http://twitter.com/byscuits
+ *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../font/fontawesome-webfont.eot");
+  src: url("../font/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../font/fontawesome-webfont.woff") format("woff"), url("../font/fontawesome-webfont.ttf") format("truetype"), url("../font/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* FONT AWESOME CORE
+ * -------------------------- */
+/* line 39, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em; }
+
+/* line 48, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none; }
+
+/* makes the font 33% larger relative to the icon container */
+/* line 54, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-large:before {
+  vertical-align: -10%;
+  font-size: 1.3333333333333333em; }
+
+/* makes sure icons active on rollover in links */
+/* line 60, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline; }
+
+/* increased font size for icon-large */
+/* line 65, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+[class^="icon-"].icon-fixed-width,
+[class*=" icon-"].icon-fixed-width {
+  display: inline-block;
+  width: 1.1428571428571428em;
+  text-align: right;
+  padding-right: 0.2857142857142857em; }
+
+/* line 72, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+[class^="icon-"].icon-fixed-width.icon-large,
+[class*=" icon-"].icon-fixed-width.icon-large {
+  width: 1.4285714285714286em; }
+
+/* line 75, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icons-ul {
+  margin-left: 2.142857142857143em;
+  list-style-type: none; }
+
+/* line 79, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icons-ul > li {
+  position: relative; }
+
+/* line 82, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icons-ul .icon-li {
+  position: absolute;
+  left: -2.142857142857143em;
+  width: 2.142857142857143em;
+  text-align: center;
+  line-height: inherit; }
+
+/* line 90, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+[class^="icon-"].hide,
+[class*=" icon-"].hide {
+  display: none; }
+
+/* line 93, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-muted {
+  color: #eeeeee; }
+
+/* line 96, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-light {
+  color: #ffffff; }
+
+/* line 99, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-dark {
+  color: #333333; }
+
+/* line 102, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-border {
+  border: solid 1px #eeeeee;
+  padding: .2em .25em .15em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
+
+/* line 109, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-2x {
+  font-size: 2em; }
+
+/* line 112, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-2x.icon-border {
+  border-width: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+/* line 118, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-3x {
+  font-size: 3em; }
+
+/* line 121, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-3x.icon-border {
+  border-width: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
+
+/* line 127, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-4x {
+  font-size: 4em; }
+
+/* line 130, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-4x.icon-border {
+  border-width: 4px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px; }
+
+/* line 136, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-5x {
+  font-size: 5em; }
+
+/* line 139, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-5x.icon-border {
+  border-width: 5px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px; }
+
+/* line 145, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.pull-right {
+  float: right; }
+
+/* line 148, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.pull-left {
+  float: left; }
+
+/* line 152, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+[class^="icon-"].pull-left,
+[class*=" icon-"].pull-left {
+  margin-right: .3em; }
+
+/* line 156, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+[class^="icon-"].pull-right,
+[class*=" icon-"].pull-right {
+  margin-left: .3em; }
+
+/* BOOTSTRAP SPECIFIC CLASSES
+ * -------------------------- */
+/* Bootstrap 2.0 sprites.less reset */
+/* line 163, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0; }
+
+/* more sprites.less reset */
+/* line 187, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"] {
+  background-image: none; }
+
+/* keeps Bootstrap styles with and without icons the same */
+/* line 194, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.btn [class^="icon-"].icon-large,
+.nav [class^="icon-"].icon-large,
+.btn [class*=" icon-"].icon-large,
+.nav [class*=" icon-"].icon-large {
+  line-height: .9em; }
+
+/* line 200, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.btn [class^="icon-"].icon-spin,
+.nav [class^="icon-"].icon-spin,
+.btn [class*=" icon-"].icon-spin,
+.nav [class*=" icon-"].icon-spin {
+  display: inline-block; }
+
+/* line 210, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.nav-tabs [class^="icon-"],
+.nav-pills [class^="icon-"],
+.nav-tabs [class*=" icon-"],
+.nav-pills [class*=" icon-"],
+.nav-tabs [class^="icon-"].icon-large,
+.nav-pills [class^="icon-"].icon-large,
+.nav-tabs [class*=" icon-"].icon-large,
+.nav-pills [class*=" icon-"].icon-large {
+  line-height: .9em; }
+
+/* line 216, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.btn [class^="icon-"].pull-left.icon-2x,
+.btn [class*=" icon-"].pull-left.icon-2x,
+.btn [class^="icon-"].pull-right.icon-2x,
+.btn [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .18em; }
+
+/* line 220, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.btn [class^="icon-"].icon-spin.icon-large,
+.btn [class*=" icon-"].icon-spin.icon-large {
+  line-height: .8em; }
+
+/* line 226, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.btn.btn-small [class^="icon-"].pull-left.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-small [class^="icon-"].pull-right.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .25em; }
+
+/* line 230, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.btn.btn-large [class^="icon-"],
+.btn.btn-large [class*=" icon-"] {
+  margin-top: 0; }
+
+/* line 236, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.btn.btn-large [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .05em; }
+
+/* line 240, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.btn.btn-large [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x {
+  margin-right: .2em; }
+
+/* line 244, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-left: .2em; }
+
+/* Fixes alignment in nav lists */
+/* line 249, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.nav-list [class^="icon-"],
+.nav-list [class*=" icon-"] {
+  line-height: inherit; }
+
+/* EXTRAS
+ * -------------------------- */
+/* Stacked and layered icon */
+/* line 255, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: -35%; }
+
+/* line 264, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-stack [class^="icon-"],
+.icon-stack [class*=" icon-"] {
+  display: block;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  line-height: inherit;
+  *line-height: 2em; }
+
+/* line 274, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-stack .icon-stack-base {
+  font-size: 2em;
+  *line-height: 1em; }
+
+/* Animated rotating icon */
+/* line 279, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-spin {
+  display: inline-block;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear; }
+
+/* Prevent stack and spinners from being taken inline when inside a link */
+/* line 288, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+a .icon-stack,
+a .icon-spin {
+  display: inline-block;
+  text-decoration: none; }
+
+@-moz-keyframes spin {
+  /* line 293, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+  0% {
+    -moz-transform: rotate(0deg); }
+
+  /* line 296, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+  100% {
+    -moz-transform: rotate(359deg); } }
+
+@-webkit-keyframes spin {
+  /* line 300, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+  0% {
+    -webkit-transform: rotate(0deg); }
+
+  /* line 303, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+  100% {
+    -webkit-transform: rotate(359deg); } }
+
+@-o-keyframes spin {
+  /* line 307, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+  0% {
+    -o-transform: rotate(0deg); }
+
+  /* line 310, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+  100% {
+    -o-transform: rotate(359deg); } }
+
+@-ms-keyframes spin {
+  /* line 314, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+  0% {
+    -ms-transform: rotate(0deg); }
+
+  /* line 317, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+  100% {
+    -ms-transform: rotate(359deg); } }
+
+@keyframes spin {
+  /* line 321, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+  0% {
+    transform: rotate(0deg); }
+
+  /* line 324, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+  100% {
+    transform: rotate(359deg); } }
+
+/* Icon rotations and mirroring */
+/* line 328, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-rotate-90:before {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); }
+
+/* line 336, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-rotate-180:before {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); }
+
+/* line 344, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-rotate-270:before {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+
+/* line 352, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-flip-horizontal:before {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1); }
+
+/* line 359, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-flip-vertical:before {
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1); }
+
+/* ensure rotation occurs inside anchor tags */
+/* line 371, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+a .icon-rotate-90:before,
+a .icon-rotate-180:before,
+a .icon-rotate-270:before,
+a .icon-flip-horizontal:before,
+a .icon-flip-vertical:before {
+  display: inline-block; }
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+/* line 376, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-glass:before {
+  content: "\f000"; }
+
+/* line 379, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-music:before {
+  content: "\f001"; }
+
+/* line 382, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-search:before {
+  content: "\f002"; }
+
+/* line 385, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-envelope-alt:before {
+  content: "\f003"; }
+
+/* line 388, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-heart:before {
+  content: "\f004"; }
+
+/* line 391, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-star:before {
+  content: "\f005"; }
+
+/* line 394, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-star-empty:before {
+  content: "\f006"; }
+
+/* line 397, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-user:before {
+  content: "\f007"; }
+
+/* line 400, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-film:before {
+  content: "\f008"; }
+
+/* line 403, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-th-large:before {
+  content: "\f009"; }
+
+/* line 406, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-th:before {
+  content: "\f00a"; }
+
+/* line 409, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-th-list:before {
+  content: "\f00b"; }
+
+/* line 412, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-ok:before {
+  content: "\f00c"; }
+
+/* line 415, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-remove:before {
+  content: "\f00d"; }
+
+/* line 418, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-zoom-in:before {
+  content: "\f00e"; }
+
+/* line 421, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-zoom-out:before {
+  content: "\f010"; }
+
+/* line 425, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-power-off:before,
+.icon-off:before {
+  content: "\f011"; }
+
+/* line 428, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-signal:before {
+  content: "\f012"; }
+
+/* line 432, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-gear:before,
+.icon-cog:before {
+  content: "\f013"; }
+
+/* line 435, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-trash:before {
+  content: "\f014"; }
+
+/* line 438, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-home:before {
+  content: "\f015"; }
+
+/* line 441, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-file-alt:before {
+  content: "\f016"; }
+
+/* line 444, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-time:before {
+  content: "\f017"; }
+
+/* line 447, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-road:before {
+  content: "\f018"; }
+
+/* line 450, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-download-alt:before {
+  content: "\f019"; }
+
+/* line 453, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-download:before {
+  content: "\f01a"; }
+
+/* line 456, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-upload:before {
+  content: "\f01b"; }
+
+/* line 459, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-inbox:before {
+  content: "\f01c"; }
+
+/* line 462, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-play-circle:before {
+  content: "\f01d"; }
+
+/* line 466, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-rotate-right:before,
+.icon-repeat:before {
+  content: "\f01e"; }
+
+/* line 469, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-refresh:before {
+  content: "\f021"; }
+
+/* line 472, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-list-alt:before {
+  content: "\f022"; }
+
+/* line 475, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-lock:before {
+  content: "\f023"; }
+
+/* line 478, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-flag:before {
+  content: "\f024"; }
+
+/* line 481, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-headphones:before {
+  content: "\f025"; }
+
+/* line 484, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-volume-off:before {
+  content: "\f026"; }
+
+/* line 487, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-volume-down:before {
+  content: "\f027"; }
+
+/* line 490, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-volume-up:before {
+  content: "\f028"; }
+
+/* line 493, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-qrcode:before {
+  content: "\f029"; }
+
+/* line 496, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-barcode:before {
+  content: "\f02a"; }
+
+/* line 499, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-tag:before {
+  content: "\f02b"; }
+
+/* line 502, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-tags:before {
+  content: "\f02c"; }
+
+/* line 505, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-book:before {
+  content: "\f02d"; }
+
+/* line 508, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-bookmark:before {
+  content: "\f02e"; }
+
+/* line 511, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-print:before {
+  content: "\f02f"; }
+
+/* line 514, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-camera:before {
+  content: "\f030"; }
+
+/* line 517, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-font:before {
+  content: "\f031"; }
+
+/* line 520, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-bold:before {
+  content: "\f032"; }
+
+/* line 523, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-italic:before {
+  content: "\f033"; }
+
+/* line 526, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-text-height:before {
+  content: "\f034"; }
+
+/* line 529, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-text-width:before {
+  content: "\f035"; }
+
+/* line 532, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-align-left:before {
+  content: "\f036"; }
+
+/* line 535, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-align-center:before {
+  content: "\f037"; }
+
+/* line 538, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-align-right:before {
+  content: "\f038"; }
+
+/* line 541, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-align-justify:before {
+  content: "\f039"; }
+
+/* line 544, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-list:before {
+  content: "\f03a"; }
+
+/* line 547, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-indent-left:before {
+  content: "\f03b"; }
+
+/* line 550, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-indent-right:before {
+  content: "\f03c"; }
+
+/* line 553, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-facetime-video:before {
+  content: "\f03d"; }
+
+/* line 556, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-picture:before {
+  content: "\f03e"; }
+
+/* line 559, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-pencil:before {
+  content: "\f040"; }
+
+/* line 562, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-map-marker:before {
+  content: "\f041"; }
+
+/* line 565, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-adjust:before {
+  content: "\f042"; }
+
+/* line 568, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-tint:before {
+  content: "\f043"; }
+
+/* line 571, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-edit:before {
+  content: "\f044"; }
+
+/* line 574, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-share:before {
+  content: "\f045"; }
+
+/* line 577, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-check:before {
+  content: "\f046"; }
+
+/* line 580, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-move:before {
+  content: "\f047"; }
+
+/* line 583, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-step-backward:before {
+  content: "\f048"; }
+
+/* line 586, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-fast-backward:before {
+  content: "\f049"; }
+
+/* line 589, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-backward:before {
+  content: "\f04a"; }
+
+/* line 592, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-play:before {
+  content: "\f04b"; }
+
+/* line 595, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-pause:before {
+  content: "\f04c"; }
+
+/* line 598, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-stop:before {
+  content: "\f04d"; }
+
+/* line 601, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-forward:before {
+  content: "\f04e"; }
+
+/* line 604, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-fast-forward:before {
+  content: "\f050"; }
+
+/* line 607, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-step-forward:before {
+  content: "\f051"; }
+
+/* line 610, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-eject:before {
+  content: "\f052"; }
+
+/* line 613, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-chevron-left:before {
+  content: "\f053"; }
+
+/* line 616, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-chevron-right:before {
+  content: "\f054"; }
+
+/* line 619, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-plus-sign:before {
+  content: "\f055"; }
+
+/* line 622, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-minus-sign:before {
+  content: "\f056"; }
+
+/* line 625, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-remove-sign:before {
+  content: "\f057"; }
+
+/* line 628, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-ok-sign:before {
+  content: "\f058"; }
+
+/* line 631, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-question-sign:before {
+  content: "\f059"; }
+
+/* line 634, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-info-sign:before {
+  content: "\f05a"; }
+
+/* line 637, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-screenshot:before {
+  content: "\f05b"; }
+
+/* line 640, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-remove-circle:before {
+  content: "\f05c"; }
+
+/* line 643, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-ok-circle:before {
+  content: "\f05d"; }
+
+/* line 646, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-ban-circle:before {
+  content: "\f05e"; }
+
+/* line 649, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-arrow-left:before {
+  content: "\f060"; }
+
+/* line 652, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-arrow-right:before {
+  content: "\f061"; }
+
+/* line 655, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-arrow-up:before {
+  content: "\f062"; }
+
+/* line 658, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-arrow-down:before {
+  content: "\f063"; }
+
+/* line 662, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-mail-forward:before,
+.icon-share-alt:before {
+  content: "\f064"; }
+
+/* line 665, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-resize-full:before {
+  content: "\f065"; }
+
+/* line 668, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-resize-small:before {
+  content: "\f066"; }
+
+/* line 671, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-plus:before {
+  content: "\f067"; }
+
+/* line 674, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-minus:before {
+  content: "\f068"; }
+
+/* line 677, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-asterisk:before {
+  content: "\f069"; }
+
+/* line 680, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-exclamation-sign:before {
+  content: "\f06a"; }
+
+/* line 683, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-gift:before {
+  content: "\f06b"; }
+
+/* line 686, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-leaf:before {
+  content: "\f06c"; }
+
+/* line 689, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-fire:before {
+  content: "\f06d"; }
+
+/* line 692, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-eye-open:before {
+  content: "\f06e"; }
+
+/* line 695, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-eye-close:before {
+  content: "\f070"; }
+
+/* line 698, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-warning-sign:before {
+  content: "\f071"; }
+
+/* line 701, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-plane:before {
+  content: "\f072"; }
+
+/* line 704, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-calendar:before {
+  content: "\f073"; }
+
+/* line 707, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-random:before {
+  content: "\f074"; }
+
+/* line 710, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-comment:before {
+  content: "\f075"; }
+
+/* line 713, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-magnet:before {
+  content: "\f076"; }
+
+/* line 716, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-chevron-up:before {
+  content: "\f077"; }
+
+/* line 719, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-chevron-down:before {
+  content: "\f078"; }
+
+/* line 722, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-retweet:before {
+  content: "\f079"; }
+
+/* line 725, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-shopping-cart:before {
+  content: "\f07a"; }
+
+/* line 728, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-folder-close:before {
+  content: "\f07b"; }
+
+/* line 731, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-folder-open:before {
+  content: "\f07c"; }
+
+/* line 734, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-resize-vertical:before {
+  content: "\f07d"; }
+
+/* line 737, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-resize-horizontal:before {
+  content: "\f07e"; }
+
+/* line 740, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-bar-chart:before {
+  content: "\f080"; }
+
+/* line 743, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-twitter-sign:before {
+  content: "\f081"; }
+
+/* line 746, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-facebook-sign:before {
+  content: "\f082"; }
+
+/* line 749, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-camera-retro:before {
+  content: "\f083"; }
+
+/* line 752, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-key:before {
+  content: "\f084"; }
+
+/* line 756, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-gears:before,
+.icon-cogs:before {
+  content: "\f085"; }
+
+/* line 759, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-comments:before {
+  content: "\f086"; }
+
+/* line 762, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-thumbs-up-alt:before {
+  content: "\f087"; }
+
+/* line 765, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-thumbs-down-alt:before {
+  content: "\f088"; }
+
+/* line 768, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-star-half:before {
+  content: "\f089"; }
+
+/* line 771, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-heart-empty:before {
+  content: "\f08a"; }
+
+/* line 774, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-signout:before {
+  content: "\f08b"; }
+
+/* line 777, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-linkedin-sign:before {
+  content: "\f08c"; }
+
+/* line 780, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-pushpin:before {
+  content: "\f08d"; }
+
+/* line 783, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-external-link:before {
+  content: "\f08e"; }
+
+/* line 786, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-signin:before {
+  content: "\f090"; }
+
+/* line 789, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-trophy:before {
+  content: "\f091"; }
+
+/* line 792, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-github-sign:before {
+  content: "\f092"; }
+
+/* line 795, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-upload-alt:before {
+  content: "\f093"; }
+
+/* line 798, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-lemon:before {
+  content: "\f094"; }
+
+/* line 801, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-phone:before {
+  content: "\f095"; }
+
+/* line 805, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-unchecked:before,
+.icon-check-empty:before {
+  content: "\f096"; }
+
+/* line 808, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-bookmark-empty:before {
+  content: "\f097"; }
+
+/* line 811, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-phone-sign:before {
+  content: "\f098"; }
+
+/* line 814, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-twitter:before {
+  content: "\f099"; }
+
+/* line 817, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-facebook:before {
+  content: "\f09a"; }
+
+/* line 820, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-github:before {
+  content: "\f09b"; }
+
+/* line 823, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-unlock:before {
+  content: "\f09c"; }
+
+/* line 826, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-credit-card:before {
+  content: "\f09d"; }
+
+/* line 829, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-rss:before {
+  content: "\f09e"; }
+
+/* line 832, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-hdd:before {
+  content: "\f0a0"; }
+
+/* line 835, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-bullhorn:before {
+  content: "\f0a1"; }
+
+/* line 838, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-bell:before {
+  content: "\f0a2"; }
+
+/* line 841, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-certificate:before {
+  content: "\f0a3"; }
+
+/* line 844, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-hand-right:before {
+  content: "\f0a4"; }
+
+/* line 847, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-hand-left:before {
+  content: "\f0a5"; }
+
+/* line 850, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-hand-up:before {
+  content: "\f0a6"; }
+
+/* line 853, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-hand-down:before {
+  content: "\f0a7"; }
+
+/* line 856, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-circle-arrow-left:before {
+  content: "\f0a8"; }
+
+/* line 859, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-circle-arrow-right:before {
+  content: "\f0a9"; }
+
+/* line 862, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-circle-arrow-up:before {
+  content: "\f0aa"; }
+
+/* line 865, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-circle-arrow-down:before {
+  content: "\f0ab"; }
+
+/* line 868, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-globe:before {
+  content: "\f0ac"; }
+
+/* line 871, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-wrench:before {
+  content: "\f0ad"; }
+
+/* line 874, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-tasks:before {
+  content: "\f0ae"; }
+
+/* line 877, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-filter:before {
+  content: "\f0b0"; }
+
+/* line 880, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-briefcase:before {
+  content: "\f0b1"; }
+
+/* line 883, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-fullscreen:before {
+  content: "\f0b2"; }
+
+/* line 886, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-group:before {
+  content: "\f0c0"; }
+
+/* line 889, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-link:before {
+  content: "\f0c1"; }
+
+/* line 892, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-cloud:before {
+  content: "\f0c2"; }
+
+/* line 895, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-beaker:before {
+  content: "\f0c3"; }
+
+/* line 898, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-cut:before {
+  content: "\f0c4"; }
+
+/* line 901, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-copy:before {
+  content: "\f0c5"; }
+
+/* line 905, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-paperclip:before,
+.icon-paper-clip:before {
+  content: "\f0c6"; }
+
+/* line 908, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-save:before {
+  content: "\f0c7"; }
+
+/* line 911, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-sign-blank:before {
+  content: "\f0c8"; }
+
+/* line 914, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-reorder:before {
+  content: "\f0c9"; }
+
+/* line 917, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-list-ul:before {
+  content: "\f0ca"; }
+
+/* line 920, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-list-ol:before {
+  content: "\f0cb"; }
+
+/* line 923, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-strikethrough:before {
+  content: "\f0cc"; }
+
+/* line 926, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-underline:before {
+  content: "\f0cd"; }
+
+/* line 929, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-table:before {
+  content: "\f0ce"; }
+
+/* line 932, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-magic:before {
+  content: "\f0d0"; }
+
+/* line 935, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-truck:before {
+  content: "\f0d1"; }
+
+/* line 938, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-pinterest:before {
+  content: "\f0d2"; }
+
+/* line 941, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-pinterest-sign:before {
+  content: "\f0d3"; }
+
+/* line 944, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-google-plus-sign:before {
+  content: "\f0d4"; }
+
+/* line 947, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-google-plus:before {
+  content: "\f0d5"; }
+
+/* line 950, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-money:before {
+  content: "\f0d6"; }
+
+/* line 953, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-caret-down:before {
+  content: "\f0d7"; }
+
+/* line 956, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-caret-up:before {
+  content: "\f0d8"; }
+
+/* line 959, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-caret-left:before {
+  content: "\f0d9"; }
+
+/* line 962, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-caret-right:before {
+  content: "\f0da"; }
+
+/* line 965, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-columns:before {
+  content: "\f0db"; }
+
+/* line 968, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-sort:before {
+  content: "\f0dc"; }
+
+/* line 971, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-sort-down:before {
+  content: "\f0dd"; }
+
+/* line 974, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-sort-up:before {
+  content: "\f0de"; }
+
+/* line 977, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-envelope:before {
+  content: "\f0e0"; }
+
+/* line 980, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-linkedin:before {
+  content: "\f0e1"; }
+
+/* line 984, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-rotate-left:before,
+.icon-undo:before {
+  content: "\f0e2"; }
+
+/* line 987, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-legal:before {
+  content: "\f0e3"; }
+
+/* line 990, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-dashboard:before {
+  content: "\f0e4"; }
+
+/* line 993, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-comment-alt:before {
+  content: "\f0e5"; }
+
+/* line 996, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-comments-alt:before {
+  content: "\f0e6"; }
+
+/* line 999, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-bolt:before {
+  content: "\f0e7"; }
+
+/* line 1002, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-sitemap:before {
+  content: "\f0e8"; }
+
+/* line 1005, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-umbrella:before {
+  content: "\f0e9"; }
+
+/* line 1008, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-paste:before {
+  content: "\f0ea"; }
+
+/* line 1011, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-lightbulb:before {
+  content: "\f0eb"; }
+
+/* line 1014, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-exchange:before {
+  content: "\f0ec"; }
+
+/* line 1017, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-cloud-download:before {
+  content: "\f0ed"; }
+
+/* line 1020, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-cloud-upload:before {
+  content: "\f0ee"; }
+
+/* line 1023, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-user-md:before {
+  content: "\f0f0"; }
+
+/* line 1026, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-stethoscope:before {
+  content: "\f0f1"; }
+
+/* line 1029, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-suitcase:before {
+  content: "\f0f2"; }
+
+/* line 1032, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-bell-alt:before {
+  content: "\f0f3"; }
+
+/* line 1035, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-coffee:before {
+  content: "\f0f4"; }
+
+/* line 1038, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-food:before {
+  content: "\f0f5"; }
+
+/* line 1041, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-file-text-alt:before {
+  content: "\f0f6"; }
+
+/* line 1044, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-building:before {
+  content: "\f0f7"; }
+
+/* line 1047, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-hospital:before {
+  content: "\f0f8"; }
+
+/* line 1050, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-ambulance:before {
+  content: "\f0f9"; }
+
+/* line 1053, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-medkit:before {
+  content: "\f0fa"; }
+
+/* line 1056, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-fighter-jet:before {
+  content: "\f0fb"; }
+
+/* line 1059, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-beer:before {
+  content: "\f0fc"; }
+
+/* line 1062, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-h-sign:before {
+  content: "\f0fd"; }
+
+/* line 1065, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-plus-sign-alt:before {
+  content: "\f0fe"; }
+
+/* line 1068, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-double-angle-left:before {
+  content: "\f100"; }
+
+/* line 1071, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-double-angle-right:before {
+  content: "\f101"; }
+
+/* line 1074, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-double-angle-up:before {
+  content: "\f102"; }
+
+/* line 1077, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-double-angle-down:before {
+  content: "\f103"; }
+
+/* line 1080, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-angle-left:before {
+  content: "\f104"; }
+
+/* line 1083, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-angle-right:before {
+  content: "\f105"; }
+
+/* line 1086, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-angle-up:before {
+  content: "\f106"; }
+
+/* line 1089, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-angle-down:before {
+  content: "\f107"; }
+
+/* line 1092, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-desktop:before {
+  content: "\f108"; }
+
+/* line 1095, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-laptop:before {
+  content: "\f109"; }
+
+/* line 1098, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-tablet:before {
+  content: "\f10a"; }
+
+/* line 1101, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-mobile-phone:before {
+  content: "\f10b"; }
+
+/* line 1104, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-circle-blank:before {
+  content: "\f10c"; }
+
+/* line 1107, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-quote-left:before {
+  content: "\f10d"; }
+
+/* line 1110, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-quote-right:before {
+  content: "\f10e"; }
+
+/* line 1113, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-spinner:before {
+  content: "\f110"; }
+
+/* line 1116, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-circle:before {
+  content: "\f111"; }
+
+/* line 1120, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-mail-reply:before,
+.icon-reply:before {
+  content: "\f112"; }
+
+/* line 1123, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-github-alt:before {
+  content: "\f113"; }
+
+/* line 1126, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-folder-close-alt:before {
+  content: "\f114"; }
+
+/* line 1129, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-folder-open-alt:before {
+  content: "\f115"; }
+
+/* line 1132, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-expand-alt:before {
+  content: "\f116"; }
+
+/* line 1135, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-collapse-alt:before {
+  content: "\f117"; }
+
+/* line 1138, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-smile:before {
+  content: "\f118"; }
+
+/* line 1141, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-frown:before {
+  content: "\f119"; }
+
+/* line 1144, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-meh:before {
+  content: "\f11a"; }
+
+/* line 1147, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-gamepad:before {
+  content: "\f11b"; }
+
+/* line 1150, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-keyboard:before {
+  content: "\f11c"; }
+
+/* line 1153, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-flag-alt:before {
+  content: "\f11d"; }
+
+/* line 1156, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-flag-checkered:before {
+  content: "\f11e"; }
+
+/* line 1159, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-terminal:before {
+  content: "\f120"; }
+
+/* line 1162, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-code:before {
+  content: "\f121"; }
+
+/* line 1165, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-reply-all:before {
+  content: "\f122"; }
+
+/* line 1168, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-mail-reply-all:before {
+  content: "\f122"; }
+
+/* line 1172, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-star-half-full:before,
+.icon-star-half-empty:before {
+  content: "\f123"; }
+
+/* line 1175, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-location-arrow:before {
+  content: "\f124"; }
+
+/* line 1178, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-crop:before {
+  content: "\f125"; }
+
+/* line 1181, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-code-fork:before {
+  content: "\f126"; }
+
+/* line 1184, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-unlink:before {
+  content: "\f127"; }
+
+/* line 1187, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-question:before {
+  content: "\f128"; }
+
+/* line 1190, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-info:before {
+  content: "\f129"; }
+
+/* line 1193, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-exclamation:before {
+  content: "\f12a"; }
+
+/* line 1196, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-superscript:before {
+  content: "\f12b"; }
+
+/* line 1199, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-subscript:before {
+  content: "\f12c"; }
+
+/* line 1202, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-eraser:before {
+  content: "\f12d"; }
+
+/* line 1205, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-puzzle-piece:before {
+  content: "\f12e"; }
+
+/* line 1208, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-microphone:before {
+  content: "\f130"; }
+
+/* line 1211, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-microphone-off:before {
+  content: "\f131"; }
+
+/* line 1214, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-shield:before {
+  content: "\f132"; }
+
+/* line 1217, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-calendar-empty:before {
+  content: "\f133"; }
+
+/* line 1220, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-fire-extinguisher:before {
+  content: "\f134"; }
+
+/* line 1223, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-rocket:before {
+  content: "\f135"; }
+
+/* line 1226, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-maxcdn:before {
+  content: "\f136"; }
+
+/* line 1229, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-chevron-sign-left:before {
+  content: "\f137"; }
+
+/* line 1232, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-chevron-sign-right:before {
+  content: "\f138"; }
+
+/* line 1235, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-chevron-sign-up:before {
+  content: "\f139"; }
+
+/* line 1238, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-chevron-sign-down:before {
+  content: "\f13a"; }
+
+/* line 1241, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-html5:before {
+  content: "\f13b"; }
+
+/* line 1244, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-css3:before {
+  content: "\f13c"; }
+
+/* line 1247, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-anchor:before {
+  content: "\f13d"; }
+
+/* line 1250, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-unlock-alt:before {
+  content: "\f13e"; }
+
+/* line 1253, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-bullseye:before {
+  content: "\f140"; }
+
+/* line 1256, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-ellipsis-horizontal:before {
+  content: "\f141"; }
+
+/* line 1259, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-ellipsis-vertical:before {
+  content: "\f142"; }
+
+/* line 1262, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-rss-sign:before {
+  content: "\f143"; }
+
+/* line 1265, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-play-sign:before {
+  content: "\f144"; }
+
+/* line 1268, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-ticket:before {
+  content: "\f145"; }
+
+/* line 1271, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-minus-sign-alt:before {
+  content: "\f146"; }
+
+/* line 1274, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-check-minus:before {
+  content: "\f147"; }
+
+/* line 1277, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-level-up:before {
+  content: "\f148"; }
+
+/* line 1280, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-level-down:before {
+  content: "\f149"; }
+
+/* line 1283, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-check-sign:before {
+  content: "\f14a"; }
+
+/* line 1286, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-edit-sign:before {
+  content: "\f14b"; }
+
+/* line 1289, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-external-link-sign:before {
+  content: "\f14c"; }
+
+/* line 1292, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-share-sign:before {
+  content: "\f14d"; }
+
+/* line 1295, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-compass:before {
+  content: "\f14e"; }
+
+/* line 1298, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-collapse:before {
+  content: "\f150"; }
+
+/* line 1301, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-collapse-top:before {
+  content: "\f151"; }
+
+/* line 1304, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-expand:before {
+  content: "\f152"; }
+
+/* line 1308, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-euro:before,
+.icon-eur:before {
+  content: "\f153"; }
+
+/* line 1311, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-gbp:before {
+  content: "\f154"; }
+
+/* line 1315, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-dollar:before,
+.icon-usd:before {
+  content: "\f155"; }
+
+/* line 1319, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-rupee:before,
+.icon-inr:before {
+  content: "\f156"; }
+
+/* line 1323, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-yen:before,
+.icon-jpy:before {
+  content: "\f157"; }
+
+/* line 1327, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-renminbi:before,
+.icon-cny:before {
+  content: "\f158"; }
+
+/* line 1331, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-won:before,
+.icon-krw:before {
+  content: "\f159"; }
+
+/* line 1335, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-bitcoin:before,
+.icon-btc:before {
+  content: "\f15a"; }
+
+/* line 1338, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-file:before {
+  content: "\f15b"; }
+
+/* line 1341, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-file-text:before {
+  content: "\f15c"; }
+
+/* line 1344, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-sort-by-alphabet:before {
+  content: "\f15d"; }
+
+/* line 1347, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-sort-by-alphabet-alt:before {
+  content: "\f15e"; }
+
+/* line 1350, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-sort-by-attributes:before {
+  content: "\f160"; }
+
+/* line 1353, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-sort-by-attributes-alt:before {
+  content: "\f161"; }
+
+/* line 1356, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-sort-by-order:before {
+  content: "\f162"; }
+
+/* line 1359, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-sort-by-order-alt:before {
+  content: "\f163"; }
+
+/* line 1362, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-thumbs-up:before {
+  content: "\f164"; }
+
+/* line 1365, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-thumbs-down:before {
+  content: "\f165"; }
+
+/* line 1368, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-youtube-sign:before {
+  content: "\f166"; }
+
+/* line 1371, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-youtube:before {
+  content: "\f167"; }
+
+/* line 1374, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-xing:before {
+  content: "\f168"; }
+
+/* line 1377, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-xing-sign:before {
+  content: "\f169"; }
+
+/* line 1380, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-youtube-play:before {
+  content: "\f16a"; }
+
+/* line 1383, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-dropbox:before {
+  content: "\f16b"; }
+
+/* line 1386, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-stackexchange:before {
+  content: "\f16c"; }
+
+/* line 1389, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-instagram:before {
+  content: "\f16d"; }
+
+/* line 1392, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-flickr:before {
+  content: "\f16e"; }
+
+/* line 1395, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-adn:before {
+  content: "\f170"; }
+
+/* line 1398, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-bitbucket:before {
+  content: "\f171"; }
+
+/* line 1401, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-bitbucket-sign:before {
+  content: "\f172"; }
+
+/* line 1404, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-tumblr:before {
+  content: "\f173"; }
+
+/* line 1407, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-tumblr-sign:before {
+  content: "\f174"; }
+
+/* line 1410, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-long-arrow-down:before {
+  content: "\f175"; }
+
+/* line 1413, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-long-arrow-up:before {
+  content: "\f176"; }
+
+/* line 1416, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-long-arrow-left:before {
+  content: "\f177"; }
+
+/* line 1419, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-long-arrow-right:before {
+  content: "\f178"; }
+
+/* line 1422, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-apple:before {
+  content: "\f179"; }
+
+/* line 1425, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-windows:before {
+  content: "\f17a"; }
+
+/* line 1428, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-android:before {
+  content: "\f17b"; }
+
+/* line 1431, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-linux:before {
+  content: "\f17c"; }
+
+/* line 1434, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-dribbble:before {
+  content: "\f17d"; }
+
+/* line 1437, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-skype:before {
+  content: "\f17e"; }
+
+/* line 1440, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-foursquare:before {
+  content: "\f180"; }
+
+/* line 1443, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-trello:before {
+  content: "\f181"; }
+
+/* line 1446, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-female:before {
+  content: "\f182"; }
+
+/* line 1449, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-male:before {
+  content: "\f183"; }
+
+/* line 1452, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-gittip:before {
+  content: "\f184"; }
+
+/* line 1455, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-sun:before {
+  content: "\f185"; }
+
+/* line 1458, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-moon:before {
+  content: "\f186"; }
+
+/* line 1461, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-archive:before {
+  content: "\f187"; }
+
+/* line 1464, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-bug:before {
+  content: "\f188"; }
+
+/* line 1467, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-vk:before {
+  content: "\f189"; }
+
+/* line 1470, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-weibo:before {
+  content: "\f18a"; }
+
+/* line 1473, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/font-awesome.css */
+.icon-renren:before {
+  content: "\f18b"; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Mixins/variables */
+/*----------------------------------------------------------------------------------- */
+/* line 20, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.inline {
+  display: inline-block;
+  *display: inline;
+  zoom: 1; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Document Setup */
+/*----------------------------------------------------------------------------------- */
+/* line 43, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+* {
+  outline: 0 !important; }
+
+/* line 46, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+body {
+  font-family: "Lato", sans-serif;
+  color: #666666;
+  background: #eeeeee;
+  padding-top: 140px;
+  position: relative; }
+
+/* line 53, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0 0 15px;
+  font-weight: 300; }
+
+/* line 58, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+h3 {
+  line-height: 1.4em; }
+
+/* line 61, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+p {
+  margin: 0 0 15px; }
+  /* line 63, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  p.lead {
+    font-weight: 300; }
+
+/* line 66, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+strong {
+  font-weight: 700; }
+
+/* line 69, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+a {
+  color: #007aff; }
+  /* line 72, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  a:hover {
+    color: #666666;
+    text-decoration: none; }
+
+/* line 77, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+ul.no-style {
+  list-style: none;
+  padding: 0;
+  margin-left: 0; }
+
+/* line 82, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+li {
+  margin-bottom: 5px; }
+
+/* line 85, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+blockquote {
+  padding-bottom: 4px;
+  margin-bottom: 30px; }
+  /* line 89, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  blockquote p {
+    margin-bottom: 10px; }
+  /* line 92, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  blockquote.pull-right {
+    text-align: right; }
+
+/* line 95, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+dl {
+  margin: 0 0 20px; }
+  /* line 98, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  dl dd {
+    margin-bottom: 15px; }
+
+/* line 101, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+small {
+  font-size: 75%;
+  vertical-align: top; }
+
+/* line 105, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+::-moz-selection {
+  background: #007aff;
+  color: white;
+  text-shadow: none; }
+
+/* line 110, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+::selection {
+  background: #007aff;
+  color: white;
+  text-shadow: none; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Login */
+/*----------------------------------------------------------------------------------- */
+/* line 119, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.login {
+  padding: 50px 15px 15px;
+  background: #eeeeee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  -o-transform: scale(1);
+  -webkit-transition: opacity 0.6s, -webkit-transform 0.6s, left 0.8s 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: opacity 0.6s, -moz-transform 0.6s, left 0.8s 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: opacity 0.6s, transform 0.6s, left 0.8s 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  /* line 134, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .login.submitted {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+    -o-transform: scale(0.9);
+    left: 100%;
+    opacity: 0.95; }
+  /* line 139, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .login .login-container {
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center; }
+    /* line 144, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .login .login-container img {
+      margin: 40px; }
+    /* line 147, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .login .login-container .input-group-addon {
+      padding: 8px 0;
+      background: #f4f4f4;
+      min-width: 48px;
+      text-align: center; }
+      /* line 153, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .login .login-container .input-group-addon i.icon-lock {
+        font-size: 18px; }
+    /* line 156, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .login .login-container input.form-control {
+      height: 48px;
+      font-size: 15px;
+      box-shadow: none; }
+    /* line 161, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .login .login-container .checkbox {
+      text-align: left;
+      margin-bottom: 30px; }
+    /* line 165, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .login .login-container .login-submit {
+      display: block;
+      width: 100%;
+      padding: 10px 0 12px;
+      margin-bottom: 25px; }
+      /* line 171, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .login .login-container .login-submit:hover {
+        background: transparent; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Header Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 178, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.navbar {
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  min-height: 45px;
+  height: 112px;
+  border: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
+  /* line 187, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .navbar.closed {
+    height: 45px; }
+  /* line 190, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .navbar .container-fluid.top-bar {
+    height: 46px;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 0 10px 0 20px;
+    width: 100%;
+    float: left; }
+    /* line 197, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .navbar .container-fluid.top-bar .navbar-toggle {
+      position: absolute;
+      top: 6px;
+      left: 10px;
+      width: 48px;
+      height: 32px;
+      padding: 8px 12px;
+      margin: 0;
+      background-color: transparent;
+      border: 1px solid #dddddd;
+      border-radius: 4px; }
+    /* line 209, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .navbar .container-fluid.top-bar .logo {
+      background: url("../images/se7en-logo.png") no-repeat 0 0;
+      width: 54px;
+      height: 16px;
+      float: left;
+      text-indent: -9999em;
+      margin: 14px 10px 0 0; }
+      @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+        /* line 209, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .logo {
+          background-image: url("../images/se7en-logo@2x.png");
+          background-size: 54px 16px; } }
+    /* line 218, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .navbar .container-fluid.top-bar form {
+      margin-top: 6px; }
+      /* line 221, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .navbar .container-fluid.top-bar form .form-control {
+        height: 30px;
+        border-color: #e6e6e6;
+        box-shadow: none;
+        background: white url("../images/icon-search.png") no-repeat center left;
+        padding-left: 24px;
+        margin-top: 1px;
+        width: 200px; }
+        @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+          /* line 221, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.top-bar form .form-control {
+            background-image: url("../images/icon-search@2x.png");
+            background-size: 18px 12px; } }
+        /* line 231, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar form .form-control:focus {
+          border-color: #007aff; }
+    /* line 234, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .navbar .container-fluid.top-bar .nav {
+      height: 100%;
+      position: relative;
+      z-index: 100; }
+      /* line 239, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .navbar .container-fluid.top-bar .nav > li {
+        height: 100%;
+        width: 45px;
+        margin-right: 5px;
+        float: left; }
+        /* line 245, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .nav > li > a {
+          display: block;
+          height: 100%;
+          padding: 8px 0 9px 8px;
+          position: relative;
+          -webkit-transition: all 0.3s;
+          -moz-transition: all 0.3s;
+          transition: all 0.3s; }
+          /* line 252, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.top-bar .nav > li > a:hover {
+            background: #eeeeee;
+            background: rgba(0, 0, 0, 0.04); }
+          /* line 256, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.top-bar .nav > li > a > span {
+            background: url("../images/admin-sprite.png") no-repeat top left;
+            display: block;
+            width: 28px;
+            height: 28px;
+            text-indent: -9999em; }
+            @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+              /* line 256, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+              .navbar .container-fluid.top-bar .nav > li > a > span {
+                background-image: url("../images/admin-sprite@2x.png");
+                background-size: 84px 168px; } }
+          /* line 264, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.top-bar .nav > li > a p.counter {
+            position: absolute;
+            top: 5px;
+            left: -2px;
+            height: 18px;
+            min-width: 18px;
+            padding: 0 5px;
+            border-radius: 9px;
+            background: #e62828;
+            text-align: center;
+            line-height: 17px;
+            color: white;
+            font-size: 11px;
+            font-weight: 100; }
+        /* line 280, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .nav > li.open > a, .navbar .container-fluid.top-bar .nav > li.active > a, .navbar .container-fluid.top-bar .nav > li.open.active > a {
+          background-color: #eeeeee; }
+          /* line 282, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.top-bar .nav > li.open > a span, .navbar .container-fluid.top-bar .nav > li.active > a span, .navbar .container-fluid.top-bar .nav > li.open.active > a span {
+            background-position: left -28px; }
+        /* line 286, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .nav > li.messages a > span {
+          background-position: -28px top; }
+        /* line 290, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .nav > li.messages.open > a, .navbar .container-fluid.top-bar .nav > li.messages.active > a, .navbar .container-fluid.top-bar .nav > li.messages.open.active > a {
+          background-color: #eeeeee; }
+          /* line 292, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.top-bar .nav > li.messages.open > a span, .navbar .container-fluid.top-bar .nav > li.messages.active > a span, .navbar .container-fluid.top-bar .nav > li.messages.open.active > a span {
+            background-position: -28px -28px; }
+        /* line 296, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .nav > li.settings a > span {
+          background-position: -56px top; }
+        /* line 300, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .nav > li.settings.open > a, .navbar .container-fluid.top-bar .nav > li.settings.active > a, .navbar .container-fluid.top-bar .nav > li.settings.open.active > a {
+          background-color: #eeeeee; }
+          /* line 302, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.top-bar .nav > li.settings.open > a span, .navbar .container-fluid.top-bar .nav > li.settings.active > a span, .navbar .container-fluid.top-bar .nav > li.settings.open.active > a span {
+            background-position: -56px -28px; }
+        /* line 306, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .nav > li.settings .settings-link span {
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          vertical-align: middle;
+          border-radius: 50%;
+          margin-right: 12px; }
+        /* line 314, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .nav > li.settings .settings-link.blue span {
+          background: #007aff; }
+        /* line 316, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .nav > li.settings .settings-link.green span {
+          background: #60c560; }
+        /* line 318, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .nav > li.settings .settings-link.orange span {
+          background: #f0ad4e; }
+        /* line 320, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .nav > li.settings .settings-link.magenta span {
+          background: #c741c9; }
+        /* line 322, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .nav > li.settings .settings-link.gray span {
+          background: #999999; }
+        /* line 325, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.top-bar .nav > li.user {
+          width: auto;
+          margin-left: 5px;
+          margin-right: 0; }
+          /* line 330, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.top-bar .nav > li.user > a {
+            padding: 5px 10px 6px;
+            color: #999999; }
+          /* line 334, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.top-bar .nav > li.user img {
+            border-radius: 50%;
+            margin-right: 8px; }
+          /* line 338, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.top-bar .nav > li.user .caret {
+            vertical-align: middle;
+            margin: -2px 0 0 8px;
+            border-top-color: #999999; }
+  /* line 343, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .navbar .container-fluid.main-nav {
+    height: 66px; }
+    /* line 346, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .navbar .container-fluid.main-nav .nav-collapse {
+      width: 100%; }
+      /* line 349, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .navbar .container-fluid.main-nav .nav-collapse .nav {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        margin: 0; }
+        /* line 355, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.main-nav .nav-collapse .nav > li {
+          float: none;
+          display: inline-block;
+          text-align: center;
+          margin: 0 8px; }
+          /* line 361, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li > a {
+            display: block;
+            height: 100%;
+            text-align: center;
+            padding: 10px 15px 9px;
+            font-size: 12px;
+            font-weight: 400;
+            color: #999999;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s; }
+            /* line 371, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+            .navbar .container-fluid.main-nav .nav-collapse .nav > li > a span {
+              background: url("../images/nav-sprite.png") no-repeat top left;
+              display: block;
+              width: 28px;
+              height: 28px;
+              margin: 0 auto 2px; }
+              @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+                /* line 371, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+                .navbar .container-fluid.main-nav .nav-collapse .nav > li > a span {
+                  background-image: url("../images/nav-sprite@2x.png");
+                  background-size: 168px 168px; } }
+            /* line 379, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+            .navbar .container-fluid.main-nav .nav-collapse .nav > li > a .caret {
+              margin-left: 6px;
+              margin-right: -6px;
+              border-top-color: #999999; }
+            /* line 384, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+            .navbar .container-fluid.main-nav .nav-collapse .nav > li > a.current {
+              color: #007aff; }
+              /* line 387, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+              .navbar .container-fluid.main-nav .nav-collapse .nav > li > a.current span {
+                background-position: left -28px; }
+              /* line 390, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+              .navbar .container-fluid.main-nav .nav-collapse .nav > li > a.current .caret {
+                border-top-color: #007aff; }
+            /* line 393, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+            .navbar .container-fluid.main-nav .nav-collapse .nav > li > a:hover {
+              background: #eeeeee;
+              background: rgba(0, 0, 0, 0.04); }
+          /* line 397, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li .dropdown-menu {
+            text-align: left; }
+          /* line 402, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.ui a span {
+            background-position: -28px top; }
+          /* line 405, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.ui a.current span {
+            background-position: -28px -28px; }
+          /* line 410, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.forms a span {
+            background-position: -56px top; }
+          /* line 413, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.forms a.current span {
+            background-position: -56px -28px; }
+          /* line 418, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.charts a span {
+            background-position: -84px top; }
+          /* line 421, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.charts a.current span {
+            background-position: -84px -28px; }
+          /* line 426, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.tables a span {
+            background-position: -112px top; }
+          /* line 429, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.tables a.current span {
+            background-position: -112px -28px; }
+          /* line 434, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.gallery a span {
+            background-position: -140px top; }
+          /* line 437, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.gallery a.current span {
+            background-position: -140px -28px; }
+  /* line 440, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .navbar .nav > li > a {
+    padding: 0; }
+  /* line 443, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .navbar .nav > li > .dropdown-menu:before,
+  .navbar .nav > li > .dropdown-menu:after {
+    display: none; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Page Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 452, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.page-title h1 {
+  margin: 0 20px 25px;
+  color: #5e5e5e;
+  font-weight: 300; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Button Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 460, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn {
+  font-weight: 300;
+  margin: 0 10px 10px 0;
+  -webkit-transition: all 0.15s;
+  -moz-transition: all 0.15s;
+  transition: all 0.15s; }
+  /* line 465, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn.active {
+    box-shadow: none; }
+  /* line 468, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn .caret {
+    margin: -2px 0 0 6px; }
+  /* line 471, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn [class^="icon-"], .btn[class*="icon-"] {
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: -4px;
+    font-size: 18px;
+    vertical-align: middle; }
+
+/* line 478, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn-default {
+  background: #bbbbbb;
+  border-color: #bbbbbb;
+  color: white; }
+  /* line 482, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-default .caret {
+    border-top-color: white; }
+  /* line 484, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-default:hover, .btn-default.active {
+    background: white;
+    color: #aaaaaa;
+    border-color: #bbbbbb; }
+    /* line 489, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .btn-default:hover .caret, .btn-default.active .caret {
+      border-top-color: #bbbbbb; }
+
+/* line 492, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn-primary {
+  background: #007aff;
+  border-color: #007aff; }
+  /* line 495, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-primary:hover, .btn-primary.active {
+    background: white;
+    color: #007aff;
+    border-color: #007aff; }
+    /* line 500, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .btn-primary:hover .caret, .btn-primary.active .caret {
+      border-top-color: #007aff; }
+
+/* line 503, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn-success {
+  background: #60c560;
+  border-color: #60c560; }
+  /* line 506, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-success:hover, .btn-success.active {
+    background: white;
+    color: #60c560;
+    border-color: #60c560; }
+    /* line 511, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .btn-success:hover .caret, .btn-success.active .caret {
+      border-top-color: #bbbbbb; }
+
+/* line 515, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn-info:hover, .btn-info.active {
+  background: white;
+  color: #5bc0de;
+  border-color: #5bc0de; }
+  /* line 520, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-info:hover .caret, .btn-info.active .caret {
+    border-top-color: #5bc0de; }
+
+/* line 524, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn-warning:hover, .btn-warning.active {
+  background: white;
+  color: #f0ad4e;
+  border-color: #f0ad4e; }
+  /* line 529, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-warning:hover .caret, .btn-warning.active .caret {
+    border-top-color: #f0ad4e; }
+
+/* line 533, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn-danger:hover, .btn-danger.active {
+  background: white;
+  color: #d9534f;
+  border-color: #d9534f; }
+  /* line 538, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-danger:hover .caret, .btn-danger.active .caret {
+    border-top-color: #d9534f; }
+
+/* line 541, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn-default-outline {
+  color: #999999;
+  background: white;
+  border: 1px solid #bbbbbb; }
+  /* line 546, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-default-outline .caret {
+    border-top-color: #bbbbbb; }
+  /* line 549, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-default-outline:hover, .btn-default-outline.active {
+    background: #bbbbbb;
+    color: white; }
+    /* line 553, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .btn-default-outline:hover .caret, .btn-default-outline.active .caret {
+      border-top-color: white; }
+
+/* line 556, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn-primary-outline {
+  color: #007aff;
+  background: white;
+  border: 1px solid #007aff; }
+  /* line 561, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-primary-outline .caret {
+    border-top-color: #007aff; }
+  /* line 564, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-primary-outline:hover, .btn-primary-outline.active {
+    background: #007aff;
+    color: white; }
+    /* line 568, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .btn-primary-outline:hover .caret, .btn-primary-outline.active .caret {
+      border-top-color: white; }
+
+/* line 571, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn-success-outline {
+  color: #60c560;
+  background: white;
+  border: 1px solid #60c560; }
+  /* line 576, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-success-outline .caret {
+    border-top-color: #60c560; }
+  /* line 579, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-success-outline:hover, .btn-success-outline.active {
+    background: #60c560;
+    color: white; }
+    /* line 583, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .btn-success-outline:hover .caret, .btn-success-outline.active .caret {
+      border-top-color: white; }
+
+/* line 586, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn-info-outline {
+  color: #5bc0de;
+  background: white;
+  border: 1px solid #5bc0de; }
+  /* line 591, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-info-outline .caret {
+    border-top-color: #5bc0de; }
+  /* line 594, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-info-outline:hover, .btn-info-outline.active {
+    background: #5bc0de;
+    color: white; }
+    /* line 598, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .btn-info-outline:hover .caret, .btn-info-outline.active .caret {
+      border-top-color: white; }
+
+/* line 601, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn-warning-outline {
+  color: #f0ad4e;
+  background: white;
+  border: 1px solid #f0ad4e; }
+  /* line 606, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-warning-outline .caret {
+    border-top-color: #f0ad4e; }
+  /* line 609, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-warning-outline:hover, .btn-warning-outline.active {
+    background: #f0ad4e;
+    color: white; }
+    /* line 613, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .btn-warning-outline:hover .caret, .btn-warning-outline.active .caret {
+      border-top-color: white; }
+
+/* line 616, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn-danger-outline {
+  color: #d9534f;
+  background: white;
+  border: 1px solid #d9534f; }
+  /* line 621, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-danger-outline .caret {
+    border-top-color: #d9534f; }
+  /* line 624, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-danger-outline:hover, .btn-danger-outline.active {
+    background: #d9534f;
+    color: white; }
+    /* line 628, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .btn-danger-outline:hover .caret, .btn-danger-outline.active .caret {
+      border-top-color: white; }
+
+/* line 631, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.btn-group {
+  margin: 0 10px 15px 0; }
+  /* line 634, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-group.pull-right {
+    margin-right: 0; }
+  /* line 637, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-group > .btn {
+    margin: 0; }
+    /* line 640, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .btn-group > .btn + .dropdown-toggle {
+      margin-left: 1px;
+      padding: 6px 10px; }
+      /* line 644, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .btn-group > .btn + .dropdown-toggle .caret {
+        margin: 0; }
+      /* line 647, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .btn-group > .btn + .dropdown-toggle[class^="-outline"], .btn-group > .btn + .dropdown-toggle[class*="-outline"] {
+        margin-left: -1px; }
+  /* line 651, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-group.dropup .btn .caret {
+    border-bottom-color: white; }
+  /* line 655, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-group.dropup .btn:hover[class^="-outline"] .caret, .btn-group.dropup .btn:hover[class*="-outline"] .caret {
+    border-bottom-color: white; }
+  /* line 658, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-group.dropup .btn-default:hover .caret, .btn-group.dropup .btn-default-outline .caret {
+    border-bottom-color: #bbbbbb; }
+  /* line 660, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-group.dropup .btn-primary:hover .caret, .btn-group.dropup .btn-primary-outline .caret {
+    border-bottom-color: #007aff; }
+  /* line 662, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-group.dropup .btn-success:hover .caret, .btn-group.dropup .btn-success-outline .caret {
+    border-bottom-color: #60c560; }
+  /* line 664, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-group.dropup .btn-info:hover .caret, .btn-group.dropup .btn-info-outline .caret {
+    border-bottom-color: #5bc0de; }
+  /* line 666, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-group.dropup .btn-warning:hover .caret, .btn-group.dropup .btn-warning-outline .caret {
+    border-bottom-color: #f0ad4e; }
+  /* line 668, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .btn-group.dropup .btn-danger:hover .caret, .btn-group.dropup .btn-danger-outline .caret {
+    border-bottom-color: #d9534f; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Dropdown Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 675, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.dropdown-menu {
+  margin-top: 1px !important;
+  border-radius: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.96);
+  border: 0;
+  padding: 0;
+  min-width: 120px;
+  max-width: 300px; }
+  /* line 685, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .dropdown-menu > li {
+    margin: 0; }
+    /* line 687, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .dropdown-menu > li > a {
+      padding: 10px 15px 10px 2px;
+      border-bottom: 1px solid #e2e2e2;
+      color: #999999;
+      font-size: 12px;
+      margin-left: 14px; }
+      /* line 694, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .dropdown-menu > li > a:hover, .dropdown-menu > li > a.current {
+        border-bottom-color: #007aff;
+        color: #007aff;
+        background: transparent; }
+      /* line 699, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .dropdown-menu > li > a i {
+        margin-right: 10px;
+        font-size: 18px;
+        vertical-align: middle; }
+    /* line 705, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .dropdown-menu > li:last-child > a {
+      border: 0; }
+
+/* line 708, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.notifications {
+  margin-left: 14px; }
+
+/* line 712, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.messages img {
+  border-radius: 50%;
+  margin-right: 14px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  DataTable styles */
+/*----------------------------------------------------------------------------------- */
+/* line 720, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.dataTable th {
+  padding-right: 20px;
+  position: relative;
+  font-weight: normal; }
+  /* line 725, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .dataTable th.sorting {
+    color: #007aff;
+    cursor: pointer; }
+    /* line 728, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .dataTable th.sorting:after, .dataTable th.sorting:before {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 12px;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent; }
+    /* line 736, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .dataTable th.sorting:after {
+      top: 19px;
+      border-top: 5px solid #007aff !important; }
+    /* line 739, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .dataTable th.sorting:before {
+      top: 11px;
+      border-bottom: 5px solid #007aff !important; }
+  /* line 743, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .dataTable th.sorting_asc {
+    color: #007aff;
+    cursor: pointer; }
+    /* line 746, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .dataTable th.sorting_asc:after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 12px;
+      top: 15px;
+      border-bottom: 5px solid #007aff !important;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent; }
+  /* line 757, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .dataTable th.sorting_desc {
+    color: #007aff;
+    cursor: pointer; }
+    /* line 760, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .dataTable th.sorting_desc:after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 12px;
+      top: 15px;
+      border-top: 5px solid #007aff !important;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent; }
+
+/* line 771, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+th:active {
+  outline: none; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Table styles */
+/*----------------------------------------------------------------------------------- */
+/* line 778, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.table {
+  margin-bottom: 10px; }
+  /* line 781, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .table th {
+    font-size: 14px; }
+  /* line 784, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .table td {
+    font-size: 14px; }
+    /* line 787, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .table td.actions {
+      width: 90px;
+      padding-right: 0; }
+      /* line 791, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .table td.actions .action-buttons {
+        width: 80px;
+        margin: 0; }
+        /* line 795, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .table td.actions .action-buttons a:last-child {
+          margin-right: 0; }
+
+/* line 798, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.check {
+  width: 20px; }
+
+/* line 803, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.check-header .sorting {
+  display: none; }
+
+/* line 806, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.table > thead > tr > th {
+  border-bottom: 2px solid #dddddd; }
+
+/* line 809, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.table-actions {
+  margin: 0 6px 0 6px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Label styles */
+/*----------------------------------------------------------------------------------- */
+/* line 816, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.label {
+  font-size: 85%;
+  line-height: 1.4;
+  font-weight: 300;
+  border-radius: 0px;
+  margin: 0 5px; }
+  /* line 823, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .label.label-success {
+    background-color: #60c560; }
+
+/* line 826, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.label-container {
+  min-height: 160px !important; }
+  /* line 828, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .label-container h3 {
+    margin-bottom: 25px; }
+  /* line 830, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .label-container .label {
+    font-weight: 300; }
+
+/* line 833, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.label-primary {
+  background-color: #007aff; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Widget-Container */
+/*----------------------------------------------------------------------------------- */
+/* line 839, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.widget-container {
+  min-height: 320px;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+  /* line 844, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .widget-container.fluid-height {
+    height: auto;
+    min-height: 0; }
+  /* line 848, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .widget-container.small {
+    min-height: 120px; }
+  /* line 851, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .widget-container.gallery {
+    min-height: 400px; }
+  /* line 854, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .widget-container .heading {
+    background: rgba(255, 255, 255, 0.94);
+    height: 50px;
+    padding: 15px 15px;
+    color: #007aff;
+    font-size: 15px;
+    width: 100%;
+    font-weight: 300;
+    margin: 0; }
+    /* line 864, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .widget-container .heading [class^="icon-"], .widget-container .heading [class*="icon-"] {
+      margin-right: 10px; }
+      /* line 867, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .widget-container .heading [class^="icon-"].pull-right, .widget-container .heading [class*="icon-"].pull-right {
+        margin-right: 0px;
+        margin-left: 15px;
+        opacity: 0.35;
+        font-size: 1.1em; }
+      /* line 873, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .widget-container .heading [class^="icon-"]:hover, .widget-container .heading [class*="icon-"]:hover {
+        cursor: pointer;
+        opacity: 1; }
+  /* line 876, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .widget-container .tabs {
+    background: whitesmoke;
+    border-bottom: 1px solid #dddddd; }
+  /* line 880, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .widget-container .widget-content {
+    width: 100%; }
+  /* line 883, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .widget-container.scrollable {
+    position: relative;
+    height: 400px; }
+    /* line 887, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .widget-container.scrollable .heading {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10; }
+    /* line 893, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .widget-container.scrollable .shadow {
+      box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1); }
+    /* line 896, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .widget-container.scrollable .widget-content {
+      height: 100%;
+      position: relative;
+      padding-top: 50px;
+      -webkit-overflow-scrolling: touch; }
+    /* line 902, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .widget-container.scrollable.list ul li {
+      padding-right: 22px; }
+
+/* line 905, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.padded {
+  padding: 12px 15px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Statistics Figures */
+/*----------------------------------------------------------------------------------- */
+/* line 913, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.stats-container {
+  min-height: 120px;
+  height: 120px;
+  text-align: center; }
+  /* line 918, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .stats-container [class^="col-"], .stats-container [class*="col-"] {
+    border-right: 1px solid #e6e6e6;
+    height: 100%;
+    margin-bottom: 0; }
+    /* line 923, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .stats-container [class^="col-"]:last-child, .stats-container [class*="col-"]:last-child {
+      border: 0; }
+    /* line 926, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .stats-container [class^="col-"] .number, .stats-container [class*="col-"] .number {
+      font-size: 4.2em;
+      font-weight: 100;
+      color: #007aff;
+      line-height: 1.3em;
+      padding-top: 8px;
+      letter-spacing: -0.06em; }
+      /* line 934, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .stats-container [class^="col-"] .number .icon, .stats-container [class*="col-"] .number .icon {
+        background: url("../images/info-data-sprite.png") no-repeat left top;
+        width: 50px;
+        height: 38px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 20px 12px 0 0; }
+        @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+          /* line 934, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .stats-container [class^="col-"] .number .icon, .stats-container [class*="col-"] .number .icon {
+            background-image: url("../images/info-data-sprite@2x.png");
+            background-size: 200px 190px; } }
+        /* line 943, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .stats-container [class^="col-"] .number .icon.visitors, .stats-container [class*="col-"] .number .icon.visitors {
+          background-position: -50px top; }
+        /* line 945, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .stats-container [class^="col-"] .number .icon.money, .stats-container [class*="col-"] .number .icon.money {
+          background-position: -100px top; }
+        /* line 947, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .stats-container [class^="col-"] .number .icon.chat-bubbles, .stats-container [class*="col-"] .number .icon.chat-bubbles {
+          background-position: -150px top; }
+    /* line 950, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .stats-container [class^="col-"] .text, .stats-container [class*="col-"] .text {
+      font-weight: 300;
+      color: #999999; }
+
+/*----------------------------------------------------------------------------------- */
+/*  jQuery Sparkline Tooltip fix */
+/*----------------------------------------------------------------------------------- */
+/* line 958, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.jqstooltip {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Line Chart Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 967, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.line-chart {
+  width: 100%; }
+  /* line 970, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .line-chart .chart-text-axis {
+    margin: 4px 0 0 !important; }
+    /* line 973, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .line-chart .chart-text-axis li {
+      width: 8.33% !important;
+      margin: 0 !important; }
+
+/* line 977, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.pie-chart {
+  text-align: center; }
+  /* line 980, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .pie-chart #pie-chart {
+    display: inline-block;
+    vertical-align: middle; }
+  /* line 984, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .pie-chart ul.chart-key {
+    display: inline-block;
+    vertical-align: middle;
+    list-style: none;
+    margin: 0 0 0 20px; }
+    /* line 990, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .pie-chart ul.chart-key li {
+      margin: 10px 0;
+      color: #888888; }
+      /* line 994, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .pie-chart ul.chart-key li span {
+        width: 20px;
+        height: 15px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: middle; }
+        /* line 1001, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .pie-chart ul.chart-key li span.green {
+          background: #81e970; }
+        /* line 1003, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .pie-chart ul.chart-key li span.orange {
+          background: #f5af50; }
+        /* line 1005, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .pie-chart ul.chart-key li span.red {
+          background: #f46f50; }
+        /* line 1007, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .pie-chart ul.chart-key li span.blue {
+          background: #a0eeed; }
+
+/*----------------------------------------------------------------------------------- */
+/*  jQuery Easy Pie Chart Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1015, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.easyPieChart {
+  position: relative;
+  text-align: center;
+  margin: 15px auto 0; }
+  /* line 1020, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .easyPieChart canvas {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+/* line 1025, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.pie-number {
+  font-size: 4.5em;
+  font-weight: 100;
+  letter-spacing: -0.05em;
+  color: #bbbbbb; }
+
+/* line 1031, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.pie-text {
+  text-align: center;
+  padding: 8px 0 14px 0; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Stats Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1039, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.chart-list {
+  text-decoration: none;
+  display: inline;
+  padding: 0 2px 0 0; }
+
+/* line 1044, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.chart-list-item {
+  width: 55px;
+  text-align: left; }
+
+/* line 1048, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.chart-number {
+  font-size: 2.5em;
+  font-weight: 100; }
+
+/* line 1052, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.bar-chart-widget {
+  text-align: center; }
+  /* line 1055, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .bar-chart-widget .bar-chart-info {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 20px 15px -10px;
+    text-align: center; }
+    /* line 1061, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .bar-chart-widget .bar-chart-info.visible-lg {
+      display: inline-block !important; }
+    /* line 1064, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .bar-chart-widget .bar-chart-info .chart-number {
+      font-size: 3em;
+      font-weight: 100;
+      color: #bbbbbb; }
+      /* line 1069, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .bar-chart-widget .bar-chart-info .chart-number i {
+        margin: 12px 10px 0 0;
+        opacity: 0.5;
+        font-size: 0.9em;
+        display: inline-block;
+        vertical-align: top; }
+    /* line 1076, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .bar-chart-widget .bar-chart-info .chart-text {
+      font-size: 0.8em;
+      font-weight: 400;
+      color: #888888; }
+
+/* line 1081, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.chart-graph {
+  display: inline-block;
+  vertical-align: middle; }
+  /* line 1085, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .chart-graph .chart-text-axis {
+    padding: 0 0 0 5px;
+    width: 100%;
+    margin: 6px 0 0;
+    list-style: none; }
+    /* line 1091, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .chart-graph .chart-text-axis li {
+      font-size: 0.7em;
+      font-weight: 400;
+      text-align: center;
+      width: 12px;
+      margin-right: 6px;
+      float: left;
+      color: #aaaaaa; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Gallery with Captions */
+/*----------------------------------------------------------------------------------- */
+/* line 1104, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.gallery-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  /* line 1109, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .gallery-grid li {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    position: relative; }
+    /* line 1115, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .gallery-grid li figure {
+      margin: 0;
+      position: relative;
+      overflow: hidden; }
+      /* line 1120, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .gallery-grid li figure img {
+        max-width: 100%;
+        display: block;
+        position: relative;
+        -webkit-transition: top 0.25s;
+        -moz-transition: top 0.25s;
+        transition: top 0.25s; }
+    /* line 1126, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .gallery-grid li .caption {
+      width: 100%;
+      height: 90px;
+      position: absolute;
+      bottom: -90px;
+      left: 0px;
+      padding: 20px;
+      background: black;
+      color: white;
+      -webkit-transition: all 0.25s;
+      -moz-transition: all 0.25s;
+      transition: all 0.25s; }
+      /* line 1137, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .gallery-grid li .caption h3 {
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-weight: 100; }
+      /* line 1143, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .gallery-grid li .caption span {
+        margin-top: 5px;
+        display: inline-block; }
+      /* line 1147, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .gallery-grid li .caption a {
+        margin: 0 0 0 15px;
+        border: 1px solid white; }
+    /* line 1152, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .gallery-grid li:hover figure img {
+      top: -50px; }
+    /* line 1155, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .gallery-grid li:hover .caption {
+      bottom: 0px; }
+
+@media (max-width: 1200px) {
+  /* line 1159, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .gallery-grid li {
+    width: 33.33%; } }
+@media (max-width: 900px) {
+  /* line 1163, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .gallery-grid li {
+    width: 50%; } }
+@media (max-width: 600px) {
+  /* line 1167, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .gallery-grid li {
+    width: 100%;
+    margin: 0 0 15px; } }
+/*----------------------------------------------------------------------------------- */
+/*  Gallery with Filter */
+/*----------------------------------------------------------------------------------- */
+/* line 1176, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.gallery-filters a.selected {
+  background: #007aff;
+  color: white; }
+
+/* line 1180, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.gallery-item {
+  width: 200px;
+  height: 150px;
+  margin: 10px;
+  position: relative;
+  background: black; }
+  /* line 1187, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .gallery-item img {
+    width: 100%;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
+  /* line 1191, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .gallery-item .actions {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    margin-top: -18px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    transition: opacity 0.3s; }
+    /* line 1202, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .gallery-item .actions i {
+      display: inline-block;
+      margin: 0 4px;
+      font-size: 18px;
+      color: white;
+      width: 36px;
+      height: 36px;
+      text-align: center;
+      line-height: 35px;
+      border: 1px solid white;
+      border-radius: 50%;
+      vertical-align: top;
+      -webkit-transition: all 0.25s;
+      -moz-transition: all 0.25s;
+      transition: all 0.25s; }
+      /* line 1216, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .gallery-item .actions i:hover {
+        background: white;
+        color: #333333; }
+      /* line 1220, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .gallery-item .actions i.icon-zoom-in {
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        line-height: 48px;
+        margin-top: -7px; }
+  /* line 1228, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .gallery-item:hover img {
+    opacity: 0.2; }
+  /* line 1230, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .gallery-item:hover .actions {
+    opacity: 1; }
+
+@media (max-width: 450px) {
+  /* line 1234, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .gallery-item {
+    width: 280px;
+    height: 210px;
+    margin: 0 0 15px; } }
+/*----------------------------------------------------------------------------------- */
+/*  Carousel */
+/*----------------------------------------------------------------------------------- */
+/* line 1243, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+  width: 100%; }
+
+/* line 1246, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.carousel-control.left, .carousel-control.right {
+  background: none;
+  background: rgba(0, 0, 0, 0.06);
+  opacity: 1;
+  width: 10%; }
+  /* line 1252, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .carousel-control.left:hover, .carousel-control.right:hover {
+    background: rgba(0, 0, 0, 0.25); }
+
+/* line 1255, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.carousel-control .glyphicon, .carousel-control .icon-angle-left, .carousel-control .icon-angle-right {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  display: inline-block;
+  height: 40px;
+  font-size: 40px;
+  margin-top: -20px;
+  margin-left: -10px; }
+
+/* line 1266, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.carousel-indicators li {
+  margin: 1px 5px; }
+  /* line 1269, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .carousel-indicators li.active {
+    margin: 0 5px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  List widget */
+/*----------------------------------------------------------------------------------- */
+/* line 1277, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.list ul {
+  list-style: none;
+  padding-left: 15px;
+  margin: 0; }
+  /* line 1282, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .list ul li {
+    padding: 10px 15px 12px 2px;
+    border-bottom: 1px solid #e2e2e2;
+    margin: 0; }
+    /* line 1287, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .list ul li:last-child {
+      border: 0; }
+    /* line 1290, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .list ul li:only-child {
+      border-bottom: 1px solid #e2e2e2; }
+    /* line 1293, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .list ul li img {
+      margin-right: 10px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Task widget */
+/*----------------------------------------------------------------------------------- */
+/* line 1301, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.task-widget label {
+  font-weight: normal;
+  margin: 0;
+  cursor: pointer;
+  width: 100%; }
+/* line 1307, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.task-widget .task-input {
+  display: none; }
+/* line 1310, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.task-widget input[type="checkbox"] + .task-checkbox {
+  font-family: "FontAwesome";
+  font-size: 20px;
+  width: 30px;
+  height: 20px;
+  line-height: 1.1;
+  display: inline-block;
+  vertical-align: middle;
+  color: #bbbbbb; }
+  /* line 1320, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .task-widget input[type="checkbox"] + .task-checkbox:before {
+    content: "\f096"; }
+/* line 1323, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.task-widget input[type="checkbox"]:checked + .task-checkbox {
+  color: #007aff; }
+  /* line 1326, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .task-widget input[type="checkbox"]:checked + .task-checkbox:before {
+    content: "\f046"; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Ratings widget */
+/*----------------------------------------------------------------------------------- */
+/* line 1335, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.rating-widget ul li {
+  padding-bottom: 4px; }
+  /* line 1338, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .rating-widget ul li .reviewer-info {
+    margin-bottom: 10px; }
+    /* line 1341, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .rating-widget ul li .reviewer-info img {
+      margin-right: 8px; }
+    /* line 1344, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .rating-widget ul li .reviewer-info em {
+      color: #aaaaaa;
+      font-size: 0.85em;
+      margin-left: 4px; }
+    /* line 1350, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .rating-widget ul li .reviewer-info .star-rating i {
+      margin-left: 2px;
+      font-size: 20px;
+      color: #cccccc; }
+      /* line 1355, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .rating-widget ul li .reviewer-info .star-rating i.icon-star, .rating-widget ul li .reviewer-info .star-rating i.icon-star-half-empty {
+        color: #f7c310; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Rollodex Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1361, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.rollodex {
+  height: 500px !important; }
+  /* line 1364, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .rollodex img {
+    border-radius: 50%; }
+  /* line 1368, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .rollodex ul li:only-child {
+    border: 0; }
+
+/* line 1371, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.roll-title {
+  background: #efefef;
+  width: 100%;
+  text-align: center;
+  padding: 2px 0 2px 0;
+  margin: 1px 0 1px 0; }
+
+/* line 1378, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.roll-item {
+  padding: 20px 0 20px 0; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Chat widget */
+/*----------------------------------------------------------------------------------- */
+/* line 1384, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.chat {
+  height: 500px !important; }
+  /* line 1387, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .chat .widget-content {
+    padding-bottom: 66px;
+    padding-right: 25px;
+    padding-top: 60px !important; }
+    /* line 1392, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .chat .widget-content .scrollbar-path-vertical {
+      bottom: 56px !important; }
+    /* line 1395, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .chat .widget-content ul {
+      list-style: none;
+      padding: 0; }
+      /* line 1399, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .chat .widget-content ul li {
+        margin-bottom: 14px;
+        padding-left: 70px;
+        position: relative; }
+        /* line 1404, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .chat .widget-content ul li img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 50%; }
+        /* line 1410, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .chat .widget-content ul li .bubble {
+          padding: 12px 15px;
+          background: white;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          border-radius: 4px;
+          border: 1px solid #e8e8e8;
+          position: relative; }
+          /* line 1418, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .chat .widget-content ul li .bubble:after {
+            content: "";
+            position: absolute;
+            top: 25px;
+            right: 100%;
+            background: url("../images/chat-left.png") left top no-repeat;
+            width: 16px;
+            height: 18px;
+            display: block; }
+            @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+              /* line 1418, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+              .chat .widget-content ul li .bubble:after {
+                background-image: url("../images/chat-left@2x.png");
+                background-size: 16px 18px; } }
+          /* line 1429, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .chat .widget-content ul li .bubble .user-name {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: inline-block; }
+          /* line 1434, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .chat .widget-content ul li .bubble p.message {
+            font-size: 0.95em;
+            margin-bottom: 12px; }
+          /* line 1438, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .chat .widget-content ul li .bubble em.time {
+            font-size: 0.8em;
+            color: #bbbbbb; }
+            /* line 1442, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+            .chat .widget-content ul li .bubble em.time i {
+              font-size: 1.25em;
+              vertical-align: middle;
+              margin: -2px 5px 0 0;
+              display: inline-block; }
+        /* line 1448, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .chat .widget-content ul li.current-user {
+          padding-right: 70px;
+          padding-left: 0; }
+          /* line 1452, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .chat .widget-content ul li.current-user img {
+            right: 0;
+            left: auto; }
+          /* line 1456, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .chat .widget-content ul li.current-user .bubble {
+            background: #f2f8ff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border: 1px solid #d4e1f0; }
+            /* line 1461, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+            .chat .widget-content ul li.current-user .bubble:after {
+              background: url("../images/chat-right.png") left top no-repeat;
+              left: 100%;
+              right: auto; }
+              @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+                /* line 1461, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+                .chat .widget-content ul li.current-user .bubble:after {
+                  background-image: url("../images/chat-right@2x.png");
+                  background-size: 16px 18px; } }
+  /* line 1467, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .chat .post-message {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    padding: 8px 20px 8px 8px;
+    background: white;
+    background: rgba(230, 230, 230, 0.9);
+    border: 1px solid #d6d6d6; }
+    /* line 1478, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .chat .post-message input[type="text"] {
+      width: 100%;
+      height: 100%; }
+    /* line 1482, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .chat .post-message input[type="submit"] {
+      position: absolute;
+      bottom: 8px;
+      right: 20px;
+      height: 34px !important;
+      margin: 0;
+      padding: 0 15px;
+      border-radius: 0 4px 4px 0;
+      height: 36px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Icons */
+/*----------------------------------------------------------------------------------- */
+/* line 1497, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.icons .row {
+  margin: 0 !important; }
+  /* line 1500, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .icons .row .col-lg-3 {
+    padding: 8px 20px 8px 5px !important;
+    height: 38px;
+    border-radius: 5px;
+    margin-bottom: 0 !important;
+    cursor: pointer;
+    color: #666666;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s; }
+    /* line 1509, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .icons .row .col-lg-3 [class^="icon-"], .icons .row .col-lg-3 [class*="icon-"] {
+      width: 32px;
+      font-size: 16px;
+      display: inline-block;
+      text-align: center;
+      margin-right: 10px;
+      vertical-align: middle;
+      -webkit-transition: all 0.12s;
+      -moz-transition: all 0.12s;
+      transition: all 0.12s; }
+    /* line 1518, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .icons .row .col-lg-3:hover {
+      background-color: #f6f6f6; }
+      /* line 1521, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .icons .row .col-lg-3:hover [class^="icon-"], .icons .row .col-lg-3:hover [class*="icon-"] {
+        font-size: 24px;
+        margin-top: -2px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Grid Structure */
+/*----------------------------------------------------------------------------------- */
+/* line 1530, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.grid-structure .row .widget-container {
+  color: #999999;
+  padding: 10px 15px 12px;
+  min-height: 0; }
+
+/*----------------------------------------------------------------------------------- */
+/*  jQuery Map Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1539, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.map {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden; }
+
+/* line 1544, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.jqvmap-label {
+  position: absolute;
+  display: none;
+  background: white;
+  background: rgba(255, 255, 255, 0.95);
+  color: #666666;
+  font-size: smaller;
+  font-weight: 300;
+  padding: 4px 6px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
+
+/* line 1555, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.jqvmap-zoomin, .jqvmap-zoomout {
+  position: absolute;
+  left: 10px;
+  border-radius: 0px;
+  background: #c2c2c2;
+  padding: 8px 6px;
+  color: white;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  line-height: 5px;
+  text-align: center; }
+  /* line 1568, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .jqvmap-zoomin:hover, .jqvmap-zoomin :active, .jqvmap-zoomout:hover, .jqvmap-zoomout :active {
+    background: #007aff; }
+
+/* line 1571, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.jqvmap-zoomin {
+  top: 10px; }
+
+/* line 1574, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.jqvmap-zoomout {
+  top: 36px; }
+
+/* line 1577, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.jqvmap-region {
+  cursor: pointer; }
+
+/* line 1580, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.jqvmap-ajax_response {
+  width: 100%;
+  height: 500px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Form styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1588, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/* line 1593, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+label {
+  font-weight: normal; }
+
+/* line 1596, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.form-control {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s; }
+  /* line 1599, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .form-control:focus {
+    border-color: #007aff;
+    box-shadow: none; }
+
+/* line 1604, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.form-horizontal .form-group {
+  margin-bottom: 0; }
+  /* line 1607, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .form-horizontal .form-group label {
+    margin-bottom: 5px; }
+
+/* line 1610, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.radio, .checkbox {
+  margin: 6px 0 !important; }
+
+/* line 1613, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.radio-inline, .checkbox-inline {
+  padding-top: 9px;
+  margin-right: 15px; }
+
+/* line 1618, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.has-warning .help-block, .has-warning .control-label {
+  color: #f0ad4e; }
+/* line 1621, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.has-warning .form-control {
+  border-color: #f0ad4e; }
+
+/* line 1625, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.has-error .help-block, .has-error .control-label {
+  color: #d9534f; }
+/* line 1628, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.has-error .form-control {
+  border-color: #d9534f; }
+
+/* line 1632, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.has-success .help-block, .has-success .control-label {
+  color: #60c560; }
+/* line 1635, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.has-success .form-control {
+  border-color: #60c560; }
+
+/* line 1638, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.radio + .radio:last-child, .checkbox + .checkbox:last-child {
+  margin-bottom: 0; }
+
+/* line 1641, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.form-photo {
+  margin: 4px 0 12px; }
+
+/* line 1644, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.holder {
+  width: 56px;
+  height: 28px;
+  position: relative; }
+
+/* line 1649, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.check-ios {
+  visibility: hidden; }
+
+/* line 1653, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.holder span {
+  background-color: #e2e2e2;
+  display: block;
+  height: 30px;
+  width: 54px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  /* line 1670, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .holder span:after {
+    background-color: white;
+    content: "";
+    display: block;
+    height: 28px;
+    width: 52px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    z-index: 2;
+    -webkit-border-radius: 14px;
+    -moz-border-radius: 14px;
+    border-radius: 14px;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+/* line 1688, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.holder label {
+  background: white;
+  cursor: pointer;
+  display: block;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  z-index: 3;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.3); }
+
+/* line 1711, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.check-ios:checked ~ span {
+  background-color: #4fd065; }
+  /* line 1713, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .check-ios:checked ~ span:after {
+    height: 0;
+    width: 0;
+    left: 50%;
+    top: 50%; }
+/* line 1718, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.check-ios:checked + label {
+  left: 25px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  select2 Dropdowns */
+/*----------------------------------------------------------------------------------- */
+/* line 1725, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.select2-container {
+  width: 100%;
+  height: 36px; }
+  /* line 1729, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .select2-container .select2-choice {
+    height: 100%; }
+    /* line 1732, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .select2-container .select2-choice > .select2-chosen {
+      height: 100%;
+      line-height: 33px; }
+    /* line 1736, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .select2-container .select2-choice .select2-arrow {
+      width: 30px;
+      text-align: center; }
+      /* line 1740, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .select2-container .select2-choice .select2-arrow b {
+        background: none;
+        width: 0;
+        height: 0;
+        margin: 8px 0 0 -2px;
+        display: inline-block;
+        vertical-align: middle;
+        border-top: 4px solid #444444;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent; }
+
+/* line 1751, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.select2-container-active .select2-choice, .select2-container-active .select2-choices {
+  border-color: #007aff; }
+
+/* line 1754, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.select2-container-multi .select2-choices {
+  background: white;
+  border-color: #cccccc;
+  border-radius: 4px;
+  padding-top: 4px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Bootstrap Tooltip Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1763, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.tooltip-inner {
+  border-radius: 0px;
+  padding: 8px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Bootstrap Well Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1771, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.well {
+  min-height: 38px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Bootstrap Accordion Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1777, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.panel {
+  box-shadow: none; }
+
+/* line 1780, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.panel-heading {
+  padding: 0; }
+  /* line 1782, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .panel-heading .panel-toggle {
+    background: #f9fafa; }
+
+/* line 1785, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.panel-title > a {
+  font-weight: 200;
+  padding: 10px 15px;
+  display: block; }
+  /* line 1790, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .panel-title > a:hover {
+    color: #007aff; }
+
+/* line 1793, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.accordion-group {
+  margin: 0px;
+  border-radius: 0px;
+  border-bottom: 1px solid #f1f1f1; }
+
+/* line 1799, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.panel-group .panel {
+  margin-bottom: 0;
+  overflow: hidden;
+  border-radius: 0px;
+  border: 1px solid #e1e1e1;
+  border-left: 0px;
+  border-right: 0px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Bootstrap Modal Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1811, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.modal-content {
+  border-radius: 0px;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.94);
+  border: 0; }
+
+/* line 1818, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.modal-footer .btn {
+  margin: 0 10px 0px 0; }
+
+/* line 1821, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.modal-footer {
+  border: 0px;
+  padding: 19px 20px 30px; }
+
+/* line 1825, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.modal-header {
+  background: #f1f1f1; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Bootstrap Tab Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1831, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.nav-tabs > li > a {
+  border-radius: 0px; }
+
+/* line 1834, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.nav-tabs {
+  margin-top: -8px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Bootstrap Alert Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1842, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.alert {
+  border-radius: 0px; }
+
+/* line 1845, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+button.close {
+  margin-left: 18px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Bootstrap Pagination */
+/*----------------------------------------------------------------------------------- */
+/* line 1850, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.pagination {
+  margin: 12px 0; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Bootstrap Badge Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1856, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.badge {
+  background-color: #949494;
+  font-weight: 300; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Bootstrap Breadcrumb */
+/*----------------------------------------------------------------------------------- */
+/* line 1863, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.breadcrumb {
+  padding: 9px 15px 6px;
+  border-radius: 0px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); }
+
+/*----------------------------------------------------------------------------------- */
+/*  Bootstrap Popover */
+/*----------------------------------------------------------------------------------- */
+/* line 1871, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.popover {
+  border-radius: 0px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.92); }
+
+/* line 1876, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.popover-title {
+  border-radius: 0px;
+  color: #007aff;
+  margin-left: 14px;
+  background: none;
+  padding-left: 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+
+/* line 1884, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.popover-content {
+  padding: 0px;
+  margin-left: 14px;
+  padding: 12px 15px 12px 0; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Fancybox */
+/*----------------------------------------------------------------------------------- */
+/* line 1893, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.fancybox-skin {
+  border-radius: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4) !important;
+  background: white;
+  background: rgba(255, 255, 255, 0.9); }
+  /* line 1899, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .fancybox-skin .fancybox-prev span, .fancybox-skin .fancybox-next span {
+    background: none;
+    font-family: "FontAwesome";
+    font-size: 40px;
+    left: 50%;
+    right: auto;
+    width: 16px;
+    height: 56px;
+    margin: -28px 0 0 -8px; }
+    /* line 1909, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .fancybox-skin .fancybox-prev span:before, .fancybox-skin .fancybox-next span:before {
+      color: white; }
+  /* line 1912, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .fancybox-skin .fancybox-prev {
+    left: -80px; }
+    /* line 1915, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .fancybox-skin .fancybox-prev span:before {
+      content: "\f104"; }
+  /* line 1918, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .fancybox-skin .fancybox-next {
+    right: -80px; }
+    /* line 1921, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .fancybox-skin .fancybox-next span:before {
+      content: "\f105"; }
+  /* line 1924, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .fancybox-skin .fancybox-close {
+    background: none;
+    font-family: "FontAwesome";
+    font-size: 38px;
+    color: white;
+    top: -15px;
+    right: -55px;
+    opacity: 0.6; }
+    /* line 1933, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .fancybox-skin .fancybox-close:hover {
+      opacity: 1; }
+    /* line 1936, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .fancybox-skin .fancybox-close:before {
+      content: "×"; }
+
+/* line 1939, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.fancybox-nav {
+  width: 60px; }
+
+/* line 1942, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.fancybox-nav span {
+  visibility: visible;
+  opacity: 0.5; }
+
+/* line 1946, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.fancybox-nav:hover span {
+  opacity: 1; }
+
+/* line 1949, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.fancybox-title {
+  text-align: center; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Bootstrap Tab Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1956, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.nav-tabs > li > a {
+  border-radius: 0px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Bootstrap Alert Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1962, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.alert {
+  border-radius: 0px;
+  padding: 15px; }
+  /* line 1966, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .alert .close {
+    line-height: 17px; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Bootstrap Badge Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1972, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.badge {
+  background-color: #949494;
+  font-weight: 300; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Responsive Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 1979, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.row {
+  margin: 0 10px 0; }
+  /* line 1982, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .row .row {
+    margin: 0 -10px 0; }
+
+/* line 1985, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+  padding: 0 10px;
+  margin-bottom: 20px; }
+
+/* line 1989, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.hideme {
+  display: none; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Mobile Styles */
+/*----------------------------------------------------------------------------------- */
+@media (max-width: 979px) {
+  /* line 1995, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .stats-container {
+    height: 470px; }
+    /* line 1997, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .stats-container [class^="col-"], .stats-container [class*="col-"] {
+      border-bottom: 1px solid #e6e6e6;
+      padding-bottom: 12px;
+      height: auto; } }
+@media (max-width: 768px) {
+  /* line 2004, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  body {
+    left: 0;
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    transition: left 0.3s;
+    padding-top: 80px; }
+    /* line 2009, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    body.nav-open {
+      left: 200px;
+      overflow: hidden; }
+
+  /* line 2013, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .navbar {
+    height: 45px !important;
+    -webkit-transition: left 0.3s;
+    -moz-transition: left 0.3s;
+    transition: left 0.3s; }
+    /* line 2017, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .navbar.nav-open {
+      left: 200px; }
+    /* line 2020, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .navbar .container-fluid.top-bar {
+      border-bottom: 0; }
+      /* line 2023, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .navbar .container-fluid.top-bar .logo {
+        float: right;
+        margin: 13px 5px 0 0; }
+    /* line 2027, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .navbar .container-fluid.main-nav {
+      position: fixed;
+      left: -200px;
+      top: 0;
+      height: 100%;
+      width: 200px;
+      background: #dddddd;
+      box-shadow: inset -4px 0 0 rgba(0, 0, 0, 0.05);
+      -webkit-transition: left 0.3s;
+      -moz-transition: left 0.3s;
+      transition: left 0.3s;
+      overflow-y: auto;
+      -webkit-scroll-overflow: touch; }
+      /* line 2039, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .navbar .container-fluid.main-nav.open {
+        left: 0; }
+      /* line 2042, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+      .navbar .container-fluid.main-nav .nav-collapse .nav {
+        padding-left: 15px;
+        text-align: left; }
+        /* line 2046, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+        .navbar .container-fluid.main-nav .nav-collapse .nav > li {
+          display: block;
+          text-align: left;
+          margin: 0; }
+          /* line 2051, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li > .dropdown-menu {
+            display: block;
+            position: relative;
+            background: none;
+            box-shadow: none;
+            margin: 0;
+            width: 100%;
+            float: none;
+            border-bottom: 1px solid #aaaaaa; }
+            /* line 2061, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+            .navbar .container-fluid.main-nav .nav-collapse .nav > li > .dropdown-menu li a {
+              border-color: #aaaaaa;
+              margin-left: 15px;
+              color: #777777; }
+              /* line 2066, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+              .navbar .container-fluid.main-nav .nav-collapse .nav > li > .dropdown-menu li a.current {
+                border-bottom-color: #007aff;
+                color: #007aff; }
+          /* line 2070, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li > a {
+            display: block;
+            text-align: left;
+            padding: 0;
+            font-size: 14px;
+            line-height: 44px;
+            height: 46px;
+            color: #777777;
+            border-bottom: 1px solid #aaaaaa; }
+            /* line 2080, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+            .navbar .container-fluid.main-nav .nav-collapse .nav > li > a:hover {
+              background: none !important; }
+            /* line 2083, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+            .navbar .container-fluid.main-nav .nav-collapse .nav > li > a span {
+              display: block;
+              float: left;
+              margin: 8px 15px 0 0;
+              background-position: left -140px; }
+            /* line 2089, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+            .navbar .container-fluid.main-nav .nav-collapse .nav > li > a .caret {
+              display: none; }
+            /* line 2092, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+            .navbar .container-fluid.main-nav .nav-collapse .nav > li > a.current {
+              color: #007aff;
+              border-bottom-color: #007aff; }
+              /* line 2096, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+              .navbar .container-fluid.main-nav .nav-collapse .nav > li > a.current span {
+                background-position: left -28px; }
+              /* line 2099, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+              .navbar .container-fluid.main-nav .nav-collapse .nav > li > a.current .caret {
+                border-top-color: #007aff; }
+            /* line 2102, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+            .navbar .container-fluid.main-nav .nav-collapse .nav > li > a:hover {
+              background: #eeeeee;
+              background: rgba(0, 0, 0, 0.04); }
+          /* line 2106, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li .dropdown-menu {
+            text-align: left; }
+          /* line 2110, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.ui a span {
+            background-position: -28px -140px; }
+          /* line 2114, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.forms a span {
+            background-position: -56px -140px; }
+          /* line 2118, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.charts a span {
+            background-position: -84px -140px; }
+          /* line 2122, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.tables a span {
+            background-position: -112px -140px; }
+          /* line 2126, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+          .navbar .container-fluid.main-nav .nav-collapse .nav > li.gallery a span {
+            background-position: -140px -140px; }
+
+  /* line 2129, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .widget-container > div .heading {
+    padding-left: 5px; } }
+@media (max-width: 600px) {
+  /* line 2134, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .fc-header-right {
+    display: none; }
+
+  /* line 2139, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .task-widget li.label {
+    display: none; }
+
+  /* line 2141, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .padded {
+    padding: 10px; }
+
+  /* line 2144, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .table th {
+    font-size: 13px; }
+
+  /* line 2147, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .dataTables_length, .dataTables_filter, .dataTables_info, .paginate_button.first, .paginate_button.last {
+    display: none; }
+
+  /* line 2150, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .pie-chart ul.chart-key {
+    margin: 15px 0 10px;
+    padding: 0;
+    width: 100%; }
+    /* line 2155, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+    .pie-chart ul.chart-key li {
+      display: inline-block;
+      margin: 4px 10px; }
+
+  /* line 2159, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  #composite-chart-1 canvas {
+    width: 100% !important; } }
+/* line 2162, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.ico {
+  text-align: center; }
+
+/*----------------------------------------------------------------------------------- */
+/*  Documentation Styles */
+/*----------------------------------------------------------------------------------- */
+/* line 2170, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.code-container {
+  width: 100%; }
+  /* line 2172, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+  .code-container.large {
+    min-height: 400px; }
+
+/* line 2176, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.what [class^="icon-"] {
+  margin-right: 10px;
+  color: #007aff; }
+/* line 2179, /Users/donpottinger/Dropbox/se7en/middleman/source/stylesheets/style.sass */
+.what h4 {
+  color: #007aff; }
