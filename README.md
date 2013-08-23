@@ -27,6 +27,8 @@ In order to start the preview server:
 middleman server
 ```
 
+The preview server allows you to build your site, by modifying the contents of the `source` directory, and see your changes reflected in the browser at: `http://localhost:4567/`
+
 In order to export the site, build the project (the site files are stored in the build folder):
 
 ```
