@@ -1,0 +1,94 @@
+<!-- Navigation -->
+.navbar.navbar-fixed-top
+  .container-fluid.top-bar
+    .pull-right
+      ul.nav.navbar-nav
+        li.dropdown
+          a.dropdown-toggle data-toggle="dropdown" href="#"
+            span Notifications
+            p.counter 2
+          ul.dropdown-menu
+            li
+              = link_to "#" do
+                i.icon-user
+                | New user added: Jane Smith
+                .notifications.label.label-info.pull-right New
+            li
+              = link_to "#" do
+                i.icon-dashboard
+                | Sales targets available
+                .notifications.label.label-info.pull-right New
+
+        li.dropdown.user
+          = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" do
+            = image_tag "avatar-male.jpg", :size => "34x34"
+            | John Smith
+            b.caret
+          ul.dropdown-menu
+            li
+              = link_to "#" do
+                i.icon-user
+                | My Account
+            li
+              = link_to "#" do
+                i.icon-gear
+                | Account Settings
+            li
+              = link_to login_path do
+                i.icon-signout
+                | Logout
+
+    button.navbar-toggle
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+
+    = link_to "se7en", root_path, class: 'logo'
+    form.navbar-form.form-inline.col-lg-2.hidden-xs
+      input.form-control placeholder="Search" type="text"
+
+  .container-fluid.main-nav
+    .nav-collapse
+      ul.nav
+        li
+          = link_to root_path, class: cp(root_path) do
+            | Dashboard
+        li.dropdown
+          = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp(buttons_path) do
+            | UI
+            b.caret
+          ul.dropdown-menu
+            li= link_to "Buttons", buttons_path
+            li= link_to "Icons", icons_path
+            li= link_to "Components", components_path
+            li= link_to "Widgets", widgets_path
+            li= link_to "Typography", typo_path
+            li= link_to "Grid Layout", grid_path
+        li
+          = link_to forms_path, class: cp(forms_path) do
+            | Forms
+        li
+          = link_to tables_path, class: cp(tables_path) do
+            | Tables
+        li
+          = link_to charts_path, class: cp(charts_path) do
+            | Charts
+        li
+          = link_to gallery_path, class: cp(gallery_path) do
+            | Gallery
+<!-- End Navigation -->
+
+.container-fluid
+  .page-title
+    h1 Widgets
+    
+  <!-- Sample Content -->
+  .row
+    .col-lg-12
+      .widget-container
+        .heading
+          | Content Heading
+
+        .widget-content.padded
+          p This is content about this page.
+  <!-- End Sample Content -->

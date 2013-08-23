@@ -1,0 +1,137 @@
+.page-title
+  h1 Gallery
+
+<!-- Gallery with captions -->
+.row
+	.col-lg-12
+		.widget-container.fluid-height
+			.heading
+				i.icon-picture
+				| Captions
+
+			.widget-content.padded
+				ul.gallery-grid.clearfix
+				  li
+						figure
+							= image_tag "nature1.jpg"
+							.caption
+								h3 Leaf
+								span by Cuba Gallery
+				  li
+						figure
+							= image_tag "nature3.jpg"
+							.caption
+								h3 Farm
+								span by Cuba Gallery
+				  li
+						figure
+							= image_tag "nature2.jpg"
+							.caption
+								h3 Flower
+								span by Cuba Gallery
+				  li
+						figure
+							= image_tag "nature4.jpg"
+							.caption
+								h3 Rainbow
+								span by Cuba Gallery
+<!-- end Gallery with captions -->
+
+.row
+	<!-- Gallery with filtering and actions -->
+	.col-lg-6
+		.widget-container.fluid-height
+			.heading
+				i.icon-th-large
+				| Filtering and Actions
+				.gallery-filters.list-inline.btn-group.pull-right
+					a.btn.btn-sm.btn-primary-outline.selected data-filter="*" href="#" All
+					a.btn.btn-sm.btn-primary-outline data-filter=".filter1" href="#" Filter 1
+					a.btn.btn-sm.btn-primary-outline data-filter=".filter2" href="#" Filter 2
+
+			.widget-content.padded
+				.gallery-container
+				  a.gallery-item.filter1.fancybox href="/images/image-iso5.png" title="This is a caption" rel="gallery1"
+				  	= image_tag "image-iso5.png"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+				  a.gallery-item.filter1.fancybox href="/images/image-iso2.jpg" title="This is a caption" rel="gallery1"
+				  	= image_tag "image-iso2.jpg"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+				  a.gallery-item.filter2.fancybox href="/images/image-iso3.png" title="This is a caption" rel="gallery1"
+				  	= image_tag "image-iso3.png"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+				  a.gallery-item.filter1.fancybox href="/images/image-iso4.png" title="This is a caption" rel="gallery1"
+				  	= image_tag "image-iso4.png"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+				  a.gallery-item.filter2.fancybox href="/images/image-iso6.png" title="This is a caption" rel="gallery1"
+				  	= image_tag "image-iso6.png"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+				  a.gallery-item.filter2.fancybox href="/images/image-iso.png" title="This is a caption" rel="gallery1"
+				  	= image_tag "image-iso.png"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+				  a.gallery-item.filter2.fancybox href="/images/image-iso7.png" title="This is a caption" rel="gallery1"
+				  	= image_tag "image-iso7.png"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+				  a.gallery-item.filter1.fancybox href="/images/image-iso8.png" title="This is a caption" rel="gallery1"
+				  	= image_tag "image-iso8.png"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+				  a.gallery-item.filter2.fancybox href="/images/image-iso9.png" title="This is a caption" rel="gallery1"
+				  	= image_tag "image-iso9.png"
+				  	.actions
+				  		i.icon-trash
+				  		i.icon-zoom-in
+				  		i.icon-pencil
+	<!-- End Gallery with filtering and actions -->
+
+	<!-- Gallery carousel -->
+	.col-lg-6
+		.widget-container
+			.heading
+				i.icon-camera
+				| Carousel
+
+			.widget-content.padded
+				#carousel-example-generic.carousel.slide
+				  ol.carousel-indicators
+				    li.active data-slide-to="0" data-target="#carousel-example-generic"
+				    li data-slide-to="1" data-target="#carousel-example-generic"
+				    li data-slide-to="2" data-target="#carousel-example-generic"
+
+				  .carousel-inner
+				    .item.active
+				      = image_tag "image5.jpg"
+				    .item
+				      = image_tag "image6.png"
+				    .item
+				      = image_tag "image7.png"
+
+				  a.left.carousel-control data-slide="prev" href="#carousel-example-generic"
+				    span.icon-angle-left
+				  a.right.carousel-control data-slide="next" href="#carousel-example-generic"
+				    span.icon-angle-right
+	<!-- End Gallery carousel -->
+

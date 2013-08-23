@@ -1,0 +1,218 @@
+doctype
+html
+  head
+    title
+      |  se7en - Dashboard
+    link[href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all" rel="stylesheet"]
+    link[href="stylesheets/application.css" media="all" rel="stylesheet"]
+    link[href="stylesheets/isotope.css" media="all" rel="stylesheet"]
+    link[href="stylesheets/normalize.css" media="all" rel="stylesheet"]
+    link[href="stylesheets/fullcalendar.css" media="all" rel="stylesheet"]
+    link[href="stylesheets/datatables.css" media="all" rel="stylesheet"]
+    link[href="stylesheets/prettify.css" media="all" rel="stylesheet"]
+    link[href="stylesheets/classyscroll.css" media="all" rel="stylesheet"]
+    link[href="stylesheets/jquery.fancybox.css" media="all" rel="stylesheet"]
+    link[href="stylesheets/select2.css" media="all" rel="stylesheet"]
+    link[href="stylesheets/bootstrap.min.css" media="all" rel="stylesheet"]
+    link[href="stylesheets/fontawesome.css" media="all" rel="stylesheet"]
+    link[href="stylesheets/style.css" media="all" rel="stylesheet"]
+    link[href="stylesheets/color/green.css" media="all" rel="alternate stylesheet" title="green-theme"]
+    link[href="stylesheets/color/orange.css" media="all" rel="alternate stylesheet" title="orange-theme"]
+    link[href="stylesheets/color/magenta.css" media="all" rel="alternate stylesheet" title="magenta-theme"]
+    link[href="stylesheets/color/gray.css" media="all" rel="alternate stylesheet" title="gray-theme"]
+    script[src="javascripts/modernizr.custom.js"]
+    script[src="http://code.jquery.com/jquery-1.10.1.min.js"]
+    script[src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"]
+    script[src="javascripts/bootstrap.min.js"]
+    script[src="javascripts/jquery.mousewheel.js"]
+    script[src="javascripts/jquery.classyscroll.js"]
+    script[src="javascripts/jquery.vmap.min.js"]
+    script[src="javascripts/jquery.vmap.sampledata.js"]
+    script[src="javascripts/jquery.vmap.world.js"]
+    script[src="javascripts/fullcalendar.min.js"]
+    script[src="javascripts/gcal.js"]
+    script[src="javascripts/prettify.js"]
+    script[src="javascripts/jquery.dataTables.min.js"]
+    script[src="javascripts/jquery.fancybox.pack.js"]
+    script[src="javascripts/jquery.sparkline.min.js"]
+    script[src="javascripts/jquery.easy-pie-chart.js"]
+    script[src="javascripts/excanvas.min.js"]
+    script[src="javascripts/jquery.isotope.min.js"]
+    script[src="javascripts/select2.js"]
+    script[src="javascripts/styleswitcher.js"]
+    script[src="javascripts/main.js"]
+    meta[content="width=device-width, initial-scale=1.0" charset="utf-8" name="viewport"]
+  body
+    .navbar.navbar-fixed-top
+      .container-fluid.top-bar
+        .pull-right
+          ul.nav.navbar-nav.pull-right
+            li.dropdown.notifications.hidden-xs
+              a.dropdown-toggle[data-toggle="dropdown" href="widgets#"]
+                span
+                  | Notifications
+              p.counter
+                |  4
+              ul.dropdown-menu
+                li
+                  a[href="#"]
+
+                  .notifications.label.label-info
+                    |  New
+                  |  New user added: Jane Smith
+                li
+                  a[href="#"]
+
+                  .notifications.label.label-info
+                    |  New
+                  |  Sales targets available
+                li
+                  a[href="#"]
+
+                  .notifications.label.label-info
+                    |  New
+                  |  New performance metric added
+                li
+                  a[href="#"]
+
+                  .notifications.label.label-info
+                    |  New
+                  |  New growth data available
+            li.dropdown.messages.hidden-xs
+              a.dropdown-toggle[data-toggle="dropdown" href="#"]
+                span
+                  | Messages
+              p.counter
+                | 3
+              ul.dropdown-menu.messages
+                li
+                  a[href="#"]
+                    img[alt="Avatar male2" height="34" src="avatar-male2.png" width="34"]
+                    |  Could we meet today? I wanted...
+                li
+                  a[href="#"]
+                    img[alt="Avatar female" height="34" src="avatar-female.png" width="34"]
+                    |  Important data needs your analysis...
+                li
+                  a[href="#"]
+                    img[alt="Avatar male2" height="34" src="avatar-male2.png" width="34"]
+                    |  Buy Se7en today, it's a great theme...
+            li.dropdown.settings.hidden-xs
+              a.dropdown-toggle[data-toggle="dropdown" href="widgets#"]
+                span
+                  | Settings
+              ul.dropdown-menu
+                li
+                  a.settings-link.blue[href="javascript:chooseStyle('none', 30)"]
+                    span
+                    |  Blue
+                li
+                  a.settings-link.green[href="javascript:chooseStyle('green-theme', 30)"]
+                    span
+                    |  Green
+                li
+                  a.settings-link.orange[href="javascript:chooseStyle('orange-theme', 30)"]
+                    span
+                    |  Orange
+                li
+                  a.settings-link.magenta[href="javascript:chooseStyle('magenta-theme', 30)"]
+                    span
+                    |  Magenta
+                li
+                  a.settings-link.gray[href="javascript:chooseStyle('gray-theme', 30)"]
+                    span
+                    |  Gray
+            li.dropdown.user.hidden-xs
+              a.dropdown-toggle[data-toggle="dropdown" href="widgets#"]
+                img[alt="Avatar male" height="34" src="avatar-male.jpg" width="34"]
+                |  John Smith
+                b.caret
+              ul.dropdown-menu
+                li
+                  a[href="widgets#"]
+                    i.icon-user
+                    |  My Account
+                li
+                  a[href="widgets#"]
+                    i.icon-gear
+                    |  Account Settings
+                li
+                  a[href="index.html"]
+                    i.icon-signout
+                    |  Logout
+        button.navbar-toggle
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.logo[href="index.html"]
+          | se7en
+        form.navbar-form.form-inline.col-lg-2.hidden-xs
+          input.form-control[placeholder="Search" type="text"]
+      .container-fluid.main-nav.clearfix
+        .nav-collapse
+          ul.nav
+            li.dashboard
+              a.current[href="index.html"]
+                span
+                | Dashboard
+            li.dropdown.ui
+              a.current[data-toggle="dropdown" href="#"]
+                span
+                |  UI
+                b.caret
+              ul.dropdown-menu
+                li
+                  a[href="buttons.html"]
+                    | Buttons
+                li
+                  a[href="icons.html"]
+                    | Icons
+                li
+                  a[href="components.html"]
+                    | Components
+                li
+                  a[href="widgets.html"]
+                    | Widgets
+                li
+                  a[href="typo.html"]
+                    | Typography
+                li
+                  a[href="grid.html"]
+                    | Grid Layout
+            li.forms
+              a[href="forms.html"]
+                span
+                |  Forms
+            li.tables
+              a[href="tables.html"]
+                span
+                |  Tables
+            li.charts
+              a[href="charts.html"]
+                span
+                |  Charts
+            li.gallery
+              a[href="gallery.html"]
+                span
+                |  Gallery
+    .container-fluid
+      .login-container
+        img[alt="Logo login@2x" height="30" src="logo-login@2x.png" width="100"]
+        form
+          .form-group
+            .input-group
+              span.input-group-addon
+                i.icon-envelope
+              input.form-control[placeholder="Email" type="text"]
+          .form-group
+            .input-group
+              span.input-group-addon
+                i.icon-key
+              input.form-control[placeholder="Password" type="password"]
+          .form-group
+            label.checkbox
+              input[type="checkbox"]
+              | Remember me
+          input.btn.btn-large.btn-primary[type="submit" value="Log in"]
+        a[href="login#"]
+          | Forgot password?

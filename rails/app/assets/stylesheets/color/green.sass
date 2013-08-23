@@ -1,0 +1,99 @@
+$green: #60c560
+
+a
+  color: $green
+
+.navbar .container-fluid.top-bar form .form-control
+  &:focus
+    border-color: $green
+
+.navbar .container-fluid.top-bar .nav > li
+  &.open, &.active, &.open.active
+    > a span
+      background-position: left -56px
+
+  &.messages
+    &.open, &.active, &.open.active
+      > a span
+        background-position: -28px -56px
+
+  &.settings
+    &.open, &.active, &.open.active
+      > a span
+        background-position: -56px -56px
+
+.navbar .container-fluid.main-nav .nav-collapse .nav > li
+  a.current 
+    span
+      background-position: left -56px
+    .caret
+      border-top-color: $green
+  &.ui a.current span
+    background-position: -28px -56px
+  &.forms a.current span
+    background-position: -56px -56px
+  &.charts a.current span
+    background-position: -84px -56px
+  &.tables a.current span
+    background-position: -112px -56px
+  &.gallery a.current span
+    background-position: -140px -56px
+
+.navbar .container-fluid.main-nav .nav-collapse .nav > li > a.current
+  color: $green
+
+.widget-container .heading
+  color: $green
+
+.dropdown-menu li a:hover
+  border-bottom-color: $green
+  color: $green
+
+.form-control
+  &:focus
+    border-color: $green
+
+.stats-container [class^="col-"] .number, .stats-container [class*="col-"] .number
+  color: $green
+
+.stats-container
+  [class^="col-"], [class*="col-"]
+    .number
+      .icon
+        background-position: left -38px
+
+        &.visitors
+          background-position: -50px -38px
+        &.money
+          background-position: -100px -38px
+        &.chat-bubbles
+          background-position: -150px -38px
+
+.task-widget input[type="checkbox"]:checked + .task-checkbox
+  color: $green
+
+.select2-container-active .select2-choice, .select2-container-active .select2-choices
+  border-color: $green
+
+.select2-container-multi.select2-container-active .select2-choices
+  border-color: $green
+
+.select2-drop-active
+  border-color: $green
+
+.dataTable th
+  color: $green
+
+  &.sorting
+    &:after
+      border-top: 5px solid $green
+    &:before
+      border-bottom: 5px solid $green
+
+  &.sorting_asc
+    &:after
+      border-bottom: 5px solid $green
+
+  &.sorting_desc
+    &:after
+      border-top: 5px solid $green

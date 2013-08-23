@@ -1,0 +1,265 @@
+<!-- Login Screen -->
+.login
+  .login-container
+    = image_tag "logo-login@2x.png", :size => "100x30"
+    form
+      .form-group
+        .input-group
+          span.input-group-addon
+            i.icon-envelope
+          input.form-control placeholder="Email" type="text"
+      .form-group
+        .input-group
+          span.input-group-addon
+            i.icon-lock
+          input.form-control placeholder="Password" type="password"
+      .form-group
+        label.checkbox
+          input type="checkbox"
+          | Remember me
+      .btn.btn-lg.btn-primary.login-submit Log in
+      
+    = link_to "Forgot password?", "#"
+<!-- End Login Screen -->
+
+<!-- Statistics -->
+.row
+	.col-lg-12
+		.widget-container.stats-container
+			.col-md-3
+				.number
+					.icon.globe
+					| 86
+					small %
+				.text Overall growth
+			.col-md-3
+				.number
+					.icon.visitors
+					| 613
+				.text Unique visitors
+			.col-md-3
+				.number
+					.icon.money
+					small $
+					| 924
+				.text Sales
+			.col-md-3
+				.number
+					.icon.chat-bubbles
+					| 325
+				.text New followers
+<!-- End Statistics -->
+
+
+.row
+	<!-- Linechart -->
+	.col-lg-6
+		.widget-container
+			.heading
+				.pull-right.btn-group data-toggle="buttons"
+					label.btn.btn-sm.btn-default-outline.active
+						| Day
+						input#option1 name="options" type="radio"
+					label.btn.btn-sm.btn-default-outline
+						| Week
+						input#option2 name="options" type="radio"
+					label.btn.btn-sm.btn-default-outline
+						| Month
+						input#option3 name="options" type="radio"
+				i.icon-bar-chart
+				| Growth over time
+			.widget-content.padded
+				.chart-graph.line-chart
+					#linechart-1 Loading...
+					ul.chart-text-axis
+						li 1
+						li 2
+						li 3
+						li 4
+						li 5
+						li 6
+						li 7
+						li 8
+						li 9
+						li 10
+						li 11
+						li 12
+	<!-- End Linechart -->
+
+	<!-- Pie Graph 1 -->
+	.col-lg-3.col-sm-6
+		.widget-container
+			.heading
+				i.icon-adjust
+				| Retention
+				i.icon-refresh.pull-right
+			.widget-content
+				.pie-chart1.pie-chart.pie-number data-percent="73" 73%
+	<!-- End Pie Graph 1 -->
+
+	<!-- Pie Graph 2 -->			
+	.col-lg-3.col-sm-6
+		.widget-container
+			.heading
+				i.icon-adjust
+				| New users
+				i.icon-refresh.pull-right
+			.widget-content
+				.pie-chart2.pie-chart.pie-number data-percent="36" 26%
+	<!-- End Pie Graph 2 -->
+
+
+.row
+	<!-- Bar Graph 1 -->
+	.col-lg-4
+		.widget-container.small
+			.heading
+				i.icon-signal
+				| Views Today
+				i.icon-refresh.pull-right
+			.widget-content.padded
+				.bar-chart-widget
+					.bar-chart-info
+						.chart-number
+							i.icon-long-arrow-up
+							| 246
+					.chart-graph
+						#barcharts Loading...
+						ul.chart-text-axis
+							li 1
+							li 2
+							li 3
+							li 4
+							li 5
+							li 6
+							li 7
+							li 8
+							li 9
+							li 10
+							li 11
+							li 12
+	<!-- End Bar Graph 1 -->
+	
+	<!-- Bar Graph 2 -->
+	.col-lg-4
+		.widget-container.small
+			.heading
+				i.icon-signal
+				| Growth
+				i.icon-refresh.pull-right
+			.widget-content.padded
+				.bar-chart-widget
+					.bar-chart-info
+						.chart-number
+							i.icon-long-arrow-up
+							| 42%
+					.chart-graph
+						#barcharts2 Loading...
+						ul.chart-text-axis
+							li 1
+							li 2
+							li 3
+							li 4
+							li 5
+							li 6
+							li 7
+							li 8
+							li 9
+							li 10
+							li 11
+							li 12
+	<!-- End Bar Graph 2 -->
+
+	<!-- Bar Graph 3 -->
+	.col-lg-4
+		.widget-container.small
+			.heading
+				i.icon-signal
+				| Today's Sales
+				i.icon-refresh.pull-right
+			.widget-content.padded
+				.bar-chart-widget
+					.bar-chart-info
+						.chart-number
+							i.icon-long-arrow-up
+							| $630
+					.chart-graph
+						#barcharts3 Loading...
+						ul.chart-text-axis
+							li 1
+							li 2
+							li 3
+							li 4
+							li 5
+							li 6
+							li 7
+							li 8
+							li 9
+							li 10
+							li 11
+							li 12
+	<!-- End Bar Graph 3 -->
+
+
+
+.row
+  <!-- Interactive Map -->
+  .col-lg-6
+		.widget-container.map-container
+			.heading
+				i.icon-map-marker
+				| Interactive global map
+				i.icon-plus.pull-right
+				i.icon-refresh.pull-right
+			.widget-content
+			 	#vmap.map style="height: 450px;"
+		<!-- End Interactive Map -->
+
+  <!-- Chat -->
+  .col-lg-6
+		.widget-container.scrollable.chat
+			.heading
+				i.icon-comments
+				| Chat Widget
+				i.icon-smile.pull-right
+			.widget-content.padded.scrollbar
+				ul
+					li
+						= image_tag "avatar-male.jpg", :size => "50x50"
+						.bubble
+							= link_to "John Smith", "", class: "user-name"
+							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+							em.time
+								i.icon-time
+								| 10 min ago
+					li.current-user
+						= image_tag "avatar-female.png", :size => "50x50"
+						.bubble
+							= link_to "Jane Smith", "", class: "user-name"
+							p.message Donec odio. Quisque volutpat mattis eros.
+							em.time
+								i.icon-time
+								| 10 min ago
+					li
+						= image_tag "avatar-male.jpg", :size => "50x50"
+						.bubble
+							= link_to "John Smith", "", class: "user-name"
+							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+							em.time
+								i.icon-time
+								| 10 min ago
+					li
+						= image_tag "avatar-male.jpg", :size => "50x50"
+						.bubble
+							= link_to "John Smith", "", class: "user-name"
+							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+							em.time
+								i.icon-time
+								| 10 min ago
+
+			.post-message
+				input type="text" placeholder="Write your message here…" class="form-control"
+				input type="submit" value="Post" class="btn btn-primary"
+		<!-- End Chat -->
+
+

@@ -1,0 +1,348 @@
+.page-title
+  h1 Widgets
+
+.row
+	<!-- Task List -->
+	.col-lg-6
+		.widget-container.scrollable.list.task-widget
+			.heading
+				i.icon-list
+				| Task list
+				i.icon-plus.pull-right
+			.widget-content.scrollbar
+				ul
+					li
+						label
+							input type="checkbox" class="task-input" checked="checked"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Distribute latest marketing
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Create the latest mockup
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-warning.pull-right Pending
+							| Code the latest features
+					li
+						label
+							input type="checkbox" class="task-input" checked="checked"
+							span.task-checkbox
+							.label.label-danger.pull-right Required
+							| Coffee time
+					li
+						label
+							input type="checkbox" class="task-input" checked="checked"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Distribute latest marketing
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Pick up lunch
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Send out e-blast
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Ask for a raise
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Coffe time pt. 2
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Bug fixes
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Happy hour!!!
+	<!-- End Task List -->
+
+	<!-- Ratings -->
+	.col-lg-6
+		.widget-container.scrollable.list.rating-widget
+			.heading
+				i.icon-comment
+				| Recent Ratings
+				i.icon-refresh.pull-right
+			.widget-content.scrollbar
+				ul
+					li
+						.reviewer-info
+							.star-rating.pull-right
+								i.icon-star
+								i.icon-star
+								i.icon-star
+								i.icon-star-empty
+								i.icon-star-empty
+			 				= image_tag "avatar-male.jpg", width: "30", height:"30"
+			 				= link_to "John Smith", ""
+			 				em  on 8/20/2013
+			 			.review-text
+			 				p Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					li
+						.reviewer-info
+							.star-rating.pull-right
+								i.icon-star
+								i.icon-star
+								i.icon-star
+								i.icon-star-empty
+								i.icon-star-empty
+			 				= image_tag "avatar-male.jpg", width: "30", height:"30"
+			 				= link_to "John Smith", ""
+			 				em  on 8/20/2013
+			 			.review-text
+			 				p Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy.
+					li
+						.reviewer-info
+							.star-rating.pull-right
+								i.icon-star
+								i.icon-star
+								i.icon-star
+								i.icon-star-empty
+								i.icon-star-empty
+			 				= image_tag "avatar-male.jpg", width: "30", height:"30"
+			 				= link_to "John Smith", ""
+			 				em  on 8/20/2013
+			 			.review-text
+			 				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+
+							p Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+					li
+						.reviewer-info
+							.star-rating.pull-right
+								i.icon-star
+								i.icon-star
+								i.icon-star
+								i.icon-star-empty
+								i.icon-star-empty
+			 				= image_tag "avatar-male.jpg", width: "30", height:"30"
+			 				= link_to "John Smith", ""
+			 				em  on 8/20/2013
+			 			.review-text
+			 				p Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					li
+						.reviewer-info
+							.star-rating.pull-right
+								i.icon-star
+								i.icon-star
+								i.icon-star
+								i.icon-star-empty
+								i.icon-star-empty
+			 				= image_tag "avatar-male.jpg", width: "30", height:"30"
+			 				= link_to "John Smith", ""
+			 				em  on 8/20/2013
+			 			.review-text
+			 				p Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy.
+					li
+						.reviewer-info
+							.star-rating.pull-right
+								i.icon-star
+								i.icon-star
+								i.icon-star
+								i.icon-star-empty
+								i.icon-star-empty
+			 				= image_tag "avatar-male.jpg", width: "30", height:"30"
+			 				= link_to "John Smith", ""
+			 				em  on 8/20/2013
+			 			.review-text
+			 				p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+
+							p Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+	<!-- End Ratings -->
+
+.row
+	<!-- Map -->
+	.col-lg-6
+		.widget-container
+			.heading
+				i.icon-map-marker
+				| Interactive global map
+				i.icon-plus.pull-right
+				i.icon-refresh.pull-right
+			.widget-content
+			 	#vmap.map style="height: 450px;"
+	<!-- End Map -->
+
+	<!-- Rollodex -->
+	.col-lg-6
+		.widget-container.scrollable.list.rollodex
+			.heading
+				i.icon-comment
+				| Rollodex
+				i.icon-plus.pull-right
+				i.icon-search.pull-right
+				i.icon-refresh.pull-right
+			.widget-content.scrollbar
+				.roll-title A
+				ul
+					li
+						= image_tag "avatar-female.png", width: "30", height:"30"
+						= link_to "Joan Andrews", ""
+					li
+						= image_tag "avatar-male.jpg", width: "30", height:"30"
+						= link_to "Jose Anderson", ""
+					li
+						= image_tag "avatar-male2.png", width: "30", height:"30"
+						= link_to "Phil Aaron", ""
+
+				.roll-title B
+				ul
+					li
+						= image_tag "avatar-female.png", width: "30", height:"30"
+						= link_to "Samatha Brown", ""
+					li
+						= image_tag "avatar-male.jpg", width: "30", height:"30"
+						= link_to "Chris Baker", ""
+					li
+						= image_tag "avatar-female2.png", width: "30", height:"30"
+						= link_to "Kristin Blues", ""
+
+				.roll-title C
+				ul
+					li
+						= image_tag "avatar-male.jpg", width: "30", height:"30"
+						= link_to "Adam Carter", ""
+					li
+						= image_tag "avatar-male2.png", width: "30", height:"30"
+						= link_to "Greg Campbell", ""
+					li
+						= image_tag "avatar-female2.png", width: "30", height:"30"
+						= link_to "Judy Collins", ""
+
+				.roll-title D
+				ul
+					li
+						= image_tag "avatar-male.jpg", width: "30", height:"30"
+						= link_to "John Smith", ""
+				.roll-title E
+				ul
+					li
+						= image_tag "avatar-male.jpg", width: "30", height:"30"
+						= link_to "John Smith", ""
+					li
+						= image_tag "avatar-male.jpg", width: "30", height:"30"
+						= link_to "John Smith", ""
+				.roll-title F
+				.roll-title G
+				.roll-title H
+				.roll-title I
+				.roll-title J
+				ul
+					li
+						= image_tag "avatar-male.jpg", width: "30", height:"30"
+						= link_to "John Smith", ""
+					li
+						= image_tag "avatar-male.jpg", width: "30", height:"30"
+						= link_to "John Smith", ""
+					li
+						= image_tag "avatar-male.jpg", width: "30", height:"30"
+						= link_to "John Smith", ""
+				.roll-title K
+				.roll-title L
+				.roll-title M
+				.roll-title N
+				.roll-title O
+				.roll-title P
+				.roll-title Q
+				.roll-title R
+				.roll-title S
+				ul
+					li
+						= image_tag "avatar-male.jpg", width: "30", height:"30"
+						= link_to "John Smith", ""
+					li
+						= image_tag "avatar-male2.png", width: "30", height:"30"
+						= link_to "Brian Sullivan", ""
+					li
+						= image_tag "avatar-male.jpg", width: "30", height:"30"
+						= link_to "Chris Stevens", ""
+				.roll-title T
+				.roll-title U
+				.roll-title V
+				.roll-title W
+				.roll-title X
+				.roll-title Y
+				.roll-title Z
+	<!-- End Rollodex -->
+
+.row
+<!-- Calendar -->
+  .col-lg-6
+    .widget-container
+      .heading
+        i.icon-calendar
+        | Calendar
+        i.icon-plus.pull-right
+        i.icon-refresh.pull-right
+      .widget-content.padded
+        #calendar
+<!-- End Calendar -->
+
+<!-- Chat -->
+  .col-lg-6
+		.widget-container.scrollable.chat
+			.heading
+				i.icon-comments
+				| Chat Widget
+				i.icon-smile.pull-right
+			.widget-content.padded.scrollbar
+				ul
+					li
+						= image_tag "avatar-male.jpg", width: "50", height:"50"
+						.bubble
+							= link_to "John Smith", "", class: "user-name"
+							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+							em.time
+								i.icon-time
+								| 10 min ago
+					li.current-user
+						= image_tag "avatar-female.jpg", width: "50", height:"50"
+						.bubble
+							= link_to "Jane Smith", "", class: "user-name"
+							p.message Donec odio. Quisque volutpat mattis eros.
+							em.time
+								i.icon-time
+								| 10 min ago
+					li
+						= image_tag "avatar-male.jpg", width: "50", height:"50"
+						.bubble
+							= link_to "John Smith", "", class: "user-name"
+							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+							em.time
+								i.icon-time
+								| 10 min ago
+					li
+						= image_tag "avatar-male.jpg", width: "50", height:"50"
+						.bubble
+							= link_to "John Smith", "", class: "user-name"
+							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+							em.time
+								i.icon-time
+								| 10 min ago
+
+			.post-message
+				input type="text" placeholder="Write your message here…" class="form-control"
+				input type="submit" value="Post" class="btn btn-primary"
+<!-- End Chat -->

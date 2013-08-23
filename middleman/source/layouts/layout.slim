@@ -1,0 +1,150 @@
+doctype html
+html
+  head
+    title se7en - Dashboard
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:100,300,400,700", media: "all"
+    = stylesheet_link_tag "application", media: "all"
+
+    = stylesheet_link_tag "color/green", media: "all", rel: "alternate stylesheet", title: "green-theme"
+    = stylesheet_link_tag "color/orange", media: "all", rel: "alternate stylesheet", title: "orange-theme"
+    = stylesheet_link_tag "color/magenta", media: "all", rel: "alternate stylesheet", title: "magenta-theme"
+    = stylesheet_link_tag "color/gray", media: "all", rel: "alternate stylesheet", title: "gray-theme"
+
+    = javascript_include_tag "application"
+    meta content="width=device-width, initial-scale=1.0" name="viewport"
+
+
+  body
+    <!-- Navigation -->
+    .navbar.navbar-fixed-top
+      .container-fluid.top-bar
+        .pull-right
+          ul.nav.navbar-nav.pull-right
+            li.dropdown.notifications.hidden-xs
+              a.dropdown-toggle data-toggle="dropdown" href="#"
+                span Notifications
+                p.counter 4
+              ul.dropdown-menu
+                li= link_to
+                  i.icon-user
+                  .notifications.label.label-info.pull-right New
+                  | New user added: Jane Smith
+                li= link_to
+                  i.icon-dashboard
+                  .notifications.label.label-info.pull-right New
+                  | Sales targets available
+                li= link_to
+                  i.icon-pencil
+                  .notifications.label.label-info.pull-right New
+                  | New performance metric added
+                li= link_to
+                  i.icon-dashboard
+                  .notifications.label.label-info.pull-right New
+                  | New growth data available
+
+            li.dropdown.messages.hidden-xs
+              a.dropdown-toggle data-toggle="dropdown" href="#"
+                span Messages
+                p.counter 3
+              ul.dropdown-menu.messages
+                li= link_to
+                  = image_tag "avatar-male2.png", width: "34", height: "34"
+                  | Could we meet today? I wanted...
+                li= link_to
+                  = image_tag "avatar-female.png", width: "34", height: "34"
+                  | Important data needs your analysis...
+                li= link_to
+                  = image_tag "avatar-male2.png", width: "34", height: "34"
+                  | Buy Se7en today, it's a great theme...
+            li.dropdown.settings.hidden-xs
+              a.dropdown-toggle data-toggle="dropdown" href="#"
+                span Settings
+              ul.dropdown-menu
+                li
+                  a.settings-link.blue href="javascript:chooseStyle('none', 30)"
+                    span
+                    | Blue
+                li
+                  a.settings-link.green href="javascript:chooseStyle('green-theme', 30)"
+                    span
+                    | Green
+                li
+                  a.settings-link.orange href="javascript:chooseStyle('orange-theme', 30)"
+                    span
+                    | Orange
+                li
+                  a.settings-link.magenta href="javascript:chooseStyle('magenta-theme', 30)"
+                    span
+                    | Magenta
+                li
+                  a.settings-link.gray href="javascript:chooseStyle('gray-theme', 30)"
+                    span
+                    | Gray
+            li.dropdown.user.hidden-xs
+              = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" do
+                = image_tag "avatar-male.jpg", width: "34", height: "34"
+                | John Smith
+                b.caret
+              ul.dropdown-menu
+                li
+                  = link_to "#" do
+                    i.icon-user
+                    | My Account
+                li
+                  = link_to "#" do
+                    i.icon-gear
+                    | Account Settings
+                li
+                  = link_to 'index.html' do
+                    i.icon-signout
+                    | Logout
+
+        button.navbar-toggle
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+        = link_to "se7en", 'index.html', class: 'logo'
+        form.navbar-form.form-inline.col-lg-2.hidden-xs
+          input.form-control placeholder="Search" type="text"
+
+
+      .container-fluid.main-nav.clearfix
+        .nav-collapse
+          ul.nav
+            li.dashboard
+              = link_to 'index.html', class: cp('index.html') do
+                span
+                | Dashboard
+            li.dropdown.ui *{ class: "#{cp 'buttons.html'}" }
+              = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('buttons.html') || cp('icons.html') || cp('components.html') || cp('widgets.html') || cp('typo.html') || cp('grid.html') do
+                span
+                | UI
+                b.caret
+              ul.dropdown-menu
+                li= link_to "Buttons", 'buttons.html', class: cp('buttons.html')
+                li= link_to "Icons", 'icons.html', class: cp('icons.html')
+                li= link_to "Components", 'components.html', class: cp('components.html')
+                li= link_to "Widgets", 'widgets.html', class: cp('widgets.html')
+                li= link_to "Typography", 'typo.html', class: cp('typo.html')
+                li= link_to "Grid Layout", 'grid.html', class: cp('grid.html')
+            li.forms
+              = link_to 'forms.html', class: cp('forms.html') do
+                span
+                | Forms
+            li.tables
+              = link_to 'tables.html', class: cp('tables.html') do
+                span
+                | Tables
+            li.charts
+              = link_to 'charts.html', class: cp('charts.html') do
+                span
+                | Charts
+            li.gallery
+              = link_to 'gallery.html', class: cp('gallery.html') do
+                span
+                | Gallery
+    <!-- End Navigation -->
+
+    .container-fluid
+      = yield

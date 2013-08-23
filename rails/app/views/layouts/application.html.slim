@@ -1,0 +1,151 @@
+doctype html
+html
+  head
+    title se7en - Dashboard
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:100,300,400,700", media: "all"
+    = stylesheet_link_tag "application", media: "all"
+
+    = stylesheet_link_tag "color/green", media: "all", rel: "alternate stylesheet", title: "green-theme"
+    = stylesheet_link_tag "color/orange", media: "all", rel: "alternate stylesheet", title: "orange-theme"
+    = stylesheet_link_tag "color/magenta", media: "all", rel: "alternate stylesheet", title: "magenta-theme"
+    = stylesheet_link_tag "color/gray", media: "all", rel: "alternate stylesheet", title: "gray-theme"
+
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    meta content="width=device-width, initial-scale=1.0, charset=utf-8" name="viewport"
+
+
+  body
+    <!-- Navigation -->
+    .navbar.navbar-fixed-top
+      .container-fluid.top-bar
+        .pull-right
+          ul.nav.navbar-nav.pull-right
+            li.dropdown.notifications.hidden-xs
+              a.dropdown-toggle data-toggle="dropdown" href="#"
+                span Notifications
+                p.counter 4
+              ul.dropdown-menu
+                li= link_to
+                  i.icon-user
+                  .notifications.label.label-info.pull-right New
+                  | New user added: Jane Smith
+                li= link_to
+                  i.icon-dashboard
+                  .notifications.label.label-info.pull-right New
+                  | Sales targets available
+                li= link_to
+                  i.icon-pencil
+                  .notifications.label.label-info.pull-right New
+                  | New performance metric added
+                li= link_to
+                  i.icon-dashboard
+                  .notifications.label.label-info.pull-right New
+                  | New growth data available
+
+            li.dropdown.messages.hidden-xs
+              a.dropdown-toggle data-toggle="dropdown" href="#"
+                span Messages
+                p.counter 3
+              ul.dropdown-menu.messages
+                li= link_to
+                  = image_tag "avatar-male2.png", :size => "34x34"
+                  | Could we meet today? I wanted...
+                li= link_to
+                  = image_tag "avatar-female.png", :size => "34x34"
+                  | Important data needs your analysis...
+                li= link_to
+                  = image_tag "avatar-male2.png", :size => "34x34"
+                  | Buy Se7en today, it's a great theme...
+            li.dropdown.settings.hidden-xs
+              a.dropdown-toggle data-toggle="dropdown" href="#"
+                span Settings
+              ul.dropdown-menu
+                li
+                  a.settings-link.blue href="javascript:chooseStyle('none', 30)"
+                    span
+                    | Blue
+                li
+                  a.settings-link.green href="javascript:chooseStyle('green-theme', 30)"
+                    span
+                    | Green
+                li
+                  a.settings-link.orange href="javascript:chooseStyle('orange-theme', 30)"
+                    span
+                    | Orange
+                li
+                  a.settings-link.magenta href="javascript:chooseStyle('magenta-theme', 30)"
+                    span
+                    | Magenta
+                li
+                  a.settings-link.gray href="javascript:chooseStyle('gray-theme', 30)"
+                    span
+                    | Gray
+            li.dropdown.user.hidden-xs
+              = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" do
+                = image_tag "avatar-male.jpg", :size => "34x34"
+                | John Smith
+                b.caret
+              ul.dropdown-menu
+                li
+                  = link_to "#" do
+                    i.icon-user
+                    | My Account
+                li
+                  = link_to "#" do
+                    i.icon-gear
+                    | Account Settings
+                li
+                  = link_to root_url do
+                    i.icon-signout
+                    | Logout
+
+        button.navbar-toggle
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+
+        = link_to "se7en", root_path, class: 'logo'
+        form.navbar-form.form-inline.col-lg-2.hidden-xs
+          input.form-control placeholder="Search" type="text"
+
+
+      .container-fluid.main-nav.clearfix
+        .nav-collapse
+          ul.nav
+            li.dashboard
+              = link_to root_path, class: cp(root_path) do
+                span
+                | Dashboard
+            li.dropdown.ui *{ class: "#{cp buttons_path}" }
+              = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp(buttons_path) || cp(icons_path) || cp(components_path) || cp(widgets_path) || cp(typo_path) || cp(grid_path) do
+                span
+                | UI
+                b.caret
+              ul.dropdown-menu
+                li= link_to "Buttons", buttons_path, class: cp(buttons_path)
+                li= link_to "Icons", icons_path, class: cp(icons_path)
+                li= link_to "Components", components_path, class: cp(components_path)
+                li= link_to "Widgets", widgets_path, class: cp(widgets_path)
+                li= link_to "Typography", typo_path, class: cp(typo_path)
+                li= link_to "Grid Layout", grid_path, class: cp(grid_path)
+            li.forms
+              = link_to forms_path, class: cp(forms_path) do
+                span
+                | Forms
+            li.tables
+              = link_to tables_path, class: cp(tables_path) do
+                span
+                | Tables
+            li.charts
+              = link_to charts_path, class: cp(charts_path) do
+                span
+                | Charts
+            li.gallery
+              = link_to gallery_path, class: cp(gallery_path) do
+                span
+                | Gallery
+    <!-- End Navigation --> 
+
+    .container-fluid
+      = yield
