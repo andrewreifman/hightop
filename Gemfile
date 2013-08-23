@@ -36,6 +36,7 @@ end
 
 gem 'foreman'
 gem 'slim-rails'
+gem 'html2slim'
 
 # Adds compass gem - assets group only required for compass
 group :assets do
