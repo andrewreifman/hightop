@@ -2003,6 +2003,20 @@ button.close
 /*-----------------------------------------------------------------------------------*/
 /*  WYSIWYG
 /*-----------------------------------------------------------------------------------*/
+.text-editor-toolbar
+  .btn 
+    float: left
+    
+    [class^="icon-"], [class*="icon-"]
+      margin-right: 0
+      font-size: 14px
+
+  .btn-group
+    >.btn:first-child
+      border-radius: 4px 0 0 4px !important
+    >.btn:only-child
+      border-radius: 4px !important
+
 #editor
   overflow-y: scroll
   height: 400px
