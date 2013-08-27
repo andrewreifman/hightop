@@ -43,6 +43,10 @@ $blue: #007aff
 *
   outline: 0 !important
 
+html, body
+  width: 100%
+  height: 100%
+
 body
   font-family: 'Lato', sans-serif
   color: #666
@@ -181,6 +185,7 @@ small
   padding: 0
   min-height: 45px
   height: 112px
+  width: 100%
   border: 0
   @include transition(all .3s)
 
@@ -449,8 +454,9 @@ small
 /*  Page Styles
 /*-----------------------------------------------------------------------------------*/
 .page-title
+  padding: 0 20px
   h1
-    margin: 0 20px 25px
+    margin-bottom: 25px
     color: #5e5e5e
     font-weight: 300
 
@@ -706,7 +712,7 @@ small
         border: 0
 
 .notifications
-  margin-left: 14px
+  margin: 0 10px 0 0 !important
 
 .messages
   img
@@ -1612,7 +1618,10 @@ label
 
 .radio-inline, .checkbox-inline
   padding-top: 9px
-  margin-right: 15px
+  margin-right: 20px
+
+  &+.radio-inline, &+.checkbox-inline
+    margin-left: 0
 
 .has-warning
   .help-block, .control-label
@@ -2001,21 +2010,29 @@ button.close
 
 
 @media (max-width: 768px)
+  html
+    overflow: hidden
+    
   body
-    left: 0
-    @include transition(left .3s)
-    padding-top: 80px
+    padding-top: 60px
 
     &.nav-open
-      left: 200px
       overflow: hidden
+
+      .navbar, .container-fluid.main-content
+        left: 240px
+
+      .container-fluid.main-nav
+        left: 0
+
+  .container-fluid.main-content
+    position: relative
+    left: 0
+    @include transition(left .3s)
 
   .navbar
     height: 45px !important
-    @include transition(left .3s)
-
-    &.nav-open
-      left: 200px
+    @include transition(left .3s)    
 
     .container-fluid.top-bar
       border-bottom: 0
@@ -2026,18 +2043,14 @@ button.close
 
     .container-fluid.main-nav
       position: fixed
-      left: -200px
+      left: -240px
       top: 0
       height: 100%
-      width: 200px
+      width: 240px
       background: #ddd
       box-shadow: inset -4px 0 0 rgba(0,0,0,.05)
       @include transition(left .3s)
-      overflow-y: auto
-      -webkit-scroll-overflow: touch
-
-      &.open
-        left: 0
+      -webkit-overflow-scrolling: touch
 
       .nav-collapse .nav
         padding-left: 15px
@@ -2131,6 +2144,15 @@ button.close
 
 
 @media (max-width: 600px)
+  .page-title
+    padding: 0 10px
+
+    h1
+      margin-bottom: 15px
+
+  .row
+    margin: 0
+
   .fc-header-right
     display: none
 

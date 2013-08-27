@@ -11,11 +11,10 @@ html
     = stylesheet_link_tag "color/gray", media: "all", rel: "alternate stylesheet", title: "gray-theme"
 
     = javascript_include_tag "application"
-    meta content="width=device-width, initial-scale=1.0" name="viewport"
-
+    meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
 
   body
     = partial 'navigation'
 
-    .container-fluid
+    .container-fluid.main-content
       = yield

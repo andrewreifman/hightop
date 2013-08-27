@@ -180,9 +180,7 @@ $(document).ready ->
   #   Mobile Nav
   # =============================================================================
   $('.navbar-toggle').click ->
-    $('body, .navbar').toggleClass "nav-open"
-    $('.container-fluid.main-nav').toggleClass "open"
-
+    $('body').toggleClass "nav-open"
 
   linechartResize()
   $(window).resize ->
