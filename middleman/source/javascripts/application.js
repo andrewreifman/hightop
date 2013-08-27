@@ -31,4 +31,5 @@
 //= require jquery.sidr.min
 //= require select2
 //= require styleswitcher
+//= require wysiwyg
 //= require main

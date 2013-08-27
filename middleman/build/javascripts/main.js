@@ -172,8 +172,7 @@
         return lastScrollTop = st;
       });
       $('.navbar-toggle').click(function() {
-        $('body, .navbar').toggleClass("nav-open");
-        return $('.container-fluid.main-nav').toggleClass("open");
+        return $('body').toggleClass("nav-open");
       });
       linechartResize();
       return $(window).resize(function() {
