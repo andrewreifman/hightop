@@ -94,6 +94,7 @@
         li.dashboard
           = link_to 'index.html', class: cp('index.html') do
             span
+              / = image_tag "nav-home-default.png"
             | Dashboard
         li.dropdown.ui *{ class: "#{cp 'buttons.html'}" }
           = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('buttons.html') || cp('icons.html') || cp('components.html') || cp('widgets.html') || cp('typo.html') || cp('grid.html') do

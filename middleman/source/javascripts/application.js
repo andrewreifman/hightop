@@ -13,13 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min
-//= require justgage.min
 //= require raphael.min
+//= require justgage.min
 //= require jquery.mousewheel
 //= require jquery.classyscroll
 //= require jquery.vmap.min
 //= require jquery.vmap.sampledata
 //= require jquery.vmap.world
+//= require jquery.bootstrap.wizard
 //= require fullcalendar.min
 //= require gcal
 //= require prettify
@@ -30,7 +31,6 @@
 //= require jquery.isotope.min
 //= require modernizr.custom
 //= require jquery.fancybox.pack
-//= require jquery.sidr.min
 //= require select2
 //= require styleswitcher
 //= require wysiwyg
