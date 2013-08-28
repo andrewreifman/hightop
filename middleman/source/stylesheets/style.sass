@@ -356,6 +356,9 @@ small
         height: 100%
         margin: 0
 
+        path
+          fill: #94d31b
+
         > li
           float: none
           display: inline-block
@@ -853,9 +856,6 @@ th:active
   &.small
     min-height: 120px
 
-  &.gauges
-    min-height: 180px !important
-
   &.gallery
     min-height: 400px
 
@@ -1015,6 +1015,14 @@ th:active
         &.blue
           background: #a0eeed
 
+
+/*-----------------------------------------------------------------------------------*/
+/*  Guages Styles
+/*-----------------------------------------------------------------------------------*/
+.gauge
+  width: 50%
+  height: 130px
+  float: left
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -2022,6 +2030,11 @@ button.close
     .add-link
       border-radius: 4px 0 0 4px !important
       border-right: 0
+    #pictureBtn
+      border-radius: 4px
+      &+ input[type="file"]
+        z-index: 10 !important
+        height: 34px !important
 
 #editor
   overflow-y: scroll
@@ -2029,9 +2042,11 @@ button.close
   width: 100%
   background: white
   padding: 10px 12px
-  border: 1px solid #a9a9a9
+  border: 1px solid #CCC
   font-family: 'Lato', sans-serif
   font-weight: 300
+  border-radius: 5px
+  @include transition(border .3s)
 
   &:focus
     border: 1px solid $blue
@@ -2051,9 +2066,9 @@ button.close
     width: 20px
     color: transparent
     background-color: transparent
-    transform: scale(2)
-    -webkit-transform: scale(2)
-    -moz-transform: scale(2)
+    transform: scale(1.75)
+    -webkit-transform: scale(1.75)
+    -moz-transform: scale(1.75)
     border: 0
     cursor: pointer
     box-shadow: none

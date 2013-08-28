@@ -150,20 +150,22 @@ $(document).ready ->
   # =============================================================================
   #   Gauges
   # =============================================================================
-  g = new JustGage(
-    id: "gauge"
-    value: 67
-    min: 0
-    max: 100
-    title: "Velocity"
-  )
-  g = new JustGage(
-    id: "gauge2"
-    value: 24
-    min: 0
-    max: 100
-    title: "Retention"
-  )
+  # g = new JustGage(
+  #   id: "gauge"
+  #   value: 67
+  #   min: 0
+  #   max: 100
+  #   title: "Velocity"
+  #   showInnerShadow: "false"
+  # )
+  # g = new JustGage(
+  #   id: "gauge2"
+  #   value: 24
+  #   min: 0
+  #   max: 100
+  #   title: "Retention"
+  #   showInnerShadow: "false"
+  # )
 
   # =============================================================================
   #   Navbar scroll animation
@@ -202,6 +204,31 @@ $(document).ready ->
   linechartResize()
   $(window).resize ->
     linechartResize()
+
+
+  # =============================================================================
+  #   Form wizard
+  # =============================================================================
+  $("#wizard").bootstrapWizard
+    nextSelector: ".btn-next"
+    previousSelector: ".btn-previous"
+    onNext: (tab, navigation, index) ->
+      $total = navigation.find("li").length
+      $current = index + 1
+      $percent = ($current / $total) * 100
+      $("#wizard").find(".progress-bar").css "width", $percent + "%"
+
+    onPrevious: (tab, navigation, index) ->
+      $total = navigation.find("li").length
+      $current = index + 1
+      $percent = ($current / $total) * 100
+      $("#wizard").find(".progress-bar").css "width", $percent + "%"
+
+    onTabShow: (tab, navigation, index) ->
+      $total = navigation.find("li").length
+      $current = index + 1
+      $percent = ($current / $total) * 100
+      $("#wizard").find(".progress-bar").css "width", $percent + "%"
 
 
 	# =============================================================================

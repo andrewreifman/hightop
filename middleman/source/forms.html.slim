@@ -5,7 +5,45 @@
   .col-lg-12
     .widget-container.fluid-height
       .heading
-        i.icon-adjust
+        i.icon-edit
+        | Form Wizard
+
+      .widget-content.padded
+        #wizard
+          ul.wizard-nav
+            li
+              a data-toggle="tab" href="#tab1" 1
+            li
+              a data-toggle="tab" href="#tab2" 2
+            li
+              a data-toggle="tab" href="#tab3" 3
+            li
+              a data-toggle="tab" href="#tab4" 4
+
+          .progress.progress-striped.active
+            .progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="45" role="progressbar"
+
+          .tab-content
+            #tab1.tab-pane
+              | 1
+            #tab2.tab-pane
+              | 2
+            #tab3.tab-pane
+              | 3
+            #tab4.tab-pane
+              | 4
+            ul.pager.wizard
+              li.btn-previous
+                a href="#" Prev
+              li.btn-next
+                a href="#" Next
+
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height
+      .heading
+        i.icon-edit
         | WYSIWYG Editor
 
       .widget-content.padded
@@ -18,13 +56,13 @@
               b.caret
             ul.dropdown-menu
               li
-                a data-edit="fontSize 5"
+                a href="#" data-edit="fontSize 5"
                   | Big
               li
-                a data-edit="fontSize 3"
+                a href="#" data-edit="fontSize 3"
                   | Medium
               li
-                a data-edit="fontSize 1"
+                a href="#" data-edit="fontSize 2"
                   | Small
 
           .btn-group
@@ -59,9 +97,10 @@
             a.btn.btn-default-outline.dropdown-toggle.add-link data-toggle="dropdown" title="Hyperlink"
               i.icon-link
             .dropdown-menu.input-append
-              form.form-inline
+              .input-group
                 input.form-control data-edit="createLink" placeholder="URL" type="text"
-                button.btn.btn-sm.btn-default type="submit" Add
+                a.input-group-addon
+                  | Add
             a.btn.btn-default-outline data-edit="unlink" title="Remove Hyperlink"
               i.icon-unlink
 
@@ -218,7 +257,7 @@
       .col-lg-12
         .widget-container.fluid-height.clearfix
           .heading
-            i.icon-adjust
+            i.icon-collapse
             | Select2 Dropdowns
 
           .widget-content.padded
@@ -244,7 +283,7 @@
       .col-lg-12
         .widget-container.fluid-height.clearfix
           .heading
-            i.icon-adjust
+            i.icon-user
             | User Profile
 
           .widget-content.padded
@@ -270,7 +309,7 @@
       .col-lg-12
         .widget-container
           .heading
-            i.icon-adjust
+            i.icon-shield
             | Validations
 
           .widget-content.padded
