@@ -2006,24 +2006,26 @@ button.close
 .text-editor-toolbar
   .btn 
     float: left
-    
+
     [class^="icon-"], [class*="icon-"]
       margin-right: 0
       font-size: 14px
 
   .btn-group
     >.btn:first-child
-      border-radius: 4px 0 0 4px !important
-    >.btn:only-child
+      border-radius: 4px 0 0 4px
+    >.dropdown-toggle
       border-radius: 4px !important
+    .add-link
+      border-radius: 4px 0 0 4px !important
+      border-right: 0
 
 #editor
   overflow-y: scroll
-  height: 400px
-  max-height: 600px
+  height: 200px
   width: 100%
   background: white
-  padding: 20px
+  padding: 10px 12px
   border: 1px solid #a9a9a9
   font-family: 'Lato', sans-serif
   font-weight: 300
@@ -2032,32 +2034,26 @@ button.close
     border: 1px solid $blue
 
 .voice-container
-  height: 40px
-  width: 40px
-  position: absolute
-  top: -30px
-  right: 1px
-  padding: 48px
-  opacity: 0.7
+  height: 30px
+  width: 38px
+  float: right
+  text-align: center
+  padding-top: 4px
 
-  &:hover
-    opacity: 1
-
-#voiceBtn
-  width: 20px
-  color: rgba(0, 0, 0, 0)
-  background-color: rgba(0, 0, 0, 0)
-  transform: scale(2.5, 2.5)
-  -webkit-transform: scale(2.5, 2.5)
-  -moz-transform: scale(2.5, 2.5)
-  border: rgba(0, 0, 0, 0)
-  cursor: pointer
-  box-shadow: none
-  -webkit-box-shadow: none
-  opacity: 0.5
-  
-  &:hover
-    opacity: 1
+  #voiceBtn
+    width: 20px
+    color: transparent
+    background-color: transparent
+    transform: scale(2)
+    -webkit-transform: scale(2)
+    -moz-transform: scale(2)
+    border: 0
+    cursor: pointer
+    box-shadow: none
+    opacity: 0.65
+    
+    &:hover
+      opacity: 1
 /*-----------------------------------------------------------------------------------*/
 /*  Mobile Styles
 /*-----------------------------------------------------------------------------------*/
