@@ -147,23 +147,7 @@ $(document).ready ->
     animate: 800
     scaleColor: false
 
-  # =============================================================================
-  #   Gauges
-  # =============================================================================
-  g = new JustGage(
-    id: "gauge"
-    value: 67
-    min: 0
-    max: 100
-    title: "Velocity"
-  )
-  g = new JustGage(
-    id: "gauge2"
-    value: 24
-    min: 0
-    max: 100
-    title: "Retention"
-  )
+
 
   # =============================================================================
   #   Navbar scroll animation
@@ -391,3 +375,30 @@ $(document).ready ->
   #   WYSIWYG Editor
   # =============================================================================
   $('#editor').wysiwyg();
+
+
+  # =============================================================================
+  #   Gauges
+  # =============================================================================
+  g = new JustGage(
+    id: "gauge"
+    value: 92
+    min: 0
+    max: 100
+    gaugeWidthScale: -1.2
+    startAnimationTime: 4600
+    showInnerShadow: false
+    StartAnimationType: "bounce"
+    title: "Velocity"
+  )
+  g = new JustGage(
+    id: "gauge2"
+    value: 22
+    min: 0
+    max: 100
+    gaugeWidthScale: -1.2
+    startAnimationTime: 8600
+    showInnerShadow: false
+    StartAnimationType: "bounce"
+    title: "Retention"
+  )
