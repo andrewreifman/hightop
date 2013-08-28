@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'se7en';
+  src:url('../font/se7en.eot');
+  src:url('../font/se7en.eot?#iefix') format('embedded-opentype'),
+    url('../font/se7en.woff') format('woff'),
+    url('../font/se7en.ttf') format('truetype'),
+    url('../font/se7en.svg#se7en') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'se7en';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="se7en-"] {
+*/
+.se7en-nav-home {
+  font-family: 'se7en';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.se7en-nav-home:before {
+  content: "\e000";
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+  font-family: 'se7en';
+  src: url('../font/se7en.svg#se7en') format('svg');
+  }
+}
