@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap.min
+//= require justgage.min
+//= require raphael.min
 //= require jquery.mousewheel
 //= require jquery.classyscroll
 //= require jquery.vmap.min

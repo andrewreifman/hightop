@@ -147,6 +147,23 @@ $(document).ready ->
     animate: 800
     scaleColor: false
 
+  # =============================================================================
+  #   Gauges
+  # =============================================================================
+  g = new JustGage(
+    id: "gauge"
+    value: 67
+    min: 0
+    max: 100
+    title: "Velocity"
+  )
+  g = new JustGage(
+    id: "gauge2"
+    value: 24
+    min: 0
+    max: 100
+    title: "Retention"
+  )
 
   # =============================================================================
   #   Navbar scroll animation
