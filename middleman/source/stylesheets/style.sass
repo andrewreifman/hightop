@@ -260,12 +260,11 @@ small
             background: rgba(0,0,0,.04)
 
           > span
-            background: image-url('admin-sprite.png') no-repeat top left
-            @include image2x("admin-sprite@2x.png", 84px, 168px)
             display: block
             width: 28px
             height: 28px
-            text-indent: -9999em
+            font-size: 28px
+            color: #999
 
           p.counter
             position: absolute
@@ -285,28 +284,9 @@ small
           > a
             background-color: #eee
             span
-              background-position: left -28px
-
-        &.messages
-          a > span
-            background-position: -28px top
-
-          &.open, &.active, &.open.active
-            > a
-              background-color: #eee
-              span
-                background-position: -28px -28px
+              color: $blue
 
         &.settings
-          a > span
-            background-position: -56px top
-
-          &.open, &.active, &.open.active
-            > a
-              background-color: #eee
-              span
-                background-position: -56px -28px
-
           .settings-link
             span
               width: 20px
@@ -357,9 +337,6 @@ small
         height: 100%
         margin: 0
 
-        path
-          fill: #94d31b
-
         > li
           float: none
           display: inline-block
@@ -377,11 +354,10 @@ small
             @include transition(all .3s)
 
             span
-              background: image-url('nav-sprite.png') no-repeat top left
-              @include image2x("nav-sprite@2x.png", 168px, 168px)
-              display: block
+              font-size: 28px
               width: 28px
               height: 28px
+              display: block
               margin: 0 auto 2px
 
             .caret
@@ -393,7 +369,7 @@ small
               color: $blue
 
               span
-                background-position: left -28px
+                color: $blue
 
               .caret
                 border-top-color: $blue
@@ -404,46 +380,6 @@ small
 
           .dropdown-menu
             text-align: left
-
-          &.ui
-            a
-              span
-                background-position: -28px top
-
-              &.current span
-                background-position: -28px -28px
-
-          &.forms
-            a
-              span
-                background-position: -56px top
-
-              &.current span
-                background-position: -56px -28px
-
-          &.charts
-            a
-              span
-                background-position: -84px top
-
-              &.current span
-                background-position: -84px -28px
-
-          &.tables
-            a
-              span
-                background-position: -112px top
-
-              &.current span
-                background-position: -112px -28px
-
-          &.gallery
-            a
-              span
-                background-position: -140px top
-
-              &.current span
-                background-position: -140px -28px
 
   .nav > li > a
     padding: 0
