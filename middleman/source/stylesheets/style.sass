@@ -1,12 +1,18 @@
-// Welcome to Compass.
-// In this file you should write your main styles. (or centralize your imports)
-// Import this file using the following HTML or equivalent:
-// <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
-
-// @import compass/reset
-
+@import "normalize"
+@import "bootstrap.min"
 @import "font-awesome"
 @import "se7en-font"
+@import "isotope"
+@import "classyscroll"
+@import "datatables"
+@import "jquery.fancybox"
+@import "fullcalendar"
+@import "wizard"
+@import "select2"
+@import "color/green"
+@import "color/orange"
+@import "color/magenta"
+@import "color/gray"
 
 /*-----------------------------------------------------------------------------------*/
 /*  Mixins/variables
@@ -2020,6 +2026,8 @@ button.close
     
     &:hover
       opacity: 1
+
+
 /*-----------------------------------------------------------------------------------*/
 /*  Mobile Styles
 /*-----------------------------------------------------------------------------------*/
@@ -2033,6 +2041,9 @@ button.close
 
 
 @media (max-width: 768px)
+  html.nav-open
+    overflow: hidden
+
   body
     padding-top: 60px
 

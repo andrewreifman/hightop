@@ -200,7 +200,7 @@ $(document).ready ->
   #   Mobile Nav
   # =============================================================================
   $('.navbar-toggle').click ->
-    $('body').toggleClass "nav-open"
+    $('body, html').toggleClass "nav-open"
 
   linechartResize()
   $(window).resize ->
