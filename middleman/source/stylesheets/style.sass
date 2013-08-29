@@ -1736,6 +1736,61 @@ input[type="text"]
   border-radius: 0px
   padding: 8px
 
+/*-----------------------------------------------------------------------------------*/
+/*  Bootstrap Progress Bar
+/*-----------------------------------------------------------------------------------*/
+.progress
+  height: 12px
+  box-shadow: none
+  border-radius: 10px
+  background-color: #f2f2f2
+
+  .progress-bar
+    box-shadow: none
+    background-color: $blue
+  .progress-bar-success
+    background-color: #60c560
+  .progress-bar-warning
+    background-color: #f0ad4e
+  .progress-bar-danger
+    background-color: #d9534f
+
+/*-----------------------------------------------------------------------------------*/
+/*  jQuery UI Slider
+/*-----------------------------------------------------------------------------------*/
+.slider-container
+  margin-bottom: 20px
+
+.ui-slider
+  background-color: #e2e2e2
+  height: 4px
+  border-radius: 2px
+  position: relative
+
+  .ui-slider-range
+    position: absolute
+    z-index: 1
+    display: block
+    border-radius: 2px
+
+.ui-slider-handle
+  position: absolute
+  z-index: 2
+  width: 28px
+  height: 28px
+  top: -13px
+  margin-left: -14px
+  background-color: #FFF
+  border: 1px solid #e0e0e0
+  border-radius: 50%
+  box-shadow: 0 0 4px rgba(0,0,0,.1), 0 5px 5px rgba(0,0,0,.1)
+
+.ui-widget-header
+  background-color: $blue
+
+.ui-slider-horizontal .ui-slider-range-min
+  top: 0
+  height: 100%
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Well Styles
@@ -1751,13 +1806,18 @@ input[type="text"]
 
 .panel-heading
   padding: 0
+  border-radius: 0
+
   .panel-toggle
     background: #f9fafa
 
-.panel-title > a
-  font-weight: 200
-  padding: 10px 15px
-  display: block
+.panel-title
+  font-size: 16.5px
+
+  > a
+    font-weight: 200
+    padding: 8px 15px 10px
+    display: block
 
   &:hover
     color: $blue
@@ -1772,9 +1832,11 @@ input[type="text"]
   margin-bottom: 0
   overflow: hidden
   border-radius: 0px
-  border: 1px solid #e1e1e1
-  border-left: 0px
-  border-right: 0px
+  border: 0
+  border-top: 1px solid #e1e1e1
+
+  &+ .panel
+    margin-top: 0
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -1954,7 +2016,7 @@ button.close
   .row
     margin: 0 -10px 0
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12
   padding: 0 10px
   margin-bottom: 20px
 
