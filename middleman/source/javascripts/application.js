@@ -10,8 +10,6 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
 //= require bootstrap.min
 //= require raphael.min
 //= require justgage.min
@@ -23,6 +21,7 @@
 //= require jquery.bootstrap.wizard
 //= require fullcalendar.min
 //= require gcal
+//= require morris.min
 //= require prettify
 //= require jquery.dataTables.min
 //= require jquery.sparkline.min
