@@ -63,6 +63,20 @@ linechartResize = ->
     spotRadius: 6
     chartRangeMin: 0
 
+   $("#linechart-4").sparkline [100, 220, 150, 140, 200, 180, 130, 180, 180, 210, 240, 200, 170, 120, 200, 150, 100, 100],
+      type: "line"
+      width: "100%"
+      height: "100"
+      lineColor: "#adadad"
+      fillColor: "rgba(244, 252, 225, 0.0)"
+      lineWidth: 2
+      spotColor: "#909090"
+      minSpotColor: "#909090"
+      maxSpotColor: "#909090"
+      highlightSpotColor: "#666"
+      highlightLineColor: "#666"
+      spotRadius: 6
+      chartRangeMin: 0
 
   $("#composite-chart-1").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
     type: "bar"
@@ -241,6 +255,13 @@ $(document).ready ->
       bSortable: false
       aTargets: [0,-1] # <-- gets last column and turns off sorting
     ]
+
+  # =============================================================================
+  #   jQuery UI Sliders
+  # =============================================================================
+  $( ".slider-basic" ).slider
+    range: "min"
+    value: 40
 
 
   # =============================================================================
