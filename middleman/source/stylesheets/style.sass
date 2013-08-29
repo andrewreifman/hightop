@@ -19,6 +19,13 @@
 /*-----------------------------------------------------------------------------------*/
 $blue: #007aff
 
+@mixin css-gradient ($from, $to, $start, $end)
+  background: $to
+  background: -webkit-linear-gradient(top, $from $start, $to $end)
+  background: -moz-linear-gradient(top, $from $start, $to $end)
+  background: -o-linear-gradient(top, $from $start, $to $end)
+  background: linear-gradient(to bottom, $from $start, $to $end)
+
 @mixin inline-block
   display: inline-block
   *display: inline
@@ -43,7 +50,21 @@ $blue: #007aff
   transform: $effect
   -o-transform: $effect
 
+=gradient($from, $to)
+  /* fallback/image non-cover color */
+  background-color: $from
 
+  /* Firefox 3.6+ */
+  background-image: -moz-linear-gradient($from, $to)
+
+  /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to))
+
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient($from, $to)
+
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient($from, $to)
 /*-----------------------------------------------------------------------------------*/
 /*  Document Setup
 /*-----------------------------------------------------------------------------------*/
@@ -2023,6 +2044,27 @@ button.close
 .hideme
   display: none
 
+
+/*-----------------------------------------------------------------------------------*/
+/*  Filter/Advanced Search
+/*-----------------------------------------------------------------------------------*/
+
+.filter-category
+  @include css-gradient (transparentize(#fec610,0.5), #f8991d, 0%, 60%)
+  height: 100%
+  color: #fff
+  padding-top: 3em
+  margin: 0px
+  min-height: 240px 
+
+  &.drug
+    @include css-gradient (transparentize(#f15a58,0.5), #f47743, 0%, 60%)
+    
+  &.home
+    @include css-gradient (transparentize(#e8678d,0.5), #ce79b2, 0%, 60%)
+
+.filter-table
+  margin-bottom: 0px
 /*-----------------------------------------------------------------------------------*/
 /*  WYSIWYG
 /*-----------------------------------------------------------------------------------*/

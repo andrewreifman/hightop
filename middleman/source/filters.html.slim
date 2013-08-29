@@ -70,49 +70,123 @@
 				    #collapseThree.panel-collapse.collapse
 				      .panel-body
 				      	h2 Summary and Quiz
-  .widget-container.col-md-10
-
+  .col-md-10
   	.row
-      .col-md-4.padded style="border:1px solid #d7d7d7;  min-height:400px; "
-		.text-center.padded
-			i.icon-camera-retro.icon-4x
-			h2 Electronics
-		<!-- Line Chart -->
-		.chart-graph.line-chart
-		#linechart-4 Loading...
-		<!-- end Line Chart -->
-		<!-- Condensed Table -->
+      .col-md-12.widget-container.fluid-height style="border: 1px solid #d7d7d7;"
+		.row
+			.col-md-3.filter-category
+				.text-center.padded 
+					i.icon-camera-retro.icon-4x
+					h2 Electronics
+			.col-md-9.filter-table
+				<!-- Condensed Table -->
+			      table.table.table-condensed
+			        thead
+			          th Vendor
+			          th Total
+			          th.hidden-xs Contact
+			          th Growth
+			        tbody
+			          tr
+			            td ACME
+			            td $ 1200
+			            td.hidden-xs  John Garcia
+			            td
+			              .chart-graph.line-chart
+			              #linechart-4 Loading...
+			          tr
+			            td Supplier Co.
+			            td $ 6204
+			            td.hidden-xs  Susan Smith
+			            td
+			              .chart-graph.line-chart
+			              #linechart-5 Loading...
+			          tr
+			            td Star Trade
+			            td $ 12,260
+			            td.hidden-xs Gary Benson
+			            td 
+			              .chart-graph.line-chart
+			              #linechart-6 Loading...
+						<!-- end Condensed Table -->
+    .row  
+      .col-md-12.widget-container.fluid-height style="border: 1px solid #d7d7d7;"
+		.row
+			.col-md-3.filter-category.drug
+				.text-center.padded 
+					i.icon-stethoscope.icon-4x
+					h2 Drug & Pharmacy
+			.col-md-9.filter-table
+				<!-- Condensed Table -->
+			      table.table.table-condensed
+			        thead
+			          th Vendor
+			          th Total
+			          th.hidden-xs Contact
+			          th Growth
+			        tbody
+			          tr
+			            td ACME
+			            td $ 1200
+			            td.hidden-xs  John Garcia
+			            td
+			              .chart-graph.line-chart
+			              #linechart-4 Loading...
+			          tr
+			            td Supplier Co.
+			            td $ 6204
+			            td.hidden-xs  Susan Smith
+			            td
+			              .chart-graph.line-chart
+			              #linechart-5 Loading...
+			          tr
+			            td Star Trade
+			            td $ 12,260
+			            td.hidden-xs Gary Benson
+			            td 
+			              .chart-graph.line-chart
+			              #linechart-6 Loading...
+						<!-- end Condensed Table -->
+		
+		.col-md-12.widget-container.fluid-height style="border: 1px solid #d7d7d7;"
+			.row
+				.col-md-2.filter-category.home
+					.text-center.padded 
+						i.icon-coffee.icon-4x
+						h2 Home & Office
+				.col-md-10.filter-table
+					<!-- Condensed Table -->
+				      table.table.table-condensed
+				        thead
+				          th Vendor
+				          th Total
+				          th.hidden-xs Contact
+				          th Growth
+				        tbody
+				          tr
+				            td ACME
+				            td $ 1200
+				            td.hidden-xs  John Garcia
+				            td
+				              .chart-graph.line-chart
+				              #linechart-4 Loading...
+				          tr
+				            td Supplier Co.
+				            td $ 6204
+				            td.hidden-xs  Susan Smith
+				            td
+				              .chart-graph.line-chart
+				              #linechart-5 Loading...
+				          tr
+				            td Star Trade
+				            td $ 12,260
+				            td.hidden-xs Gary Benson
+				            td 
+				              .chart-graph.line-chart
+				              #linechart-6 Loading...
+							<!-- end Condensed Table -->
 
-		      table.table.table-condensed
-		        thead
-		          th Vendor
-		          th Total
-		          th Contact
-		          th.hidden-xs Status
-		        tbody
-		          tr
-		            td ACME
-		            td $ 1200
-		            td John Garcia
-		            td.hidden-xs 
-		              span.label.label-success + 20%
-		          tr
-		            td Supplier Co.
-		            td $ 6204
-		            td Susan Smith
-		            td.hidden-xs 
-		              span.label.label-danger - 2%
-		          tr
-		            td Star Trade
-		            td $ 12,260
-		            td Gary Benson
-		            td.hidden-xs 
-		              span.label.label-success + 210%
 
-		<!-- end Condensed Table -->
-      .col-md-4
-		i.icon-stethoscope.icon-4x
-		h2 Pharamacy
       .col-md-4
 		i.icon-coffee.icon-4x
 		h2 Home & Office
