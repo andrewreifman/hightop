@@ -5,29 +5,15 @@ a {
   border-color: #999999; }
 
 .navbar .container-fluid.top-bar .nav > li.open > a span, .navbar .container-fluid.top-bar .nav > li.active > a span, .navbar .container-fluid.top-bar .nav > li.open.active > a span {
-  background-position: left -140px; }
-.navbar .container-fluid.top-bar .nav > li.messages.open > a span, .navbar .container-fluid.top-bar .nav > li.messages.active > a span, .navbar .container-fluid.top-bar .nav > li.messages.open.active > a span {
-  background-position: -28px -140px; }
-.navbar .container-fluid.top-bar .nav > li.settings.open > a span, .navbar .container-fluid.top-bar .nav > li.settings.active > a span, .navbar .container-fluid.top-bar .nav > li.settings.open.active > a span {
-  background-position: -56px -140px; }
+  color: #555555; }
 
 .navbar .container-fluid.main-nav .nav-collapse .nav > li a.current span {
-  background-position: left -140px; }
+  color: #333; }
 .navbar .container-fluid.main-nav .nav-collapse .nav > li a.current .caret {
   border-top-color: #999999; }
-.navbar .container-fluid.main-nav .nav-collapse .nav > li.ui a.current span {
-  background-position: -28px -140px; }
-.navbar .container-fluid.main-nav .nav-collapse .nav > li.forms a.current span {
-  background-position: -56px -140px; }
-.navbar .container-fluid.main-nav .nav-collapse .nav > li.charts a.current span {
-  background-position: -84px -140px; }
-.navbar .container-fluid.main-nav .nav-collapse .nav > li.tables a.current span {
-  background-position: -112px -140px; }
-.navbar .container-fluid.main-nav .nav-collapse .nav > li.gallery a.current span {
-  background-position: -140px -140px; }
 
 .navbar .container-fluid.main-nav .nav-collapse .nav > li > a.current {
-  color: #666666; }
+  color: #333; }
 
 .widget-container .heading {
   color: #999999; }
@@ -44,12 +30,12 @@ a {
 
 .stats-container [class^="col-"] .number .icon, .stats-container [class*="col-"] .number .icon {
   background-position: left -152px; }
-  .stats-container [class^="col-"] .number .icon.visitors, .stats-container [class*="col-"] .number .icon.visitors {
-    background-position: -50px -152px; }
-  .stats-container [class^="col-"] .number .icon.money, .stats-container [class*="col-"] .number .icon.money {
-    background-position: -100px -152px; }
-  .stats-container [class^="col-"] .number .icon.chat-bubbles, .stats-container [class*="col-"] .number .icon.chat-bubbles {
-    background-position: -150px -152px; }
+.stats-container [class^="col-"] .number .icon.visitors, .stats-container [class*="col-"] .number .icon.visitors {
+  background-position: -50px -152px; }
+.stats-container [class^="col-"] .number .icon.money, .stats-container [class*="col-"] .number .icon.money {
+  background-position: -100px -152px; }
+.stats-container [class^="col-"] .number .icon.chat-bubbles, .stats-container [class*="col-"] .number .icon.chat-bubbles {
+  background-position: -150px -152px; }
 
 .task-widget input[type="checkbox"]:checked + .task-checkbox {
   color: #999999; }
