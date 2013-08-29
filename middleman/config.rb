@@ -42,7 +42,7 @@ activate :livereload
 # Methods defined in the helpers block are available in templates
 helpers do
   def cp(path)
-    # "current" if page == request.path
+    "current" if path == current_page.path
   end
 end
 
