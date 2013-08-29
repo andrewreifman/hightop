@@ -21,6 +21,7 @@
 //= require jquery.bootstrap.wizard
 //= require fullcalendar.min
 //= require gcal
+//= require morris.min
 //= require prettify
 //= require jquery.dataTables.min
 //= require jquery.sparkline.min
