@@ -1,0 +1,102 @@
+.navbar.navbar-fixed-top
+  .container-fluid.top-bar
+    .pull-right
+      ul.nav.navbar-nav
+        li.dropdown
+          a.dropdown-toggle[data-toggle="dropdown" href="#"]
+            span
+              | Notifications
+          p.counter
+            |  2 
+          ul.dropdown-menu
+            li
+              a[href="#"]
+                i.icon-user
+                | New user added: Jane Smith 
+              .notifications.label.label-info.pull-right
+                |  New 
+            li
+              a[href="#"]
+                i.icon-dashboard
+                | Sales targets available 
+              .notifications.label.label-info.pull-right
+                |  New 
+        li.dropdown.user
+          a.dropdown-toggle[data-toggle="dropdown" href="#"]
+            img[alt="Avatar male" height="34" src="/assets/avatar-male.jpg" width="34"]
+            | John Smith
+            b.caret
+          ul.dropdown-menu
+            li
+              a[href="#"]
+                i.icon-user
+                |  My Account 
+            li
+              a[href="#"]
+                i.icon-gear
+                |  Account Settings 
+            li
+              a[href="/login"]
+                i.icon-signout
+                |  Logout 
+    button.navbar-toggle
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+    a.logo[href="/"]
+      | se7en
+    form.navbar-form.form-inline.col-lg-2.hidden-xs
+      input.form-control[placeholder="Search" type="text"]
+  .container-fluid.main-nav
+    .nav-collapse
+      ul.nav
+        li
+          a[href="/"]
+            | Dashboard
+        li.dropdown
+          a[data-toggle="dropdown" href="#"]
+            | UI
+            b.caret
+          ul.dropdown-menu
+            li
+              a[href="/buttons"]
+                | Buttons
+            li
+              a[href="/icons"]
+                | Icons
+            li
+              a[href="/components"]
+                | Components
+            li
+              a[href="/widgets"]
+                | Widgets
+            li
+              a[href="/typo"]
+                | Typography
+            li
+              a[href="/grid"]
+                | Grid Layout
+        li
+          a[href="/forms"]
+            | Forms
+        li
+          a[href="/tables"]
+            | Tables
+        li
+          a[href="/charts"]
+            | Charts
+        li
+          a[href="/gallery"]
+            | Gallery
+.container-fluid
+  .page-title
+    h1
+      |  Widgets 
+  .row
+    .col-lg-12
+      .widget-container
+        .heading
+          |  Content Heading 
+        .widget-content.padded
+          p
+            |  This is content about this page. 
