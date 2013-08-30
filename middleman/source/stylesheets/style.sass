@@ -133,7 +133,7 @@ small
 /*  Login
 /*-----------------------------------------------------------------------------------*/
 .login
-  padding: 50px 15px 15px
+  padding: 30px 15px 15px
   background: #eee
   position: fixed
   top: 0
@@ -180,12 +180,19 @@ small
 
     .login-submit
       padding: 10px 0 12px
-      margin: 20px 0 25px
+      margin: 20px 0 30px
 
       &:hover
         background: transparent
 
     .social-login
+      margin-bottom: 20px
+      padding-bottom: 25px
+      border-bottom: 1px solid #CCC
+      > .btn
+        width: 49%
+        margin: 0
+
       .facebook
         background-color: #335397
         border-color: #335397
@@ -512,9 +519,11 @@ small
     .caret
       border-top-color: #d9534f
 
+.btn-default-outline, .btn-primary-outline, .btn-success-outline, .btn-info-outline, .btn-warning-outline, .btn-danger-outline
+  background: transparent
+
 .btn-default-outline
   color: #999
-  background: #FFF
   border: 1px solid #BBB
 
   .caret
@@ -529,7 +538,6 @@ small
 
 .btn-primary-outline
   color: $blue
-  background: #FFF
   border: 1px solid $blue
 
   .caret
@@ -544,7 +552,6 @@ small
 
 .btn-success-outline
   color: #60c560
-  background: #FFF
   border: 1px solid #60c560
 
   .caret
@@ -559,7 +566,6 @@ small
 
 .btn-info-outline
   color: #5bc0de
-  background: #FFF
   border: 1px solid #5bc0de
 
   .caret
@@ -574,7 +580,6 @@ small
 
 .btn-warning-outline
   color: #f0ad4e
-  background: #FFF
   border: 1px solid #f0ad4e
 
   .caret
@@ -589,7 +594,6 @@ small
 
 .btn-danger-outline
   color: #d9534f
-  background: #FFF
   border: 1px solid #d9534f
 
   .caret
@@ -691,6 +695,7 @@ small
 /*-----------------------------------------------------------------------------------*/
 /*  DataTable styles
 /*-----------------------------------------------------------------------------------*/
+
 .dataTable th
   padding-right: 20px
   position: relative
@@ -2405,7 +2410,7 @@ button.close
         margin: 30px auto
 
       .login-submit
-        margin-bottom: 15px
+        margin-bottom: 25px
 
   .page-title
     padding: 0 10px
