@@ -201,9 +201,9 @@ html .fc,
 */
 
 .fc-state-default {
-	color: #AAA;
+	color: #BBB;
 	background: none;
-	border: 1px solid #AAA;
+	border: 1px solid #BBB;
 	font-weight:200;
 	transition: background 0.1s linear;
 }
@@ -214,23 +214,23 @@ html .fc,
 .fc-state-disabled {
 	color: #333;
 	background-color: #fafafa;
-	border-color: #AAA;
+	border-color: #BBB;
 	font-weight:200;
 	}
 
 .fc-state-hover {
-	background-color: #AAA;
+	background-color: #BBB;
 	background-image: none;
-	border-color: #AAA;
+	border-color: #BBB;
 	outline: 0;
 	color: white;
 	}
 
 .fc-state-down,
 .fc-state-active {
-	background-color: #AAA;
+	background-color: #BBB;
 	background-image: none;
-	border-color: #AAA;
+	border-color: #BBB;
 	outline: 0;
 	color: white;
 

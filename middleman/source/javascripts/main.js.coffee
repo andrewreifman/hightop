@@ -410,16 +410,12 @@ $(document).ready ->
   $("#event_priority_chzn").click handleDropdown
 
   #predefined events
-  addEvent "My Event 1", "default"
+  addEvent "My Event 1", "primary"
   addEvent "My Event 2", "success"
   addEvent "My Event 3", "info"
   addEvent "My Event 4", "warning"
-  addEvent "My Event 5", "primary"
-  addEvent "My Event 6", "success"
-  addEvent "My Event 7", "info"
-  addEvent "My Event 8", "warning"
-  addEvent "My Event 9", "success"
-  addEvent "My Event 10", "default"
+  addEvent "My Event 5", "danger"
+  addEvent "My Event 6", "default"
 
   $("#calendar").fullCalendar
     header:
