@@ -1,0 +1,32 @@
+.page-title
+  h1 Calendar
+
+.row
+  .col-md-9
+    .widget-container.fluid-height.clearfix
+      .widget-content.padded
+        #calendar
+
+  .col-md-3.hidden-sm
+    .widget-container.fluid-height
+      .heading
+        i.icon-calendar
+        | Draggable Events
+
+      .widget-content.padded
+        #external-events
+          form
+            input#event_title.input.form-control placeholder="Event Title..." type="text" value=""
+            select#event_priority.select2able.chosen_select data-placeholder="Select Label..."
+              option value="default" Default
+              option value="success" Success
+              option value="info" Info
+              option value="warning" Warning
+              option value="important" Important
+            .space12
+            a#event_add.btn.btn-primary href="javascript:;" Add event
+
+          #event_box
+          label.checkbox for="drop-remove"
+            input#drop-remove type="checkbox"
+            | Remove after drop
