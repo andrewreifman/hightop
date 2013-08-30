@@ -1,27 +1,3 @@
-<!-- Login Screen -->
-.login
-  .login-container
-    = image_tag "logo-login@2x.png", width: "100", height:"30"
-    form
-      .form-group
-        .input-group
-          span.input-group-addon
-            i.icon-envelope
-          input.form-control value="JohnSmith@gmail.com" type="text"
-      .form-group
-        .input-group
-          span.input-group-addon
-            i.icon-lock
-          input.form-control value="Password" type="password"
-      .form-group
-        label.checkbox
-          input type="checkbox"
-          | Remember me
-      .btn.btn-lg.btn-primary.login-submit Log in
-
-    = link_to "Forgot password?", "#"
-<!-- End Login Screen -->
-
 .widget-container.padded.hidden-xs style="width:260px; background: rgba(245,245,245, 0.8); height: 200px; position:fixed; z-index:10; left:0; top: 30%;"
 	.heading style="background: rgba(245,245,245, 0.7);"
 		i.icon-adjust
