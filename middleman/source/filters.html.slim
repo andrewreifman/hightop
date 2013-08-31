@@ -51,7 +51,7 @@
 				          | Departments
 				    #collapseTwo.panel-collapse.collapse.in
 				      .panel-body
-				      	.btn.btn-xs.btn-fixed.btn-active.filter-category
+				      	.btn.btn-xs.btn-fixed.btn-active.filter-category.inactive
 				      		i.icon-camera
 				      	.btn.btn-xs.btn-fixed.btn-active.filter-category.drug
 				      		i.icon-stethoscope
@@ -67,13 +67,13 @@
   	.row.well style="margin-bottom: 20px;"
 			.label.label-default
 	  			| Past Week 
-	  			i.icon-ban-circle
+	  			i.icon-remove-circle
 			.label.label-default
 	  			| All Departments 
-	  			i.icon-ban-circle
+	  			i.icon-remove-circle
 			.label.label-default
 	  			| Ages 25-32 
-	  			i.icon-ban-circle
+	  			i.icon-remove-circle
     .row
     	.col-md-12.widget-container.fluid-height
 				.row				
@@ -88,23 +88,6 @@
 					          th Growth
 					          th % Change
 					        tbody
-					          tr
-					          	td.filter-category
-					          		.color-row
-					          				.arrow-left	
-					          				i.icon-camera-retro
-					          				|  Electronics
-					            td
-						            i.icon-building  
-						            |  ACME Co.
-					            td $ 12,400
-					            td.hidden-xs  John Garcia
-					            td
-					              .chart-graph.line-chart
-					              .sparkslim  
-					              	| 1,2,3,4,5,10,20,40,20,25,20,25,40,50
-					            td 
-					            	h3 + 6%
 					          tr
 					          	td.filter-category.drug
 					          		.color-row
