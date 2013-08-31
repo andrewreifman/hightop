@@ -62,6 +62,8 @@ html
         li=link_to "Features / Plugins", "#features"
         li=link_to "HTML", "#html"
         li=link_to "CSS", "#css"
+        li=link_to "Bootstrap 3", "#bootstrap"
+        li=link_to "Components", "#components"
 
     .container-fluid.main-content
 
@@ -122,11 +124,6 @@ html
       				| HTML Structure
 
       			.widget-content.padded
-      				p This theme contains a fluid layout. All of the information within the main content area is nested within the body. Highlighted below are some of the page elements that create the structure for Se7en. Se7en requires the use of HTML elements to create the proper CSS for your project. Each widget and component is modular and can be found with the HTML comment tags found throughout the theme.
-
-      				h3 Follow The HTML Comments
-      				= Pygments.highlight("<!-- This is a contained element --> <!-- This is the end of an element -->")
-
       				h3 Header & Navigation
       				p
       					| Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains dynamic visual elements but the content remains easy to modify.
@@ -143,11 +140,10 @@ html
       				h3 Structure
       				= Pygments.highlight("#{partial 'css_structure'}")
 
-
-      	.col-lg-6
-      		.widget-container.fluid-height
+      	.col-lg-12
+      		.widget-container.fluid-height#bootstrap
       			.heading
-      				| Bootstrap3 Javascript
+      				| Bootstrap 3
       				= link_to "Full Documentation", "http://getbootstrap.com/javascript/#modals", :target => "_blank", class: "pull-right"
       			.widget-content.padded
       				ul.list-unstyled
@@ -179,10 +175,10 @@ html
       						| Carousel
       						= Pygments.highlight("$('.carousel').carousel()", lexer: 'javascript')
 
-      	.col-lg-6
-      		.widget-container.fluid-height
+      	.col-lg-12
+      		.widget-container.fluid-height#components
       			.heading
-      				| Javascript
+      				| Components
 
       			.widget-content.padded
       				ul.list-unstyled
