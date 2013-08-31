@@ -506,6 +506,12 @@ $(document).ready ->
       filter: selector
     false
 
+  # =============================================================================
+  #   Skycons
+  # =============================================================================
+  icons = new Skycons()
+  icons.set "partly-cloudy-day", Skycons.PARTLY_CLOUDY_DAY
+  icons.play()
 
   # =============================================================================
   #   Scrollbar Styling JS
