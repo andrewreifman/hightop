@@ -14,6 +14,7 @@
 				      .panel-body
 				      	.form-group
 				      	  label.control-label.filters Date Range
+
 				      	  .col-lg-9
 				      	    label.radio
 				      	      input name="optionsRadios1" type="radio" value="option1"
@@ -28,7 +29,7 @@
 				      	      input name="optionsRadios1" type="radio" value="option4"
 				      	      | Past Year
 				        .form-group
-				          label.control-label.filters Special Periods
+				          label.control-label.filters Special Dates
 				          .col-lg-9
 				            label.checkbox
 				              input type="checkbox" value=""
@@ -48,26 +49,20 @@
 				      .panel-title
 				        a.accordion-toggle data-parent="#accordion" data-toggle="collapse" href="#collapseTwo"
 				          | Departments
-				    #collapseTwo.panel-collapse.collapse
+				    #collapseTwo.panel-collapse.collapse.in
 				      .panel-body
-				      	h2 a
-				  .panel
-				    .panel-heading
-				      .panel-title
-				        a.accordion-toggle data-parent="#accordion" data-toggle="collapse" href="#collapseThree"
-				          | Audience
-				    #collapseThree.panel-collapse.collapse
-				      .panel-body
-				      	h2 Summary and Quiz
-
-				  .panel
-				    .panel-heading
-				      .panel-title
-				        a.accordion-toggle data-parent="#accordion" data-toggle="collapse" href="#collapseThree"
-				          | Resources
-				    #collapseThree.panel-collapse.collapse
-				      .panel-body
-				      	h2 Summary and Quiz
+				      	.btn.btn-xs.btn-fixed.btn-active.filter-category
+				      		i.icon-camera
+				      	.btn.btn-xs.btn-fixed.btn-active.filter-category.drug
+				      		i.icon-stethoscope
+				      	.btn.btn-xs.btn-fixed.btn-active.filter-category.home
+				      		i.icon-coffee
+				      	.btn.btn-xs.btn-fixed.btn-active.filter-category.toys
+				      		i.icon-gamepad
+				      	.btn.btn-xs.btn-fixed.btn-active.filter-category.craft
+				      		i.icon-gift
+				      	.btn.btn-xs.btn-fixed.btn-active.filter-category.sport
+				      		i.icon-bolt
   .col-md-10
   	.row.well style="margin-bottom: 20px;"
 			.label.label-default
@@ -81,19 +76,12 @@
 	  			i.icon-ban-circle
     .row
     	.col-md-12.widget-container.fluid-height
-				.row
-
-					.col-md-3.filter-category
-						.arrow-left	
-						.text-center.padded 
-							i.icon-camera-retro.icon-4x
-							h2 Electronics
-					
-					.col-md-9.filter-table
-
+				.row				
+					.col-md-12.filter-table
 						<!-- Condensed Table -->
 					      table.table.table-filters
 					        thead
+					          th Department
 					          th Vendor
 					          th Total
 					          th.hidden-xs Contact
@@ -101,148 +89,107 @@
 					          th % Change
 					        tbody
 					          tr
+					          	td.filter-category
+					          		.color-row
+					          				.arrow-left	
+					          				i.icon-camera-retro
+					          				|  Electronics
 					            td
 						            i.icon-building  
 						            |  ACME Co.
-					            td $ 1200
+					            td $ 12,400
 					            td.hidden-xs  John Garcia
 					            td
 					              .chart-graph.line-chart
-					              #linechart-4 Loading...
+					              .sparkslim  
+					              	| 1,2,3,4,5,10,20,40,20,25,20,25,40,50
 					            td 
-					            	h3 + 20%
+					            	h3 + 6%
 					          tr
+					          	td.filter-category.drug
+					          		.color-row
+						          			.arrow-left	
+						          			i.icon-stethoscope
+						          			|  Health & Pharmacy
 					            td 
 						            i.icon-building  
-						            |  Supplier Org.
-					            td $ 6204
+						            |  National Distribution Co.
+					            td $ 9204
 					            td.hidden-xs  Susan Smith
 					            td
 					              .chart-graph.line-chart
-					              #linechart-5 Loading...
+					              .sparkslim  
+					              	| 50,55,60,40,30,35,30,20,25,30,40,20,15
 					            td 
-					            	h3 + 20%  
+					            	h3 - 4%  
 					          tr
+					          	td.filter-category.home
+					          		.color-row
+						          			.arrow-left	
+						          			i.icon-coffee
+						          			|  Home & Office
 					            td 
 						            i.icon-building  
-						            |  StarTrade LLC
-					            td $ 12,260
-					            td.hidden-xs Gary Benson
-					            td 
-					              .chart-graph.line-chart
-					              #linechart-6 Loading...
-					            td 
-					            	h3 + 20%
-								<!-- end Condensed Table -->
-    .row
-    	.col-md-12.widget-container.fluid-height
-				.row
-
-					.col-md-3.filter-category.home
-						.arrow-left	
-						.text-center.padded 
-							i.icon-coffee.icon-4x
-							h2 Home & Office
-					
-					.col-md-9.filter-table
-
-						<!-- Condensed Table -->
-					      table.table.table-filters
-					        thead
-					          th Vendor
-					          th Total
-					          th.hidden-xs Contact
-					          th Growth
-					          th % Change
-					        tbody
-					          tr
-					            td
-						            i.icon-building  
-						            |  ACME Co.
-					            td $ 1200
-					            td.hidden-xs  John Garcia
+						            |  Star Organization Co.
+					            td $ 23,890
+					            td.hidden-xs  James Brown
 					            td
 					              .chart-graph.line-chart
-					              #linechart-4 Loading...
+					              .sparkslim  
+					              	| 5,10,15,50,80,50,40,30,50,60,70,75,75
 					            td 
-					            	h3 + 20%
+					            	h3 + 12% 
 					          tr
+					          	td.filter-category.toys
+					          		.color-row
+						          			.arrow-left	
+						          			i.icon-gamepad
+						          			|  Toys & Videogames
 					            td 
 						            i.icon-building  
-						            |  Supplier Org.
-					            td $ 6204
-					            td.hidden-xs  Susan Smith
+						            |  Companysoft LLC
+					            td $ 10,995
+					            td.hidden-xs  Felix Cat
 					            td
 					              .chart-graph.line-chart
-					              #linechart-5 Loading...
+					              .sparkslim  
+					              	| 100,100,80,70,40,20,20,40,50,60,70
 					            td 
-					            	h3 + 20%  
+					            	h3 + 5% 	
 					          tr
+					          	td.filter-category.craft
+					          		.color-row
+						          			.arrow-left	
+						          			i.icon-gift
+						          			|  Craft & Party
 					            td 
 						            i.icon-building  
-						            |  StarTrade LLC
-					            td $ 12,260
-					            td.hidden-xs Gary Benson
-					            td 
-					              .chart-graph.line-chart
-					              #linechart-6 Loading...
-					            td 
-					            	h3 + 20%
-								<!-- end Condensed Table -->	
-    .row
-    	.col-md-12.widget-container.fluid-height
-				.row
-
-					.col-md-3.filter-category.drug
-						.arrow-left	
-						.text-center.padded 
-							i.icon-stethoscope.icon-4x
-							h2 Pharmacy
-					
-					.col-md-9.filter-table
-
-						<!-- Condensed Table -->
-					      table.table.table-filters
-					        thead
-					          th Vendor
-					          th Total
-					          th.hidden-xs Contact
-					          th Growth
-					          th % Change
-					        tbody
-					          tr
-					            td
-						            i.icon-building  
-						            |  ACME Co.
-					            td $ 1200
-					            td.hidden-xs  John Garcia
+						            |  Craft Co.
+					            td $ 6,790
+					            td.hidden-xs  John Greenwell
 					            td
 					              .chart-graph.line-chart
-					              #linechart-4 Loading...
+					              .sparkslim  
+					              	| 5,10,15,20,30,40,80,100,120,120,140
 					            td 
-					            	h3 + 20%
+					            	h3 + 26% 		
 					          tr
+					          	td.filter-category.sport
+					          		.color-row
+						          			.arrow-left	
+						          			i.icon-bolt
+						          			|  Sport & Fitness
 					            td 
 						            i.icon-building  
-						            |  Supplier Org.
-					            td $ 6204
-					            td.hidden-xs  Susan Smith
+						            |  Fastnation Co.
+					            td $ 22,156
+					            td.hidden-xs  Jennifer Summers
 					            td
 					              .chart-graph.line-chart
-					              #linechart-5 Loading...
+					              .sparkslim  
+					              	| 20,40,50,60,70,80,90,95,100,80,70,60
 					            td 
-					            	h3 + 20%  
-					          tr
-					            td 
-						            i.icon-building  
-						            |  StarTrade LLC
-					            td $ 12,260
-					            td.hidden-xs Gary Benson
-					            td 
-					              .chart-graph.line-chart
-					              #linechart-6 Loading...
-					            td 
-					            	h3 + 20%
-								<!-- end Condensed Table -->					
-	.btn.btn-default-outline.btn-lg Load more
+					            	h3 - 4%	
+	.row.text-center	
+		.btn.btn-default-outline Load more
 				

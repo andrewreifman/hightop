@@ -93,7 +93,7 @@ linechartResize = ->
       spotRadius: 0
       chartRangeMin: 0
 
-   $("#linechart-6").sparkline [100, 220, 150, 140, 200, 180, 130, 180, 180, 210, 240, 200, 170, 120, 200, 150, 100, 100],
+   $(".sparkslim").sparkline 'html',    
       type: "line"
       width: "100"
       height: "30"

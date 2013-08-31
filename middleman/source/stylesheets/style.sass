@@ -2159,10 +2159,11 @@ button.close
   border-top: 10px solid transparent
   border-bottom: 10px solid transparent
   border-right: 10px solid white
-  position: absolute
-  z-index: 9
-  right: 0
-  top: 114px
+  float: right
+  clear: both
+  margin-right: -10px
+  margin-top: 5px
+
 
 .table-filters
   thead
@@ -2178,29 +2179,44 @@ button.close
           margin: 0
           line-height: 1
 
+.color-row
+  padding-left: 12px
+
+  [class^="icon-"], [class*="icon-"]
+    margin-right: 0
+    font-size: 14px
+    padding-right: 10px
+
+
 
 .filter-category
-  background: #f8991d
+  background: #5e5bde
   color: #fff
-  padding-top: 3em
-  margin: 0px
-  min-height: 260px
+  border-bottom: 1px solid #5e5bde
+  font-size: 18px !important
+  font-weight: 200 !important
 
-
-
-  h2
-    border-top: 2px solid #fff
-    padding-top: 10px 
-    margin-top: 20px
+  &.btn-fixed
+    width: 40%
 
   &.drug
-    background: #88b8dc
-    
+    background: #5bc0de
+    border-bottom: 1px solid #5bc0de   
   &.home
-    background: #80c36f
-    
+    background: #60c560
+    border-bottom: 1px solid #60c560
+  &.toys
+    background: #f59b3b
+    border-bottom: 1px solid #f59b3b
+  &.craft
+    background: #d9534f
+    border-bottom: 1px solid #d9534f
+  &.sport
+    background: #d94084
+    border-bottom: 1px solid #d94084
   &:hover
-    background: #666
+    background: #8e8e93
+    border-bottom: 1px solid #8e8e93
 .filter-table
   margin-bottom: 0px
 
