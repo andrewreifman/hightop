@@ -29,35 +29,15 @@
 / 		h5 Backgrounds
 / 		h5 Typography
 
-
-<!-- Statistics -->
 .row
-	.col-lg-12
-		.widget-container.stats-container
-			.col-md-3
-				.number
-					.icon.globe
-					| 86
-					small %
-				.text Overall growth
-			.col-md-3
-				.number
-					.icon.visitors
-					| 613
-				.text Unique visitors
-			.col-md-3
-				.number
-					.icon.money
-					small $
-					| 924
-				.text Sales
-			.col-md-3
-				.number
-					.icon.chat-bubbles
-					| 325
-				.text New followers
-<!-- End Statistics -->
-
+	.col-md-2
+		.widget-container.padded.fluid-height.clearfix.twitter-widget.text-center
+			i.icon-twitter.icon-4x
+			h1 12
+			| New Tweets
+	.col-md-2
+	.col-md-2
+	.col-md-6
 .row
 	<!-- Social Form -->
 	.col-lg-4
@@ -86,15 +66,16 @@
 	.col-lg-4
 		.widget-container.weather.fluid-height.clearfix	
 			.heading
-				.pull-right.i.
+				.pull-right.i.icon-list
+				| Washington DC
 			.widget-content.padded
-				.col-md-6
+				.col-xs-6
 					canvas#partly-cloudy-day height="64" width="64"
 					.number 72°
-				.col-md-6
-					p Percipitation: 90
-					p Percipitation: 90
-					p Percipitation: 90
+				.col-xs-6
+					p Chance of Rain: 20%
+					p Wind: SSW at 8 mph
+					p Humidity: 73%
 	<!-- Weather -->
 
 
@@ -132,10 +113,9 @@
 					.share-options
 						i.icon-youtube-play
 						p.hidden-xs Videos
-
-
+.row
   <!-- Chat -->
-  .col-lg-6
+  .col-lg-8
 		.widget-container.scrollable.chat
 			.heading
 				i.icon-comments
