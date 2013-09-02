@@ -9,47 +9,50 @@
 				    .panel-heading
 				      .panel-title
 				        a.accordion-toggle data-parent="#accordion" data-toggle="collapse" href="#collapseOne"
-				          | Date & Time
+				          | Date Range
 				    #collapseOne.panel-collapse.collapse.in
 				      .panel-body
-				      	.form-group
-				      	  label.control-label.filters Date Range
+								.form-group
+									label.radio
+									  input name="optionsRadios1" type="radio" value="option1"
+									  | Past Day
+									label.radio
+									  input checked="" name="optionsRadios1" type="radio" value="option2"
+									  | Past Week
+									label.radio
+									  input name="optionsRadios1" type="radio" value="option3"
+									  | Past Month
+									label.radio
+									  input name="optionsRadios1" type="radio" value="option4"
+									  | Past Year
 
-				      	  .col-lg-9
-				      	    label.radio
-				      	      input name="optionsRadios1" type="radio" value="option1"
-				      	      | Past Day
-				      	    label.radio
-				      	      input checked="" name="optionsRadios1" type="radio" value="option2"
-				      	      | Past Week
-				      	    label.radio
-				      	      input name="optionsRadios1" type="radio" value="option3"
-				      	      | Past Month
-				      	    label.radio
-				      	      input name="optionsRadios1" type="radio" value="option4"
-				      	      | Past Year
-				        .form-group
-				          label.control-label.filters Special Dates
-				          .col-lg-9
-				            label.checkbox
-				              input type="checkbox" value=""
-				              | Blue Light Sale
-				            label.checkbox
-				              input type="checkbox" value=""
-				              | Christmas
-				            label.checkbox
-				              input type="checkbox" value=""
-				              | Annual Sale
-				            label.checkbox
-				              input type="checkbox" value=""
-				              | Easter
+					.panel
+					  .panel-heading
+					    .panel-title
+					      a.accordion-toggle data-parent="#accordion" data-toggle="collapse" href="#collapseTwo"
+					        | Special Dates
+					  #collapseTwo.panel-collapse.collapse.in
+					    .panel-body
+								.form-group
+									label.checkbox
+									  input type="checkbox" value=""
+									  | Blue Light Sale
+									label.checkbox
+									  input type="checkbox" value=""
+									  | Christmas
+									label.checkbox
+									  input type="checkbox" value=""
+									  | Annual Sale
+									label.checkbox
+									  input type="checkbox" value=""
+									  | Easter
 
 				  .panel
 				    .panel-heading
 				      .panel-title
-				        a.accordion-toggle data-parent="#accordion" data-toggle="collapse" href="#collapseTwo"
+				        a.accordion-toggle data-parent="#accordion" data-toggle="collapse" href="#collapseThree"
 				          | Departments
-				    #collapseTwo.panel-collapse.collapse.in
+				    #collapseThree.panel-collapse.collapse.in
 				      .panel-body
 				      	.btn.btn-xs.btn-fixed.btn-active.filter-category.inactive
 				      		i.icon-camera
