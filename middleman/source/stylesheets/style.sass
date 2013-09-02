@@ -838,7 +838,6 @@ th:active
     background: #f8f8f8
     font-weight: 200
 
-
   .heading
     background: rgba(255, 255, 255, 0.94)
     height: 50px
@@ -1023,6 +1022,53 @@ th:active
   height: 130px
   float: left
 
+
+/*-----------------------------------------------------------------------------------*/
+/*  Twitter Widget
+/*-----------------------------------------------------------------------------------*/
+.twitter-widget
+  background: #e54c42
+  font-weight: 200
+  color: #fff
+
+  h1
+    font-weight: 100
+    margin: 0
+    padding: 0
+/*-----------------------------------------------------------------------------------*/
+/*  Weather Widget
+/*-----------------------------------------------------------------------------------*/
+
+.weather
+  background: #1fb4d6
+  font-weight: 200
+  color: #fff
+
+  .heading
+    background: #1fb4d6
+    font-weight: 200
+    color: #fff 
+
+.number
+  font-size: 58px
+  color: #fff
+  font-weight: 100
+  margin-left: 6px
+  display: block
+
+figure
+  margin: 3em auto
+  width: 368px
+  height: 152px
+
+canvas
+  display: block
+  float: left
+  margin-left: 8px
+  margin-top: 8px
+
+pre
+  margin: 3.375em 1.6875em
 
 /*-----------------------------------------------------------------------------------*/
 /*  jQuery Easy Pie Chart Styles
@@ -2159,12 +2205,14 @@ button.close
   border-top: 10px solid transparent
   border-bottom: 10px solid transparent
   border-right: 10px solid white
-  position: absolute
-  z-index: 9
-  right: 0
-  top: 114px
+  float: right
+  clear: both
+  margin-right: -10px
+  margin-top: 5px
+
 
 .table-filters
+  margin-bottom: 0px
   thead
     tr
       th
@@ -2177,33 +2225,54 @@ button.close
           padding: 0
           margin: 0
           line-height: 1
+          font-weight: 100 !important
+
+.color-row
+
+
+  [class^="icon-"], [class*="icon-"]
+    margin-right: 0
+    font-size: 14px
+    padding-right: 6px
+    padding-left: 6px
+
 
 
 .filter-category
-  background: #f8991d
+  background: #5e5bde
   color: #fff
-  padding-top: 3em
-  margin: 0px
-  min-height: 260px
+  border-bottom: 1px solid #5e5bde
+  font-size: 18px !important
+  font-weight: 200 !important
 
-
-
-  h2
-    border-top: 2px solid #fff
-    padding-top: 10px 
-    margin-top: 20px
+  &.btn-fixed
+    width: 100%
 
   &.drug
-    background: #88b8dc
-    
+    background: #5bc0de
+    border-bottom: 1px solid #5bc0de   
   &.home
-    background: #80c36f
-    
+    background: #60c560
+    border-bottom: 1px solid #60c560
+  &.toys
+    background: #f59b3b
+    border-bottom: 1px solid #f59b3b
+  &.craft
+    background: #d9534f
+    border-bottom: 1px solid #d9534f
+  &.sport
+    background: #d94084
+    border-bottom: 1px solid #d94084
   &:hover
-    background: #666
+    background: #8e8e93
+    border-bottom: 1px solid #8e8e93
+  &.inactive
+    background: #8e8e93
+    border-bottom: 1px solid #8e8e93
+
 .filter-table
   margin-bottom: 0px
-
+  padding: 0px
 /*-----------------------------------------------------------------------------------*/
 /*  WYSIWYG
 /*-----------------------------------------------------------------------------------*/
