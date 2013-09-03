@@ -60,7 +60,8 @@ html
       ul.nav
         li=link_to "Overview", "#overview"
         li=link_to "Features / Plugins", "#features"
-        li=link_to "HTML", "#html"
+        li=link_to "Navigation", "#navigation"
+        li=link_to "Widget Container", "#widget-container"
         li=link_to "CSS", "#css"
         li=link_to "Icons", "#icons"
         li=link_to "Bootstrap 3", "#bootstrap"
@@ -69,153 +70,162 @@ html
     .container-fluid.main-content
 
       .page-title
-      	h1 Documentation
+        h1 Documentation
 
       .row
-      	.col-lg-12
-      		.widget-container.fluid-height.clearfix#overview
-      			.heading
-      				| What is Se7en?
+        .col-lg-12
+          .widget-container.fluid-height.clearfix#overview
+            .heading
+              | What is Se7en?
 
-      			.widget-content.docs-what.padded
-      				h3 Se7en is a best-of-breed administration template. We employ stunning design, the latest technologies and industry best practices to create a one of kind administration template suitable for many needs.
+            .widget-content.docs-what.padded
+              h3 Se7en is a best-of-breed administration template. We employ stunning design, the latest technologies and industry best practices to create a one of kind administration template suitable for many needs.
 
       .row
-      	.col-lg-6
-      		.widget-container.fluid-height.list#features
-      			.heading
-      				| Features
+        .col-lg-6
+          .widget-container.fluid-height.list#features
+            .heading
+              | Features
 
-      			.widget-content
-      				ul
-      					li Clean and Sleek design
-      					li 100% Mobile Ready / Responsive Layout
-      					li Valid HTML5 and CSS3
-      					li Cross-browser compatible (Chrome/Safari/Firefox/IE8+)
-      					li SASS and COMPASS ready
-      					li Built with Bootstrap3
-      					li Clean developer friendly markup
-      					li Image Gallery
-      					li Retina Ready
-      					li Custom Buttons and Colors
-      					li and much more…
+            .widget-content
+              ul
+                li Clean and Sleek design
+                li 100% Mobile Ready / Responsive Layout
+                li Valid HTML5 and CSS3
+                li Cross-browser compatible (Chrome/Safari/Firefox/IE8+)
+                li SASS and COMPASS ready
+                li Built with Bootstrap3
+                li Clean developer friendly markup
+                li Image Gallery
+                li Retina Ready
+                li Custom Buttons and Colors
+                li and much more…
 
-      	.col-lg-6
-      		.widget-container.plugins.fluid-height.list
-      			.heading
-      				| Plugins
+        .col-lg-6
+          .widget-container.plugins.fluid-height.list
+            .heading
+              | Plugins
 
-      			.widget-content
-      				ul
-      					li jQuery, Mousewheel, and Scrollspy
-      					li Vector maps
-      					li gCalendar
-      					li Datatables
-      					li Sparkline
-      					li Easy Pie Chart
-      					li Isotope
-      					li Modernizr
-      					li Fancybox
-      					li Select2
-      					li Bootstrap
+            .widget-content
+              ul
+                li jQuery, Mousewheel, and Scrollspy
+                li Vector maps
+                li gCalendar
+                li Datatables
+                li Sparkline
+                li Easy Pie Chart
+                li Isotope
+                li Modernizr
+                li Fancybox
+                li Select2
+                li Bootstrap
       .row
-      	.col-lg-12
-      		.widget-container.fluid-height.docs#html
-      			.heading
-      				| HTML Structure
+        .col-lg-12
+          .widget-container.fluid-height#navigation
+            .heading
+              | Header & Navigation
 
-      			.widget-content.padded
-      				h3 Header & Navigation
-      				p
-      					| Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains dynamic visual elements but the content remains easy to modify.
-      				= Pygments.highlight("#{partial 'html_structure'}")
+            .widget-content.padded
+              p
+                | Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains dynamic visual elements but the content remains easy to modify.
+              = Pygments.highlight("#{partial 'html_structure'}")
 
-      	.col-lg-12
-      		.widget-container.fluid-height#css
-      			.heading
-      				| CSS Structure
+        .col-lg-12
+          .widget-container.fluid-height#widget-container
+            .heading
+              | Widget Container
 
-      			.widget-content.padded
-      				p Much like the HTML for Se7en, the CSS is maintained to be clean and consistent as you travel across the template. Below are some landmarks to look for as you are modifying the theme.
+            .widget-content.padded
+              p
+                | Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains dynamic visual elements but the content remains easy to modify.
+              = Pygments.highlight("#{partial 'html_structure'}")
 
-      				h3 Structure
-      				= Pygments.highlight("#{partial 'css_structure'}")
+        .col-lg-12
+          .widget-container.fluid-height#css
+            .heading
+              | CSS Structure
 
-      	.col-lg-12
-      		.widget-container.fluid-height#bootstrap
-      			.heading
-      				| Bootstrap 3
-      				= link_to "Full Documentation", "http://getbootstrap.com/javascript/#modals", :target => "_blank", class: "pull-right"
-      			.widget-content.padded
-      				ul.list-unstyled
-      					li
-      						| Modal
-      						= Pygments.highlight("$('#myModal').modal(options)", lexer: 'javascript')
-      					li
-      						| Dropdown
-      						= Pygments.highlight("$('.dropdown-toggle').dropdown()", lexer: 'javascript')
-      					li
-      						| Scrollspy
-      						= Pygments.highlight("$('body').scrollspy({ target: '#navbar-example' })", lexer: 'javascript')
-      					li
-      						| Tabs
-      						= Pygments.highlight("$('a[data-toggle=tab]').on('shown.bs.tab', function (e) {  e.target, e.relatedTarget})", lexer: 'javascript')
-      					li
-      						| Tooltip
-      						= Pygments.highlight("$('#example').tooltip(options)", lexer: 'javascript')
-      					li
-      						| Popover
-      						= Pygments.highlight("$('#example').popover(options)", lexer: 'javascript')
-      					li
-      						| Buttons via Javascript
-      						= Pygments.highlight("$('.nav-tabs').button()", lexer: 'javascript')
-      					li
-      						| Collapse
-      						= Pygments.highlight("$('.collapse').collapse()", lexer: 'javascript')
-      					li
-      						| Carousel
-      						= Pygments.highlight("$('.carousel').carousel()", lexer: 'javascript')
+            .widget-content.padded
+              p Much like the HTML for Se7en, the CSS is maintained to be clean and consistent as you travel across the template. Below are some landmarks to look for as you are modifying the theme.
 
-      	.col-lg-12
-      		.widget-container.fluid-height#components
-      			.heading
-      				| Components
+              h3 Structure
+              = Pygments.highlight("#{partial 'css_structure'}")
 
-      			.widget-content.padded
-      				ul.list-unstyled
-      					li
-      						| Sparkline
-      						a href="http://omnipotent.net/jquery.sparkline/#s-about" class="pull-right" target="_blank" Full documentation
-      						= Pygments.highlight("$('.sparkline').sparkline(options)", lexer: 'javascript')
-      					li
-      						| Vector maps
-      						a href="http://jqvmap.com/" class="pull-right" target="blank" Full documentation
-      						= Pygments.highlight("$('.map').vectorMap(options)", lexer: 'javascript')
-      					li
-      						| Full Calendar
-      						a href="http://arshaw.com/fullcalendar/" class="pull-right" target="_blank" Full documentation
-      						= Pygments.highlight("$('.calendar').fullCalendar(options)", lexer: 'javascript')
-      					li
-      						| Easy Pie Chart
-      						a href="http://rendro.github.io/easy-pie-chart/" class="pull-right" target="_blank" Full documentation
-      						= Pygments.highlight("$('.pie-chart').easyPieChart(options)", lexer: 'javascript')
-      					li
-      						| DataTables
-      						a href="https://datatables.net/" class="pull-right" target="_blank" Full documentation
-      						= Pygments.highlight("$('.dataTable').dataTable(options)", lexer: 'javascript')
-      					li
-      						| Isotope
-      						a href="http://isotope.metafizzy.co/" class="pull-right" target="_blank" Full documentation
-      						= Pygments.highlight("$('.isotope').isotope(options)", lexer: 'javascript')
-      					li
-      						| Fancybox
-      						a href="http://fancyapps.com/fancybox/" class="pull-right" target="_blank" Full documentation
-      						= Pygments.highlight("$('.fancybox').fancybox(options)", lexer: 'javascript')
-      					li
-      						| Select2
-      						a href="http://ivaynberg.github.io/select2/" class="pull-right" target="_blank" Full documentation
-      						= Pygments.highlight("$('.select2').select2(options)", lexer: 'javascript')
-      					li
-      						| Classy Scroll
-      						a href="http://www.class.pm/projects/jquery/classyscroll/" class="pull-right" target="_blank" Full documentation
-      						= Pygments.highlight("$('.scroll-area').ClassyScroll(options)", lexer: 'javascript')
+        .col-lg-12
+          .widget-container.fluid-height#bootstrap
+            .heading
+              | Bootstrap 3
+              = link_to "Full Documentation", "http://getbootstrap.com/javascript/#modals", :target => "_blank", class: "pull-right"
+            .widget-content.padded
+              ul.list-unstyled
+                li
+                  | Modal
+                  = Pygments.highlight("$('#myModal').modal(options)", lexer: 'javascript')
+                li
+                  | Dropdown
+                  = Pygments.highlight("$('.dropdown-toggle').dropdown()", lexer: 'javascript')
+                li
+                  | Scrollspy
+                  = Pygments.highlight("$('body').scrollspy({ target: '#navbar-example' })", lexer: 'javascript')
+                li
+                  | Tabs
+                  = Pygments.highlight("$('a[data-toggle=tab]').on('shown.bs.tab', function (e) {  e.target, e.relatedTarget})", lexer: 'javascript')
+                li
+                  | Tooltip
+                  = Pygments.highlight("$('#example').tooltip(options)", lexer: 'javascript')
+                li
+                  | Popover
+                  = Pygments.highlight("$('#example').popover(options)", lexer: 'javascript')
+                li
+                  | Buttons via Javascript
+                  = Pygments.highlight("$('.nav-tabs').button()", lexer: 'javascript')
+                li
+                  | Collapse
+                  = Pygments.highlight("$('.collapse').collapse()", lexer: 'javascript')
+                li
+                  | Carousel
+                  = Pygments.highlight("$('.carousel').carousel()", lexer: 'javascript')
+
+        .col-lg-12
+          .widget-container.fluid-height#components
+            .heading
+              | Components
+
+            .widget-content.padded
+              ul.list-unstyled
+                li
+                  | Sparkline
+                  a href="http://omnipotent.net/jquery.sparkline/#s-about" class="pull-right" target="_blank" Full documentation
+                  = Pygments.highlight("$('.sparkline').sparkline(options)", lexer: 'javascript')
+                li
+                  | Vector maps
+                  a href="http://jqvmap.com/" class="pull-right" target="blank" Full documentation
+                  = Pygments.highlight("$('.map').vectorMap(options)", lexer: 'javascript')
+                li
+                  | Full Calendar
+                  a href="http://arshaw.com/fullcalendar/" class="pull-right" target="_blank" Full documentation
+                  = Pygments.highlight("$('.calendar').fullCalendar(options)", lexer: 'javascript')
+                li
+                  | Easy Pie Chart
+                  a href="http://rendro.github.io/easy-pie-chart/" class="pull-right" target="_blank" Full documentation
+                  = Pygments.highlight("$('.pie-chart').easyPieChart(options)", lexer: 'javascript')
+                li
+                  | DataTables
+                  a href="https://datatables.net/" class="pull-right" target="_blank" Full documentation
+                  = Pygments.highlight("$('.dataTable').dataTable(options)", lexer: 'javascript')
+                li
+                  | Isotope
+                  a href="http://isotope.metafizzy.co/" class="pull-right" target="_blank" Full documentation
+                  = Pygments.highlight("$('.isotope').isotope(options)", lexer: 'javascript')
+                li
+                  | Fancybox
+                  a href="http://fancyapps.com/fancybox/" class="pull-right" target="_blank" Full documentation
+                  = Pygments.highlight("$('.fancybox').fancybox(options)", lexer: 'javascript')
+                li
+                  | Select2
+                  a href="http://ivaynberg.github.io/select2/" class="pull-right" target="_blank" Full documentation
+                  = Pygments.highlight("$('.select2').select2(options)", lexer: 'javascript')
+                li
+                  | Classy Scroll
+                  a href="http://www.class.pm/projects/jquery/classyscroll/" class="pull-right" target="_blank" Full documentation
+                  = Pygments.highlight("$('.scroll-area').ClassyScroll(options)", lexer: 'javascript')
