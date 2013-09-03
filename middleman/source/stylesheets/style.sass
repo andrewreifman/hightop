@@ -363,6 +363,8 @@ small
 
   .container-fluid.main-nav
     height: 66px
+    float: left
+    width: 100%
 
     .nav-collapse
       width: 100%
@@ -863,8 +865,11 @@ th:active
 /*  Well Styles
 /*-----------------------------------------------------------------------------------*/
 .well
-  box-shadow: none
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
   padding: 12px
+  border-radius: 0
+  border: 0
+  background-color: #f8f8f8
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -1139,7 +1144,6 @@ th:active
   font-weight: 100
   letter-spacing: -.05em
   color: #BBB
-  line-height: 230px !important
 
 .pie-text
   text-align: center
@@ -1723,9 +1727,6 @@ input[type="text"]
     label
       margin-bottom: 5px
 
-.radio, .checkbox
-  margin: 6px 0 !important
-
 .radio-inline, .checkbox-inline
   padding-top: 9px
   margin-right: 20px
@@ -1760,15 +1761,17 @@ input[type="text"]
 .form-photo
   margin: 4px 0 12px
 
-.holder
-  width: 56px
-  height: 28px
-  position: relative
-
 .check-ios
   visibility: hidden
 
 .holder
+  width: 56px
+  height: 28px
+  position: relative
+  display: inline-block
+  margin-right: 12px
+  vertical-align: middle
+
   span
     background-color: #e2e2e2
     display: block
@@ -2253,6 +2256,7 @@ button.close
     margin: 0 8px 0 0
     [class^="icon-"], [class*="icon-"]
       margin-left: 6px
+      cursor: pointer
 
 .arrow-left
   width: 0

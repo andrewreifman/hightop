@@ -193,34 +193,13 @@ $(document).ready ->
 
 
   # =============================================================================
-  #   Gauges
-  # =============================================================================
-  # $ ->
-  #   g = new JustGage(
-  #     id: "gauge"
-  #     value: 67
-  #     min: 0
-  #     max: 100
-  #     title: "Velocity"
-  #     showInnerShadow: "false"
-  #   )
-  #   g = new JustGage(
-  #     id: "gauge2"
-  #     value: 24
-  #     min: 0
-  #     max: 100
-  #     title: "Retention"
-  #     showInnerShadow: "false"
-  #   )
-
-  # =============================================================================
   #   Navbar scroll animation
   # =============================================================================
 	$(".navbar.scroll-hide").mouseover ->
 	  $(".navbar.scroll-hide").removeClass "closed"
 	  setTimeout (->
 	  	$(".navbar.scroll-hide").css overflow: "visible"
-	  ), 350
+	  ), 150
 
 	$ ->
 		lastScrollTop = 0
