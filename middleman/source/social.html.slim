@@ -80,30 +80,39 @@
 
 
 	.col-lg-4
-		.widget-container.fluid-height.clearfix
+		.widget-container.fluid-height.clearfix.social-entry
 			.heading
 				.pull-right.i.icon-refresh
 				i.icon-fire
 				| What's hot?
 			.widget-content.padded
-         		textarea.form-control rows="4" 
-					| Share what's new?
-				.col-xs-2
-					.share-options.active
-						i.icon-pencil
-						p.hidden-xs Text
-				.col-xs-2
-					.share-options
-						i.icon-camera
-						p.hidden-xs Photos
-				.col-xs-2
-					.share-options
-						i.icon-link
-						p.hidden-xs Link
-				.col-xs-2
-					.share-options
-						i.icon-youtube-play
-						p.hidden-xs Videos
+				ul
+					li
+						= image_tag "avatar-male.jpg", width: "50", height:"50"
+						= link_to "John Smith", "", class: "user-name"
+						.time
+							|  10 min ago
+						p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+						btn.btn-sm.btn-default-outline Like
+						btn.btn-sm.btn-default-outline Share
+			.comments.padded
+				p 2 comments
+
+				ul
+					li
+						= image_tag "avatar-female.png", width: "50", height:"50"
+						= link_to "John Smith", "", class: "user-name"
+						.time
+							|  10 min ago
+						p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+				ul
+					li
+						= image_tag "avatar-female.png", width: "50", height:"50"
+						= link_to "John Smith", "", class: "user-name"
+						.time
+							|  10 min ago
+						p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+
 .row
   <!-- Chat -->
   .col-lg-8
