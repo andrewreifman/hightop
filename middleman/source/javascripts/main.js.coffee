@@ -544,8 +544,18 @@ $(document).ready ->
   # =============================================================================
   #   Morris Chart JS
   # =============================================================================
+  morrisResize = undefined
+  $(window).resize (e) ->
+    clearTimeout morrisResize
+    morrisResize = setTimeout(->
+      buildMorris true
+    , 500)
+
   $ ->
-    
+    buildMorris()
+
+  buildMorris = ($re) ->
+    $(".graph").html "" if $re
     tax_data = [
       period: "2011 Q3"
       licensed: 3407
@@ -583,12 +593,14 @@ $(document).ready ->
       licensed: 3289
       sorned: null
     ]
+    
     Morris.Line
       element: "hero-graph"
       data: tax_data
       xkey: "period"
       ykeys: ["licensed", "sorned"]
       labels: ["Licensed", "Off the road"]
+      lineColors: ["#59dbbf", "#aeb6cb"]
 
     Morris.Donut
       element: "hero-donut"
@@ -605,6 +617,7 @@ $(document).ready ->
         label: "Sugar"
         value: 10
       ]
+      colors: ["#afcf6f"]
       formatter: (y) ->
         y + "%"
 
@@ -664,8 +677,12 @@ $(document).ready ->
       xkey: "period"
       ykeys: ["iphone", "ipad", "itouch"]
       labels: ["iPhone", "iPad", "iPod Touch"]
-      pointSize: 2
       hideHover: "auto"
+      lineWidth: 2
+      pointSize: 4
+      lineColors: ["#59dbbf", "#aeb6cb", "#5dcff3"]
+      fillOpacity: 0.5
+      smooth: true
 
     Morris.Bar
       element: "hero-bar"
@@ -694,29 +711,8 @@ $(document).ready ->
       barRatio: 0.4
       xLabelAngle: 35
       hideHover: "auto"
+      barColors: ["#aeb6cb"]
 
-    new Morris.Line(
-      element: "examplefirst"
-      xkey: "year"
-      ykeys: ["value"]
-      labels: ["Value"]
-      data: [
-        year: "2008"
-        value: 20
-      ,
-        year: "2009"
-        value: 10
-      ,
-        year: "2010"
-        value: 5
-      ,
-        year: "2011"
-        value: 5
-      ,
-        year: "2012"
-        value: 20
-      ]
-    )
 
 
   # =============================================================================
