@@ -195,30 +195,31 @@ $(document).ready ->
   # =============================================================================
   #   Gauges
   # =============================================================================
-  # g = new JustGage(
-  #   id: "gauge"
-  #   value: 67
-  #   min: 0
-  #   max: 100
-  #   title: "Velocity"
-  #   showInnerShadow: "false"
-  # )
-  # g = new JustGage(
-  #   id: "gauge2"
-  #   value: 24
-  #   min: 0
-  #   max: 100
-  #   title: "Retention"
-  #   showInnerShadow: "false"
-  # )
+  # $ ->
+  #   g = new JustGage(
+  #     id: "gauge"
+  #     value: 67
+  #     min: 0
+  #     max: 100
+  #     title: "Velocity"
+  #     showInnerShadow: "false"
+  #   )
+  #   g = new JustGage(
+  #     id: "gauge2"
+  #     value: 24
+  #     min: 0
+  #     max: 100
+  #     title: "Retention"
+  #     showInnerShadow: "false"
+  #   )
 
   # =============================================================================
   #   Navbar scroll animation
   # =============================================================================
-	$(".navbar").mouseover ->
-	  $(".navbar").removeClass "closed"
+	$(".navbar.scroll-hide").mouseover ->
+	  $(".navbar.scroll-hide").removeClass "closed"
 	  setTimeout (->
-	  	$(".navbar").css overflow: "visible"
+	  	$(".navbar.scroll-hide").css overflow: "visible"
 	  ), 350
 
 	$ ->
@@ -229,13 +230,13 @@ $(document).ready ->
 			return  if Math.abs(lastScrollTop - st) <= delta
 			if st > lastScrollTop
 				# downscroll code
-				$('.navbar').addClass "closed"
-				$(".navbar").css overflow: "hidden"
+				$('.navbar.scroll-hide').addClass "closed"
+				$(".navbar.scroll-hide").css overflow: "hidden"
 			else
 				# upscroll code
-				$('.navbar').removeClass "closed"
+				$('.navbar.scroll-hide').removeClass "closed"
 				setTimeout (->
-					$(".navbar").css overflow: "visible"
+					$(".navbar.scroll-hide").css overflow: "visible"
 				), 350
 			lastScrollTop = st
 
@@ -246,6 +247,10 @@ $(document).ready ->
   $('.navbar-toggle').click ->
     $('body, html').toggleClass "nav-open"
 
+
+  # =============================================================================
+  #   Sparkline Resize Script
+  # =============================================================================
   linechartResize()
   $(window).resize ->
     linechartResize()
@@ -492,7 +497,6 @@ $(document).ready ->
     ]
 
 
-
 	# =============================================================================
 	#   Isotope
 	# =============================================================================
@@ -536,12 +540,12 @@ $(document).ready ->
       title:
         type: "outside"
 
-# Author:
-#
-#
+
+  # =============================================================================
+  #   Morris Chart JS
+  # =============================================================================
   $ ->
     
-    # data stolen from http://howmanyleft.co.uk/vehicle/jaguar_'e'_type
     tax_data = [
       period: "2011 Q3"
       licensed: 3407
@@ -713,8 +717,6 @@ $(document).ready ->
         value: 20
       ]
     )
-    $(".code-example").each (index, el) ->
-      eval_ $(el).text()
 
 
   # =============================================================================
@@ -738,6 +740,6 @@ $(document).ready ->
   # =============================================================================
   #   Skycons
   # =============================================================================
-  icons = new Skycons(color: "white")
-  icons.set "partly-cloudy-day", Skycons.PARTLY_CLOUDY_DAY
-  icons.play()
+  # skycons = new Skycons(color: "white")
+  # skycons.add document.getElementById("partly-cloudy-day"), Skycons.PARTLY_CLOUDY_DAY
+  # skycons.play()
