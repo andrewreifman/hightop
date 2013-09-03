@@ -93,21 +93,6 @@ linechartResize = ->
       spotRadius: 0
       chartRangeMin: 0
 
-   $(".sparkslim").sparkline 'html',    
-      type: "line"
-      width: "100"
-      height: "30"
-      lineColor: "#adadad"
-      fillColor: "rgba(244, 252, 225, 0.0)"
-      lineWidth: 2
-      spotColor: "#909090"
-      minSpotColor: "#909090"
-      maxSpotColor: "#909090"
-      highlightSpotColor: "#666"
-      highlightLineColor: "#666"
-      spotRadius: 0
-      chartRangeMin: 0
-
   $("#composite-chart-1").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
     type: "bar"
     height: "226"
@@ -163,6 +148,21 @@ $(document).ready ->
     width: "220"
     offset: "+90"
     sliceColors: ["#a0eeed","#81e970","#f5af50","#f46f50"]
+
+  $(".sparkslim").sparkline 'html',    
+     type: "line"
+     width: "100"
+     height: "30"
+     lineColor: "#adadad"
+     fillColor: "rgba(244, 252, 225, 0.0)"
+     lineWidth: 2
+     spotColor: "#909090"
+     minSpotColor: "#909090"
+     maxSpotColor: "#909090"
+     highlightSpotColor: "#666"
+     highlightLineColor: "#666"
+     spotRadius: 0
+     chartRangeMin: 0
 
 	# =============================================================================
 	#   Easy Pie Chart
@@ -593,7 +593,7 @@ $(document).ready ->
       licensed: 3289
       sorned: null
     ]
-    
+
     Morris.Line
       element: "hero-graph"
       data: tax_data

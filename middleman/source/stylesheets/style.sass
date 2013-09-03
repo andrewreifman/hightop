@@ -519,6 +519,18 @@ small
     .caret
       border-top-color: #d9534f
 
+.btn-magenta
+  background: #d94084
+  border-color: #d94084
+  color: #FFF
+  &:hover, &.active
+    background: #FFF
+    color: #d94084
+    border-color: #d94084
+
+    .caret
+      border-top-color: #d94084
+
 .btn-default-outline, .btn-primary-outline, .btn-success-outline, .btn-info-outline, .btn-warning-outline, .btn-danger-outline
   background: transparent
 
@@ -695,7 +707,6 @@ small
 /*-----------------------------------------------------------------------------------*/
 /*  DataTable styles
 /*-----------------------------------------------------------------------------------*/
-
 .dataTable th
   padding-right: 20px
   position: relative
@@ -759,6 +770,7 @@ th:active
 
   th
     font-size: 14px
+    background-color: #f8f8f8
 
   td
     font-size: 14px
@@ -815,6 +827,15 @@ th:active
 
 .label-primary
   background-color: $blue
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Well Styles
+/*-----------------------------------------------------------------------------------*/
+.well
+  box-shadow: none
+  padding: 12px
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  Widget-Container
@@ -1049,26 +1070,26 @@ th:active
     font-weight: 200
     color: #fff 
 
-.number
-  font-size: 58px
-  color: #fff
-  font-weight: 100
-  margin-left: 6px
-  display: block
+  .number
+    font-size: 58px
+    color: #fff
+    font-weight: 100
+    margin-left: 6px
+    display: block
 
-figure
-  margin: 3em auto
-  width: 368px
-  height: 152px
+  figure
+    margin: 3em auto
+    width: 368px
+    height: 152px
 
-canvas
-  display: block
-  float: left
-  margin-left: 8px
-  margin-top: 8px
+  canvas
+    display: block
+    float: left
+    margin-left: 8px
+    margin-top: 8px
 
-pre
-  margin: 3.375em 1.6875em
+  pre
+    margin: 3.375em 1.6875em
 
 /*-----------------------------------------------------------------------------------*/
 /*  jQuery Easy Pie Chart Styles
@@ -1902,6 +1923,7 @@ input[type="text"]
 .panel-heading
   padding: 0
   border-radius: 0
+  background-color: #f8f8f8
 
   .panel-toggle
     background: #f9fafa
@@ -2196,84 +2218,73 @@ button.close
 /*-----------------------------------------------------------------------------------*/
 /*  Filter/Advanced Search
 /*-----------------------------------------------------------------------------------*/
-.control-label
-  &.filters
-    color: $blue
-
 .arrow-left
   width: 0
   height: 0
-  border-top: 10px solid transparent
-  border-bottom: 10px solid transparent
-  border-right: 10px solid white
+  border-top: 9px solid transparent
+  border-bottom: 9px solid transparent
+  border-right: 7px solid white
   float: right
   clear: both
-  margin-right: -10px
+  margin-right: -8px
   margin-top: 5px
 
-
 .table-filters
-  margin-bottom: 0px
-  thead
-    tr
-      th
-        font-weight: 200
+  margin-bottom: 20px
+
   tbody
     tr
       td
-        font-weight: 200
+        &.filter-category
+          text-align: center
+          color: #fff
+          [class^="icon-"], [class*="icon-"]
+            font-size: 24px
+
+        &.drug
+          background: #5bc0de
+          border-bottom: 1px solid #5bc0de   
+        &.home
+          background: #60c560
+          border-bottom: 1px solid #60c560
+        &.toys
+          background: #f59b3b
+          border-bottom: 1px solid #f59b3b
+        &.craft
+          background: #d9534f
+          border-bottom: 1px solid #d9534f
+        &.sport
+          background: #d94084
+          border-bottom: 1px solid #d94084
+        &.inactive
+          background: #8e8e93
+          border-bottom: 1px solid #8e8e93
+
         h3
           padding: 0
           margin: 0
           line-height: 1
-          font-weight: 100 !important
+          font-size: 20px
+          font-weight: 200 !important
 
-.color-row
+          &.success
+            color: #60c560
+          &.danger
+            color: #d9534f
 
+.filter-categories .btn
+  font-size: 14px
+  font-weight: 200 !important
+  text-align: left
 
   [class^="icon-"], [class*="icon-"]
-    margin-right: 0
-    font-size: 14px
-    padding-right: 6px
-    padding-left: 6px
+    margin: 0 5px 0 0
+    width: 45px
+    font-size: 20px
+    vertical-align: middle
+    text-align: center
 
 
-
-.filter-category
-  background: #5e5bde
-  color: #fff
-  border-bottom: 1px solid #5e5bde
-  font-size: 18px !important
-  font-weight: 200 !important
-
-  &.btn-fixed
-    width: 100%
-
-  &.drug
-    background: #5bc0de
-    border-bottom: 1px solid #5bc0de   
-  &.home
-    background: #60c560
-    border-bottom: 1px solid #60c560
-  &.toys
-    background: #f59b3b
-    border-bottom: 1px solid #f59b3b
-  &.craft
-    background: #d9534f
-    border-bottom: 1px solid #d9534f
-  &.sport
-    background: #d94084
-    border-bottom: 1px solid #d94084
-  &:hover
-    background: #8e8e93
-    border-bottom: 1px solid #8e8e93
-  &.inactive
-    background: #8e8e93
-    border-bottom: 1px solid #8e8e93
-
-.filter-table
-  margin-bottom: 0px
-  padding: 0px
 /*-----------------------------------------------------------------------------------*/
 /*  WYSIWYG
 /*-----------------------------------------------------------------------------------*/
