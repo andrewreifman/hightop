@@ -715,6 +715,7 @@ $(document).ready ->
   # =============================================================================
   #   Skycons
   # =============================================================================
-  # skycons = new Skycons(color: "white")
-  # skycons.add document.getElementById("partly-cloudy-day"), Skycons.PARTLY_CLOUDY_DAY
-  # skycons.play()
+  if document.getElementById("partly-cloudy-day")
+    skycons = new Skycons(color: "white")
+    skycons.add document.getElementById("partly-cloudy-day"), Skycons.PARTLY_CLOUDY_DAY
+    skycons.play()
