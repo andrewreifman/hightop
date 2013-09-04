@@ -10,66 +10,73 @@
             .panel-heading
               .panel-title
                 a.accordion-toggle data-parent="#accordion" data-toggle="collapse" href="#collapseOne"
+                  .caret.pull-right
                   | Date Range
             #collapseOne.panel-collapse.collapse.in
               .panel-body
-                .form-group
-                  label.radio
-                    input name="optionsRadios1" type="radio" value="option1"
-                    | Past Day
-                  label.radio
-                    input checked="" name="optionsRadios1" type="radio" value="option2"
-                    | Past Week
-                  label.radio
-                    input name="optionsRadios1" type="radio" value="option3"
-                    | Past Month
-                  label.radio
-                    input name="optionsRadios1" type="radio" value="option4"
-                    | Past Year
+                label.radio
+                  input name="optionsRadios1" type="radio" value="option1"
+                  | Past Day
+                label.radio
+                  input checked="" name="optionsRadios1" type="radio" value="option2"
+                  | Past Week
+                label.radio
+                  input name="optionsRadios1" type="radio" value="option3"
+                  | Past Month
+                label.radio
+                  input name="optionsRadios1" type="radio" value="option4"
+                  | Past Year
 
           .panel
             .panel-heading
               .panel-title
                 a.accordion-toggle data-parent="#accordion" data-toggle="collapse" href="#collapseTwo"
+                  .caret.pull-right
                   | Special Dates
             #collapseTwo.panel-collapse.collapse.in
               .panel-body
-                .form-group
-                  label.checkbox
-                    input type="checkbox" value=""
-                    | Blue Light Sale
-                  label.checkbox
-                    input type="checkbox" value=""
-                    | Christmas
-                  label.checkbox
-                    input type="checkbox" value=""
-                    | Annual Sale
-                  label.checkbox
-                    input type="checkbox" value=""
-                    | Easter
+                label.checkbox
+                  input type="checkbox" value=""
+                  | Blue Light Sale
+                label.checkbox
+                  input type="checkbox" value=""
+                  | Christmas
+                label.checkbox
+                  input type="checkbox" value=""
+                  | Annual Sale
+                label.checkbox
+                  input type="checkbox" value=""
+                  | Easter
 
           .panel.filter-categories
             .panel-heading
               .panel-title
                 a.accordion-toggle data-parent="#accordion" data-toggle="collapse" href="#collapseThree"
+                  .caret.pull-right
                   | Departments
             #collapseThree.panel-collapse.collapse.in
               .panel-body
-                .btn.btn-block.btn-info
-                  i.icon-stethoscope
-                  | Health
-                .btn.btn-block.btn-success
-                  i.icon-coffee
-                  | Office
-                .btn.btn-block.btn-warning
-                  i.icon-gamepad
-                  | Electronics
-                .btn.btn-block.btn-danger
-                  i.icon-gift
-                  | Crafts
-                .btn.btn-block.btn-magenta
-                  i.icon-trophy
-                  | Fitness
+                .btn-group data-toggle="buttons"
+                  label.btn.btn-block.btn-info-outline.active
+                    i.icon-stethoscope
+                    | Health
+                    input#option1 name="options" type="checkbox"
+                  label.btn.btn-block.btn-success-outline
+                    i.icon-coffee
+                    | Office
+                    input#option2 name="options" type="checkbox"
+                  label.btn.btn-block.btn-warning-outline
+                    i.icon-gamepad
+                    | Electronics
+                    input#option3 name="options" type="checkbox"
+                  label.btn.btn-block.btn-danger-outline
+                    i.icon-gift
+                    | Crafts
+                    input#option4 name="options" type="checkbox"
+                  label.btn.btn-block.btn-magenta-outline
+                    i.icon-trophy
+                    | Fitness
+                    input#option5 name="options" type="checkbox"
 
   .col-sm-9
     .well.selected-filters
@@ -145,7 +152,7 @@
           tr
             td.filter-category.sport
               .arrow-left 
-              i.icon-bolt
+              i.icon-trophy
             td Fastnation Co.
             td $ 22,156
             td.hidden-sm.hidden-xs  Jennifer Summers
@@ -205,7 +212,7 @@
           tr
             td.filter-category.sport
               .arrow-left 
-              i.icon-bolt
+              i.icon-trophy
             td Fastnation Co.
             td $ 22,156
             td.hidden-sm.hidden-xs  Jennifer Summers

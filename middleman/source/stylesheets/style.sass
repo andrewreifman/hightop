@@ -654,6 +654,20 @@ small
     .caret
       border-top-color: #FFF
 
+.btn-magenta-outline
+  color: #d94084
+  border: 1px solid #d94084
+
+  .caret
+    border-top-color: #d94084
+
+  &:hover, &.active
+    background: #d94084
+    color: #FFF
+
+    .caret
+      border-top-color: #FFF
+
 .btn-group
   margin: 0 10px 15px 0
 
@@ -1730,6 +1744,9 @@ input[type="text"]
     label
       margin-bottom: 5px
 
+.radio, .checkbox
+  margin: 0 0 10px
+
 .radio-inline, .checkbox-inline
   padding-top: 9px
   margin-right: 20px
@@ -1970,7 +1987,20 @@ input[type="text"]
   > a
     font-weight: 200
     padding: 8px 15px 10px
-    display: block
+    display: block      
+
+    .caret
+      margin-top: 5px
+      border-bottom: 5px solid #999
+      border-top: 5px solid transparent
+      border-right: 5px solid transparent
+      border-left: 5px solid transparent
+
+    &.collapsed
+      .caret
+        border-top: 5px solid #999
+        border-bottom: 5px solid transparent
+        margin-top: 10px
 
   &:hover
     color: $blue
@@ -2315,17 +2345,24 @@ button.close
           &.danger
             color: #d9534f
 
-.filter-categories .btn
-  font-size: 14px
-  font-weight: 200 !important
-  text-align: left
+.filter-categories 
+  .btn-group
+    margin: 0
+    display: block
+    
+    .btn
+      font-size: 14px
+      font-weight: 200 !important
+      text-align: left
+      border-radius: 4px !important
+      margin: 0 0 10px
 
-  [class^="icon-"], [class*="icon-"]
-    margin: 0 5px 0 0
-    width: 45px
-    font-size: 20px
-    vertical-align: middle
-    text-align: center
+      [class^="icon-"], [class*="icon-"]
+        margin: 0 5px 0 0
+        width: 45px
+        font-size: 20px
+        vertical-align: middle
+        text-align: center
 
 
 /*-----------------------------------------------------------------------------------*/
