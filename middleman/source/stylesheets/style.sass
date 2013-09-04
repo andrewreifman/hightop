@@ -223,9 +223,6 @@ small
   border: 0
   @include transition(all .3s)
 
-  &.closed
-    height: 45px
-
   .container-fluid.top-bar
     height: 46px
     border-bottom: 1px solid #e6e6e6
@@ -365,6 +362,7 @@ small
     height: 66px
     float: left
     width: 100%
+    @include transition(all .3s)
 
     .nav-collapse
       width: 100%
@@ -425,6 +423,12 @@ small
   .nav > li > .dropdown-menu:before,
   .nav > li > .dropdown-menu:after
     display: none
+
+.navbar.scroll-hide.closed
+  height: 45px
+  .main-nav
+    height: 0
+    overflow: hidden
 
 
 /*-----------------------------------------------------------------------------------*/
