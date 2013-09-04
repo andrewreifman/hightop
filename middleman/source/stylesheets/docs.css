@@ -14,7 +14,7 @@ body{
   -moz-transition: left 0.3s;
   transition: left 0.3s;
   -webkit-overflow-scrolling: touch;
-  overflow-y: auto; 
+  overflow-y: auto !important; 
 }
   .navbar.navbar-docs .nav {
     padding-left: 15px;
@@ -50,4 +50,15 @@ pre {
 
 .code-container {
   width: 100%; 
+}
+
+.widget-container .heading {
+  padding-bottom: 5px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-left: 0;
+  }
 }

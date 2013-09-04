@@ -28,7 +28,6 @@ html
 
     = javascript_include_tag "bootstrap.min"
     = javascript_include_tag "raphael.min"
-    = javascript_include_tag "justgage.min"
     = javascript_include_tag "jquery.mousewheel"
     = javascript_include_tag "jquery.classyscroll"
     = javascript_include_tag "jquery.vmap.min"
@@ -37,7 +36,6 @@ html
     = javascript_include_tag "jquery.bootstrap.wizard"
     = javascript_include_tag "fullcalendar.min"
     = javascript_include_tag "gcal"
-    = javascript_include_tag "prettify"
     = javascript_include_tag "jquery.dataTables.min"
     = javascript_include_tag "jquery.sparkline.min"
     = javascript_include_tag "jquery.easy-pie-chart"
@@ -56,14 +54,13 @@ html
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
 
   body data-spy="scroll" data-target=".navbar"
-    .navbar.navbar-docs
+    .navbar.navbar-docs.hidden-xs
       ul.nav
-        li=link_to "Overview", "#overview"
-        li=link_to "Features / Plugins", "#features"
-        li=link_to "Navigation", "#navigation"
+        li.active=link_to "Overview", "#overview"
+        li=link_to "Features & Plugins", "#features"
+        li=link_to "Header & Navigation", "#navigation"
+        li=link_to "Header Icons", "#icons"
         li=link_to "Widget Container", "#widget-container"
-        li=link_to "CSS", "#css"
-        li=link_to "Icons", "#icons"
         li=link_to "Bootstrap 3", "#bootstrap"
         li=link_to "Components", "#components"
 
@@ -126,9 +123,29 @@ html
               | Header & Navigation
 
             .widget-content.padded
-              p
-                | Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains dynamic visual elements but the content remains easy to modify.
+              p Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains dynamic visual elements but the content remains easy to modify.
               = Pygments.highlight("#{partial 'html_structure'}")
+
+        .col-lg-12
+          .widget-container.fluid-height#icons
+            .heading
+              | Navigation Icons
+
+            .widget-content.padded
+
+              p The icons used for the main navigation have been custom created and implemented using a custom built font. Our icons can be used on any page by calling them with our pre-built syntax.
+              = Pygments.highlight("span aria-hidden='true' class='se7en-icon-name'", lexer: 'css')
+
+              p They can also be scaled infinitely and changed to any color directly in the css.
+
+              .nav-icons
+                span aria-hidden="true" class="se7en-ui" style="font-size:112px;"
+                span aria-hidden="true" class="se7en-ui" style="font-size:56px;margin-right:5px;"
+                span aria-hidden="true" class="se7en-ui" style="font-size:28px;margin-right:25px;"
+
+                span aria-hidden="true" class="se7en-ui" style="font-size:112px;color:#007aff;"
+                span aria-hidden="true" class="se7en-ui" style="font-size:56px;margin-right:5px;color:#007aff;"
+                span aria-hidden="true" class="se7en-ui" style="font-size:28px;color:#007aff;"
 
         .col-lg-12
           .widget-container.fluid-height#widget-container
@@ -136,20 +153,7 @@ html
               | Widget Container
 
             .widget-content.padded
-              p
-                | Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains dynamic visual elements but the content remains easy to modify.
-              = Pygments.highlight("#{partial 'html_structure'}")
-
-        .col-lg-12
-          .widget-container.fluid-height#css
-            .heading
-              | CSS Structure
-
-            .widget-content.padded
-              p Much like the HTML for Se7en, the CSS is maintained to be clean and consistent as you travel across the template. Below are some landmarks to look for as you are modifying the theme.
-
-              h3 Structure
-              = Pygments.highlight("#{partial 'css_structure'}")
+              = Pygments.highlight("#{partial 'widget_structure'}")
 
         .col-lg-12
           .widget-container.fluid-height#bootstrap
