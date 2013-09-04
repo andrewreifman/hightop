@@ -1,5 +1,14 @@
 body{
   padding: 20px 0 0 240px; 
+  font-size: 15px;
+}
+
+h2 {
+  margin-top: 30px
+}
+
+span[class^="se7en-"], span[class*="se7en-"] {
+  display: inline-block;
 }
 
 .navbar.navbar-docs {
@@ -36,13 +45,17 @@ body{
         border-bottom: 1px solid #aaaaaa;
         background: none !important; 
       }
+        .navbar.navbar-docs .nav > li:hover > a {
+          color: #333;
+          border-bottom-color: #666; 
+        }
         .navbar.navbar-docs .nav > li.active > a {
           color: #007aff;
           border-bottom-color: #007aff; 
         }
 
 pre {
-  margin: 6px 0 12px 0;
+  margin: 6px 0 20px 0;
 }
 
 .code-container {
@@ -52,6 +65,19 @@ pre {
 .widget-container .heading {
   padding-bottom: 5px;
   height: auto;
+  font-size: 18px
+}
+
+.slider-basic {
+  margin: 10px 0 30px;
+}
+
+.sparkline-bar, .sparkline-line {
+  margin-bottom: 15px;
+}
+
+.easy-pie-chart {
+  margin: 0 0 20px;
 }
 
 @media (max-width: 768px) {
