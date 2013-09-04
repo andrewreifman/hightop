@@ -149,7 +149,7 @@ $(document).ready ->
     offset: "+90"
     sliceColors: ["#a0eeed","#81e970","#f5af50","#f46f50"]
 
-  $(".sparkslim").sparkline 'html',    
+  $(".sparkslim").sparkline 'html',
      type: "line"
      width: "100"
      height: "30"
@@ -317,7 +317,7 @@ $(document).ready ->
 
   # =============================================================================
   #   Bootstrap Tooltip
-  # =============================================================================  
+  # =============================================================================
   $("#tooltip").tooltip()
   $("#tooltip-left").tooltip
     placement: "left"
@@ -354,14 +354,14 @@ $(document).ready ->
   y = date.getFullYear()
 
   initDrag = (el) ->
-    
+
     # create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
     # it doesn't need to have a start or end
     eventObject = title: $.trim(el.text()) # use the element's text as the event title
-    
+
     # store the Event Object in the DOM element so we can get to it later
     el.data "eventObject", eventObject
-    
+
     # make the event draggable using jQuery UI
     el.draggable
       zIndex: 999
@@ -410,22 +410,22 @@ $(document).ready ->
     editable: true
     droppable: true
     drop: (date, allDay) -> # this function is called when something is dropped
-      
+
       # retrieve the dropped element's stored Event Object
       originalEventObject = $(this).data("eventObject")
-      
+
       # we need to copy it, so that multiple events don't have a reference to the same object
       copiedEventObject = $.extend({}, originalEventObject)
-      
+
       # assign it the date that was reported
       copiedEventObject.start = date
       copiedEventObject.allDay = allDay
       copiedEventObject.className = $(this).attr("data-class")
-      
+
       # render the event on the calendar
       # the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
       $("#calendar").fullCalendar "renderEvent", copiedEventObject, true
-      
+
       # is the "remove after drop" checkbox checked?
       # if so, remove the element from the "Draggable Events" list
       $(this).remove()  if $("#drop-remove").is(":checked")
@@ -486,7 +486,7 @@ $(document).ready ->
     selector = $(this).attr("data-filter")
     $(".gallery-filters a.selected").removeClass "selected"
     $(this).addClass "selected"
-    $container.isotope 
+    $container.isotope
       filter: selector
     false
 
