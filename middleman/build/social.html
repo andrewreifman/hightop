@@ -121,10 +121,10 @@
             <li class="dashboard"><a href="/">
               <span aria-hidden="true" class="se7en-home"></span>Dashboard</a>
             </li>
-            <li class="dashboard"><a href="/social.html">
+            <li class="dashboard"><a class="current" href="/social.html">
               <span aria-hidden="true" class="se7en-home"></span>Social Feed</a>
             </li>
-            <li class="dropdown ui"><a data-toggle="dropdown" class="current" href="#">
+            <li class="dropdown ui"><a data-toggle="dropdown" href="#">
               <span aria-hidden="true" class="se7en-ui"></span>Features<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li>
@@ -143,7 +143,7 @@
                   <a href="/typo.html">Typography</a>
                 </li>
                 <li>
-                  <a class="current" href="/grid.html">Grid Layout</a>
+                  <a href="/grid.html">Grid Layout</a>
                 </li>
               </ul>
             </li>
@@ -156,7 +156,7 @@
             <li class="pages"><a href="/charts.html">
               <span aria-hidden="true" class="se7en-charts"></span>Charts</a>
             </li>
-            <li class="dropdown ui"><a data-toggle="dropdown" class="current" href="#">
+            <li class="dropdown ui"><a data-toggle="dropdown" href="#">
               <span aria-hidden="true" class="se7en-pages"></span>Pages<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li>
@@ -178,180 +178,199 @@
       </div>
     </div>
     <!-- End Navigation -->
-    <div class="container-fluid main-content">
-      <div class="page-title">
-        <h1>
-          Grid Layout
-        </h1>
-      </div>
-      <div class="grid-structure">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="widget-container fluid-height">
-              span12
-            </div>
+    <div class="container-fluid main-content"><div class="row">
+  <div class="col-md-2">
+    <div class="widget-container padded fluid-height clearfix twitter-widget text-center">
+      <i class="icon-twitter icon-4x"></i>
+      <h1>
+        12
+      </h1>
+      New Tweets
+    </div>
+  </div>
+  <div class="col-md-2"></div>
+  <div class="col-md-2"></div>
+  <div class="col-md-6"></div>
+</div>
+<div class="row">
+  <!-- Social Form -->
+  <div class="col-lg-4">
+    <div class="widget-container share fluid-height clearfix">
+      <div class="widget-content padded">
+        <textarea class="form-control" rows="4">Share what's new?</textarea>
+        <div class="col-xs-2">
+          <div class="share-options active">
+            <i class="icon-pencil"></i>
+            <p class="hidden-xs">
+              Text
+            </p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-11">
-            <div class="widget-container fluid-height">
-              span11
-            </div>
-          </div>
-          <div class="col-lg-1">
-            <div class="widget-container fluid-height">
-              span1
-            </div>
+        <div class="col-xs-2">
+          <div class="share-options">
+            <i class="icon-camera"></i>
+            <p class="hidden-xs">
+              Photos
+            </p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-10">
-            <div class="widget-container fluid-height">
-              span10
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class="widget-container fluid-height">
-              span2
-            </div>
+        <div class="col-xs-2">
+          <div class="share-options">
+            <i class="icon-link"></i>
+            <p class="hidden-xs">
+              Link
+            </p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-9">
-            <div class="widget-container fluid-height">
-              span9
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="widget-container fluid-height">
-              span3
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="widget-container fluid-height">
-              span8
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="widget-container fluid-height">
-              span4
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-7">
-            <div class="widget-container fluid-height">
-              span7
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="widget-container fluid-height">
-              span5
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="widget-container fluid-height">
-              span6
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="widget-container fluid-height">
-              span6
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-5">
-            <div class="widget-container fluid-height">
-              span5
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <div class="widget-container fluid-height">
-              span7
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="widget-container fluid-height">
-              span4
-            </div>
-          </div>
-          <div class="col-lg-8">
-            <div class="widget-container fluid-height">
-              span8
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="widget-container fluid-height">
-              span3
-            </div>
-          </div>
-          <div class="col-lg-9">
-            <div class="widget-container fluid-height">
-              span9
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-2">
-            <div class="widget-container fluid-height">
-              span2
-            </div>
-          </div>
-          <div class="col-lg-10">
-            <div class="widget-container fluid-height">
-              span10
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-1">
-            <div class="widget-container fluid-height">
-              span1
-            </div>
-          </div>
-          <div class="col-lg-11">
-            <div class="widget-container fluid-height">
-              span11
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-2">
-            <div class="widget-container fluid-height">
-              span2
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="widget-container fluid-height">
-              span3
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="widget-container fluid-height">
-              span4
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class="widget-container fluid-height">
-              span2
-            </div>
-          </div>
-          <div class="col-lg-1">
-            <div class="widget-container fluid-height">
-              span1
-            </div>
+        <div class="col-xs-2">
+          <div class="share-options">
+            <i class="icon-youtube-play"></i>
+            <p class="hidden-xs">
+              Videos
+            </p>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <!-- Social Form --><!-- Weather -->
+  <div class="col-lg-4">
+    <div class="widget-container weather fluid-height clearfix">
+      <div class="heading">
+        <div class="pull-right i icon-list"></div>
+        Washington DC
+      </div>
+      <div class="widget-content padded">
+        <div class="col-xs-6">
+          <canvas height="64" id="partly-cloudy-day" width="64"></canvas>
+          <div class="number">
+            72°
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <p>
+            Chance of Rain: 20%
+          </p>
+          <p>
+            Wind: SSW at 8 mph
+          </p>
+          <p>
+            Humidity: 73%
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Weather -->
+  <div class="col-lg-4">
+    <div class="widget-container fluid-height clearfix social-entry">
+      <div class="heading">
+        <div class="pull-right i icon-refresh"></div>
+        <i class="icon-fire"></i>What's hot?
+      </div>
+      <div class="widget-content padded">
+        <ul>
+          <li>
+            <img width="50" height="50" src="images/avatar-male.jpg" /><a class="user-name" href="">John Smith</a>
+            <div class="time">
+              10 min ago
+            </div>
+            <p class="content">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+            </p>
+            <btn class="btn-sm btn-default-outline">Like</btn><btn class="btn-sm btn-default-outline">Share</btn>
+          </li>
+        </ul>
+      </div>
+      <div class="comments padded">
+        <p>
+          2 comments
+        </p>
+        <ul>
+          <li>
+            <img width="50" height="50" src="images/avatar-female.png" /><a class="user-name" href="">John Smith</a>
+            <div class="time">
+              10 min ago
+            </div>
+            <p class="content">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+            </p>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <img width="50" height="50" src="images/avatar-female.png" /><a class="user-name" href="">John Smith</a>
+            <div class="time">
+              10 min ago
+            </div>
+            <p class="content">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <!-- Chat -->
+  <div class="col-lg-8">
+    <div class="widget-container scrollable chat">
+      <div class="heading">
+        <i class="icon-comments"></i>Chat Widget<i class="icon-smile pull-right"></i>
+      </div>
+      <div class="widget-content padded scrollbar">
+        <ul>
+          <li>
+            <img width="50" height="50" src="images/avatar-male.jpg" />
+            <div class="bubble">
+              <a class="user-name" href="">John Smith</a>
+              <p class="message">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+              </p>
+              <em class="time"><i class="icon-time"></i>10 min ago</em>
+            </div>
+          </li>
+          <li class="current-user">
+            <img width="50" height="50" src="images/avatar-female.png" />
+            <div class="bubble">
+              <a class="user-name" href="">Jane Smith</a>
+              <p class="message">
+                Donec odio. Quisque volutpat mattis eros.
+              </p>
+              <em class="time"><i class="icon-time"></i>10 min ago</em>
+            </div>
+          </li>
+          <li>
+            <img width="50" height="50" src="images/avatar-male.jpg" />
+            <div class="bubble">
+              <a class="user-name" href="">John Smith</a>
+              <p class="message">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+              </p>
+              <em class="time"><i class="icon-time"></i>10 min ago</em>
+            </div>
+          </li>
+          <li>
+            <img width="50" height="50" src="images/avatar-male.jpg" />
+            <div class="bubble">
+              <a class="user-name" href="">John Smith</a>
+              <p class="message">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+              </p>
+              <em class="time"><i class="icon-time"></i>10 min ago</em>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="post-message">
+        <input class="form-control" placeholder="Write your message here…" type="text"><input class="btn btn-default" type="submit" value="Post">
+      </div>
+    </div>
+    <!-- End Chat -->
+  </div>
+</div>
+<script></script>
     </div>
   </body>
 </html>
