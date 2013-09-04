@@ -1,3 +1,8 @@
+/*
+#   Sparkline Linechart JS
+*/
+
+
 (function() {
   var linechartResize;
 
@@ -63,6 +68,36 @@
       spotRadius: 6,
       chartRangeMin: 0
     });
+    $("#linechart-4").sparkline([100, 220, 150, 140, 200, 180, 130, 180, 180, 210, 240, 200, 170, 120, 200, 150, 100, 100], {
+      type: "line",
+      width: "100",
+      height: "30",
+      lineColor: "#adadad",
+      fillColor: "rgba(244, 252, 225, 0.0)",
+      lineWidth: 2,
+      spotColor: "#909090",
+      minSpotColor: "#909090",
+      maxSpotColor: "#909090",
+      highlightSpotColor: "#666",
+      highlightLineColor: "#666",
+      spotRadius: 0,
+      chartRangeMin: 0
+    });
+    $("#linechart-5").sparkline([100, 220, 150, 140, 200, 180, 130, 180, 180, 210, 240, 200, 170, 120, 200, 150, 100, 100], {
+      type: "line",
+      width: "100",
+      height: "30",
+      lineColor: "#adadad",
+      fillColor: "rgba(244, 252, 225, 0.0)",
+      lineWidth: 2,
+      spotColor: "#909090",
+      minSpotColor: "#909090",
+      maxSpotColor: "#909090",
+      highlightSpotColor: "#666",
+      highlightLineColor: "#666",
+      spotRadius: 0,
+      chartRangeMin: 0
+    });
     $("#composite-chart-1").sparkline([160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120], {
       type: "bar",
       height: "226",
@@ -89,7 +124,11 @@
   };
 
   $(document).ready(function() {
-    var $container, calendar, d, date, m, y;
+    /*
+    #   Sparkline Bar Charts
+    */
+
+    var $container, addEvent, buildMorris, d, date, handleDropdown, initDrag, m, skycons, y;
     $("#barcharts").sparkline([160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120], {
       type: "bar",
       height: "80",
@@ -110,100 +149,143 @@
       barSpacing: 6,
       barWidth: 12,
       barColor: "#f0ad4e"
-    }, $("#pie-chart").sparkline([2, 8, 6, 10], {
+    });
+    $("#pie-chart").sparkline([2, 8, 6, 10], {
       type: "pie",
       height: "220",
       width: "220",
       offset: "+90",
       sliceColors: ["#a0eeed", "#81e970", "#f5af50", "#f46f50"]
-    }), $(".pie-chart1").easyPieChart({
+    });
+    $(".sparkslim").sparkline('html', {
+      type: "line",
+      width: "100",
+      height: "30",
+      lineColor: "#adadad",
+      fillColor: "rgba(244, 252, 225, 0.0)",
+      lineWidth: 2,
+      spotColor: "#909090",
+      minSpotColor: "#909090",
+      maxSpotColor: "#909090",
+      highlightSpotColor: "#666",
+      highlightLineColor: "#666",
+      spotRadius: 0,
+      chartRangeMin: 0
+    });
+    /*
+    #   Easy Pie Chart
+    */
+
+    $(".pie-chart1").easyPieChart({
       size: 220,
       lineWidth: 12,
       lineCap: "square",
       barColor: "#81e970",
       animate: 800,
       scaleColor: false
-    }), $(".pie-chart2").easyPieChart({
+    });
+    $(".pie-chart2").easyPieChart({
       size: 220,
       lineWidth: 12,
       lineCap: "square",
       barColor: "#f46f50",
       animate: 800,
       scaleColor: false
-    }), $(".pie-chart3").easyPieChart({
+    });
+    $(".pie-chart3").easyPieChart({
       size: 220,
       lineWidth: 12,
       lineCap: "square",
       barColor: "#fab43b",
       animate: 800,
       scaleColor: false
-    }));
-    $(".navbar").mouseover(function() {
-      $(".navbar").removeClass("closed");
+    });
+    /*
+    #   Navbar scroll animation
+    */
+
+    $(".navbar.scroll-hide").mouseover(function() {
+      $(".navbar.scroll-hide").removeClass("closed");
       return setTimeout((function() {
-        return $(".navbar").css({
+        return $(".navbar.scroll-hide").css({
           overflow: "visible"
         });
-      }), 350);
+      }), 150);
     });
     $(function() {
       var delta, lastScrollTop;
       lastScrollTop = 0;
       delta = 50;
-      $(window).scroll(function(event) {
+      return $(window).scroll(function(event) {
         var st;
         st = $(this).scrollTop();
         if (Math.abs(lastScrollTop - st) <= delta) {
           return;
         }
         if (st > lastScrollTop) {
-          $('.navbar').addClass("closed");
-          $(".navbar").css({
+          $('.navbar.scroll-hide').addClass("closed");
+          $(".navbar.scroll-hide").css({
             overflow: "hidden"
           });
         } else {
-          $('.navbar').removeClass("closed");
+          $('.navbar.scroll-hide').removeClass("closed");
           setTimeout((function() {
-            return $(".navbar").css({
+            return $(".navbar.scroll-hide").css({
               overflow: "visible"
             });
           }), 350);
         }
         return lastScrollTop = st;
       });
-      $('.navbar-toggle').click(function() {
-        return $('body, html').toggleClass("nav-open");
-      });
-      linechartResize();
-      $(window).resize(function() {
-        return linechartResize();
-      });
-      return $("#wizard").bootstrapWizard({
-        nextSelector: ".btn-next",
-        previousSelector: ".btn-previous",
-        onNext: function(tab, navigation, index) {
-          var $current, $percent, $total;
-          $total = navigation.find("li").length;
-          $current = index + 1;
-          $percent = ($current / $total) * 100;
-          return $("#wizard").find(".progress-bar").css("width", $percent + "%");
-        },
-        onPrevious: function(tab, navigation, index) {
-          var $current, $percent, $total;
-          $total = navigation.find("li").length;
-          $current = index + 1;
-          $percent = ($current / $total) * 100;
-          return $("#wizard").find(".progress-bar").css("width", $percent + "%");
-        },
-        onTabShow: function(tab, navigation, index) {
-          var $current, $percent, $total;
-          $total = navigation.find("li").length;
-          $current = index + 1;
-          $percent = ($current / $total) * 100;
-          return $("#wizard").find(".progress-bar").css("width", $percent + "%");
-        }
-      });
     });
+    /*
+    #   Mobile Nav
+    */
+
+    $('.navbar-toggle').click(function() {
+      return $('body, html').toggleClass("nav-open");
+    });
+    /*
+    #   Sparkline Resize Script
+    */
+
+    linechartResize();
+    $(window).resize(function() {
+      return linechartResize();
+    });
+    /*
+    #   Form wizard
+    */
+
+    $("#wizard").bootstrapWizard({
+      nextSelector: ".btn-next",
+      previousSelector: ".btn-previous",
+      onNext: function(tab, navigation, index) {
+        var $current, $percent, $total;
+        $total = navigation.find("li").length;
+        $current = index + 1;
+        $percent = ($current / $total) * 100;
+        return $("#wizard").find(".progress-bar").css("width", $percent + "%");
+      },
+      onPrevious: function(tab, navigation, index) {
+        var $current, $percent, $total;
+        $total = navigation.find("li").length;
+        $current = index + 1;
+        $percent = ($current / $total) * 100;
+        return $("#wizard").find(".progress-bar").css("width", $percent + "%");
+      },
+      onTabShow: function(tab, navigation, index) {
+        var $current, $percent, $total;
+        $total = navigation.find("li").length;
+        $current = index + 1;
+        $percent = ($current / $total) * 100;
+        return $("#wizard").find(".progress-bar").css("width", $percent + "%");
+      }
+    });
+    /*
+    #   DataTables
+    */
+
     $("#dataTable1").dataTable({
       "sPaginationType": "full_numbers",
       aoColumnDefs: [
@@ -213,7 +295,44 @@
         }
       ]
     });
+    /*
+    #   jQuery UI Sliders
+    */
+
+    $(".slider-basic").slider({
+      range: "min",
+      value: 50,
+      slide: function(event, ui) {
+        return $(".slider-basic-amount").html("$" + ui.value);
+      }
+    });
+    $(".slider-basic-amount").html("$" + $(".slider-basic").slider("value"));
+    $(".slider-increments").slider({
+      range: "min",
+      value: 30,
+      step: 10,
+      slide: function(event, ui) {
+        return $(".slider-increments-amount").html("$" + ui.value);
+      }
+    });
+    $(".slider-increments-amount").html("$" + $(".slider-increments").slider("value"));
+    $(".slider-range").slider({
+      range: true,
+      values: [15, 70],
+      slide: function(event, ui) {
+        return $(".slider-range-amount").html("$" + ui.values[0] + " - $" + ui.values[1]);
+      }
+    });
+    $(".slider-range-amount").html("$" + $(".slider-range").slider("values", 0) + " - $" + $(".slider-range").slider("values", 1));
+    /*
+    #   Bootstrap Tabs
+    */
+
     $("#myTab a:last").tab("show");
+    /*
+    #   Bootstrap Popover
+    */
+
     $("#popover").popover();
     $("#popover-left").popover({
       placement: "left"
@@ -227,6 +346,10 @@
     $("#popover-bottom").popover({
       placement: "bottom"
     });
+    /*
+    #   Bootstrap Tooltip
+    */
+
     $("#tooltip").tooltip();
     $("#tooltip-left").tooltip({
       placement: "left"
@@ -240,84 +363,148 @@
     $("#tooltip-bottom").tooltip({
       placement: "bottom"
     });
-    $("#vmap").vectorMap({
-      map: "world_en",
-      backgroundColor: null,
-      color: "#fff",
-      hoverOpacity: 0.2,
-      selectedColor: "#fff",
-      enableZoom: true,
-      showTooltip: true,
-      values: sample_data,
-      scaleColors: ["#59cdfe", "#0079fe"],
-      normalizeFunction: "polynomial"
-    });
+    /*
+    #   jQuery VMap
+    */
+
+    if ($("#vmap").length) {
+      $("#vmap").vectorMap({
+        map: "world_en",
+        backgroundColor: null,
+        color: "#fff",
+        hoverOpacity: 0.2,
+        selectedColor: "#fff",
+        enableZoom: true,
+        showTooltip: true,
+        values: sample_data,
+        scaleColors: ["#59cdfe", "#0079fe"],
+        normalizeFunction: "polynomial"
+      });
+    }
+    /*
+    #   Full Calendar
+    */
+
     date = new Date();
     d = date.getDate();
     m = date.getMonth();
     y = date.getFullYear();
-    calendar = $("#calendar").fullCalendar({
+    initDrag = function(el) {
+      var eventObject;
+      eventObject = {
+        title: $.trim(el.text())
+      };
+      el.data("eventObject", eventObject);
+      return el.draggable({
+        zIndex: 999,
+        revert: true,
+        revertDuration: 0
+      });
+    };
+    addEvent = function(title, priority) {
+      var html;
+      title = (title.length === 0 ? "Untitled Event" : title);
+      priority = (priority.length === 0 ? "default" : priority);
+      html = $("<div data-class=\"label label-" + priority + "\" class=\"external-event label label-" + priority + "\">" + title + "</div>");
+      jQuery("#event_box").append(html);
+      return initDrag(html);
+    };
+    $("#external-events div.external-event").each(function() {
+      return initDrag($(this));
+    });
+    $("#event_add").click(function() {
+      var priority, title;
+      title = $("#event_title").val();
+      priority = $("#event_priority").val();
+      return addEvent(title, priority);
+    });
+    handleDropdown = function() {
+      $("#event_priority_chzn .chzn-search").hide();
+      $("#event_priority_chzn_o_1").html("<span class=\"label label-default\">" + $("#event_priority_chzn_o_1").text() + "</span>");
+      $("#event_priority_chzn_o_2").html("<span class=\"label label-success\">" + $("#event_priority_chzn_o_2").text() + "</span>");
+      $("#event_priority_chzn_o_3").html("<span class=\"label label-info\">" + $("#event_priority_chzn_o_3").text() + "</span>");
+      $("#event_priority_chzn_o_4").html("<span class=\"label label-warning\">" + $("#event_priority_chzn_o_4").text() + "</span>");
+      return $("#event_priority_chzn_o_5").html("<span class=\"label label-important\">" + $("#event_priority_chzn_o_5").text() + "</span>");
+    };
+    $("#event_priority_chzn").click(handleDropdown);
+    addEvent("My Event 1", "primary");
+    addEvent("My Event 2", "success");
+    addEvent("My Event 3", "info");
+    addEvent("My Event 4", "warning");
+    addEvent("My Event 5", "danger");
+    addEvent("My Event 6", "default");
+    $("#calendar").fullCalendar({
       header: {
         left: "prev,next today",
         center: "title",
         right: "month,agendaWeek,agendaDay"
       },
-      selectable: true,
-      selectHelper: true,
-      select: function(start, end, allDay) {
-        var title;
-        title = prompt("Event Title:");
-        if (title) {
-          calendar.fullCalendar("renderEvent", {
-            title: title,
-            start: start,
-            end: end,
-            allDay: allDay
-          }, true);
-        }
-        return calendar.fullCalendar("unselect");
-      },
       editable: true,
+      droppable: true,
+      drop: function(date, allDay) {
+        var copiedEventObject, originalEventObject;
+        originalEventObject = $(this).data("eventObject");
+        copiedEventObject = $.extend({}, originalEventObject);
+        copiedEventObject.start = date;
+        copiedEventObject.allDay = allDay;
+        copiedEventObject.className = $(this).attr("data-class");
+        $("#calendar").fullCalendar("renderEvent", copiedEventObject, true);
+        if ($("#drop-remove").is(":checked")) {
+          return $(this).remove();
+        }
+      },
       events: [
         {
           title: "All Day Event",
-          start: new Date(y, m, 1)
+          start: new Date(y, m, 1),
+          className: "label label-default"
         }, {
           title: "Long Event",
           start: new Date(y, m, d - 5),
-          end: new Date(y, m, d - 2)
+          end: new Date(y, m, d - 2),
+          className: "label label-success"
         }, {
           id: 999,
           title: "Repeating Event",
           start: new Date(y, m, d - 3, 16, 0),
-          allDay: false
+          allDay: false,
+          className: "label label-default"
         }, {
           id: 999,
           title: "Repeating Event",
           start: new Date(y, m, d + 4, 16, 0),
-          allDay: false
+          allDay: false,
+          className: "label label-important"
         }, {
           title: "Meeting",
           start: new Date(y, m, d, 10, 30),
-          allDay: false
+          allDay: false,
+          className: "label label-info"
         }, {
           title: "Lunch",
-          start: new Date(y, m, d, 14, 0),
-          end: new Date(y, m, d, 16, 0),
-          allDay: false
+          start: new Date(y, m, d, 12, 0),
+          end: new Date(y, m, d, 14, 0),
+          allDay: false,
+          className: "label label-warning"
         }, {
           title: "Birthday Party",
           start: new Date(y, m, d + 1, 19, 0),
           end: new Date(y, m, d + 1, 22, 30),
-          allDay: false
+          allDay: false,
+          className: "label label-success"
         }, {
           title: "Click for Google",
           start: new Date(y, m, 28),
           end: new Date(y, m, 29),
-          url: "http://google.com/"
+          url: "http://google.com/",
+          className: "label label-warning"
         }
       ]
     });
+    /*
+    #   Isotope
+    */
+
     $container = $(".gallery-container");
     $container.isotope({});
     $(".gallery-filters a").click(function() {
@@ -330,6 +517,10 @@
       });
       return false;
     });
+    /*
+    #   Scrollbar Styling JS
+    */
+
     $('.scrollbar').ClassyScroll({
       sliderOpacity: 1,
       wheelSpeed: 2,
@@ -337,7 +528,15 @@
         return $(this).prev().addClass("shadow");
       }
     });
+    /*
+    #   Popover JS
+    */
+
     $('#popover').popover();
+    /*
+    #   Fancybox Modal
+    */
+
     $(".fancybox").fancybox({
       maxWidth: 700,
       height: 'auto',
@@ -352,8 +551,27 @@
         }
       }
     });
+    /*
+    #   Morris Chart JS
+    */
+
+    $(window).resize(function(e) {
+      var morrisResize;
+      clearTimeout(morrisResize);
+      return morrisResize = setTimeout(function() {
+        return buildMorris(true);
+      }, 500);
+    });
     $(function() {
+      if ($('.chart-container').length) {
+        return buildMorris();
+      }
+    });
+    buildMorris = function($re) {
       var tax_data;
+      if ($re) {
+        $(".graph").html("");
+      }
       tax_data = [
         {
           period: "2011 Q3",
@@ -398,7 +616,8 @@
         data: tax_data,
         xkey: "period",
         ykeys: ["licensed", "sorned"],
-        labels: ["Licensed", "Off the road"]
+        labels: ["Licensed", "Off the road"],
+        lineColors: ["#59dbbf", "#aeb6cb"]
       });
       Morris.Donut({
         element: "hero-donut",
@@ -417,6 +636,7 @@
             value: 10
           }
         ],
+        colors: ["#afcf6f"],
         formatter: function(y) {
           return y + "%";
         }
@@ -479,10 +699,14 @@
         xkey: "period",
         ykeys: ["iphone", "ipad", "itouch"],
         labels: ["iPhone", "iPad", "iPod Touch"],
-        pointSize: 2,
-        hideHover: "auto"
+        hideHover: "auto",
+        lineWidth: 2,
+        pointSize: 4,
+        lineColors: ["#59dbbf", "#aeb6cb", "#5dcff3"],
+        fillOpacity: 0.5,
+        smooth: true
       });
-      Morris.Bar({
+      return Morris.Bar({
         element: "hero-bar",
         data: [
           {
@@ -510,41 +734,38 @@
         labels: ["Geekbench"],
         barRatio: 0.4,
         xLabelAngle: 35,
-        hideHover: "auto"
+        hideHover: "auto",
+        barColors: ["#aeb6cb"]
       });
-      new Morris.Line({
-        element: "examplefirst",
-        xkey: "year",
-        ykeys: ["value"],
-        labels: ["Value"],
-        data: [
-          {
-            year: "2008",
-            value: 20
-          }, {
-            year: "2009",
-            value: 10
-          }, {
-            year: "2010",
-            value: 5
-          }, {
-            year: "2011",
-            value: 5
-          }, {
-            year: "2012",
-            value: 20
-          }
-        ]
-      });
-      return $(".code-example").each(function(index, el) {
-        return eval_($(el).text());
-      });
-    });
+    };
+    /*
+    #   Select2
+    */
+
     $('.select2able').select2();
+    /*
+    #   Log in transition
+    */
+
     $('.login-submit').click(function() {
       return $('.login').addClass("submitted");
     });
-    return $('#editor').wysiwyg();
+    /*
+    #   WYSIWYG Editor
+    */
+
+    $('#editor').wysiwyg();
+    /*
+    #   Skycons
+    */
+
+    if (document.getElementById("partly-cloudy-day")) {
+      skycons = new Skycons({
+        color: "white"
+      });
+      skycons.add(document.getElementById("partly-cloudy-day"), Skycons.PARTLY_CLOUDY_DAY);
+      return skycons.play();
+    }
   });
 
 }).call(this);
