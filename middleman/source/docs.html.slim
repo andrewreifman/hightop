@@ -61,6 +61,7 @@ html
         li=link_to "Header & Navigation", "#navigation"
         li=link_to "Header Icons", "#icons"
         li=link_to "Widget Container", "#widget-container"
+        li=link_to "Font Awesome Icons", "#fontawesome"
         li=link_to "Bootstrap 3", "#bootstrap"
         li=link_to "Components", "#components"
 
@@ -75,7 +76,7 @@ html
             .heading
               | What is Se7en?
 
-            .widget-content.docs-what.padded
+            .widget-content.padded
               h3 Se7en is a best-of-breed administration template. We employ stunning design, the latest technologies and industry best practices to create a one of kind administration template suitable for many needs.
 
       .row
@@ -156,6 +157,15 @@ html
               = Pygments.highlight("#{partial 'widget_structure'}")
 
         .col-lg-12
+          .widget-container.fluid-height#fontawesome
+            .heading
+              | Font Awesome Icons
+
+            .widget-content.padded
+              p Text
+              = Pygments.highlight("#{partial 'widget_structure'}")
+
+        .col-lg-12
           .widget-container.fluid-height#bootstrap
             .heading
               | Bootstrap 3
@@ -180,9 +190,6 @@ html
                 li
                   | Popover
                   = Pygments.highlight("$('#example').popover(options)", lexer: 'javascript')
-                li
-                  | Buttons via Javascript
-                  = Pygments.highlight("$('.nav-tabs').button()", lexer: 'javascript')
                 li
                   | Collapse
                   = Pygments.highlight("$('.collapse').collapse()", lexer: 'javascript')
