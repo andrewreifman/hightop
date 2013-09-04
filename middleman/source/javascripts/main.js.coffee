@@ -523,7 +523,7 @@ $(document).ready ->
   # =============================================================================
   #   Morris Chart JS
   # =============================================================================
-  morrisResize = undefined
+
   $(window).resize (e) ->
     clearTimeout morrisResize
     morrisResize = setTimeout(->
@@ -531,7 +531,8 @@ $(document).ready ->
     , 500)
 
   $ ->
-    buildMorris()
+    if $('.chart-container').length
+      buildMorris()
 
   buildMorris = ($re) ->
     $(".graph").html "" if $re
