@@ -331,17 +331,18 @@ $(document).ready ->
 	# =============================================================================
 	#   jQuery VMap
 	# =============================================================================
-	$("#vmap").vectorMap
-	  map: "world_en"
-	  backgroundColor: null
-	  color: "#fff"
-	  hoverOpacity: 0.2
-	  selectedColor: "#fff"
-	  enableZoom: true
-	  showTooltip: true
-	  values: sample_data
-	  scaleColors: ["#59cdfe", "#0079fe"]
-	  normalizeFunction: "polynomial"
+  if $("#vmap").length
+  	$("#vmap").vectorMap
+      map: "world_en"
+      backgroundColor: null
+      color: "#fff"
+      hoverOpacity: 0.2
+      selectedColor: "#fff"
+      enableZoom: true
+      showTooltip: true
+      values: sample_data
+      scaleColors: ["#59cdfe", "#0079fe"]
+      normalizeFunction: "polynomial"
 
 
 	# =============================================================================
