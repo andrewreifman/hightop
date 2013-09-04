@@ -1,5 +1,5 @@
 <!-- Navigation -->
-.navbar.navbar-fixed-top
+.navbar.navbar-fixed-top.scroll-hide
   .container-fluid.top-bar
     .pull-right
       ul.nav.navbar-nav.pull-right
@@ -98,10 +98,14 @@
           = link_to 'index.html', class: cp('index.html') do
             span aria-hidden="true" class="se7en-home"
             | Dashboard
+        li.dashboard
+          = link_to 'social.html', class: cp('social.html') do
+            span aria-hidden="true" class="se7en-home"
+            | Social Feed
         li.dropdown.ui *{ class: "#{cp 'buttons.html'}" }
           = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('buttons.html') || cp('icons.html') || cp('components.html') || cp('widgets.html') || cp('typo.html') || cp('grid.html') do
             span aria-hidden="true" class="se7en-ui"
-            | UI
+            | Features
             b.caret
           ul.dropdown-menu
             li= link_to "Buttons", 'buttons.html', class: cp('buttons.html')
@@ -131,12 +135,6 @@
             li= link_to "Filters", 'filters.html', class: cp('filters.html')
             li= link_to "Login", 'login.html', class: cp('login.html')
             li= link_to "Calendar", 'calendar.html', class: cp('calendar.html')
-            li= link_to "404", 'icons.html', class: cp('icons.html')
-            li= link_to "Email", 'components.html', class: cp('components.html')
-            li= link_to "Maps", 'components.html', class: cp('components.html')
-            li= link_to "Filter Data", 'widgets.html', class: cp('widgets.html')
-            li= link_to "Personal Records", 'typo.html', class: cp('typo.html')
-            li= link_to "Marketing", 'grid.html', class: cp('grid.html')
         li.gallery
           = link_to 'gallery.html', class: cp('gallery.html') do
             span aria-hidden="true" class="se7en-gallery"

@@ -142,7 +142,7 @@ html .fc,
 	padding: 0 .6em;
 	overflow: hidden;
 	height: 1.9em;
-	line-height: 1.9em;
+	line-height: 1.7em;
 	white-space: nowrap;
 	cursor: pointer;
 }
@@ -202,13 +202,12 @@ html .fc,
 */
 
 .fc-state-default {
-	color: #007aff;
+	color: #BBB;
 	background: none;
-	border: 1px solid #007aff;
+	border: 1px solid #BBB;
 	font-weight:200;
 	transition: background 0.1s linear;
-
-	}
+}
 
 .fc-state-hover,
 .fc-state-down,
@@ -216,24 +215,23 @@ html .fc,
 .fc-state-disabled {
 	color: #333;
 	background-color: #fafafa;
-	border-color: #333333;
-	opacity:0.8;
+	border-color: #BBB;
 	font-weight:200;
 	}
 
 .fc-state-hover {
-	background-color: #007aff;
+	background-color: #BBB;
 	background-image: none;
-	border-color: #1684b2;
+	border-color: #BBB;
 	outline: 0;
 	color: white;
 	}
 
 .fc-state-down,
 .fc-state-active {
-	background-color: #007aff;
+	background-color: #BBB;
 	background-image: none;
-	border-color: #1684b2;
+	border-color: #BBB;
 	outline: 0;
 	color: white;
 
@@ -253,12 +251,9 @@ html .fc,
 ------------------------------------------------------------------------*/
 	 
 .fc-event {
-	background-color: #d1eeff;
-	color: #2a8ac6;
-	font-size: .95em;
+	font-size: .95em !important;
 	cursor: default;
 	opacity: 0.7;
-	border-left:2px solid #2a8ac6;
 	font-weight:400;
 	padding: 2px 0;
 }

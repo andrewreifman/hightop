@@ -21,13 +21,15 @@ html
     = stylesheet_link_tag "color/gray", media: "all", rel: "alternate stylesheet", title: "gray-theme"
     = stylesheet_link_tag "application", media: "all"
     = stylesheet_link_tag "pygments", media: "all"
+    = stylesheet_link_tag "style", media: "all"
+
+    / = stylesheet_link_tag "application", media: "all"
 
     = javascript_include_tag "http://code.jquery.com/jquery-1.10.2.min.js"
     = javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js"
     = javascript_include_tag "application"
     = javascript_include_tag "bootstrap.min"
     = javascript_include_tag "raphael.min"
-    = javascript_include_tag "justgage.min"
     = javascript_include_tag "jquery.mousewheel"
     = javascript_include_tag "jquery.classyscroll"
     = javascript_include_tag "jquery.vmap.min"
@@ -36,7 +38,6 @@ html
     = javascript_include_tag "jquery.bootstrap.wizard"
     = javascript_include_tag "fullcalendar.min"
     = javascript_include_tag "gcal"
-    = javascript_include_tag "prettify"
     = javascript_include_tag "jquery.dataTables.min"
     = javascript_include_tag "jquery.sparkline.min"
     = javascript_include_tag "jquery.easy-pie-chart"
@@ -48,7 +49,11 @@ html
     = javascript_include_tag "styleswitcher"
     = javascript_include_tag "wysiwyg"
     = javascript_include_tag "morris.min"
+    = javascript_include_tag "skycons"
     = javascript_include_tag "main"
+    = javascript_include_tag "respond"
+
+    / = javascript_include_tag "application"
 
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
 

@@ -1,0 +1,164 @@
+/ .widget-container.padded.hidden-xs style="width:260px; background: rgba(245,245,245, 0.8); height: 200px; position:fixed; z-index:10; left:0; top: 30%;"
+/ 	.heading style="background: rgba(245,245,245, 0.7);"
+/ 		i.icon-adjust
+/ 		| Customize
+/ 		i.icon-refresh.pull-right
+/ 	.widget-content.padded
+/ 		h5 Brand Colors
+/ 		ul
+/ 	        li
+/ 	          a.settings-link.blue href="javascript:chooseStyle('none', 30)"
+/ 	            span
+/ 	            | Blue
+/ 	        li
+/ 	          a.settings-link.green href="javascript:chooseStyle('green-theme', 30)"
+/ 	            span
+/ 	            | Green
+/ 	        li
+/ 	          a.settings-link.orange href="javascript:chooseStyle('orange-theme', 30)"
+/ 	            span
+/ 	            | Orange
+/ 	        li
+/ 	          a.settings-link.magenta href="javascript:chooseStyle('magenta-theme', 30)"
+/ 	            span
+/ 	            | Magenta
+/ 	        li
+/ 	          a.settings-link.gray href="javascript:chooseStyle('gray-theme', 30)"
+/ 	            span
+/ 	            | Gray
+/ 		h5 Backgrounds
+/ 		h5 Typography
+
+.row
+	.col-md-2
+		.widget-container.padded.fluid-height.clearfix.twitter-widget.text-center
+			i.icon-twitter.icon-4x
+			h1 12
+			| New Tweets
+	.col-md-2
+	.col-md-2
+	.col-md-6
+.row
+	<!-- Social Form -->
+	.col-lg-4
+		.widget-container.share.fluid-height.clearfix	
+			.widget-content.padded
+         		textarea.form-control rows="4" 
+					| Share what's new?
+				.col-xs-2
+					.share-options.active
+						i.icon-pencil
+						p.hidden-xs Text
+				.col-xs-2
+					.share-options
+						i.icon-camera
+						p.hidden-xs Photos
+				.col-xs-2
+					.share-options
+						i.icon-link
+						p.hidden-xs Link
+				.col-xs-2
+					.share-options
+						i.icon-youtube-play
+						p.hidden-xs Videos
+	<!-- Social Form -->
+	<!-- Weather -->
+	.col-lg-4
+		.widget-container.weather.fluid-height.clearfix	
+			.heading
+				.pull-right.i.icon-list
+				| Washington DC
+			.widget-content.padded
+				.col-xs-6
+					canvas#partly-cloudy-day height="64" width="64"
+					.number 72°
+				.col-xs-6
+					p Chance of Rain: 20%
+					p Wind: SSW at 8 mph
+					p Humidity: 73%
+	<!-- Weather -->
+
+
+	.col-lg-4
+		.widget-container.fluid-height.clearfix.social-entry
+			.heading
+				.pull-right.i.icon-refresh
+				i.icon-fire
+				| What's hot?
+			.widget-content.padded
+				ul
+					li
+						= image_tag "avatar-male.jpg", width: "50", height:"50"
+						= link_to "John Smith", "", class: "user-name"
+						.time
+							|  10 min ago
+						p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+						btn.btn-sm.btn-default-outline Like
+						btn.btn-sm.btn-default-outline Share
+			.comments.padded
+				p 2 comments
+
+				ul
+					li
+						= image_tag "avatar-female.png", width: "50", height:"50"
+						= link_to "John Smith", "", class: "user-name"
+						.time
+							|  10 min ago
+						p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+				ul
+					li
+						= image_tag "avatar-female.png", width: "50", height:"50"
+						= link_to "John Smith", "", class: "user-name"
+						.time
+							|  10 min ago
+						p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+
+.row
+  <!-- Chat -->
+  .col-lg-8
+		.widget-container.scrollable.chat
+			.heading
+				i.icon-comments
+				| Chat Widget
+				i.icon-smile.pull-right
+			.widget-content.padded.scrollbar
+				ul
+					li
+						= image_tag "avatar-male.jpg", width: "50", height:"50"
+						.bubble
+							= link_to "John Smith", "", class: "user-name"
+							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+							em.time
+								i.icon-time
+								| 10 min ago
+					li.current-user
+						= image_tag "avatar-female.png", width: "50", height:"50"
+						.bubble
+							= link_to "Jane Smith", "", class: "user-name"
+							p.message Donec odio. Quisque volutpat mattis eros.
+							em.time
+								i.icon-time
+								| 10 min ago
+					li
+						= image_tag "avatar-male.jpg", width: "50", height:"50"
+						.bubble
+							= link_to "John Smith", "", class: "user-name"
+							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+							em.time
+								i.icon-time
+								| 10 min ago
+					li
+						= image_tag "avatar-male.jpg", width: "50", height:"50"
+						.bubble
+							= link_to "John Smith", "", class: "user-name"
+							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+							em.time
+								i.icon-time
+								| 10 min ago
+
+			.post-message
+				input type="text" placeholder="Write your message here…" class="form-control"
+				input type="submit" value="Post" class="btn btn-default"
+		<!-- End Chat -->
+script
+	

@@ -223,9 +223,6 @@ small
   border: 0
   @include transition(all .3s)
 
-  &.closed
-    height: 45px
-
   .container-fluid.top-bar
     height: 46px
     border-bottom: 1px solid #e6e6e6
@@ -363,6 +360,9 @@ small
 
   .container-fluid.main-nav
     height: 66px
+    float: left
+    width: 100%
+    @include transition(all .3s)
 
     .nav-collapse
       width: 100%
@@ -424,6 +424,12 @@ small
   .nav > li > .dropdown-menu:after
     display: none
 
+.navbar.scroll-hide.closed
+  height: 45px
+  .main-nav
+    height: 0
+    overflow: hidden
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  Page Styles
@@ -434,6 +440,36 @@ small
     margin-bottom: 25px
     color: #5e5e5e
     font-weight: 300
+
+/*-----------------------------------------------------------------------------------*/
+/*  Social Dashboard Styles
+/*-----------------------------------------------------------------------------------*/
+.social-entry
+  ul
+    list-style: none
+    padding: 0
+
+    li
+      margin-bottom: 14px
+      padding-left: 10px
+      position: relative
+
+      img
+        margin-right: 15px
+        border-radius: 50%
+  
+  .user-name
+    padding: 0
+    margin: 0
+  .time
+    opacity: 0.5
+  .content
+    font-size: 16px
+    font-weight: 200
+
+  .comments
+    background: #f1f1f1
+    min-height: 100px
 
 /*-----------------------------------------------------------------------------------*/
 /*  Button Styles
@@ -519,6 +555,18 @@ small
     .caret
       border-top-color: #d9534f
 
+.btn-magenta
+  background: #d94084
+  border-color: #d94084
+  color: #FFF
+  &:hover, &.active
+    background: #FFF
+    color: #d94084
+    border-color: #d94084
+
+    .caret
+      border-top-color: #d94084
+
 .btn-default-outline, .btn-primary-outline, .btn-success-outline, .btn-info-outline, .btn-warning-outline, .btn-danger-outline
   background: transparent
 
@@ -601,6 +649,20 @@ small
 
   &:hover, &.active
     background: #d9534f
+    color: #FFF
+
+    .caret
+      border-top-color: #FFF
+
+.btn-magenta-outline
+  color: #d94084
+  border: 1px solid #d94084
+
+  .caret
+    border-top-color: #d94084
+
+  &:hover, &.active
+    background: #d94084
     color: #FFF
 
     .caret
@@ -695,7 +757,6 @@ small
 /*-----------------------------------------------------------------------------------*/
 /*  DataTable styles
 /*-----------------------------------------------------------------------------------*/
-
 .dataTable th
   padding-right: 20px
   position: relative
@@ -816,6 +877,18 @@ th:active
 .label-primary
   background-color: $blue
 
+
+/*-----------------------------------------------------------------------------------*/
+/*  Well Styles
+/*-----------------------------------------------------------------------------------*/
+.well
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+  padding: 12px
+  border-radius: 0
+  border: 0
+  background-color: #f8f8f8
+
+
 /*-----------------------------------------------------------------------------------*/
 /*  Widget-Container
 /*-----------------------------------------------------------------------------------*/
@@ -833,6 +906,10 @@ th:active
 
   &.gallery
     min-height: 400px
+
+  &.share
+    background: #f8f8f8
+    font-weight: 200
 
   .heading
     background: rgba(255, 255, 255, 0.94)
@@ -888,7 +965,19 @@ th:active
 .padded
   padding: 12px 15px
 
+.share-options
+  padding: 0
+  margin: 0
+  height: 38px
+  margin-top: 12px
+  text-align: center
+  cursor: pointer
 
+  &:hover
+    color: $blue
+
+  &.active
+    color: $blue
 
 /*-----------------------------------------------------------------------------------*/
 /*  Statistics Figures
@@ -1006,6 +1095,53 @@ th:active
   height: 130px
   float: left
 
+
+/*-----------------------------------------------------------------------------------*/
+/*  Twitter Widget
+/*-----------------------------------------------------------------------------------*/
+.twitter-widget
+  background: #e54c42
+  font-weight: 200
+  color: #fff
+
+  h1
+    font-weight: 100
+    margin: 0
+    padding: 0
+/*-----------------------------------------------------------------------------------*/
+/*  Weather Widget
+/*-----------------------------------------------------------------------------------*/
+
+.weather
+  background: #1fb4d6
+  font-weight: 200
+  color: #fff
+
+  .heading
+    background: #1fb4d6
+    font-weight: 200
+    color: #fff 
+
+  .number
+    font-size: 58px
+    color: #fff
+    font-weight: 100
+    margin-left: 6px
+    display: block
+
+  figure
+    margin: 3em auto
+    width: 368px
+    height: 152px
+
+  canvas
+    display: block
+    float: left
+    margin-left: 8px
+    margin-top: 8px
+
+  pre
+    margin: 3.375em 1.6875em
 
 /*-----------------------------------------------------------------------------------*/
 /*  jQuery Easy Pie Chart Styles
@@ -1609,7 +1745,7 @@ input[type="text"]
       margin-bottom: 5px
 
 .radio, .checkbox
-  margin: 6px 0 !important
+  margin: 0 0 10px
 
 .radio-inline, .checkbox-inline
   padding-top: 9px
@@ -1645,15 +1781,17 @@ input[type="text"]
 .form-photo
   margin: 4px 0 12px
 
-.holder
-  width: 56px
-  height: 28px
-  position: relative
-
 .check-ios
   visibility: hidden
 
 .holder
+  width: 56px
+  height: 28px
+  position: relative
+  display: inline-block
+  margin-right: 12px
+  vertical-align: middle
+
   span
     background-color: #e2e2e2
     display: block
@@ -1838,6 +1976,7 @@ input[type="text"]
 .panel-heading
   padding: 0
   border-radius: 0
+  background-color: #f8f8f8
 
   .panel-toggle
     background: #f9fafa
@@ -1848,7 +1987,20 @@ input[type="text"]
   > a
     font-weight: 200
     padding: 8px 15px 10px
-    display: block
+    display: block      
+
+    .caret
+      margin-top: 5px
+      border-bottom: 5px solid #999
+      border-top: 5px solid transparent
+      border-right: 5px solid transparent
+      border-left: 5px solid transparent
+
+    &.collapsed
+      .caret
+        border-top: 5px solid #999
+        border-bottom: 5px solid transparent
+        margin-top: 10px
 
   &:hover
     color: $blue
@@ -2132,60 +2284,86 @@ button.close
 /*-----------------------------------------------------------------------------------*/
 /*  Filter/Advanced Search
 /*-----------------------------------------------------------------------------------*/
-.control-label
-  &.filters
-    color: $blue
+.selected-filters
+  .label
+    margin: 0 8px 0 0
+    [class^="icon-"], [class*="icon-"]
+      margin-left: 6px
+      cursor: pointer
 
 .arrow-left
   width: 0
   height: 0
-  border-top: 10px solid transparent
-  border-bottom: 10px solid transparent
-  border-right: 10px solid white
-  position: absolute
-  z-index: 9
-  right: 0
-  top: 114px
+  border-top: 9px solid transparent
+  border-bottom: 9px solid transparent
+  border-right: 7px solid white
+  float: right
+  clear: both
+  margin-right: -8px
+  margin-top: 5px
 
 .table-filters
-  thead
-    tr
-      th
-        font-weight: 200
+  margin-bottom: 20px
+
   tbody
     tr
       td
-        font-weight: 200
+        &.filter-category
+          text-align: center
+          color: #fff
+          [class^="icon-"], [class*="icon-"]
+            font-size: 24px
+
+        &.drug
+          background: #5bc0de
+          border-bottom: 1px solid #5bc0de   
+        &.home
+          background: #60c560
+          border-bottom: 1px solid #60c560
+        &.toys
+          background: #f59b3b
+          border-bottom: 1px solid #f59b3b
+        &.craft
+          background: #d9534f
+          border-bottom: 1px solid #d9534f
+        &.sport
+          background: #d94084
+          border-bottom: 1px solid #d94084
+        &.inactive
+          background: #8e8e93
+          border-bottom: 1px solid #8e8e93
+
         h3
           padding: 0
           margin: 0
           line-height: 1
+          font-size: 20px
+          font-weight: 200 !important
 
+          &.success
+            color: #60c560
+          &.danger
+            color: #d9534f
 
-.filter-category
-  background: #f8991d
-  color: #fff
-  padding-top: 3em
-  margin: 0px
-  min-height: 260px
-
-
-
-  h2
-    border-top: 2px solid #fff
-    padding-top: 10px 
-    margin-top: 20px
-
-  &.drug
-    background: #88b8dc
+.filter-categories 
+  .btn-group
+    margin: 0
+    display: block
     
-  &.home
-    background: #80c36f
-    
-  &:hover
-    background: #666
-.filter-table
-  margin-bottom: 0px
+    .btn
+      font-size: 14px
+      font-weight: 200 !important
+      text-align: left
+      border-radius: 4px !important
+      margin: 0 0 10px
+
+      [class^="icon-"], [class*="icon-"]
+        margin: 0 5px 0 0
+        width: 45px
+        font-size: 20px
+        vertical-align: middle
+        text-align: center
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  WYSIWYG

@@ -1,6 +1,6 @@
-# =============================================================================
+###
 #   Sparkline Linechart JS
-# =============================================================================
+###
 linechartResize = ->
   $("#linechart-1").sparkline [160, 240, 120, 200, 180, 350, 230, 200, 280, 380, 400, 360, 300, 220, 200, 150, 40, 70, 180, 110, 200, 160, 200, 220],
     type: "line"
@@ -63,50 +63,35 @@ linechartResize = ->
     spotRadius: 6
     chartRangeMin: 0
 
-   $("#linechart-4").sparkline [100, 220, 150, 140, 200, 180, 130, 180, 180, 210, 240, 200, 170, 120, 200, 150, 100, 100],
-      type: "line"
-      width: "100"
-      height: "30"
-      lineColor: "#adadad"
-      fillColor: "rgba(244, 252, 225, 0.0)"
-      lineWidth: 2
-      spotColor: "#909090"
-      minSpotColor: "#909090"
-      maxSpotColor: "#909090"
-      highlightSpotColor: "#666"
-      highlightLineColor: "#666"
-      spotRadius: 0
-      chartRangeMin: 0
+  $("#linechart-4").sparkline [100, 220, 150, 140, 200, 180, 130, 180, 180, 210, 240, 200, 170, 120, 200, 150, 100, 100],
+    type: "line"
+    width: "100"
+    height: "30"
+    lineColor: "#adadad"
+    fillColor: "rgba(244, 252, 225, 0.0)"
+    lineWidth: 2
+    spotColor: "#909090"
+    minSpotColor: "#909090"
+    maxSpotColor: "#909090"
+    highlightSpotColor: "#666"
+    highlightLineColor: "#666"
+    spotRadius: 0
+    chartRangeMin: 0
 
-   $("#linechart-5").sparkline [100, 220, 150, 140, 200, 180, 130, 180, 180, 210, 240, 200, 170, 120, 200, 150, 100, 100],
-      type: "line"
-      width: "100"
-      height: "30"
-      lineColor: "#adadad"
-      fillColor: "rgba(244, 252, 225, 0.0)"
-      lineWidth: 2
-      spotColor: "#909090"
-      minSpotColor: "#909090"
-      maxSpotColor: "#909090"
-      highlightSpotColor: "#666"
-      highlightLineColor: "#666"
-      spotRadius: 0
-      chartRangeMin: 0
-
-   $("#linechart-6").sparkline [100, 220, 150, 140, 200, 180, 130, 180, 180, 210, 240, 200, 170, 120, 200, 150, 100, 100],
-      type: "line"
-      width: "100"
-      height: "30"
-      lineColor: "#adadad"
-      fillColor: "rgba(244, 252, 225, 0.0)"
-      lineWidth: 2
-      spotColor: "#909090"
-      minSpotColor: "#909090"
-      maxSpotColor: "#909090"
-      highlightSpotColor: "#666"
-      highlightLineColor: "#666"
-      spotRadius: 0
-      chartRangeMin: 0
+  $("#linechart-5").sparkline [100, 220, 150, 140, 200, 180, 130, 180, 180, 210, 240, 200, 170, 120, 200, 150, 100, 100],
+    type: "line"
+    width: "100"
+    height: "30"
+    lineColor: "#adadad"
+    fillColor: "rgba(244, 252, 225, 0.0)"
+    lineWidth: 2
+    spotColor: "#909090"
+    minSpotColor: "#909090"
+    maxSpotColor: "#909090"
+    highlightSpotColor: "#666"
+    highlightLineColor: "#666"
+    spotRadius: 0
+    chartRangeMin: 0
 
   $("#composite-chart-1").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
     type: "bar"
@@ -131,31 +116,32 @@ linechartResize = ->
     chartRangeMin: 0
     composite: true
 
+
 $(document).ready ->
 
-  # =============================================================================
+  ###
   #   Sparkline Bar Charts
-  # =============================================================================
-	$("#barcharts").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
-		type: "bar"
-		height: "80"
-		barSpacing: 6
-		barWidth: 12
-		barColor: "#8fdbda"
+  ###
+  $("#barcharts").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
+    type: "bar"
+    height: "80"
+    barSpacing: 6
+    barWidth: 12
+    barColor: "#8fdbda"
 
-	$("#barcharts2").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
-		type: "bar"
-		height: "80"
-		barSpacing: 6
-		barWidth: 12
-		barColor: "#acaeaf"
+  $("#barcharts2").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
+    type: "bar"
+    height: "80"
+    barSpacing: 6
+    barWidth: 12
+    barColor: "#acaeaf"
 
-	$("#barcharts3").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
-		type: "bar"
-		height: "80"
-		barSpacing: 6
-		barWidth: 12
-		barColor: "#f0ad4e"
+  $("#barcharts3").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
+    type: "bar"
+    height: "80"
+    barSpacing: 6
+    barWidth: 12
+    barColor: "#f0ad4e"
 
   $("#pie-chart").sparkline [2,8,6,10],
     type: "pie"
@@ -164,24 +150,40 @@ $(document).ready ->
     offset: "+90"
     sliceColors: ["#a0eeed","#81e970","#f5af50","#f46f50"]
 
-	# =============================================================================
-	#   Easy Pie Chart
-	# =============================================================================
+  $(".sparkslim").sparkline 'html',
+     type: "line"
+     width: "100"
+     height: "30"
+     lineColor: "#adadad"
+     fillColor: "rgba(244, 252, 225, 0.0)"
+     lineWidth: 2
+     spotColor: "#909090"
+     minSpotColor: "#909090"
+     maxSpotColor: "#909090"
+     highlightSpotColor: "#666"
+     highlightLineColor: "#666"
+     spotRadius: 0
+     chartRangeMin: 0
+
+
+  ###
+  #   Easy Pie Chart
+  ###
   $(".pie-chart1").easyPieChart
-  	size: 220
-  	lineWidth: 12
-  	lineCap: "square"
-  	barColor: "#81e970"
-  	animate: 800
-  	scaleColor: false
+    size: 220
+    lineWidth: 12
+    lineCap: "square"
+    barColor: "#81e970"
+    animate: 800
+    scaleColor: false
 
   $(".pie-chart2").easyPieChart
-  	size: 220
-  	lineWidth: 12
-  	lineCap: "square"
-  	barColor: "#f46f50"
-  	animate: 800
-  	scaleColor: false
+    size: 220
+    lineWidth: 12
+    lineCap: "square"
+    barColor: "#f46f50"
+    animate: 800
+    scaleColor: false
 
   $(".pie-chart3").easyPieChart
     size: 220
@@ -192,68 +194,52 @@ $(document).ready ->
     scaleColor: false
 
 
-  # =============================================================================
-  #   Gauges
-  # =============================================================================
-  # g = new JustGage(
-  #   id: "gauge"
-  #   value: 67
-  #   min: 0
-  #   max: 100
-  #   title: "Velocity"
-  #   showInnerShadow: "false"
-  # )
-  # g = new JustGage(
-  #   id: "gauge2"
-  #   value: 24
-  #   min: 0
-  #   max: 100
-  #   title: "Retention"
-  #   showInnerShadow: "false"
-  # )
-
-  # =============================================================================
+  ###
   #   Navbar scroll animation
-  # =============================================================================
-	$(".navbar").mouseover ->
-	  $(".navbar").removeClass "closed"
-	  setTimeout (->
-	  	$(".navbar").css overflow: "visible"
-	  ), 350
+  ###
+  $(".navbar.scroll-hide").mouseover ->
+    $(".navbar.scroll-hide").removeClass "closed"
+    setTimeout (->
+      $(".navbar.scroll-hide").css overflow: "visible"
+    ), 150
 
-	$ ->
-		lastScrollTop = 0
-		delta = 50
-		$(window).scroll (event) ->
-			st = $(this).scrollTop()
-			return  if Math.abs(lastScrollTop - st) <= delta
-			if st > lastScrollTop
-				# downscroll code
-				$('.navbar').addClass "closed"
-				$(".navbar").css overflow: "hidden"
-			else
-				# upscroll code
-				$('.navbar').removeClass "closed"
-				setTimeout (->
-					$(".navbar").css overflow: "visible"
-				), 350
-			lastScrollTop = st
+  $ ->
+    lastScrollTop = 0
+    delta = 50
+    $(window).scroll (event) ->
+      st = $(this).scrollTop()
+      return  if Math.abs(lastScrollTop - st) <= delta
+      if st > lastScrollTop
+        # downscroll code
+        $('.navbar.scroll-hide').addClass "closed"
+        $(".navbar.scroll-hide").css overflow: "hidden"
+      else
+        # upscroll code
+        $('.navbar.scroll-hide').removeClass "closed"
+        setTimeout (->
+          $(".navbar.scroll-hide").css overflow: "visible"
+        ), 350
+      lastScrollTop = st
 
 
-  # =============================================================================
+  ###
   #   Mobile Nav
-  # =============================================================================
+  ###
   $('.navbar-toggle').click ->
     $('body, html').toggleClass "nav-open"
 
+
+  ###
+  #   Sparkline Resize Script
+  ###
   linechartResize()
   $(window).resize ->
     linechartResize()
 
 
-  # =============================================================================
+  ###
   #   Form wizard
-  # =============================================================================
+  ###
   $("#wizard").bootstrapWizard
     nextSelector: ".btn-next"
     previousSelector: ".btn-previous"
@@ -276,19 +262,20 @@ $(document).ready ->
       $("#wizard").find(".progress-bar").css "width", $percent + "%"
 
 
-	# =============================================================================
-	#   DataTables
-	# =============================================================================
-	$("#dataTable1").dataTable
+  ###
+  #   DataTables
+  ###
+  $("#dataTable1").dataTable
     "sPaginationType": "full_numbers"
     aoColumnDefs: [
       bSortable: false
       aTargets: [0,-1] # <-- gets last column and turns off sorting
     ]
 
-  # =============================================================================
+
+  ###
   #   jQuery UI Sliders
-  # =============================================================================
+  ###
   $(".slider-basic").slider
     range: "min"
     value: 50
@@ -312,15 +299,15 @@ $(document).ready ->
   $(".slider-range-amount").html "$" + $(".slider-range").slider("values", 0) + " - $" + $(".slider-range").slider("values", 1)
 
 
-  # =============================================================================
+  ###
   #   Bootstrap Tabs
-  # =============================================================================
+  ###
   $("#myTab a:last").tab "show"
 
 
-  # =============================================================================
+  ###
   #   Bootstrap Popover
-  # =============================================================================
+  ###
   $("#popover").popover()
   $("#popover-left").popover
     placement: "left"
@@ -331,9 +318,10 @@ $(document).ready ->
   $("#popover-bottom").popover
     placement: "bottom"
 
-  # =============================================================================
+
+  ###
   #   Bootstrap Tooltip
-  # =============================================================================  
+  ###
   $("#tooltip").tooltip()
   $("#tooltip-left").tooltip
     placement: "left"
@@ -344,39 +332,41 @@ $(document).ready ->
   $("#tooltip-bottom").tooltip
     placement: "bottom"
 
-	# =============================================================================
-	#   jQuery VMap
-	# =============================================================================
-	$("#vmap").vectorMap
-	  map: "world_en"
-	  backgroundColor: null
-	  color: "#fff"
-	  hoverOpacity: 0.2
-	  selectedColor: "#fff"
-	  enableZoom: true
-	  showTooltip: true
-	  values: sample_data
-	  scaleColors: ["#59cdfe", "#0079fe"]
-	  normalizeFunction: "polynomial"
+
+  ###
+  #   jQuery VMap
+  ###
+  if $("#vmap").length
+    $("#vmap").vectorMap
+      map: "world_en"
+      backgroundColor: null
+      color: "#fff"
+      hoverOpacity: 0.2
+      selectedColor: "#fff"
+      enableZoom: true
+      showTooltip: true
+      values: sample_data
+      scaleColors: ["#59cdfe", "#0079fe"]
+      normalizeFunction: "polynomial"
 
 
-	# =============================================================================
-	#   Full Calendar
-	# =============================================================================
+  ###
+  #   Full Calendar
+  ###
   date = new Date()
   d = date.getDate()
   m = date.getMonth()
   y = date.getFullYear()
 
   initDrag = (el) ->
-    
+
     # create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
     # it doesn't need to have a start or end
     eventObject = title: $.trim(el.text()) # use the element's text as the event title
-    
+
     # store the Event Object in the DOM element so we can get to it later
     el.data "eventObject", eventObject
-    
+
     # make the event draggable using jQuery UI
     el.draggable
       zIndex: 999
@@ -425,22 +415,22 @@ $(document).ready ->
     editable: true
     droppable: true
     drop: (date, allDay) -> # this function is called when something is dropped
-      
+
       # retrieve the dropped element's stored Event Object
       originalEventObject = $(this).data("eventObject")
-      
+
       # we need to copy it, so that multiple events don't have a reference to the same object
       copiedEventObject = $.extend({}, originalEventObject)
-      
+
       # assign it the date that was reported
       copiedEventObject.start = date
       copiedEventObject.allDay = allDay
       copiedEventObject.className = $(this).attr("data-class")
-      
+
       # render the event on the calendar
       # the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
       $("#calendar").fullCalendar "renderEvent", copiedEventObject, true
-      
+
       # is the "remove after drop" checkbox checked?
       # if so, remove the element from the "Draggable Events" list
       $(this).remove()  if $("#drop-remove").is(":checked")
@@ -492,39 +482,37 @@ $(document).ready ->
     ]
 
 
-
-	# =============================================================================
-	#   Isotope
-	# =============================================================================
-	$container = $(".gallery-container")
-	$container.isotope {}
-	$(".gallery-filters a").click ->
+  ###
+  #   Isotope
+  ###
+  $container = $(".gallery-container")
+  $container.isotope {}
+  $(".gallery-filters a").click ->
     selector = $(this).attr("data-filter")
     $(".gallery-filters a.selected").removeClass "selected"
     $(this).addClass "selected"
-    $container.isotope 
+    $container.isotope
       filter: selector
     false
 
-
-  # =============================================================================
+  ###
   #   Scrollbar Styling JS
-  # =============================================================================
+  ###
   $('.scrollbar').ClassyScroll
     sliderOpacity: 1
     wheelSpeed: 2
     onscroll: ->
       $(this).prev().addClass("shadow")
 
-  # =============================================================================
+  ###
   #   Popover JS
-  # =============================================================================
+  ###
   $('#popover').popover()
 
 
-  # =============================================================================
+  ###
   #   Fancybox Modal
-  # =============================================================================
+  ###
   $(".fancybox").fancybox
     maxWidth: 700
     height: 'auto'
@@ -537,12 +525,23 @@ $(document).ready ->
       title:
         type: "outside"
 
-# Author:
-#
-#
+
+  ###
+  #   Morris Chart JS
+  ###
+
+  $(window).resize (e) ->
+    clearTimeout morrisResize
+    morrisResize = setTimeout(->
+      buildMorris true
+    , 500)
+
   $ ->
-    
-    # data stolen from http://howmanyleft.co.uk/vehicle/jaguar_'e'_type
+    if $('.chart-container').length
+      buildMorris()
+
+  buildMorris = ($re) ->
+    $(".graph").html "" if $re
     tax_data = [
       period: "2011 Q3"
       licensed: 3407
@@ -580,12 +579,14 @@ $(document).ready ->
       licensed: 3289
       sorned: null
     ]
+
     Morris.Line
       element: "hero-graph"
       data: tax_data
       xkey: "period"
       ykeys: ["licensed", "sorned"]
       labels: ["Licensed", "Off the road"]
+      lineColors: ["#59dbbf", "#aeb6cb"]
 
     Morris.Donut
       element: "hero-donut"
@@ -602,6 +603,7 @@ $(document).ready ->
         label: "Sugar"
         value: 10
       ]
+      colors: ["#afcf6f"]
       formatter: (y) ->
         y + "%"
 
@@ -661,8 +663,12 @@ $(document).ready ->
       xkey: "period"
       ykeys: ["iphone", "ipad", "itouch"]
       labels: ["iPhone", "iPad", "iPod Touch"]
-      pointSize: 2
       hideHover: "auto"
+      lineWidth: 2
+      pointSize: 4
+      lineColors: ["#59dbbf", "#aeb6cb", "#5dcff3"]
+      fillOpacity: 0.5
+      smooth: true
 
     Morris.Bar
       element: "hero-bar"
@@ -691,48 +697,32 @@ $(document).ready ->
       barRatio: 0.4
       xLabelAngle: 35
       hideHover: "auto"
-
-    new Morris.Line(
-      element: "examplefirst"
-      xkey: "year"
-      ykeys: ["value"]
-      labels: ["Value"]
-      data: [
-        year: "2008"
-        value: 20
-      ,
-        year: "2009"
-        value: 10
-      ,
-        year: "2010"
-        value: 5
-      ,
-        year: "2011"
-        value: 5
-      ,
-        year: "2012"
-        value: 20
-      ]
-    )
-    $(".code-example").each (index, el) ->
-      eval_ $(el).text()
+      barColors: ["#aeb6cb"]
 
 
-  # =============================================================================
+  ###
   #   Select2
-  # =============================================================================
+  ###
   $('.select2able').select2()
 
 
-  # =============================================================================
+  ###
   #   Log in transition
-  # =============================================================================
+  ###
   $('.login-submit').click ->
     $('.login').addClass("submitted")
 
-  # =============================================================================
+
+  ###
   #   WYSIWYG Editor
-  # =============================================================================
+  ###
   $('#editor').wysiwyg();
 
 
+  ###
+  #   Skycons
+  ###
+  if document.getElementById("partly-cloudy-day")
+    skycons = new Skycons(color: "white")
+    skycons.add document.getElementById("partly-cloudy-day"), Skycons.PARTLY_CLOUDY_DAY
+    skycons.play()
