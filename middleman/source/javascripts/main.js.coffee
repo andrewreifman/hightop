@@ -775,6 +775,7 @@ $(document).ready ->
   msnry = new Masonry(container,
     "isFitWidth": true
     gutter: 24
+    isFitWidth: true
     itemSelector: ".item"
   )
 
