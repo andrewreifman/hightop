@@ -762,19 +762,21 @@ $(document).ready ->
   ###
   $('.select2able').select2()
 
+
   ###
+  # =============================================================================
   #   Masonry
+  # =============================================================================
   ###
 
   container = document.querySelector("#container")
   msnry = new Masonry(container,
-    
+
     # options
 
     gutter: 24
     itemSelector: ".item"
   )
-
 
 
   ###
