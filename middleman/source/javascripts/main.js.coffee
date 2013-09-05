@@ -122,7 +122,9 @@ linechartResize = ->
 $(document).ready ->
 
   ###
-  #   Sparkline Bar Charts
+  # =============================================================================
+  #   Sparkline Linechart JS
+  # =============================================================================
   ###
   $("#barcharts").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
     type: "bar"
@@ -318,8 +320,8 @@ $(document).ready ->
   ###
   # =============================================================================
   #   Bootstrap Tabs
-  ###
   # =============================================================================
+  ###
   $("#myTab a:last").tab "show"
 
 
@@ -771,9 +773,7 @@ $(document).ready ->
 
   container = document.querySelector("#container")
   msnry = new Masonry(container,
-
-    # options
-
+    "isFitWidth": true
     gutter: 24
     itemSelector: ".item"
   )
