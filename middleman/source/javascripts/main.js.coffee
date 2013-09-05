@@ -1,5 +1,7 @@
 ###
+# =============================================================================
 #   Sparkline Linechart JS
+# =============================================================================
 ###
 linechartResize = ->
   $("#linechart-1").sparkline [160, 240, 120, 200, 180, 350, 230, 200, 280, 380, 400, 360, 300, 220, 200, 150, 40, 70, 180, 110, 200, 160, 200, 220],
@@ -167,7 +169,9 @@ $(document).ready ->
 
 
   ###
+  # =============================================================================
   #   Easy Pie Chart
+  # =============================================================================
   ###
   $(".pie-chart1").easyPieChart
     size: 220
@@ -195,7 +199,9 @@ $(document).ready ->
 
 
   ###
+  # =============================================================================
   #   Navbar scroll animation
+  # =============================================================================
   ###
   $(".navbar.scroll-hide").mouseover ->
     $(".navbar.scroll-hide").removeClass "closed"
@@ -223,14 +229,18 @@ $(document).ready ->
 
 
   ###
+  # =============================================================================
   #   Mobile Nav
+  # =============================================================================
   ###
   $('.navbar-toggle').click ->
     $('body, html').toggleClass "nav-open"
 
 
   ###
+  # =============================================================================
   #   Sparkline Resize Script
+  # =============================================================================
   ###
   linechartResize()
   $(window).resize ->
@@ -238,7 +248,9 @@ $(document).ready ->
 
 
   ###
+  # =============================================================================
   #   Form wizard
+  # =============================================================================
   ###
   $("#wizard").bootstrapWizard
     nextSelector: ".btn-next"
@@ -263,7 +275,9 @@ $(document).ready ->
 
 
   ###
+  # =============================================================================
   #   DataTables
+  # =============================================================================
   ###
   $("#dataTable1").dataTable
     "sPaginationType": "full_numbers"
@@ -274,7 +288,9 @@ $(document).ready ->
 
 
   ###
+  # =============================================================================
   #   jQuery UI Sliders
+  # =============================================================================
   ###
   $(".slider-basic").slider
     range: "min"
@@ -300,13 +316,17 @@ $(document).ready ->
 
 
   ###
+  # =============================================================================
   #   Bootstrap Tabs
   ###
+  # =============================================================================
   $("#myTab a:last").tab "show"
 
 
   ###
+  # =============================================================================
   #   Bootstrap Popover
+  # =============================================================================
   ###
   $("#popover").popover()
   $("#popover-left").popover
@@ -320,7 +340,9 @@ $(document).ready ->
 
 
   ###
+  # =============================================================================
   #   Bootstrap Tooltip
+  # =============================================================================
   ###
   $("#tooltip").tooltip()
   $("#tooltip-left").tooltip
@@ -334,7 +356,9 @@ $(document).ready ->
 
 
   ###
+  # =============================================================================
   #   jQuery VMap
+  # =============================================================================
   ###
   if $("#vmap").length
     $("#vmap").vectorMap
@@ -351,7 +375,9 @@ $(document).ready ->
 
 
   ###
+  # =============================================================================
   #   Full Calendar
+  # =============================================================================
   ###
   date = new Date()
   d = date.getDate()
@@ -360,14 +386,20 @@ $(document).ready ->
 
   initDrag = (el) ->
 
+    ###
     # create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
     # it doesn't need to have a start or end
+    ###
     eventObject = title: $.trim(el.text()) # use the element's text as the event title
 
+    ###
     # store the Event Object in the DOM element so we can get to it later
+    ###
     el.data "eventObject", eventObject
 
+    ###
     # make the event draggable using jQuery UI
+    ###
     el.draggable
       zIndex: 999
       revert: true # will cause the event to go back to its
@@ -388,7 +420,9 @@ $(document).ready ->
     priority = $("#event_priority").val()
     addEvent title, priority
 
-  #modify chosen options
+  ###
+  # modify chosen options
+  ###
   handleDropdown = ->
     $("#event_priority_chzn .chzn-search").hide() #hide search box
     $("#event_priority_chzn_o_1").html "<span class=\"label label-default\">" + $("#event_priority_chzn_o_1").text() + "</span>"
@@ -399,7 +433,9 @@ $(document).ready ->
 
   $("#event_priority_chzn").click handleDropdown
 
-  #predefined events
+  ###
+  # predefined events
+  ###
   addEvent "My Event 1", "primary"
   addEvent "My Event 2", "success"
   addEvent "My Event 3", "info"
@@ -415,24 +451,33 @@ $(document).ready ->
     editable: true
     droppable: true
     drop: (date, allDay) -> # this function is called when something is dropped
-
+      ###
       # retrieve the dropped element's stored Event Object
+      ###
       originalEventObject = $(this).data("eventObject")
 
+      ###
       # we need to copy it, so that multiple events don't have a reference to the same object
+      ###
       copiedEventObject = $.extend({}, originalEventObject)
 
+      ###
       # assign it the date that was reported
+      ###
       copiedEventObject.start = date
       copiedEventObject.allDay = allDay
       copiedEventObject.className = $(this).attr("data-class")
 
+      ###
       # render the event on the calendar
       # the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+      ###
       $("#calendar").fullCalendar "renderEvent", copiedEventObject, true
 
+      ###
       # is the "remove after drop" checkbox checked?
       # if so, remove the element from the "Draggable Events" list
+      ###
       $(this).remove()  if $("#drop-remove").is(":checked")
 
     events: [
@@ -483,7 +528,9 @@ $(document).ready ->
 
 
   ###
+  # =============================================================================
   #   Isotope
+  # =============================================================================
   ###
   $container = $(".gallery-container")
   $container.isotope {}
@@ -496,7 +543,9 @@ $(document).ready ->
     false
 
   ###
+  # =============================================================================
   #   Scrollbar Styling JS
+  # =============================================================================
   ###
   $('.scrollbar').ClassyScroll
     sliderOpacity: 1
@@ -505,13 +554,17 @@ $(document).ready ->
       $(this).prev().addClass("shadow")
 
   ###
+  # =============================================================================
   #   Popover JS
+  # =============================================================================
   ###
   $('#popover').popover()
 
 
   ###
+  # =============================================================================
   #   Fancybox Modal
+  # =============================================================================
   ###
   $(".fancybox").fancybox
     maxWidth: 700
@@ -527,7 +580,9 @@ $(document).ready ->
 
 
   ###
+  # =============================================================================
   #   Morris Chart JS
+  # =============================================================================
   ###
 
   $(window).resize (e) ->
@@ -701,26 +756,34 @@ $(document).ready ->
 
 
   ###
+  # =============================================================================
   #   Select2
+  # =============================================================================
   ###
   $('.select2able').select2()
 
 
   ###
+  # =============================================================================
   #   Log in transition
+  # =============================================================================
   ###
   $('.login-submit').click ->
     $('.login').addClass("submitted")
 
 
   ###
+  # =============================================================================
   #   WYSIWYG Editor
+  # =============================================================================
   ###
   $('#editor').wysiwyg();
 
 
   ###
+  # =============================================================================
   #   Skycons
+  # =============================================================================
   ###
   if document.getElementById("partly-cloudy-day")
     skycons = new Skycons(color: "white")
