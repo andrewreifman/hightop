@@ -190,17 +190,82 @@
 	<!-- End Bar Graph -->
 
 .row
-  <!-- Interactive Map -->
-  .col-lg-6
-		.widget-container.map-container
+  <!-- Task List -->
+	.col-lg-6
+		.widget-container.scrollable.list.task-widget
 			.heading
-				i.icon-map-marker
-				| Interactive global map
+				i.icon-list
+				| Task list
 				i.icon-plus.pull-right
-				i.icon-refresh.pull-right
-			.widget-content
-			 	#vmap.map style="height: 450px;"
-		<!-- End Interactive Map -->
+			.widget-content.scrollbar
+				ul
+					li
+						label
+							input type="checkbox" class="task-input" checked="checked"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Distribute latest marketing
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Create the latest mockup
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-warning.pull-right Pending
+							| Code the latest features
+					li
+						label
+							input type="checkbox" class="task-input" checked="checked"
+							span.task-checkbox
+							.label.label-danger.pull-right Required
+							| Coffee time
+					li
+						label
+							input type="checkbox" class="task-input" checked="checked"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Distribute latest marketing
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Pick up lunch
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Send out e-blast
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Ask for a raise
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Coffe time pt. 2
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Bug fixes
+					li
+						label
+							input type="checkbox" class="task-input"
+							span.task-checkbox
+							.label.label-success.pull-right Approved
+							| Happy hour!!!
+	<!-- End Task List -->
 
   <!-- Chat -->
   .col-lg-6
