@@ -58,7 +58,7 @@ html
     .navbar.navbar-docs.hidden-xs
       ul.nav
         li.active=link_to "Overview", "#overview"
-        li=link_to "Features & Plugins", "#features"
+        li=link_to "Features & Credits", "#features"
         li=link_to "Bootstrap 3", "#bootstrap"
         li=link_to "Header & Navigation", "#navigation"
         li=link_to "Custom Se7en Icons", "#icons"
@@ -68,8 +68,11 @@ html
         li=link_to "Easy Pie Chart", "#easy-pie"
         li=link_to "Slider", "#slider"
         li=link_to "Select2", "#select2"
+        li=link_to "JQVMap", "#maps"
+        li=link_to "Full Calendar", "#calendar-link"
+        li=link_to "DataTables", "#datatables"
+        li=link_to "Isotope", "#isotope"
         li=link_to "Fancybox", "#fancybox"
-        li=link_to "Other Plugins", "#pther-js"
 
 
     .container-fluid.main-content
@@ -108,20 +111,20 @@ html
         .col-lg-6
           .widget-container.plugins.fluid-height.list
             .heading
-              | Plugins
+              | Credits
 
             .widget-content
               ul
-                li Morris
-                li JQVMap
-                li Full Calendar
-                li Datatables
-                li Sparkline
-                li Easy Pie Chart
-                li Isotope
-                li Modernizr
-                li Fancybox
-                li Select2
+                li= link_to "Morris", "http://www.oesmith.co.uk/morris.js/", :target => "_blank"
+                li= link_to "JQVMap", "http://jqvmap.com/", :target => "_blank"
+                li= link_to "Full Calendar", "http://arshaw.com/fullcalendar/", :target => "_blank"
+                li= link_to "Datatables", "https://datatables.net/", :target => "_blank"
+                li= link_to "Sparkline", "http://omnipotent.net/jquery.sparkline/#s-about", :target => "_blank"
+                li= link_to "Easy Pie Chart", "http://rendro.github.io/easy-pie-chart/", :target => "_blank"
+                li= link_to "Isotope", "http://isotope.metafizzy.co/", :target => "_blank"
+                li= link_to "Font Awesome", "http://fortawesome.github.io/Font-Awesome", :target => "_blank"
+                li= link_to "Fancybox", "http://fancyapps.com/fancybox/", :target => "_blank"
+                li= link_to "Select2", "http://ivaynberg.github.io/select2/", :target => "_blank"
 
       .row
         .col-lg-12
@@ -210,11 +213,15 @@ html
             .widget-content.padded
               p Basic bar chart
               .sparkline-bar
-              = Pygments.highlight("$('.sparkline').sparkline([160, 220, 260, 120, 320, 260, 300, 160, 240, 100], {type: 'bar', height: 50, barSpacing: 4, barWidth: 8, barColor: '#acaeaf'});", lexer: 'javascript')
+              = Pygments.highlight("$('.sparkline').sparkline([160, 220, 260, 120, 320, 260, 300, 160, 240, 100], {type: 'bar', height: 50, barSpacing: 4, barWidth: 8, barColor: '#f5af50'});", lexer: 'javascript')
 
               p Basic line graph
               .sparkline-line
               = Pygments.highlight("$('.sparkline').sparkline([160, 240, 250, 280, 300, 250, 230, 200, 280, 380], {type: 'line', width: '150', height: '50', lineColor: '#a5e1ff', fillColor: 'rgba(241, 251, 255, 0.9)', lineWidth: 2 });", lexer: 'javascript')
+
+              p Pie chart
+              .sparkline-pie
+              = Pygments.highlight("$('.sparkline').sparkline([2, 8, 6, 10], { type: 'pie', height: '120', width: '120', sliceColors: ['#a0eeed','#81e970','#f5af50','#f46f50'] });", lexer: 'javascript')
 
         .col-lg-12
           .widget-container.fluid-height#easy-pie
@@ -223,8 +230,9 @@ html
               a href="http://rendro.github.io/easy-pie-chart/" class="pull-right" target="_blank" Full documentation
 
             .widget-content.padded
-              .easy-pie-chart 73%
-              = Pygments.highlight("$('.slider').slider({range: 'min', value: 50});", lexer: 'javascript')
+              .easy-pie-chart data-percent="70" 70%
+              = Pygments.highlight("$('.easy-pie-chart').easyPieChart({ size: 120, lineWidth: 10, lineCap: 'square', barColor: '#81e970', animate: 800, scaleColor: false });", lexer: 'javascript')
+              p * Requires excanvas.min.js for IE8 support.
 
         .col-lg-12
           .widget-container.fluid-height#slider
@@ -237,37 +245,43 @@ html
               = Pygments.highlight("$('.slider').slider({range: 'min', value: 50});", lexer: 'javascript')
 
         .col-lg-12
+          .widget-container.fluid-height#select2
+            .heading
+              | Select2 Dropdowns
+              a href="http://ivaynberg.github.io/select2/" class="pull-right" target="_blank" Full documentation
+
+            .widget-content.padded
+              select.select2
+                option value="Category 1" Option 1
+                option value="Category 2" Option 2
+                option value="Category 3" Option 3
+                option value="Category 4" Option 4
+              = Pygments.highlight("$('.select2').select2();", lexer: 'javascript')
+
+        .col-lg-12
           .widget-container.fluid-height#components
             .heading
-              | Components
+              | Other Components
 
             .widget-content.padded
               ul.list-unstyled
-                li
-                  | Vector maps
+                li#maps
+                  | JQVMap
                   a href="http://jqvmap.com/" class="pull-right" target="blank" Full documentation
                   = Pygments.highlight("$('.map').vectorMap(options)", lexer: 'javascript')
-                li
+                li#calendar-link
                   | Full Calendar
                   a href="http://arshaw.com/fullcalendar/" class="pull-right" target="_blank" Full documentation
                   = Pygments.highlight("$('.calendar').fullCalendar(options)", lexer: 'javascript')
-                li
-                  | Easy Pie Chart
-                  a href="http://rendro.github.io/easy-pie-chart/" class="pull-right" target="_blank" Full documentation
-                  = Pygments.highlight("$('.pie-chart').easyPieChart(options)", lexer: 'javascript')
-                li
+                li#datatables
                   | DataTables
                   a href="https://datatables.net/" class="pull-right" target="_blank" Full documentation
                   = Pygments.highlight("$('.dataTable').dataTable(options)", lexer: 'javascript')
-                li
+                li#isotope
                   | Isotope
                   a href="http://isotope.metafizzy.co/" class="pull-right" target="_blank" Full documentation
                   = Pygments.highlight("$('.isotope').isotope(options)", lexer: 'javascript')
-                li
+                li#fancybox
                   | Fancybox
                   a href="http://fancyapps.com/fancybox/" class="pull-right" target="_blank" Full documentation
                   = Pygments.highlight("$('.fancybox').fancybox(options)", lexer: 'javascript')
-                li
-                  | Select2
-                  a href="http://ivaynberg.github.io/select2/" class="pull-right" target="_blank" Full documentation
-                  = Pygments.highlight("$('.select2').select2(options)", lexer: 'javascript')

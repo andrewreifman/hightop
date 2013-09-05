@@ -5,7 +5,7 @@ $(document).ready(function(){
     height: 50,
     barSpacing: 4,
     barWidth: 8,
-    barColor: "#acaeaf"
+    barColor: "#f5af50"
   });
 
   $(".sparkline-line").sparkline([160, 240, 250, 280, 300, 250, 230, 200, 280, 380], {
@@ -17,13 +17,22 @@ $(document).ready(function(){
     lineWidth: 2
   });
 
-  $(".easy-pie-chart").easyPieChart({
+  $('.easy-pie-chart').easyPieChart({
     size: 120,
     lineWidth: 10,
-    lineCap: "square",
-    barColor: "#81e970",
+    lineCap: 'square',
+    barColor: '#81e970',
     animate: 800,
     scaleColor: false
+  });
+
+  $('.select2').select2();
+
+  $('.sparkline-pie').sparkline([2, 8, 6, 10], {
+    type: 'pie',
+    height: '120',
+    width: '120',
+    sliceColors: ['#a0eeed','#81e970','#f5af50','#f46f50']
   });
 
 });
