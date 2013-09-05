@@ -775,6 +775,7 @@ $(document).ready ->
     # options
 
     gutter: 24
+    isFitWidth: true
     itemSelector: ".item"
   )
 
