@@ -100,11 +100,11 @@
             | Dashboard
         li.dashboard
           = link_to 'social.html', class: cp('social.html') do
-            span aria-hidden="true" class="se7en-home"
+            span aria-hidden="true" class="se7en-feed"
             | Social Feed
         li.dropdown.ui *{ class: "#{cp 'buttons.html'}" }
           = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('buttons.html') || cp('icons.html') || cp('components.html') || cp('widgets.html') || cp('typo.html') || cp('grid.html') do
-            span aria-hidden="true" class="se7en-ui"
+            span aria-hidden="true" class="se7en-star"
             | Features
             b.caret
           ul.dropdown-menu
