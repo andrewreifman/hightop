@@ -774,7 +774,7 @@ $(document).ready ->
   container = document.querySelector("#container")
   msnry = new Masonry(container,
     "isFitWidth": true
-    gutter: 24
+    gutter: 10
     isFitWidth: true
     itemSelector: ".item"
   )

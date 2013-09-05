@@ -426,6 +426,7 @@ small
 
 .navbar.scroll-hide.closed
   height: 45px
+  -webkit-backface-visibility: hidden;
   .main-nav
     height: 0
     overflow: hidden
@@ -520,8 +521,8 @@ small
   padding: 0 10px
 
 .item 
-  width: 420px
-  margin-bottom: 16px
+  width: 364px
+  margin-bottom: 10px
   padding: 5px
 
 .item.w2 
@@ -2509,7 +2510,7 @@ button.close
       height: auto
 
 
-@media (max-width: 768px)
+@media (max-width: 767px)
   html.nav-open
     overflow: hidden
 
@@ -2529,11 +2530,6 @@ button.close
     position: relative
     left: 0
     @include transition(left .3s)
-
-  .item 
-    width: 100%
-    margin-bottom: 14px
-    padding: 5px
 
   .navbar
     height: 45px !important
@@ -2696,5 +2692,6 @@ button.close
   #composite-chart-1 canvas
     width: 100% !important
 
-.ico
-  text-align: center
+  .item 
+    width: 100%
+    margin-bottom: 10px
