@@ -28,7 +28,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="se7en-"] {
 */
-.se7en-home, .se7en-ui, .se7en-forms, .se7en-tables, .se7en-charts, .se7en-pages, .se7en-gallery, .se7en-flag, .se7en-envelope, .se7en-gear {
+.se7en-home, .se7en-feed, .se7en-star, .se7en-forms, .se7en-tables, .se7en-charts, .se7en-pages, .se7en-gallery, .se7en-flag, .se7en-envelope, .se7en-gear {
   font-family: 'se7en';
   speak: none;
   font-style: normal;
@@ -41,32 +41,35 @@ you can use the generic selector below, but it's slower:
 .se7en-home:before {
   content: "\e006";
 }
-.se7en-ui:before {
+.se7en-feed:before {
   content: "\e002";
 }
-.se7en-forms:before {
+.se7en-star:before {
   content: "\e003";
 }
-.se7en-tables:before {
+.se7en-forms:before {
   content: "\e004";
 }
-.se7en-charts:before {
+.se7en-tables:before {
   content: "\e00a";
 }
-.se7en-pages:before {
+.se7en-charts:before {
   content: "\e007";
 }
-.se7en-gallery:before {
+.se7en-pages:before {
   content: "\e008";
 }
-.se7en-flag:before {
+.se7en-gallery:before {
   content: "\e009";
 }
-.se7en-envelope:before {
+.se7en-flag:before {
   content: "\e000";
 }
-.se7en-gear:before {
+.se7en-envelope:before {
   content: "\e005";
+}
+.se7en-gear:before {
+  content: "\e001";
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
