@@ -130,7 +130,7 @@
     #   Sparkline Bar Charts
     */
 
-    var $container, addEvent, buildMorris, d, date, handleDropdown, initDrag, m, skycons, y;
+    var $container, addEvent, buildMorris, container, d, date, handleDropdown, initDrag, m, msnry, skycons, y;
     $("#barcharts").sparkline([160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120], {
       type: "bar",
       height: "80",
@@ -823,6 +823,17 @@
     */
 
     $('.select2able').select2();
+    /*
+    # =============================================================================
+    #   Masonry
+    # =============================================================================
+    */
+
+    container = document.querySelector("#container");
+    msnry = new Masonry(container, {
+      gutter: 24,
+      itemSelector: ".item"
+    });
     /*
     # =============================================================================
     #   Log in transition

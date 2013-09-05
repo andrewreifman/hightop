@@ -399,6 +399,21 @@ small {
   background: #f1f1f1;
   min-height: 100px; }
 
+.socialwrapper {
+  margin: 0 auto;
+  max-width: 1024px; }
+
+.item {
+  width: 400px;
+  margin-bottom: 24px;
+  padding: 5px; }
+
+.item.w2 {
+  width: 50%; }
+
+#container {
+  margin-left: 80px; }
+
 /*----------------------------------------------------------------------------------- */
 /*  Button Styles */
 /*----------------------------------------------------------------------------------- */
