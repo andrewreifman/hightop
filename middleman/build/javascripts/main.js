@@ -1,5 +1,7 @@
 /*
+# =============================================================================
 #   Sparkline Linechart JS
+# =============================================================================
 */
 
 
@@ -173,7 +175,9 @@
       chartRangeMin: 0
     });
     /*
+    # =============================================================================
     #   Easy Pie Chart
+    # =============================================================================
     */
 
     $(".pie-chart1").easyPieChart({
@@ -201,7 +205,9 @@
       scaleColor: false
     });
     /*
+    # =============================================================================
     #   Navbar scroll animation
+    # =============================================================================
     */
 
     $(".navbar.scroll-hide").mouseover(function() {
@@ -239,14 +245,18 @@
       });
     });
     /*
+    # =============================================================================
     #   Mobile Nav
+    # =============================================================================
     */
 
     $('.navbar-toggle').click(function() {
       return $('body, html').toggleClass("nav-open");
     });
     /*
+    # =============================================================================
     #   Sparkline Resize Script
+    # =============================================================================
     */
 
     linechartResize();
@@ -254,7 +264,9 @@
       return linechartResize();
     });
     /*
+    # =============================================================================
     #   Form wizard
+    # =============================================================================
     */
 
     $("#wizard").bootstrapWizard({
@@ -283,7 +295,9 @@
       }
     });
     /*
+    # =============================================================================
     #   DataTables
+    # =============================================================================
     */
 
     $("#dataTable1").dataTable({
@@ -296,7 +310,9 @@
       ]
     });
     /*
+    # =============================================================================
     #   jQuery UI Sliders
+    # =============================================================================
     */
 
     $(".slider-basic").slider({
@@ -325,12 +341,15 @@
     });
     $(".slider-range-amount").html("$" + $(".slider-range").slider("values", 0) + " - $" + $(".slider-range").slider("values", 1));
     /*
+    # =============================================================================
     #   Bootstrap Tabs
     */
 
     $("#myTab a:last").tab("show");
     /*
+    # =============================================================================
     #   Bootstrap Popover
+    # =============================================================================
     */
 
     $("#popover").popover();
@@ -347,7 +366,9 @@
       placement: "bottom"
     });
     /*
+    # =============================================================================
     #   Bootstrap Tooltip
+    # =============================================================================
     */
 
     $("#tooltip").tooltip();
@@ -364,7 +385,9 @@
       placement: "bottom"
     });
     /*
+    # =============================================================================
     #   jQuery VMap
+    # =============================================================================
     */
 
     if ($("#vmap").length) {
@@ -382,7 +405,9 @@
       });
     }
     /*
+    # =============================================================================
     #   Full Calendar
+    # =============================================================================
     */
 
     date = new Date();
@@ -390,11 +415,24 @@
     m = date.getMonth();
     y = date.getFullYear();
     initDrag = function(el) {
+      /*
+      # create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+      # it doesn't need to have a start or end
+      */
+
       var eventObject;
       eventObject = {
         title: $.trim(el.text())
       };
+      /*
+      # store the Event Object in the DOM element so we can get to it later
+      */
+
       el.data("eventObject", eventObject);
+      /*
+      # make the event draggable using jQuery UI
+      */
+
       return el.draggable({
         zIndex: 999,
         revert: true,
@@ -418,6 +456,10 @@
       priority = $("#event_priority").val();
       return addEvent(title, priority);
     });
+    /*
+    # modify chosen options
+    */
+
     handleDropdown = function() {
       $("#event_priority_chzn .chzn-search").hide();
       $("#event_priority_chzn_o_1").html("<span class=\"label label-default\">" + $("#event_priority_chzn_o_1").text() + "</span>");
@@ -427,6 +469,10 @@
       return $("#event_priority_chzn_o_5").html("<span class=\"label label-important\">" + $("#event_priority_chzn_o_5").text() + "</span>");
     };
     $("#event_priority_chzn").click(handleDropdown);
+    /*
+    # predefined events
+    */
+
     addEvent("My Event 1", "primary");
     addEvent("My Event 2", "success");
     addEvent("My Event 3", "info");
@@ -442,13 +488,35 @@
       editable: true,
       droppable: true,
       drop: function(date, allDay) {
+        /*
+        # retrieve the dropped element's stored Event Object
+        */
+
         var copiedEventObject, originalEventObject;
         originalEventObject = $(this).data("eventObject");
+        /*
+        # we need to copy it, so that multiple events don't have a reference to the same object
+        */
+
         copiedEventObject = $.extend({}, originalEventObject);
+        /*
+        # assign it the date that was reported
+        */
+
         copiedEventObject.start = date;
         copiedEventObject.allDay = allDay;
         copiedEventObject.className = $(this).attr("data-class");
+        /*
+        # render the event on the calendar
+        # the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+        */
+
         $("#calendar").fullCalendar("renderEvent", copiedEventObject, true);
+        /*
+        # is the "remove after drop" checkbox checked?
+        # if so, remove the element from the "Draggable Events" list
+        */
+
         if ($("#drop-remove").is(":checked")) {
           return $(this).remove();
         }
@@ -502,7 +570,9 @@
       ]
     });
     /*
+    # =============================================================================
     #   Isotope
+    # =============================================================================
     */
 
     $container = $(".gallery-container");
@@ -518,7 +588,9 @@
       return false;
     });
     /*
+    # =============================================================================
     #   Scrollbar Styling JS
+    # =============================================================================
     */
 
     $('.scrollbar').ClassyScroll({
@@ -529,12 +601,16 @@
       }
     });
     /*
+    # =============================================================================
     #   Popover JS
+    # =============================================================================
     */
 
     $('#popover').popover();
     /*
+    # =============================================================================
     #   Fancybox Modal
+    # =============================================================================
     */
 
     $(".fancybox").fancybox({
@@ -552,7 +628,9 @@
       }
     });
     /*
+    # =============================================================================
     #   Morris Chart JS
+    # =============================================================================
     */
 
     $(window).resize(function(e) {
@@ -739,24 +817,32 @@
       });
     };
     /*
+    # =============================================================================
     #   Select2
+    # =============================================================================
     */
 
     $('.select2able').select2();
     /*
+    # =============================================================================
     #   Log in transition
+    # =============================================================================
     */
 
     $('.login-submit').click(function() {
       return $('.login').addClass("submitted");
     });
     /*
+    # =============================================================================
     #   WYSIWYG Editor
+    # =============================================================================
     */
 
     $('#editor').wysiwyg();
     /*
+    # =============================================================================
     #   Skycons
+    # =============================================================================
     */
 
     if (document.getElementById("partly-cloudy-day")) {
