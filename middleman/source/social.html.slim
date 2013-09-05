@@ -55,28 +55,33 @@
     <!-- Social Form -->
 
     .item
-      .widget-container.fluid-height.clearfix.profile
+      .widget-container.clearfix.profile
+        .heading
+          .pull-right.i.icon-edit
+          | Profile
         .widget-content.padded.clearfix
           ul
             li
               .row
-                .col-xs-6
-                = image_tag "avatar-male2.png", width: "50", height:"50"
-                = link_to "John Smith", "", class: "user-name"
-                .col-xs-6
-                p.profile-info Posted
-          .col-xs-4
-            .share-options.active
+                .col-xs-3
+                  = image_tag "avatar-female2.png", width: "50", height:"50"
+                  
+                .col-xs-9
+                  = link_to "Stan Humanbot", "", class: "user-name"
+                  p humanbot@emaildomain.com
+                  p Sharp&Nimble Designer
+          .col-xs-4.profile-stats.first
+            .share-options
               h2 245
-              p.hidden-xs Posts
-          .col-xs-4
+              p Posts
+          .col-xs-4.profile-stats
             .share-options
               h2 150
-              p.hidden-xs Friends
-          .col-xs-4
+              p Friends
+          .col-xs-4.profile-stats
             .share-options
-              h2 + 20
-              p.hidden-xs Activity
+              h2 12
+              p Videos
       <!-- Weather -->
      
     .item
@@ -130,10 +135,13 @@
               p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
 
     .item
-      .widget-container.padded.fluid-height.clearfix.twitter-widget.text-center
+      .col-xs-6.twitter-widget.fluid-height.clearfix.text-center
         i.icon-twitter.icon-4x
         h1 12
         | New Tweets
-  
+      .col-xs-6.twitter-widget.fluid-height.clearfix.text-center
+        i.icon-twitter.icon-4x
+        h1 12
+        | New Tweets  
   script
     

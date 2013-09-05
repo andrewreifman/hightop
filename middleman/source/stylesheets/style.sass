@@ -444,11 +444,30 @@ small
 /*-----------------------------------------------------------------------------------*/
 /*  Social Dashboard Styles
 /*-----------------------------------------------------------------------------------*/
-.profile
+
+.profile-stats
+  height: 80px
+  border-left: 1px solid #e0e0e0
+  margin-bottom: 0px
+  padding: 0px !important
   
+  &.first
+    border-left: 0px solid #e0e0e0
+
+.profile
+  min-height: 120px !important
+  
+  p
+    margin: 0
+    padding: 0
+    font-style: italic
+    color: #acacac
+    font-weight: 200
+
   h2
     margin: 0
     padding: 0
+    font-weight: 100 !important
 
   ul
     list-style: none
@@ -466,6 +485,9 @@ small
   .profile-info
     padding: 0
     margin: 0
+  .user-name
+    font-size: 22px
+    font-weight: 200
 
 .social-entry
   ul
@@ -499,8 +521,8 @@ small
   max-width: 1024px
 
 .item 
-  width: 400px
-  margin-bottom: 24px
+  width: 420px
+  margin-bottom: 16px
   padding: 5px
 
 .item.w2 
@@ -1142,6 +1164,7 @@ th:active
   background: #e54c42
   font-weight: 200
   color: #fff
+  border-right: 12px #eee solid
 
   h1
     font-weight: 100
@@ -2503,6 +2526,14 @@ button.close
     position: relative
     left: 0
     @include transition(left .3s)
+  
+  #container
+    margin-left: 18px
+
+  .item 
+    width: 100%
+    margin-bottom: 14px
+    padding: 5px
 
   .navbar
     height: 45px !important
@@ -2617,7 +2648,6 @@ button.close
   .widget-container > div .heading
     padding-left: 5px
 
-
 @media (max-width: 600px)
   .login
     padding-top: 0px
@@ -2633,7 +2663,7 @@ button.close
     padding: 0 10px
 
     h1
-      margin-bottom: 15px
+      margin-bottom: 12px
 
   .row
     margin: 0
