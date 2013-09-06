@@ -123,26 +123,49 @@
                 em  10 min ago
           .row  
             p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Donec odio. Quisque volutpat mattis eros.
+            
+          form role="form"
+            .form-group
+              label for="exampleInputEmail1"
+              input#exampleInputEmail1.form-control placeholder="Add a comment..." type="email"
 
     .item
-      .col-xs-12.twitter-widget.fluid-height.clearfix.text-center
-        i.icon-twitter.icon-4x
-        h1 12
-        | New Tweets 
+      .fluid-height.clearfix
+        .twitter-widget
+          i.icon-pinterest.icon-4x
+          .social-data
+            h1 230
+            | Repins
 
+    .item
+      .fluid-height.clearfix
+        .instagram-widget
+          i.icon-instagram.icon-4x
+          .social-data
+            h1 80
+            | Followers 
+
+    .item
+      .fluid-height.clearfix
+        .facebook-widget
+          i.icon-facebook.icon-4x
+          .social-data
+            h1 120
+            | Likes
     .item
       .widget-container.fluid-height.clearfix.social-entry
         .widget-content
-          .row
-            .col-xs-3
-              = image_tag "avatar-male.jpg", width: "50", height:"50"
-              
-            .col-xs-9
-              = link_to "John Smith", "", class: "user-name"
-              .time
-                |  2 days ago
+          .col-xs-3
+            = image_tag "avatar-male.jpg", width: "50", height:"50"
+            
+          .col-xs-9
+            = link_to "John Smith", "", class: "user-name"
+            .time
+              |  2 days ago
           .row  
             <iframe width="100%" height="215" src="//www.youtube.com/embed/MPV3B4kTFLw" frameborder="0" allowfullscreen></iframe> 
             p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Donec odio. Quisque volutpat mattis eros.
+
+
   script
     
