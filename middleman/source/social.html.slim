@@ -32,10 +32,11 @@
 .socialwrapper
   #container
     .item
+
+      <!-- Share Form -->
       .widget-container.share.fluid-height.clearfix 
           .widget-content.padded
-            textarea.form-control rows="4" 
-              | Share what's new?
+            textarea.form-control rows="3" placeholder="Share what's new..."
           .col-xs-3
             .share-options.active
               i.icon-pencil
@@ -52,22 +53,23 @@
             .share-options
               i.icon-youtube-play
               p.hidden-xs Videos
-    <!-- Social Form -->
+              <!-- Share Form -->
 
+    <!-- Social Profile -->
     .item
       .widget-container.clearfix.profile
-        .widget-content.padded.clearfix
+        .widget-content.clearfix
           ul
             li
-              .row
-                .col-xs-3
-                  = image_tag "avatar-female2.png", width: "50", height:"50"
-                  
-                .col-xs-9
-                  = link_to "Stan Humanbot ", "", class: "user-name"
-                  p 
-                    | humanbot@emaildomain.com
-                  p Sharp&Nimble Designer
+              .profile-image-wrapper
+                = image_tag "avatar-male.jpg", width: "50", height:"50", class: "social-avatar"
+                   
+              .profile-details-wrapper
+                = link_to "John Smith ", "", class: "user-name"            
+                p
+                  | jsmith@emaildomain.com
+                p  
+                  | Sharp&Nimble Designer
           .col-xs-4.profile-stats.first
             .share-options
               h2 245
@@ -80,18 +82,19 @@
             .share-options
               h2 12
               p Videos
-
+              <!-- Social Profile -->
+    
     .item
       .widget-container.fluid-height.clearfix.social-entry
-        .widget-content.padded
+        .widget-content
           .row
-            .col-xs-3
-              = image_tag "avatar-male.jpg", width: "50", height:"50", class: "social-avatar"
-              
-            .col-xs-9
-              = link_to "John Smith", "", class: "user-name"
-              .time
-                |  2 days ago
+            .profile-image-wrapper
+              = image_tag "avatar-female2.png", width: "50", height:"50"
+                 
+            .profile-details-wrapper
+              = link_to "Stan Humanbot ", "", class: "user-name"            
+              p
+                | 2 days ago
           .row  
             p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
           .row
@@ -99,32 +102,30 @@
               i.icon-thumbs-up-alt
             btn.btn-sm.btn-default-outline 
               i.icon-mail-forward
-        .comments.padded
-          p 
-           | 2 comments
+        .comments
           .row
-            .col-xs-3
-              = image_tag "avatar-female.jpg", width: "50", height:"50", class: "social-avatar"
-              
-            .col-xs-9
-              = link_to "Monster Jackson", "", class: "user-name"
-              .time
-                em  10 min ago
+            .profile-image-wrapper
+              = image_tag "avatar-female.png", width: "50", height:"50"
+                 
+            .profile-details-wrapper
+              = link_to "Fishy Robertson ", "", class: "user-name"            
+              p
+                | 1 day ago
           .row  
             p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
           .row
-            .col-xs-3
-              = image_tag "avatar-male2.png", width: "50", height:"50", class: "social-avatar"
-              
-            .col-xs-9
-              = link_to "Sad Summers", "", class: "user-name"
-              .time
-                em  10 min ago
+            .profile-image-wrapper
+              = image_tag "avatar-male.jpg", width: "50", height:"50"
+                 
+            .profile-details-wrapper
+              = link_to "John Smith ", "", class: "user-name"            
+              p
+                | 16 minutes ago
           .row  
-            p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Donec odio. Quisque volutpat mattis eros.
+            p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
             
           form role="form"
-            .form-group
+            .form-group.padded
               label for="exampleInputEmail1"
               input#exampleInputEmail1.form-control placeholder="Add a comment..." type="email"
 
@@ -141,24 +142,26 @@
     .item
       .widget-container.clearfix.social-entry.image
         .widget-content
-          .col-xs-3
-            = image_tag "avatar-male.jpg", width: "50", height:"50", class: "social-avatar"
-            
-          .col-xs-9
-            = link_to "John Smith", "", class: "user-name"
-            .time
-              |  2 days ago
-          .row.clearfix  
-            = image_tag "social-image.jpg", width: "100%", height:"290"
+          .row
+            .profile-image-wrapper
+              = image_tag "avatar-male2.png", width: "50", height:"50"
+                 
+            .profile-details-wrapper
+              = link_to "Sad Franklin ", "", class: "user-name"            
+              p
+                | 12 days ago
+          .row
+            .social-content-image.clearfix
+              = image_tag "social-image.jpg", width: "100%", height:"290"
             p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Donec odio. Quisque volutpat mattis eros.
           .row
             btn.btn-sm.btn-default-outline 
               i.icon-thumbs-up-alt
             btn.btn-sm.btn-default-outline 
               i.icon-mail-forward
-          .comments.padded.mini
+          .comments.new
             form role="form"
-              .form-group
+              .form-group.padded
                 label for="exampleInputEmail1"
                 input#exampleInputEmail1.form-control placeholder="Add a comment..." type="email"
 
@@ -174,13 +177,14 @@
     .item
       .widget-container.fluid-height.clearfix.social-entry
         .widget-content
-          .col-xs-3
-            = image_tag "avatar-male.jpg", width: "50", height:"50", class: "social-avatar"
-            
-          .col-xs-9
-            = link_to "John Smith", "", class: "user-name"
-            .time
-              |  2 days ago
+          .row
+            .profile-image-wrapper
+              = image_tag "avatar-female2.png", width: "50", height:"50"
+                 
+            .profile-details-wrapper
+              = link_to "Stan Humanbot ", "", class: "user-name"            
+              p
+                | 2 days ago
           .row  
             <iframe src="//player.vimeo.com/video/16202331?title=0&amp;byline=0&amp;portrait=0" width="100%" height="186" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Donec odio. Quisque volutpat mattis eros.

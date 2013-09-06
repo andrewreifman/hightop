@@ -521,13 +521,16 @@ body.login
   height: 80px
   border-left: 1px solid #e0e0e0
   margin-bottom: 0px
-  
+  padding: 0px !important
+  margin: 0px !important
+
   &.first
     border-left: 0px solid #e0e0e0
 
 .profile
   min-height: 120px !important
   padding-top: 20px
+
   p
     margin: 0
     padding: 0
@@ -550,7 +553,6 @@ body.login
       position: relative
 
       img
-        margin-right: 15px
         border-radius: 50%
   
   .profile-info
@@ -561,15 +563,34 @@ body.login
     font-size: 22px
     font-weight: 200
 
+.profile-image-wrapper
+  display: inline-block
+  vertical-align: top
+  padding-left: 4px
+
+  img
+    border-radius: 50%
+
+.profile-details-wrapper
+  display: inline-block
+  margin-left: 12px
+
+  p
+    font-size: 12px
+
+.social-avatar
+  border-radius: 50%
+
+.social-content-image
+  padding-top: 20px
+
 .social-entry
   padding-top: 20px
 
   btn
     margin-right: 6px
     cursor: pointer
-  
-  .social-avatar
-    border-radius: 50%
+
   p
     font-weight: 200
   
@@ -585,7 +606,10 @@ body.login
       img
         margin-right: 15px
         border-radius: 50%
-  
+
+  .form-group
+    margin-bottom: 0px
+
   .user-name
     padding: 0
     margin: 0
@@ -599,18 +623,29 @@ body.login
   .content
     font-size: 14px
     font-weight: 200
+    margin-top: 6px
+    margin-bottom: 16px
 
   .comments
     background: #f7f7f7
-    min-height: 20px
     margin-top: 20px
-    padding-top: 10px
+    padding-top: 20px
+    margin-bottom: 0px
+
+    img
+      width: 40px
+      height: 40px
+
+    &.new
+      padding-top: 0px
+    .form-control
+      margin-top: -20px
 
 .socialwrapper
+
   .item 
     width: 364px
-    margin-bottom: 10px
-    padding: 5px
+    margin-bottom: 12px
 
   .item.w2 
     width: 50%
@@ -1065,6 +1100,7 @@ th:active
   &.share
     background: #f8f8f8
     font-weight: 200
+    padding-top: 8px
 
   .heading
     background: rgba(255, 255, 255, 0.94)
@@ -1134,6 +1170,7 @@ th:active
 
   &.active
     color: $blue
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  Statistics Figures
