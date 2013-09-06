@@ -251,10 +251,18 @@ $(document).ready ->
     nextSelector: ".btn-next"
     previousSelector: ".btn-previous"
     onNext: (tab, navigation, index) ->
+      if index is 1
+        
+        # Make sure we entered the name
+        unless $("#name").val()
+          $("#name").focus()
+          $("#name").addClass("has-error");
+          return false
       $total = navigation.find("li").length
       $current = index + 1
       $percent = ($current / $total) * 100
       $("#wizard").find(".progress-bar").css "width", $percent + "%"
+
 
     onPrevious: (tab, navigation, index) ->
       $total = navigation.find("li").length
@@ -268,6 +276,9 @@ $(document).ready ->
       $percent = ($current / $total) * 100
       $("#wizard").find(".progress-bar").css "width", $percent + "%"
 
+      $(document).ready ->
+      $("#rootwizard").bootstrapWizard
+        onNext: (tab, navigation, index) ->
 
   ###
   # =============================================================================

@@ -1,10 +1,13 @@
 .bwizard-steps {
 	display: inline-block;
 	margin: 0; padding: 0;
-	background: #fff }
+	background: #fff; 
+	font-weight: 200;
+}
 	.bwizard-steps .active {
 		color: #fff;
-		background: #007ACC }
+		background: #007ACC;
+		 }
 	.bwizard-steps .active:after {
 		border-left-color: #007ACC }
 	.bwizard-steps .active a {
@@ -28,16 +31,11 @@
 		zoom: 1; }
 	.bwizard-steps li:first-child {
 		padding-left: 12px;
-		-moz-border-radius: 4px 0 0 4px;
-		-webkit-border-radius: 4px 0 0 4px;
-		border-radius: 4px 0 0 4px; }
+ }
 	.bwizard-steps li:first-child:before {
 		border: none }
 	.bwizard-steps li:last-child {
-		margin-right: 0;
-		-moz-border-radius: 0 4px 4px 0;
-		-webkit-border-radius: 0 4px 4px 0;
-		border-radius: 0 4px 4px 0; }
+		margin-right: 0;}
 	.bwizard-steps li:last-child:after {
 		border: none }
 	.bwizard-steps li:before {
@@ -81,4 +79,10 @@
 		margin-right: 0;
 		padding: 0;
 		background-color: transparent }
+}
+.nav-pills>li>a{
+	border-radius: 0px;
+	font-weight: 200;
+
+
 }
