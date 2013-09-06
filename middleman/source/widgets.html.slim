@@ -2,6 +2,49 @@
   h1 Widgets
 
 .row
+  <!-- Weather -->
+  .col-lg-12
+    .widget-container.weather
+      .widget-content.padded
+        .row.text-center
+          .col-sm-2.col-xs-4
+            p MON
+            canvas#clear-day height="60" width="60"
+            .number 
+              | 86
+              small °
+          .col-sm-2.col-xs-4
+            p TUE
+            canvas#cloudy height="60" width="60"
+            .number 
+              | 75
+              small °
+          .col-sm-2.col-xs-4
+            p WED
+            canvas#partly-cloudy-day height="60" width="60"
+            .number 
+              | 82
+              small °
+          .col-sm-2.hidden-xs
+            p THU
+            canvas#sleet height="60" width="60"
+            .number 
+              | 64
+              small °
+          .col-sm-2.hidden-xs
+            p FRI
+            canvas#wind height="60" width="60"
+            .number 
+              | 57
+              small °
+          .col-sm-2.hidden-xs
+            p SAT
+            canvas#rain height="60" width="60"
+            .number 
+              | 32
+              small °
+
+.row
   <!-- Task List -->
   .col-lg-6
     .widget-container.scrollable.list.task-widget
