@@ -30,10 +30,6 @@
   <!-- Weather -->
   .col-lg-8
     .widget-container.weather
-      / .heading
-      /   i.icon-bolt
-      /   | Washington, D.C.
-      /   i.icon-refresh.pull-right
       .widget-content.padded
         .row.text-center
           .col-sm-6.col-md-4.today
@@ -46,7 +42,7 @@
 
           .col-sm-2.hidden-xs
             p MON
-            canvas#sun height="60" width="60"
+            canvas#clear-day height="60" width="60"
             .number 
               | 86
               small °
@@ -58,7 +54,7 @@
               small °
           .col-sm-2.hidden-xs
             p WED
-            canvas#partly-cloudy height="60" width="60"
+            canvas#partly-cloudy-day height="60" width="60"
             .number 
               | 82
               small °
