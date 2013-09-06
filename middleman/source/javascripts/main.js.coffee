@@ -572,7 +572,6 @@ $(document).ready ->
   #   Morris Chart JS
   # =============================================================================
   ###
-
   $(window).resize (e) ->
     clearTimeout morrisResize
     morrisResize = setTimeout(->
@@ -629,7 +628,7 @@ $(document).ready ->
       xkey: "period"
       ykeys: ["licensed", "sorned"]
       labels: ["Licensed", "Off the road"]
-      lineColors: ["#59dbbf", "#aeb6cb"]
+      lineColors: ["#5bc0de", "#60c560"]
 
     Morris.Donut
       element: "hero-donut"
@@ -646,7 +645,7 @@ $(document).ready ->
         label: "Sugar"
         value: 10
       ]
-      colors: ["#afcf6f"]
+      colors: ["#f0ad4e"]
       formatter: (y) ->
         y + "%"
 
@@ -709,7 +708,7 @@ $(document).ready ->
       hideHover: "auto"
       lineWidth: 2
       pointSize: 4
-      lineColors: ["#59dbbf", "#aeb6cb", "#5dcff3"]
+      lineColors: ["#a0dcee", "#f1c88e", "#a0e2a0"]
       fillOpacity: 0.5
       smooth: true
 
@@ -740,7 +739,7 @@ $(document).ready ->
       barRatio: 0.4
       xLabelAngle: 35
       hideHover: "auto"
-      barColors: ["#aeb6cb"]
+      barColors: ["#5bc0de"]
 
 
   ###
