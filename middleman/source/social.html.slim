@@ -86,7 +86,7 @@
         .widget-content.padded
           .row
             .col-xs-3
-              = image_tag "avatar-male.jpg", width: "50", height:"50"
+              = image_tag "avatar-male.jpg", width: "50", height:"50", class: "social-avatar"
               
             .col-xs-9
               = link_to "John Smith", "", class: "user-name"
@@ -104,7 +104,7 @@
            | 2 comments
           .row
             .col-xs-3
-              = image_tag "avatar-female.jpg", width: "50", height:"50"
+              = image_tag "avatar-female.jpg", width: "50", height:"50", class: "social-avatar"
               
             .col-xs-9
               = link_to "Monster Jackson", "", class: "user-name"
@@ -114,7 +114,7 @@
             p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
           .row
             .col-xs-3
-              = image_tag "avatar-male2.png", width: "50", height:"50"
+              = image_tag "avatar-male2.png", width: "50", height:"50", class: "social-avatar"
               
             .col-xs-9
               = link_to "Sad Summers", "", class: "user-name"
@@ -130,33 +130,70 @@
 
     .item
       .fluid-height.clearfix
-        .twitter-widget
+        .pint-widget
           i.icon-pinterest.icon-4x
           .social-data
             h1 230
             | Repins
 
+
+    
+    .item
+      .widget-container.clearfix.social-entry.image
+        .widget-content
+          .col-xs-3
+            = image_tag "avatar-male.jpg", width: "50", height:"50", class: "social-avatar"
+            
+          .col-xs-9
+            = link_to "John Smith", "", class: "user-name"
+            .time
+              |  2 days ago
+          .row.clearfix  
+            = image_tag "social-image.jpg", width: "100%", height:"290"
+            p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Donec odio. Quisque volutpat mattis eros.
+          .row
+            btn.btn-sm.btn-default-outline 
+              i.icon-thumbs-up-alt
+            btn.btn-sm.btn-default-outline 
+              i.icon-mail-forward
+          .comments.padded.mini
+            form role="form"
+              .form-group
+                label for="exampleInputEmail1"
+                input#exampleInputEmail1.form-control placeholder="Add a comment..." type="email"
+
     .item
       .fluid-height.clearfix
-        .instagram-widget
-          i.icon-instagram.icon-4x
+        .twitter-widget
+          i.icon-twitter.icon-4x
           .social-data
-            h1 80
-            | Followers 
-    
+            h1 16,125
+            | Followers
+
+
     .item
       .widget-container.fluid-height.clearfix.social-entry
         .widget-content
           .col-xs-3
-            = image_tag "avatar-male.jpg", width: "50", height:"50"
+            = image_tag "avatar-male.jpg", width: "50", height:"50", class: "social-avatar"
             
           .col-xs-9
             = link_to "John Smith", "", class: "user-name"
             .time
               |  2 days ago
           .row  
-            = image_tag "avatar-male.jpg", width: "150", height:"50"
+            <iframe src="//player.vimeo.com/video/16202331?title=0&amp;byline=0&amp;portrait=0" width="100%" height="186" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Donec odio. Quisque volutpat mattis eros.
+          .row
+            btn.btn-sm.btn-default-outline 
+              i.icon-thumbs-up-alt
+            btn.btn-sm.btn-default-outline 
+              i.icon-mail-forward
+          .comments.padded
+            form role="form"
+              .form-group
+                label for="exampleInputEmail1"
+                input#exampleInputEmail1.form-control placeholder="Add a comment..." type="email"
 
     .item
       .fluid-height.clearfix
@@ -165,20 +202,6 @@
           .social-data
             h1 120
             | Likes
-    .item
-      .widget-container.fluid-height.clearfix.social-entry
-        .widget-content
-          .col-xs-3
-            = image_tag "avatar-male.jpg", width: "50", height:"50"
-            
-          .col-xs-9
-            = link_to "John Smith", "", class: "user-name"
-            .time
-              |  2 days ago
-          .row  
-            <iframe width="100%" height="215" src="//www.youtube.com/embed/MPV3B4kTFLw" frameborder="0" allowfullscreen></iframe> 
-            p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Donec odio. Quisque volutpat mattis eros.
 
 
-  script
     
