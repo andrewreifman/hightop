@@ -29,24 +29,77 @@
 .row
   <!-- Weather -->
   .col-lg-8
-    .widget-container.weather.fluid-height
-      .heading
-        i.icon-bolt
-        | Washington, D.C.
-        i.icon-refresh.pull-right
-      .widget-content.padded.clearfix
-        .pull-left
-          canvas#rain height="100" width="100"
-          .number 
-            | 72
-            small °
+    .widget-container.weather
+      / .heading
+      /   i.icon-bolt
+      /   | Washington, D.C.
+      /   i.icon-refresh.pull-right
+      .widget-content.padded
+        .row.text-center
+          .col-sm-6.col-md-4.today
+            p TODAY
+            canvas#rain height="100" width="100"
+            .number 
+              | 72
+              small °
+            p.location Washington, D.C.
 
-        ul.pull-right
-          li Chance of Rain: 20%
-          li Wind: SSW at 8 mph
-          li Humidity: 73%
+          .col-sm-2.hidden-xs
+            p MON
+            canvas#sun height="60" width="60"
+            .number 
+              | 86
+              small °
+          .col-sm-2.hidden-xs
+            p TUE
+            canvas#cloudy height="60" width="60"
+            .number 
+              | 75
+              small °
+          .col-sm-2.hidden-xs
+            p WED
+            canvas#partly-cloudy height="60" width="60"
+            .number 
+              | 82
+              small °
+          .col-sm-2.hidden-sm.hidden-xs
+            p THU
+            canvas#sleet height="60" width="60"
+            .number 
+              | 64
+              small °
         
   <!-- end Weather -->
+
+  <!-- Bar Graph -->
+  .col-lg-4
+    .widget-container.small
+      .heading
+        i.icon-signal
+        | Growth
+        i.icon-refresh.pull-right
+      .widget-content.padded
+        .bar-chart-widget
+          .bar-chart-info
+            .chart-number
+              i.icon-long-arrow-up
+              | 42%
+          .chart-graph
+            #barcharts Loading...
+            ul.chart-text-axis
+              li 1
+              li 2
+              li 3
+              li 4
+              li 5
+              li 6
+              li 7
+              li 8
+              li 9
+              li 10
+              li 11
+              li 12
+  <!-- End Bar Graph -->
   
 .row
   <!-- Linechart -->
@@ -104,80 +157,6 @@
       .widget-content
         .pie-chart2.pie-chart.pie-number data-percent="36" 26%
   <!-- End Pie Graph 2 -->
-
-
-.row
-  <!-- Guages -->
-  .col-lg-4
-    .widget-container.fluid-height.clearfix
-      .heading
-        i.icon-signal
-        | Views Today
-        i.icon-refresh.pull-right
-      .widget-content
-        #gauge.gauge class="200x160px"
-        #gauge2.gauge class="200x160px"
-  <!-- End Gauges -->
-
-  <!-- Bar Graph -->
-  .col-lg-4
-    .widget-container.small
-      .heading
-        i.icon-signal
-        | Growth
-        i.icon-refresh.pull-right
-      .widget-content.padded
-        .bar-chart-widget
-          .bar-chart-info
-            .chart-number
-              i.icon-long-arrow-up
-              | 42%
-          .chart-graph
-            #barcharts2 Loading...
-            ul.chart-text-axis
-              li 1
-              li 2
-              li 3
-              li 4
-              li 5
-              li 6
-              li 7
-              li 8
-              li 9
-              li 10
-              li 11
-              li 12
-  <!-- End Bar Graph -->
-
-  <!-- Bar Graph -->
-  .col-lg-4
-    .widget-container.small
-      .heading
-        i.icon-signal
-        | Today's Sales
-        i.icon-refresh.pull-right
-      .widget-content.padded
-        .bar-chart-widget
-          .bar-chart-info
-            .chart-number
-              i.icon-long-arrow-up
-              | $630
-          .chart-graph
-            #barcharts3 Loading...
-            ul.chart-text-axis
-              li 1
-              li 2
-              li 3
-              li 4
-              li 5
-              li 6
-              li 7
-              li 8
-              li 9
-              li 10
-              li 11
-              li 12
-  <!-- End Bar Graph -->
 
 .row
   <!-- Task List -->
