@@ -2,7 +2,7 @@
   h1 Forms
 
 .row
-  .col-lg-12
+  .col-md-4
     .widget-container.fluid-height
       .heading
         i.icon-edit
@@ -12,35 +12,43 @@
         #wizard
           ul.wizard-nav
             li
-              a data-toggle="tab" href="#tab1" 1
+              a data-toggle="tab" href="#tab1" Sign in
             li
-              a data-toggle="tab" href="#tab2" 2
+              a data-toggle="tab" href="#tab2" Personal 
             li
-              a data-toggle="tab" href="#tab3" 3
+              a data-toggle="tab" href="#tab3" Payment
             li
-              a data-toggle="tab" href="#tab4" 4
+              a data-toggle="tab" href="#tab4" Review
 
           .progress.progress-striped.active
             .progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar"
 
           .tab-content
             #tab1.tab-pane
-              | 1
+              form role="form"
+                .form-group
+                  label for="exampleInputEmail1"
+                  input#name.form-control placeholder="Enter email" type="email"
+                .form-group
+                  label for="exampleInputPassword1"
+                  input#exampleInputPassword1.form-control placeholder="Password" type="password"
+
             #tab2.tab-pane
               | 2
             #tab3.tab-pane
               | 3
             #tab4.tab-pane
               | 4
+
             ul.pager.wizard
-              li.btn-previous
+              li.btn-previous.pull-left
                 a href="#" Prev
-              li.btn-next
+              li.btn-next.pull-right
                 a href="#" Next
 
 
-.row
-  .col-lg-12
+
+  .col-md-8
     .widget-container.fluid-height
       .heading
         i.icon-edit
@@ -121,7 +129,7 @@
       
 
 .row
-  .col-lg-6
+  .col-md-6
     .widget-container.fluid-height.clearfix
       .heading
         i.icon-adjust
@@ -254,7 +262,7 @@
             button.btn.btn-primary type="submit" Submit
             button.btn.btn-default-outline Cancel
 
-  .col-lg-6
+  .col-md-6
     .row
       .col-lg-12
         .widget-container.fluid-height.clearfix
@@ -282,7 +290,7 @@
                     option value="Category 4" Option 4
 
     .row
-      .col-lg-12
+      .col-md-12
         .widget-container.fluid-height.clearfix
           .heading
             i.icon-user
@@ -308,7 +316,7 @@
               button.btn.btn-primary type="submit" Submit
               button.btn.btn-default-outline Cancel
 
-      .col-lg-12
+      .col-md-12
         .widget-container
           .heading
             i.icon-shield
@@ -324,3 +332,5 @@
             .form-group.has-success
               label.control-label for="inputSuccess" Success
               input#inputSuccess.form-control type="text"
+
+script
