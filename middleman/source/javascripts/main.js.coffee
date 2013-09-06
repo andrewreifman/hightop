@@ -762,14 +762,16 @@ $(document).ready ->
   #   Masonry
   # =============================================================================
   ###
-  
+
   container = document.querySelector("#container")
-  msnry = new Masonry(container,
-    "isFitWidth": true
-    gutter: 10
-    isFitWidth: true
-    itemSelector: ".item"
-  )
+
+  if container
+    msnry = new Masonry(container,
+      "isFitWidth": true
+      gutter: 10
+      isFitWidth: true
+      itemSelector: ".item"
+    )
 
 
   ###
