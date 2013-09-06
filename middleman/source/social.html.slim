@@ -102,7 +102,6 @@
         .comments.padded
           p 
            | 2 comments
-
           .row
             .col-xs-3
               = image_tag "avatar-female.jpg", width: "50", height:"50"
@@ -144,6 +143,20 @@
           .social-data
             h1 80
             | Followers 
+    
+    .item
+      .widget-container.fluid-height.clearfix.social-entry
+        .widget-content
+          .col-xs-3
+            = image_tag "avatar-male.jpg", width: "50", height:"50"
+            
+          .col-xs-9
+            = link_to "John Smith", "", class: "user-name"
+            .time
+              |  2 days ago
+          .row  
+            = image_tag "avatar-male.jpg", width: "150", height:"50"
+            p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Donec odio. Quisque volutpat mattis eros.
 
     .item
       .fluid-height.clearfix
