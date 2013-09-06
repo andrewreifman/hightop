@@ -2,7 +2,9 @@
 	display: inline-block;
 	margin: 0; padding: 0;
 	background: #fff; 
-	font-weight: 200;
+	font-weight: 200;	pointer-events: none !important;
+	   cursor: default !important;
+
 }
 	.bwizard-steps .active {
 		color: #fff;
@@ -60,7 +62,8 @@
 	.bwizard-steps a:hover {
 		text-decoration: none }
 .bwizard-steps.clickable li:not(.active) {
-	cursor: pointer }
+	pointer-events: none !important;
+	   cursor: default !important;}
 .bwizard-steps.clickable li:hover:not(.active) {
 	background: #ccc }
 .bwizard-steps.clickable li:hover:not(.active):after {
@@ -86,3 +89,32 @@
 
 
 }
+
+#wizard>.nav{
+
+	pointer-events: none !important;
+	   cursor: default !important;	
+}
+
+#wizard>.pager{
+
+	padding-top: 16px;	
+	padding-bottom: 4px;
+	background: #F7F7F7;
+}
+#tab1>h2{
+	margin-bottom: 0px;	
+	line-height: 20px;
+	padding-top: 20px;
+}
+
+#tab1>p{
+	font-style: italic;
+}
+
+#wizard>.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
+	background: #007AFF;
+
+
+}
+		

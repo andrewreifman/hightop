@@ -8,43 +8,69 @@
         i.icon-edit
         | Form Wizard
 
-      .widget-content.padded
+      .widget-content
         #wizard
-          ul.wizard-nav
-            li
-              a data-toggle="tab" href="#tab1" Sign in
-            li
-              a data-toggle="tab" href="#tab2" Personal 
-            li
-              a data-toggle="tab" href="#tab3" Payment
-            li
-              a data-toggle="tab" href="#tab4" Review
+          .padded
+            ul.wizard-nav
+              li
+                a data-toggle="tab" href="#tab1" Sign in
+              li
+                a data-toggle="tab" href="#tab2" Personal 
+              li
+                a data-toggle="tab" href="#tab3" Payment
+              li
+                a data-toggle="tab" href="#tab4" Review
 
-          .progress.progress-striped.active
-            .progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar"
+            .progress.progress-striped.active
+              .progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar"
 
-          .tab-content
-            #tab1.tab-pane
-              form role="form"
-                .form-group
-                  label for="exampleInputEmail1"
-                  input#name.form-control placeholder="Enter email" type="email"
-                .form-group
-                  label for="exampleInputPassword1"
-                  input#exampleInputPassword1.form-control placeholder="Password" type="password"
+            .tab-content
+              #tab1.tab-pane.text-center
+                h2 Welcome! 
+                p.padded Thank you for getting started. Please enter your desired username and password to get going with this wizard.
+                form role="form"
+                  .form-group
+                    label for="exampleInputEmail1"
+                    input#name.form-control placeholder="Enter your name" type="email"
+                  .form-group
+                    label for="exampleInputPassword1"
+                    input#exampleInputPassword1.form-control placeholder="Password (Optional)" type="password"
 
-            #tab2.tab-pane
-              | 2
-            #tab3.tab-pane
-              | 3
-            #tab4.tab-pane
-              | 4
+              #tab2.tab-pane
+                form role="form"
+                  .form-group
+                    label for="exampleInputEmail1"
+                    input.form-control placeholder="Address" type="email"
+                  .form-group
+                    label for="exampleInputPassword1"
+                    input#exampleInputPassword1.form-control placeholder="Country" type="password"
+              #tab3.tab-pane
+                form role="form"
+                  .form-group
+                    label for="exampleInputEmail1"
+                    input#name.form-control placeholder="Enter email" type="email"
+                  .form-group
+                    label for="exampleInputPassword1"
+                    input#exampleInputPassword1.form-control placeholder="Password" type="password"
+              #tab4.tab-pane
+                form role="form"
+                  .form-group
+                    label for="exampleInputEmail1"
+                    input#name.form-control placeholder="Enter email" type="email"
+                  .form-group
+                    label for="exampleInputPassword1"
+                    input#exampleInputPassword1.form-control placeholder="Password" type="password"
+          .pager
+            
+            btn.btn.btn-default-outline.btn-previous
+              i.icon-long-arrow-left
+              | Prev
+            btn.btn.btn-primary-outline.btn-next
+              i.icon-long-arrow-right
+              | Next
 
-            ul.pager.wizard
-              li.btn-previous.pull-left
-                a href="#" Prev
-              li.btn-next.pull-right
-                a href="#" Next
+
+
 
 
 
