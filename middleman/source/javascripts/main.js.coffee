@@ -802,7 +802,7 @@ $(document).ready ->
   #   Skycons
   # =============================================================================
   ###
-  if document.getElementById("partly-cloudy-day")
+  if document.getElementById("rain")
     skycons = new Skycons(color: "white")
-    skycons.add document.getElementById("partly-cloudy-day"), Skycons.PARTLY_CLOUDY_DAY
+    skycons.add document.getElementById("rain"), Skycons.RAIN
     skycons.play()

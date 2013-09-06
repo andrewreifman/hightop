@@ -1177,37 +1177,54 @@ th:active
 /*-----------------------------------------------------------------------------------*/
 /*  Weather Widget
 /*-----------------------------------------------------------------------------------*/
-
 .weather
-  background: #1fb4d6
+  background: #5bc0de
   font-weight: 200
   color: #fff
+  min-height: 190px
 
   .heading
-    background: #1fb4d6
+    background: transparent
     font-weight: 200
     color: #fff 
 
-  .number
-    font-size: 58px
-    color: #fff
-    font-weight: 100
-    margin-left: 6px
-    display: block
-
-  figure
-    margin: 3em auto
-    width: 368px
-    height: 152px
+  .padded
+    padding-right: 0
 
   canvas
-    display: block
-    float: left
-    margin-left: 8px
-    margin-top: 8px
+    display: inline-block
+    margin: 0 10px 0 6px
+    vertical-align: middle
 
-  pre
-    margin: 3.375em 1.6875em
+  .number
+    font-size: 80px
+    color: #fff
+    font-weight: 100
+    letter-spacing: -.05em
+    display: inline-block
+    vertical-align: middle
+
+    small
+      font-size: 60%
+      margin: 12px 0 0 5px
+      display: inline-block
+
+  p
+    margin: 0
+
+  ul
+    list-style: none
+    height: 100%
+    display: block
+    margin: 10px 0 0 0
+    padding: 0
+
+    li
+      line-height: 30px
+      border-bottom: 1px solid #aae0f0
+      display: block
+      margin: 0
+      padding-right: 20px
 
 /*-----------------------------------------------------------------------------------*/
 /*  jQuery Easy Pie Chart Styles
@@ -2621,28 +2638,9 @@ button.close
           .dropdown-menu
             text-align: left
 
-          &.ui
-            a span
-              background-position: -28px -140px
-
-          &.forms
-            a span
-              background-position: -56px -140px
-
-          &.charts
-            a span
-              background-position: -84px -140px
-
-          &.tables
-            a span
-              background-position: -112px -140px
-
-          &.gallery
-            a span
-              background-position: -140px -140px
-
   .widget-container > div .heading
     padding-left: 5px
+
 
 @media (max-width: 600px)
   .login

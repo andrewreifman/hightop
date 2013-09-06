@@ -1,317 +1,307 @@
-/ .widget-container.padded.hidden-xs style="width:260px; background: rgba(245,245,245, 0.8); height: 200px; position:fixed; z-index:10; left:0; top: 30%;"
-/ 	.heading style="background: rgba(245,245,245, 0.7);"
-/ 		i.icon-adjust
-/ 		| Customize
-/ 		i.icon-refresh.pull-right
-/ 	.widget-content.padded
-/ 		h5 Brand Colors
-/ 		ul
-/ 	        li
-/ 	          a.settings-link.blue href="javascript:chooseStyle('none', 30)"
-/ 	            span
-/ 	            | Blue
-/ 	        li
-/ 	          a.settings-link.green href="javascript:chooseStyle('green-theme', 30)"
-/ 	            span
-/ 	            | Green
-/ 	        li
-/ 	          a.settings-link.orange href="javascript:chooseStyle('orange-theme', 30)"
-/ 	            span
-/ 	            | Orange
-/ 	        li
-/ 	          a.settings-link.magenta href="javascript:chooseStyle('magenta-theme', 30)"
-/ 	            span
-/ 	            | Magenta
-/ 	        li
-/ 	          a.settings-link.gray href="javascript:chooseStyle('gray-theme', 30)"
-/ 	            span
-/ 	            | Gray
-/ 		h5 Backgrounds
-/ 		h5 Typography
-
-
 <!-- Statistics -->
 .row
-	.col-lg-12
-		.widget-container.stats-container
-			.col-md-3
-				.number
-					.icon.globe
-					| 86
-					small %
-				.text Overall growth
-			.col-md-3
-				.number
-					.icon.visitors
-					| 613
-				.text Unique visitors
-			.col-md-3
-				.number
-					.icon.money
-					small $
-					| 924
-				.text Sales
-			.col-md-3
-				.number
-					.icon.chat-bubbles
-					| 325
-				.text New followers
+  .col-lg-12
+    .widget-container.stats-container
+      .col-md-3
+        .number
+          .icon.globe
+          | 86
+          small %
+        .text Overall growth
+      .col-md-3
+        .number
+          .icon.visitors
+          | 613
+        .text Unique visitors
+      .col-md-3
+        .number
+          .icon.money
+          small $
+          | 924
+        .text Sales
+      .col-md-3
+        .number
+          .icon.chat-bubbles
+          | 325
+        .text New followers
 <!-- End Statistics -->
-	
-.row
-	<!-- Linechart -->
-	.col-lg-6
-		.widget-container
-			.heading
-				.pull-right.btn-group.hidden-xs data-toggle="buttons"
-					label.btn.btn-sm.btn-default-outline.active
-						| Day
-						input#option1 name="options" type="radio"
-					label.btn.btn-sm.btn-default-outline
-						| Week
-						input#option2 name="options" type="radio"
-					label.btn.btn-sm.btn-default-outline
-						| Month
-						input#option3 name="options" type="radio"
-				i.icon-bar-chart
-				| Growth over time
-			.widget-content.padded
-				.chart-graph.line-chart
-					#linechart-1 Loading...
-					ul.chart-text-axis
-						li 1
-						li 2
-						li 3
-						li 4
-						li 5
-						li 6
-						li 7
-						li 8
-						li 9
-						li 10
-						li 11
-						li 12
-	<!-- End Linechart -->
-
-	<!-- Pie Graph 1 -->
-	.col-lg-3.col-sm-6
-		.widget-container
-			.heading
-				i.icon-adjust
-				| Retention
-				i.icon-refresh.pull-right
-			.widget-content
-				.pie-chart1.pie-chart.pie-number data-percent="73" 73%
-	<!-- End Pie Graph 1 -->
-
-	<!-- Pie Graph 2 -->
-	.col-lg-3.col-sm-6
-		.widget-container
-			.heading
-				i.icon-adjust
-				| New users
-				i.icon-refresh.pull-right
-			.widget-content
-				.pie-chart2.pie-chart.pie-number data-percent="36" 26%
-	<!-- End Pie Graph 2 -->
-
 
 .row
-	<!-- Guages -->
-	.col-lg-4
-		.widget-container.fluid-height.clearfix
-			.heading
-				i.icon-signal
-				| Views Today
-				i.icon-refresh.pull-right
-			.widget-content
-				#gauge.gauge class="200x160px"
-				#gauge2.gauge class="200x160px"
-	<!-- End Gauges -->
+  <!-- Weather -->
+  .col-lg-8
+    .widget-container.weather.fluid-height
+      .heading
+        i.icon-bolt
+        | Washington, D.C.
+        i.icon-refresh.pull-right
+      .widget-content.padded.clearfix
+        .pull-left
+          canvas#rain height="100" width="100"
+          .number 
+            | 72
+            small °
 
-	<!-- Bar Graph -->
-	.col-lg-4
-		.widget-container.small
-			.heading
-				i.icon-signal
-				| Growth
-				i.icon-refresh.pull-right
-			.widget-content.padded
-				.bar-chart-widget
-					.bar-chart-info
-						.chart-number
-							i.icon-long-arrow-up
-							| 42%
-					.chart-graph
-						#barcharts2 Loading...
-						ul.chart-text-axis
-							li 1
-							li 2
-							li 3
-							li 4
-							li 5
-							li 6
-							li 7
-							li 8
-							li 9
-							li 10
-							li 11
-							li 12
-	<!-- End Bar Graph -->
+        ul.pull-right
+          li Chance of Rain: 20%
+          li Wind: SSW at 8 mph
+          li Humidity: 73%
+        
+  <!-- end Weather -->
+  
+.row
+  <!-- Linechart -->
+  .col-lg-6
+    .widget-container
+      .heading
+        .pull-right.btn-group.hidden-xs data-toggle="buttons"
+          label.btn.btn-sm.btn-default-outline.active
+            | Day
+            input#option1 name="options" type="radio"
+          label.btn.btn-sm.btn-default-outline
+            | Week
+            input#option2 name="options" type="radio"
+          label.btn.btn-sm.btn-default-outline
+            | Month
+            input#option3 name="options" type="radio"
+        i.icon-bar-chart
+        | Growth over time
+      .widget-content.padded
+        .chart-graph.line-chart
+          #linechart-1 Loading...
+          ul.chart-text-axis
+            li 1
+            li 2
+            li 3
+            li 4
+            li 5
+            li 6
+            li 7
+            li 8
+            li 9
+            li 10
+            li 11
+            li 12
+  <!-- End Linechart -->
 
-	<!-- Bar Graph -->
-	.col-lg-4
-		.widget-container.small
-			.heading
-				i.icon-signal
-				| Today's Sales
-				i.icon-refresh.pull-right
-			.widget-content.padded
-				.bar-chart-widget
-					.bar-chart-info
-						.chart-number
-							i.icon-long-arrow-up
-							| $630
-					.chart-graph
-						#barcharts3 Loading...
-						ul.chart-text-axis
-							li 1
-							li 2
-							li 3
-							li 4
-							li 5
-							li 6
-							li 7
-							li 8
-							li 9
-							li 10
-							li 11
-							li 12
-	<!-- End Bar Graph -->
+  <!-- Pie Graph 1 -->
+  .col-lg-3.col-sm-6
+    .widget-container
+      .heading
+        i.icon-adjust
+        | Retention
+        i.icon-refresh.pull-right
+      .widget-content
+        .pie-chart1.pie-chart.pie-number data-percent="73" 73%
+  <!-- End Pie Graph 1 -->
+
+  <!-- Pie Graph 2 -->
+  .col-lg-3.col-sm-6
+    .widget-container
+      .heading
+        i.icon-adjust
+        | New users
+        i.icon-refresh.pull-right
+      .widget-content
+        .pie-chart2.pie-chart.pie-number data-percent="36" 26%
+  <!-- End Pie Graph 2 -->
+
+
+.row
+  <!-- Guages -->
+  .col-lg-4
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-signal
+        | Views Today
+        i.icon-refresh.pull-right
+      .widget-content
+        #gauge.gauge class="200x160px"
+        #gauge2.gauge class="200x160px"
+  <!-- End Gauges -->
+
+  <!-- Bar Graph -->
+  .col-lg-4
+    .widget-container.small
+      .heading
+        i.icon-signal
+        | Growth
+        i.icon-refresh.pull-right
+      .widget-content.padded
+        .bar-chart-widget
+          .bar-chart-info
+            .chart-number
+              i.icon-long-arrow-up
+              | 42%
+          .chart-graph
+            #barcharts2 Loading...
+            ul.chart-text-axis
+              li 1
+              li 2
+              li 3
+              li 4
+              li 5
+              li 6
+              li 7
+              li 8
+              li 9
+              li 10
+              li 11
+              li 12
+  <!-- End Bar Graph -->
+
+  <!-- Bar Graph -->
+  .col-lg-4
+    .widget-container.small
+      .heading
+        i.icon-signal
+        | Today's Sales
+        i.icon-refresh.pull-right
+      .widget-content.padded
+        .bar-chart-widget
+          .bar-chart-info
+            .chart-number
+              i.icon-long-arrow-up
+              | $630
+          .chart-graph
+            #barcharts3 Loading...
+            ul.chart-text-axis
+              li 1
+              li 2
+              li 3
+              li 4
+              li 5
+              li 6
+              li 7
+              li 8
+              li 9
+              li 10
+              li 11
+              li 12
+  <!-- End Bar Graph -->
 
 .row
   <!-- Task List -->
-	.col-lg-6
-		.widget-container.scrollable.list.task-widget
-			.heading
-				i.icon-list
-				| Task list
-				i.icon-plus.pull-right
-			.widget-content.scrollbar
-				ul
-					li
-						label
-							input type="checkbox" class="task-input" checked="checked"
-							span.task-checkbox
-							.label.label-success.pull-right Approved
-							| Distribute latest marketing
-					li
-						label
-							input type="checkbox" class="task-input"
-							span.task-checkbox
-							.label.label-success.pull-right Approved
-							| Create the latest mockup
-					li
-						label
-							input type="checkbox" class="task-input"
-							span.task-checkbox
-							.label.label-warning.pull-right Pending
-							| Code the latest features
-					li
-						label
-							input type="checkbox" class="task-input" checked="checked"
-							span.task-checkbox
-							.label.label-danger.pull-right Required
-							| Coffee time
-					li
-						label
-							input type="checkbox" class="task-input" checked="checked"
-							span.task-checkbox
-							.label.label-success.pull-right Approved
-							| Distribute latest marketing
-					li
-						label
-							input type="checkbox" class="task-input"
-							span.task-checkbox
-							.label.label-success.pull-right Approved
-							| Pick up lunch
-					li
-						label
-							input type="checkbox" class="task-input"
-							span.task-checkbox
-							.label.label-success.pull-right Approved
-							| Send out e-blast
-					li
-						label
-							input type="checkbox" class="task-input"
-							span.task-checkbox
-							.label.label-success.pull-right Approved
-							| Ask for a raise
-					li
-						label
-							input type="checkbox" class="task-input"
-							span.task-checkbox
-							.label.label-success.pull-right Approved
-							| Coffe time pt. 2
-					li
-						label
-							input type="checkbox" class="task-input"
-							span.task-checkbox
-							.label.label-success.pull-right Approved
-							| Bug fixes
-					li
-						label
-							input type="checkbox" class="task-input"
-							span.task-checkbox
-							.label.label-success.pull-right Approved
-							| Happy hour!!!
-	<!-- End Task List -->
+  .col-lg-6
+    .widget-container.scrollable.list.task-widget
+      .heading
+        i.icon-list
+        | Task list
+        i.icon-plus.pull-right
+      .widget-content.scrollbar
+        ul
+          li
+            label
+              input type="checkbox" class="task-input" checked="checked"
+              span.task-checkbox
+              .label.label-success.pull-right Approved
+              | Distribute latest marketing
+          li
+            label
+              input type="checkbox" class="task-input"
+              span.task-checkbox
+              .label.label-success.pull-right Approved
+              | Create the latest mockup
+          li
+            label
+              input type="checkbox" class="task-input"
+              span.task-checkbox
+              .label.label-warning.pull-right Pending
+              | Code the latest features
+          li
+            label
+              input type="checkbox" class="task-input" checked="checked"
+              span.task-checkbox
+              .label.label-danger.pull-right Required
+              | Coffee time
+          li
+            label
+              input type="checkbox" class="task-input" checked="checked"
+              span.task-checkbox
+              .label.label-success.pull-right Approved
+              | Distribute latest marketing
+          li
+            label
+              input type="checkbox" class="task-input"
+              span.task-checkbox
+              .label.label-success.pull-right Approved
+              | Pick up lunch
+          li
+            label
+              input type="checkbox" class="task-input"
+              span.task-checkbox
+              .label.label-success.pull-right Approved
+              | Send out e-blast
+          li
+            label
+              input type="checkbox" class="task-input"
+              span.task-checkbox
+              .label.label-success.pull-right Approved
+              | Ask for a raise
+          li
+            label
+              input type="checkbox" class="task-input"
+              span.task-checkbox
+              .label.label-success.pull-right Approved
+              | Coffe time pt. 2
+          li
+            label
+              input type="checkbox" class="task-input"
+              span.task-checkbox
+              .label.label-success.pull-right Approved
+              | Bug fixes
+          li
+            label
+              input type="checkbox" class="task-input"
+              span.task-checkbox
+              .label.label-success.pull-right Approved
+              | Happy hour!!!
+  <!-- End Task List -->
 
   <!-- Chat -->
   .col-lg-6
-		.widget-container.scrollable.chat
-			.heading
-				i.icon-comments
-				| Chat Widget
-				i.icon-smile.pull-right
-			.widget-content.padded.scrollbar
-				ul
-					li
-						= image_tag "avatar-male.jpg", width: "50", height:"50"
-						.bubble
-							= link_to "John Smith", "", class: "user-name"
-							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-							em.time
-								i.icon-time
-								| 10 min ago
-					li.current-user
-						= image_tag "avatar-female.png", width: "50", height:"50"
-						.bubble
-							= link_to "Jane Smith", "", class: "user-name"
-							p.message Donec odio. Quisque volutpat mattis eros.
-							em.time
-								i.icon-time
-								| 10 min ago
-					li
-						= image_tag "avatar-male.jpg", width: "50", height:"50"
-						.bubble
-							= link_to "John Smith", "", class: "user-name"
-							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
-							em.time
-								i.icon-time
-								| 10 min ago
-					li
-						= image_tag "avatar-male.jpg", width: "50", height:"50"
-						.bubble
-							= link_to "John Smith", "", class: "user-name"
-							p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
-							em.time
-								i.icon-time
-								| 10 min ago
+    .widget-container.scrollable.chat
+      .heading
+        i.icon-comments
+        | Chat Widget
+        i.icon-smile.pull-right
+      .widget-content.padded.scrollbar
+        ul
+          li
+            = image_tag "avatar-male.jpg", width: "50", height:"50"
+            .bubble
+              = link_to "John Smith", "", class: "user-name"
+              p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+              em.time
+                i.icon-time
+                | 10 min ago
+          li.current-user
+            = image_tag "avatar-female.png", width: "50", height:"50"
+            .bubble
+              = link_to "Jane Smith", "", class: "user-name"
+              p.message Donec odio. Quisque volutpat mattis eros.
+              em.time
+                i.icon-time
+                | 10 min ago
+          li
+            = image_tag "avatar-male.jpg", width: "50", height:"50"
+            .bubble
+              = link_to "John Smith", "", class: "user-name"
+              p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+              em.time
+                i.icon-time
+                | 10 min ago
+          li
+            = image_tag "avatar-male.jpg", width: "50", height:"50"
+            .bubble
+              = link_to "John Smith", "", class: "user-name"
+              p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+              em.time
+                i.icon-time
+                | 10 min ago
 
-			.post-message
-				input type="text" placeholder="Write your message here…" class="form-control"
-				input type="submit" value="Post" class="btn btn-default"
-		<!-- End Chat -->
+      .post-message
+        input type="text" placeholder="Write your message here…" class="form-control"
+        input type="submit" value="Post" class="btn btn-default"
+    <!-- End Chat -->
 script
-	
+  
