@@ -1,107 +1,69 @@
-/ .widget-container.padded.hidden-xs style="width:260px; background: rgba(245,245,245, 0.8); height: 200px; position:fixed; z-index:10; left:0; top: 30%;"
-/   .heading style="background: rgba(245,245,245, 0.7);"
-/     i.icon-adjust
-/     | Customize
-/     i.icon-refresh.pull-right
-/   .widget-content.padded
-/     h5 Brand Colors
-/     ul
-/           li
-/             a.settings-link.blue href="javascript:chooseStyle('none', 30)"
-/               span
-/               | Blue
-/           li
-/             a.settings-link.green href="javascript:chooseStyle('green-theme', 30)"
-/               span
-/               | Green
-/           li
-/             a.settings-link.orange href="javascript:chooseStyle('orange-theme', 30)"
-/               span
-/               | Orange
-/           li
-/             a.settings-link.magenta href="javascript:chooseStyle('magenta-theme', 30)"
-/               span
-/               | Magenta
-/           li
-/             a.settings-link.gray href="javascript:chooseStyle('gray-theme', 30)"
-/               span
-/               | Gray
-/     h5 Backgrounds
-/     h5 Typography
+.social-wrapper
+  #social-container
 
-.socialwrapper
-  #container
+    <!-- Share Form -->
     .item
-
-      <!-- Share Form -->
-      .widget-container.share.fluid-height.clearfix 
+      .widget-container.share-widget.fluid-height.clearfix 
           .widget-content.padded
-            textarea.form-control rows="3" placeholder="Share what's new..."
-          .col-xs-3
-            .share-options.active
-              i.icon-pencil
-              p.hidden-xs Text
-          .col-xs-3
-            .share-options
-              i.icon-camera
-              p.hidden-xs Photos
-          .col-xs-3
-            .share-options
-              i.icon-link
-              p.hidden-xs Links
-          .col-xs-3
-            .share-options
-              i.icon-youtube-play
-              p.hidden-xs Videos
-              <!-- Share Form -->
+            textarea.form-control rows="4" placeholder="Share what's new..."
+
+          .col-xs-3.share-options.active
+            i.icon-pencil
+            p.hidden-xs Text
+          .col-xs-3.share-options
+            i.icon-camera
+            p.hidden-xs Photos
+          .col-xs-3.share-options
+            i.icon-link
+            p.hidden-xs Links
+          .col-xs-3.share-options
+            i.icon-youtube-play
+            p.hidden-xs Videos
+    <!-- end Share Form -->
 
     <!-- Social Profile -->
     .item
-      .widget-container.clearfix.profile
-        .widget-content.clearfix
-          ul
-            li
-              .profile-image-wrapper
-                = image_tag "avatar-male.jpg", width: "50", height:"50", class: "social-avatar"
-                   
-              .profile-details-wrapper
-                = link_to "John Smith ", "", class: "user-name"            
-                p
-                  | jsmith@emaildomain.com
-                p  
-                  | Sharp&Nimble Designer
-          .col-xs-4.profile-stats.first
-            .share-options
+      .widget-container.fluid-height.profile-widget
+        .widget-content
+          .profile-info.clearfix
+            = image_tag "avatar-male.jpg", width: "70", height:"70", class: "social-avatar pull-left"
+            .profile-details
+              = link_to "John Smith", "", class: "user-name"            
+              p Sharp&Nimble Designer
+              p 
+                i.icon-map-marker
+                | Washington, D.C.
+          
+          .profile-stats
+            .col-xs-4
               h2 245
               p Posts
-          .col-xs-4.profile-stats
-            .share-options
+            .col-xs-4
               h2 150
               p Friends
-          .col-xs-4.profile-stats
-            .share-options
+            .col-xs-4
               h2 12
               p Videos
-              <!-- Social Profile -->
+    <!-- end Social Profile -->
     
     .item
-      .widget-container.fluid-height.clearfix.social-entry
+      .widget-container.fluid-height.social-entry
         .widget-content
-          .row
-            .profile-image-wrapper
-              = image_tag "avatar-female2.png", width: "50", height:"50"
+          .profile-info.clearfix.padded
+            = image_tag "avatar-female2.png", width: "50", height:"50", class: "social-avatar pull-left"
                  
-            .profile-details-wrapper
-              = link_to "Stan Humanbot ", "", class: "user-name"            
-              p
-                | 2 days ago
-          .row  
-            p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+            .profile-details
+              = link_to "Stan Humanbot", "", class: "user-name"            
+              p 2 days ago
+
+          p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+
           .row
             btn.btn-sm.btn-default-outline 
               i.icon-thumbs-up-alt
             btn.btn-sm.btn-default-outline 
               i.icon-mail-forward
+
         .comments
           .row
             .profile-image-wrapper
