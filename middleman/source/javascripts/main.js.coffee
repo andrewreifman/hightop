@@ -95,11 +95,18 @@ linechartResize = ->
     spotRadius: 0
     chartRangeMin: 0
 
+  $("#barchart-2").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
+    type: "bar"
+    height: "226"
+    barSpacing: 8
+    barWidth: 18
+    barColor: "#8fdbda"
+
   $("#composite-chart-1").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
     type: "bar"
     height: "226"
-    barSpacing: 10
-    barWidth: 26
+    barSpacing: 8
+    barWidth: 18
     barColor: "#8fdbda"
 
   $("#composite-chart-1").sparkline [100, 280, 150, 180, 220, 180, 130, 180, 180, 280, 260, 260],
