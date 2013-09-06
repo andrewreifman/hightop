@@ -1,0 +1,77 @@
+doctype html
+html
+  head
+    title se7en - Dashboard
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:100,300,400,700", media: "all"
+
+    = stylesheet_link_tag "bootstrap.min", media: "all"
+    = stylesheet_link_tag "font-awesome", media: "all"
+    = stylesheet_link_tag "se7en-font", media: "all"
+    = stylesheet_link_tag "isotope", media: "all"
+    = stylesheet_link_tag "classyscroll", media: "all"
+    = stylesheet_link_tag "jquery.fancybox", media: "all"
+    = stylesheet_link_tag "fullcalendar", media: "all"
+    = stylesheet_link_tag "wizard", media: "all"
+    = stylesheet_link_tag "select2", media: "all"
+    = stylesheet_link_tag "morris", media: "all"
+    = stylesheet_link_tag "color/green", media: "all", rel: "alternate stylesheet", title: "green-theme"
+    = stylesheet_link_tag "color/orange", media: "all", rel: "alternate stylesheet", title: "orange-theme"
+    = stylesheet_link_tag "color/magenta", media: "all", rel: "alternate stylesheet", title: "magenta-theme"
+    = stylesheet_link_tag "color/gray", media: "all", rel: "alternate stylesheet", title: "gray-theme"
+    = stylesheet_link_tag "application", media: "all"
+
+    = javascript_include_tag "http://code.jquery.com/jquery-1.10.2.min.js"
+    = javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js"
+
+    = javascript_include_tag "bootstrap.min"
+    = javascript_include_tag "modernizr.custom"
+    = javascript_include_tag "styleswitcher"
+    = javascript_include_tag "main"
+
+    = javascript_include_tag "application"
+    
+    meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
+
+  body
+
+    <!-- Signup Screen -->
+    .login
+      .login-container
+        = image_tag "logo-login@2x.png", width: "100", height:"30"
+        form
+          .form-group
+            .input-group
+              span.input-group-addon
+                i.icon-envelope
+              input.form-control value="Enter your email address" type="text"
+          .form-group
+            .input-group
+              span.input-group-addon
+                i.icon-lock
+              input.form-control value="Select a password" type="text"
+          .form-group
+            .input-group
+              span.input-group-addon
+                i.icon-lock
+              input.form-control value="Repeat your password" type="text"
+
+          .form-group
+            label.checkbox
+              input type="checkbox"
+              | I agree to the terms and conditions.
+          
+          a.btn.btn-lg.btn-primary.btn-block.login-submit href="index.html" Sign up
+
+          .social-login.clearfix
+            a.btn.btn-primary.pull-left.facebook
+              i.icon-facebook
+              | Sign up with facebook
+            a.btn.btn-primary.pull-right.twitter
+              i.icon-twitter
+              | Sign up with twitter
+
+          p Already have an account yet?
+          a.btn.btn-default-outline.btn-block href="#" Login now
+
+
+    <!-- End Signup Screen -->

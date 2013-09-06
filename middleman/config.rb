@@ -16,7 +16,7 @@ end
 #
 # With no layout
 page "login.html", :layout => false
-page "docs.html", :layout => false
+page "signup.html", :layout => false
 page "docs/index.html", :layout => false
 #
 # With alternative layout

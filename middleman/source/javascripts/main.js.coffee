@@ -128,21 +128,7 @@ $(document).ready ->
   ###
   $("#barcharts").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
     type: "bar"
-    height: "80"
-    barSpacing: 6
-    barWidth: 12
-    barColor: "#8fdbda"
-
-  $("#barcharts2").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
-    type: "bar"
-    height: "80"
-    barSpacing: 6
-    barWidth: 12
-    barColor: "#acaeaf"
-
-  $("#barcharts3").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
-    type: "bar"
-    height: "80"
+    height: "100"
     barSpacing: 6
     barWidth: 12
     barColor: "#f0ad4e"
@@ -802,7 +788,11 @@ $(document).ready ->
   #   Skycons
   # =============================================================================
   ###
-  if document.getElementById("partly-cloudy-day")
+  if document.getElementById("rain")
     skycons = new Skycons(color: "white")
-    skycons.add document.getElementById("partly-cloudy-day"), Skycons.PARTLY_CLOUDY_DAY
+    skycons.add document.getElementById("rain"), Skycons.RAIN
+    skycons.add document.getElementById("cloudy"), Skycons.CLOUDY
+    skycons.add document.getElementById("partly-cloudy"), Skycons.PARTLY_CLOUDY_DAY
+    skycons.add document.getElementById("sleet"), Skycons.SLEET
+    skycons.add document.getElementById("sun"), Skycons.CLEAR_DAY
     skycons.play()
