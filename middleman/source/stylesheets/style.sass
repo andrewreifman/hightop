@@ -443,6 +443,19 @@ small
     font-weight: 300
 
 /*-----------------------------------------------------------------------------------*/
+/*  Twitter Widget
+/*-----------------------------------------------------------------------------------*/
+.twitter-widget
+  background: #e54c42
+  font-weight: 200
+  color: #fff
+
+  h1
+    font-weight: 100
+    margin: 0
+    padding: 0
+
+/*-----------------------------------------------------------------------------------*/
 /*  Social Dashboard Styles
 /*-----------------------------------------------------------------------------------*/
 
@@ -450,14 +463,13 @@ small
   height: 80px
   border-left: 1px solid #e0e0e0
   margin-bottom: 0px
-  padding: 0px !important
   
   &.first
     border-left: 0px solid #e0e0e0
 
 .profile
   min-height: 120px !important
-  
+  padding-top: 20px
   p
     margin: 0
     padding: 0
@@ -486,11 +498,23 @@ small
   .profile-info
     padding: 0
     margin: 0
+
   .user-name
     font-size: 22px
     font-weight: 200
 
 .social-entry
+  padding-top: 20px
+
+  btn
+    margin-right: 6px
+    cursor: pointer
+
+  img
+    border-radius: 50%
+  p
+    font-weight: 200
+  
   ul
     list-style: none
     padding: 0
@@ -507,18 +531,22 @@ small
   .user-name
     padding: 0
     margin: 0
-  .time
-    opacity: 0.5
-  .content
     font-size: 16px
     font-weight: 200
 
-  .comments
-    background: #f1f1f1
-    min-height: 100px
+  .time
+    opacity: 0.5
 
-.socialwrapper
-  padding: 0 10px
+  .content
+    font-size: 14px
+    font-weight: 200
+
+  .comments
+    background: #f7f7f7
+    min-height: 100px
+    margin-top: 20px
+    padding-top: 20px
+
 
 .item 
   width: 364px
@@ -534,6 +562,9 @@ small
 
 #fit-width .masonry 
   margin: 0 auto
+
+textarea 
+  resize: none
 
 /*-----------------------------------------------------------------------------------*/
 /*  Button Styles
@@ -1160,20 +1191,6 @@ th:active
   height: 130px
   float: left
 
-
-/*-----------------------------------------------------------------------------------*/
-/*  Twitter Widget
-/*-----------------------------------------------------------------------------------*/
-.twitter-widget
-  background: #e54c42
-  font-weight: 200
-  color: #fff
-  border-right: 12px #eee solid
-
-  h1
-    font-weight: 100
-    margin: 0
-    padding: 0
 /*-----------------------------------------------------------------------------------*/
 /*  Weather Widget
 /*-----------------------------------------------------------------------------------*/
