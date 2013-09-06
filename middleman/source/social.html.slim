@@ -36,19 +36,19 @@
           .widget-content.padded
             textarea.form-control rows="4" 
               | Share what's new?
-          .col-xs-2
+          .col-xs-3
             .share-options.active
               i.icon-pencil
               p.hidden-xs Text
-          .col-xs-2
+          .col-xs-3
             .share-options
               i.icon-camera
               p.hidden-xs Photos
-          .col-xs-2
+          .col-xs-3
             .share-options
               i.icon-link
-              p.hidden-xs Link
-          .col-xs-2
+              p.hidden-xs Links
+          .col-xs-3
             .share-options
               i.icon-youtube-play
               p.hidden-xs Videos
@@ -56,9 +56,6 @@
 
     .item
       .widget-container.clearfix.profile
-        .heading
-          .pull-right.i.icon-edit
-          | Profile
         .widget-content.padded.clearfix
           ul
             li
@@ -67,8 +64,9 @@
                   = image_tag "avatar-female2.png", width: "50", height:"50"
                   
                 .col-xs-9
-                  = link_to "Stan Humanbot", "", class: "user-name"
-                  p humanbot@emaildomain.com
+                  = link_to "Stan Humanbot ", "", class: "user-name"
+                  p 
+                    | humanbot@emaildomain.com
                   p Sharp&Nimble Designer
           .col-xs-4.profile-stats.first
             .share-options
@@ -85,46 +83,66 @@
 
     .item
       .widget-container.fluid-height.clearfix.social-entry
-        .heading
-          .pull-right.i.icon-refresh
-          i.icon-fire
-          | What's hot?
         .widget-content.padded
-          ul
-            li
+          .row
+            .col-xs-3
               = image_tag "avatar-male.jpg", width: "50", height:"50"
+              
+            .col-xs-9
               = link_to "John Smith", "", class: "user-name"
               .time
-                |  10 min ago
-              p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
-              btn.btn-sm.btn-default-outline Like
-              btn.btn-sm.btn-default-outline Share
+                |  2 days ago
+          .row  
+            p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+          .row
+            btn.btn-sm.btn-default-outline 
+              i.icon-thumbs-up-alt
+            btn.btn-sm.btn-default-outline 
+              i.icon-mail-forward
         .comments.padded
-          p 2 comments
+          p 
+           | 2 comments
 
-          ul
-            li
-              = image_tag "avatar-female.png", width: "50", height:"50"
-              = link_to "John Smith", "", class: "user-name"
+          .row
+            .col-xs-3
+              = image_tag "avatar-female.jpg", width: "50", height:"50"
+              
+            .col-xs-9
+              = link_to "Monster Jackson", "", class: "user-name"
               .time
-                |  10 min ago
-              p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
-          ul
-            li
-              = image_tag "avatar-female.png", width: "50", height:"50"
-              = link_to "John Smith", "", class: "user-name"
+                em  10 min ago
+          .row  
+            p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+          .row
+            .col-xs-3
+              = image_tag "avatar-male2.png", width: "50", height:"50"
+              
+            .col-xs-9
+              = link_to "Sad Summers", "", class: "user-name"
               .time
-                |  10 min ago
-              p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+                em  10 min ago
+          .row  
+            p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Donec odio. Quisque volutpat mattis eros.
 
     .item
-      .col-xs-6.fluid-height.clearfix.text-center
+      .col-xs-12.twitter-widget.fluid-height.clearfix.text-center
         i.icon-twitter.icon-4x
         h1 12
-        | New Tweets
-      .col-xs-6.twitter-widget.fluid-height.clearfix.text-center
-        i.icon-twitter.icon-4x
-        h1 12
-        | New Tweets  
+        | New Tweets 
+
+    .item
+      .widget-container.fluid-height.clearfix.social-entry
+        .widget-content
+          .row
+            .col-xs-3
+              = image_tag "avatar-male.jpg", width: "50", height:"50"
+              
+            .col-xs-9
+              = link_to "John Smith", "", class: "user-name"
+              .time
+                |  2 days ago
+          .row  
+            <iframe width="100%" height="215" src="//www.youtube.com/embed/MPV3B4kTFLw" frameborder="0" allowfullscreen></iframe> 
+            p.content Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Donec odio. Quisque volutpat mattis eros.
   script
     
