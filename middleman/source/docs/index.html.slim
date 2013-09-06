@@ -47,6 +47,7 @@ html
     = javascript_include_tag "styleswitcher"
     = javascript_include_tag "wysiwyg"
     = javascript_include_tag "morris.min"
+    = javascript_include_tag "skycons"
     = javascript_include_tag "main"
     = javascript_include_tag "docs"
 
@@ -66,6 +67,7 @@ html
         li=link_to "Widget Container", "#widget-container"
         li=link_to "Sparkline", "#sparkline"
         li=link_to "Easy Pie Chart", "#easy-pie"
+        li=link_to "Skycons", "#skycons"
         li=link_to "Slider", "#slider"
         li=link_to "Select2", "#select2"
         li=link_to "JQVMap", "#maps"
@@ -234,6 +236,26 @@ html
               .easy-pie-chart data-percent="70" 70%
               = Pygments.highlight("$('.easy-pie-chart').easyPieChart({ size: 120, lineWidth: 10, lineCap: 'square', barColor: '#81e970', animate: 800, scaleColor: false });", lexer: 'javascript')
               p * Requires excanvas.min.js for IE8 support.
+
+        .col-lg-12
+          .widget-container.fluid-height#skycons
+            .heading
+              | Skycons
+              a href="http://darkskyapp.github.io/skycons/" class="pull-right" target="_blank" Full documentation
+
+            .widget-content.padded
+              canvas#clear-day height="64" width="64"
+              canvas#clear-night height="64" width="64"
+              canvas#partly-cloudy-day height="64" width="64"
+              canvas#partly-cloudy-night height="64" width="64"
+              canvas#cloudy height="64" width="64"
+              canvas#rain height="64" width="64"
+              canvas#sleet height="64" width="64"
+              canvas#snow height="64" width="64"
+              canvas#wind height="64" width="64"
+              canvas#fog height="64" width="64"
+
+              / = Pygments.highlight("#{partial 'skycons'}")
 
         .col-lg-12
           .widget-container.fluid-height#slider
