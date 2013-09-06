@@ -41,12 +41,14 @@ html
     = javascript_include_tag "jquery.easy-pie-chart"
     = javascript_include_tag "excanvas.min"
     = javascript_include_tag "jquery.isotope.min"
+    = javascript_include_tag "masonry.min"
     = javascript_include_tag "modernizr.custom"
     = javascript_include_tag "jquery.fancybox.pack"
     = javascript_include_tag "select2"
     = javascript_include_tag "styleswitcher"
     = javascript_include_tag "wysiwyg"
     = javascript_include_tag "morris.min"
+    = javascript_include_tag "skycons"
     = javascript_include_tag "skycons"
     = javascript_include_tag "main"
     = javascript_include_tag "docs"
@@ -244,18 +246,25 @@ html
               a href="http://darkskyapp.github.io/skycons/" class="pull-right" target="_blank" Full documentation
 
             .widget-content.padded
-              canvas#clear-day height="64" width="64"
-              canvas#clear-night height="64" width="64"
-              canvas#partly-cloudy-day height="64" width="64"
-              canvas#partly-cloudy-night height="64" width="64"
-              canvas#cloudy height="64" width="64"
-              canvas#rain height="64" width="64"
-              canvas#sleet height="64" width="64"
-              canvas#snow height="64" width="64"
-              canvas#wind height="64" width="64"
-              canvas#fog height="64" width="64"
+              .skycons
+                canvas#clear-day height="64" width="64"
+                canvas#clear-night height="64" width="64"
+                canvas#partly-cloudy-day height="64" width="64"
+                canvas#partly-cloudy-night height="64" width="64"
+                canvas#cloudy height="64" width="64"
+                canvas#rain height="64" width="64"
+                canvas#sleet height="64" width="64"
+                canvas#snow height="64" width="64"
+                canvas#wind height="64" width="64"
+                canvas#fog height="64" width="64"
 
-              / = Pygments.highlight("#{partial 'skycons'}")
+              = Pygments.highlight("var skycons = new Skycons({'color': 'black'});", lexer: 'javascript')
+              p You can add a canvas by it's ID
+              = Pygments.highlight("skycons.add('icon1', Skycons.PARTLY_CLOUDY_DAY);", lexer: 'javascript')
+              p Or by the canvas DOM element itself
+              = Pygments.highlight("skycons.add(document.getElementById('icon1'), Skycons.RAIN);", lexer: 'javascript')
+              p Start animation!
+              = Pygments.highlight("skycons.play();", lexer: 'javascript')
 
         .col-lg-12
           .widget-container.fluid-height#slider
