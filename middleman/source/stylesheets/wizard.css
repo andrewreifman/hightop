@@ -90,10 +90,9 @@
 
 }
 
-#wizard>.nav{
-
+#wizard>.padded>.nav{
 	pointer-events: none !important;
-	   cursor: default !important;	
+	cursor: default !important;	
 }
 
 #wizard>.pager{
