@@ -132,25 +132,9 @@ small
 /*-----------------------------------------------------------------------------------*/
 /*  Login
 /*-----------------------------------------------------------------------------------*/
-.login
-  padding: 30px 15px 15px
+body.login
+  padding: 30px 0 0
   background: #eee
-  position: fixed
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  z-index: 9999
-  box-shadow: 0 0 6px rgba(0,0,0,.25)
-  @include transform(scale(1))
-  -webkit-transition: opacity .6s, -webkit-transform .6s, left .8s .7s cubic-bezier(0.680, -0.550, 0.265, 1.550)
-  -moz-transition: opacity .6s, -moz-transform .6s, left .8s .7s cubic-bezier(0.680, -0.550, 0.265, 1.550)
-  transition: opacity .6s, transform .6s, left .8s .7s cubic-bezier(0.680, -0.550, 0.265, 1.550)
-
-  &.submitted
-    @include transform(scale(.9))
-    left: 100%
-    opacity: 0.95
 
   .login-container
     max-width: 420px
@@ -2622,6 +2606,43 @@ button.close
 
 
 /*-----------------------------------------------------------------------------------*/
+/*  404 Page
+/*-----------------------------------------------------------------------------------*/
+body.fourofour
+  background-color: $blue
+  padding: 0
+  position: relative
+
+  .fourofour-container
+    max-width: 400px
+    width: 400px
+    text-align: center
+    color: #FFF
+    position: absolute
+    top: 50%
+    left: 50%
+    margin: -200px 0 0 -200px
+
+    h1
+      font-size: 200px
+      font-weight: 100
+      text-shadow: rgb(0, 98, 204) 1px 1px, rgb(0, 98, 204) 2px 2px, rgb(0, 98, 204) 3px 3px, rgb(0, 98, 205) 4px 4px, rgb(0, 98, 205) 5px 5px, rgb(0, 98, 205) 6px 6px, rgb(0, 98, 205) 7px 7px, rgb(0, 98, 206) 8px 8px, rgb(0, 99, 206) 9px 9px, rgb(0, 99, 206) 10px 10px, rgb(0, 99, 206) 11px 11px, rgb(0, 99, 207) 12px 12px, rgb(0, 99, 207) 13px 13px, rgb(0, 99, 207) 14px 14px, rgb(0, 99, 207) 15px 15px, rgb(0, 99, 208) 16px 16px, rgb(0, 100, 208) 17px 17px, rgb(0, 100, 208) 18px 18px, rgb(0, 100, 208) 19px 19px, rgb(0, 100, 209) 20px 20px, rgb(0, 100, 209) 21px 21px, rgb(0, 100, 209) 22px 22px, rgb(0, 100, 209) 23px 23px, rgb(0, 100, 210) 24px 24px, rgb(0, 101, 210) 25px 25px, rgb(0, 101, 210) 26px 26px, rgb(0, 101, 210) 27px 27px, rgb(0, 101, 211) 28px 28px, rgb(0, 101, 211) 29px 29px, rgb(0, 101, 211) 30px 30px, rgb(0, 101, 211) 31px 31px, rgb(0, 101, 212) 32px 32px, rgb(0, 101, 212) 33px 33px, rgb(0, 102, 212) 34px 34px, rgb(0, 102, 212) 35px 35px, rgb(0, 102, 213) 36px 36px, rgb(0, 102, 213) 37px 37px, rgb(0, 102, 213) 38px 38px, rgb(0, 102, 213) 39px 39px, rgb(0, 102, 214) 40px 40px, rgb(0, 102, 214) 41px 41px, rgb(0, 103, 214) 42px 42px, rgb(0, 103, 214) 43px 43px, rgb(0, 103, 215) 44px 44px, rgb(0, 103, 215) 45px 45px, rgb(0, 103, 215) 46px 46px, rgb(0, 103, 215) 47px 47px, rgb(0, 103, 216) 48px 48px, rgb(0, 103, 216) 49px 49px, rgb(0, 104, 216) 50px 50px, rgb(0, 104, 217) 51px 51px, rgb(0, 104, 217) 52px 52px, rgb(0, 104, 217) 53px 53px, rgb(0, 104, 217) 54px 54px, rgb(0, 104, 218) 55px 55px, rgb(0, 104, 218) 56px 56px, rgb(0, 104, 218) 57px 57px, rgb(0, 104, 218) 58px 58px, rgb(0, 105, 219) 59px 59px, rgb(0, 105, 219) 60px 60px, rgb(0, 105, 219) 61px 61px, rgb(0, 105, 219) 62px 62px, rgb(0, 105, 220) 63px 63px, rgb(0, 105, 220) 64px 64px, rgb(0, 105, 220) 65px 65px, rgb(0, 105, 220) 66px 66px, rgb(0, 106, 221) 67px 67px, rgb(0, 106, 221) 68px 68px, rgb(0, 106, 221) 69px 69px, rgb(0, 106, 221) 70px 70px, rgb(0, 106, 222) 71px 71px, rgb(0, 106, 222) 72px 72px, rgb(0, 106, 222) 73px 73px, rgb(0, 106, 222) 74px 74px, rgb(0, 107, 223) 75px 75px, rgb(0, 107, 223) 76px 76px, rgb(0, 107, 223) 77px 77px, rgb(0, 107, 223) 78px 78px, rgb(0, 107, 224) 79px 79px, rgb(0, 107, 224) 80px 80px, rgb(0, 107, 224) 81px 81px, rgb(0, 107, 224) 82px 82px, rgb(0, 107, 225) 83px 83px, rgb(0, 108, 225) 84px 84px, rgb(0, 108, 225) 85px 85px, rgb(0, 108, 225) 86px 86px, rgb(0, 108, 226) 87px 87px, rgb(0, 108, 226) 88px 88px, rgb(0, 108, 226) 89px 89px, rgb(0, 108, 226) 90px 90px, rgb(0, 108, 227) 91px 91px, rgb(0, 109, 227) 92px 92px, rgb(0, 109, 227) 93px 93px, rgb(0, 109, 227) 94px 94px, rgb(0, 109, 228) 95px 95px, rgb(0, 109, 228) 96px 96px, rgb(0, 109, 228) 97px 97px, rgb(0, 109, 228) 98px 98px, rgb(0, 109, 229) 99px 99px, rgb(0, 110, 229) 100px 100px, rgb(0, 110, 229) 101px 101px, rgb(0, 110, 230) 102px 102px, rgb(0, 110, 230) 103px 103px, rgb(0, 110, 230) 104px 104px, rgb(0, 110, 230) 105px 105px, rgb(0, 110, 231) 106px 106px, rgb(0, 110, 231) 107px 107px, rgb(0, 110, 231) 108px 108px, rgb(0, 111, 231) 109px 109px, rgb(0, 111, 232) 110px 110px, rgb(0, 111, 232) 111px 111px, rgb(0, 111, 232) 112px 112px, rgb(0, 111, 232) 113px 113px, rgb(0, 111, 233) 114px 114px, rgb(0, 111, 233) 115px 115px, rgb(0, 111, 233) 116px 116px, rgb(0, 112, 233) 117px 117px, rgb(0, 112, 234) 118px 118px, rgb(0, 112, 234) 119px 119px, rgb(0, 112, 234) 120px 120px, rgb(0, 112, 234) 121px 121px, rgb(0, 112, 235) 122px 122px, rgb(0, 112, 235) 123px 123px, rgb(0, 112, 235) 124px 124px, rgb(0, 113, 235) 125px 125px, rgb(0, 113, 236) 126px 126px, rgb(0, 113, 236) 127px 127px, rgb(0, 113, 236) 128px 128px, rgb(0, 113, 236) 129px 129px, rgb(0, 113, 237) 130px 130px, rgb(0, 113, 237) 131px 131px, rgb(0, 113, 237) 132px 132px, rgb(0, 113, 237) 133px 133px, rgb(0, 114, 238) 134px 134px, rgb(0, 114, 238) 135px 135px, rgb(0, 114, 238) 136px 136px, rgb(0, 114, 238) 137px 137px, rgb(0, 114, 239) 138px 138px, rgb(0, 114, 239) 139px 139px, rgb(0, 114, 239) 140px 140px, rgb(0, 114, 239) 141px 141px, rgb(0, 115, 240) 142px 142px, rgb(0, 115, 240) 143px 143px, rgb(0, 115, 240) 144px 144px, rgb(0, 115, 240) 145px 145px, rgb(0, 115, 241) 146px 146px, rgb(0, 115, 241) 147px 147px, rgb(0, 115, 241) 148px 148px, rgb(0, 115, 241) 149px 149px, rgb(0, 116, 242) 150px 150px, rgb(0, 116, 242) 151px 151px, rgb(0, 116, 242) 152px 152px, rgb(0, 116, 243) 153px 153px, rgb(0, 116, 243) 154px 154px, rgb(0, 116, 243) 155px 155px, rgb(0, 116, 243) 156px 156px, rgb(0, 116, 244) 157px 157px, rgb(0, 116, 244) 158px 158px, rgb(0, 117, 244) 159px 159px, rgb(0, 117, 244) 160px 160px, rgb(0, 117, 245) 161px 161px, rgb(0, 117, 245) 162px 162px, rgb(0, 117, 245) 163px 163px, rgb(0, 117, 245) 164px 164px, rgb(0, 117, 246) 165px 165px, rgb(0, 117, 246) 166px 166px, rgb(0, 118, 246) 167px 167px, rgb(0, 118, 246) 168px 168px, rgb(0, 118, 247) 169px 169px, rgb(0, 118, 247) 170px 170px, rgb(0, 118, 247) 171px 171px, rgb(0, 118, 247) 172px 172px, rgb(0, 118, 248) 173px 173px, rgb(0, 118, 248) 174px 174px, rgb(0, 119, 248) 175px 175px, rgb(0, 119, 248) 176px 176px, rgb(0, 119, 249) 177px 177px, rgb(0, 119, 249) 178px 178px, rgb(0, 119, 249) 179px 179px, rgb(0, 119, 249) 180px 180px, rgb(0, 119, 250) 181px 181px, rgb(0, 119, 250) 182px 182px, rgb(0, 119, 250) 183px 183px, rgb(0, 120, 250) 184px 184px, rgb(0, 120, 251) 185px 185px, rgb(0, 120, 251) 186px 186px, rgb(0, 120, 251) 187px 187px, rgb(0, 120, 251) 188px 188px, rgb(0, 120, 252) 189px 189px, rgb(0, 120, 252) 190px 190px, rgb(0, 120, 252) 191px 191px, rgb(0, 121, 252) 192px 192px, rgb(0, 121, 253) 193px 193px, rgb(0, 121, 253) 194px 194px, rgb(0, 121, 253) 195px 195px, rgb(0, 121, 253) 196px 196px, rgb(0, 121, 254) 197px 197px, rgb(0, 121, 254) 198px 198px, rgb(0, 121, 254) 199px 199px, rgb(0, 122, 255) 200px 200px
+
+    h2
+      font-size: 32px
+      font-weight: 100
+      margin-bottom: 40px
+
+    a.btn
+      border-color: #FFF
+      color: #FFF
+
+      &:hover
+        color: $blue
+        background-color: #FFF
+
+
+/*-----------------------------------------------------------------------------------*/
 /*  Mobile Styles
 /*-----------------------------------------------------------------------------------*/
 @media (max-width: 979px)
@@ -2799,3 +2820,15 @@ button.close
   .item 
     width: 100%
     margin-bottom: 10px
+
+  body.fourofour
+    .fourofour-container
+      max-width: 320px
+      width: 320px
+      margin: -190px 0 0 -160px
+
+      h1
+        font-size: 160px
+
+      h2
+        font-size: 28px
