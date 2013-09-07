@@ -665,6 +665,10 @@ body.login
     border-bottom-color: #d9534f
 
 
+.nav-pills > li.active > a, .nav-pills > li.active>a:hover, .nav-pills > li.active > a:focus
+  background-color: $blue
+
+
 /*-----------------------------------------------------------------------------------*/
 /*  Dropdown Styles
 /*-----------------------------------------------------------------------------------*/
@@ -1889,6 +1893,9 @@ input[type="text"]
     border-color: $blue
     box-shadow: none
 
+  &.has-error
+    border-color: #d9534f
+
 .form-horizontal
   .form-group
     margin-bottom: 0
@@ -2544,7 +2551,7 @@ button.close
 
 #editor
   overflow-y: scroll
-  height: 330px
+  height: 314px
   width: 100%
   background: white
   padding: 10px 12px
