@@ -773,15 +773,21 @@ $(document).ready ->
   #   Masonry
   # =============================================================================
   ###
-  container = document.querySelector("#social-container")
-
-  if container
-    msnry = new Masonry(container,
+  $container = $("#social-container").masonry()
+  $container.imagesLoaded ->
+    $container.masonry
       "isFitWidth": true
-      gutter: 15
+      gutter: 20
       isFitWidth: true
       itemSelector: ".item"
-    )
+
+  # $container = $("#social-container")
+  # $container.imagesLoaded ->
+  #   $container.masonry
+  #     "isFitWidth": true
+  #     gutter: 15
+  #     isFitWidth: true
+  #     itemSelector: ".item"
 
 
   ###

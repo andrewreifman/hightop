@@ -1184,11 +1184,8 @@ th:active
     max-width: 100%
 
     .item 
-      width: 364px
-      margin-bottom: 15px
-
-    .item.w2 
-      width: 50%
+      width: 350px
+      margin-bottom: 20px
 
     .share-widget
       background: #f8f8f8
@@ -1269,7 +1266,11 @@ th:active
             border-left: 0px
 
           h2
-            margin-bottom: 5px     
+            font-weight: 100
+            margin-bottom: 5px
+
+          p
+            font-weight: 200   
 
     .social-entry
       p
@@ -1292,6 +1293,9 @@ th:active
           font-size: 18px
           font-weight: 200
           margin: 2px 0 6px
+
+        & + p.content
+          margin-top: 15px
 
       .profile-details
         display: inline-block
@@ -1358,7 +1362,7 @@ th:active
   [class^="icon-"], [class*=" icon-"]
     vertical-align: middle
     font-size: 70px
-    margin: 0 10px 0 -15px
+    margin: 0 10px 0 -20px
 
   .social-data
     text-align: center
@@ -2785,9 +2789,11 @@ body.fourofour
   #composite-chart-1 canvas
     width: 100% !important
 
-  .item 
-    width: 100%
-    margin-bottom: 10px
+  .social-wrapper
+    padding: 0 15px
+    .item 
+      width: 100% !important
+      margin-bottom: 15px !important
 
   body.fourofour
     .fourofour-container
