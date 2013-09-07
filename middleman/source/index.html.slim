@@ -1,4 +1,5 @@
 <!-- Statistics -->
+
 .row
   .col-lg-12
     .widget-container.stats-container
@@ -96,68 +97,29 @@
               li 11
               li 12
   <!-- End Bar Graph -->
-
 .row
-  <!-- Linechart -->
-  .col-lg-6
-    .widget-container
+.chart-container
+  .col-md-6
+    .widget-container.fluid-height
       .heading
         .pull-right.btn-group.hidden-xs data-toggle="buttons"
           label.btn.btn-sm.btn-default-outline.active
-            | Day
+            | Year
             input#option1 name="options" type="radio"
           label.btn.btn-sm.btn-default-outline
-            | Week
+            | Month
             input#option2 name="options" type="radio"
           label.btn.btn-sm.btn-default-outline
-            | Month
+            | Week
             input#option3 name="options" type="radio"
         i.icon-bar-chart
-        | Growth over time
-      .widget-content.padded
-        .chart-graph.line-chart
-          #linechart-1 Loading...
-          ul.chart-text-axis
-            li 1
-            li 2
-            li 3
-            li 4
-            li 5
-            li 6
-            li 7
-            li 8
-            li 9
-            li 10
-            li 11
-            li 12
-  <!-- End Linechart -->
-
-  <!-- Pie Graph 1 -->
-  .col-lg-3.col-sm-6
-    .widget-container
-      .heading
-        i.icon-adjust
-        | Retention
-        i.icon-refresh.pull-right
-      .widget-content
-        .pie-chart1.pie-chart.pie-number data-percent="73" 73%
-  <!-- End Pie Graph 1 -->
-
-  <!-- Pie Graph 2 -->
-  .col-lg-3.col-sm-6
-    .widget-container
-      .heading
-        i.icon-adjust
-        | New users
-        i.icon-refresh.pull-right
-      .widget-content
-        .pie-chart2.pie-chart.pie-number data-percent="36" 26%
-  <!-- End Pie Graph 2 -->
-
-.row
-  <!-- Task List -->
+        | Earnings
+      .widget-content.padded.text-center
+        .graph-container
+          #hero-graph.graph
+<!-- Task List -->
   .col-lg-6
-    .widget-container.scrollable.list.task-widget
+    .widget-container.scrollable.list.task-widget.home-tasks
       .heading
         i.icon-list
         | Task list
@@ -230,10 +192,59 @@
               span.task-checkbox
               .label.label-success.pull-right Approved
               | Happy hour!!!
-  <!-- End Task List -->
+            <!-- End Task List -->
+.row.clearfix  
+  <!-- Pie Graph 1 -->
+  .col-lg-3.col-sm-6
+    .widget-container
+      .heading
+        i.icon-adjust
+        | Retention
+        i.icon-refresh.pull-right
+      .widget-content
+        .pie-chart1.pie-chart.pie-number data-percent="73" 73%
+  <!-- End Pie Graph 1 -->
 
-  <!-- Chat -->
+  <!-- Pie Graph 2 -->
+  .col-lg-3.col-sm-6
+    .widget-container
+      .heading
+        i.icon-adjust
+        | New users
+        i.icon-refresh.pull-right
+      .widget-content
+        .pie-chart2.pie-chart.pie-number data-percent="36" 26%
+  <!-- End Pie Graph 2 -->
+
+  <!-- Linechart -->
   .col-lg-6
+    .widget-container
+      .heading
+        i.icon-bar-chart
+        | Growth over time
+      .widget-content.padded
+        .chart-graph.line-chart
+          #linechart-1 Loading...
+          ul.chart-text-axis
+            li 1
+            li 2
+            li 3
+            li 4
+            li 5
+            li 6
+            li 7
+            li 8
+            li 9
+            li 10
+            li 11
+            li 12
+  <!-- End Linechart -->
+
+
+  
+.row
+  <!-- Chat -->
+  .col-lg-12
     .widget-container.scrollable.chat
       .heading
         i.icon-comments
