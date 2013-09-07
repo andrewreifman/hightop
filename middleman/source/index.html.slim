@@ -98,7 +98,6 @@
               li 12
   <!-- End Bar Graph -->
 .row
-.chart-container
   .col-md-6
     .widget-container.fluid-height
       .heading
@@ -115,10 +114,10 @@
         i.icon-bar-chart
         | Earnings
       .widget-content.padded.text-center
-        .graph-container
+        .graph-container.chart-container
           #hero-graph.graph
-<!-- Task List -->
-  .col-lg-6
+    <!-- Task List -->
+  .col-md-6
     .widget-container.scrollable.list.task-widget.home-tasks
       .heading
         i.icon-list
@@ -193,7 +192,7 @@
               .label.label-success.pull-right Approved
               | Happy hour!!!
             <!-- End Task List -->
-.row.clearfix  
+.row
   <!-- Pie Graph 1 -->
   .col-lg-3.col-sm-6
     .widget-container
@@ -240,54 +239,5 @@
             li 12
   <!-- End Linechart -->
 
-
-  
-.row
-  <!-- Chat -->
-  .col-lg-12
-    .widget-container.scrollable.chat
-      .heading
-        i.icon-comments
-        | Chat Widget
-        i.icon-smile.pull-right
-      .widget-content.padded.scrollbar
-        ul
-          li
-            = image_tag "avatar-male.jpg", width: "50", height:"50"
-            .bubble
-              = link_to "John Smith", "", class: "user-name"
-              p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-              em.time
-                i.icon-time
-                | 10 min ago
-          li.current-user
-            = image_tag "avatar-female.png", width: "50", height:"50"
-            .bubble
-              = link_to "Jane Smith", "", class: "user-name"
-              p.message Donec odio. Quisque volutpat mattis eros.
-              em.time
-                i.icon-time
-                | 10 min ago
-          li
-            = image_tag "avatar-male.jpg", width: "50", height:"50"
-            .bubble
-              = link_to "John Smith", "", class: "user-name"
-              p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
-              em.time
-                i.icon-time
-                | 10 min ago
-          li
-            = image_tag "avatar-male.jpg", width: "50", height:"50"
-            .bubble
-              = link_to "John Smith", "", class: "user-name"
-              p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
-              em.time
-                i.icon-time
-                | 10 min ago
-
-      .post-message
-        input type="text" placeholder="Write your message here…" class="form-control"
-        input type="submit" value="Post" class="btn btn-default"
-    <!-- End Chat -->
 script
 
