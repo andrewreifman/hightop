@@ -133,12 +133,13 @@ $(document).ready ->
   #   Sparkline Linechart JS
   # =============================================================================
   ###
-  $("#barcharts").sparkline [160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120],
+  $("#barcharts").sparkline [190, 220, 210, 220, 220, 260, 300, 220, 240, 240, 220, 200, 240, 260],
     type: "bar"
     height: "100"
-    barSpacing: 6
-    barWidth: 12
-    barColor: "#f0ad4e"
+    barSpacing: 4
+    barWidth: 13
+    barColor: "#cbcbcb"
+    highlightColor: "#89D1E6"
 
   $("#pie-chart").sparkline [2,8,6,10],
     type: "pie"
