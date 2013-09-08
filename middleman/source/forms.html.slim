@@ -13,64 +13,54 @@
           .padded
             ul.wizard-nav
               li
-                a data-toggle="tab" href="#tab1" Sign in
+                a data-toggle="tab" href="#tab1" 1
               li
-                a data-toggle="tab" href="#tab2" Personal 
+                a data-toggle="tab" href="#tab2" 2 
               li
-                a data-toggle="tab" href="#tab3" Payment
-              li
-                a data-toggle="tab" href="#tab4" Review
+                a data-toggle="tab" href="#tab3" 3
 
             .progress.progress-striped.active
               .progress-bar aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar"
 
             .tab-content
-              #tab1.tab-pane.text-center
-                h2 Welcome! 
-                p.padded Thank you for getting started. Please enter your desired username and password to get going with this wizard.
+              #tab1.tab-pane
+                h2 Login Credentials
+
                 form role="form"
                   .form-group
-                    label for="exampleInputEmail1"
-                    input#name.form-control placeholder="Enter your name" type="email"
+                    label for="email" Email address
+                    input#name.form-control placeholder="john@email.com" type="email"
                   .form-group
-                    label for="exampleInputPassword1"
-                    input#exampleInputPassword1.form-control placeholder="Password (Optional)" type="password"
+                    label for="password" Password
+                    input#password.form-control placeholder="4-8 characters" type="password"
 
               #tab2.tab-pane
+                h2 Personal Information
                 form role="form"
                   .form-group
-                    label for="exampleInputEmail1"
-                    input.form-control placeholder="Address" type="email"
+                    label for="name" Full Name
+                    input#name.form-control placeholder="" type="text"
                   .form-group
-                    label for="exampleInputPassword1"
-                    input#exampleInputPassword1.form-control placeholder="Country" type="password"
+                    label for="country" Country
+                    input#country.form-control placeholder="" type="text"
+
               #tab3.tab-pane
+                h2 Payment Information
                 form role="form"
                   .form-group
-                    label for="exampleInputEmail1"
-                    input#name.form-control placeholder="Enter email" type="email"
+                    label for="name-credit" Name on credit card
+                    input#name-credit.form-control placeholder="" type="text"
                   .form-group
-                    label for="exampleInputPassword1"
-                    input#exampleInputPassword1.form-control placeholder="Password" type="password"
-              #tab4.tab-pane
-                form role="form"
-                  .form-group
-                    label for="exampleInputEmail1"
-                    input#name.form-control placeholder="Enter email" type="email"
-                  .form-group
-                    label for="exampleInputPassword1"
-                    input#exampleInputPassword1.form-control placeholder="Password" type="password"
+                    label for="credit-card" Credit card number
+                    input#credit-card.form-control placeholder="" type="text"
+              
           .pager  
             btn.btn.btn-default-outline.btn-previous
               i.icon-long-arrow-left
               | Prev
             btn.btn.btn-primary-outline.btn-next
-              i.icon-long-arrow-right
               | Next
-
-
-
-
+              i.icon-long-arrow-right
 
 
   .col-md-8

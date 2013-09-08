@@ -782,14 +782,6 @@ $(document).ready ->
       isFitWidth: true
       itemSelector: ".item"
 
-  # $container = $("#social-container")
-  # $container.imagesLoaded ->
-  #   $container.masonry
-  #     "isFitWidth": true
-  #     gutter: 15
-  #     isFitWidth: true
-  #     itemSelector: ".item"
-
 
   ###
   # =============================================================================
