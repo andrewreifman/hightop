@@ -2,7 +2,7 @@
 	display: inline-block;
 	margin: 0; padding: 0;
 	background: #fff; 
-	font-weight: 200;	
+	font-weight: 300;	
 	pointer-events: none !important;
 	cursor: default !important;
 }
@@ -85,7 +85,7 @@
 }
 .nav-pills >li >a {
 	border-radius: 0px;
-	font-weight: 200;
+	font-weight: 300;
 }
 
 .wizard-nav {
