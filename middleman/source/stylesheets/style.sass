@@ -929,12 +929,6 @@ th:active
       overflow-y: auto
       -webkit-overflow-scrolling: touch
 
-    &.list ul li
-      padding-right: 22px
-
-      &:hover
-        background: #f1f1f1
-
 .padded
   padding: 15px
 
@@ -1601,14 +1595,22 @@ th:active
 /*  Task widget
 /*-----------------------------------------------------------------------------------*/
 .task-widget
-  label
-    font-weight: normal
-    margin: 0
-    cursor: pointer
-    width: 100%
+  ul li
+    padding: 0
 
-  .task-input
-    display: none
+    label
+      font-weight: normal
+      margin: 0
+      cursor: pointer
+      width: 100%
+      display: block
+      padding: 10px 15px 12px 10px
+
+      &:hover
+        background-color: #f6f6f6
+
+    .task-input
+      display: none
 
   input[type="checkbox"] + .task-checkbox
     font-family: "FontAwesome"
