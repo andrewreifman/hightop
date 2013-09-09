@@ -5,7 +5,7 @@
       ul.nav.navbar-nav.pull-right
         li.dropdown.notifications.hidden-xs
           a.dropdown-toggle data-toggle="dropdown" href="#"
-            span aria-hidden="true" class="se7en-flag" 
+            span aria-hidden="true" class="se7en-flag"
             .sr-only Notifications
             p.counter 4
           ul.dropdown-menu
@@ -24,7 +24,7 @@
 
         li.dropdown.messages.hidden-xs
           a.dropdown-toggle data-toggle="dropdown" href="#"
-            span aria-hidden="true" class="se7en-envelope" 
+            span aria-hidden="true" class="se7en-envelope"
             .sr-only Messages
             p.counter 3
           ul.dropdown-menu.messages
@@ -39,7 +39,7 @@
               | Buy Se7en today, it's a great theme...
         li.dropdown.settings.hidden-xs
           a.dropdown-toggle data-toggle="dropdown" href="#"
-            span aria-hidden="true" class="se7en-gear" 
+            span aria-hidden="true" class="se7en-gear"
             .sr-only Settings
           ul.dropdown-menu
             li
@@ -90,7 +90,8 @@
       span.icon-bar
       span.icon-bar
 
-    = link_to "se7en", 'index.html', class: 'logo'
+    a href='index.html' class='logo'
+      | se7en
     form.navbar-form.form-inline.col-lg-2.hidden-xs
       input.form-control placeholder="Search" type="text"
 
@@ -99,7 +100,7 @@
     .nav-collapse
       ul.nav
         li.dashboard
-          = link_to 'index.html', class: cp('index.html') do
+          a href='index.html' class=cp('index.html')
             span aria-hidden="true" class="se7en-home"
             | Dashboard
         li.dashboard
