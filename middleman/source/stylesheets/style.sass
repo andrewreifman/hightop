@@ -35,20 +35,13 @@ $blue: #007aff
   -o-transform: $effect
 
 =gradient($from, $to)
-  /* fallback/image non-cover color */
   background-color: $from
-
-  /* Firefox 3.6+ */
   background-image: -moz-linear-gradient($from, $to)
-
-  /* Safari 4+, Chrome 1+ */
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to))
-
-  /* Safari 5.1+, Chrome 10+ */
   background-image: -webkit-linear-gradient($from, $to)
-
-  /* Opera 11.10+ */
   background-image: -o-linear-gradient($from, $to)
+
+
 /*-----------------------------------------------------------------------------------*/
 /*  Document Setup
 /*-----------------------------------------------------------------------------------*/
@@ -242,7 +235,7 @@ body.login
         background-color: #c6c6c6
 
     .logo
-      background: image-url('se7en-logo.png') no-repeat 0 0
+      background: url('../images/se7en-logo.png') no-repeat 0 0
       @include image2x("se7en-logo@2x.png", 54px, 16px)
       width: 54px
       height: 16px
@@ -257,7 +250,7 @@ body.login
         height: 30px
         border-color: #e6e6e6
         box-shadow: none
-        background: #FFF image-url('icon-search.png') no-repeat center left
+        background: #FFF url('../images/icon-search.png') no-repeat center left
         @include image2x("icon-search@2x.png", 18px, 12px)
         padding-left: 24px
         margin-top: 1px
@@ -959,7 +952,7 @@ th:active
       letter-spacing: -.06em
 
       .icon
-        background: image-url('info-data-sprite.png') no-repeat left top
+        background: url('../images/info-data-sprite.png') no-repeat left top
         @include image2x("info-data-sprite@2x.png", 200px, 190px)
         width: 50px
         height: 38px
@@ -1728,7 +1721,7 @@ th:active
             position: absolute
             top: 25px
             right: 100%
-            background: image-url('chat-left.png') left top no-repeat
+            background: url('../images/chat-left.png') left top no-repeat
             @include image2x('chat-left@2x.png', 16px, 18px)
             width: 16px
             height: 18px
@@ -1767,7 +1760,7 @@ th:active
             border: 1px solid #d4e1f0
 
             &:after
-              background: image-url('chat-right.png') left top no-repeat
+              background: url('../images/chat-right.png') left top no-repeat
               @include image2x('chat-right@2x.png', 16px, 18px)
               left: 100%
               right: auto
