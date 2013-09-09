@@ -1003,6 +1003,7 @@ th:active {
     padding-top: 3px;
     height: 180px; }
     .social-wrapper #social-container .share-widget textarea {
+      height: 94px;
       resize: none; }
     .social-wrapper #social-container .share-widget .share-options {
       text-align: center;
@@ -1163,9 +1164,10 @@ th:active {
         max-width: 100%;
         display: block;
         position: relative;
-        -webkit-transition: top 0.25s;
-        -moz-transition: top 0.25s;
-        transition: top 0.25s; }
+        top: 0;
+        -webkit-transition: all 0.25s;
+        -moz-transition: all 0.25s;
+        transition: all 0.25s; }
     .gallery-grid li .caption {
       width: 100%;
       height: 90px;
@@ -1824,7 +1826,7 @@ input[type="text"] {
 .panel-title {
   font-size: 16.5px; }
   .panel-title > a {
-    font-weight: 200;
+    font-weight: 300;
     padding: 8px 15px 10px;
     display: block; }
     .panel-title > a .caret {
