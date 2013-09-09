@@ -93,6 +93,10 @@ pre {
   width: 300px;
 }
 
+.skycons {
+  margin-bottom: 20px;
+}
+
 @media (max-width: 768px) {
   body {
     padding-left: 0;

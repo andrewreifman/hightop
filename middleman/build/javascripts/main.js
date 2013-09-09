@@ -100,11 +100,18 @@
       spotRadius: 0,
       chartRangeMin: 0
     });
+    $("#barchart-2").sparkline([160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120], {
+      type: "bar",
+      height: "226",
+      barSpacing: 8,
+      barWidth: 18,
+      barColor: "#8fdbda"
+    });
     $("#composite-chart-1").sparkline([160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120], {
       type: "bar",
       height: "226",
-      barSpacing: 10,
-      barWidth: 26,
+      barSpacing: 8,
+      barWidth: 18,
       barColor: "#8fdbda"
     });
     return $("#composite-chart-1").sparkline([100, 280, 150, 180, 220, 180, 130, 180, 180, 280, 260, 260], {
@@ -127,30 +134,19 @@
 
   $(document).ready(function() {
     /*
-    #   Sparkline Bar Charts
+    # =============================================================================
+    #   Sparkline Linechart JS
+    # =============================================================================
     */
 
-    var $container, addEvent, buildMorris, container, d, date, handleDropdown, initDrag, m, msnry, skycons, y;
-    $("#barcharts").sparkline([160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120], {
+    var $container, addEvent, buildMorris, d, date, handleDropdown, initDrag, m, y;
+    $("#barcharts").sparkline([190, 220, 210, 220, 220, 260, 300, 220, 240, 240, 220, 200, 240, 260, 210], {
       type: "bar",
-      height: "80",
-      barSpacing: 6,
-      barWidth: 12,
-      barColor: "#8fdbda"
-    });
-    $("#barcharts2").sparkline([160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120], {
-      type: "bar",
-      height: "80",
-      barSpacing: 6,
-      barWidth: 12,
-      barColor: "#acaeaf"
-    });
-    $("#barcharts3").sparkline([160, 220, 260, 120, 320, 260, 300, 160, 240, 100, 240, 120], {
-      type: "bar",
-      height: "80",
-      barSpacing: 6,
-      barWidth: 12,
-      barColor: "#f0ad4e"
+      height: "100",
+      barSpacing: 4,
+      barWidth: 13,
+      barColor: "#cbcbcb",
+      highlightColor: "#89D1E6"
     });
     $("#pie-chart").sparkline([2, 8, 6, 10], {
       type: "pie",
@@ -181,7 +177,7 @@
     */
 
     $(".pie-chart1").easyPieChart({
-      size: 220,
+      size: 200,
       lineWidth: 12,
       lineCap: "square",
       barColor: "#81e970",
@@ -189,7 +185,7 @@
       scaleColor: false
     });
     $(".pie-chart2").easyPieChart({
-      size: 220,
+      size: 200,
       lineWidth: 12,
       lineCap: "square",
       barColor: "#f46f50",
@@ -197,7 +193,7 @@
       scaleColor: false
     });
     $(".pie-chart3").easyPieChart({
-      size: 220,
+      size: 200,
       lineWidth: 12,
       lineCap: "square",
       barColor: "#fab43b",
@@ -230,16 +226,8 @@
         }
         if (st > lastScrollTop) {
           $('.navbar.scroll-hide').addClass("closed");
-          $(".navbar.scroll-hide").css({
-            overflow: "hidden"
-          });
         } else {
           $('.navbar.scroll-hide').removeClass("closed");
-          setTimeout((function() {
-            return $(".navbar.scroll-hide").css({
-              overflow: "visible"
-            });
-          }), 350);
         }
         return lastScrollTop = st;
       });
@@ -274,6 +262,13 @@
       previousSelector: ".btn-previous",
       onNext: function(tab, navigation, index) {
         var $current, $percent, $total;
+        if (index === 1) {
+          if (!$("#name").val()) {
+            $("#name").focus();
+            $("#name").addClass("has-error");
+            return false;
+          }
+        }
         $total = navigation.find("li").length;
         $current = index + 1;
         $percent = ($current / $total) * 100;
@@ -291,7 +286,11 @@
         $total = navigation.find("li").length;
         $current = index + 1;
         $percent = ($current / $total) * 100;
-        return $("#wizard").find(".progress-bar").css("width", $percent + "%");
+        $("#wizard").find(".progress-bar").css("width", $percent + "%");
+        $(document).ready(function() {});
+        return $("#rootwizard").bootstrapWizard({
+          onNext: function(tab, navigation, index) {}
+        });
       }
     });
     /*
@@ -343,6 +342,7 @@
     /*
     # =============================================================================
     #   Bootstrap Tabs
+    # =============================================================================
     */
 
     $("#myTab a:last").tab("show");
@@ -589,19 +589,6 @@
     });
     /*
     # =============================================================================
-    #   Scrollbar Styling JS
-    # =============================================================================
-    */
-
-    $('.scrollbar').ClassyScroll({
-      sliderOpacity: 1,
-      wheelSpeed: 2,
-      onscroll: function() {
-        return $(this).prev().addClass("shadow");
-      }
-    });
-    /*
-    # =============================================================================
     #   Popover JS
     # =============================================================================
     */
@@ -695,26 +682,26 @@
         xkey: "period",
         ykeys: ["licensed", "sorned"],
         labels: ["Licensed", "Off the road"],
-        lineColors: ["#59dbbf", "#aeb6cb"]
+        lineColors: ["#5bc0de", "#60c560"]
       });
       Morris.Donut({
         element: "hero-donut",
         data: [
           {
-            label: "Jam",
+            label: "Human Resources",
             value: 25
           }, {
-            label: "Frosted",
+            label: "Development",
             value: 40
           }, {
-            label: "Custard",
+            label: "User Experience",
             value: 25
           }, {
-            label: "Sugar",
+            label: "Sales & Marketing",
             value: 10
           }
         ],
-        colors: ["#afcf6f"],
+        colors: ["#f0ad4e"],
         formatter: function(y) {
           return y + "%";
         }
@@ -780,7 +767,7 @@
         hideHover: "auto",
         lineWidth: 2,
         pointSize: 4,
-        lineColors: ["#59dbbf", "#aeb6cb", "#5dcff3"],
+        lineColors: ["#a0dcee", "#f1c88e", "#a0e2a0"],
         fillOpacity: 0.5,
         smooth: true
       });
@@ -813,7 +800,7 @@
         barRatio: 0.4,
         xLabelAngle: 35,
         hideHover: "auto",
-        barColors: ["#aeb6cb"]
+        barColors: ["#5bc0de"]
       });
     };
     /*
@@ -829,19 +816,14 @@
     # =============================================================================
     */
 
-    container = document.querySelector("#container");
-    msnry = new Masonry(container, {
-      gutter: 24,
-      itemSelector: ".item"
-    });
-    /*
-    # =============================================================================
-    #   Log in transition
-    # =============================================================================
-    */
-
-    $('.login-submit').click(function() {
-      return $('.login').addClass("submitted");
+    $container = $("#social-container").masonry();
+    $container.imagesLoaded(function() {
+      return $container.masonry({
+        "isFitWidth": true,
+        gutter: 20,
+        isFitWidth: true,
+        itemSelector: ".item"
+      });
     });
     /*
     # =============================================================================
@@ -856,13 +838,16 @@
     # =============================================================================
     */
 
-    if (document.getElementById("partly-cloudy-day")) {
+    return $('.skycons-element').each(function() {
+      var canvasId, skycons, weatherSetting;
       skycons = new Skycons({
         color: "white"
       });
-      skycons.add(document.getElementById("partly-cloudy-day"), Skycons.PARTLY_CLOUDY_DAY);
+      canvasId = $(this).attr('id');
+      weatherSetting = $(this).data('skycons');
+      skycons.add(canvasId, Skycons[weatherSetting]);
       return skycons.play();
-    }
+    });
   });
 
 }).call(this);

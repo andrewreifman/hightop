@@ -1,10 +1,15 @@
 .bwizard-steps {
 	display: inline-block;
 	margin: 0; padding: 0;
-	background: #fff }
+	background: #fff; 
+	font-weight: 300;	
+	pointer-events: none !important;
+	cursor: default !important;
+}
 	.bwizard-steps .active {
 		color: #fff;
-		background: #007ACC }
+		background: #007ACC;
+		 }
 	.bwizard-steps .active:after {
 		border-left-color: #007ACC }
 	.bwizard-steps .active a {
@@ -28,16 +33,11 @@
 		zoom: 1; }
 	.bwizard-steps li:first-child {
 		padding-left: 12px;
-		-moz-border-radius: 4px 0 0 4px;
-		-webkit-border-radius: 4px 0 0 4px;
-		border-radius: 4px 0 0 4px; }
+ }
 	.bwizard-steps li:first-child:before {
 		border: none }
 	.bwizard-steps li:last-child {
-		margin-right: 0;
-		-moz-border-radius: 0 4px 4px 0;
-		-webkit-border-radius: 0 4px 4px 0;
-		border-radius: 0 4px 4px 0; }
+		margin-right: 0;}
 	.bwizard-steps li:last-child:after {
 		border: none }
 	.bwizard-steps li:before {
@@ -62,7 +62,8 @@
 	.bwizard-steps a:hover {
 		text-decoration: none }
 .bwizard-steps.clickable li:not(.active) {
-	cursor: pointer }
+	pointer-events: none !important;
+	   cursor: default !important;}
 .bwizard-steps.clickable li:hover:not(.active) {
 	background: #ccc }
 .bwizard-steps.clickable li:hover:not(.active):after {
@@ -82,3 +83,54 @@
 		padding: 0;
 		background-color: transparent }
 }
+.nav-pills >li >a {
+	border-radius: 0px;
+	font-weight: 300;
+}
+
+.wizard-nav {
+	pointer-events: none !important;
+	cursor: default !important;
+	text-align: center;
+	margin-bottom: 15px
+}
+
+.wizard-nav li {
+	float: none;
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.wizard-nav li a {
+	width: 44px;
+	height: 44px;
+	text-align: center;
+	border-radius: 25px;
+	background-color: #f6f6f6;
+	color: #999;
+	font-size: 16px;
+	line-height: 42px;
+	padding: 0;
+}
+
+#wizard > .pager {
+	padding-top: 15px;	
+	padding-bottom: 5px;
+	background: #F7F7F7;
+	margin: 0;
+}
+
+#wizard > .pager .btn-next i {
+	margin-right: 0;
+	margin-left: 10px;
+}
+
+#wizard .tab-pane > h2 {
+	font-size: 28px;
+	margin: 25px 0 25px;	
+}
+
+#tab1 > p {
+	font-style: italic;
+}
+		
