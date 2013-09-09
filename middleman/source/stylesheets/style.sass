@@ -1205,7 +1205,7 @@ th:active
     .item 
       width: 350px
       margin-bottom: 20px
-      box-shadow
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15)
 
     .share-widget
       background: #f8f8f8
@@ -2519,6 +2519,10 @@ button.close
             color: #60c560
           &.danger
             color: #d9534f
+
+    &:last-child
+      td.filter-category
+        border-bottom: 0
 
 .filter-categories 
   .btn-group
