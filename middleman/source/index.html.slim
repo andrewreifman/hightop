@@ -99,25 +99,17 @@
   <!-- End Bar Graph -->
 
 .row
-  <!-- Line Chart: Morris -->
-  .col-md-6.chart-container
+  <!-- Area Charts:Morris --> 
+  .col-md-6
     .widget-container.fluid-height
       .heading
-        .pull-right.btn-group.hidden-xs data-toggle="buttons"
-          label.btn.btn-sm.btn-default-outline.active
-            | Year
-            input#option1 name="options" type="radio"
-          label.btn.btn-sm.btn-default-outline
-            | Month
-            input#option2 name="options" type="radio"
-          label.btn.btn-sm.btn-default-outline
-            | Week
-            input#option3 name="options" type="radio"
         i.icon-bar-chart
-        | Earnings
+        | Area Chart
       .widget-content.padded.text-center
         .graph-container
-          #hero-graph.graph
+          .caption 
+          #hero-area.graph
+  <!-- Area Charts:Morris -->
 
   <!-- Chat -->
   .col-lg-6
