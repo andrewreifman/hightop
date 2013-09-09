@@ -53,15 +53,15 @@
 						  li.active
 						    a data-toggle="tab" href="#tab1" 
 						    	i.icon-comments
-						    	.hideme Comments
+						    	span Comments
 						  li
 						    a data-toggle="tab" href="#tab2" 
 						    	i.icon-user
-						    	.hideme Profile
+						    	span Profile
 						  li
 						    a data-toggle="tab" href="#tab3" 
 						    	i.icon-paper-clip 
-						    	.hideme Attachments
+						    	span Attachments
 					#my-tab-content.tab-content.padded
 					  #tab1.tab-pane.active
 					    h3 Overview
@@ -184,7 +184,7 @@
 							button.close data-dismiss="alert" type="button" &times;
 							| Information. Please review your task list for the latest.
 							.badge.pull-right 106
-						.alert.alert
+						.alert.alert-warning
 							button.close data-dismiss="alert" type="button" &times;
 							| Notes. You have new messages to read.
 							.badge.pull-right 2
