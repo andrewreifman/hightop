@@ -159,17 +159,23 @@
             <li class="pages"><a href="/charts.html">
               <span aria-hidden="true" class="se7en-charts"></span>Charts</a>
             </li>
-            <li class="dropdown ui"><a data-toggle="dropdown" class="current" href="#">
+            <li class="dropdown ui"><a data-toggle="dropdown" href="#">
               <span aria-hidden="true" class="se7en-pages"></span>Pages<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li>
-                  <a href="/filters.html">Filters</a>
+                  <a href="/filters.html">Filter Results</a>
+                </li>
+                <li>
+                  <a href="/calendar.html">Calendar</a>
                 </li>
                 <li>
                   <a href="/login.html">Login</a>
                 </li>
                 <li>
-                  <a href="/calendar.html">Calendar</a>
+                  <a href="/signup.html">Sign Up</a>
+                </li>
+                <li>
+                  <a href="/404-page.html">404 Page</a>
                 </li>
               </ul>
             </li>
@@ -188,13 +194,78 @@
         </h1>
       </div>
       <div class="row">
+        <!-- Weather -->
+        <div class="col-lg-12">
+          <div class="widget-container weather">
+            <div class="widget-content padded">
+              <div class="row text-center">
+                <div class="col-sm-2 col-xs-4">
+                  <p>
+                    MON
+                  </p>
+                  <canvas class="skycons-element" data-skycons="RAIN" height="60" id="clear-day" width="60"></canvas>
+                  <div class="number">
+                    86<small>°</small>
+                  </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">
+                  <p>
+                    TUE
+                  </p>
+                  <canvas class="skycons-element" data-skycons="CLOUDY" height="60" id="cloudy" width="60"></canvas>
+                  <div class="number">
+                    75<small>°</small>
+                  </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">
+                  <p>
+                    WED
+                  </p>
+                  <canvas class="skycons-element" data-skycons="PARTLY_CLOUDY_DAY" height="60" id="partly-cloudy-day" width="60"></canvas>
+                  <div class="number">
+                    82<small>°</small>
+                  </div>
+                </div>
+                <div class="col-sm-2 hidden-xs">
+                  <p>
+                    THU
+                  </p>
+                  <canvas class="skycons-element" data-skycons="SNOW" height="60" id="snow" width="60"></canvas>
+                  <div class="number">
+                    64<small>°</small>
+                  </div>
+                </div>
+                <div class="col-sm-2 hidden-xs">
+                  <p>
+                    FRI
+                  </p>
+                  <canvas class="skycons-element" data-skycons="WIND" height="60" id="wind" width="60"></canvas>
+                  <div class="number">
+                    57<small>°</small>
+                  </div>
+                </div>
+                <div class="col-sm-2 hidden-xs">
+                  <p>
+                    SAT
+                  </p>
+                  <canvas class="skycons-element" data-skycons="SNOW" height="60" id="snow2" width="60"></canvas>
+                  <div class="number">
+                    32<small>°</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
         <!-- Task List -->
         <div class="col-lg-6">
           <div class="widget-container scrollable list task-widget">
             <div class="heading">
               <i class="icon-list"></i>Task list<i class="icon-plus pull-right"></i>
             </div>
-            <div class="widget-content scrollbar">
+            <div class="widget-content">
               <ul>
                 <li>
                   <label><input checked="checked" class="task-input" type="checkbox"><span class="task-checkbox"></span>
@@ -220,7 +291,7 @@
                 <li>
                   <label><input checked="checked" class="task-input" type="checkbox"><span class="task-checkbox"></span>
                     <div class="label label-danger pull-right">
-                      Required
+                      Rejected
                     </div>
                     Coffee time</label>
                 </li>
@@ -240,22 +311,22 @@
                 </li>
                 <li>
                   <label><input class="task-input" type="checkbox"><span class="task-checkbox"></span>
-                    <div class="label label-success pull-right">
-                      Approved
+                    <div class="label label-danger pull-right">
+                      Rejected
                     </div>
                     Send out e-blast</label>
                 </li>
                 <li>
                   <label><input class="task-input" type="checkbox"><span class="task-checkbox"></span>
-                    <div class="label label-success pull-right">
-                      Approved
+                    <div class="label label-warning pull-right">
+                      Pending
                     </div>
                     Ask for a raise</label>
                 </li>
                 <li>
                   <label><input class="task-input" type="checkbox"><span class="task-checkbox"></span>
-                    <div class="label label-success pull-right">
-                      Approved
+                    <div class="label label-warning pull-right">
+                      Pending
                     </div>
                     Coffe time pt. 2</label>
                 </li>
@@ -283,7 +354,7 @@
             <div class="heading">
               <i class="icon-comment"></i>Recent Ratings<i class="icon-refresh pull-right"></i>
             </div>
-            <div class="widget-content scrollbar">
+            <div class="widget-content">
               <ul>
                 <li>
                   <div class="reviewer-info">
@@ -393,7 +464,7 @@
             <div class="heading">
               <i class="icon-comment"></i>Rollodex<i class="icon-plus pull-right"></i><i class="icon-search pull-right"></i><i class="icon-refresh pull-right"></i>
             </div>
-            <div class="widget-content scrollbar">
+            <div class="widget-content">
               <div class="roll-title">
                 A
               </div>
@@ -563,7 +634,7 @@
             <div class="heading">
               <i class="icon-comments"></i>Chat Widget<i class="icon-smile pull-right"></i>
             </div>
-            <div class="widget-content padded scrollbar">
+            <div class="widget-content padded">
               <ul>
                 <li>
                   <img width="50" height="50" src="images/avatar-male.jpg" />

@@ -170,7 +170,7 @@ $(document).ready ->
   # =============================================================================
   ###
   $(".pie-chart1").easyPieChart
-    size: 220
+    size: 200
     lineWidth: 12
     lineCap: "square"
     barColor: "#81e970"
@@ -178,7 +178,7 @@ $(document).ready ->
     scaleColor: false
 
   $(".pie-chart2").easyPieChart
-    size: 220
+    size: 200
     lineWidth: 12
     lineCap: "square"
     barColor: "#f46f50"
@@ -186,7 +186,7 @@ $(document).ready ->
     scaleColor: false
 
   $(".pie-chart3").easyPieChart
-    size: 220
+    size: 200
     lineWidth: 12
     lineCap: "square"
     barColor: "#fab43b"
@@ -748,7 +748,6 @@ $(document).ready ->
         xLabelAngle: 35
         hideHover: "auto"
         barColors: ["#5bc0de"]
-
 
   ###
   # =============================================================================

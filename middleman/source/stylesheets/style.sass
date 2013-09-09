@@ -128,6 +128,18 @@ small
   color: #FFF
   text-shadow: none
 
+::-webkit-scrollbar
+  width: 8px
+
+::-webkit-scrollbar-thumb
+  background: #BBB
+  background: rgba(0,0,0,.15)
+  border-radius: 5px
+
+::-webkit-scrollbar-track
+  background: #DDD
+  background: rgba(0,0,0,.05)
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  Login
@@ -917,12 +929,6 @@ th:active
       overflow-y: auto
       -webkit-overflow-scrolling: touch
 
-    &.list ul li
-      padding-right: 22px
-
-      &:hover
-        background: #f1f1f1
-
 .padded
   padding: 15px
 
@@ -1100,7 +1106,7 @@ th:active
 .easyPieChart
   position: relative
   text-align: center
-  margin: 15px auto 0
+  margin: 5px auto 9px
 
   canvas
     position: absolute
@@ -1199,6 +1205,7 @@ th:active
     .item 
       width: 350px
       margin-bottom: 20px
+      box-shadow
 
     .share-widget
       background: #f8f8f8
@@ -1588,14 +1595,22 @@ th:active
 /*  Task widget
 /*-----------------------------------------------------------------------------------*/
 .task-widget
-  label
-    font-weight: normal
-    margin: 0
-    cursor: pointer
-    width: 100%
+  ul li
+    padding: 0
 
-  .task-input
-    display: none
+    label
+      font-weight: normal
+      margin: 0
+      cursor: pointer
+      width: 100%
+      display: block
+      padding: 10px 15px 12px 10px
+
+      &:hover
+        background-color: #f6f6f6
+
+    .task-input
+      display: none
 
   input[type="checkbox"] + .task-checkbox
     font-family: "FontAwesome"
@@ -1672,12 +1687,10 @@ th:active
 /*  Chat widget
 /*-----------------------------------------------------------------------------------*/
 .chat
-  // height: 500px !important
+  padding-bottom: 52px
 
   .widget-content
-    padding-bottom: 66px
     padding-right: 25px
-    padding-top: 60px !important
 
     .scrollbar-path-vertical
       bottom: 56px !important
@@ -1690,6 +1703,9 @@ th:active
         margin-bottom: 14px
         padding-left: 70px
         position: relative
+
+        &:last-child
+          margin-bottom: 0
 
         img
           position: absolute
@@ -2473,27 +2489,22 @@ button.close
         &.filter-category
           text-align: center
           color: #fff
+          border-bottom: 1px solid #FFF
           [class^="icon-"], [class*="icon-"]
             font-size: 24px
 
-        &.drug
+        &.blue
           background: #5bc0de
-          border-bottom: 1px solid #5bc0de   
-        &.home
+        &.green
           background: #60c560
-          border-bottom: 1px solid #60c560
-        &.toys
+        &.orange
           background: #f59b3b
-          border-bottom: 1px solid #f59b3b
-        &.craft
+        &.red
           background: #d9534f
-          border-bottom: 1px solid #d9534f
-        &.sport
+        &.magenta
           background: #d94084
-          border-bottom: 1px solid #d94084
         &.inactive
           background: #8e8e93
-          border-bottom: 1px solid #8e8e93
 
         h3
           padding: 0
