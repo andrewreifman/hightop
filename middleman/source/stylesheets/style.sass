@@ -57,7 +57,6 @@ body
   color: #666
   background: #e8e8e8
   padding-top: 140px
-  position: relative
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif
@@ -203,6 +202,7 @@ body.login
 /*  Header Styles
 /*-----------------------------------------------------------------------------------*/
 .navbar
+  background: #FFF
   background: rgba(255,255,255,.94)
   box-shadow: 0 1px 1px rgba(0,0,0,.15)
   padding: 0
@@ -278,7 +278,7 @@ body.login
           @include transition(all .3s)
 
           &:hover
-            background: #eee
+            background: #f8f8f8
             background: rgba(0,0,0,.04)
 
           > span
@@ -400,7 +400,7 @@ body.login
                 border-top-color: $blue
 
             &:hover
-              background: #eee
+              background: #f8f8f8
               background: rgba(0,0,0,.04)
 
           .dropdown-menu
@@ -904,7 +904,6 @@ th:active
     padding-top: 50px
 
     &.chat-home
-      position: relative
       height: 427px
 
     .heading
@@ -1033,14 +1032,13 @@ th:active
 /*-----------------------------------------------------------------------------------*/
 .weather
   background: #5bc0de
-  font-weight: 300
   color: #fff
   min-height: 100px
   height: 200px
 
   .heading
     background: transparent
-    font-weight: 200
+    font-weight: 300
     color: #fff 
 
   .padded
@@ -1062,7 +1060,7 @@ th:active
       .number
         font-size: 40px
         color: #fff
-        font-weight: 100
+        font-weight: 300
         letter-spacing: -.05em
         display: inline-block
         vertical-align: middle
@@ -1186,6 +1184,15 @@ th:active
       margin-right: 6px
       float: left
       color: #AAA
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Morris Styles
+/*-----------------------------------------------------------------------------------*/
+.morris-hover.morris-default-style
+  background: #FFF
+  background: rgba(255, 255, 255, 0.8)
+  border: 1px solid #BBB
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -2512,7 +2519,7 @@ button.close
           margin: 0
           line-height: 1
           font-size: 20px
-          font-weight: 200 !important
+          font-weight: 300 !important
 
           &.success
             color: #60c560
@@ -2530,7 +2537,7 @@ button.close
     
     .btn
       font-size: 14px
-      font-weight: 200 !important
+      font-weight: 300 !important
       text-align: left
       border-radius: 4px !important
       margin: 0 0 10px
