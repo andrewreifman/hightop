@@ -639,16 +639,16 @@ $(document).ready ->
       Morris.Donut
         element: "hero-donut"
         data: [
-          label: "Jam"
+          label: "Development"
           value: 25
         ,
-          label: "Frosted"
+          label: "Sales & Marketing"
           value: 40
         ,
-          label: "Custard"
+          label: "User Experience"
           value: 25
         ,
-          label: "Sugar"
+          label: "Human Resources"
           value: 10
         ]
         colors: ["#f0ad4e"]
