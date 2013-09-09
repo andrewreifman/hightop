@@ -213,13 +213,9 @@ $(document).ready ->
       if st > lastScrollTop
         # downscroll code
         $('.navbar.scroll-hide').addClass "closed"
-        $(".navbar.scroll-hide").css overflow: "hidden"
       else
         # upscroll code
         $('.navbar.scroll-hide').removeClass "closed"
-        setTimeout (->
-          $(".navbar.scroll-hide").css overflow: "visible"
-        ), 350
       lastScrollTop = st
 
 
@@ -780,15 +776,6 @@ $(document).ready ->
       gutter: 20
       isFitWidth: true
       itemSelector: ".item"
-
-
-  ###
-  # =============================================================================
-  #   Log in transition
-  # =============================================================================
-  ###
-  $('.login-submit').click ->
-    $('.login').addClass("submitted")
 
 
   ###

@@ -97,6 +97,7 @@
               li 11
               li 12
   <!-- End Bar Graph -->
+
 .row
   .col-md-6
     .widget-container.fluid-height
@@ -116,82 +117,54 @@
       .widget-content.padded.text-center
         .graph-container.chart-container
           #hero-graph.graph
-    <!-- Task List -->
-  .col-md-6
-    .widget-container.scrollable.list.task-widget.home-tasks
+
+  <!-- Chat -->
+  .col-lg-6
+    .widget-container.scrollable.chat style="height: 427px;"
       .heading
-        i.icon-list
-        | Task list
-        i.icon-plus.pull-right
-      .widget-content.scrollbar
+        i.icon-comments
+        | Chat Widget
+        i.icon-smile.pull-right
+      .widget-content.padded.scrollbar
         ul
           li
-            label
-              input type="checkbox" class="task-input" checked="checked"
-              span.task-checkbox
-              .label.label-success.pull-right Approved
-              | Distribute latest marketing
+            = image_tag "avatar-male.jpg", width: "50", height:"50"
+            .bubble
+              = link_to "John Smith", "", class: "user-name"
+              p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+              em.time
+                i.icon-time
+                | 10 min ago
+          li.current-user
+            = image_tag "avatar-female.jpg", width: "50", height:"50"
+            .bubble
+              = link_to "Jane Smith", "", class: "user-name"
+              p.message Donec odio. Quisque volutpat mattis eros.
+              em.time
+                i.icon-time
+                | 10 min ago
           li
-            label
-              input type="checkbox" class="task-input"
-              span.task-checkbox
-              .label.label-success.pull-right Approved
-              | Create the latest mockup
+            = image_tag "avatar-male.jpg", width: "50", height:"50"
+            .bubble
+              = link_to "John Smith", "", class: "user-name"
+              p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+              em.time
+                i.icon-time
+                | 10 min ago
           li
-            label
-              input type="checkbox" class="task-input"
-              span.task-checkbox
-              .label.label-warning.pull-right Pending
-              | Code the latest features
-          li
-            label
-              input type="checkbox" class="task-input" checked="checked"
-              span.task-checkbox
-              .label.label-danger.pull-right Required
-              | Coffee time
-          li
-            label
-              input type="checkbox" class="task-input" checked="checked"
-              span.task-checkbox
-              .label.label-success.pull-right Approved
-              | Distribute latest marketing
-          li
-            label
-              input type="checkbox" class="task-input"
-              span.task-checkbox
-              .label.label-success.pull-right Approved
-              | Pick up lunch
-          li
-            label
-              input type="checkbox" class="task-input"
-              span.task-checkbox
-              .label.label-success.pull-right Approved
-              | Send out e-blast
-          li
-            label
-              input type="checkbox" class="task-input"
-              span.task-checkbox
-              .label.label-success.pull-right Approved
-              | Ask for a raise
-          li
-            label
-              input type="checkbox" class="task-input"
-              span.task-checkbox
-              .label.label-success.pull-right Approved
-              | Coffe time pt. 2
-          li
-            label
-              input type="checkbox" class="task-input"
-              span.task-checkbox
-              .label.label-success.pull-right Approved
-              | Bug fixes
-          li
-            label
-              input type="checkbox" class="task-input"
-              span.task-checkbox
-              .label.label-success.pull-right Approved
-              | Happy hour!!!
-            <!-- End Task List -->
+            = image_tag "avatar-male.jpg", width: "50", height:"50"
+            .bubble
+              = link_to "John Smith", "", class: "user-name"
+              p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+              em.time
+                i.icon-time
+                | 10 min ago
+
+      .post-message
+        input type="text" placeholder="Write your message here…" class="form-control"
+        input type="submit" value="Post" class="btn btn-primary"
+  <!-- End Chat -->
+
 .row
   <!-- Pie Graph 1 -->
   .col-lg-3.col-sm-6
