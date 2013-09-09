@@ -76,6 +76,7 @@ html
         li=link_to "Full Calendar", "#calendar-link"
         li=link_to "DataTables", "#datatables"
         li=link_to "Isotope", "#isotope"
+        li=link_to "Masonry", "#masonry"
         li=link_to "Fancybox", "#fancybox"
 
 
@@ -313,6 +314,10 @@ html
                   | Isotope
                   a href="http://isotope.metafizzy.co/" class="pull-right" target="_blank" Full documentation
                   = Pygments.highlight("$('.isotope').isotope(options)", lexer: 'javascript')
+                li#masonry
+                  | Masonry
+                  a href="http://masonry.desandro.com/" class="pull-right" target="_blank" Full documentation
+                  = Pygments.highlight("$('.masonry').masonry(options)", lexer: 'javascript')
                 li#fancybox
                   | Fancybox
                   a href="http://fancyapps.com/fancybox/" class="pull-right" target="_blank" Full documentation
