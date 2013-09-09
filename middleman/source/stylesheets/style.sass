@@ -897,7 +897,7 @@ th:active
     position: relative
     height: 400px
 
-    &.home-tasks
+    &.chat-home
       position: relative
       height: 427px
 
@@ -935,6 +935,7 @@ th:active
   height: 120px
   text-align: center
 
+  
   [class^="col-"], [class*="col-"]
     border-right: 1px solid #e6e6e6
     height: 100%
@@ -1033,7 +1034,7 @@ th:active
 /*-----------------------------------------------------------------------------------*/
 .weather
   background: #5bc0de
-  font-weight: 200
+  font-weight: 300
   color: #fff
   min-height: 100px
   height: 200px
@@ -1139,16 +1140,21 @@ th:active
   .bar-chart-info
     display: inline-block
     vertical-align: middle
-    margin: 0 20px 15px -10px
+    margin: 0 40px 14px -21px
     text-align: center
 
     &.visible-lg
       display: inline-block !important
 
-    .chart-number
-      font-size: 3em
-      font-weight: 100
+    p
+      font-weight: 300
       color: #BBB
+
+    .chart-number
+      font-size: 4em
+      font-weight: 100
+      color: #60C560
+      line-height: 1.2em
 
       i
         margin: 12px 10px 0 0
@@ -1233,7 +1239,7 @@ th:active
         .user-name
           font-size: 20px
           line-height: 1
-          font-weight: 200
+          font-weight: 300
           display: inline-block
           margin-bottom: 6px
 
@@ -1244,12 +1250,12 @@ th:active
             font-size: 13px
             margin-bottom: 2px
             color: #999
-            font-weight: 200
+            font-weight: 300
 
           em
             font-size: 13px
             color: #999
-            font-weight: 200
+            font-weight: 300
             i
               margin-right: 6px
 
@@ -1277,15 +1283,13 @@ th:active
             margin-bottom: 5px
 
           p
-            font-weight: 200   
+            font-weight: 300   
 
     .social-entry
-      p
-        font-weight: 200
 
       p.content
         font-size: 14px
-        font-weight: 200
+        font-weight: 300
         margin: 15px 0
 
       .padded
@@ -1298,7 +1302,7 @@ th:active
 
         .user-name
           font-size: 18px
-          font-weight: 200
+          font-weight: 300
           margin: 2px 0 6px
 
         & + p.content
@@ -1315,7 +1319,7 @@ th:active
         em
           font-size: 13px
           color: #999
-          font-weight: 200
+          font-weight: 300
           i
             margin-right: 6px
 
@@ -2435,6 +2439,9 @@ button.close
 .hideme
   display: none
 
+.hidden-xs
+  &.inline
+  display: inline-block 
 
 /*-----------------------------------------------------------------------------------*/
 /*  Filter/Advanced Search
@@ -2636,6 +2643,7 @@ body.fourofour
       height: auto
 
 
+
 @media (max-width: 767px)
   html.nav-open
     overflow: hidden
@@ -2708,6 +2716,10 @@ body.fourofour
                 border-bottom-color: $blue
                 color: $blue
 
+              &:hover, &:active
+                color: black
+                border-bottom-color: black
+
           > a
             display: block
             text-align: left
@@ -2718,7 +2730,9 @@ body.fourofour
             color: #777
             border-bottom: 1px solid #AAA
 
-            &:hover
+            &:hover, &:active
+              color: black
+              border-bottom-color: black
               background: none !important
 
             span
