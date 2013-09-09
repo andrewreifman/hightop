@@ -170,7 +170,7 @@ $(document).ready ->
   # =============================================================================
   ###
   $(".pie-chart1").easyPieChart
-    size: 220
+    size: 200
     lineWidth: 12
     lineCap: "square"
     barColor: "#81e970"
@@ -178,7 +178,7 @@ $(document).ready ->
     scaleColor: false
 
   $(".pie-chart2").easyPieChart
-    size: 220
+    size: 200
     lineWidth: 12
     lineCap: "square"
     barColor: "#f46f50"
@@ -186,7 +186,7 @@ $(document).ready ->
     scaleColor: false
 
   $(".pie-chart3").easyPieChart
-    size: 220
+    size: 200
     lineWidth: 12
     lineCap: "square"
     barColor: "#fab43b"
@@ -638,16 +638,16 @@ $(document).ready ->
     Morris.Donut
       element: "hero-donut"
       data: [
-        label: "Jam"
+        label: "Human Resources"
         value: 25
       ,
-        label: "Frosted"
+        label: "Development"
         value: 40
       ,
-        label: "Custard"
+        label: "User Experience"
         value: 25
       ,
-        label: "Sugar"
+        label: "Sales & Marketing"
         value: 10
       ]
       colors: ["#f0ad4e"]
