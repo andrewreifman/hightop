@@ -56,7 +56,8 @@ html
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
 
   body
-    = partial 'navigation'
+    .modal-shiftfix
+      = partial 'navigation'
 
-    .container-fluid.main-content
-      = yield
+      .container-fluid.main-content
+        = yield
