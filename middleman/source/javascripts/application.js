@@ -10,3 +10,27 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery_ujs
+//= require bootsrap.min
+//= require excanvas.min
+//= require fullcalendar.min
+//= require gcal
+//= require jquery.bootstrap.wizard
+//= require jquery.dataTables.min
+//= require jquery.easy-pie-chart
+//= require jquery.fancybox.pack
+//= require jquery.isotope
+//= require jquery.mousewheel
+//= require jquery.sparkline.min
+//= require jquery.vmap.min
+//= require jquery.vmap.sampledata
+//= require modernizr.custom
+//= require morris.min
+//= require prettify
+//= require raphael.min
+//= require respond
+//= require select2
+//= require skycons
+//= require styleswitcher
+//= require wysiwyg

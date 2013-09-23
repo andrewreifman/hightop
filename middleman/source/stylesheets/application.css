@@ -8,6 +8,15 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
+ *= require bootstrap.min
+ *= require datatables
+ *= require font-awesome
+ *= require fullcalendar
+ *= require isotope
+ *= require jquery.fancybox
+ *= require morris
+ *= require se7en-font
+ *= require select2
+ *= require wizard
  *= require style
  */

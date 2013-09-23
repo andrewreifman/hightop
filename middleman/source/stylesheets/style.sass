@@ -2531,13 +2531,13 @@ button.close
           padding: 0
           margin: 0
           line-height: 1
-          font-size: 20px
+          font-size: 18px
           font-weight: 300 !important
 
-          &.success
-            color: #60c560
-          &.danger
-            color: #d9534f
+        .success
+          color: #60c560
+        .danger
+          color: #d9534f
 
     &:last-child
       td.filter-category
@@ -2802,15 +2802,25 @@ body.fourofour
 
 
 @media (max-width: 600px)
-  .login
+  body.login
     padding-top: 0px
 
     .login-container
+      padding: 15px
+
       img
         margin: 30px auto
 
       .login-submit
-        margin-bottom: 25px
+        margin-bottom: 20px
+
+      .social-login 
+        padding-bottom: 15px
+        margin-bottom: 15px
+
+        > .btn
+          width: 100%
+          margin-bottom: 6px
 
   .page-title
     padding: 0 10px
