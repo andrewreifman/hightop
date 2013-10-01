@@ -103,6 +103,7 @@ table.dataTable {
   margin: 5px 0;
 }
 .dataTables_paginate a {
+  height: auto;
   margin-left:5px;
   font-size: 13px;
   border: 1px solid #AAA;

@@ -128,7 +128,9 @@
           ul.dropdown-menu
             li= link_to "Basic tables", 'tables.html', class: cp('tables.html')
             li= link_to "DataTables", 'datatables.html', class: cp('datatables.html')
-            li= link_to "Editable DataTables", 'datatables-editable.html', class: cp('datatables-editable.html')
+            li= link_to 'datatables-editable.html', class: cp('datatables-editable.html') do
+              .notifications.label.label-warning New
+              | Editable DataTables
 
         li
           = link_to 'charts.html', class: cp('charts.html') do

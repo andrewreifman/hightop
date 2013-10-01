@@ -19,7 +19,7 @@ function editRow ( oTable, nRow )
   jqTds[2].innerHTML = '<input type="text" value="'+aData[2]+'">';
   jqTds[3].innerHTML = '<input type="text" value="'+aData[3]+'">';
   jqTds[4].innerHTML = '<input type="text" value="'+aData[4]+'">';
-  jqTds[5].innerHTML = '<a class="edit-row" href="#">Save</a>';
+  jqTds[5].innerHTML = '<a class="edit-row" href="">Save</a>';
 }
 
 function saveRow ( oTable, nRow )
@@ -30,19 +30,27 @@ function saveRow ( oTable, nRow )
   oTable.fnUpdate( jqInputs[2].value, nRow, 2, false );
   oTable.fnUpdate( jqInputs[3].value, nRow, 3, false );
   oTable.fnUpdate( jqInputs[4].value, nRow, 4, false );
-  oTable.fnUpdate( '<a class="edit-row" href="#">Edit</a>', nRow, 5, false );
+  oTable.fnUpdate( '<a class="edit-row" href="">Edit</a>', nRow, 5, false );
   oTable.fnDraw();
 }
 
 $(document).ready(function() {
-  var oTable = $('#datatable-editable').dataTable();
+  var oTable = $("#datatable-editable").dataTable({
+    "sPaginationType": "full_numbers",
+    aoColumnDefs: [
+      {
+        bSortable: false,
+        aTargets: [-2, -1]
+      }
+    ]
+  });
   var nEditing = null;
   
   $('#add-row').click( function (e) {
     e.preventDefault();
     
     var aiNew = oTable.fnAddData( [ '', '', '', '', '', 
-      '<a class="edit-row" href="#">Edit</a>', '<a class="delete-row" href="#">Delete</a>' ] );
+      '<a class="edit-row" href="">Edit</a>', '<a class="delete-row" href="">Delete</a>' ] );
     var nRow = oTable.fnGetNodes( aiNew[0] );
     editRow( oTable, nRow );
     nEditing = nRow;

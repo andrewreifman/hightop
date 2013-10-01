@@ -295,27 +295,27 @@ $(document).ready ->
   #   jQuery UI Sliders
   # =============================================================================
   ###
-  # $(".slider-basic").slider
-  #   range: "min"
-  #   value: 50
-  #   slide: (event, ui) ->
-  #     $(".slider-basic-amount").html "$" + ui.value
-  # $(".slider-basic-amount").html "$" + $(".slider-basic").slider("value")
+  $(".slider-basic").slider
+    range: "min"
+    value: 50
+    slide: (event, ui) ->
+      $(".slider-basic-amount").html "$" + ui.value
+  $(".slider-basic-amount").html "$" + $(".slider-basic").slider("value")
 
-  # $(".slider-increments").slider
-  #   range: "min"
-  #   value: 30
-  #   step: 10
-  #   slide: (event, ui) ->
-  #     $(".slider-increments-amount").html "$" + ui.value
-  # $(".slider-increments-amount").html "$" + $(".slider-increments").slider("value")
+  $(".slider-increments").slider
+    range: "min"
+    value: 30
+    step: 10
+    slide: (event, ui) ->
+      $(".slider-increments-amount").html "$" + ui.value
+  $(".slider-increments-amount").html "$" + $(".slider-increments").slider("value")
 
-  # $(".slider-range").slider
-  #   range: true
-  #   values: [ 15, 70 ]
-  #   slide: (event, ui) ->
-  #     $(".slider-range-amount").html "$" + ui.values[0] + " - $" + ui.values[1]
-  # $(".slider-range-amount").html "$" + $(".slider-range").slider("values", 0) + " - $" + $(".slider-range").slider("values", 1)
+  $(".slider-range").slider
+    range: true
+    values: [ 15, 70 ]
+    slide: (event, ui) ->
+      $(".slider-range-amount").html "$" + ui.values[0] + " - $" + ui.values[1]
+  $(".slider-range-amount").html "$" + $(".slider-range").slider("values", 0) + " - $" + $(".slider-range").slider("values", 1)
 
 
   ###
