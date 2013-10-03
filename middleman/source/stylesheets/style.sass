@@ -1627,27 +1627,11 @@ th:active
       &:hover
         background-color: #f6f6f6
 
-    .task-input
-      display: none
-
-  input[type="checkbox"] + .task-checkbox
-    font-family: "FontAwesome"
-    font-size: 20px
-    width: 30px
-    height: 20px
-    line-height: 1.1
-    display: inline-block
-    vertical-align: middle
-    color: #BBB
-
-    &:before
-      content: "\f096"
-
   input[type="checkbox"]:checked + .task-checkbox
     color: $blue
 
-    &:before
-      content: "\f046"
+  input[type="checkbox"] + span:before
+    margin-left: 0px
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -1931,7 +1915,7 @@ input[type="text"]
 
 .form-horizontal
   .form-group
-    margin-bottom: 0
+    margin: 0
 
     label
       margin-bottom: 5px
@@ -1946,6 +1930,45 @@ input[type="text"]
   &+.radio-inline, &+.checkbox-inline
     margin-left: 0
 
+input[type="checkbox"], input[type="radio"]
+  display: none
+
+  &+ span
+    &:before
+      content: ""
+      width: 18px
+      height: 18px
+      display: inline-block
+      vertical-align: middle
+      margin-right: 10px
+      margin-left: -20px
+      background: #FFF
+      border-radius: 3px
+      border: 1px solid #c8c8c8
+
+input[type="checkbox"]:checked + span:before
+  background: #FFF url('../images/checkmark.png') no-repeat center center
+  @include image2x("checkmark@2x.png", 14px, 14px)
+
+input[type="radio"]
+  display: none
+
+  &+ span
+    position: relative
+
+    &:before
+      border-radius: 50%
+
+  &:checked + span:after
+    content: ""
+    width: 8px
+    height: 8px
+    position: absolute
+    top: 6px
+    left: -15px
+    background-color: #666
+    border-radius: 50%
+    display: block
 .has-warning
   .help-block, .control-label
     color: #f0ad4e
