@@ -19,7 +19,7 @@ function editRow ( oTable, nRow )
   jqTds[2].innerHTML = '<input type="text" value="'+aData[2]+'">';
   jqTds[3].innerHTML = '<input type="text" value="'+aData[3]+'">';
   jqTds[4].innerHTML = '<input type="text" value="'+aData[4]+'">';
-  jqTds[5].innerHTML = '<a class="edit-row" href="">Save</a>';
+  jqTds[5].innerHTML = '<a class="edit-row" href="javascript:void(0)">Save</a>';
 }
 
 function saveRow ( oTable, nRow )
@@ -30,7 +30,7 @@ function saveRow ( oTable, nRow )
   oTable.fnUpdate( jqInputs[2].value, nRow, 2, false );
   oTable.fnUpdate( jqInputs[3].value, nRow, 3, false );
   oTable.fnUpdate( jqInputs[4].value, nRow, 4, false );
-  oTable.fnUpdate( '<a class="edit-row" href="">Edit</a>', nRow, 5, false );
+  oTable.fnUpdate( '<a class="edit-row" href="javascript:void(0)">Edit</a>', nRow, 5, false );
   oTable.fnDraw();
 }
 
@@ -45,30 +45,30 @@ $(document).ready(function() {
     ]
   });
   var nEditing = null;
-  
+
   $('#add-row').click( function (e) {
     e.preventDefault();
-    
-    var aiNew = oTable.fnAddData( [ '', '', '', '', '', 
-      '<a class="edit-row" href="">Edit</a>', '<a class="delete-row" href="">Delete</a>' ] );
+
+    var aiNew = oTable.fnAddData( [ '', '', '', '', '',
+      '<a class="edit-row" href="javascript:void(0)">Edit</a>', '<a class="delete-row" href="javascript:void(0)">Delete</a>' ] );
     var nRow = oTable.fnGetNodes( aiNew[0] );
     editRow( oTable, nRow );
     nEditing = nRow;
   } );
-  
-  $('#datatable-editable a.delete-row').bind('click', function (e) {
+
+  $('#datatable-editable').on('click', 'a.delete-row', function (e) {
     e.preventDefault();
-    
+
     var nRow = $(this).parents('tr')[0];
     oTable.fnDeleteRow( nRow );
   } );
-  
-  $('#datatable-editable a.edit-row').bind('click', function (e) {
+
+  $('#datatable-editable').on('click', 'a.edit-row', function (e) {
     e.preventDefault();
-    
+
     /* Get the row as a parent of the link that was clicked on */
     var nRow = $(this).parents('tr')[0];
-    
+
     if ( nEditing !== null && nEditing != nRow ) {
       /* Currently editing - but not this row - restore the old before continuing to edit mode */
       restoreRow( oTable, nEditing );
