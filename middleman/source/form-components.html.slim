@@ -1,0 +1,265 @@
+.page-title
+  h1 Form Components
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-adjust
+        | Basic Components
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Input
+            .col-md-7
+              input.form-control placeholder="Text" type="text"
+          .form-group
+            label.control-label.col-md-2 Dropdown
+            .col-md-7
+              select.form-control
+                option value="Category 1" Option 1
+                option value="Category 2" Option 2
+                option value="Category 3" Option 3
+                option value="Category 4" Option 4
+          .form-group
+            label.control-label.col-md-2 Multi-Select
+            .col-md-7
+              select.form-control multiple=""
+                option value="Category 1" Option 1
+                option value="Category 2" Option 2
+                option value="Category 3" Option 3
+                option value="Category 4" Option 4
+
+          .form-group
+            label.control-label.col-md-2 Username Input
+            .col-md-7
+              .input-group
+                span.input-group-addon @
+                input.form-control placeholder="Username" type="text"
+
+          .form-group
+            label.control-label.col-md-2 Currency Input
+            .col-md-7
+              .input-group
+                span.input-group-addon $
+                input.form-control type="text"
+                  span.input-group-addon .00
+
+
+          fieldset disabled=""
+            .form-group
+              label.control-label.col-md-2 for="disabledInput" Disabled Input
+              .col-md-7
+                input#disabledInput.form-control placeholder="Disabled input" type="text"
+            .form-group
+              label.control-label.col-md-2 for="disabledInput" Disabled Select
+              .col-md-7
+                select#disabledSelect.form-control
+                  option Disabled select
+
+          .form-group
+            label.control-label.col-md-2 Toggle Switch
+            .col-md-7.clearfix
+              .holder
+                input#check.check-ios name="check" type="checkbox" value="None" checked="checked"
+                label for="check"
+                span
+              em 
+                |(works in modern browsers)
+
+          .form-group
+            label.control-label.col-md-2 Radio Buttons
+            .col-md-7
+              label.radio
+                input name="optionsRadios1" type="radio" value="option1"
+                span Option 1
+              label.radio
+                input checked="" name="optionsRadios1" type="radio" value="option2"
+                span Option 2
+              label.radio
+                input name="optionsRadios1" type="radio" value="option3"
+                span Option 3
+              label.radio
+                input name="optionsRadios1" type="radio" value="option4"
+                span Option 4
+
+          .form-group
+            label.control-label.col-md-2 Radio Buttons
+            .col-md-7
+              label.radio-inline
+                input name="optionsRadios2" type="radio" value="option1"
+                span Option 1
+              label.radio-inline
+                input checked="" name="optionsRadios2" type="radio" value="option2"
+                span Option 2
+              label.radio-inline
+                input name="optionsRadios2" type="radio" value="option3"
+                span Option 3
+
+          .form-group
+            label.control-label.col-md-2 Checkbox
+            .col-md-7
+              label.checkbox
+                input type="checkbox" value=""
+                span Checkbox 1
+              label.checkbox
+                input type="checkbox" value=""
+                span Checkbox 2
+              label.checkbox
+                input type="checkbox" value=""
+                span Checkbox 3
+              label.checkbox
+                input type="checkbox" value=""
+                span Checkbox 4
+
+          .form-group
+            label.control-label.col-md-2 Checkbox
+            .col-md-7
+              label.checkbox-inline
+                input type="checkbox" value=""
+                span Checkbox 1
+              label.checkbox-inline
+                input type="checkbox" value=""
+                span Checkbox 2
+              label.checkbox-inline
+                input type="checkbox" value=""
+                span Checkbox 3
+
+          .form-group
+            label.control-label.col-md-2 Textarea
+            .col-md-7
+              textarea.form-control rows="3"
+
+          .form-actions.col-lg-offset-2.col-md-7
+            button.btn.btn-primary type="submit" Submit
+            button.btn.btn-default-outline Cancel
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-collapse
+        | Select2 Dropdowns
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Select2 Dropdown
+            .col-md-7
+              select.select2able
+                option value="Category 1" Option 1
+                option value="Category 2" Option 2
+                option value="Category 3" Option 3
+                option value="Category 4" Option 4
+          .form-group
+            label.control-label.col-md-2 Multi-Select2
+            .col-md-7
+              select.select2able multiple=""
+                option value="Category 1" Option 1
+                option value="Category 2" Option 2
+                option value="Category 3" Option 3
+                option value="Category 4" Option 4
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-adjust
+        | Input Masks
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Date 1
+            .col-md-7
+              input.form-control type="text" data-inputmask="'alias': 'mm/dd/yyyy'"
+          .form-group
+            label.control-label.col-md-2 Date 2
+            .col-md-7
+              input.form-control type="text" data-inputmask="'alias': 'dd/mm/yyyy'"
+          .form-group
+            label.control-label.col-md-2 Phone Number
+            .col-md-7
+              input.form-control type="text" data-inputmask="'mask': ['(999) 999-9999']"
+          .form-group
+            label.control-label.col-md-2 Social Security #
+            .col-md-7
+              input.form-control type="text" data-inputmask="'mask': ['999-99-9999']"
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-user
+        | User Profile
+
+      .widget-content.padded
+        form
+          .form-group
+            label for="exampleInputFile" User photo
+            br
+            = image_tag "avatar-male2-lg.png", width: "150", height:"150", class: 'form-photo'
+            input#exampleInputFile type="file"
+          .form-group
+            label for="exampleInputEmail" Email
+            input#exampleInputEmail.form-control placeholder="Enter email" type="text"
+          .form-group
+            label for="exampleInputPassword" Password
+            input#exampleInputPassword.form-control placeholder="Password" type="password"
+          .form-group
+            label for="exampleInputPassword" Profile
+            textarea class="form-control" rows="3"
+
+          button.btn.btn-primary type="submit" Submit
+          button.btn.btn-default-outline Cancel
+
+.row
+  .col-md-12
+    .widget-container
+      .heading
+        i.icon-shield
+        | Form Validation
+
+      .widget-content.padded
+        form#validate-form.cmxform action="" method="get"
+          fieldset
+            .form-group
+              label for="firstname" First Name
+              input#firstname.form-control name="firstname" type="text"
+            .form-group
+              label for="lastname" Last Name
+              input#lastname.form-control name="lastname" type="text"
+            .form-group
+              label for="username" Username
+              input#username.form-control name="username" type="text"
+            .form-group
+              label for="password" Password
+              input#password.form-control name="password" type="password"
+            .form-group
+              label for="confirm_password" Confirm Password
+              input#confirm_password.form-control name="confirm_password" type="password"
+            .form-group
+              label for="email" Email
+              input#email.form-control name="email" type="email"
+
+            input.btn.btn-primary type="submit" value="Submit"
+
+
+.row
+  .col-md-12
+    .widget-container
+      .heading
+        i.icon-shield
+        | Validation States
+
+      .widget-content.padded
+        .form-group.has-warning
+          label.control-label for="inputWarning" Warning
+          input#inputWarning.form-control type="text"
+        .form-group.has-error
+          label.control-label for="inputError" Error
+          input#inputError.form-control type="text"
+        .form-group.has-success
+          label.control-label for="inputSuccess" Success
+          input#inputSuccess.form-control type="text"

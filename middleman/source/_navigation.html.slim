@@ -115,10 +115,14 @@
             li= link_to "Widgets", 'widgets.html', class: cp('widgets.html')
             li= link_to "Typography", 'typo.html', class: cp('typo.html')
             li= link_to "Grid Layout", 'grid.html', class: cp('grid.html')
-        li.forms
-          = link_to 'forms.html', class: cp('forms.html') do
+        li.dropdown *{ class: "#{cp 'form-components.html'}" }
+          = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('form-components.html') || cp('form-advanced.html') do
             span aria-hidden="true" class="se7en-forms"
             | Forms
+            b.caret
+          ul.dropdown-menu
+            li= link_to "Form Components", 'form-components.html', class: cp('form-components.html')
+            li= link_to "Advanced Forms", 'form-advanced.html', class: cp('form-advanced.html')
         li.tables
           = link_to 'tables.html', class: cp('tables.html') do
             span aria-hidden="true" class="se7en-tables"
