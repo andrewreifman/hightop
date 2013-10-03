@@ -12,15 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootsrap.min
+//= require bootstrap.min
 //= require excanvas.min
 //= require fullcalendar.min
 //= require gcal
 //= require jquery.bootstrap.wizard
 //= require jquery.dataTables.min
+//= require datatable-editable
 //= require jquery.easy-pie-chart
 //= require jquery.fancybox.pack
-//= require jquery.isotope
+//= require jquery.isotope.min
 //= require jquery.mousewheel
 //= require jquery.sparkline.min
 //= require jquery.vmap.min

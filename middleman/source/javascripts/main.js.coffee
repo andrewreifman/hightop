@@ -289,6 +289,16 @@ $(document).ready ->
       aTargets: [0,-1] # <-- gets last column and turns off sorting
     ]
 
+  $('.table').each ->
+    $(".table #checkAll").click ->
+      if $(".table #checkAll").is(":checked")
+        $(".table input[type=checkbox]").each ->
+          $(this).prop "checked", true
+
+      else
+        $(".table input[type=checkbox]").each ->
+          $(this).prop "checked", false
+
 
   ###
   # =============================================================================
