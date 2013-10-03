@@ -832,6 +832,36 @@ $(document).ready ->
 
   ###
   # =============================================================================
+  #   Drag and drop files
+  # =============================================================================
+  ###
+  $(".single-file-drop").each ->
+    $dropbox = $(this)
+    if typeof window.FileReader is "undefined"
+      $("small", this).html("File API & FileReader API not supported").addClass "text-danger"
+      return
+    @ondragover = ->
+      $dropbox.addClass "hover"
+      false
+
+    @ondragend = ->
+      $dropbox.removeClass "hover"
+      false
+
+    @ondrop = (e) ->
+      e.preventDefault()
+      $dropbox.removeClass("hover").html ""
+      file = e.dataTransfer.files[0]
+      reader = new FileReader()
+      reader.onload = (event) ->
+        $dropbox.append $("<img>").attr("src", event.target.result)
+
+      reader.readAsDataURL file
+      false
+      
+
+  ###
+  # =============================================================================
   #   Skycons
   # =============================================================================
   ###
