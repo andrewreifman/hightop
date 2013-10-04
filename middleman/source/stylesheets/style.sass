@@ -686,11 +686,10 @@ body.login
 /*  Dropdown Styles
 /*-----------------------------------------------------------------------------------*/
 .dropdown-menu
-  margin-top: 1px !important
   border-radius: 0
   box-shadow: 0 1px 2px rgba(0,0,0,.2)
   background: rgba(255,255,255,.96)
-  border: 0
+  border: 1px solid #DDD
   padding: 0
   min-width: 120px
   max-width: 300px
@@ -1924,8 +1923,11 @@ input[type="text"]
     label
       margin-bottom: 5px
 
-.input-group-btn>.btn+.btn
+.input-group-btn>.btn
   margin-left: -1px
+
+  &+.btn
+    margin-left: -1px
 
 .radio, .checkbox
   margin: 0 0 10px

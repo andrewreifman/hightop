@@ -859,7 +859,64 @@ $(document).ready ->
       reader.readAsDataURL file
       false
 
+  ###
+  # =============================================================================
+  #   File upload buttons
+  # =============================================================================
+  ###
   $('.fileupload').fileupload()
+
+
+  ###
+  # =============================================================================
+  #   Datepicker
+  # =============================================================================
+  ###
+  $('.datepicker').datepicker()
+
+  nowTemp = new Date()
+  now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0)
+  checkin = $("#dpd1").datepicker(onRender: (date) ->
+    (if date.valueOf() < now.valueOf() then "disabled" else "")
+  ).on("changeDate", (ev) ->
+    if ev.date.valueOf() > checkout.date.valueOf()
+      newDate = new Date(ev.date)
+      newDate.setDate newDate.getDate() + 1
+      checkout.setValue newDate
+    checkin.hide()
+    $("#dpd2")[0].focus()
+  ).data("datepicker")
+  checkout = $("#dpd2").datepicker(onRender: (date) ->
+    (if date.valueOf() <= checkin.date.valueOf() then "disabled" else "")
+  ).on("changeDate", (ev) ->
+    checkout.hide()
+  ).data("datepicker")
+
+
+  ###
+  # =============================================================================
+  #   Timepicker
+  # =============================================================================
+  ###
+  $("#timepicker-default").timepicker()
+
+  $("#timepicker-24h").timepicker
+    minuteStep: 1
+    showSeconds: true
+    showMeridian: false
+
+  $("#timepicker-noTemplate").timepicker
+    template: false
+    showInputs: false
+    minuteStep: 5
+
+  $("#timepicker-modal").timepicker
+    minuteStep: 1
+    secondStep: 5
+    showInputs: false
+    modalBackdrop: true
+    showSeconds: true
+    showMeridian: false
       
 
   ###

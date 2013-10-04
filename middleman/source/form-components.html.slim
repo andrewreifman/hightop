@@ -46,6 +46,31 @@
                 input.form-control type="text"
                   span.input-group-addon .00
 
+          .form-group
+            label.control-label.col-md-2 Button Add-on
+            .col-md-7
+              .input-group
+                input.form-control type="text"
+                  span.input-group-btn
+                    button.btn.btn-default type="button" Go
+
+          .form-group
+            label.control-label.col-md-2 Dropdown Add-on
+            .col-md-7
+              .input-group
+                input.form-control type="text"
+                  .input-group-btn
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      | Actions
+                      span.caret
+                    ul.dropdown-menu.pull-right
+                      li
+                        a href="#" Action 1
+                      li
+                        a href="#" Action 2
+                      li
+                        a href="#" Action 3
+
 
           fieldset disabled=""
             .form-group
@@ -166,26 +191,150 @@
     .widget-container.fluid-height.clearfix
       .heading
         i.icon-adjust
+        | Datepickers
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Default
+            .col-md-3
+              input.form-control.datepicker type="text"
+          .form-group
+            label.control-label.col-md-2 As a Component
+            .col-md-3
+              .input-group.date.datepicker
+                input.form-control type="text"
+                  span.input-group-addon
+                    i.icon-calendar
+          .form-group
+            label.control-label.col-md-2 Autoclose
+            .col-md-3
+              .input-group.date.datepicker data-date-autoclose="true" data-date-format="dd-mm-yyyy"
+                input.form-control type="text"
+                  span.input-group-addon
+                    i.icon-calendar
+          .form-group
+            label.control-label.col-md-2 Start With the Year
+            .col-md-3
+              .input-group.date.datepicker data-date-autoclose="true" data-date-format="dd.mm.yyyy" data-date-start-view="2"
+                input.form-control type="text"
+                  span.input-group-addon
+                    i.icon-calendar
+          .form-group
+            label.control-label.col-md-2 Date Range
+            .col-sm-3
+              input#dpd1.form-control data-date-autoclose="true" data-date-format="dd-mm-yyyy" placeholder="Start date" type="text"
+            .col-sm-3
+              input#dpd2.form-control data-date-autoclose="true" data-date-format="dd-mm-yyyy" placeholder="End date" type="text"
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-adjust
+        | Timepickers
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Default
+            .col-md-3
+              .input-group.bootstrap-timepicker
+                input#timepicker-default.form-control type="text"
+                  span.input-group-addon
+                    i.icon-time
+          .form-group
+            label.control-label.col-md-2 24 Hour
+            .col-md-3
+              .input-group.bootstrap-timepicker
+                input#timepicker-24h.form-control type="text"
+                  span.input-group-addon
+                    i.icon-time
+
+          .form-group
+            label.control-label.col-md-2 No Dropdown
+            .col-md-3
+              .bootstrap-timepicker
+                input#timepicker-noTemplate.form-control type="text"
+                i.icon-time
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-adjust
         | Input Masks
 
       .widget-content.padded
         form.form-horizontal action="#"
           .form-group
             label.control-label.col-md-2 Date 1
-            .col-md-7
+            .col-md-3
               input.form-control type="text" data-inputmask="'alias': 'mm/dd/yyyy'"
           .form-group
             label.control-label.col-md-2 Date 2
-            .col-md-7
+            .col-md-3
               input.form-control type="text" data-inputmask="'alias': 'dd/mm/yyyy'"
           .form-group
             label.control-label.col-md-2 Phone Number
-            .col-md-7
+            .col-md-3
               input.form-control type="text" data-inputmask="'mask': ['(999) 999-9999']"
           .form-group
             label.control-label.col-md-2 Social Security #
-            .col-md-7
+            .col-md-3
               input.form-control type="text" data-inputmask="'mask': ['999-99-9999']"
+
+.row
+  .col-md-12
+    .widget-container
+      .heading
+        i.icon-shield
+        | Form Validation
+
+      .widget-content.padded
+        .row
+          form#validate-form.col-md-6 action="" method="get"
+            fieldset
+              .form-group
+                label for="firstname" First Name
+                input#firstname.form-control name="firstname" type="text"
+              .form-group
+                label for="lastname" Last Name
+                input#lastname.form-control name="lastname" type="text"
+              .form-group
+                label for="username" Username
+                input#username.form-control name="username" type="text"
+              .form-group
+                label for="password" Password
+                input#password.form-control name="password" type="password"
+              .form-group
+                label for="confirm_password" Confirm Password
+                input#confirm_password.form-control name="confirm_password" type="password"
+              .form-group
+                label for="email" Email
+                input#email.form-control name="email" type="email"
+
+              input.btn.btn-primary type="submit" value="Submit"
+
+.row
+  .col-md-12
+    .widget-container
+      .heading
+        i.icon-shield
+        | Validation States
+
+      .widget-content.padded
+        .row
+          form.col-md-6
+            .form-group.has-warning
+              label.control-label for="inputWarning" Warning
+              input#inputWarning.form-control type="text"
+            .form-group.has-error
+              label.control-label for="inputError" Error
+              input#inputError.form-control type="text"
+            .form-group.has-success
+              label.control-label for="inputSuccess" Success
+              input#inputSuccess.form-control type="text"
 
 .row
   .col-md-12
@@ -197,7 +346,7 @@
       .widget-content.padded
         form.form-horizontal action="#"
           .form-group
-            label.control-label.col-md-2 Custom file upload
+            label.control-label.col-md-2 Custom File Upload
             .col-md-4
               .fileupload.fileupload-new data-provides="fileupload"
                 .input-group
@@ -212,7 +361,7 @@
                       input type="file"
 
           .form-group
-            label.control-label.col-md-2 Without input
+            label.control-label.col-md-2 Without Input
             .col-md-4
               .fileupload.fileupload-new data-provides="fileupload"
                 span.btn.btn-default.btn-file
@@ -223,7 +372,7 @@
                 button.close.fileupload-exists data-dismiss="fileupload" style="float:none" type="button" &times;
 
           .form-group
-            label.control-label.col-md-2 With preview
+            label.control-label.col-md-2 With Preview
             .col-md-4
               .fileupload.fileupload-new data-provides="fileupload"
                 .fileupload-new.img-thumbnail style="width: 200px; height: 150px;"
@@ -235,56 +384,6 @@
                     span.fileupload-exists Change
                     input type="file"
                   a.btn.btn-default.fileupload-exists data-dismiss="fileupload" href="#" Remove
-
-
-.row
-  .col-md-12
-    .widget-container
-      .heading
-        i.icon-shield
-        | Form Validation
-
-      .widget-content.padded
-        form#validate-form.cmxform action="" method="get"
-          fieldset
-            .form-group
-              label for="firstname" First Name
-              input#firstname.form-control name="firstname" type="text"
-            .form-group
-              label for="lastname" Last Name
-              input#lastname.form-control name="lastname" type="text"
-            .form-group
-              label for="username" Username
-              input#username.form-control name="username" type="text"
-            .form-group
-              label for="password" Password
-              input#password.form-control name="password" type="password"
-            .form-group
-              label for="confirm_password" Confirm Password
-              input#confirm_password.form-control name="confirm_password" type="password"
-            .form-group
-              label for="email" Email
-              input#email.form-control name="email" type="email"
-
-            input.btn.btn-primary type="submit" value="Submit"
-
-.row
-  .col-md-12
-    .widget-container
-      .heading
-        i.icon-shield
-        | Validation States
-
-      .widget-content.padded
-        .form-group.has-warning
-          label.control-label for="inputWarning" Warning
-          input#inputWarning.form-control type="text"
-        .form-group.has-error
-          label.control-label for="inputError" Error
-          input#inputError.form-control type="text"
-        .form-group.has-success
-          label.control-label for="inputSuccess" Success
-          input#inputSuccess.form-control type="text"
 
 .row
   .col-md-12
