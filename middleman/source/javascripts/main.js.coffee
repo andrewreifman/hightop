@@ -825,7 +825,7 @@ $(document).ready ->
       confirm_password:
         required: "Please provide a password"
         minlength: "Your password must be at least 5 characters long"
-        equalTo: "Please enter the same password as above"
+        equalTo: "Please enter the same password"
 
       email: "Please enter a valid email address"
 
@@ -931,6 +931,11 @@ $(document).ready ->
     modalBackdrop: true
     showSeconds: true
     showMeridian: false
+
+
+  $("#cp1").colorpicker format: "hex"
+  $("#cp2").colorpicker()
+  $("#cp3").colorpicker()
       
 
   ###

@@ -193,7 +193,7 @@
     .widget-container.fluid-height.clearfix
       .heading
         i.icon-adjust
-        | Datepickers
+        | Date Pickers
 
       .widget-content.padded
         form.form-horizontal action="#"
@@ -242,7 +242,7 @@
     .widget-container.fluid-height.clearfix
       .heading
         i.icon-adjust
-        | Timepickers
+        | Time Pickers
 
       .widget-content.padded
         form.form-horizontal action="#"
@@ -267,6 +267,31 @@
               .bootstrap-timepicker
                 input#timepicker-noTemplate.form-control type="text"
                 i.icon-time
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-adjust
+        | Color Pickers
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Default
+            .col-sm-4
+              input#cp1.form-control type="text" value="#8fff00"
+          .form-group
+            label.control-label.col-md-2 RGBA
+            .col-sm-4
+              input#cp2.form-control data-color-format="rgba" type="text" value="rgb(0,194,255,0.78)"
+          .form-group
+            label.control-label.col-md-2 As a Component
+            .col-sm-4
+              #cp3.input-group.color data-color="rgb(200, 0, 0)" data-color-format="rgb"
+                input.form-control readonly="" type="text" value="rgb(200, 0, 0)"
+                  span.input-group-addon
+                    i style="background-color: rgb(200, 0, 0)"
 
 .row
   .col-lg-12
