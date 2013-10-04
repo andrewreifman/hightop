@@ -812,8 +812,8 @@ $(document).ready ->
         email: true
 
     messages:
-      firstname: "Please enter your firstname"
-      lastname: "Please enter your lastname"
+      firstname: "Please enter your first name"
+      lastname: "Please enter your last name"
       username:
         required: "Please enter a username"
         minlength: "Your username must consist of at least 2 characters"

@@ -189,6 +189,61 @@
                 option value="Category 4" Option 4
 
 .row
+  .col-md-12
+    .widget-container
+      .heading
+        i.icon-shield
+        | Form Validation
+
+      .widget-content.padded
+        form#validate-form action="" method="get"
+          fieldset
+            .row
+              .col-md-6
+                .form-group
+                  label for="firstname" First Name
+                  input#firstname.form-control name="firstname" type="text"
+                .form-group
+                  label for="username" Username
+                  input#username.form-control name="username" type="text"
+                .form-group
+                  label for="password" Password
+                  input#password.form-control name="password" type="password"
+
+              .col-md-6
+                .form-group
+                  label for="lastname" Last Name
+                  input#lastname.form-control name="lastname" type="text"
+                .form-group
+                  label for="email" Email
+                  input#email.form-control name="email" type="email"
+                .form-group
+                  label for="confirm_password" Confirm Password
+                  input#confirm_password.form-control name="confirm_password" type="password"
+
+            input.btn.btn-primary type="submit" value="Validate form"            
+
+.row
+  .col-md-12
+    .widget-container
+      .heading
+        i.icon-shield
+        | Validation States
+
+      .widget-content.padded
+        .row
+          form.col-md-6
+            .form-group.has-warning
+              label.control-label for="inputWarning" Warning
+              input#inputWarning.form-control type="text"
+            .form-group.has-error
+              label.control-label for="inputError" Error
+              input#inputError.form-control type="text"
+            .form-group.has-success
+              label.control-label for="inputSuccess" Success
+              input#inputSuccess.form-control type="text"
+
+.row
   .col-lg-12
     .widget-container.fluid-height.clearfix
       .heading
@@ -318,61 +373,6 @@
             label.control-label.col-md-2 Social Security #
             .col-md-3
               input.form-control type="text" data-inputmask="'mask': ['999-99-9999']"
-
-.row
-  .col-md-12
-    .widget-container
-      .heading
-        i.icon-shield
-        | Form Validation
-
-      .widget-content.padded
-        form#validate-form action="" method="get"
-          fieldset
-            .row
-              .col-md-6
-                .form-group
-                  label for="firstname" First Name
-                  input#firstname.form-control name="firstname" type="text"
-                .form-group
-                  label for="username" Username
-                  input#username.form-control name="username" type="text"
-                .form-group
-                  label for="password" Password
-                  input#password.form-control name="password" type="password"
-
-              .col-md-6
-                .form-group
-                  label for="lastname" Last Name
-                  input#lastname.form-control name="lastname" type="text"
-                .form-group
-                  label for="email" Email
-                  input#email.form-control name="email" type="email"
-                .form-group
-                  label for="confirm_password" Confirm Password
-                  input#confirm_password.form-control name="confirm_password" type="password"
-
-            input.btn.btn-primary type="submit" value="Submit"            
-
-.row
-  .col-md-12
-    .widget-container
-      .heading
-        i.icon-shield
-        | Validation States
-
-      .widget-content.padded
-        .row
-          form.col-md-6
-            .form-group.has-warning
-              label.control-label for="inputWarning" Warning
-              input#inputWarning.form-control type="text"
-            .form-group.has-error
-              label.control-label for="inputError" Error
-              input#inputError.form-control type="text"
-            .form-group.has-success
-              label.control-label for="inputSuccess" Success
-              input#inputSuccess.form-control type="text"
 
 .row
   .col-md-12
