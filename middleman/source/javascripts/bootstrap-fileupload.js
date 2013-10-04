@@ -31,7 +31,7 @@
     this.$input = this.$element.find(':file')
     if (this.$input.length === 0) return
 
-    this.name = this.$input.attr('name') || options.name
+    // this.name = this.$input.attr('name') || options.name
 
     this.$hidden = this.$element.find('input[type=hidden][name="'+this.name+'"]')
     if (this.$hidden.length === 0) {

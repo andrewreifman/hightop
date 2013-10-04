@@ -858,6 +858,8 @@ $(document).ready ->
 
       reader.readAsDataURL file
       false
+
+  $('.fileupload').fileupload()
       
 
   ###

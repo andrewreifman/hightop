@@ -188,31 +188,54 @@
               input.form-control type="text" data-inputmask="'mask': ['999-99-9999']"
 
 .row
-  .col-lg-12
-    .widget-container.fluid-height.clearfix
+  .col-md-12
+    .widget-container
       .heading
-        i.icon-user
-        | User Profile
+        i.icon-shield
+        | File Upload
 
       .widget-content.padded
-        form
+        form.form-horizontal action="#"
           .form-group
-            label for="exampleInputFile" User photo
-            br
-            = image_tag "avatar-male2-lg.png", width: "150", height:"150", class: 'form-photo'
-            input#exampleInputFile type="file"
-          .form-group
-            label for="exampleInputEmail" Email
-            input#exampleInputEmail.form-control placeholder="Enter email" type="text"
-          .form-group
-            label for="exampleInputPassword" Password
-            input#exampleInputPassword.form-control placeholder="Password" type="password"
-          .form-group
-            label for="exampleInputPassword" Profile
-            textarea class="form-control" rows="3"
+            label.control-label.col-md-2 Custom file upload
+            .col-md-4
+              .fileupload.fileupload-new data-provides="fileupload"
+                .input-group
+                  .form-control
+                    i.icon-file.fileupload-exists
+                    span.fileupload-preview
+                  .input-group-btn
+                    a.btn.btn-default.fileupload-exists data-dismiss="fileupload" href="#" Remove
+                    span.btn.btn-default.btn-file
+                      span.fileupload-new Select file
+                      span.fileupload-exists Change
+                      input type="file"
 
-          button.btn.btn-primary type="submit" Submit
-          button.btn.btn-default-outline Cancel
+          .form-group
+            label.control-label.col-md-2 Without input
+            .col-md-4
+              .fileupload.fileupload-new data-provides="fileupload"
+                span.btn.btn-default.btn-file
+                  span.fileupload-new Select file
+                  span.fileupload-exists Change
+                  input type="file"
+                span.fileupload-preview
+                button.close.fileupload-exists data-dismiss="fileupload" style="float:none" type="button" &times;
+
+          .form-group
+            label.control-label.col-md-2 With preview
+            .col-md-4
+              .fileupload.fileupload-new data-provides="fileupload"
+                .fileupload-new.img-thumbnail style="width: 200px; height: 150px;"
+                  img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image"
+                .fileupload-preview.fileupload-exists.img-thumbnail style="width: 200px; max-height: 150px"
+                div
+                  span.btn.btn-default.btn-file
+                    span.fileupload-new Select image
+                    span.fileupload-exists Change
+                    input type="file"
+                  a.btn.btn-default.fileupload-exists data-dismiss="fileupload" href="#" Remove
+
 
 .row
   .col-md-12
@@ -265,7 +288,7 @@
 
 .row
   .col-md-12
-    .widget-container
+    .widget-container.fluid-height
       .heading
         i.icon-shield
         | Drag and Drop Upload
