@@ -156,9 +156,11 @@
             .col-md-7
               textarea.form-control rows="3"
 
-          .form-actions.col-lg-offset-2.col-md-7
-            button.btn.btn-primary type="submit" Submit
-            button.btn.btn-default-outline Cancel
+          .form-group
+            label.control-label.col-md-2 Form Actions
+            .col-md-7
+              button.btn.btn-primary type="submit" Submit
+              button.btn.btn-default-outline Cancel            
 
 .row
   .col-lg-12
@@ -221,11 +223,19 @@
                   span.input-group-addon
                     i.icon-calendar
           .form-group
-            label.control-label.col-md-2 Date Range
-            .col-sm-3
+            label.control-label.col-md-2 Date Range 1
+            .col-sm-2
               input#dpd1.form-control data-date-autoclose="true" data-date-format="dd-mm-yyyy" placeholder="Start date" type="text"
-            .col-sm-3
+            .col-sm-2
               input#dpd2.form-control data-date-autoclose="true" data-date-format="dd-mm-yyyy" placeholder="End date" type="text"
+
+          .form-group
+            label.control-label.col-md-2 Date Range 2
+            .col-md-3
+              .input-group.date
+                input.form-control.date-range type="text"
+                  span.input-group-addon
+                    i.icon-calendar
 
 .row
   .col-lg-12
@@ -292,29 +302,32 @@
         | Form Validation
 
       .widget-content.padded
-        .row
-          form#validate-form.col-md-6 action="" method="get"
-            fieldset
-              .form-group
-                label for="firstname" First Name
-                input#firstname.form-control name="firstname" type="text"
-              .form-group
-                label for="lastname" Last Name
-                input#lastname.form-control name="lastname" type="text"
-              .form-group
-                label for="username" Username
-                input#username.form-control name="username" type="text"
-              .form-group
-                label for="password" Password
-                input#password.form-control name="password" type="password"
-              .form-group
-                label for="confirm_password" Confirm Password
-                input#confirm_password.form-control name="confirm_password" type="password"
-              .form-group
-                label for="email" Email
-                input#email.form-control name="email" type="email"
+        form#validate-form action="" method="get"
+          fieldset
+            .row
+              .col-md-6
+                .form-group
+                  label for="firstname" First Name
+                  input#firstname.form-control name="firstname" type="text"
+                .form-group
+                  label for="username" Username
+                  input#username.form-control name="username" type="text"
+                .form-group
+                  label for="password" Password
+                  input#password.form-control name="password" type="password"
 
-              input.btn.btn-primary type="submit" value="Submit"
+              .col-md-6
+                .form-group
+                  label for="lastname" Last Name
+                  input#lastname.form-control name="lastname" type="text"
+                .form-group
+                  label for="email" Email
+                  input#email.form-control name="email" type="email"
+                .form-group
+                  label for="confirm_password" Confirm Password
+                  input#confirm_password.form-control name="confirm_password" type="password"
+
+            input.btn.btn-primary type="submit" value="Submit"            
 
 .row
   .col-md-12
