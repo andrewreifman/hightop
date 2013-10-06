@@ -2851,6 +2851,14 @@ body.fourofour
 /*-----------------------------------------------------------------------------------*/
 /*  Mobile Styles
 /*-----------------------------------------------------------------------------------*/
+@media (max-width: 1200px)
+  .row + .row
+    margin-top: 0
+
+  [class*="col-sm"], [class*="col-md"], [class*="col-lg"], [class*="col-xs"]
+    margin-bottom: 20px
+
+
 @media (max-width: 979px)
   .stats-container
     height: 470px
@@ -2858,7 +2866,6 @@ body.fourofour
       border-bottom: 1px solid #e6e6e6
       padding-bottom: 12px
       height: auto
-
 
 
 @media (max-width: 767px)
