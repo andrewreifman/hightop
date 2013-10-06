@@ -788,6 +788,172 @@ $(document).ready ->
   ###
   $('#editor').wysiwyg();
 
+  ###
+  # =============================================================================
+  #   Form Input Masks
+  # =============================================================================
+  ###
+  $(":input").inputmask();
+
+  ###
+  # =============================================================================
+  #   Validation
+  # =============================================================================
+  ###
+  $("#validate-form").validate
+    rules:
+      firstname: "required"
+      lastname: "required"
+      username:
+        required: true
+        minlength: 2
+
+      password:
+        required: true
+        minlength: 5
+
+      confirm_password:
+        required: true
+        minlength: 5
+        equalTo: "#password"
+
+      email:
+        required: true
+        email: true
+
+    messages:
+      firstname: "Please enter your first name"
+      lastname: "Please enter your last name"
+      username:
+        required: "Please enter a username"
+        minlength: "Your username must consist of at least 2 characters"
+
+      password:
+        required: "Please provide a password"
+        minlength: "Your password must be at least 5 characters long"
+
+      confirm_password:
+        required: "Please provide a password"
+        minlength: "Your password must be at least 5 characters long"
+        equalTo: "Please enter the same password"
+
+      email: "Please enter a valid email address"
+
+
+  ###
+  # =============================================================================
+  #   Drag and drop files
+  # =============================================================================
+  ###
+  $(".single-file-drop").each ->
+    $dropbox = $(this)
+    if typeof window.FileReader is "undefined"
+      $("small", this).html("File API & FileReader API not supported").addClass "text-danger"
+      return
+    @ondragover = ->
+      $dropbox.addClass "hover"
+      false
+
+    @ondragend = ->
+      $dropbox.removeClass "hover"
+      false
+
+    @ondrop = (e) ->
+      e.preventDefault()
+      $dropbox.removeClass("hover").html ""
+      file = e.dataTransfer.files[0]
+      reader = new FileReader()
+      reader.onload = (event) ->
+        $dropbox.append $("<img>").attr("src", event.target.result)
+
+      reader.readAsDataURL file
+      false
+
+  ###
+  # =============================================================================
+  #   File upload buttons
+  # =============================================================================
+  ###
+  $('.fileupload').fileupload()
+
+
+  ###
+  # =============================================================================
+  #   Datepicker
+  # =============================================================================
+  ###
+  $('.datepicker').datepicker()
+
+  nowTemp = new Date()
+  now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0)
+  checkin = $("#dpd1").datepicker(onRender: (date) ->
+    (if date.valueOf() < now.valueOf() then "disabled" else "")
+  ).on("changeDate", (ev) ->
+    if ev.date.valueOf() > checkout.date.valueOf()
+      newDate = new Date(ev.date)
+      newDate.setDate newDate.getDate() + 1
+      checkout.setValue newDate
+    checkin.hide()
+    $("#dpd2")[0].focus()
+  ).data("datepicker")
+  checkout = $("#dpd2").datepicker(onRender: (date) ->
+    (if date.valueOf() <= checkin.date.valueOf() then "disabled" else "")
+  ).on("changeDate", (ev) ->
+    checkout.hide()
+  ).data("datepicker")
+
+
+  ###
+  # =============================================================================
+  #   Daterange Picker
+  # =============================================================================
+  ###
+  $(".date-range").daterangepicker
+    format: "MM/dd/yyyy"
+    separator: " to "
+    startDate: Date.today().add(days: -29)
+    endDate: Date.today()
+    minDate: "01/01/2012"
+    maxDate: "12/31/2014"
+
+
+  ###
+  # =============================================================================
+  #   Timepicker
+  # =============================================================================
+  ###
+  $("#timepicker-default").timepicker()
+
+  $("#timepicker-24h").timepicker
+    minuteStep: 1
+    showSeconds: true
+    showMeridian: false
+
+  $("#timepicker-noTemplate").timepicker
+    template: false
+    showInputs: false
+    minuteStep: 5
+
+  $("#timepicker-modal").timepicker
+    minuteStep: 1
+    secondStep: 5
+    showInputs: false
+    modalBackdrop: true
+    showSeconds: true
+    showMeridian: false
+
+
+  $("#cp1").colorpicker format: "hex"
+  $("#cp2").colorpicker()
+  $("#cp3").colorpicker()
+  
+
+  ###
+  # =============================================================================
+  #   Toggle switches
+  # =============================================================================
+  ###
+
 
   ###
   # =============================================================================

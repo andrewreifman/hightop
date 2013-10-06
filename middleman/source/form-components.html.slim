@@ -1,0 +1,476 @@
+.page-title
+  h1 Form Components
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-reorder
+        | Basic Components
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Input
+            .col-md-7
+              input.form-control placeholder="Text" type="text"
+          .form-group
+            label.control-label.col-md-2 Dropdown
+            .col-md-7
+              select.form-control
+                option value="Category 1" Option 1
+                option value="Category 2" Option 2
+                option value="Category 3" Option 3
+                option value="Category 4" Option 4
+          .form-group
+            label.control-label.col-md-2 Multi-Select
+            .col-md-7
+              select.form-control multiple=""
+                option value="Category 1" Option 1
+                option value="Category 2" Option 2
+                option value="Category 3" Option 3
+                option value="Category 4" Option 4
+
+          .form-group
+            label.control-label.col-md-2 Username Input
+            .col-md-7
+              .input-group
+                span.input-group-addon @
+                input.form-control placeholder="Username" type="text"
+
+          .form-group
+            label.control-label.col-md-2 Currency Input
+            .col-md-7
+              .input-group
+                span.input-group-addon $
+                input.form-control type="text"
+                  span.input-group-addon .00
+
+          .form-group
+            label.control-label.col-md-2 Button Add-on
+            .col-md-7
+              .input-group
+                input.form-control type="text"
+                  span.input-group-btn
+                    button.btn.btn-default type="button" Go
+
+          .form-group
+            label.control-label.col-md-2 Dropdown Add-on
+            .col-md-7
+              .input-group
+                input.form-control type="text"
+                  .input-group-btn
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      | Actions
+                      span.caret
+                    ul.dropdown-menu.pull-right
+                      li
+                        a href="#" Action 1
+                      li
+                        a href="#" Action 2
+                      li
+                        a href="#" Action 3
+
+
+          fieldset disabled=""
+            .form-group
+              label.control-label.col-md-2 for="disabledInput" Disabled Input
+              .col-md-7
+                input#disabledInput.form-control placeholder="Disabled input" type="text"
+            .form-group
+              label.control-label.col-md-2 for="disabledInput" Disabled Select
+              .col-md-7
+                select#disabledSelect.form-control
+                  option Disabled select
+
+          .form-group
+            label.control-label.col-md-2 Radio Buttons
+            .col-md-7
+              label.radio
+                input name="optionsRadios1" type="radio" value="option1"
+                span Option 1
+              label.radio
+                input checked="" name="optionsRadios1" type="radio" value="option2"
+                span Option 2
+              label.radio
+                input name="optionsRadios1" type="radio" value="option3"
+                span Option 3
+              label.radio
+                input name="optionsRadios1" type="radio" value="option4"
+                span Option 4
+
+          .form-group
+            label.control-label.col-md-2 Radio Buttons
+            .col-md-7
+              label.radio-inline
+                input name="optionsRadios2" type="radio" value="option1"
+                span Option 1
+              label.radio-inline
+                input checked="" name="optionsRadios2" type="radio" value="option2"
+                span Option 2
+              label.radio-inline
+                input name="optionsRadios2" type="radio" value="option3"
+                span Option 3
+
+          .form-group
+            label.control-label.col-md-2 Checkbox
+            .col-md-7
+              label.checkbox
+                input type="checkbox" value=""
+                span Checkbox 1
+              label.checkbox
+                input type="checkbox" value=""
+                span Checkbox 2
+              label.checkbox
+                input type="checkbox" value=""
+                span Checkbox 3
+              label.checkbox
+                input type="checkbox" value=""
+                span Checkbox 4
+
+          .form-group
+            label.control-label.col-md-2 Checkbox
+            .col-md-7
+              label.checkbox-inline
+                input type="checkbox" value=""
+                span Checkbox 1
+              label.checkbox-inline
+                input type="checkbox" value=""
+                span Checkbox 2
+              label.checkbox-inline
+                input type="checkbox" value=""
+                span Checkbox 3
+
+          .form-group
+            label.control-label.col-md-2 Textarea
+            .col-md-7
+              textarea.form-control rows="3"
+
+          .form-group
+            label.control-label.col-md-2 Form Actions
+            .col-md-7
+              button.btn.btn-primary type="submit" Submit
+              button.btn.btn-default-outline Cancel            
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-collapse
+        | Select2 Dropdowns
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Select2 Dropdown
+            .col-md-7
+              select.select2able
+                option value="Category 1" Option 1
+                option value="Category 2" Option 2
+                option value="Category 3" Option 3
+                option value="Category 4" Option 4
+          .form-group
+            label.control-label.col-md-2 Multi-Select2
+            .col-md-7
+              select.select2able multiple=""
+                option value="Category 1" Option 1
+                option value="Category 2" Option 2
+                option value="Category 3" Option 3
+                option value="Category 4" Option 4
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-check
+        | Toggle Switches
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Switch Sizes
+            .col-md-7
+              .toggle-switch.switch-large
+                input checked="" type="checkbox"
+              .toggle-switch
+                input checked="" type="checkbox"
+              .toggle-switch.switch-small
+                input checked="" type="checkbox"
+              .toggle-switch.switch-mini
+                input checked="" type="checkbox"
+          .form-group
+            label.control-label.col-md-2 Switch Colors
+            .col-md-7
+              .toggle-switch data-off="info" data-on="primary"
+                input checked="" type="checkbox"
+              .toggle-switch data-off="success" data-on="info"
+                input checked="" type="checkbox"
+              .toggle-switch data-off="warning" data-on="success"
+                input checked="" type="checkbox"
+              .toggle-switch data-off="danger" data-on="warning"
+                input checked="" type="checkbox"
+              .toggle-switch data-off="default" data-on="danger"
+                input checked="" type="checkbox"
+              .toggle-switch data-off="primary" data-on="default"
+                input checked="" type="checkbox"
+          .form-group
+            label.control-label.col-md-2 Different Labels
+            .col-md-7
+              .toggle-switch.text-toggle-switch style="width:200px;" data-off="info" data-on="primary" data-on-label="HELLO" data-off-label="GOODBYE"
+                input checked="" type="checkbox"
+          .form-group
+            label.control-label.col-md-2 Authentic Toggle Switch
+            .col-md-7.clearfix
+              .holder
+                input#check.check-ios name="check" type="checkbox" value="None" checked="checked"
+                label for="check"
+                span
+              em 
+                | (works only in modern browsers)
+
+
+.row
+  .col-md-12
+    .widget-container
+      .heading
+        i.icon-shield
+        | Form Validation
+
+      .widget-content.padded
+        form#validate-form action="" method="get"
+          fieldset
+            .row
+              .col-md-6
+                .form-group
+                  label for="firstname" First Name
+                  input#firstname.form-control name="firstname" type="text"
+                .form-group
+                  label for="username" Username
+                  input#username.form-control name="username" type="text"
+                .form-group
+                  label for="password" Password
+                  input#password.form-control name="password" type="password"
+
+              .col-md-6
+                .form-group
+                  label for="lastname" Last Name
+                  input#lastname.form-control name="lastname" type="text"
+                .form-group
+                  label for="email" Email
+                  input#email.form-control name="email" type="email"
+                .form-group
+                  label for="confirm_password" Confirm Password
+                  input#confirm_password.form-control name="confirm_password" type="password"
+
+            input.btn.btn-primary type="submit" value="Validate form"            
+
+.row
+  .col-md-12
+    .widget-container
+      .heading
+        i.icon-shield
+        | Validation States
+
+      .widget-content.padded
+        .row
+          form.col-md-6
+            .form-group.has-warning
+              label.control-label for="inputWarning" Warning
+              input#inputWarning.form-control type="text"
+            .form-group.has-error
+              label.control-label for="inputError" Error
+              input#inputError.form-control type="text"
+            .form-group.has-success
+              label.control-label for="inputSuccess" Success
+              input#inputSuccess.form-control type="text"
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-calendar
+        | Date Pickers
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Default
+            .col-md-3
+              input.form-control.datepicker type="text"
+          .form-group
+            label.control-label.col-md-2 As a Component
+            .col-md-3
+              .input-group.date.datepicker
+                input.form-control type="text"
+                  span.input-group-addon
+                    i.icon-calendar
+          .form-group
+            label.control-label.col-md-2 Autoclose
+            .col-md-3
+              .input-group.date.datepicker data-date-autoclose="true" data-date-format="dd-mm-yyyy"
+                input.form-control type="text"
+                  span.input-group-addon
+                    i.icon-calendar
+          .form-group
+            label.control-label.col-md-2 Start With the Year
+            .col-md-3
+              .input-group.date.datepicker data-date-autoclose="true" data-date-format="dd.mm.yyyy" data-date-start-view="2"
+                input.form-control type="text"
+                  span.input-group-addon
+                    i.icon-calendar
+          .form-group
+            label.control-label.col-md-2 Date Range 1
+            .col-sm-2
+              input#dpd1.form-control data-date-autoclose="true" data-date-format="dd-mm-yyyy" placeholder="Start date" type="text"
+            .col-sm-2
+              input#dpd2.form-control data-date-autoclose="true" data-date-format="dd-mm-yyyy" placeholder="End date" type="text"
+
+          .form-group
+            label.control-label.col-md-2 Date Range 2
+            .col-md-3
+              .input-group.date
+                input.form-control.date-range type="text"
+                  span.input-group-addon
+                    i.icon-calendar
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-time
+        | Time Pickers
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Default
+            .col-md-3
+              .input-group.bootstrap-timepicker
+                input#timepicker-default.form-control type="text"
+                  span.input-group-addon
+                    i.icon-time
+          .form-group
+            label.control-label.col-md-2 24 Hour
+            .col-md-3
+              .input-group.bootstrap-timepicker
+                input#timepicker-24h.form-control type="text"
+                  span.input-group-addon
+                    i.icon-time
+
+          .form-group
+            label.control-label.col-md-2 No Dropdown
+            .col-md-3
+              .bootstrap-timepicker
+                input#timepicker-noTemplate.form-control type="text"
+                i.icon-time
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-tint
+        | Color Pickers
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Default
+            .col-sm-4
+              input#cp1.form-control type="text" value="#8fff00"
+          .form-group
+            label.control-label.col-md-2 RGBA
+            .col-sm-4
+              input#cp2.form-control data-color-format="rgba" type="text" value="rgb(0,194,255,0.78)"
+          .form-group
+            label.control-label.col-md-2 As a Component
+            .col-sm-4
+              #cp3.input-group.color data-color="rgb(200, 0, 0)" data-color-format="rgb"
+                input.form-control readonly="" type="text" value="rgb(200, 0, 0)"
+                  span.input-group-addon
+                    i style="background-color: rgb(200, 0, 0)"
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
+        i.icon-reorder
+        | Input Masks
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Date 1
+            .col-md-3
+              input.form-control type="text" data-inputmask="'alias': 'mm/dd/yyyy'"
+          .form-group
+            label.control-label.col-md-2 Date 2
+            .col-md-3
+              input.form-control type="text" data-inputmask="'alias': 'dd/mm/yyyy'"
+          .form-group
+            label.control-label.col-md-2 Phone Number
+            .col-md-3
+              input.form-control type="text" data-inputmask="'mask': ['(999) 999-9999']"
+          .form-group
+            label.control-label.col-md-2 Social Security #
+            .col-md-3
+              input.form-control type="text" data-inputmask="'mask': ['999-99-9999']"
+
+.row
+  .col-md-12
+    .widget-container
+      .heading
+        i.icon-cloud-upload
+        | File Upload
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 Custom File Upload
+            .col-md-4
+              .fileupload.fileupload-new data-provides="fileupload"
+                .input-group
+                  .form-control
+                    i.icon-file.fileupload-exists
+                    span.fileupload-preview
+                  .input-group-btn
+                    a.btn.btn-default.fileupload-exists data-dismiss="fileupload" href="#" Remove
+                    span.btn.btn-default.btn-file
+                      span.fileupload-new Select file
+                      span.fileupload-exists Change
+                      input type="file"
+
+          .form-group
+            label.control-label.col-md-2 Without Input
+            .col-md-4
+              .fileupload.fileupload-new data-provides="fileupload"
+                span.btn.btn-default.btn-file
+                  span.fileupload-new Select file
+                  span.fileupload-exists Change
+                  input type="file"
+                span.fileupload-preview
+                button.close.fileupload-exists data-dismiss="fileupload" style="float:none" type="button" &times;
+
+          .form-group
+            label.control-label.col-md-2 With Preview
+            .col-md-4
+              .fileupload.fileupload-new data-provides="fileupload"
+                .fileupload-new.img-thumbnail style="width: 200px; height: 150px;"
+                  img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image"
+                .fileupload-preview.fileupload-exists.img-thumbnail style="width: 200px; max-height: 150px"
+                div
+                  span.btn.btn-default.btn-file
+                    span.fileupload-new Select image
+                    span.fileupload-exists Change
+                    input type="file"
+                  a.btn.btn-default.fileupload-exists data-dismiss="fileupload" href="#" Remove
+
+.row
+  .col-md-12
+    .widget-container.fluid-height
+      .heading
+        i.icon-picture
+        | Drag and Drop Upload
+
+      .widget-content.padded
+        .single-file-drop
+          h4 Drag and drop files here

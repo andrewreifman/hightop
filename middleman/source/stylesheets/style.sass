@@ -58,6 +58,9 @@ body
   background: #e8e8e8
   padding-top: 140px
 
+.main-content
+  padding-bottom: 20px
+
 .modal
   overflow-y: hidden
 
@@ -283,7 +286,7 @@ body.login
 
         > a
           display: block
-          height: 46px
+          height: 45px
           line-height: 25px
           padding: 8px 10px 9px
           position: relative
@@ -378,7 +381,7 @@ body.login
           float: none
           display: inline-block
           text-align: center
-          margin: 0 8px
+          margin: 0 6px
 
           > a
             display: block
@@ -683,11 +686,11 @@ body.login
 /*  Dropdown Styles
 /*-----------------------------------------------------------------------------------*/
 .dropdown-menu
-  margin-top: 1px !important
+  margin-top: 0
   border-radius: 0
   box-shadow: 0 1px 2px rgba(0,0,0,.2)
   background: rgba(255,255,255,.96)
-  border: 0
+  border: 1px solid #DDD
   padding: 0
   min-width: 120px
   max-width: 300px
@@ -899,6 +902,7 @@ th:active
 
     [class^="icon-"], [class*="icon-"]
       margin-right: 10px
+      font-size: 14px
 
       &.pull-right
         margin-right: 0px
@@ -1906,6 +1910,10 @@ fieldset
 label
   font-weight: normal
 
+  &.error
+    color: #d9534f
+    margin-top: 5px
+
 input[type="text"]
   box-shadow: none !important
 
@@ -1916,15 +1924,21 @@ input[type="text"]
     border-color: $blue
     box-shadow: none
 
-  &.has-error
+  &.has-error, &.error
     border-color: #d9534f
 
-.form-horizontal
-  .form-group
-    margin: 0
+.form-group
+  [class^="col-"], [class*="col-"]
+    margin-bottom: 0
 
-    label
-      margin-bottom: 5px
+  label
+    margin-bottom: 5px
+
+.input-group-btn>.btn
+  margin-left: -1px
+
+  &+.btn
+    margin-left: -1px
 
 .radio, .checkbox
   margin: 0 0 10px
@@ -2002,6 +2016,10 @@ input[type="radio"]
 .form-photo
   margin: 4px 0 12px
 
+
+/*-----------------------------------------------------------------------------------*/
+/*  iOS 7 Toggle switch
+/*-----------------------------------------------------------------------------------*/
 .check-ios
   visibility: hidden
 
@@ -2083,6 +2101,139 @@ input[type="radio"]
 
 
 /*-----------------------------------------------------------------------------------*/
+/*  Drag and drop
+/*-----------------------------------------------------------------------------------*/
+.single-file-drop
+  text-align: center
+  border: 2px dashed #ddd
+
+  h4
+    padding: 50px 0 45px
+    line-height: 1.4
+
+  img
+    max-width: 100%
+
+  &.profile-drop
+    display: inline-block
+    min-width: 200px
+    height: 200px
+    margin: 4px 0 8px
+    overflow: hidden
+    position: relative
+
+    h4
+      padding-top: 70px
+
+    img
+      max-width: none
+      height: 200px
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Custom image upload button
+/*-----------------------------------------------------------------------------------*/
+.btn-file
+  position: relative
+  overflow: hidden
+  vertical-align: middle
+  > input
+    position: absolute
+    top: 0
+    right: 0
+    margin: 0
+    font-size: 23px
+    cursor: pointer
+    opacity: 0
+    filter: alpha(opacity = 0)
+    transform: translate(-300px, 0) scale(4)
+    direction: ltr
+  + .fileupload-preview
+    padding: 0 5px 0 10px
+    vertical-align: middle
+
+.fileupload
+  .form-control
+    height: 34px
+    display: inline-block
+    box-shadow: none
+  .uneditable-input
+    display: inline-block
+    margin-bottom: 0
+    vertical-align: middle
+    cursor: text
+  .img-thumbnail
+    display: inline-block
+    margin-bottom: 10px
+    overflow: hidden
+    text-align: center
+    vertical-align: middle
+    border: 0
+    border-radius: 0
+    padding: 0
+    > img
+      margin-left: auto
+      margin-right: auto
+      max-height: 100%
+  .btn
+    vertical-align: middle
+    margin: 0 2px 0 -1px
+
+.fileupload-exists .fileupload-new, .fileupload-new .fileupload-exists
+  display: none
+
+.fileupload-inline .fileupload-controls
+  display: inline
+
+.fileupload-new .input-append .btn-file
+  -webkit-border-radius: 0 3px 3px 0
+  -moz-border-radius: 0 3px 3px 0
+  border-radius: 0 3px 3px 0
+
+.thumbnail-borderless .img-thumbnail
+  padding: 0
+  border: none
+  -webkit-border-radius: 0
+  -moz-border-radius: 0
+  border-radius: 0
+  -webkit-box-shadow: none
+  -moz-box-shadow: none
+  box-shadow: none
+
+.fileupload-new.thumbnail-borderless .im-thumbnail
+  border: 1px solid #ddd
+
+.fileupload .fileupload-preview + .close
+  vertical-align: middle
+
+.control-group
+  &.warning .fileupload
+    .uneditable-input
+      color: #a47e3c
+      border-color: #a47e3c
+    .fileupload-preview
+      color: #a47e3c
+    .img-thumbnail
+      border-color: #a47e3c
+  &.error .fileupload
+    .uneditable-input
+      color: #b94a48
+      border-color: #b94a48
+    .fileupload-preview
+      color: #b94a48
+    .img-thumbnail
+      border-color: #b94a48
+  &.success .fileupload
+    .uneditable-input
+      color: #468847
+      border-color: #468847
+    .fileupload-preview
+      color: #468847
+    .img-thumbnail
+      border-color: #468847
+
+
+/*-----------------------------------------------------------------------------------*/
 /*  select2 Dropdowns
 /*-----------------------------------------------------------------------------------*/
 .select2-container
@@ -2097,7 +2248,7 @@ input[type="radio"]
       line-height: 33px
 
     .select2-arrow
-      width: 30px
+      width: 34px
       text-align: center
 
       b
@@ -2497,9 +2648,11 @@ button.close
   .row
     margin: 0 -10px 0
 
+  &+ .row
+    margin-top: 20px
+
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12
   padding: 0 10px
-  margin-bottom: 20px
 
 .hideme
   display: none
@@ -2637,13 +2790,13 @@ button.close
 
 .voice-container
   height: 30px
-  width: 38px
-  float: right
+  width: 34px
+  float: left
   text-align: center
   padding-top: 4px
 
   #voiceBtn
-    width: 20px
+    width: 18px
     color: transparent
     background-color: transparent
     transform: scale(1.75)

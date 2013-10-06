@@ -35,3 +35,6 @@
 //= require skycons
 //= require styleswitcher
 //= require wysiwyg
+//= require wysiwyg
+//= require wysihtml5.min
+//= require bootstrap-wysihtml5
