@@ -447,7 +447,7 @@ body.login
 /*  Button Styles
 /*-----------------------------------------------------------------------------------*/
 .btn
-  font-weight: 400
+  font-weight: 300
   margin: 0 10px 10px 0
   @include transition(all .15s)
 
@@ -817,11 +817,19 @@ th:active
         margin-right: 0
         margin-left: 0
 
+  tfoot
+    > tr > td
+      border-top: 0
+
+    > tr:first-child > td
+      border-top: 1px solid #ddd
+      padding-top: 15px
+
+
 .check
   width: 20px
 
 .check-header
-
   .sorting
     display: none
 
@@ -864,11 +872,13 @@ th:active
 /*  Well Styles
 /*-----------------------------------------------------------------------------------*/
 .well
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
-  padding: 12px
-  border-radius: 0
+  padding: 15px 15px 1px
   border: 0
-  background-color: #f8f8f8
+  background-color: #dadada
+  background-color: rgba(0,0,0,.06)
+  margin-bottom: 0
+  box-shadow: none
+  color: #555
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -2334,13 +2344,27 @@ input[type="radio"]
   
 
 /*-----------------------------------------------------------------------------------*/
-/*  Bootstrap Well Styles
+/*  Bootstrap Well
 /*-----------------------------------------------------------------------------------*/
 .well
   min-height: 38px
 
 /*-----------------------------------------------------------------------------------*/
-/*  Bootstrap Accordion Styles
+/*  Bootstrap Emphasis Classes
+/*-----------------------------------------------------------------------------------*/
+.text-primary
+  color: $blue
+.text-success
+  color: #60c560
+.text-info
+  color: #5bc0de
+.text-warning
+  color: #f0ad4e
+.text-danger
+  color: #d9534f
+
+/*-----------------------------------------------------------------------------------*/
+/*  Bootstrap Accordion
 /*-----------------------------------------------------------------------------------*/
 .panel
   box-shadow: none
@@ -2809,6 +2833,39 @@ button.close
     
     &:hover
       opacity: 1
+
+/*-----------------------------------------------------------------------------------*/
+/*  Invoice
+/*-----------------------------------------------------------------------------------*/
+.invoice
+  .invoice-header
+    img
+      margin-top: 20px
+    h2
+      font-size: 24px
+      margin-bottom: 5px
+    p 
+      color: #AAA
+      margin: 0
+
+  .well
+    padding-top: 10px
+    padding-right: 0
+
+    strong
+      font-size: 85%
+      color: #888
+      border-bottom: 1px solid #c6c6c6
+      display: block
+      padding-bottom: 8px
+      margin-bottom: 10px
+
+  .invoice-table
+    margin: 0
+
+    h4
+      font-weight: 400
+      margin-bottom: 0
 
 
 /*-----------------------------------------------------------------------------------*/

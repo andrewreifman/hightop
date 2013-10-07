@@ -1,0 +1,109 @@
+.page-title
+  h1 Invoice
+
+.invoice
+  .row
+    .col-lg-12
+      .row.invoice-header
+        .col-md-6
+          = image_tag "/images/sn-logo@2x.png", width: "183"
+        .col-md-6.text-right
+          h2 #4815162342
+          p October 12, 2013
+
+  .row
+    .col-md-6
+      .well
+        strong TO
+        h3 John Smith Corp.
+        p
+          | 1234 Main Street
+          br
+          | Suite 37
+          br
+          | Washington, D.C. 20007
+          br
+          | 202.555.5555
+          br
+          | johnsmith@gmail.com
+    .col-md-6
+      .well
+        strong FROM
+        h3 Sharp & Nimble
+        p
+          | 1234 Main Street
+          br
+          | Floor 2
+          br
+          | Baltimore, MD 30010
+          br
+          | 301.555.5555
+          br
+          | sharpandnimble@gmail.com
+
+  .row
+    .col-lg-12
+      .widget-container.fluid-height
+        .widget-content.padded.clearfix
+          table.table.table-striped.invoice-table
+            thead
+              th width="50"
+              th Product
+              th width="70" Qty
+              th width="100" Unit Price
+              th width="100" Total
+            tbody
+              tr
+                td #1
+                td Product Name
+                td 2
+                td $50
+                td $100
+              tr
+                td #2
+                td Product Name
+                td 2
+                td $50
+                td $100
+              tr
+                td #3
+                td Product Name
+                td 2
+                td $50
+                td $100
+              tr
+                td #4
+                td Product Name
+                td 2
+                td $50
+                td $100
+            tfoot
+              tr
+                td.text-right colspan="4" 
+                  strong Subtotal
+                td $1,000
+              tr
+                td.text-right colspan="4" 
+                  strong Tax
+                td $70
+              tr
+                td.text-right colspan="4" 
+                  strong Shipping
+                td $30
+              tr
+                td.text-right colspan="4" 
+                  h4.text-primary Total
+                td 
+                  h4.text-primary $1,100
+
+  .row
+    .col-lg-12
+      .well
+        strong NOTES
+        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede. Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+
+  .row
+    .col-lg-12
+      .btn.btn-primary.pull-right
+        i.icon-print
+        | Print invoice
