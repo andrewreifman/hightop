@@ -19,12 +19,12 @@ html
     
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
 
-  body.login
+  body.login2
 
     <!-- Login Screen -->
-    .login-container
+    .login-wrapper
       = image_tag "logo-login@2x.png", width: "100", height:"30"
-      form
+      form action="index.html"
         .form-group
           .input-group
             span.input-group-addon
@@ -37,12 +37,12 @@ html
             input.form-control value="Password" type="password"
 
         = link_to "Forgot password?", "#", class: "pull-right"
-        .form-group
+        .text-left
           label.checkbox
             input type="checkbox"
             span Keep me logged in
         
-        a.btn.btn-lg.btn-primary.btn-block.login-submit href="index.html" Log in
+        input.btn.btn-lg.btn-primary.btn-block type="submit" value="Log in"
 
         .social-login.clearfix
           a.btn.btn-primary.pull-left.facebook href="index.html"
@@ -52,8 +52,8 @@ html
             i.icon-twitter
             | Login with twitter
 
-        p Don't have an account yet?
-        a.btn.btn-default-outline.btn-block href="signup.html" Sign up now
+      p Don't have an account yet?
+      a.btn.btn-default-outline.btn-block href="signup2.html" Sign up now
 
 
     <!-- End Login Screen -->
