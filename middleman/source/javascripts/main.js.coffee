@@ -959,3 +959,12 @@ $(document).ready ->
     weatherSetting = $(@).data('skycons')
     skycons.add canvasId, Skycons[weatherSetting]
     skycons.play()
+
+
+  ###
+  # =============================================================================
+  #   Login/signup animation
+  # =============================================================================
+  ###
+  $(window).load ->
+    $(".login-container").addClass "active"

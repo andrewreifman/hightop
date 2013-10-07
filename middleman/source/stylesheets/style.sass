@@ -183,6 +183,13 @@ body.login1
     top: 50%
     left: 50%
     margin: -190px 0 0 -190px
+    opacity: 0
+    -webkit-transition: all 1s .5s
+    -moz-transition: all 1s .5s
+    transition: all 1s .5s
+
+    &.active
+      opacity: 1
 
     img
       margin: 10px auto 30px
