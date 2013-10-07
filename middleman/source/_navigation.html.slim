@@ -143,7 +143,7 @@
             span aria-hidden="true" class="se7en-charts"
             | Charts
         li.dropdown *{ class: "#{cp 'filters.html'}" }
-          = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('filters.html') || cp('calendar.html') do
+          = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('filters.html') || cp('calendar.html') || cp('invoice.html') do
             span aria-hidden="true" class="se7en-pages"
             | Pages
             b.caret
@@ -152,6 +152,7 @@
             li= link_to "Calendar", 'calendar.html', class: cp('calendar.html')
             li= link_to "Login", 'login.html', class: cp('login.html')
             li= link_to "Sign Up", 'signup.html', class: cp('signup.html')
+            li= link_to "Invoice", 'invoice.html', class: cp('invoice.html')
             li= link_to "404 Page", '404-page.html', class: cp('404-page.html')
         li
           = link_to 'gallery.html', class: cp('gallery.html') do
