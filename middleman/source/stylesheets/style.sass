@@ -50,6 +50,8 @@ $blue: #007aff
 
 html, body
   width: 100%
+  
+html
   height: 100%
 
 body
@@ -57,6 +59,7 @@ body
   color: #666
   background: #e8e8e8
   padding-top: 140px
+  min-height: 100%
 
 .main-content
   padding-bottom: 20px
@@ -149,13 +152,121 @@ small
 
 
 /*-----------------------------------------------------------------------------------*/
-/*  Login
+/*  Login 1
 /*-----------------------------------------------------------------------------------*/
-body.login
+body.login1
+  padding: 0
+  background: url(../images/login-blurry-bg.jpg) no-repeat center center
+  background-size: cover
+  position: relative
+
+  &.signup
+    .login-container
+      margin-top: -215px
+      height: 430px      
+
+  .login-wrapper
+    width: 100%
+    height: 100%
+
+  .login-container
+    background-color: #FFF 
+    background-color: rgba(255,255,255,.95)
+    border-radius: 40px
+    box-shadow: 0 0 50px rgba(0,0,0,.2)
+    padding: 30px
+    margin-bottom: 15px
+    width: 380px
+    height: 380px
+    text-align: center
+    position: absolute
+    top: 50%
+    left: 50%
+    margin: -190px 0 0 -190px
+    opacity: 0
+    -webkit-transition: all 1s .5s
+    -moz-transition: all 1s .5s
+    transition: all 1s .5s
+
+    &.active
+      opacity: 1
+
+    img
+      margin: 10px auto 30px
+
+    .form-group
+      position: relative
+      margin-bottom: 0
+
+    input.form-control
+      height: 48px
+      font-size: 15px
+      box-shadow: none
+      border-radius: 0
+      border: 0
+      border-bottom: 1px solid #d6d6d6
+      padding-left: 0
+      padding-right: 0
+      background: transparent
+
+    .form-options
+      margin: 20px 0 30px
+
+      .checkbox
+        display: inline-block
+
+    input[type="submit"]
+      position: absolute
+      top: 10px
+      right: 0
+      opacity: .5
+      font-family: "FontAwesome"
+      background: transparent
+      color: #888
+      border: 2px solid #888
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      padding-left: 7px
+      line-height: 24px
+
+      &:hover
+        opacity: 1
+
+    .social-login
+      margin-bottom: 25px
+      > .btn
+        width: 49%
+        margin: 0
+
+      .facebook
+        background-color: #335397
+        border-color: #335397
+
+        &:hover
+          background-color: transparent
+          color: #335397
+
+      .twitter
+        background-color: #00c7f7
+        border-color: #00c7f7
+
+        &:hover
+          background-color: transparent
+          color: #00c7f7
+
+    p.signup
+      margin-bottom: 0
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Login 2
+/*-----------------------------------------------------------------------------------*/
+body.login2
   padding: 30px 0 0
   background: #eee
 
-  .login-container
+  .login-wrapper
     max-width: 420px
     margin: 0 auto
     text-align: center
@@ -178,10 +289,9 @@ body.login
       box-shadow: none
 
     .checkbox
-      text-align: left
       margin-bottom: 30px
 
-    .login-submit
+    input[type="submit"]
       padding: 10px 0 12px
       margin: 20px 0 30px
 
@@ -1967,8 +2077,9 @@ input[type="checkbox"], input[type="radio"]
       border: 1px solid #c8c8c8
 
 input[type="checkbox"]:checked + span:before
-  background: #FFF url('../images/checkmark.png') no-repeat center center
+  background: $blue url('../images/checkmark.png') no-repeat center center
   @include image2x("checkmark@2x.png", 14px, 14px)
+  border-color: $blue
 
 input[type="radio"]
   display: none
@@ -1979,16 +2090,18 @@ input[type="radio"]
     &:before
       border-radius: 50%
 
-  &:checked + span:after
-    content: ""
-    width: 8px
-    height: 8px
-    position: absolute
-    top: 6px
-    left: -15px
-    background-color: #666
-    border-radius: 50%
-    display: block
+  &:checked + span
+    &:after
+      content: ""
+      width: 8px
+      height: 8px
+      position: absolute
+      top: 6px
+      left: -15px
+      background-color: $blue
+      border-radius: 50%
+      display: block
+
 .has-warning
   .help-block, .control-label
     color: #f0ad4e
@@ -2990,16 +3103,53 @@ body.fourofour
 
 
 @media (max-width: 600px)
-  body.login
-    padding-top: 0px
+  body.login1
+    padding: 15px
+    background-size: auto
+
+    &.signup
+      .login-container
+        height: auto
+        margin-top: 0
 
     .login-container
+      position: relative
+      top: 0
+      left: 0
+      margin: 0
+      width: 100%
+      height: auto
+      padding: 25px
+
+      img 
+        margin-bottom: 20px
+
+      input[type="submit"]
+        margin-bottom: 20px
+
+      .form-options
+        margin: 15px 0 15px
+
+      .social-login 
+        margin-bottom: 15px
+
+        > .btn
+          width: 100%
+          margin-bottom: 6px
+
+      p.signup a
+        display: block
+
+  body.login2
+    padding-top: 0px
+
+    .login-wrapper
       padding: 15px
 
       img
         margin: 30px auto
 
-      .login-submit
+      input[type="submit"]
         margin-bottom: 20px
 
       .social-login 
