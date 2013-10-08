@@ -1940,9 +1940,8 @@ th:active
     left: 0
     width: 222px
     height: 100%
-    border-left: 1px solid #DDD
-    overflow-y: auto
-    overflow-x: hidden
+    border-right: 1px solid #DDD
+    padding-top: 50px
 
     .heading
       background-color: transparent
@@ -1951,6 +1950,11 @@ th:active
       font-size: 16px
       padding-top: 12px
       padding-bottom: 14px
+      background-color: #f2f2f2
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
 
       i
         margin-top: 4px
@@ -1960,6 +1964,9 @@ th:active
       list-style: none
       padding-left: 15px
       margin: 0
+      overflow-y: auto
+      overflow-x: hidden
+      height: 100%
 
       li
         border-bottom: 1px solid #d6d6d6
@@ -1987,7 +1994,7 @@ th:active
           float: right
           margin: 9px 15px 0 0
 
-  .heading
+  > .heading
     position: relative !important
 
   .post-message
