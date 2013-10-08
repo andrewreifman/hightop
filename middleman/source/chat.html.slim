@@ -1,0 +1,142 @@
+.page-title
+  h1 Chat
+
+.row
+  <!-- Conversation -->
+  .col-lg-12
+    .widget-container.scrollable.chat.chat-page
+      .contact-list
+        .heading
+          | Contacts (15)
+          i.icon-plus.pull-right
+        ul
+          li
+            a href="#"
+              = image_tag "avatar-female.png", width: "30", height:"30"
+              | John Smith
+              i.icon-circle.text-success
+          li
+            a href="#"
+              = image_tag "avatar-female.png", width: "30", height:"30"
+              | John Smith
+              i.icon-circle.text-warning
+          li
+            a href="#"
+              = image_tag "avatar-female.png", width: "30", height:"30"
+              | John Smith
+              i.icon-circle.text-danger
+          li
+            a href="#"
+              = image_tag "avatar-female.png", width: "30", height:"30"
+              | John Smith
+              i.icon-circle.text-muted
+          li
+            a href="#"
+              = image_tag "avatar-female.png", width: "30", height:"30"
+              | John Smith
+              i.icon-circle.text-success
+          li
+            a href="#"
+              = image_tag "avatar-female.png", width: "30", height:"30"
+              | John Smith
+              i.icon-circle.text-success
+          li
+            a href="#"
+              = image_tag "avatar-female.png", width: "30", height:"30"
+              | John Smith
+              i.icon-circle.text-warning
+          li
+            a href="#"
+              = image_tag "avatar-female.png", width: "30", height:"30"
+              | John Smith
+              i.icon-circle.text-success
+          li
+            a href="#"
+              = image_tag "avatar-female.png", width: "30", height:"30"
+              | John Smith
+              i.icon-circle.text-success
+
+      .heading
+        i.icon-comments
+        | Chat with 
+        a href="#" John Smith
+        i.icon-cog.pull-right
+        i.icon-smile.pull-right
+      .widget-content.padded
+        ul
+          li
+            = image_tag "avatar-male.jpg", width: "30", height:"30"
+            .bubble
+              = link_to "John Smith", "", class: "user-name"
+              p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+              p.time
+                strong Today 
+                | 3:53 pm
+          li.current-user
+            = image_tag "avatar-female.jpg", width: "30", height:"30"
+            .bubble
+              = link_to "Jane Smith", "", class: "user-name"
+              p.message Donec odio. Quisque volutpat mattis eros.
+              p.time
+                strong Today 
+                | 3:53 pm
+          li
+            = image_tag "avatar-male.jpg", width: "30", height:"30"
+            .bubble
+              = link_to "John Smith", "", class: "user-name"
+              p.message Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl.
+              p.time
+                strong Today 
+                | 3:53 pm
+          li
+            = image_tag "avatar-male.jpg", width: "30", height:"30"
+            .bubble
+              = link_to "John Smith", "", class: "user-name"
+              p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+              p.time
+                strong Today 
+                | 3:53 pm
+          li.current-user
+            = image_tag "avatar-female.jpg", width: "30", height:"30"
+            .bubble
+              = link_to "Jane Smith", "", class: "user-name"
+              p.message Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo.
+              p.time
+                strong Today 
+                | 3:53 pm
+          li
+            = image_tag "avatar-male.jpg", width: "30", height:"30"
+            .bubble
+              = link_to "John Smith", "", class: "user-name"
+              p.message Donec odio. Quisque volutpat mattis eros.
+              p.time
+                strong Today 
+                | 3:53 pm
+          li.current-user
+            = image_tag "avatar-female.jpg", width: "30", height:"30"
+            .bubble
+              = link_to "Jane Smith", "", class: "user-name"
+              p.message Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada.
+              p.time
+                strong Today 
+                | 3:53 pm
+          li.current-user
+            = image_tag "avatar-female.jpg", width: "30", height:"30"
+            .bubble
+              = link_to "Jane Smith", "", class: "user-name"
+              p.message Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus fermentum posuere. Morbi sit amet nulla sed dolor elementum imperdiet. Quisque fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque adipiscing eros ut libero. Ut condimentum mi vel tellus. Suspendisse laoreet. 
+              p.time
+                strong Today 
+                | 3:53 pm
+          li
+            = image_tag "avatar-male.jpg", width: "30", height:"30"
+            .bubble
+              = link_to "John Smith", "", class: "user-name"
+              p.message Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+              p.time
+                strong Today 
+                | 3:53 pm
+
+      .post-message
+        input type="text" placeholder="Write your message here…" class="form-control"
+        input type="submit" value="Send"
