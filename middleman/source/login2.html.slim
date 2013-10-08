@@ -19,45 +19,41 @@ html
     
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
 
-  body.login
+  body.login2
 
-    <!-- Signup Screen -->
-    .login-container
-      = image_tag "logo-login@2x.png", width: "100", height:"30"
-      form
+    <!-- Login Screen -->
+    .login-wrapper
+      = link_to image_tag("logo-login@2x.png", width: "100", height:"30"), 'index.html'
+      form action="index.html"
         .form-group
           .input-group
             span.input-group-addon
               i.icon-envelope
-            input.form-control value="Enter your email address" type="text"
+            input.form-control placeholder="Username or Email" type="text"
         .form-group
           .input-group
             span.input-group-addon
               i.icon-lock
-            input.form-control value="Select a password" type="text"
-        .form-group
-          .input-group
-            span.input-group-addon
-              i.icon-ok
-            input.form-control value="Repeat your password" type="text"
+            input.form-control placeholder="Password" type="text"
 
-        .form-group
+        = link_to "Forgot password?", "#", class: "pull-right"
+        .text-left
           label.checkbox
             input type="checkbox"
-            span  I agree to the terms and conditions.
+            span Keep me logged in
         
-        a.btn.btn-lg.btn-primary.btn-block.login-submit href="index.html" Sign up
+        input.btn.btn-lg.btn-primary.btn-block type="submit" value="Log in"
 
         .social-login.clearfix
           a.btn.btn-primary.pull-left.facebook href="index.html"
             i.icon-facebook
-            | Sign up with facebook
+            | Login with facebook
           a.btn.btn-primary.pull-right.twitter href="index.html"
             i.icon-twitter
-            | Sign up with twitter
+            | Login with twitter
 
-        p Already have an account?
-        a.btn.btn-default-outline.btn-block href="login.html" Login now
+      p Don't have an account yet?
+      a.btn.btn-default-outline.btn-block href="signup2.html" Sign up now
 
 
-    <!-- End Signup Screen -->
+    <!-- End Login Screen -->

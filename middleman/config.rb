@@ -15,8 +15,10 @@ end
 # Per-page layout changes:
 #
 # With no layout
-page "login.html", :layout => false
-page "signup.html", :layout => false
+page "login1.html", :layout => false
+page "login2.html", :layout => false
+page "signup1.html", :layout => false
+page "signup2.html", :layout => false
 page "404-page.html", :layout => false
 page "docs/index.html", :layout => false
 #
