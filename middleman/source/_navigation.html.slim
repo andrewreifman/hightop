@@ -11,16 +11,16 @@
           ul.dropdown-menu
             li= link_to
               .notifications.label.label-info New
-              | New user added: Jane Smith
+              p New user added: Jane Smith
             li= link_to
               .notifications.label.label-info New
-              | Sales targets available
+              p Sales targets available
             li= link_to
               .notifications.label.label-info New
-              | New performance metric added
+              p New performance metric added
             li= link_to
               .notifications.label.label-info New
-              | New growth data available
+              p New growth data available
 
         li.dropdown.messages.hidden-xs
           a.dropdown-toggle data-toggle="dropdown" href="#"
@@ -124,7 +124,9 @@
           ul.dropdown-menu
             li= link_to "Form Components", 'form-components.html', class: cp('form-components.html')
             li= link_to "Advanced Forms", 'form-advanced.html', class: cp('form-advanced.html')
-            li= link_to "Multiple File Upload", 'file-upload.html', class: cp('file-upload.html')
+            li= link_to 'file-upload.html', class: cp('file-upload.html') do
+              .notifications.label.label-warning New
+              p Multiple File Upload
         
         li.dropdown *{ class: "#{cp 'tables.html'}" }
           = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('tables.html') || cp('datatables.html') || cp('datatables-editable.html') do
@@ -136,7 +138,7 @@
             li= link_to "DataTables", 'datatables.html', class: cp('datatables.html')
             li= link_to 'datatables-editable.html', class: cp('datatables-editable.html') do
               .notifications.label.label-warning New
-              | Editable DataTables
+              p Editable DataTables
 
         li
           = link_to 'charts.html', class: cp('charts.html') do
@@ -150,11 +152,17 @@
           ul.dropdown-menu
             li= link_to "Filter Results", 'filters.html', class: cp('filters.html')
             li= link_to "Calendar", 'calendar.html', class: cp('calendar.html')
-            li= link_to "Login 1", 'login1.html', class: cp('login1.html')
+            li= link_to 'login1.html', class: cp('login1.html') do
+              span.notifications.label.label-warning New
+              p Login 1
             li= link_to "Login 2", 'login2.html', class: cp('login2.html')
-            li= link_to "Sign Up 1", 'signup1.html', class: cp('signup1.html')
+            li= link_to 'signup1.html', class: cp('signup1.html') do
+              span.notifications.label.label-warning New
+              p Sign Up 2
             li= link_to "Sign Up 2", 'signup2.html', class: cp('signup2.html')
-            li= link_to "Invoice", 'invoice.html', class: cp('invoice.html')
+            li= link_to 'invoice.html', class: cp('invoice.html') do
+              span.notifications.label.label-warning New
+              p Invoice
             li= link_to "404 Page", '404-page.html', class: cp('404-page.html')
         li
           = link_to 'gallery.html', class: cp('gallery.html') do
