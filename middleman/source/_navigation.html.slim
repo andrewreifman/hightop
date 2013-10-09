@@ -104,13 +104,14 @@
             span aria-hidden="true" class="se7en-feed"
             | Social Feed
         li.dropdown *{ class: "#{cp 'buttons.html'}" }
-          = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('buttons.html') || cp('icons.html') || cp('components.html') || cp('widgets.html') || cp('typo.html') || cp('grid.html') do
+          = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('buttons.html') || cp('fontawesome.html') || cp('glyphicons.html') || cp('components.html') || cp('widgets.html') || cp('typo.html') || cp('grid.html') do
             span aria-hidden="true" class="se7en-star"
             | Features
             b.caret
           ul.dropdown-menu
             li= link_to "Buttons", 'buttons.html', class: cp('buttons.html')
-            li= link_to "Icons", 'icons.html', class: cp('icons.html')
+            li= link_to "Font Awesome Icons", 'fontawesome.html', class: cp('fontawesome.html')
+            li= link_to "Glyphicons", 'glyphicons.html', class: cp('glyphicons.html')
             li= link_to "Components", 'components.html', class: cp('components.html')
             li= link_to "Widgets", 'widgets.html', class: cp('widgets.html')
             li= link_to "Typography", 'typo.html', class: cp('typo.html')
