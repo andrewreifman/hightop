@@ -3436,3 +3436,65 @@ body.fourofour
 
       h2
         font-size: 28px
+
+  ul.timeline
+    padding: 15px 10px
+
+    &:after
+      left: 28px
+
+    li
+      padding-left: 0
+      margin-bottom: 16px
+
+      .timeline-time
+        position: relative
+        right: auto
+        top: 0
+        text-align: left
+        margin: 0 0 6px 56px
+
+        strong
+          display: inline-block
+          margin-right: 6px
+
+      .timeline-icon
+        top: 52px
+        left: -2px
+        margin-left: 0
+
+      .timeline-content
+        margin-left: 56px
+        box-shadow: 0 1px 2px rgba(0,0,0,.1)
+        position: relative
+
+      &:nth-child(odd)
+        padding-right: 0
+
+        .timeline-time
+          position: relative
+          right: auto
+          left: auto
+          top: 0
+          text-align: left
+          margin: 0 0 6px 56px
+
+          strong
+            display: inline-block
+            margin-right: 6px
+
+        .timeline-content
+          margin-right: 0
+          margin-left: 55px
+
+          &:after
+            right: auto
+            left: -20px
+            border: 10px solid transparent
+            border-right: 10px solid #FFF
+
+          &:before
+            right: auto
+            left: -24px
+            border: 12px solid transparent
+            border-right: 12px solid #DDD
