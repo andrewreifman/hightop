@@ -182,6 +182,25 @@
   .col-lg-12
     .widget-container.fluid-height.clearfix
       .heading
+        i.icon-collapse
+        | Autocomplete
+
+      .widget-content.padded
+        form.form-horizontal action="#"
+          .form-group
+            label.control-label.col-md-2 U.S. States
+            .col-md-7
+              input.form-control.states.typeahead.tt-query autocomplete="off" dir="auto" placeholder="Search for a U.S. state" spellcheck="false"type="text"
+
+          .form-group
+            label.control-label.col-md-2 Countries
+            .col-md-7
+              input.form-control.countries.typeahead.tt-query autocomplete="off" dir="auto" placeholder="Search for a country" spellcheck="false"type="text"
+
+.row
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .heading
         i.icon-check
         | Toggle Switches
 
