@@ -1342,14 +1342,22 @@ th:active
 /*  Social Dashboard Styles
 /*-----------------------------------------------------------------------------------*/
 .social-wrapper
+  #hidden-items
+    display: none
+
   #social-container
     margin: 0 auto
     max-width: 100%
 
-    .item 
+    .item
       width: 350px
       margin-bottom: 20px
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15)
+      margin: 10px
+      float: left
+
+    .item-hidden
+      display: none
 
     .share-widget
       background: #f8f8f8
