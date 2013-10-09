@@ -64,18 +64,6 @@ body
 .main-content
   padding-bottom: 20px
 
-.modal
-  overflow-y: hidden
-
-.modal-open .modal
-  overflow-y: scroll   
-
-// Fix page shift when body scroll is killed
-.modal-open .modal-shiftfix,
-.modal-open .modal-shiftfix .navbar-fixed-top,
-.modal-open .modal-shiftfix .navbar-fixed-bottom
-  overflow-y: scroll
-
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
   font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif
   margin: 0 0 15px
@@ -109,7 +97,6 @@ li
   margin-bottom: 5px
 
 blockquote
-  padding-bottom: 4px
   margin-bottom: 30px
 
   p
@@ -123,10 +110,6 @@ dl
 
   dd
     margin-bottom: 15px
-
-small
-  font-size: 75%
-  vertical-align: top
 
 ::-moz-selection
   background: $blue
@@ -150,6 +133,27 @@ small
   background: #DDD
   background: rgba(0,0,0,.05)
 
+
+/*-----------------------------------------------------------------------------------*/
+/*  Background color helper classes
+/*-----------------------------------------------------------------------------------*/
+.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger, .bg-muted
+  color: #FFF
+
+.bg-primary
+  background-color: $blue
+.bg-success
+  background-color: #60c560
+.bg-info
+  background-color: #5bc0de
+.bg-warning
+  background-color: #f0ad4e
+.bg-danger
+  background-color: #d9534f
+.bg-muted
+  background-color: #BBB
+.bg-white
+  background-color: #FFF
 
 /*-----------------------------------------------------------------------------------*/
 /*  Login 1
@@ -328,7 +332,7 @@ body.login2
 /*-----------------------------------------------------------------------------------*/
 .navbar
   background: #FFF
-  background: rgba(255,255,255,.94)
+  background: rgba(255,255,255,.95)
   box-shadow: 0 1px 1px rgba(0,0,0,.15)
   padding: 0
   min-height: 45px
@@ -993,6 +997,22 @@ th:active
   margin-bottom: 0
   box-shadow: none
   color: #555
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Modal Styles
+/*-----------------------------------------------------------------------------------*/
+.modal
+  overflow-y: hidden
+
+.modal-open .modal
+  overflow-y: scroll   
+
+// Fix page shift when body scroll is killed
+.modal-open .modal-shiftfix,
+.modal-open .modal-shiftfix .navbar-fixed-top,
+.modal-open .modal-shiftfix .navbar-fixed-bottom
+  overflow-y: scroll
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -2962,7 +2982,7 @@ ul.timeline
   list-style: none
   position: relative
   max-width: 1200px
-  padding: 0 20px
+  padding: 20px
   margin: 0 auto
 
   &:after
@@ -2985,7 +3005,7 @@ ul.timeline
     .timeline-time
       position: absolute
       right: 50%
-      top: 22px
+      top: 31px
       text-align: right
       margin-right: 40px
       font-size: 16px
@@ -3000,16 +3020,21 @@ ul.timeline
 
     .timeline-icon
       position: absolute
-      top: 20px
+      top: 30px
       left: 50%
-      margin-left: -18px
-      width: 36px
-      height: 36px
+      margin-left: -20px
+      width: 40px
+      height: 40px
       border-radius: 50%
       background-color: #FFF
       text-align: center
-      line-height: 36px
       box-shadow: 0 1px 2px rgba(0,0,0,.1)
+      overflow: hidden
+      padding: 3px
+
+      > div
+        border-radius: 50%
+        line-height: 34px
 
     .timeline-content
       background-color: #FFF
@@ -3018,29 +3043,66 @@ ul.timeline
       box-shadow: 0 1px 2px rgba(0,0,0,.1)
       position: relative
 
-      &:after
+      &:after, &:before
         content: ""
         position: absolute
-        top: 28px
-        left: -20px
         width: 0
         height: 0
+
+      &:after
+        top: 38px
+        left: -20px
         border: 10px solid transparent
         border-right: 10px solid #FFF
 
       &:before
-        content: ""
-        position: absolute
-        top: 26px
+        top: 36px
         left: -24px
-        width: 0
-        height: 0
         border: 12px solid transparent
         border-right: 12px solid #DDD
 
       h2
         font-size: 22px
         margin-bottom: 12px
+        line-height: 1.2
+
+      &.image, &.video
+        padding: 15px 10px 0px
+
+        h2
+          padding: 0 5px 15px
+          margin-bottom: 0
+        img
+          width: 100%
+        p
+          padding: 15px 5px
+
+    &:nth-child(odd)
+      padding-left: 0
+      padding-right: 50%
+
+      .timeline-time
+        right: auto
+        left: 50%
+        text-align: left
+        margin-right: 0
+        margin-left: 40px
+
+      .timeline-content
+        margin-right: 40px
+        margin-left: 0
+
+        &:after
+          left: auto
+          right: -20px
+          border: 10px solid transparent
+          border-left: 10px solid #FFF
+
+        &:before
+          left: auto
+          right: -24px
+          border: 12px solid transparent
+          border-left: 12px solid #DDD
 
 
 /*-----------------------------------------------------------------------------------*/
