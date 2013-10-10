@@ -2984,6 +2984,7 @@ ul.timeline
   max-width: 1200px
   padding: 20px
   margin: 0 auto
+  overflow: hidden
 
   &:after
     content: ""
@@ -3035,6 +3036,7 @@ ul.timeline
       > div
         border-radius: 50%
         line-height: 34px
+        font-size: 16px
 
     .timeline-content
       background-color: #FFF
@@ -3042,6 +3044,11 @@ ul.timeline
       margin-left: 40px
       box-shadow: 0 1px 2px rgba(0,0,0,.1)
       position: relative
+      opacity: 0
+      left: 20px
+      -webkit-transition: all .8s
+      -moz-transition: all .8s
+      transition: all .8s
 
       &:after, &:before
         content: ""
@@ -3091,6 +3098,7 @@ ul.timeline
       .timeline-content
         margin-right: 40px
         margin-left: 0
+        left: -20px
 
         &:after
           left: auto
@@ -3103,6 +3111,28 @@ ul.timeline
           right: -24px
           border: 12px solid transparent
           border-left: 12px solid #DDD
+
+  &.animated
+    li
+      .timeline-content
+        opacity: 0
+        left: 20px
+        -webkit-transition: all .8s
+        -moz-transition: all .8s
+        transition: all .8s
+
+      &:nth-child(odd)
+        .timeline-content
+          left: -20px
+
+      &.active
+        .timeline-content
+          opacity: 1
+          left: 0
+
+        &:nth-child(odd)
+          .timeline-content
+            left: 0
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -3456,7 +3486,7 @@ body.fourofour
 
         strong
           display: inline-block
-          margin-right: 6px
+          margin-right: 10px
 
       .timeline-icon
         top: 52px
@@ -3479,10 +3509,6 @@ body.fourofour
           text-align: left
           margin: 0 0 6px 56px
 
-          strong
-            display: inline-block
-            margin-right: 6px
-
         .timeline-content
           margin-right: 0
           margin-left: 55px
@@ -3498,3 +3524,14 @@ body.fourofour
             left: -24px
             border: 12px solid transparent
             border-right: 12px solid #DDD
+
+    &.animated
+      li
+        &:nth-child(odd)
+          .timeline-content
+            left: 20px
+
+        &.active
+          &:nth-child(odd)
+            .timeline-content
+              left: 0
