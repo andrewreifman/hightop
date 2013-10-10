@@ -772,7 +772,6 @@ $(document).ready ->
   #   Isotope with Masonry
   # =============================================================================
   ###
-
   $alpha = $('#hidden-items');
   $container = $('#social-container');
 
@@ -782,7 +781,9 @@ $(document).ready ->
     ###
     $container.isotope({
       itemSelector: '.item'
-    }).isotope( 'insert', $alpha.find('.item') );
+    }).isotope( 'insert', $alpha.find('.social-entry') );
+
+    $("#load-more").html("Load more").find("i").hide()
 
   $('#load-more').click ->
     items = $container.find('.item')
