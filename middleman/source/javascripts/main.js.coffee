@@ -801,6 +801,10 @@ $(document).ready ->
   ###
   $('#editor').wysiwyg();
 
+  $('#summernote').summernote
+    height: 300
+    focus: true
+
 
   ###
   # =============================================================================
