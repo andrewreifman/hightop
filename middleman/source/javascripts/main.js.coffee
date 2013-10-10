@@ -781,12 +781,12 @@ $(document).ready ->
     ###
     $container.isotope({
       itemSelector: '.item'
-    }).isotope( 'insert', $alpha.find('.social-entry') );
+    }).isotope( 'insert', $alpha.find('.item') );
 
     $("#load-more").html("Load more").find("i").hide()
 
   $('#load-more').click ->
-    items = $container.find('.item')
+    items = $container.find('.social-entry')
     item1 = $(items[Math.floor(Math.random()*items.length)]).clone()
     item2 = $(items[Math.floor(Math.random()*items.length)]).clone()
     item3 = $(items[Math.floor(Math.random()*items.length)]).clone()
