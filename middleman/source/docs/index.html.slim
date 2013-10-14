@@ -8,28 +8,31 @@ html
     = stylesheet_link_tag "font-awesome", media: "all"
     = stylesheet_link_tag "se7en-font", media: "all"
     = stylesheet_link_tag "isotope", media: "all"
-    = stylesheet_link_tag "classyscroll", media: "all"
     = stylesheet_link_tag "jquery.fancybox", media: "all"
     = stylesheet_link_tag "fullcalendar", media: "all"
     = stylesheet_link_tag "wizard", media: "all"
     = stylesheet_link_tag "select2", media: "all"
     = stylesheet_link_tag "morris", media: "all"
     = stylesheet_link_tag "datatables", media: "all"
+    = stylesheet_link_tag "datepicker", media: "all"
+    = stylesheet_link_tag "timepicker", media: "all"
+    = stylesheet_link_tag "colorpicker", media: "all"
+    = stylesheet_link_tag "bootstrap-switch", media: "all"
+    = stylesheet_link_tag "daterange-picker", media: "all"
+    = stylesheet_link_tag "typeahead", media: "all"
     = stylesheet_link_tag "pygments", media: "all"
+    = stylesheet_link_tag "style", media: "all"
     = stylesheet_link_tag "color/green", media: "all", rel: "alternate stylesheet", title: "green-theme"
     = stylesheet_link_tag "color/orange", media: "all", rel: "alternate stylesheet", title: "orange-theme"
     = stylesheet_link_tag "color/magenta", media: "all", rel: "alternate stylesheet", title: "magenta-theme"
     = stylesheet_link_tag "color/gray", media: "all", rel: "alternate stylesheet", title: "gray-theme"
-    = stylesheet_link_tag "application", media: "all"
     = stylesheet_link_tag "docs", media: "all"
 
     = javascript_include_tag "http://code.jquery.com/jquery-1.10.2.min.js"
     = javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js"
-
     = javascript_include_tag "bootstrap.min"
     = javascript_include_tag "raphael.min"
     = javascript_include_tag "jquery.mousewheel"
-    = javascript_include_tag "jquery.classyscroll"
     = javascript_include_tag "jquery.vmap.min"
     = javascript_include_tag "jquery.vmap.sampledata"
     = javascript_include_tag "jquery.vmap.world"
@@ -37,23 +40,32 @@ html
     = javascript_include_tag "fullcalendar.min"
     = javascript_include_tag "gcal"
     = javascript_include_tag "jquery.dataTables.min"
-    = javascript_include_tag "jquery.sparkline.min"
+    = javascript_include_tag "datatable-editable"
     = javascript_include_tag "jquery.easy-pie-chart"
     = javascript_include_tag "excanvas.min"
     = javascript_include_tag "jquery.isotope.min"
-    = javascript_include_tag "masonry.min"
+    = javascript_include_tag "isotope_extras"
     = javascript_include_tag "modernizr.custom"
     = javascript_include_tag "jquery.fancybox.pack"
     = javascript_include_tag "select2"
     = javascript_include_tag "styleswitcher"
     = javascript_include_tag "wysiwyg"
+    = javascript_include_tag "jquery.inputmask.min"
+    = javascript_include_tag "jquery.validate"
+    = javascript_include_tag "bootstrap-fileupload"
+    = javascript_include_tag "bootstrap-datepicker"
+    = javascript_include_tag "bootstrap-timepicker"
+    = javascript_include_tag "bootstrap-colorpicker"
+    = javascript_include_tag "bootstrap-switch.min"
+    = javascript_include_tag "typeahead"
+    = javascript_include_tag "daterange-picker"
+    = javascript_include_tag "date"
     = javascript_include_tag "morris.min"
     = javascript_include_tag "skycons"
-    = javascript_include_tag "skycons"
+    = javascript_include_tag "jquery.sparkline.min"
     = javascript_include_tag "main"
+    = javascript_include_tag "respond"
     = javascript_include_tag "docs"
-
-    = javascript_include_tag "application"
     
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
 
@@ -61,27 +73,46 @@ html
     .navbar.navbar-docs.hidden-xs
       ul.nav
         li.active=link_to "Overview", "#overview"
-        li=link_to "Features & Credits", "#features"
+        li=link_to "Features", "#features"
         li=link_to "Bootstrap 3", "#bootstrap"
         li=link_to "Header & Navigation", "#navigation"
-        li=link_to "Custom Se7en Icons", "#icons"
-        li=link_to "Font Awesome Icons", "#fontawesome"
-        li=link_to "Widget Container", "#widget-container"
-        li=link_to "Sparkline", "#sparkline"
-        li=link_to "Easy Pie Chart", "#easy-pie"
-        li=link_to "Skycons", "#skycons"
-        li=link_to "Slider", "#slider"
-        li=link_to "Select2", "#select2"
-        li=link_to "JQVMap", "#maps"
-        li=link_to "Full Calendar", "#calendar-link"
-        li=link_to "DataTables", "#datatables"
-        li=link_to "Isotope", "#isotope"
-        li=link_to "Masonry", "#masonry"
-        li=link_to "Fancybox", "#fancybox"
-
+        li=link_to "Widget Containers", "#widget-container"
+        li.dropdown
+          b.caret
+          =link_to "Icons", "#"
+          ul
+            li=link_to "Se7en Icons", "#icons"
+            li=link_to "Font Awesome Icons", "#fontawesome"
+            li=link_to "Glyphicons", "#glyphicons"
+        li.dropdown
+          b.caret
+          =link_to "Javascript", "#"
+          ul
+            li=link_to "Sparkline", "#sparkline"
+            li=link_to "Easy Pie Chart", "#easy-pie"
+            li=link_to "Skycons", "#skycons"
+            li=link_to "jQuery UI Slider", "#slider"
+            li=link_to "JQVMap", "#maps"
+            li=link_to "Full Calendar", "#calendar-link"
+            li=link_to "DataTables", "#datatables"
+            li=link_to "Isotope", "#isotope"
+            li=link_to "Fancybox", "#fancybox"
+        li.dropdown
+          b.caret
+          =link_to "Form Components", "#"
+          ul
+            li=link_to "Select2", "#select2"
+            li=link_to "Typeahead (Autocomplete)", "#typeahead"
+            li=link_to "Toggle Switches", "#toggle"
+            li=link_to "Validation", "#validation"
+            li=link_to "Date Picker", "#datepicker"
+            li=link_to "Time Picker", "#timepicker"
+            li=link_to "Color Picker", "#colorpicker"
+            li=link_to "Input Masks", "#inputmasks"
+            li=link_to "File Upload Button", "#fileupload-btn"
+        li=link_to "Credits", "#credits"
 
     .container-fluid.main-content
-
       .page-title
         h1 Documentation
 
@@ -95,7 +126,7 @@ html
               h3 Se7en is a fully responsive admin template. We employ stunning design, the latest technologies and industry best practices to create a one of kind administration template suitable for many needs.
 
       .row
-        .col-lg-6
+        .col-lg-12
           .widget-container.fluid-height.list#features
             .heading
               | Features
@@ -113,24 +144,6 @@ html
                 li Image gallery
                 li Custom buttons and colors
 
-        .col-lg-6
-          .widget-container.plugins.fluid-height.list
-            .heading
-              | Credits
-
-            .widget-content
-              ul
-                li= link_to "Morris", "http://www.oesmith.co.uk/morris.js/", :target => "_blank"
-                li= link_to "JQVMap", "http://jqvmap.com/", :target => "_blank"
-                li= link_to "Full Calendar", "http://arshaw.com/fullcalendar/", :target => "_blank"
-                li= link_to "Datatables", "https://datatables.net/", :target => "_blank"
-                li= link_to "Sparkline", "http://omnipotent.net/jquery.sparkline/#s-about", :target => "_blank"
-                li= link_to "Easy Pie Chart", "http://rendro.github.io/easy-pie-chart/", :target => "_blank"
-                li= link_to "Isotope", "http://isotope.metafizzy.co/", :target => "_blank"
-                li= link_to "Font Awesome", "http://fortawesome.github.io/Font-Awesome", :target => "_blank"
-                li= link_to "Fancybox", "http://fancyapps.com/fancybox/", :target => "_blank"
-                li= link_to "Select2", "http://ivaynberg.github.io/select2/", :target => "_blank"
-
       .row
         .col-lg-12
           .widget-container.fluid-height#bootstrap
@@ -143,6 +156,7 @@ html
                 = link_to "Boostrap 3 Official Documentation", "http://getbootstrap.com/css/", :target => "_blank"
                 | .
 
+      .row
         .col-lg-12
           .widget-container.fluid-height#navigation
             .heading
@@ -152,6 +166,22 @@ html
               p Se7en's custom header and navigation system (including user controls and mobile navigation) can be found early in the body and is documented for quick identification. The header contains dynamic visual elements but the content remains easy to modify.
               = Pygments.highlight("#{partial 'html_structure'}")
 
+              p By default, the header will animate and slide up when the user starts scrolling down the page. To remove the animation and the action, simply remove the class "scroll-hide" from the navbar:
+              = Pygments.highlight("<div class='navbar navbar-fixed-top scroll-hide'>", lexer: 'html')
+
+      .row
+        .col-lg-12
+          .widget-container.fluid-height#widget-container
+            .heading
+              | Widget Container
+
+            .widget-content.padded
+              = Pygments.highlight("#{partial 'widget_structure'}")
+
+
+        .col-lg-12
+          h2 Icons
+
         .col-lg-12
           .widget-container.fluid-height#icons
             .heading
@@ -160,7 +190,7 @@ html
             .widget-content.padded
 
               p The icons used for the main navigation have been custom created and implemented using a custom built font. Our icons can be used on any page by calling them with our pre-built syntax.
-              = Pygments.highlight("span aria-hidden='true' class='se7en-icon-name'", lexer: 'css')
+              = Pygments.highlight("<span aria-hidden='true' class='se7en-icon-name'></span>", lexer: 'html')
 
               p These are all the included se7en icons:
               span aria-hidden="true" class="se7en-flag" style="font-size:28px;margin-right:20px;"
@@ -188,24 +218,46 @@ html
                 span aria-hidden="true" class="se7en-feed" style="font-size:56px;margin-right:5px;color:#007aff;"
                 span aria-hidden="true" class="se7en-feed" style="font-size:28px;color:#007aff;"
 
+      .row
         .col-lg-12
           .widget-container.fluid-height#fontawesome
             .heading
               | Font Awesome Icons
 
             .widget-content.padded
+              p We've included the latest Font Awesome icons, which includes over 360+ icons. To place a Font Awesome icon, simply use this class:
+              = Pygments.highlight("<span class='icon-'></span>", lexer: 'html')
+
+              p For example:
+              i.icon-home style="font-size:28px;"
+              = Pygments.highlight("<span class='icon-home'></span>", lexer: 'html')
+
               p 
-                | We've included the latest Font Awesome icons, which includes over 360+ icons. For more information on how to their icons, visit  
+                | For more information on how to use their icons, visit  
                 = link_to "Font Awesome", "http://fortawesome.github.io/Font-Awesome/examples/", :target => "_blank"
                 | .
 
+      .row
         .col-lg-12
-          .widget-container.fluid-height#widget-container
+          .widget-container.fluid-height#glyphicons
             .heading
-              | Widget Container
+              | Glyphicons
 
             .widget-content.padded
-              = Pygments.highlight("#{partial 'widget_structure'}")
+              p We've also included 180 glyphs in font format from the Glyphicon Halflings set. Glyphicons Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. 
+
+              p To use a Font Awesome icon, simply use this class:
+              = Pygments.highlight("<span class='glyphicon glyphicon-'></span>", lexer: 'html')
+
+              p For example:
+              span.glyphicon.glyphicon-user style="font-size:28px;"
+              = Pygments.highlight("<span class='glyphicon glyphicon-user'></span>", lexer: 'html')
+
+              p 
+                | For more information on how to use Glyphicons, visit  
+                = link_to "Bootstrap's Documentation", "http://getbootstrap.com/components/#glyphicons", :target => "_blank"
+                | .
+
 
         .col-lg-12
           h2 Javascript Components
@@ -229,6 +281,7 @@ html
               .sparkline-pie
               = Pygments.highlight("$('.sparkline').sparkline([2, 8, 6, 10], { type: 'pie', height: '120', width: '120', sliceColors: ['#a0eeed','#81e970','#f5af50','#f46f50'] });", lexer: 'javascript')
 
+      .row
         .col-lg-12
           .widget-container.fluid-height#easy-pie
             .heading
@@ -240,6 +293,7 @@ html
               = Pygments.highlight("$('.easy-pie-chart').easyPieChart({ size: 120, lineWidth: 10, lineCap: 'square', barColor: '#81e970', animate: 800, scaleColor: false });", lexer: 'javascript')
               p * Requires excanvas.min.js for IE8 support.
 
+      .row
         .col-lg-12
           .widget-container.fluid-height#skycons
             .heading
@@ -267,34 +321,22 @@ html
               p Start animation!
               = Pygments.highlight("skycons.play();", lexer: 'javascript')
 
+      .row
         .col-lg-12
           .widget-container.fluid-height#slider
             .heading
-              | Slider
+              | jQuery UI Slider
               a href="http://jqueryui.com/slider/" class="pull-right" target="_blank" Full documentation
 
             .widget-content.padded
               .slider-basic
               = Pygments.highlight("$('.slider').slider({range: 'min', value: 50});", lexer: 'javascript')
 
-        .col-lg-12
-          .widget-container.fluid-height#select2
-            .heading
-              | Select2 Dropdowns
-              a href="http://ivaynberg.github.io/select2/" class="pull-right" target="_blank" Full documentation
-
-            .widget-content.padded
-              select.select2
-                option value="Category 1" Option 1
-                option value="Category 2" Option 2
-                option value="Category 3" Option 3
-                option value="Category 4" Option 4
-              = Pygments.highlight("$('.select2').select2();", lexer: 'javascript')
-
+      .row
         .col-lg-12
           .widget-container.fluid-height#components
             .heading
-              | Other Components
+              | Other Javascript Components
 
             .widget-content.padded
               ul.list-unstyled
@@ -314,11 +356,314 @@ html
                   | Isotope
                   a href="http://isotope.metafizzy.co/" class="pull-right" target="_blank" Full documentation
                   = Pygments.highlight("$('.isotope').isotope(options)", lexer: 'javascript')
-                li#masonry
-                  | Masonry
-                  a href="http://masonry.desandro.com/" class="pull-right" target="_blank" Full documentation
-                  = Pygments.highlight("$('.masonry').masonry(options)", lexer: 'javascript')
                 li#fancybox
                   | Fancybox
                   a href="http://fancyapps.com/fancybox/" class="pull-right" target="_blank" Full documentation
                   = Pygments.highlight("$('.fancybox').fancybox(options)", lexer: 'javascript')
+
+        .col-lg-12
+          h2 Form Components
+
+        .col-lg-12
+          .widget-container.fluid-height#select2
+            .heading
+              | Select2 Dropdowns
+              a href="http://ivaynberg.github.io/select2/" class="pull-right" target="_blank" Full documentation
+
+            .widget-content.padded
+              select.select2
+                option value="Category 1" Option 1
+                option value="Category 2" Option 2
+                option value="Category 3" Option 3
+                option value="Category 4" Option 4
+              = Pygments.highlight("$('.select2').select2();", lexer: 'javascript')
+
+      .row
+        .col-lg-12
+          .widget-container.fluid-height#typeahead
+            .heading
+              | Typeahead (Autocomplete)
+              a href="http://twitter.github.io/typeahead.js/" class="pull-right" target="_blank" Full documentation
+
+            .widget-content.padded
+              input.form-control.states.typeahead.tt-query.col-md-7 autocomplete="off" dir="auto" placeholder="Search for a U.S. state" spellcheck="false"type="text"
+              br
+              br
+
+              = Pygments.highlight("$('.states.typeahead').typeahead({ name: 'states', local: ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Dakota', 'North Carolina', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming']});", lexer: 'javascript')
+
+      .row
+        .col-lg-12
+          .widget-container.fluid-height#toggle
+            .heading
+              | Toggle Switches
+              a href="http://www.bootstrap-switch.org/" class="pull-right" target="_blank" Full documentation
+
+            .widget-content.padded
+              .toggle-switch.switch-large
+                input checked="" type="checkbox"
+              .toggle-switch
+                input checked="" type="checkbox"
+              .toggle-switch.switch-small
+                input checked="" type="checkbox"
+              .toggle-switch.switch-mini
+                input checked="" type="checkbox"
+              br
+              br
+
+              = Pygments.highlight("#{partial 'toggle_sizes'}")
+
+              p Switch colors
+              .toggle-switch data-off="danger" data-on="info"
+                input checked="" type="checkbox"
+              .toggle-switch data-off="warning" data-on="success"
+                input checked="" type="checkbox"
+              br
+              br
+              = Pygments.highlight("#{partial 'toggle_colors'}")
+
+              p Different labels
+              .toggle-switch.text-toggle-switch style="width:200px;" data-on="primary" data-on-label="HELLO" data-off-label="GOODBYE"
+                input checked="" type="checkbox"
+              br
+              br
+              = Pygments.highlight("<div class='toggle-switch text-toggle-switch' data-off-label='GOODBYE' data-on='primary' data-on-label='HELLO' style='width:200px;'><input type='checkbox' checked></div>", lexer: 'html')
+
+      .row
+        .col-lg-12
+          .widget-container.fluid-height#validation
+            .heading
+              | Validation
+              a href="http://jqueryvalidation.org/documentation/" class="pull-right" target="_blank" Full documentation
+
+            .widget-content.padded
+              form#validate-form action="" method="get"
+                fieldset
+                  .row
+                    .col-md-6
+                      .form-group
+                        label for="firstname" First Name
+                        input#firstname.form-control name="firstname" type="text"
+                  input.btn.btn-primary type="submit" value="Validate form" style="margin-bottom: 25px;"
+
+              = Pygments.highlight("$('#validate-form').validate({ rules: {firstname: 'required'});", lexer: 'javascript')
+
+      .row
+        .col-lg-12
+          .widget-container.fluid-height#datepicker
+            .heading
+              | Date Picker
+              a href="http://www.eyecon.ro/bootstrap-datepicker/" class="pull-right" target="_blank" Full documentation
+
+            .widget-content.padded
+              .row style="margin-bottom: 20px;"
+                .col-md-3
+                  .input-group.date.datepicker
+                    input.form-control type="text"
+                      span.input-group-addon
+                        i.icon-calendar
+
+              = Pygments.highlight("$('.datepicker').datepicker();", lexer: 'javascript')
+
+              p To autoclose date picker
+
+              .row style="margin-bottom: 20px;"
+                .col-md-3
+                  .input-group.date.datepicker data-date-autoclose="true" data-date-format="dd-mm-yyyy"
+                    input.form-control type="text"
+                      span.input-group-addon
+                        i.icon-calendar
+              = Pygments.highlight("<div class='date datepicker' data-date-autoclose='true' data-date-format='dd-mm-yyyy'>", lexer: 'html')
+
+              p To start with the year
+
+              .row style="margin-bottom: 20px;"
+                .col-md-3
+                  .input-group.date.datepicker data-date-autoclose="true" data-date-format="dd.mm.yyyy" data-date-start-view="2"
+                    input.form-control type="text"
+                      span.input-group-addon
+                        i.icon-calendar
+              = Pygments.highlight("<div class='input-group date datepicker' data-date-autoclose='true' data-date-format='dd.mm.yyyy' data-date-start-view='2'>", lexer: 'html')
+
+      .row
+        .col-lg-12
+          .widget-container.fluid-height#timepicker
+            .heading
+              | Time Picker
+              a href="http://jdewit.github.io/bootstrap-timepicker/" class="pull-right" target="_blank" Full documentation
+
+            .widget-content.padded
+              p Default
+              .row style="margin-bottom: 20px;"
+                .col-md-3
+                  .input-group.bootstrap-timepicker
+                    input#timepicker-default.form-control type="text"
+                      span.input-group-addon
+                        i.icon-time
+
+              = Pygments.highlight("$('#timepicker-default').timepicker();", lexer: 'javascript')
+
+              p 24 Hour
+              .row style="margin-bottom: 20px;"
+                .col-md-3
+                  .input-group.bootstrap-timepicker
+                    input#timepicker-24h.form-control type="text"
+                      span.input-group-addon
+                        i.icon-time
+
+              = Pygments.highlight("$('#timepicker-default').timepicker({ minuteStep: 1, showSeconds: true, showMeridian: false });", lexer: 'javascript')
+
+              p No dropdown
+              .row style="margin-bottom: 20px;"
+                .col-md-3
+                  .bootstrap-timepicker
+                    input#timepicker-noTemplate.form-control type="text"
+                    i.icon-time
+
+              = Pygments.highlight("$('#timepicker-default').timepicker({ template: false, showInputs: false, minuteStep: 5 });", lexer: 'javascript')
+
+      .row
+        .col-lg-12
+          .widget-container.fluid-height#colorpicker
+            .heading
+              | Color Picker
+              a href="http://www.eyecon.ro/bootstrap-colorpicker" class="pull-right" target="_blank" Full documentation
+
+            .widget-content.padded
+              p Default
+              .row style="margin-bottom: 20px;"
+                .col-sm-4
+                  input#cp1.form-control type="text" value="#8fff00"
+              = Pygments.highlight("$('#colorpicker1').colorpicker();", lexer: 'javascript')
+
+              p RGBA Value
+              .row style="margin-bottom: 20px;"
+                .col-sm-4
+                  input#cp2.form-control data-color-format="rgba" type="text" value="rgb(0,194,255,0.78)"
+              = Pygments.highlight("$('#colorpicker2').colorpicker({ format: 'hex' });", lexer: 'javascript')
+              
+              p As a component
+              .row style="margin-bottom: 20px;"
+                .col-sm-4
+                  #cp3.input-group.color data-color="rgb(200, 0, 0)" data-color-format="rgb"
+                    input.form-control readonly="" type="text" value="rgb(200, 0, 0)"
+                      span.input-group-addon
+                        i style="background-color: rgb(200, 0, 0)"
+
+              = Pygments.highlight("$('#colorpicker3').colorpicker();", lexer: 'javascript')
+
+      .row
+        .col-lg-12
+          .widget-container.fluid-height#inputmasks
+            .heading
+              | Input Masks
+              a href="https://github.com/RobinHerbots/jquery.inputmask" class="pull-right" target="_blank" Full documentation
+
+            .widget-content.padded
+              form.form-horizontal action="#"
+                .form-group
+                  label.control-label.col-md-2 Date 1
+                  .col-md-3
+                    input.form-control type="text" data-inputmask="'alias': 'mm/dd/yyyy'"
+                .form-group
+                  label.control-label.col-md-2 Date 2
+                  .col-md-3
+                    input.form-control type="text" data-inputmask="'alias': 'dd/mm/yyyy'"
+                .form-group
+                  label.control-label.col-md-2 Phone Number
+                  .col-md-3
+                    input.form-control type="text" data-inputmask="'mask': ['(999) 999-9999']"
+                .form-group
+                  label.control-label.col-md-2 Social Security #
+                  .col-md-3
+                    input.form-control type="text" data-inputmask="'mask': ['999-99-9999']"
+
+              p Define your masks in your javascript
+              = Pygments.highlight("$('#date').inputmask('d/m/y');", lexer: 'javascript')
+              = Pygments.highlight("$('#phone').inputmask('mask', {'mask': '(999) 999-9999'});", lexer: 'javascript')
+              = Pygments.highlight("$('#tin').inputmask({'mask': '99-9999999'});", lexer: 'javascript')
+
+              p Or in your html
+              = Pygments.highlight("#{partial 'input_masks'}")
+
+              p Then initialize the plugin in your javascript
+              = Pygments.highlight("$(':input').inputmask();", lexer: 'javascript')
+
+      .row
+        .col-lg-12
+          .widget-container.fluid-height#fileupload-btn
+            .heading
+              | File Upload
+              a href="http://jasny.github.com/bootstrap/javascript.html#fileupload" class="pull-right" target="_blank" Full documentation
+
+            .widget-content.padded
+              form.form-horizontal action="#"
+                .form-group
+                  label.control-label.col-md-2 Custom File Upload
+                  .col-md-4
+                    .fileupload.fileupload-new data-provides="fileupload"
+                      .input-group
+                        .form-control
+                          i.icon-file.fileupload-exists
+                          span.fileupload-preview
+                        .input-group-btn
+                          a.btn.btn-default.fileupload-exists data-dismiss="fileupload" href="#" Remove
+                          span.btn.btn-default.btn-file
+                            span.fileupload-new Select file
+                            span.fileupload-exists Change
+                            input type="file"
+
+                .form-group
+                  label.control-label.col-md-2 Without Input
+                  .col-md-4
+                    .fileupload.fileupload-new data-provides="fileupload"
+                      span.btn.btn-default.btn-file
+                        span.fileupload-new Select file
+                        span.fileupload-exists Change
+                        input type="file"
+                      span.fileupload-preview
+                      button.close.fileupload-exists data-dismiss="fileupload" style="float:none" type="button" &times;
+
+                .form-group
+                  label.control-label.col-md-2 With Preview
+                  .col-md-4
+                    .fileupload.fileupload-new data-provides="fileupload"
+                      .fileupload-new.img-thumbnail style="width: 200px; height: 150px;"
+                        img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image"
+                      .fileupload-preview.fileupload-exists.img-thumbnail style="width: 200px; max-height: 150px"
+                      div
+                        span.btn.btn-default.btn-file
+                          span.fileupload-new Select image
+                          span.fileupload-exists Change
+                          input type="file"
+                        a.btn.btn-default.fileupload-exists data-dismiss="fileupload" href="#" Remove
+
+                = Pygments.highlight("$('.fileupload').fileupload();", lexer: 'javascript')
+
+
+        .col-lg-12
+          h2#credits Credits
+
+        .col-lg-12
+          .widget-container.plugins.fluid-height.list
+            .widget-content
+              ul
+                li= link_to "Morris", "http://www.oesmith.co.uk/morris.js/", :target => "_blank"
+                li= link_to "JQVMap", "http://jqvmap.com/", :target => "_blank"
+                li= link_to "Full Calendar", "http://arshaw.com/fullcalendar/", :target => "_blank"
+                li= link_to "Datatables", "https://datatables.net/", :target => "_blank"
+                li= link_to "Sparkline", "http://omnipotent.net/jquery.sparkline/#s-about", :target => "_blank"
+                li= link_to "Easy Pie Chart", "http://rendro.github.io/easy-pie-chart/", :target => "_blank"
+                li= link_to "Isotope", "http://isotope.metafizzy.co/", :target => "_blank"
+                li= link_to "Font Awesome", "http://fortawesome.github.io/Font-Awesome", :target => "_blank"
+                li= link_to "Glyphicons", "http://glyphicons.com/", :target => "_blank"
+                li= link_to "Fancybox", "http://fancyapps.com/fancybox/", :target => "_blank"
+                li= link_to "Select2", "http://ivaynberg.github.io/select2/", :target => "_blank"
+                li= link_to "Typeahead", "http://twitter.github.io/typeahead.js/", :target => "_blank"
+                li= link_to "Bootstrap Switch", "http://www.bootstrap-switch.org/", :target => "_blank"
+                li= link_to "jQuery Validation", "http://jqueryvalidation.org/documentation/", :target => "_blank"
+                li= link_to "Bootstrap Datepicker", "http://www.eyecon.ro/bootstrap-datepicker/", :target => "_blank"
+                li= link_to "Bootstrap Timepicker", "http://jdewit.github.io/bootstrap-timepicker/", :target => "_blank"
+                li= link_to "Bootstrap Colorpicker", "http://www.eyecon.ro/bootstrap-colorpicker", :target => "_blank"
+                li= link_to "jQuery Input Mask", "https://github.com/RobinHerbots/jquery.inputmask", :target => "_blank"
+                li= link_to "Jasney File Upload", "http://jasny.github.com/bootstrap/javascript.html#fileupload", :target => "_blank"

@@ -1,90 +1,105 @@
-.navbar.navbar-fixed-top
+.navbar.navbar-fixed-top.scroll-hide
   .container-fluid.top-bar
     .pull-right
-      ul.nav.navbar-nav
-        li.dropdown
-          a.dropdown-toggle[data-toggle="dropdown" href="#"]
-            span
-              | Notifications
-          p.counter
-            |  2 
+      ul.nav.navbar-nav.pull-right
+        li.dropdown.notifications.hidden-xs
+          a.dropdown-toggle data-toggle="dropdown" href="#"
+            span aria-hidden="true" class="se7en-icon"
+            .sr-only Notifications
+            p.counter 4
           ul.dropdown-menu
-            li
-              a[href="#"]
-                i.icon-user
-                | New user added: Jane Smith 
-              .notifications.label.label-info.pull-right
-                |  New 
-            li
-              a[href="#"]
-                i.icon-dashboard
-                | Sales targets available 
-              .notifications.label.label-info.pull-right
-                |  New 
-        li.dropdown.user
-          a.dropdown-toggle[data-toggle="dropdown" href="#"]
-            img[alt="Avatar male" height="34" src="/assets/avatar-male.jpg" width="34"]
+            li= link_to
+              .notifications.label.label-info New
+              p Notification
+            li= link_to
+              .notifications.label.label-info New
+              p Notification
+            li= link_to
+              p Notification
+            li= link_to
+              p Notification
+
+        li.dropdown.messages.hidden-xs
+          a.dropdown-toggle data-toggle="dropdown" href="#"
+            span aria-hidden="true" class="se7en-icon"
+            .sr-only Messages
+            p.counter 3
+          ul.dropdown-menu.messages
+            li= link_to
+              | Message...
+            li= link_to
+              | Message...
+            li= link_to
+              | Message...
+        
+        li.dropdown.user.hidden-xs
+          = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" do
+            = image_tag "avatar-male.jpg", width: "34", height: "34"
             | John Smith
             b.caret
           ul.dropdown-menu
             li
-              a[href="#"]
+              = link_to "#" do
                 i.icon-user
-                |  My Account 
+                | My Account
             li
-              a[href="#"]
+              = link_to "#" do
                 i.icon-gear
-                |  Account Settings 
+                | Account Settings
             li
-              a[href="/login"]
+              = link_to 'index.html' do
                 i.icon-signout
-                |  Logout 
+                | Logout
+
     button.navbar-toggle
       span.icon-bar
       span.icon-bar
       span.icon-bar
-    a.logo[href="/"]
-      | se7en
+
+    a href='index.html' class='logo'
+      | Your logo
     form.navbar-form.form-inline.col-lg-2.hidden-xs
-      input.form-control[placeholder="Search" type="text"]
-  .container-fluid.main-nav
+      input.form-control placeholder="Search" type="text"
+
+
+  .container-fluid.main-nav.clearfix
     .nav-collapse
       ul.nav
         li
-          a[href="/"]
-            | Dashboard
-        li.dropdown
-          a[data-toggle="dropdown" href="#"]
-            | UI
+          a href='index.html'
+            span aria-hidden="true" class="se7en-home"
+            | Home
+        li
+          = link_to 'page.html' do
+            span aria-hidden="true" class="se7en-icon"
+            | Link
+
+        li.dropdown *{ class: "#{cp 'page.html'}" }
+          = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" do
+            span aria-hidden="true" class="se7en-icon"
+            | Dropdown Link
             b.caret
           ul.dropdown-menu
-            li
-              a[href="/buttons"]
-                | Buttons
-            li
-              a[href="/icons"]
-                | Icons
-            li
-              a[href="/components"]
-                | Components
-            li
-              a[href="/widgets"]
-                | Widgets
-            li
-              a[href="/typo"]
-                | Typography
-            li
-              a[href="/grid"]
-                | Grid Layout
+            li= link_to "Link", 'page.html'
+            li= link_to "Link", 'page.html'
+            li= link_to "Link", 'page.html'
+
         li
-          a[href="/forms"]
-            | Forms
+          = link_to 'page.html' do
+            span aria-hidden="true" class="se7en-icon"
+            | Link
+        
         li
-          a[href="/tables"]
-            | Tables
+          = link_to 'page.html' do
+            span aria-hidden="true" class="se7en-icon"
+            | Link
+
         li
-          a[href="/charts"]
-            | Charts
+          = link_to 'page.html' do
+            span aria-hidden="true" class="se7en-icon"
+            | Link
+
         li
-          a[href="/gallery"]
-            | Gallery
+          = link_to 'page.html' do
+            span aria-hidden="true" class="se7en-icon"
+            | Link
