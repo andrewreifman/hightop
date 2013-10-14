@@ -1840,6 +1840,7 @@ th:active
 
   .widget-content
     padding-right: 20px
+    background-color: #FFF
 
     .scrollbar-path-vertical
       bottom: 56px !important
@@ -1942,6 +1943,79 @@ th:active
       color: $blue
       font-weight: 600
       font-size: 14px
+
+
+.widget-container.chat-page
+  height: 700px
+  padding: 0 0 102px 222px
+  position: relative
+  background-color: #f2f2f2
+
+  .contact-list
+    position: absolute
+    top: 0
+    left: 0
+    width: 222px
+    height: 100%
+    border-right: 1px solid #DDD
+    padding-top: 50px
+
+    .heading
+      background-color: transparent
+      color: #777
+      border-bottom: 1px solid #d6d6d6
+      font-size: 16px
+      padding-top: 12px
+      padding-bottom: 14px
+      background-color: #f2f2f2
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+
+      i
+        margin-top: 4px
+        font-size: 1em
+
+    ul
+      list-style: none
+      padding-left: 15px
+      margin: 0
+      overflow-y: auto
+      overflow-x: hidden
+      height: 100%
+
+      li
+        border-bottom: 1px solid #d6d6d6
+        margin: 0
+
+        a
+          display: block
+          position: relative
+          left: -15px
+          width: 220px
+          padding-left: 15px
+          padding: 8px 0 8px 15px
+          color: #888
+
+          &:hover
+            background-color: #e6e6e6
+            color: #666
+
+        img
+          border-radius: 50%
+          margin-right: 10px
+
+        i
+          font-size: 12px
+          float: right
+          margin: 9px 15px 0 0
+
+  > .heading
+    position: relative !important
+
+  .post-message
+    position: relative
 
 
 /*-----------------------------------------------------------------------------------*/
