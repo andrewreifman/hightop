@@ -63,7 +63,7 @@ table.dataTable {
 .dataTables_length {
   width: 40%;
   float: left;
-  margin: 8px 0 10px;
+  margin: 4px 0 10px;
 }
 
 .dataTables_length select {
@@ -104,6 +104,7 @@ table.dataTable {
   margin: 5px 0;
 }
 .dataTables_paginate a {
+  height: auto;
   margin-left:5px;
   font-size: 13px;
   border: 1px solid #AAA;

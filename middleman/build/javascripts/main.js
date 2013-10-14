@@ -139,7 +139,7 @@
     # =============================================================================
     */
 
-    var $container, addEvent, buildMorris, d, date, handleDropdown, initDrag, m, y;
+    var $alpha, $container, addEvent, buildMorris, checkin, checkout, d, date, handleDropdown, initDrag, m, now, nowTemp, y;
     $("#barcharts").sparkline([190, 220, 210, 220, 220, 260, 300, 220, 240, 240, 220, 200, 240, 260, 210], {
       type: "bar",
       height: "100",
@@ -307,6 +307,19 @@
           aTargets: [0, -1]
         }
       ]
+    });
+    $('.table').each(function() {
+      return $(".table #checkAll").click(function() {
+        if ($(".table #checkAll").is(":checked")) {
+          return $(".table input[type=checkbox]").each(function() {
+            return $(this).prop("checked", true);
+          });
+        } else {
+          return $(".table input[type=checkbox]").each(function() {
+            return $(this).prop("checked", false);
+          });
+        }
+      });
     });
     /*
     # =============================================================================
@@ -818,18 +831,30 @@
     $('.select2able').select2();
     /*
     # =============================================================================
-    #   Masonry
+    #   Isotope with Masonry
     # =============================================================================
     */
 
-    $container = $("#social-container").masonry();
-    $container.imagesLoaded(function() {
-      return $container.masonry({
-        "isFitWidth": true,
-        gutter: 20,
-        isFitWidth: true,
-        itemSelector: ".item"
-      });
+    $alpha = $('#hidden-items');
+    $container = $('#social-container');
+    $(window).load(function() {
+      /*
+      # init isotope, then insert all items from hidden alpha
+      */
+
+      $container.isotope({
+        itemSelector: '.item'
+      }).isotope('insert', $alpha.find('.item'));
+      return $("#load-more").html("Load more").find("i").hide();
+    });
+    $('#load-more').click(function() {
+      var item1, item2, item3, items, tmp;
+      items = $container.find('.social-entry');
+      item1 = $(items[Math.floor(Math.random() * items.length)]).clone();
+      item2 = $(items[Math.floor(Math.random() * items.length)]).clone();
+      item3 = $(items[Math.floor(Math.random() * items.length)]).clone();
+      tmp = $().add(item1).add(item2).add(item3);
+      return $container.isotope('insert', tmp);
     });
     /*
     # =============================================================================
@@ -840,11 +865,204 @@
     $('#editor').wysiwyg();
     /*
     # =============================================================================
+    #   Typeahead
+    # =============================================================================
+    */
+
+    $(".states.typeahead").typeahead({
+      name: "states",
+      local: ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Dakota", "North Carolina", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+    });
+    $(".countries.typeahead").typeahead({
+      name: "countries",
+      local: ["Andorra", "United Arab Emirates", "Afghanistan", "Antigua and Barbuda", "Anguilla", "Albania", "Armenia", "Angola", "Antarctica", "Argentina", "American Samoa", "Austria", "Australia", "Aruba", "Ã…land", "Azerbaijan", "Bosnia and Herzegovina", "Barbados", "Bangladesh", "Belgium", "Burkina Faso", "Bulgaria", "Bahrain", "Burundi", "Benin", "Saint BarthÃ©lemy", "Bermuda", "Brunei", "Bolivia", "Bonaire", "Brazil", "Bahamas", "Bhutan", "Bouvet Island", "Botswana", "Belarus", "Belize", "Canada", "Cocos [Keeling] Islands", "Congo", "Central African Republic", "Republic of the Congo", "Switzerland", "Ivory Coast", "Cook Islands", "Chile", "Cameroon", "China", "Colombia", "Costa Rica", "Cuba", "Cape Verde", "Curacao", "Christmas Island", "Cyprus", "Czechia", "Germany", "Djibouti", "Denmark", "Dominica", "Dominican Republic", "Algeria", "Ecuador", "Estonia", "Egypt", "Western Sahara", "Eritrea", "Spain", "Ethiopia", "Finland", "Fiji", "Falkland Islands", "Micronesia", "Faroe Islands", "France", "Gabon", "United Kingdom", "Grenada", "Georgia", "French Guiana", "Guernsey", "Ghana", "Gibraltar", "Greenland", "Gambia", "Guinea", "Guadeloupe", "Equatorial Guinea", "Greece", "South Georgia and the South Sandwich Islands", "Guatemala", "Guam", "Guinea-Bissau", "Guyana", "Hong Kong", "Heard Island and McDonald Islands", "Honduras", "Croatia", "Haiti", "Hungary", "Indonesia", "Ireland", "Israel", "Isle of Man", "India", "British Indian Ocean Territory", "Iraq", "Iran", "Iceland", "Italy", "Jersey", "Jamaica", "Jordan", "Japan", "Kenya", "Kyrgyzstan", "Cambodia", "Kiribati", "Comoros", "Saint Kitts and Nevis", "North Korea", "South Korea", "Kuwait", "Cayman Islands", "Kazakhstan", "Laos", "Lebanon", "Saint Lucia", "Liechtenstein", "Sri Lanka", "Liberia", "Lesotho", "Lithuania", "Luxembourg", "Latvia", "Libya", "Morocco", "Monaco", "Moldova", "Montenegro", "Saint Martin", "Madagascar", "Marshall Islands", "Macedonia", "Mali", "Myanmar [Burma]", "Mongolia", "Macao", "Northern Mariana Islands", "Martinique", "Mauritania", "Montserrat", "Malta", "Mauritius", "Maldives", "Malawi", "Mexico", "Malaysia", "Mozambique", "Namibia", "New Caledonia", "Niger", "Norfolk Island", "Nigeria", "Nicaragua", "Netherlands", "Norway", "Nepal", "Nauru", "Niue", "New Zealand", "Oman", "Panama", "Peru", "French Polynesia", "Papua New Guinea", "Philippines", "Pakistan", "Poland", "Saint Pierre and Miquelon", "Pitcairn Islands", "Puerto Rico", "Palestine", "Portugal", "Palau", "Paraguay", "Qatar", "RÃ©union", "Romania", "Serbia", "Russia", "Rwanda", "Saudi Arabia", "Solomon Islands", "Seychelles", "Sudan", "Sweden", "Singapore", "Saint Helena", "Slovenia", "Svalbard and Jan Mayen", "Slovakia", "Sierra Leone", "San Marino", "Senegal", "Somalia", "Suriname", "South Sudan", "SÃ£o TomÃ© and PrÃ­ncipe", "El Salvador", "Sint Maarten", "Syria", "Swaziland", "Turks and Caicos Islands", "Chad", "French Southern Territories", "Togo", "Thailand", "Tajikistan", "Tokelau", "East Timor", "Turkmenistan", "Tunisia", "Tonga", "Turkey", "Trinidad and Tobago", "Tuvalu", "Taiwan", "Tanzania", "Ukraine", "Uganda", "U.S. Minor Outlying Islands", "United States", "Uruguay", "Uzbekistan", "Vatican City", "Saint Vincent and the Grenadines", "Venezuela", "British Virgin Islands", "U.S. Virgin Islands", "Vietnam", "Vanuatu", "Wallis and Futuna", "Samoa", "Kosovo", "Yemen", "Mayotte", "South Africa", "Zambia", "Zimbabwe"]
+    });
+    /*
+    # =============================================================================
+    #   Form Input Masks
+    # =============================================================================
+    */
+
+    $(":input").inputmask();
+    /*
+    # =============================================================================
+    #   Validation
+    # =============================================================================
+    */
+
+    $("#validate-form").validate({
+      rules: {
+        firstname: "required",
+        lastname: "required",
+        username: {
+          required: true,
+          minlength: 2
+        },
+        password: {
+          required: true,
+          minlength: 5
+        },
+        confirm_password: {
+          required: true,
+          minlength: 5,
+          equalTo: "#password"
+        },
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        firstname: "Please enter your first name",
+        lastname: "Please enter your last name",
+        username: {
+          required: "Please enter a username",
+          minlength: "Your username must consist of at least 2 characters"
+        },
+        password: {
+          required: "Please provide a password",
+          minlength: "Your password must be at least 5 characters long"
+        },
+        confirm_password: {
+          required: "Please provide a password",
+          minlength: "Your password must be at least 5 characters long",
+          equalTo: "Please enter the same password"
+        },
+        email: "Please enter a valid email address"
+      }
+    });
+    /*
+    # =============================================================================
+    #   Drag and drop files
+    # =============================================================================
+    */
+
+    $(".single-file-drop").each(function() {
+      var $dropbox;
+      $dropbox = $(this);
+      if (typeof window.FileReader === "undefined") {
+        $("small", this).html("File API & FileReader API not supported").addClass("text-danger");
+        return;
+      }
+      this.ondragover = function() {
+        $dropbox.addClass("hover");
+        return false;
+      };
+      this.ondragend = function() {
+        $dropbox.removeClass("hover");
+        return false;
+      };
+      return this.ondrop = function(e) {
+        var file, reader;
+        e.preventDefault();
+        $dropbox.removeClass("hover").html("");
+        file = e.dataTransfer.files[0];
+        reader = new FileReader();
+        reader.onload = function(event) {
+          return $dropbox.append($("<img>").attr("src", event.target.result));
+        };
+        reader.readAsDataURL(file);
+        return false;
+      };
+    });
+    /*
+    # =============================================================================
+    #   File upload buttons
+    # =============================================================================
+    */
+
+    $('.fileupload').fileupload();
+    /*
+    # =============================================================================
+    #   Datepicker
+    # =============================================================================
+    */
+
+    $('.datepicker').datepicker();
+    nowTemp = new Date();
+    now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+    checkin = $("#dpd1").datepicker({
+      onRender: function(date) {
+        if (date.valueOf() < now.valueOf()) {
+          return "disabled";
+        } else {
+          return "";
+        }
+      }
+    }).on("changeDate", function(ev) {
+      var newDate;
+      if (ev.date.valueOf() > checkout.date.valueOf()) {
+        newDate = new Date(ev.date);
+        newDate.setDate(newDate.getDate() + 1);
+        checkout.setValue(newDate);
+      }
+      checkin.hide();
+      return $("#dpd2")[0].focus();
+    }).data("datepicker");
+    checkout = $("#dpd2").datepicker({
+      onRender: function(date) {
+        if (date.valueOf() <= checkin.date.valueOf()) {
+          return "disabled";
+        } else {
+          return "";
+        }
+      }
+    }).on("changeDate", function(ev) {
+      return checkout.hide();
+    }).data("datepicker");
+    /*
+    # =============================================================================
+    #   Daterange Picker
+    # =============================================================================
+    */
+
+    $(".date-range").daterangepicker({
+      format: "MM/dd/yyyy",
+      separator: " to ",
+      startDate: Date.today().add({
+        days: -29
+      }),
+      endDate: Date.today(),
+      minDate: "01/01/2012",
+      maxDate: "12/31/2014"
+    });
+    /*
+    # =============================================================================
+    #   Timepicker
+    # =============================================================================
+    */
+
+    $("#timepicker-default").timepicker();
+    $("#timepicker-24h").timepicker({
+      minuteStep: 1,
+      showSeconds: true,
+      showMeridian: false
+    });
+    $("#timepicker-noTemplate").timepicker({
+      template: false,
+      showInputs: false,
+      minuteStep: 5
+    });
+    $("#timepicker-modal").timepicker({
+      minuteStep: 1,
+      secondStep: 5,
+      showInputs: false,
+      modalBackdrop: true,
+      showSeconds: true,
+      showMeridian: false
+    });
+    $("#cp1").colorpicker({
+      format: "hex"
+    });
+    $("#cp2").colorpicker();
+    $("#cp3").colorpicker();
+    /*
+    # =============================================================================
     #   Skycons
     # =============================================================================
     */
 
-    return $('.skycons-element').each(function() {
+    $('.skycons-element').each(function() {
       var canvasId, skycons, weatherSetting;
       skycons = new Skycons({
         color: "white"
@@ -853,6 +1071,15 @@
       weatherSetting = $(this).data('skycons');
       skycons.add(canvasId, Skycons[weatherSetting]);
       return skycons.play();
+    });
+    /*
+    # =============================================================================
+    #   Login/signup animation
+    # =============================================================================
+    */
+
+    return $(window).load(function() {
+      return $(".login-container").addClass("active");
     });
   });
 
