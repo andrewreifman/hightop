@@ -146,7 +146,7 @@
             span aria-hidden="true" class="se7en-charts"
             | Charts
         li.dropdown *{ class: "#{cp 'filters.html'}" }
-          = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('filters.html') || cp('calendar.html') || cp('invoice.html') do
+          = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('filters.html') || cp('calendar.html') || cp('invoice.html') || cp('faq.html') do
             span aria-hidden="true" class="se7en-pages"
             | Pages
             b.caret
@@ -168,6 +168,7 @@
             li= link_to 'invoice.html', class: cp('invoice.html') do
               span.notifications.label.label-warning New
               p Invoice
+            li= link_to "FAQ", 'faq.html', class: cp('faq.html')
             li= link_to "404 Page", '404-page.html', class: cp('404-page.html')
         li
           = link_to 'gallery.html', class: cp('gallery.html') do
