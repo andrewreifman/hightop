@@ -801,6 +801,22 @@ $(document).ready ->
   ###
   $('#editor').wysiwyg();
 
+  $('#summernote').summernote
+    height: 300
+    focus: true
+    toolbar: [
+      ['style', ['style']]
+      ['style', ['bold', 'italic', 'underline', 'clear']]
+      ['fontsize', ['fontsize']]
+      ['color', ['color']]
+      ['para', ['ul', 'ol', 'paragraph']]
+      ['height', ['height']]
+      ['insert', ['picture', 'link']]
+      ['table', ['table']]
+      ['fullscreen', ['fullscreen']]
+      # ['help', ['help']]
+    ]
+
 
   ###
   # =============================================================================
