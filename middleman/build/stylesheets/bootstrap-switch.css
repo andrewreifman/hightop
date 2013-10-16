@@ -30,7 +30,7 @@
   min-width: 100px;
 }
 .has-switch input[type="checkbox"] + span:before, .has-switch input[type="radio"] + span:before {
-  display: none;
+  display: none !important;
 }
 .has-switch.switch-mini {
   min-width: 72px;
