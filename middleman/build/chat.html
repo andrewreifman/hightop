@@ -137,7 +137,7 @@
               <li><a href="social.html">
                 <span aria-hidden="true" class="se7en-feed"></span>Social Feed</a>
               </li>
-              <li class="dropdown"><a data-toggle="dropdown" class="current" href="#">
+              <li class="dropdown"><a data-toggle="dropdown" href="#">
                 <span aria-hidden="true" class="se7en-star"></span>Features<b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li>
@@ -163,7 +163,7 @@
                     <a href="typo.html">Typography</a>
                   </li>
                   <li>
-                    <a class="current" href="grid.html">Grid Layout</a>
+                    <a href="grid.html">Grid Layout</a>
                   </li>
                 </ul>
               </li>
@@ -205,10 +205,10 @@
               <li><a href="charts.html">
                 <span aria-hidden="true" class="se7en-charts"></span>Charts</a>
               </li>
-              <li class="dropdown"><a data-toggle="dropdown" href="#">
+              <li class="dropdown current"><a data-toggle="dropdown" class="current" href="#">
                 <span aria-hidden="true" class="se7en-pages"></span>Pages<b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="chat.html">
+                  <li><a class="current" href="chat.html">
                     <span class="notifications label label-warning">New</span>
                     <p>
                       Chat
@@ -278,173 +278,209 @@
       <div class="container-fluid main-content">
         <div class="page-title">
           <h1>
-            Grid Layout
+            Chat
           </h1>
         </div>
-        <div class="grid-structure">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="widget-container fluid-height">
-                col-md-12
+        <div class="row">
+          <!-- Conversation -->
+          <div class="col-lg-12">
+            <div class="widget-container scrollable chat chat-page">
+              <div class="contact-list">
+                <div class="heading">
+                  Contacts (15)<i class="icon-plus pull-right"></i>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-female.png" />Walter White<i class="icon-circle text-danger"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-female2.png" />Jessie Pinkman<i class="icon-circle text-success"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-male.jpg" />Skyler White<i class="icon-circle text-warning"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-female.png" />Flynn White<i class="icon-circle text-danger"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-female2.png" />Hank Schrader<i class="icon-circle text-muted"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-male.jpg" />Marie Schrader<i class="icon-circle text-success"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-female.png" />Steve Gomez<i class="icon-circle text-warning"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-female2.png" />Saul Goodman<i class="icon-circle text-success"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-male.jpg" />Mike Ehrmantraut<i class="icon-circle text-success"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-female.png" />Gustavo Fring<i class="icon-circle text-muted"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-female2.png" />Skinny Pete<i class="icon-circle text-muted"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-male.jpg" />Badger<i class="icon-circle text-success"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-female.png" />Gale Boetticher<i class="icon-circle text-warning"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-female2.png" />Huell<i class="icon-circle text-muted"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-male.jpg" />Ted Beneke<i class="icon-circle text-success"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><img width="30" height="30" src="images/avatar-female.png" />Bogdan Wolynetz<i class="icon-circle text-warning"></i></a>
+                  </li>
+                </ul>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-11">
-              <div class="widget-container fluid-height">
-                col-md-11
+              <div class="heading">
+                <i class="icon-comments"></i>Chat with <a href="#">John Smith</a><i class="icon-cog pull-right"></i><i class="icon-smile pull-right"></i>
               </div>
-            </div>
-            <div class="col-md-1">
-              <div class="widget-container fluid-height">
-                col-md-1
+              <div class="widget-content padded">
+                <ul>
+                  <li>
+                    <img width="30" height="30" src="images/avatar-male.jpg" />
+                    <div class="bubble">
+                      <a class="user-name" href="">John Smith</a>
+                      <p class="message">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+                      </p>
+                      <p class="time">
+                        <strong>Today </strong>3:53 pm
+                      </p>
+                    </div>
+                  </li>
+                  <li class="current-user">
+                    <img width="30" height="30" src="images/avatar-female.jpg" />
+                    <div class="bubble">
+                      <a class="user-name" href="">Jane Smith</a>
+                      <p class="message">
+                        Donec odio. Quisque volutpat mattis eros.
+                      </p>
+                      <p class="time">
+                        <strong>Today </strong>3:53 pm
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <img width="30" height="30" src="images/avatar-male.jpg" />
+                    <div class="bubble">
+                      <a class="user-name" href="">John Smith</a>
+                      <p class="message">
+                        Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl.
+                      </p>
+                      <p class="time">
+                        <strong>Today </strong>3:53 pm
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <img width="30" height="30" src="images/avatar-male.jpg" />
+                    <div class="bubble">
+                      <a class="user-name" href="">John Smith</a>
+                      <p class="message">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+                      </p>
+                      <p class="time">
+                        <strong>Today </strong>3:53 pm
+                      </p>
+                    </div>
+                  </li>
+                  <li class="current-user">
+                    <img width="30" height="30" src="images/avatar-female.jpg" />
+                    <div class="bubble">
+                      <a class="user-name" href="">Jane Smith</a>
+                      <p class="message">
+                        Morbi interdum mollis sapien. Sed ac risus. Phasellus lacinia, magna a ullamcorper laoreet, lectus arcu pulvinar risus, vitae facilisis libero dolor a purus. Sed vel lacus. Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus. Nunc tellus ante, mattis eget, gravida vitae, ultricies ac, leo.
+                      </p>
+                      <p class="time">
+                        <strong>Today </strong>3:53 pm
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <img width="30" height="30" src="images/avatar-male.jpg" />
+                    <div class="bubble">
+                      <a class="user-name" href="">John Smith</a>
+                      <p class="message">
+                        Donec odio. Quisque volutpat mattis eros.
+                      </p>
+                      <p class="time">
+                        <strong>Today </strong>3:53 pm
+                      </p>
+                    </div>
+                  </li>
+                  <li class="current-user">
+                    <img width="30" height="30" src="images/avatar-female.jpg" />
+                    <div class="bubble">
+                      <a class="user-name" href="">Jane Smith</a>
+                      <p class="message">
+                        Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus a sem. Nullam quis massa sit amet nibh viverra malesuada.
+                      </p>
+                      <p class="time">
+                        <strong>Today </strong>3:53 pm
+                      </p>
+                    </div>
+                  </li>
+                  <li class="current-user">
+                    <img width="30" height="30" src="images/avatar-female.jpg" />
+                    <div class="bubble">
+                      <a class="user-name" href="">Jane Smith</a>
+                      <p class="message">
+                        Ut convallis, sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus fermentum posuere. Morbi sit amet nulla sed dolor elementum imperdiet. Quisque fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque adipiscing eros ut libero. Ut condimentum mi vel tellus. Suspendisse laoreet. 
+                      </p>
+                      <p class="time">
+                        <strong>Today </strong>3:53 pm
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <img width="30" height="30" src="images/avatar-male.jpg" />
+                    <div class="bubble">
+                      <a class="user-name" href="">John Smith</a>
+                      <p class="message">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+                      </p>
+                      <p class="time">
+                        <strong>Today </strong>3:53 pm
+                      </p>
+                    </div>
+                  </li>
+                  <li class="current-user">
+                    <img width="30" height="30" src="images/avatar-female.jpg" />
+                    <div class="bubble">
+                      <a class="user-name" href="">Jane Smith</a>
+                      <p class="message">
+                        Sem sit amet interdum consectetuer, odio augue aliquam leo, nec dapibus tortor nibh sed augue. Integer eu magna sit amet metus fermentum posuere. Morbi sit amet nulla sed dolor elementum imperdiet. Quisque fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+                      </p>
+                      <p class="time">
+                        <strong>Today </strong>3:53 pm
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <img width="30" height="30" src="images/avatar-male.jpg" />
+                    <div class="bubble">
+                      <a class="user-name" href="">John Smith</a>
+                      <p class="message">
+                        Consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+                      </p>
+                      <p class="time">
+                        <strong>Today </strong>3:53 pm
+                      </p>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-10">
-              <div class="widget-container fluid-height">
-                col-md-10
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="widget-container fluid-height">
-                col-md-2
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-9">
-              <div class="widget-container fluid-height">
-                col-md-9
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="widget-container fluid-height">
-                col-md-3
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-8">
-              <div class="widget-container fluid-height">
-                col-md-8
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="widget-container fluid-height">
-                col-md-4
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-7">
-              <div class="widget-container fluid-height">
-                col-md-7
-              </div>
-            </div>
-            <div class="col-md-5">
-              <div class="widget-container fluid-height">
-                col-md-5
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="widget-container fluid-height">
-                col-md-6
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="widget-container fluid-height">
-                col-md-6
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-5">
-              <div class="widget-container fluid-height">
-                col-md-5
-              </div>
-            </div>
-            <div class="col-md-7">
-              <div class="widget-container fluid-height">
-                col-md-7
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="widget-container fluid-height">
-                col-md-4
-              </div>
-            </div>
-            <div class="col-md-8">
-              <div class="widget-container fluid-height">
-                col-md-8
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3">
-              <div class="widget-container fluid-height">
-                col-md-3
-              </div>
-            </div>
-            <div class="col-md-9">
-              <div class="widget-container fluid-height">
-                col-md-9
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <div class="widget-container fluid-height">
-                col-md-2
-              </div>
-            </div>
-            <div class="col-md-10">
-              <div class="widget-container fluid-height">
-                col-md-10
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-1">
-              <div class="widget-container fluid-height">
-                col-md-1
-              </div>
-            </div>
-            <div class="col-md-11">
-              <div class="widget-container fluid-height">
-                col-md-11
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-2">
-              <div class="widget-container fluid-height">
-                col-md-2
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="widget-container fluid-height">
-                col-md-3
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="widget-container fluid-height">
-                col-md-4
-              </div>
-            </div>
-            <div class="col-md-2">
-              <div class="widget-container fluid-height">
-                col-md-2
-              </div>
-            </div>
-            <div class="col-md-1">
-              <div class="widget-container fluid-height">
-                col-md-1
+              <div class="post-message">
+                <input class="form-control" placeholder="Write your message here…" type="text"><input type="submit" value="Send">
               </div>
             </div>
           </div>
