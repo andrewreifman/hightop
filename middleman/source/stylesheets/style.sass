@@ -932,10 +932,6 @@ th:active
         a:last-child
           margin-right: 0
 
-  input[type="checkbox"], input[type="radio"]
-    margin-right: 0
-    margin-left: 0
-
   tfoot
     > tr > td
       border-top: 0
@@ -943,6 +939,10 @@ th:active
     > tr:first-child > td
       border-top: 1px solid #ddd
       padding-top: 15px
+
+.boxshadow .table input[type="checkbox"] + span:before, .boxshadow .table input[type="radio"] + span:before
+  margin-right: 0
+  margin-left: 0
 
 
 .check
@@ -2220,49 +2220,58 @@ input[type="text"]
   &+.btn
     margin-left: -1px
 
-.radio, .checkbox
-  margin: 0 0 5px
-  line-height: 26px
+.opacity
+  .radio, .checkbox
+    margin: 0 0 10px
 
-.radio-inline, .checkbox-inline
-  padding-top: 9px
-  margin-right: 20px
-  line-height: 26px
+  .radio-inline, .checkbox-inline
+    padding-top: 9px
+    margin-right: 20px
 
-  &+.radio-inline, &+.checkbox-inline
-    margin-left: 0
+    &+.radio-inline, &+.checkbox-inline
+      margin-left: 0
 
-input[type="checkbox"], input[type="radio"]
-  width: 18px
-  height: 18px
-  margin-right: 10px
-  vertical-align: top
-  background: #FFF
-  border-radius: 3px
-  border: 1px solid #c8c8c8
-  -webkit-appearance: none
-  -moz-appearance: none
-  appearance: none
+  input[type="checkbox"], input[type="radio"]
+    display: none
 
-input[type="checkbox"]:checked
-  background: $blue url('../images/checkmark.png') no-repeat center center
-  @include image2x("checkmark@2x.png", 14px, 14px)
-  border-color: $blue
+    &+ span
+      &:before
+        content: ""
+        width: 18px
+        height: 18px
+        display: inline-block
+        vertical-align: middle
+        margin-right: 10px
+        margin-left: -20px
+        background: #FFF
+        border-radius: 3px
+        border: 1px solid #c8c8c8
 
-input[type="radio"]
-  border-radius: 50%
-  position: relative
+  input[type="checkbox"]:checked + span:before
+    background: $blue url('../images/checkmark.png') no-repeat center center
+    @include image2x("checkmark@2x.png", 14px, 14px)
+    border-color: $blue
 
-  &:checked:after
-    content: ""
-    width: 8px
-    height: 8px
-    position: absolute
-    top: 4px
-    left: 4px
-    background-color: $blue
-    border-radius: 50%
-    display: block
+  input[type="radio"]
+    display: none
+
+    &+ span
+      position: relative
+
+      &:before
+        border-radius: 50%
+
+    &:checked + span
+      &:after
+        content: ""
+        width: 8px
+        height: 8px
+        position: absolute
+        top: 6px
+        left: -15px
+        background-color: $blue
+        border-radius: 50%
+        display: block
 
 .has-warning
   .help-block, .control-label
