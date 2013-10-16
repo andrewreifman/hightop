@@ -273,9 +273,9 @@ $(document).ready ->
       $percent = ($current / $total) * 100
       $("#wizard").find(".progress-bar").css "width", $percent + "%"
 
-      $(document).ready ->
-      $("#rootwizard").bootstrapWizard
-        onNext: (tab, navigation, index) ->
+      # $("#rootwizard").bootstrapWizard
+      #   onNext: (tab, navigation, index) ->
+
 
   ###
   # =============================================================================

@@ -113,24 +113,20 @@
 	padding: 0;
 }
 
-#wizard > .pager {
+.wizard > .pager {
 	padding-top: 15px;	
 	padding-bottom: 5px;
 	background: #F7F7F7;
 	margin: 0;
 }
 
-#wizard > .pager .btn-next i {
+.wizard > .pager .btn-next i {
 	margin-right: 0;
 	margin-left: 10px;
 }
 
-#wizard .tab-pane > h2 {
+.wizard .tab-pane > h2 {
 	font-size: 28px;
 	margin: 25px 0 25px;	
-}
-
-#tab1 > p {
-	font-style: italic;
 }
 		
