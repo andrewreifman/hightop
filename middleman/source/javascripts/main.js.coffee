@@ -773,25 +773,25 @@ $(document).ready ->
   # =============================================================================
   ###
   $alpha = $('#hidden-items');
-  $container = $('#social-container');
+  $container2 = $('#social-container');
 
   $(window).load ->
     ###
     # init isotope, then insert all items from hidden alpha
     ###
-    $container.isotope({
+    $container2.isotope({
       itemSelector: '.item'
     }).isotope( 'insert', $alpha.find('.item') );
 
     $("#load-more").html("Load more").find("i").hide()
 
   $('#load-more').click ->
-    items = $container.find('.social-entry')
+    items = $container2.find('.social-entry')
     item1 = $(items[Math.floor(Math.random()*items.length)]).clone()
     item2 = $(items[Math.floor(Math.random()*items.length)]).clone()
     item3 = $(items[Math.floor(Math.random()*items.length)]).clone()
     tmp = $().add(item1).add(item2).add(item3)
-    $container.isotope( 'insert', tmp )
+    $container2.isotope( 'insert', tmp )
 
 
   ###
