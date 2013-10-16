@@ -330,6 +330,9 @@ body.login2
 /*-----------------------------------------------------------------------------------*/
 /*  Header Styles
 /*-----------------------------------------------------------------------------------*/
+.no-boxshadow .navbar
+  border-bottom: 1px solid #DDD
+
 .navbar
   background: #FFF
   background: rgba(255,255,255,.95)
@@ -930,10 +933,8 @@ th:active
           margin-right: 0
 
   input[type="checkbox"], input[type="radio"]
-    &+ span
-      &:before
-        margin-right: 0
-        margin-left: 0
+    margin-right: 0
+    margin-left: 0
 
   tfoot
     > tr > td
@@ -1718,6 +1719,7 @@ th:active
     margin-top: -18px
     text-align: center
     opacity: 0
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
     @include transition(opacity .3s)
 
     i
@@ -1748,8 +1750,10 @@ th:active
   &:hover
     img
       opacity: .2
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)"
     .actions
       opacity: 1
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
 
 @media (max-width: 450px)
   .gallery-item
@@ -2068,7 +2072,7 @@ th:active
         i
           font-size: 12px
           float: right
-          margin: 9px 15px 0 0
+          margin: 9px 20px 0 0
 
   > .heading
     position: relative !important
@@ -2217,56 +2221,48 @@ input[type="text"]
     margin-left: -1px
 
 .radio, .checkbox
-  margin: 0 0 10px
+  margin: 0 0 5px
+  line-height: 26px
 
 .radio-inline, .checkbox-inline
   padding-top: 9px
   margin-right: 20px
+  line-height: 26px
 
   &+.radio-inline, &+.checkbox-inline
     margin-left: 0
 
 input[type="checkbox"], input[type="radio"]
-  display: none
+  width: 18px
+  height: 18px
+  margin-right: 10px
+  vertical-align: top
+  background: #FFF
+  border-radius: 3px
+  border: 1px solid #c8c8c8
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
 
-  &+ span
-    &:before
-      content: ""
-      width: 18px
-      height: 18px
-      display: inline-block
-      vertical-align: middle
-      margin-right: 10px
-      margin-left: -20px
-      background: #FFF
-      border-radius: 3px
-      border: 1px solid #c8c8c8
-
-input[type="checkbox"]:checked + span:before
+input[type="checkbox"]:checked
   background: $blue url('../images/checkmark.png') no-repeat center center
   @include image2x("checkmark@2x.png", 14px, 14px)
   border-color: $blue
 
 input[type="radio"]
-  display: none
+  border-radius: 50%
+  position: relative
 
-  &+ span
-    position: relative
-
-    &:before
-      border-radius: 50%
-
-  &:checked + span
-    &:after
-      content: ""
-      width: 8px
-      height: 8px
-      position: absolute
-      top: 6px
-      left: -15px
-      background-color: $blue
-      border-radius: 50%
-      display: block
+  &:checked:after
+    content: ""
+    width: 8px
+    height: 8px
+    position: absolute
+    top: 4px
+    left: 4px
+    background-color: $blue
+    border-radius: 50%
+    display: block
 
 .has-warning
   .help-block, .control-label
