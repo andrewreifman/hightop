@@ -1,0 +1,81 @@
+.page-title
+  h1 X-Editable Forms
+
+.row
+  .col-lg-6
+    form#frm.form-horizontal action="xeditable.html" method="get"
+      .form-group style="margin-bottom:5px"
+        label.control-label.pull-left style="text-align:left; margin-right:15px;" Mode
+        select#c.form-control.pull-left name="c" style="width:150px; margin-right:8px;"
+          option value="popup" Popover
+          option value="inline" Inline
+        button.btn.btn-primary type="submit" Refresh
+
+  .col-lg-6
+    div style="float: right;"
+      label style="margin-right: 30px;"
+        input#autoopen type="checkbox"
+        span Auto open next field
+      button#enable.btn.btn-default style="margin:0;" Enable / Disable
+
+.row style="margin-top: 0"
+  .col-lg-12
+    .widget-container.fluid-height.clearfix
+      .widget-content.padded
+        p 
+          em Click fields below to edit
+        table#user.table.table-bordered.table-striped style="clear: both"
+          tbody
+            tr
+              td width="35%" Simple text field
+              td
+                a#username data-original-title="Enter username" data-pk="1" data-type="text" href="#" Superuse
+            tr
+              td Empty text field, required
+              td
+                a#firstname data-original-title="Enter your firstname" data-pk="1" data-placeholder="Required" data-placement="right" data-type="text" href="#"
+            tr
+              td Select, local array, custom display
+              td
+                a#sex data-original-title="Select sex" data-pk="1" data-type="select" data-value="" href="#"
+            tr
+              td Select, remote array, no buttons
+              td
+                a#group data-original-title="Select group" data-pk="1" data-source="/groups" data-type="select" data-value="5" href="#" Admin
+            tr
+              td Select, error while loading
+              td
+                a#status data-original-title="Select status" data-pk="1" data-source="/status" data-type="select" data-value="0" href="#" Active
+            tr
+              td Combodate (date)
+              td
+                a#dob data-format="YYYY-MM-DD" data-original-title="Select Date of birth" data-pk="1" data-template="D / MMM / YYYY" data-type="combodate" data-value="1984-05-15" data-viewformat="DD/MM/YYYY" href="#"
+            tr
+              td Combodate (datetime)
+              td
+                a#event data-format="YYYY-MM-DD HH:mm" data-original-title="Setup event date and time" data-pk="1" data-template="D MMM YYYY  HH:mm" data-type="combodate" data-viewformat="MMM D, YYYY, HH:mm" href="#"
+            tr
+              td
+                | Textarea, buttons below. Submit by 
+                i ctrl+enter
+              td
+                a#comments data-original-title="Enter comments" data-pk="1" data-placeholder="Your comments here..." data-type="textarea" href="#"
+                  | awesome
+                  | user!
+            tr
+              td Checklist
+              td
+                a#fruits data-original-title="Select fruits" data-type="checklist" data-value="2,3" href="#"
+            tr
+              td Select2 (tags mode)
+              td
+                a#tags data-original-title="Enter tags" data-pk="1" data-type="select2" href="#"
+            tr
+              td Select2 (dropdown mode)
+              td
+                a#country data-original-title="Select country" data-pk="1" data-type="select2" data-value="BS" href="#"
+            tr
+              td Custom input, several fields
+              td
+                a#address data-original-title="Please, fill address" data-pk="1" data-type="address" href="#"
+
