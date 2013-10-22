@@ -57,15 +57,26 @@ html
 body
   font-family: 'Lato', sans-serif !important
   color: #666
-  background: #e8e8e8
   min-height: 100%
 
   &.page-header-fixed
     padding-top: 140px
 
   &.layout-boxed
-    max-width: 1200px
-    margin: 0 auto
+    .container-fluid.main-content
+      max-width: 1200px
+      margin: 0 auto
+
+  &.bg-1
+    background: #e8e8e8
+  &.bg-2
+    background: url(../images/bg-2.png) repeat 0 0
+  &.bg-3
+    background: url(../images/bg-3.png) repeat 0 0
+  &.bg-4
+    background: url(../images/bg-4.png) repeat 0 0
+  &.bg-5
+    background: url(../images/bg-5.png) repeat 0 0
 
 .main-content
   padding-bottom: 20px
@@ -348,6 +359,7 @@ body.login2
   height: 112px
   width: 100%
   border: 0
+  margin-bottom: 28px
   @include transition(all .3s)
 
   .container-fluid.top-bar
@@ -557,9 +569,9 @@ body.login2
 
 .style-selector
   position: fixed
-  top: 160px
-  right: -222px
-  width: 220px
+  top: 140px
+  right: -242px
+  width: 240px
   z-index: 100
   background: #FFF
   border: 1px solid #DDD
@@ -586,6 +598,7 @@ body.login2
         font-size: 28px
         line-height: 44px
         color: #888
+        margin-left: -2px
 
       &:hover span
         color: $blue
@@ -601,22 +614,30 @@ body.login2
       background: transparent
       border-color: #CCC
 
-    .color-options
+    ul 
       list-style: none
       padding: 0
       margin: 0
 
       li 
         float: left
-        width: 25px
-        margin-right: 12px
+        width: 30px
+        margin-right: 10px
+
+        a
+          width: 30px
+          height: 30px
+          display: block
+          border-radius: 50%
+          opacity: 1
+          -webkit-transition: opacity .3s
+          -moz-transition: opacity .3s
+          transition: opacity .3s
+
+    .color-options
+      margin: 0 0 16px      
 
       a
-        width: 25px
-        height: 25px
-        display: block
-        border-radius: 50%
-
         &.blue
           background: $blue
         &.green
@@ -627,6 +648,25 @@ body.login2
           background: #c741c9
         &.gray
           background: #999
+
+        &.active 
+          opacity: .25
+
+    .pattern-options
+      a
+        &#bg-1
+          background: #e8e8e8
+        &#bg-2
+          background: url(../images/bg-2.png) repeat 0 0
+        &#bg-3
+          background: url(../images/bg-3.png) repeat 0 0
+        &#bg-4
+          background: url(../images/bg-4.png) repeat 0 0
+        &#bg-5
+          background: url(../images/bg-5.png) repeat 0 0
+
+        &.active 
+          border: 2px solid $blue
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -949,10 +989,10 @@ body.login2
       border-left: 5px solid transparent
     &:after
       top: 19px
-      border-top: 5px solid #007aff !important
+      border-top: 5px solid #007aff
     &:before
       top: 11px
-      border-bottom: 5px solid #007aff !important
+      border-bottom: 5px solid #007aff
 
   &.sorting_asc
     color: #007aff

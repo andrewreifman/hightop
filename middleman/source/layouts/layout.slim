@@ -71,7 +71,7 @@ html
 
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
 
-  body.page-header-fixed
+  body.page-header-fixed.bg-1
     .modal-shiftfix
       = partial 'navigation'
 
@@ -99,6 +99,19 @@ html
             a.magenta href="javascript:chooseStyle('magenta-theme', 30)"
           li
             a.gray href="javascript:chooseStyle('gray-theme', 30)"
+
+        h2 Background Patterns
+        ul.pattern-options.clearfix
+          li
+            a#bg-1.active href="#"
+          li
+            a#bg-2 href="#"
+          li
+            a#bg-3 href="#"
+          li
+            a#bg-4 href="#"
+          li
+            a#bg-5 href="#"
         
         .style-toggle.closed
           span aria-hidden="true" class="se7en-gear"
