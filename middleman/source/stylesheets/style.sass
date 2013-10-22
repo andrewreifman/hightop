@@ -58,8 +58,14 @@ body
   font-family: 'Lato', sans-serif !important
   color: #666
   background: #e8e8e8
-  padding-top: 140px
   min-height: 100%
+
+  &.page-header-fixed
+    padding-top: 140px
+
+  &.layout-boxed
+    max-width: 1200px
+    margin: 0 auto
 
 .main-content
   padding-bottom: 20px
@@ -547,6 +553,80 @@ body.login2
 
 .navbar.scroll-hide.closed
   top: -45px
+
+
+.style-selector
+  position: fixed
+  top: 160px
+  right: -222px
+  width: 220px
+  z-index: 100
+  background: #FFF
+  border: 1px solid #DDD
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15)
+
+  .style-selector-container
+    position: relative
+    padding: 15px
+
+    .style-toggle
+      position: absolute
+      right: 100%
+      top: -1px
+      background: #FFF
+      border-radius: 5px 0 0 5px
+      width: 48px
+      height: 46px
+      text-align: center
+      border: 1px solid #DDD
+      border-right: 0
+      cursor: pointer
+
+      span
+        font-size: 28px
+        line-height: 44px
+        color: #888
+
+      &:hover span
+        color: $blue
+
+    h2
+      font-size: 16px
+      margin-bottom: 10px
+
+    select
+      margin-bottom: 20px
+      width: 100%
+      height: 30px
+      background: transparent
+      border-color: #CCC
+
+    .color-options
+      list-style: none
+      padding: 0
+      margin: 0
+
+      li 
+        float: left
+        width: 25px
+        margin-right: 12px
+
+      a
+        width: 25px
+        height: 25px
+        display: block
+        border-radius: 50%
+
+        &.blue
+          background: $blue
+        &.green
+          background: #60c560
+        &.orange
+          background: #f0ad4e
+        &.magenta
+          background: #c741c9
+        &.gray
+          background: #999
 
 
 /*-----------------------------------------------------------------------------------*/

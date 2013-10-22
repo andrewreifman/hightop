@@ -199,10 +199,10 @@ $(document).ready ->
   #   Navbar scroll animation
   # =============================================================================
   ###
-  $(".navbar.scroll-hide").mouseover ->
-    $(".navbar.scroll-hide").removeClass "closed"
+  $(".page-header-fixed .navbar.scroll-hide").mouseover ->
+    $(".page-header-fixed .navbar.scroll-hide").removeClass "closed"
     setTimeout (->
-      $(".navbar.scroll-hide").css overflow: "visible"
+      $(".page-header-fixed .navbar.scroll-hide").css overflow: "visible"
     ), 150
 
   $ ->
@@ -213,10 +213,10 @@ $(document).ready ->
       return  if Math.abs(lastScrollTop - st) <= delta
       if st > lastScrollTop
         # downscroll code
-        $('.navbar.scroll-hide').addClass "closed"
+        $('.page-header-fixed .navbar.scroll-hide').addClass "closed"
       else
         # upscroll code
-        $('.navbar.scroll-hide').removeClass "closed"
+        $('.page-header-fixed .navbar.scroll-hide').removeClass "closed"
       lastScrollTop = st
 
 
@@ -227,6 +227,38 @@ $(document).ready ->
   ###
   $('.navbar-toggle').click ->
     $('body, html').toggleClass "nav-open"
+
+
+  ###
+  # =============================================================================
+  #   Style Selector
+  # =============================================================================
+  ###
+  $(".style-selector select").each ->
+    $(this).find("option:first").attr "selected", "selected"
+
+  $(".style-toggle").bind "click", ->
+    if $(this).hasClass("open")
+      $(this).removeClass("open").addClass "closed"
+      $(".style-selector").animate({"right": "-220px"}, 300)
+    else
+      $(this).removeClass("closed").addClass "open"
+      $(".style-selector").show().animate({"right": 0}, 300)
+
+  $(".style-selector select[name='layout']").change ->
+    if $(".style-selector select[name='layout'] option:selected").val() is "boxed"
+      $("body").addClass "layout-boxed"
+      $(window).resize()
+    else
+      $("body").removeClass "layout-boxed"
+
+  $(".style-selector select[name='header']").change ->
+    if $(".style-selector select[name='header'] option:selected").val() is "fixed"
+      $("body").addClass "page-header-fixed"
+      $(".navbar").addClass "navbar-fixed-top".removeClass "navbar-static-top"
+    else
+      $("body").removeClass "page-header-fixed"
+      $(".navbar").removeClass "navbar-fixed-top".addClass "navbar-static-top"
 
 
   ###

@@ -71,12 +71,41 @@ html
 
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
 
-  body
+  body.page-header-fixed
     .modal-shiftfix
       = partial 'navigation'
 
-      .container-fluid.main-content
-        = yield
+    .style-selector
+      .style-selector-container
+        h2 Layout Style
+        select name="layout"
+          option value="fluid" Fluid
+          option value="boxed" Boxed
+
+        h2 Header Style
+        select name="header"
+          option value="fixed" Fixed
+          option value="default" Static
+
+        h2 Color Options
+        ul.color-options.clearfix
+          li
+            a.blue href="javascript:chooseStyle('none', 30)"
+          li
+            a.green href="javascript:chooseStyle('green-theme', 30)"
+          li
+            a.orange href="javascript:chooseStyle('orange-theme', 30)"
+          li
+            a.magenta href="javascript:chooseStyle('magenta-theme', 30)"
+          li
+            a.gray href="javascript:chooseStyle('gray-theme', 30)"
+        
+        .style-toggle.closed
+          span aria-hidden="true" class="se7en-gear"
+
+
+    .container-fluid.main-content
+      = yield
 
     / javascript:
     /   | var _gaq = [['_setAccount', 'UA-XXXXXXX-X'], ['_trackPageview']];
