@@ -20,6 +20,7 @@ page "login2.html", :layout => false
 page "signup1.html", :layout => false
 page "signup2.html", :layout => false
 page "404-page.html", :layout => false
+page "500-page.html", :layout => false
 page "docs/index.html", :layout => false
 #
 # With alternative layout

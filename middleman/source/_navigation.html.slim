@@ -178,6 +178,9 @@
               p FAQ
             li= link_to "Filter Results", 'filters.html', class: cp('filters.html')
             li= link_to "404 Page", '404-page.html', class: cp('404-page.html')
+            li= link_to '500-page.html', class: cp('500-page.html') do
+              span.notifications.label.label-warning New
+              p 500 Error
         li
           = link_to 'gallery.html', class: cp('gallery.html') do
             span aria-hidden="true" class="se7en-gallery"
