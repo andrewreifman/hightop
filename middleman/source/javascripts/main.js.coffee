@@ -1059,3 +1059,26 @@ $(document).ready ->
       $(this).find("[placeholder]").each ->
         input = $(this)
         input.val ""  if input.val() is input.attr("placeholder")
+
+
+  ###
+  # =============================================================================
+  #   Ladda loading buttons
+  # =============================================================================
+  ###
+  # Bind normal buttons
+  Ladda.bind ".ladda-button:not(.progress-demo)",
+    timeout: 2000
+
+
+  # Bind progress buttons and simulate loading progress
+  Ladda.bind ".ladda-button.progress-demo",
+    callback: (instance) ->
+      progress = 0
+      interval = setInterval(->
+        progress = Math.min(progress + Math.random() * 0.1, 1)
+        instance.setProgress progress
+        if progress is 1
+          instance.stop()
+          clearInterval interval
+      , 200)

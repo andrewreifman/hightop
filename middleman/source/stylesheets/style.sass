@@ -73,7 +73,6 @@ h3
   line-height: 1.4em
 
 p
-  margin: 0 0 15px
   &.lead
     font-weight: 300
 
@@ -565,7 +564,7 @@ body.login2
 /*-----------------------------------------------------------------------------------*/
 .btn
   font-weight: 300
-  margin: 0 10px 10px 0
+  margin: 0 5px 5px 0
   @include transition(all .15s)
 
   &.active
@@ -591,6 +590,9 @@ body.login2
 
     .caret
       border-top-color: #BBB
+
+  &.disabled, &[disabled]
+    @extend .btn-default
 
 .btn-primary
   background: $blue
@@ -755,7 +757,7 @@ body.login2
       border-top-color: #FFF
 
 .btn-group
-  margin: 0 10px 15px 0
+  margin: 0 5px 5px 0
 
   &.pull-right
     margin-right: 0
@@ -3208,15 +3210,18 @@ ul.timeline
         line-height: 1.2
 
       &.image, &.video
-        padding: 15px 10px 0px
+        padding: 15px 10px 10px
 
         h2
           padding: 0 5px 15px
           margin-bottom: 0
-        img
-          width: 100%
         p
           padding: 15px 5px
+        img
+          width: 100%
+        img, .fluid-width-video-wrapper
+          &+ p
+            padding-bottom: 0
 
     &:nth-child(odd)
       padding-left: 0
