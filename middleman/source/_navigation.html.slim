@@ -46,21 +46,21 @@
           ul.dropdown-menu
             li
               = link_to "#" do
-                i.icon-user
+                i.fa.fa-user
                 | My Account
             li
               = link_to "#" do
-                i.icon-gear
+                i.fa.fa-gear
                 | Account Settings
             li
               = link_to 'login1.html' do
-                i.icon-signout
+                i.fa.fa-signout
                 | Logout
 
     button.navbar-toggle
-      span.icon-bar
-      span.icon-bar
-      span.icon-bar
+      span.fa.fa-bar
+      span.fa.fa-bar
+      span.fa.fa-bar
 
     a href='index.html' class='logo'
       | se7en
@@ -85,7 +85,9 @@
             | UI Features
             b.caret
           ul.dropdown-menu
-            li= link_to "Buttons", 'buttons.html', class: cp('buttons.html')
+            li= link_to 'buttons.html', class: cp('buttons.html') do
+              span.notifications.label.label-warning New
+              p Buttons
             li= link_to "Font Awesome Icons", 'fontawesome.html', class: cp('fontawesome.html')
             li= link_to 'glyphicons.html', class: cp('glyphicons.html') do
               span.notifications.label.label-warning New

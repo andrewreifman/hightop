@@ -191,7 +191,7 @@ html
             .widget-content.padded
 
               p The icons used for the main navigation have been custom created and implemented using a custom built font. Our icons can be used on any page by calling them with our pre-built syntax.
-              = Pygments.highlight("<span aria-hidden='true' class='se7en-icon-name'></span>", lexer: 'html')
+              = Pygments.highlight("<span aria-hidden='true' class='se7en-fa.fa-name'></span>", lexer: 'html')
 
               p These are all the included se7en icons:
               span aria-hidden="true" class="se7en-flag" style="font-size:28px;margin-right:20px;"
@@ -227,11 +227,11 @@ html
 
             .widget-content.padded
               p We've included the latest Font Awesome icons, which includes over 360+ icons. To place a Font Awesome icon, simply use this class:
-              = Pygments.highlight("<span class='icon-'></span>", lexer: 'html')
+              = Pygments.highlight("<span class='fa.fa-'></span>", lexer: 'html')
 
               p For example:
-              i.icon-home style="font-size:28px;"
-              = Pygments.highlight("<span class='icon-home'></span>", lexer: 'html')
+              i.fa.fa-home style="font-size:28px;"
+              = Pygments.highlight("<span class='fa.fa-home'></span>", lexer: 'html')
 
               p 
                 | For more information on how to use their icons, visit  
@@ -248,11 +248,11 @@ html
               p We've also included 180 glyphs in font format from the Glyphicon Halflings set. Glyphicons Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. 
 
               p To use a Font Awesome icon, simply use this class:
-              = Pygments.highlight("<span class='glyphicon glyphicon-'></span>", lexer: 'html')
+              = Pygments.highlight("<span class='glyphicon glyphfa.fa-'></span>", lexer: 'html')
 
               p For example:
-              span.glyphicon.glyphicon-user style="font-size:28px;"
-              = Pygments.highlight("<span class='glyphicon glyphicon-user'></span>", lexer: 'html')
+              span.glyphicon.glyphfa.fa-user style="font-size:28px;"
+              = Pygments.highlight("<span class='glyphicon glyphfa.fa-user'></span>", lexer: 'html')
 
               p 
                 | For more information on how to use Glyphicons, visit  
@@ -462,7 +462,7 @@ html
                   .input-group.date.datepicker
                     input.form-control type="text"
                       span.input-group-addon
-                        i.icon-calendar
+                        i.fa.fa-calendar
 
               = Pygments.highlight("$('.datepicker').datepicker();", lexer: 'javascript')
 
@@ -473,7 +473,7 @@ html
                   .input-group.date.datepicker data-date-autoclose="true" data-date-format="dd-mm-yyyy"
                     input.form-control type="text"
                       span.input-group-addon
-                        i.icon-calendar
+                        i.fa.fa-calendar
               = Pygments.highlight("<div class='date datepicker' data-date-autoclose='true' data-date-format='dd-mm-yyyy'>", lexer: 'html')
 
               p To start with the year
@@ -483,7 +483,7 @@ html
                   .input-group.date.datepicker data-date-autoclose="true" data-date-format="dd.mm.yyyy" data-date-start-view="2"
                     input.form-control type="text"
                       span.input-group-addon
-                        i.icon-calendar
+                        i.fa.fa-calendar
               = Pygments.highlight("<div class='input-group date datepicker' data-date-autoclose='true' data-date-format='dd.mm.yyyy' data-date-start-view='2'>", lexer: 'html')
 
       .row
@@ -500,7 +500,7 @@ html
                   .input-group.bootstrap-timepicker
                     input#timepicker-default.form-control type="text"
                       span.input-group-addon
-                        i.icon-time
+                        i.fa.fa-time
 
               = Pygments.highlight("$('#timepicker-default').timepicker();", lexer: 'javascript')
 
@@ -510,7 +510,7 @@ html
                   .input-group.bootstrap-timepicker
                     input#timepicker-24h.form-control type="text"
                       span.input-group-addon
-                        i.icon-time
+                        i.fa.fa-time
 
               = Pygments.highlight("$('#timepicker-default').timepicker({ minuteStep: 1, showSeconds: true, showMeridian: false });", lexer: 'javascript')
 
@@ -519,7 +519,7 @@ html
                 .col-md-3
                   .bootstrap-timepicker
                     input#timepicker-noTemplate.form-control type="text"
-                    i.icon-time
+                    i.fa.fa-time
 
               = Pygments.highlight("$('#timepicker-default').timepicker({ template: false, showInputs: false, minuteStep: 5 });", lexer: 'javascript')
 
@@ -605,7 +605,7 @@ html
                     .fileupload.fileupload-new data-provides="fileupload"
                       .input-group
                         .form-control
-                          i.icon-file.fileupload-exists
+                          i.fa.fa-file.fileupload-exists
                           span.fileupload-preview
                         .input-group-btn
                           a.btn.btn-default.fileupload-exists data-dismiss="fileupload" href="#" Remove
