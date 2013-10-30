@@ -54,7 +54,7 @@
                 | Account Settings
             li
               = link_to 'login1.html' do
-                i.fa.fa-signout
+                i.fa.fa-sign-out
                 | Logout
 
     button.navbar-toggle
@@ -88,7 +88,9 @@
             li= link_to 'buttons.html', class: cp('buttons.html') do
               span.notifications.label.label-warning New
               p Buttons
-            li= link_to "Font Awesome Icons", 'fontawesome.html', class: cp('fontawesome.html')
+            li= link_to 'fontawesome.html', class: cp('fontawesome.html') do
+              span.notifications.label.label-warning New
+              p Font Awesome Icons
             li= link_to 'glyphicons.html', class: cp('glyphicons.html') do
               span.notifications.label.label-warning New
               p Glyphicons

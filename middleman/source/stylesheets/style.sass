@@ -399,7 +399,7 @@ body.login2
         height: 30px
         border-color: #e6e6e6
         box-shadow: none
-        background: #FFF url('../images/fasearch.png') no-repeat center left
+        background: #FFF url('../images/icon-search.png') no-repeat center left
         @include image2x("fasearch@2x.png", 18px, 12px)
         padding-left: 24px
         margin-top: 1px
@@ -2234,15 +2234,21 @@ th:active
 
       .glyphicon
         margin-top: -5px
+        width: 32px
+        font-size: 14px
+        text-align: center
+        margin-right: 10px
+        vertical-align: middle
+        @include transition(all .12s)
 
       &:hover
         background-color: #f6f6f6
 
-        [class^="fa"], [class*="fa"]
+        [class^="fa"], [class*="fa"], .glyphicon
           font-size: 28px
 
         .glyphicon
-          margin-top: -7px
+          margin-top: -8px
 
 /*-----------------------------------------------------------------------------------*/
 /*  Grid Structure
