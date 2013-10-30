@@ -492,7 +492,7 @@
             
             if (!minDate || minDate < calendar[1][1])
             {
-                html += '<th class="prev available"><i class="icon-angle-left"></i></th>';
+                html += '<th class="prev available"><i class="fa.fa-angle-left"></i></th>';
             }
             else
             {
@@ -501,7 +501,7 @@
             html += '<th colspan="5" style="width: auto">' + this.locale.monthNames[calendar[1][1].getMonth()] + calendar[1][1].toString(" yyyy") + '</th>';
             if (!maxDate || maxDate > calendar[1][1])
             {
-                html += '<th class="next available"><i class="icon-angle-right"></i></th>';
+                html += '<th class="next available"><i class="fa.fa-angle-right"></i></th>';
             }
             else
             {
