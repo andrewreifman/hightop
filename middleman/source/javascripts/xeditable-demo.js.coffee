@@ -14,13 +14,13 @@ $ ->
 
   
   #editables 
-  $("#username").editable
+  $(".editable-form #username").editable
     type: "text"
     pk: 1
     name: "username"
     title: "Enter username"
 
-  $("#firstname").editable validate: (value) ->
+  $(".editable-form #firstname").editable validate: (value) ->
     "This field is required"  if $.trim(value) is ""
 
   $("#sex").editable
@@ -32,32 +32,19 @@ $ ->
       value: 2
       text: "Female"
     ]
-    display: (value, sourceData) ->
-      colors =
-        "": "gray"
-        1: "green"
-        2: "blue"
 
-      elem = $.grep(sourceData, (o) ->
-        o.value is value
-      )
-      if elem.length
-        $(this).text(elem[0].text).css "color", colors[value]
-      else
-        $(this).empty()
-
-  $("#status").editable()
-  $("#group").editable showbuttons: false
-  $("#vacation").editable datepicker:
+  $(".editable-form #status").editable()
+  $(".editable-form #group").editable showbuttons: false
+  $(".editable-form #vacation").editable datepicker:
     todayBtn: "linked"
 
-  $("#dob").editable()
-  $("#event").editable
+  $(".editable-form #dob").editable()
+  $(".editable-form #event").editable
     placement: "right"
     combodate:
       firstItem: "name"
 
-  $("#meeting_start").editable
+  $(".editable-form #meeting_start").editable
     format: "yyyy-mm-dd hh:ii"
     viewformat: "dd/mm/yyyy hh:ii"
     validate: (v) ->
@@ -67,21 +54,21 @@ $ ->
       todayBtn: "linked"
       weekStart: 1
 
-  $("#comments").editable showbuttons: "bottom"
-  $("#note").editable()
-  $("#pencil").click (e) ->
+  $(".editable-form #comments").editable showbuttons: "bottom"
+  $(".editable-form #note").editable()
+  $(".editable-form #pencil").click (e) ->
     e.stopPropagation()
     e.preventDefault()
     $("#note").editable "toggle"
 
-  $("#state").editable source: ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Dakota", "North Carolina", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
-  $("#state2").editable
+  $(".editable-form #state").editable source: ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Dakota", "North Carolina", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+  $(".editable-form #state2").editable
     value: "California"
     typeahead:
       name: "state"
       local: ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Dakota", "North Carolina", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
 
-  $("#fruits").editable
+  $(".editable-form #fruits").editable
     pk: 1
     limit: 3
     source: [
@@ -101,7 +88,7 @@ $ ->
       text: "orange"
     ]
 
-  $("#tags").editable
+  $(".editable-form #tags").editable
     inputclass: "input-large"
     select2:
       tags: ["html", "javascript", "css", "ajax"]
@@ -367,12 +354,12 @@ $ ->
       text: v
 
 
-  $("#country").editable
+  $(".editable-form #country").editable
     source: countries
     select2:
       width: 200
 
-  $("#address").editable
+  $(".editable-form #address").editable
     value:
       city: "Moscow"
       street: "Lenina"
@@ -388,7 +375,7 @@ $ ->
       html = "<b>" + $("<div>").text(value.city).html() + "</b>, " + $("<div>").text(value.street).html() + " st., bld. " + $("<div>").text(value.building).html()
       $(this).html html
 
-  $("#user .editable").on "hidden", (e, reason) ->
+  $(".editable-form #user .editable").on "hidden", (e, reason) ->
     if reason is "save" or reason is "nochange"
       $next = $(this).closest("tr").next().find(".editable")
       if $("#autoopen").is(":checked")
