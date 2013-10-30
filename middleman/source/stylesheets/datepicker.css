@@ -61,8 +61,6 @@
   text-align: center;
   width: 30px;
   height: 28px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
   border: none;
 }
@@ -136,8 +134,6 @@
 .datepicker table tr td.range.disabled,
 .datepicker table tr td.range.disabled:hover {
   background: #eeeeee;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 .datepicker table tr td.range.today,
@@ -145,8 +141,6 @@
 .datepicker table tr td.range.today.disabled,
 .datepicker table tr td.range.today.disabled:hover {
   background-color: #f3d17a;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0;
 }
 .datepicker table tr td.range.today:hover,
@@ -267,8 +261,6 @@
   float: left;
   margin: 1%;
   cursor: pointer;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
   border-radius: 4px;
 }
 .datepicker table tr td span:hover {
