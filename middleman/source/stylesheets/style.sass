@@ -361,6 +361,9 @@ body.login2
   margin-bottom: 28px
   @include transition(all .3s)
 
+  .nav .open>a, .nav .open>a:hover, .nav .open>a:focus
+    background-color: transparent !important
+
   .container-fluid.top-bar
     height: 46px
     border-bottom: 1px solid #e6e6e6
@@ -380,8 +383,12 @@ body.login2
       border: 1px solid #dddddd
       border-radius: 4px
 
-      .fabar
+      .icon-bar
         background-color: #c6c6c6
+        width: 22px
+        height: 2px
+        display: block
+        margin-bottom: 4px
 
     .logo
       background: url('../images/se7en-logo.png') no-repeat 0 0
@@ -980,6 +987,7 @@ body.login2
   &.sorting
     color: #007aff
     cursor: pointer
+    position: relative
     &:after, &:before
       content: ""
       width: 0
@@ -989,22 +997,23 @@ body.login2
       border-right: 5px solid transparent
       border-left: 5px solid transparent
     &:after
-      top: 19px
+      top: 22px
       border-top: 5px solid #007aff
     &:before
-      top: 11px
+      top: 14px
       border-bottom: 5px solid #007aff
 
   &.sorting_asc
     color: #007aff
     cursor: pointer
+    position: relative
     &:after
       content: ""
       width: 0
       height: 0
       position: absolute
       right: 12px
-      top: 15px
+      top: 18px
       border-bottom: 5px solid #007aff !important
       border-right: 5px solid transparent
       border-left: 5px solid transparent
@@ -1012,13 +1021,14 @@ body.login2
   &.sorting_desc
     color: #007aff
     cursor: pointer
+    position: relative
     &:after
       content: ""
       width: 0
       height: 0
       position: absolute
       right: 12px
-      top: 15px
+      top: 18px
       border-top: 5px solid #007aff !important
       border-right: 5px solid transparent
       border-left: 5px solid transparent
@@ -3505,7 +3515,7 @@ body.fourofour
     overflow: hidden
 
   body
-    padding-top: 60px
+    padding-top: 60px !important
 
     &.nav-open
       overflow: hidden
@@ -3552,9 +3562,9 @@ body.fourofour
           display: block
           text-align: left
           margin: 0
+          background-color: transparent !important
 
           > .dropdown-menu
-            display: block
             position: relative
             background: none
             box-shadow: none
@@ -3562,6 +3572,7 @@ body.fourofour
             width: 100%
             float: none
             border-bottom: 1px solid #AAA
+            text-align: left
 
             li a
               border-color: #AAA
@@ -3598,7 +3609,8 @@ body.fourofour
               background-position: left -140px
 
             .caret
-              display: none
+              float: right
+              margin: 20px 15px 0 0
 
             &.current
               color: $blue
@@ -3614,8 +3626,13 @@ body.fourofour
               background: #eee
               background: rgba(0,0,0,.04)
 
-          .dropdown-menu
-            text-align: left
+          &.open, &.active, &.open.active
+            > a
+              .caret
+                border-bottom: 4px solid #999
+                border-top-color: transparent
+                margin-top: 16px
+            
 
   .widget-container > div .heading
     padding-left: 5px
@@ -3679,6 +3696,9 @@ body.fourofour
           width: 100%
           margin-bottom: 6px
 
+  .style-selector .style-selector-container .style-toggle 
+    display: none
+
   .page-title
     padding: 0 10px
 
@@ -3740,6 +3760,29 @@ body.fourofour
 
       h2
         font-size: 28px
+
+  .widget-container.chat-page
+    padding: 0
+    height: auto
+    margin-bottom: 45px
+
+    .contact-list
+      display: none
+
+    .post-message
+      position: fixed
+      bottom: 0
+      left: 0
+
+  .chat 
+    .widget-content 
+      padding-right: 10px
+
+      ul li
+        padding-right: 0
+
+        &.current-user
+          padding-left: 0
 
   ul.timeline
     padding: 15px 10px
