@@ -87,6 +87,9 @@ html
     .modal-shiftfix
       = partial 'navigation'
 
+      .container-fluid.main-content
+        = yield
+
     .style-selector
       .style-selector-container
         h2 Layout Style
@@ -94,10 +97,10 @@ html
           option value="fluid" Fluid
           option value="boxed" Boxed
 
-        h2 Header Style
-        select name="header"
-          option value="fixed" Fixed
-          option value="default" Static
+        h2 Navigation Style
+        select name="nav"
+          option value="top" Top
+          option value="left" Left
 
         h2 Color Options
         ul.color-options.clearfix
@@ -128,9 +131,6 @@ html
         .style-toggle.closed
           span aria-hidden="true" class="se7en-gear"
 
-
-    .container-fluid.main-content
-      = yield
 
     / javascript:
     /   | var _gaq = [['_setAccount', 'UA-XXXXXXX-X'], ['_trackPageview']];

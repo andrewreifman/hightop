@@ -573,9 +573,122 @@ body.login2
   top: -45px
 
 
+/*-----------------------------------------------------------------------------------*/
+/*  Sidebar nav
+/*-----------------------------------------------------------------------------------*/
+body.sidebar-nav
+  padding: 70px 0 0 220px
+
+  .navbar
+    height: 45px !important
+
+    &.scroll-hide.closed
+      top: 0
+
+    .container-fluid.top-bar
+      border-bottom: 0
+      background: #FFF
+      background: rgba(255,255,255,.95)
+      box-shadow: 0 1px 1px rgba(0,0,0,.15)
+
+    .container-fluid.main-nav
+      position: fixed
+      z-index: -1
+      top: 0
+      height: 100%
+      width: 220px
+      background: #ddd
+      box-shadow: inset -4px 0 0 rgba(0,0,0,.05)
+      -webkit-overflow-scrolling: touch
+      overflow-y: auto
+      padding-top: 50px
+
+      .nav-collapse .nav
+        padding-left: 15px
+        text-align: left
+
+        > li
+          display: block
+          text-align: left
+          margin: 0
+          background-color: transparent !important
+
+          > .dropdown-menu
+            position: relative
+            background: none
+            box-shadow: none
+            margin: 0
+            width: 100%
+            float: none
+            border-bottom: 1px solid #AAA
+            text-align: left
+
+            li a
+              border-color: #AAA
+              margin-left: 15px
+              color: #777
+
+              &.current
+                border-bottom-color: $blue
+                color: $blue
+
+              &:hover, &:active
+                color: black
+                border-bottom-color: black
+
+          > a
+            display: block
+            text-align: left
+            padding: 0
+            font-size: 14px
+            line-height: 44px
+            height: 46px
+            color: #777
+            border-bottom: 1px solid #AAA
+            background-color: transparent !important
+
+            &:hover, &:active
+              color: black
+              border-bottom-color: black
+
+            span
+              display: block
+              float: left
+              margin: 8px 15px 0 0
+              background-position: left -140px
+
+            .caret
+              float: right
+              margin: 20px 15px 0 0
+
+            &.current
+              color: $blue
+              border-bottom-color: $blue
+
+              span
+                background-position: left -28px
+
+              .caret
+                border-top-color: $blue
+
+            &:hover
+              background: #eee
+              background: rgba(0,0,0,.04)
+
+          &.open, &.active, &.open.active
+            > a
+              .caret
+                border-bottom: 4px solid #999
+                border-top-color: transparent
+                margin-top: 16px
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Style selector
+/*-----------------------------------------------------------------------------------*/
 .style-selector
   position: fixed
-  top: 140px
+  top: 150px
   right: -242px
   width: 240px
   z-index: 100
@@ -1287,10 +1400,10 @@ th:active
       border: 0
 
     .number
-      font-size: 4.2em
+      font-size: 3.8em
       font-weight: 100
       color: #007aff
-      line-height: 1.3em
+      line-height: 1.4em
       padding-top: 8px
       letter-spacing: -.06em
 
@@ -2227,8 +2340,8 @@ th:active
     margin: 0 !important
 
     [class^="col-"], [class*="col-"]
-      height: 38px
-      line-height: 38px
+      height: 32px
+      line-height: 32px
       border-radius: 5px
       margin-bottom: 0 !important
       color: #666
@@ -2237,8 +2350,8 @@ th:active
       [class^="fa"], [class*="fa"]
         width: 32px
         font-size: 14px
-        text-align: center
-        margin-right: 10px
+        text-align: right
+        margin-right: 20px
         vertical-align: middle
         @include transition(all .12s)
 
@@ -3515,13 +3628,13 @@ body.fourofour
     overflow: hidden
 
   body
-    padding-top: 60px !important
+    padding: 0 !important
 
     &.nav-open
       overflow: hidden
 
       .navbar, .container-fluid.main-content
-        left: 240px
+        left: 220px
 
       .container-fluid.main-nav
         left: 0
@@ -3533,6 +3646,7 @@ body.fourofour
 
   .navbar
     height: 45px !important
+    position: relative
     @include transition(left .3s)    
 
     .container-fluid.top-bar
@@ -3546,6 +3660,7 @@ body.fourofour
       position: fixed
       left: -240px
       top: 0
+      padding-top: 0 !important
       height: 100%
       width: 240px
       background: #ddd
@@ -3596,11 +3711,11 @@ body.fourofour
             height: 46px
             color: #777
             border-bottom: 1px solid #AAA
+            background-color: transparent !important
 
             &:hover, &:active
               color: black
               border-bottom-color: black
-              background: none !important
 
             span
               display: block

@@ -251,14 +251,15 @@ $(document).ready ->
       $(window).resize()
     else
       $("body").removeClass "layout-boxed"
+      $(window).resize()
 
-  $(".style-selector select[name='header']").change ->
-    if $(".style-selector select[name='header'] option:selected").val() is "fixed"
-      $("body").addClass "page-header-fixed"
-      $(".navbar").addClass("navbar-fixed-top").removeClass "navbar-static-top"
+  $(".style-selector select[name='nav']").change ->
+    if $(".style-selector select[name='nav'] option:selected").val() is "top"
+      $("body").removeClass "sidebar-nav"
+      $(window).resize()
     else
-      $("body").removeClass "page-header-fixed"
-      $(".navbar").removeClass("navbar-fixed-top").addClass "navbar-static-top"
+      $("body").addClass "sidebar-nav"
+      $(window).resize()
 
   $(".color-options a").bind "click", ->
     $(".color-options a").removeClass "active"
