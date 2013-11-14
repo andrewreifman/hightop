@@ -3528,7 +3528,7 @@ ul.timeline
 /*-----------------------------------------------------------------------------------*/
 .pricing-table
   [class^="col-"], [class*="col-"]
-    padding-top: 22px
+    padding-top: 20px
 
     &.featured
       padding-top: 0
@@ -3536,6 +3536,7 @@ ul.timeline
       .widget-container 
         padding: 20px 0
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25)
+
 
     .widget-container
       &.red
@@ -3566,11 +3567,33 @@ ul.timeline
       .btn
         margin-bottom: 0
 
-      th, td
-        text-align: center
+      table
+        th, td
+          text-align: center
+          height: 40px
 
-        &:first-child
-          text-align: left
+          &.red
+            border-top: 6px solid #d9534f
+          &.blue
+            border-top: 6px solid $blue
+          &.green
+            border-top: 6px solid #60c560
+          &.orange
+            border-top: 6px solid #f0ad4e
+
+          h2 
+            font-size: 22px
+            margin: 5px 0
+
+          .fa
+            color: #60c560
+            font-size: 22px
+
+  .pricing-categories
+    padding-top: 77px
+
+    td
+      height: 40px
 
 
 /*-----------------------------------------------------------------------------------*/
