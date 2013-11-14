@@ -3538,16 +3538,14 @@ ul.timeline
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25)
 
     .widget-container
-      border-top: 6px solid
-
       &.red
-        border-color: #d9534f
+        border-top: 6px solid #d9534f
       &.blue
-        border-color: $blue
+        border-top: 6px solid $blue
       &.green
-        border-color: #60c560
+        border-top: 6px solid #60c560
       &.orange
-        border-color: #f0ad4e
+        border-top: 6px solid #f0ad4e
 
       h1
         text-transform: uppercase
@@ -3567,6 +3565,12 @@ ul.timeline
 
       .btn
         margin-bottom: 0
+
+      th, td
+        text-align: center
+
+        &:first-child
+          text-align: left
 
 
 /*-----------------------------------------------------------------------------------*/
