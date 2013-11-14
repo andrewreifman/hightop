@@ -3524,6 +3524,52 @@ ul.timeline
 
 
 /*-----------------------------------------------------------------------------------*/
+/*  Pricing Tables
+/*-----------------------------------------------------------------------------------*/
+.pricing-table
+  [class^="col-"], [class*="col-"]
+    padding-top: 22px
+
+    &.featured
+      padding-top: 0
+
+      .widget-container 
+        padding: 20px 0
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25)
+
+    .widget-container
+      border-top: 6px solid
+
+      &.red
+        border-color: #d9534f
+      &.blue
+        border-color: $blue
+      &.green
+        border-color: #60c560
+      &.orange
+        border-color: #f0ad4e
+
+      h1
+        text-transform: uppercase
+        font-size: 16px
+        color: #BBB
+        font-weight: 400
+
+      h2
+        font-size: 46px
+        margin-bottom: 20px
+        letter-spacing: -.05em
+
+        span 
+          font-size: 16px
+          font-weight: 400
+          letter-spacing: 0
+
+      .btn
+        margin-bottom: 0
+
+
+/*-----------------------------------------------------------------------------------*/
 /*  Invoice
 /*-----------------------------------------------------------------------------------*/
 .invoice
