@@ -1260,6 +1260,7 @@ th:active
   overflow-y: scroll
 
 
+/*-----------------------------------------------------------------------------------*/
 /*  List groups
 /*-----------------------------------------------------------------------------------*/
 .list-group
@@ -1268,10 +1269,9 @@ th:active
   padding: 0
 
   .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus
-    background-color: $blue
-
     a
       color: #FFF
+      background-color: $blue
 
     p
       border-bottom: 0
@@ -1281,12 +1281,17 @@ th:active
       background-color: #FFF
 
 .list-group-item
-  padding: 0 0 0 15px
   border: 0
   margin-bottom: 0
+  padding: 0
 
   a
     color: #666
+    display: block
+    padding: 0 0 0 15px
+
+    &:hover
+      background-color: #f2f2f2
 
   p 
     margin-bottom: 0
@@ -3004,7 +3009,6 @@ button.close
 .badge
   background-color: #AAA
   font-weight: 400
-  font-size: 13px
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Breadcrumb
@@ -3521,6 +3525,32 @@ ul.timeline
         &:nth-child(odd)
           .timeline-content
             left: 0
+
+
+/*-----------------------------------------------------------------------------------*/
+/*  Messages
+/*-----------------------------------------------------------------------------------*/
+.messages
+  .compose-btn
+    margin-bottom: 10px
+
+  .message-list
+    h2
+      font-size: 15px
+      font-weight: 600
+      padding: 10px 10px 0 0
+      margin-bottom: 4px
+
+      span 
+        float: right
+        font-size: 13px
+        font-weight: 400
+
+    p
+      padding-top: 0
+
+  .message-content
+    padding-top: 0
 
 
 /*-----------------------------------------------------------------------------------*/
