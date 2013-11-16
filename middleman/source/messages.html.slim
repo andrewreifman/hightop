@@ -1,7 +1,7 @@
 .page-title
   h1 Messages/Inbox
 
-.row.messages
+.row
   .col-sm-2
     = link_to "Compose", "#", class: "btn btn-block btn-primary compose-btn"
 
@@ -28,61 +28,85 @@
         a href="#"
           p Trash
 
-  .col-sm-3
-    ul.list-group.message-list
-      li.list-group-item.active
-        a href="#"
-          h2 
-            | John Smith
-            span 11/9/13
-          p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
-      li.list-group-item
-        a href="#"
-          h2 
-            | John Smith
-            span 11/9/13
-          p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
-      li.list-group-item
-        a href="#"
-          h2 
-            | John Smith
-            span 11/9/13
-          p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
-      li.list-group-item
-        a href="#"
-          h2 
-            | John Smith
-            span 11/9/13
-          p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
-      li.list-group-item
-        a href="#"
-          h2 
-            | John Smith
-            span 11/9/13
-          p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
-      li.list-group-item
-        a href="#"
-          h2 
-            | John Smith
-            span 11/9/13
-          p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
-      li.list-group-item
-        a href="#"
-          h2 
-            | John Smith
-            span 11/9/13
-          p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
-      li.list-group-item
-        a href="#"
-          h2 
-            | John Smith
-            span 11/9/13
-          p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
+  .col-sm-10.messages
+    .widget-container
+      .col-sm-3.message-list
+        ul.list-group
+          li.list-group-item.active
+            a href="#"
+              .status
+              h2 
+                | John Smith
+                span 11/9/13
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
+          li.list-group-item
+            a href="#"
+              .status.unread
+              h2 
+                | John Smith
+                span 11/9/13
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
+          li.list-group-item
+            a href="#"
+              .status.unread
+              h2 
+                | John Smith
+                span 11/9/13
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
+          li.list-group-item
+            a href="#"
+              .status
+              h2 
+                | John Smith
+                span 11/9/13
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
+          li.list-group-item
+            a href="#"
+              .status
+              h2 
+                | John Smith
+                span 11/9/13
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
+          li.list-group-item
+            a href="#"
+              .status
+              h2 
+                | John Smith
+                span 11/9/13
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
+          li.list-group-item
+            a href="#"
+              .status
+              h2 
+                | John Smith
+                span 11/9/13
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
+          li.list-group-item
+            a href="#"
+              .status
+              h2 
+                | John Smith
+                span 11/9/13
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
+          li.list-group-item
+            a href="#"
+              .status
+              h2 
+                | John Smith
+                span 11/9/13
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
+          li.list-group-item
+            a href="#"
+              .status
+              h2 
+                | John Smith
+                span 11/9/13
+              p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Quisque volutpat mattis eros…
 
 
-  .col-sm-7
-    .widget-container.scrollable.list.message-content
-      .widget-content
-        ul
-          li
-            | Test
+      .col-sm-9.message-content
+        .list
+          .widget-content
+            ul
+              li
+                | Test

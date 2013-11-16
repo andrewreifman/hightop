@@ -3530,27 +3530,60 @@ ul.timeline
 /*-----------------------------------------------------------------------------------*/
 /*  Messages
 /*-----------------------------------------------------------------------------------*/
+.compose-btn
+  margin-bottom: 10px
+
 .messages
-  .compose-btn
-    margin-bottom: 10px
+  height: 650px
+
+  .widget-container
+    height: 100%
 
   .message-list
-    h2
-      font-size: 15px
-      font-weight: 600
-      padding: 10px 10px 0 0
-      margin-bottom: 4px
+    padding: 0
+    height: 100%
 
-      span 
-        float: right
-        font-size: 13px
-        font-weight: 400
+    .list-group
+      box-shadow: none
+      margin: 0
+      border-right: 1px solid #DDD
+      height: 100%
+      overflow-y: auto
 
-    p
-      padding-top: 0
+      .list-group-item
+        &:last-child p
+          border-bottom: 1px solid #DDD
+
+        a 
+          .status
+            width: 10px
+            height: 10px
+            float: left
+            border-radius: 50%
+            margin-top: 13px
+
+            &.unread
+              background-color: $blue
+
+          h2
+            font-size: 14px
+            font-weight: 600
+            padding: 10px 10px 0 20px
+            margin-bottom: 4px
+
+            span 
+              float: right
+              font-size: 12px
+              font-weight: 400
+
+          p
+            padding-top: 0
+            padding-left: 20px
+            font-size: 13px
 
   .message-content
-    padding-top: 0
+    padding: 0
+    height: 100%
 
 
 /*-----------------------------------------------------------------------------------*/
