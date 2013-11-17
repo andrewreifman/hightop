@@ -10,7 +10,7 @@
  *
  *= require bootstrap.min
  *= require datatables
- *= require font-awesome
+ *= require font-awesome.min
  *= require fullcalendar
  *= require isotope
  *= require jquery.fancybox
