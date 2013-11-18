@@ -375,7 +375,7 @@ $ ->
       html = "<b>" + $("<div>").text(value.city).html() + "</b>, " + $("<div>").text(value.street).html() + " st., bld. " + $("<div>").text(value.building).html()
       $(this).html html
 
-  $(".editable-form #user .editable").on "hidden", (e, reason) ->
+  $("#user .editable").on "hidden", (e, reason) ->
     if reason is "save" or reason is "nochange"
       $next = $(this).closest("tr").next().find(".editable")
       if $("#autoopen").is(":checked")
