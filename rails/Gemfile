@@ -64,6 +64,12 @@ gem 'rails_12factor', group: :production
 # Syntax highlighting
 gem 'pygments.rb'
 
+# File uploads
+gem 'carrierwave'
+
+# Debuggings
+gem 'pry', group: [:development, :test]
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
