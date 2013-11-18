@@ -4,42 +4,44 @@
 
 .row
   .col-lg-12
-    .widget-container.fluid-height.clearfix
-      .heading
-        i.icon-reorder
-        | Basic Components
-
+    .widget-container.fluid-height
       .widget-content.padded
-        p
-          |  File Upload widget with multiple file selection, drag&drop support, progress bars, validation and preview images, audio and video for jQuery.
-          br
-          |  Supports cross-domain, chunked and resumable file uploads and client-side image resizing.
-          br
-          |  Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports standard HTML form file uploads.
+        .alert.alert-info
+          p 
+            | File Upload widget with multiple file selection, drag & drop support, progress bars, validation and preview images, audio and video for jQuery.
+            br
+            | Supports cross-domain, chunked and resumable file uploads and client-side image resizing.
+            br
+            | Works with any server-side platform (PHP, Python, Ruby on Rails, Java, Node.js, Go etc.) that supports standard HTML form file uploads.
+
         form#fileupload[action="http://se7en.herokuapp.com/uploads" method="POST" enctype="multipart/form-data"]
           noscript
             input[type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/"]
           .row.fileupload-buttonbar
             .col-lg-7
               span.btn.btn-success.fileinput-button
-                i.glyphicon.glyphicon-plus
+                i.fa.fa-plus
                 span
                   | Add files...
                 input[id="upload_file" type="file" name="upload[file]" multiple]
               button.btn.btn-primary.start[type="submit"]
-                i.glyphicon.glyphicon-upload
+                i.fa.fa-upload
                 span
                   | Start upload
               button.btn.btn-warning.cancel[type="reset"]
-                i.glyphicon.glyphicon-ban-circle
+                i.fa.fa-ban
                 span
                   | Cancel upload
               button.btn.btn-danger.delete[type="button"]
-                i.glyphicon.glyphicon-trash
+                i.fa.fa-trash-o
                 span
                   | Delete
-              input.toggle[type="checkbox"]
-              span.fileupload-loading
+
+              label.checkbox-inline
+                input.toggle type="checkbox"
+                span Select all
+
+              .fileupload-loading
             .col-lg-5.fileupload-progress.fade
               .progress.progress-striped.active[role="progressbar" aria-valuemin="0" aria-valuemax="100"]
                 .progress-bar.progress-bar-success[style="width:0%;"]
