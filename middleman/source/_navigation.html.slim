@@ -115,6 +115,9 @@
             li= link_to 'file-upload.html', class: cp('file-upload.html') do
               .notifications.label.label-warning New
               p Multiple File Upload
+            li= link_to 'dropzone-file-upload.html', class: cp('dropzone-file-upload.html') do
+              .notifications.label.label-warning New
+              p Dropzone File Upload
         
         li.dropdown *{ class: "#{cp 'tables.html'}" }
           = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('tables.html') || cp('datatables.html') || cp('datatables-editable.html') do

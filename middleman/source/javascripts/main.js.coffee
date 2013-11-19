@@ -1130,3 +1130,4 @@ $(document).ready ->
   # Set param name for server support
   Dropzone.options.dropzoneDemo =
     paramName: "upload[file]"
+    addRemoveLinks: true

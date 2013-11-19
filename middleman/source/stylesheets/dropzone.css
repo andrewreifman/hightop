@@ -155,8 +155,6 @@
 .dropzone {
   border: 1px solid rgba(0,0,0,0.03);
   min-height: 360px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
   background: rgba(0,0,0,0.03);
   padding: 23px;
 }
@@ -291,7 +289,6 @@
   -o-transition: width 0.3s ease-in-out;
   -ms-transition: width 0.3s ease-in-out;
   transition: width 0.3s ease-in-out;
-  -webkit-border-radius: 2px;
   border-radius: 2px;
   position: absolute;
   top: 0;
@@ -343,21 +340,25 @@
 }
 .dropzone a.dz-remove,
 .dropzone-previews a.dz-remove {
-  background-image: -webkit-linear-gradient(top, #fafafa, #eee);
-  background-image: -moz-linear-gradient(top, #fafafa, #eee);
-  background-image: -o-linear-gradient(top, #fafafa, #eee);
-  background-image: -ms-linear-gradient(top, #fafafa, #eee);
-  background-image: linear-gradient(to bottom, #fafafa, #eee);
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  border: 1px solid #eee;
+  background-color: #BBB;
+  border: 1px solid #BBB;
+  font-size: 13px;
+  border-radius: 4px;
   text-decoration: none;
   display: block;
-  padding: 4px 5px;
+  padding: 6px 5px;
   text-align: center;
-  color: #aaa;
+  color: #fff;
   margin-top: 26px;
+  cursor: pointer;
 }
+
+.dropzone a.dz-remove:hover,
+.dropzone-previews a.dz-remove:hover {
+  background-color: transparent;
+  color: #BBB;
+}
+
 .dropzone a.dz-remove:hover,
 .dropzone-previews a.dz-remove:hover {
   color: #666;
