@@ -1260,6 +1260,7 @@ th:active
   overflow-y: scroll
 
 
+/*-----------------------------------------------------------------------------------*/
 /*  List groups
 /*-----------------------------------------------------------------------------------*/
 .list-group
@@ -1268,10 +1269,9 @@ th:active
   padding: 0
 
   .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus
-    background-color: $blue
-
     a
       color: #FFF
+      background-color: $blue
 
     p
       border-bottom: 0
@@ -1281,12 +1281,17 @@ th:active
       background-color: #FFF
 
 .list-group-item
-  padding: 0 0 0 15px
   border: 0
   margin-bottom: 0
+  padding: 0
 
   a
     color: #666
+    display: block
+    padding: 0 0 0 15px
+
+    &:hover
+      background-color: #f2f2f2
 
   p 
     margin-bottom: 0
@@ -3001,7 +3006,6 @@ button.close
 .badge
   background-color: #AAA
   font-weight: 400
-  font-size: 13px
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Breadcrumb
@@ -3521,6 +3525,116 @@ ul.timeline
 
 
 /*-----------------------------------------------------------------------------------*/
+/*  Messages
+/*-----------------------------------------------------------------------------------*/
+.compose-btn
+  margin-bottom: 10px
+
+.messages
+  height: 650px
+
+  .widget-container
+    height: 100%
+
+  .message-list
+    padding: 0
+    height: 100%
+
+    .list-group
+      box-shadow: none
+      margin: 0
+      border-right: 1px solid #DDD
+      height: 100%
+      overflow-y: auto
+
+      .list-group-item
+        &:last-child p
+          border-bottom: 1px solid #DDD
+
+        a 
+          position: relative
+
+          .status
+            width: 10px
+            height: 10px
+            float: left
+            border-radius: 50%
+            margin-top: 13px
+
+            &.unread
+              background-color: $blue
+
+          .favorite
+            position: absolute
+            left: 13px
+            top: 30px
+            display: none
+
+            &.fa-star-o
+              color: #AAA
+            &.fa-star
+              color: #F0AD44
+              display: block
+
+          h2
+            font-size: 14px
+            font-weight: 600
+            padding: 10px 10px 0 20px
+            margin-bottom: 4px
+
+            span 
+              float: right
+              font-size: 12px
+              font-weight: 400
+
+          p
+            padding-top: 0
+            padding-left: 20px
+            font-size: 13px
+
+        &:hover
+          a .favorite
+            display: block
+
+  .message-content
+    padding: 0
+    height: 100%
+    overflow-y: auto
+    padding-left: 20px
+
+    .message-header
+      position: relative
+      padding: 15px 15px 5px 0
+      border-bottom: 1px solid #DDD
+
+      .date
+        font-size: 13px
+
+      .message-actions
+        position: absolute
+        bottom: -12px
+        left: 50%
+        margin: 0 0 0 -64px
+
+        .btn 
+          font-size: 14px
+          width: 32px
+          padding: 0
+          background: #FFF
+          height: 24px
+          line-height: 1.6
+
+          &:hover
+            background: #BBB
+
+          .fa
+            margin: 0
+
+    .message-text
+      padding: 30px 15px 15px 0
+
+
+/*-----------------------------------------------------------------------------------*/
 /*  Pricing Tables
 /*-----------------------------------------------------------------------------------*/
 .pricing-table
@@ -3833,6 +3947,29 @@ body.fourofour
 
     .pricing-categories
       padding-top: 58px
+
+  .messages
+    height: auto
+
+    > .widget-container
+      background: transparent
+      box-shadow: none
+
+    .message-list
+      height: 400px
+      box-shadow: 0 1px 2px rgba(0,0,0,.1)
+
+    .message-content
+      background: #FFF
+      height: auto
+      box-shadow: 0 1px 2px rgba(0,0,0,.1)
+      margin-bottom: 0
+
+      .message-header
+        padding-bottom: 15px
+
+        .date
+          float: none !important
 
 
 @media (max-width: 600px)
