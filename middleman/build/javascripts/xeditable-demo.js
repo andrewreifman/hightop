@@ -401,7 +401,7 @@
         return $(this).html(html);
       }
     });
-    return $(".editable-form #user .editable").on("hidden", function(e, reason) {
+    return $("#user .editable").on("hidden", function(e, reason) {
       var $next;
       if (reason === "save" || reason === "nochange") {
         $next = $(this).closest("tr").next().find(".editable");

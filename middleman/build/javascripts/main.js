@@ -1204,7 +1204,7 @@
     Ladda.bind(".ladda-button:not(.progress-demo)", {
       timeout: 2000
     });
-    return Ladda.bind(".ladda-button.progress-demo", {
+    Ladda.bind(".ladda-button.progress-demo", {
       callback: function(instance) {
         var interval, progress;
         progress = 0;
@@ -1218,6 +1218,16 @@
         }, 200);
       }
     });
+    /*
+    # =============================================================================
+    #   Dropzone File Upload
+    # =============================================================================
+    */
+
+    return Dropzone.options.dropzoneDemo = {
+      paramName: "upload[file]",
+      addRemoveLinks: true
+    };
   });
 
 }).call(this);
