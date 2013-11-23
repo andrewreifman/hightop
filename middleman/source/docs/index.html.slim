@@ -18,20 +18,27 @@ html
     = stylesheet_link_tag "timepicker", media: "all"
     = stylesheet_link_tag "colorpicker", media: "all"
     = stylesheet_link_tag "bootstrap-switch", media: "all"
+    = stylesheet_link_tag "bootstrap-editable", media: "all"
     = stylesheet_link_tag "daterange-picker", media: "all"
     = stylesheet_link_tag "typeahead", media: "all"
+    = stylesheet_link_tag "summernote", media: "all"
+    = stylesheet_link_tag "ladda-themeless.min", media: "all"
+    = stylesheet_link_tag "social-buttons", media: "all"
     = stylesheet_link_tag "pygments", media: "all"
     = stylesheet_link_tag "style", media: "all"
     = stylesheet_link_tag "color/green", media: "all", rel: "alternate stylesheet", title: "green-theme"
     = stylesheet_link_tag "color/orange", media: "all", rel: "alternate stylesheet", title: "orange-theme"
     = stylesheet_link_tag "color/magenta", media: "all", rel: "alternate stylesheet", title: "magenta-theme"
     = stylesheet_link_tag "color/gray", media: "all", rel: "alternate stylesheet", title: "gray-theme"
+    = stylesheet_link_tag "jquery.fileupload-ui"
+    = stylesheet_link_tag "dropzone"
     = stylesheet_link_tag "docs", media: "all"
 
     = javascript_include_tag "http://code.jquery.com/jquery-1.10.2.min.js"
     = javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js"
     = javascript_include_tag "bootstrap.min"
     = javascript_include_tag "raphael.min"
+    = javascript_include_tag "selectivizr-min"
     = javascript_include_tag "jquery.mousewheel"
     = javascript_include_tag "jquery.vmap.min"
     = javascript_include_tag "jquery.vmap.sampledata"
@@ -50,6 +57,8 @@ html
     = javascript_include_tag "select2"
     = javascript_include_tag "styleswitcher"
     = javascript_include_tag "wysiwyg"
+    = javascript_include_tag "typeahead"
+    = javascript_include_tag "summernote.min"
     = javascript_include_tag "jquery.inputmask.min"
     = javascript_include_tag "jquery.validate"
     = javascript_include_tag "bootstrap-fileupload"
@@ -58,14 +67,21 @@ html
     = javascript_include_tag "bootstrap-colorpicker"
     = javascript_include_tag "bootstrap-switch.min"
     = javascript_include_tag "typeahead"
-    = javascript_include_tag "daterange-picker"
-    = javascript_include_tag "date"
     = javascript_include_tag "spin.min"
     = javascript_include_tag "ladda.min"
+    = javascript_include_tag "moment"
+    = javascript_include_tag "mockjax"
+    = javascript_include_tag "bootstrap-editable.min"
+    = javascript_include_tag "xeditable-demo-mock"
+    = javascript_include_tag "xeditable-demo"
+    = javascript_include_tag "address"
+    = javascript_include_tag "daterange-picker"
+    = javascript_include_tag "date"
     = javascript_include_tag "morris.min"
     = javascript_include_tag "skycons"
     = javascript_include_tag "fitvids"
     = javascript_include_tag "jquery.sparkline.min"
+    = javascript_include_tag "dropzone"
     = javascript_include_tag "main"
     = javascript_include_tag "respond"
     = javascript_include_tag "docs"
@@ -95,6 +111,7 @@ html
             li=link_to "Easy Pie Chart", "#easy-pie"
             li=link_to "Skycons", "#skycons"
             li=link_to "jQuery UI Slider", "#slider"
+            li=link_to "Ladda Buttons", "#ladda"
             li=link_to "JQVMap", "#maps"
             li=link_to "Full Calendar", "#calendar-link"
             li=link_to "DataTables", "#datatables"
@@ -225,10 +242,10 @@ html
         .col-lg-12
           .widget-container.fluid-height#fontawesome
             .heading
-              | Font Awesome Icons
+              | Font Awesome 4 Icons
 
             .widget-content.padded
-              p We've included the latest Font Awesome icons, which includes over 360+ icons. To place a Font Awesome icon, simply use this class:
+              p We've included the latest Font Awesome 4 icons, which includes over 369 icons. To place a Font Awesome icon, simply use this class:
               = Pygments.highlight("<span class='fa fa-'></span>", lexer: 'html')
 
               p For example:
@@ -329,11 +346,31 @@ html
           .widget-container.fluid-height#slider
             .heading
               | jQuery UI Slider
-              a href="http://jqueryui.com/slider/" class="pull-right" target="_blank" Full documentation
+              a href="https://github.com/hakimel/Ladda" class="pull-right" target="_blank" Full documentation
 
             .widget-content.padded
               .slider-basic
               = Pygments.highlight("$('.slider').slider({range: 'min', value: 50});", lexer: 'javascript')
+
+      .row
+        .col-lg-12
+          .widget-container.fluid-height#slider
+            .heading
+              | Ladda Buttons
+              a href="http://jqueryui.com/slider/" class="pull-right" target="_blank" Full documentation
+
+            .widget-content.padded
+              button.btn.btn-primary.ladda-button data-style="expand-left" 
+                span.ladda-label Expand left
+              = Pygments.highlight("<button class='btn ladda-button' data-style='expand-left'><span class='ladda-label'>Expand left</span></button>", lexer: 'html')
+
+              button.btn.btn-primary.ladda-button data-style="expand-right" 
+                span.ladda-label Expand right
+              = Pygments.highlight("<button class='btn ladda-button' data-style='expand-right'><span class='ladda-label'>Expand left</span></button>", lexer: 'html')
+
+              button.btn.btn-danger.ladda-button.progress-demo data-style="expand-left" 
+                span.ladda-label Progress left
+              = Pygments.highlight("<button class='btn ladda-button progress-demo' data-style='expand-right'><span class='ladda-label'>Progress left</span></button>", lexer: 'html')
 
       .row
         .col-lg-12
@@ -670,3 +707,6 @@ html
                 li= link_to "Bootstrap Colorpicker", "http://www.eyecon.ro/bootstrap-colorpicker", :target => "_blank"
                 li= link_to "jQuery Input Mask", "https://github.com/RobinHerbots/jquery.inputmask", :target => "_blank"
                 li= link_to "Jasney File Upload", "http://jasny.github.com/bootstrap/javascript.html#fileupload", :target => "_blank"
+                li= link_to "jQuery File Upload", "https://github.com/blueimp/jQuery-File-Upload", :target => "_blank"
+                li= link_to "Dropzone JS", "http://www.dropzonejs.com/", :target => "_blank"
+                li= link_to "X-Editable", "http://vitalets.github.io/x-editable/index.html", :target => "_blank"
