@@ -92,30 +92,29 @@
             span.label.label-info Info
 
     .row
-      .clearfix
-        .col-lg-6
-          .widget-container.fluid-height
-            .heading 
-              i.fa.fa-question
-              | Tooltip
-            .widget-content.padded.text-center
-              a.btn.btn.btn-default#tooltip-top data-toggle="tooltip" title="Tooltip content" style="width:45%" Top 
-              br
-              a.btn.btn.btn-default#tooltip-right data-toggle="tooltip-right" title="Tooltip content" style="width:45%" Right
-              a.btn.btn.btn-default#tooltip-left data-toggle="tooltip-left" title="Tooltip content" style="width:45%" Left
-              a.btn.btn.btn-default#tooltip-bottom data-toggle="tooltip-bottom" title="Tooltip content" style="width:45%" Bottom
+      .col-lg-6
+        .widget-container.fluid-height
+          .heading 
+            i.fa.fa-question
+            | Tooltip
+          .widget-content.padded.text-center
+            a.btn.btn.btn-default.tooltip-trigger data-toggle="tooltip" data-placement="top" title="Tooltip content" style="width:45%" Top 
+            br
+            a.btn.btn.btn-default.tooltip-trigger data-toggle="tooltip" data-placement="right" title="Tooltip content" style="width:45%" Right
+            a.btn.btn.btn-default.tooltip-trigger data-toggle="tooltip" data-placement="left" title="Tooltip content" style="width:45%" Left
+            a.btn.btn.btn-default.tooltip-trigger data-toggle="tooltip" data-placement="bottom" title="Tooltip content" style="width:45%" Bottom
 
-        .col-lg-6
-          .widget-container.fluid-height
-            .heading 
-              i.fa.fa-comment
-              | Popover
-            .widget-content.padded.text-center
-              a.btn.btn.btn-default#popover-top data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-top" title="" style="width:45%" Top 
-              br
-              a.btn.btn.btn-default#popover-right data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-right" title="" style="width:45%" Right
-              a.btn.btn.btn-default#popover-left data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-left" title="" style="width:45%" Left
-              a.btn.btn.btn-default#popover-bottom data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title" data-toggle="popover-bottom" title="" style="width:45%" Bottom  
+      .col-lg-6
+        .widget-container.fluid-height
+          .heading 
+            i.fa.fa-comment
+            | Popover
+          .widget-content.padded.text-center
+            a.btn.btn.btn-default.popover-trigger data-content="And here's some amazing content. It's very engaging. right?" data-toggle="popover" data-placement="top" style="width:45%" Top 
+            br
+            a.btn.btn.btn-default.popover-trigger data-content="And here's some amazing content. It's very engaging. right?" data-toggle="popover" data-placement="right" style="width:45%" Right
+            a.btn.btn.btn-default.popover-trigger data-content="And here's some amazing content. It's very engaging. right?" data-toggle="popover" data-placement="left" style="width:45%" Left
+            a.btn.btn.btn-default.popover-trigger data-content="And here's some amazing content. It's very engaging. right?" data-toggle="popover" data-placement="bottom" style="width:45%" Bottom  
 
     .row
       .col-lg-12
