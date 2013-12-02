@@ -1120,3 +1120,14 @@ $(document).ready ->
           instance.stop()
           clearInterval interval
       , 200)
+
+  ###
+  # =============================================================================
+  #   Dropzone File Upload
+  # =============================================================================
+  ###
+
+  # Set param name for server support
+  Dropzone.options.dropzoneDemo =
+    paramName: "upload[file]"
+    addRemoveLinks: true
