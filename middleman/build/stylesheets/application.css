@@ -5413,6 +5413,175 @@ ul.timeline {
     margin-bottom: 0; }
 
 /*----------------------------------------------------------------------------------- */
+/*  Marketing Page */
+/*----------------------------------------------------------------------------------- */
+.hero {
+  background: #007aff;
+  margin-top: -30px;
+  padding: 100px 0 420px 0;
+  text-align: center;
+  margin-bottom: 0px;
+  background: url(../images/mark-bg.gif);
+  background-size: cover;
+  overflow: hidden;
+  max-height: 780px; }
+  .hero .btn {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px; }
+  .hero h1 {
+    font-size: 3.2em;
+    color: #333333;
+    font-weight: 200; }
+  .hero p {
+    font-size: 1.5em;
+    color: #333333;
+    padding-bottom: 12px; }
+  .hero img {
+    width: 842px;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+    clear: both;
+    display: block; }
+
+/* Section pages styles */
+section {
+  text-align: center;
+  background-color: whitesmoke;
+  z-index: 1;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  position: relative;
+  float: left;
+  clear: both;
+  width: 100%;
+  margin: 0 auto; }
+
+#about {
+  background: white;
+  padding-top: 80px;
+  padding-bottom: 100px; }
+  #about h1 {
+    font-size: 3em;
+    font-weight: 200;
+    line-height: 1.4em; }
+  #about p {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1.4em;
+    font-weight: 200; }
+  #about img {
+    width: 50%;
+    margin-top: 40px; }
+  #about b {
+    color: #007aff; }
+  #about i {
+    font-size: 4em;
+    padding-top: 42px;
+    padding-bottom: 16px;
+    opacity: 0.5;
+    transition: 400ms;
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); }
+    #about i:hover {
+      opacity: 1;
+      color: #007aff;
+      transition: 400ms;
+      text-shadow: none; }
+
+#features {
+  background: #e8e8e8;
+  padding-top: 40px;
+  padding-bottom: 0px; }
+  #features h1 {
+    font-size: 3em;
+    font-weight: 200;
+    text-align: left;
+    line-height: 1.2em;
+    padding-top: 40px; }
+  #features p {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1.4em;
+    font-weight: 200;
+    text-align: left; }
+  #features b {
+    color: #007aff; }
+  #features img {
+    width: 100%; }
+  #features i {
+    font-size: 3.2em;
+    padding-top: 52px;
+    padding-bottom: 5px;
+    opacity: 0.5; }
+    #features i:hover {
+      opacity: 1;
+      color: #007aff; }
+  #features .markunit p {
+    font-size: 1.2em;
+    font-weight: 200;
+    text-align: center; }
+
+#extra {
+  background: #f1f1f1;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  text-align: left; }
+  #extra h1 {
+    font-size: 3em;
+    font-weight: 100;
+    text-align: center; }
+  #extra h2 {
+    font-size: 1.6em;
+    text-align: left;
+    font-weight: 400; }
+  #extra p {
+    text-align: left;
+    font-size: 1em;
+    line-height: 1.6em;
+    font-weight: 200; }
+  #extra b {
+    color: #007aff; }
+  #extra i {
+    font-size: 3.4em;
+    padding-top: 42px;
+    padding-bottom: 16px;
+    opacity: 0.5;
+    text-align: left; }
+    #extra i:hover {
+      opacity: 1;
+      color: #007aff; }
+
+#quotes .blue {
+  background: #007aff; }
+#quotes .carousel-inner > .item > img, #quotes .carousel-inner > .item > a > img {
+  width: 100%; }
+#quotes .carousel-control.left, #quotes .carousel-control.right {
+  background: none;
+  background: rgba(0, 0, 0, 0.06);
+  opacity: 1;
+  width: 10%; }
+  #quotes .carousel-control.left:hover, #quotes .carousel-control.right:hover {
+    background: rgba(0, 0, 0, 0.25); }
+#quotes .carousel-control .glyphicon, #quotes .carousel-control .faangle-left, #quotes .carousel-control .faangle-right {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  display: inline-block;
+  height: 40px;
+  font-size: 40px;
+  margin-top: -20px;
+  margin-left: -10px; }
+#quotes .carousel-indicators li {
+  margin: 1px 5px; }
+  #quotes .carousel-indicators li.active {
+    margin: 0 5px; }
+
+/*----------------------------------------------------------------------------------- */
 /*  404 Page */
 /*----------------------------------------------------------------------------------- */
 body.fourofour {

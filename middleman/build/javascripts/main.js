@@ -419,38 +419,14 @@
     # =============================================================================
     */
 
-    $("#popover").popover();
-    $("#popover-left").popover({
-      placement: "left"
-    });
-    $("#popover-top").popover({
-      placement: "top"
-    });
-    $("#popover-right").popover({
-      placement: "right"
-    });
-    $("#popover-bottom").popover({
-      placement: "bottom"
-    });
+    $(".popover-trigger").popover();
     /*
     # =============================================================================
     #   Bootstrap Tooltip
     # =============================================================================
     */
 
-    $("#tooltip").tooltip();
-    $("#tooltip-left").tooltip({
-      placement: "left"
-    });
-    $("#tooltip-top").tooltip({
-      placement: "top"
-    });
-    $("#tooltip-right").tooltip({
-      placement: "right"
-    });
-    $("#tooltip-bottom").tooltip({
-      placement: "bottom"
-    });
+    $(".tooltip-trigger").tooltip();
     /*
     # =============================================================================
     #   jQuery VMap
