@@ -80,7 +80,7 @@
             span aria-hidden="true" class="se7en-feed"
             | Social Feed
         li.dropdown *{ class: "#{cp 'buttons.html'}" }
-          = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('buttons.html') || cp('fontawesome.html') || cp('glyphicons.html') || cp('components.html') || cp('widgets.html') || cp('typo.html') || cp('grid.html') do
+          = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('buttons.html') || cp('fontawesome.html') || cp('glyphicons.html') || cp('components.html') || cp('widgets.html') || cp('typo.html') || cp('grid.html') || cp('nestable-lists.html') do
             span aria-hidden="true" class="se7en-star"
             | UI Features
             b.caret
@@ -96,6 +96,9 @@
               p Glyphicons
             li= link_to "Components", 'components.html', class: cp('components.html')
             li= link_to "Widgets", 'widgets.html', class: cp('widgets.html')
+            li= link_to 'nestable-lists.html', class: cp('nestable-lists.html') do
+              span.notifications.label.label-warning New
+              p Nestable Lists
             li= link_to "Typography", 'typo.html', class: cp('typo.html')
             li= link_to "Grid Layout", 'grid.html', class: cp('grid.html')
 
