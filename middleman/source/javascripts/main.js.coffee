@@ -1122,23 +1122,25 @@ $(document).ready ->
   #   Nestable
   # =============================================================================
   ###
-  updateOutput = (e) ->
-    list = (if e.length then e else $(e.target))
-    output = list.data("output")
-    if window.JSON
-      output.val window.JSON.stringify(list.nestable("serialize")) #, null, 2));
-    else
-      output.val "JSON browser support required for this demo."
+  if $('.nestable-list').length
+    updateOutput = (e) ->
+      list = (if e.length then e else $(e.target))
+      output = list.data("output")
+      if window.JSON
+        output.val window.JSON.stringify(list.nestable("serialize")) #, null, 2));
+      else
+        output.val "JSON browser support required for this demo."
 
-  # activate Nestable for list 1
-  $("#nestable").nestable(group: 1).on "change", updateOutput
+    # activate Nestable for list 1
+    $("#nestable").nestable(group: 1).on "change", updateOutput
 
-  # activate Nestable for list 2
-  $("#nestable2").nestable(group: 1).on "change", updateOutput
+    # activate Nestable for list 2
+    $("#nestable2").nestable(group: 1).on "change", updateOutput
 
-  # output initial serialised data
-  updateOutput $("#nestable").data("output", $("#nestable-output"))
-  updateOutput $("#nestable2").data("output", $("#nestable2-output"))
+    # output initial serialised data
+    updateOutput $("#nestable").data("output", $("#nestable-output"))
+    updateOutput $("#nestable2").data("output", $("#nestable2-output"))
+    
   $("#nestable-menu").on "click", (e) ->
     target = $(e.target)
     action = target.data("action")
