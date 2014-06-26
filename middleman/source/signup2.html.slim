@@ -16,14 +16,14 @@ html
     = javascript_include_tag "modernizr.custom"
     = javascript_include_tag "main"
     / = javascript_include_tag "application"
-    
+
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
 
   body.login2
 
     <!-- Signup Screen -->
     .login-wrapper
-      = link_to image_tag("logo-login@2x.png", width: "100", height:"30"), 'index.html'
+      h1= link_to "HIGHTOP", 'index.html'
       form
         .form-group
           .input-group
@@ -45,7 +45,7 @@ html
           label.checkbox.text-left
             input type="checkbox"
             span I agree to the terms and conditions.
-        
+
         input.btn.btn-lg.btn-primary.btn-block type="submit" value="Sign up"
 
         .social-login.clearfix

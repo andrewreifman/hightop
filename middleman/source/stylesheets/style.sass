@@ -50,7 +50,7 @@ $blue: #007aff
 
 html, body
   width: 100%
-  
+
 html
   height: 100%
 
@@ -183,14 +183,14 @@ body.login1
   &.signup
     .login-container
       margin-top: -215px
-      height: 430px      
+      height: 430px
 
   .login-wrapper
     width: 100%
     height: 100%
 
   .login-container
-    background-color: #FFF 
+    background-color: #FFF
     background-color: rgba(255,255,255,.95)
     border-radius: 40px
     box-shadow: 0 0 50px rgba(0,0,0,.2)
@@ -211,8 +211,12 @@ body.login1
     &.active
       opacity: 1
 
-    img
-      margin: 10px auto 30px
+    h1
+      font-size: 32px
+      margin-top: 5px
+      margin-bottom: 30px
+      a
+        color: #999
 
     .form-group
       position: relative
@@ -291,8 +295,12 @@ body.login2
     margin: 0 auto
     text-align: center
 
-    img
-      margin: 40px auto
+    h1
+      font-size: 32px
+      margin-top: 40px
+      margin-bottom: 40px
+      a
+        color: #999
 
     .input-group-addon
       padding: 8px 0
@@ -391,13 +399,11 @@ body.login2
         margin-bottom: 4px
 
     .logo
-      background: url('../images/se7en-logo.png') no-repeat 0 0
-      @include image2x("se7en-logo@2x.png", 54px, 16px)
-      width: 54px
-      height: 16px
       float: left
-      text-indent: -9999em
-      margin: 14px 10px 0 0
+      margin: 10px 15px 0 0
+      color: #999
+      font-size: 17px
+      text-transform: uppercase
 
     form
       margin-top: 6px
@@ -733,12 +739,12 @@ body.sidebar-nav
       background: transparent
       border-color: #CCC
 
-    ul 
+    ul
       list-style: none
       padding: 0
       margin: 0
 
-      li 
+      li
         float: left
         width: 30px
         margin-right: 10px
@@ -754,7 +760,7 @@ body.sidebar-nav
           transition: opacity .3s
 
     .color-options
-      margin: 0 0 16px      
+      margin: 0 0 16px
 
       a
         &.blue
@@ -768,7 +774,7 @@ body.sidebar-nav
         &.gray
           background: #999
 
-        &.active 
+        &.active
           opacity: .25
 
     .pattern-options
@@ -784,7 +790,7 @@ body.sidebar-nav
         &#bg-5
           background: url(../images/bg-5.png) repeat 0 0
 
-        &.active 
+        &.active
           border: 2px solid $blue
 
 
@@ -1080,7 +1086,7 @@ body.sidebar-nav
       margin: -1px -4px 0 0 !important
       float: right
 
-    p 
+    p
       margin: 0 60px 0 0
 
 .messages
@@ -1251,7 +1257,7 @@ th:active
   overflow-y: hidden
 
 .modal-open .modal
-  overflow-y: scroll   
+  overflow-y: scroll
 
 // Fix page shift when body scroll is killed
 .modal-open .modal-shiftfix,
@@ -1293,7 +1299,7 @@ th:active
     &:hover
       background-color: #f2f2f2
 
-  p 
+  p
     margin-bottom: 0
     padding: 10px 15px 10px 0
     border-bottom: 1px solid #DDD
@@ -1395,7 +1401,7 @@ th:active
   height: 120px
   text-align: center
 
-  
+
   [class^="col-"], [class*="col-"]
     border-right: 1px solid #e6e6e6
     height: 100%
@@ -1502,7 +1508,7 @@ th:active
   .heading
     background: transparent
     font-weight: 300
-    color: #fff 
+    color: #fff
 
   .padded
     padding: 0 10px 0 0
@@ -1763,7 +1769,7 @@ th:active
             margin-bottom: 5px
 
           p
-            font-weight: 300   
+            font-weight: 300
 
     .social-entry
 
@@ -1856,7 +1862,7 @@ th:active
     background-color: #F0AD4E
   &.dribbble
     background-color: #ea4c89
-  
+
   [class^="fa"], [class*=" fa"]
     vertical-align: middle
     font-size: 70px
@@ -1867,7 +1873,7 @@ th:active
     margin-left: 10px
     display: inline-block
     vertical-align: middle
-  
+
     h1
       font-weight: 100
       font-size: 60px
@@ -2852,7 +2858,7 @@ input[type="text"]
 
 .ui-widget-header
   background-color: $blue
-  
+
 
 /*-----------------------------------------------------------------------------------*/
 /*  Bootstrap Well
@@ -2894,7 +2900,7 @@ input[type="text"]
   > a
     font-weight: 300
     padding: 8px 15px 10px
-    display: block      
+    display: block
 
     .caret
       margin-top: 5px
@@ -3189,7 +3195,7 @@ button.close
 
 .hidden-xs
   &.inline
-  display: inline-block 
+  display: inline-block
 
 /*-----------------------------------------------------------------------------------*/
 /*  Filter/Advanced Search
@@ -3257,11 +3263,11 @@ button.close
       td.filter-category
         border-bottom: 0
 
-.filter-categories 
+.filter-categories
   .btn-group
     margin: 0
     display: block
-    
+
     .btn
       font-size: 14px
       font-weight: 300 !important
@@ -3281,7 +3287,7 @@ button.close
 /*  WYSIWYG
 /*-----------------------------------------------------------------------------------*/
 .text-editor-toolbar
-  .btn 
+  .btn
     float: left
 
     [class^="fa"], [class*="fa"]
@@ -3339,7 +3345,7 @@ button.close
     cursor: pointer
     box-shadow: none
     opacity: 0.65
-    
+
     &:hover
       opacity: 1
 
@@ -3528,7 +3534,7 @@ ul.timeline
         &:last-child p
           border-bottom: 1px solid #DDD
 
-        a 
+        a
           position: relative
 
           .status
@@ -3559,7 +3565,7 @@ ul.timeline
             padding: 10px 10px 0 20px
             margin-bottom: 4px
 
-            span 
+            span
               float: right
               font-size: 12px
               font-weight: 400
@@ -3593,7 +3599,7 @@ ul.timeline
         left: 50%
         margin: 0 0 0 -64px
 
-        .btn 
+        .btn
           font-size: 14px
           width: 32px
           padding: 0
@@ -3621,7 +3627,7 @@ ul.timeline
     &.featured
       padding-top: 0
 
-      .widget-container 
+      .widget-container
         padding: 20px 0
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2)
 
@@ -3647,7 +3653,7 @@ ul.timeline
         margin-bottom: 20px
         letter-spacing: -.05em
 
-        span 
+        span
           font-size: 16px
           font-weight: 400
           letter-spacing: 0
@@ -3669,7 +3675,7 @@ ul.timeline
           &.orange
             border-top: 6px solid #f0ad4e
 
-          h2 
+          h2
             font-size: 22px
             margin: 5px 0
 
@@ -3694,7 +3700,7 @@ ul.timeline
     h2
       font-size: 24px
       margin-bottom: 5px
-    p 
+    p
       color: #AAA
       margin: 0
 
@@ -3734,7 +3740,7 @@ ul.timeline
   overflow: hidden
   max-height: 780px
 
-  
+
   .btn
     margin-top: 20px
     margin-bottom: 40px
@@ -4009,7 +4015,7 @@ body.fourofour
   .navbar
     height: 45px !important
     position: relative
-    @include transition(left .3s)    
+    @include transition(left .3s)
 
     .container-fluid.top-bar
       border-bottom: 0
@@ -4109,7 +4115,7 @@ body.fourofour
                 border-bottom: 4px solid #999
                 border-top-color: transparent
                 margin-top: 16px
-            
+
 
   .widget-container > div .heading
     padding-left: 5px
@@ -4119,7 +4125,7 @@ body.fourofour
       padding-top: 0px
 
       &.featured
-        .widget-container 
+        .widget-container
           padding: 0
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
 
@@ -4169,16 +4175,13 @@ body.fourofour
       height: auto
       padding: 25px
 
-      img 
-        margin-bottom: 20px
-
       input[type="submit"]
         margin-bottom: 20px
 
       .form-options
         margin: 15px 0 15px
 
-      .social-login 
+      .social-login
         margin-bottom: 15px
 
         > .btn
@@ -4200,7 +4203,7 @@ body.fourofour
       input[type="submit"]
         margin-bottom: 20px
 
-      .social-login 
+      .social-login
         padding-bottom: 15px
         margin-bottom: 15px
 
@@ -4208,7 +4211,7 @@ body.fourofour
           width: 100%
           margin-bottom: 6px
 
-  .style-selector .style-selector-container .style-toggle 
+  .style-selector .style-selector-container .style-toggle
     display: none
 
   .page-title
@@ -4250,12 +4253,12 @@ body.fourofour
 
   .social-wrapper
     padding: 0 15px
-    .item 
+    .item
       width: 100% !important
       margin-bottom: 15px !important
 
-  .nav-tabs > li > a > 
-    [class*="fa"] 
+  .nav-tabs > li > a >
+    [class*="fa"]
       margin-right: 0 !important
 
       &+ span
@@ -4286,8 +4289,8 @@ body.fourofour
       bottom: 0
       left: 0
 
-  .chat 
-    .widget-content 
+  .chat
+    .widget-content
       padding-right: 10px
 
       ul li

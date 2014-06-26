@@ -47,7 +47,7 @@ html
     = javascript_include_tag "fitvids"
     = javascript_include_tag "main"
     = javascript_include_tag "respond"
-    
+
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
 
   body.login1
@@ -55,7 +55,7 @@ html
     <!-- Login Screen -->
     .login-wrapper
       .login-container
-        = link_to image_tag("logo-login@2x.png", width: "100", height:"30"), 'index.html'
+        h1= link_to "HIGHTOP", 'index.html'
         form action="index.html"
           .form-group
             input.form-control placeholder="Username or Email" type="text"
@@ -79,7 +79,7 @@ html
             | Twitter login
 
         p.signup
-          | Don't have an account yet? 
+          | Don't have an account yet?
           a href="signup1.html" Sign up now
 
     <!-- End Login Screen -->

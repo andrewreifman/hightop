@@ -63,7 +63,7 @@
       span.icon-bar
 
     a href='index.html' class='logo'
-      | se7en
+      | Hightop
     form.navbar-form.form-inline.col-lg-2.hidden-xs
       input.form-control placeholder="Search" type="text"
 
@@ -85,20 +85,12 @@
             | UI Features
             b.caret
           ul.dropdown-menu
-            li= link_to 'buttons.html', class: cp('buttons.html') do
-              span.notifications.label.label-warning New
-              p Buttons
-            li= link_to 'fontawesome.html', class: cp('fontawesome.html') do
-              span.notifications.label.label-warning New
-              p Font Awesome Icons
-            li= link_to 'glyphicons.html', class: cp('glyphicons.html') do
-              span.notifications.label.label-warning New
-              p Glyphicons
+            li= link_to "Buttons", 'buttons.html', class: cp('buttons.html')
+            li= link_to "Font Awesome Icons", 'fontawesome.html', class: cp('fontawesome.html')
+            li= link_to "Glyphicons", 'glyphicons.html', class: cp('glyphicons.html')
             li= link_to "Components", 'components.html', class: cp('components.html')
             li= link_to "Widgets", 'widgets.html', class: cp('widgets.html')
-            li= link_to 'nestable-lists.html', class: cp('nestable-lists.html') do
-              span.notifications.label.label-warning New
-              p Nestable Lists
+            li= link_to "Nestable Lists", 'nestable-lists.html', class: cp('nestable-lists.html')
             li= link_to "Typography", 'typo.html', class: cp('typo.html')
             li= link_to "Grid Layout", 'grid.html', class: cp('grid.html')
 
@@ -110,15 +102,9 @@
           ul.dropdown-menu
             li= link_to 'Form Components', 'form-components.html', class: cp('form-components.html')
             li= link_to "Advanced Forms", 'form-advanced.html', class: cp('form-advanced.html')
-            li= link_to 'xeditable.html', class: cp('xeditable.html') do
-              span.notifications.label.label-warning New
-              p X-Editable
-            li= link_to 'file-upload.html', class: cp('file-upload.html') do
-              .notifications.label.label-warning New
-              p Multiple File Upload
-            li= link_to 'dropzone-file-upload.html', class: cp('dropzone-file-upload.html') do
-              .notifications.label.label-warning New
-              p Dropzone File Upload
+            li= link_to "X-Editable", 'xeditable.html', class: cp('xeditable.html')
+            li= link_to "Multiple File Upload", 'file-upload.html', class: cp('file-upload.html')
+            li= link_to "Dropzone File Upload", 'dropzone-file-upload.html', class: cp('dropzone-file-upload.html')
 
         li.dropdown *{ class: "#{cp 'tables.html'}" }
           = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('tables.html') || cp('datatables.html') || cp('datatables-editable.html') do
@@ -128,9 +114,7 @@
           ul.dropdown-menu
             li= link_to "Basic tables", 'tables.html', class: cp('tables.html')
             li= link_to "DataTables", 'datatables.html', class: cp('datatables.html')
-            li= link_to 'datatables-editable.html', class: cp('datatables-editable.html') do
-              .notifications.label.label-warning New
-              p Editable DataTables
+            li= link_to "Editable DataTables", 'datatables-editable.html', class: cp('datatables-editable.html')
 
         li
           = link_to 'charts.html', class: cp('charts.html') do
@@ -142,38 +126,20 @@
             | Pages
             b.caret
           ul.dropdown-menu
-            li= link_to 'chat.html', class: cp('chat.html') do
-              span.notifications.label.label-warning New
-              p Chat
+            li= link_to "Chat", 'chat.html', class: cp('chat.html')
             li= link_to "Calendar", 'calendar.html', class: cp('calendar.html')
-            li= link_to 'timeline.html', class: cp('timeline.html') do
-              span.notifications.label.label-warning New
-              p Timeline
-            li= link_to 'login1.html', class: cp('login1.html') do
-              span.notifications.label.label-warning New
-              p Login 1
+            li= link_to "Timeline", 'timeline.html', class: cp('timeline.html')
+            li= link_to "Login 1", 'login1.html', class: cp('login1.html')
             li= link_to "Login 2", 'login2.html', class: cp('login2.html')
-            li= link_to 'signup1.html', class: cp('signup1.html') do
-              span.notifications.label.label-warning New
-              p Sign Up 1
-            li= link_to 'messages.html', class: cp('messages.html') do
-              span.notifications.label.label-warning New
-              p Messages/Inbox
-            li= link_to 'pricing.html', class: cp('pricing.html') do
-              span.notifications.label.label-warning New
-              p Pricing Tables
+            li= link_to "Messages/Inbox", 'messages.html', class: cp('messages.html')
+            li= link_to "Pricing Tables", 'pricing.html', class: cp('pricing.html')
+            li= link_to "Sign Up 1", 'signup1.html', class: cp('signup1.html')
             li= link_to "Sign Up 2", 'signup2.html', class: cp('signup2.html')
-            li= link_to 'invoice.html', class: cp('invoice.html') do
-              span.notifications.label.label-warning New
-              p Invoice
-            li= link_to 'faq.html', class: cp('faq.html') do
-              span.notifications.label.label-warning New
-              p FAQ
+            li= link_to "Invoice", 'invoice.html', class: cp('invoice.html')
+            li= link_to "FAQ", 'faq.html', class: cp('faq.html')
             li= link_to "Filter Results", 'filters.html', class: cp('filters.html')
             li= link_to "404 Page", '404-page.html', class: cp('404-page.html')
-            li= link_to '500-page.html', class: cp('500-page.html') do
-              span.notifications.label.label-warning New
-              p 500 Error
+            li= link_to "500 Error", '500-page.html', class: cp('500-page.html')
         li
           = link_to 'gallery.html', class: cp('gallery.html') do
             span aria-hidden="true" class="se7en-gallery"
