@@ -1,12 +1,12 @@
 doctype html
 html
   head
-    title se7en - Dashboard
+    title hightop - Dashboard
     = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato:100,300,400,700", media: "all"
 
     = stylesheet_link_tag "bootstrap.min", media: "all"
     = stylesheet_link_tag "font-awesome.min", media: "all"
-    = stylesheet_link_tag "se7en-font", media: "all"
+    = stylesheet_link_tag "hightop-font", media: "all"
     = stylesheet_link_tag "isotope", media: "all"
     = stylesheet_link_tag "jquery.fancybox", media: "all"
     = stylesheet_link_tag "fullcalendar", media: "all"
@@ -85,7 +85,7 @@ html
     = javascript_include_tag "main"
     = javascript_include_tag "respond"
     = javascript_include_tag "docs"
-    
+
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
 
   body.bg-1 data-spy="scroll" data-target=".navbar"
@@ -171,8 +171,8 @@ html
               | Bootstrap 3
 
             .widget-content.padded
-              p 
-                | Se7en comes fully packed with all the awesomeness of Bootstrap 3. We've included all the latest CSS and JS for your pleasure. For all info on how to use Bootstrap 3's CSS and components, please visit the 
+              p
+                | Se7en comes fully packed with all the awesomeness of Bootstrap 3. We've included all the latest CSS and JS for your pleasure. For all info on how to use Bootstrap 3's CSS and components, please visit the
                 = link_to "Boostrap 3 Official Documentation", "http://getbootstrap.com/css/", :target => "_blank"
                 | .
 
@@ -210,33 +210,33 @@ html
             .widget-content.padded
 
               p The icons used for the main navigation have been custom created and implemented using a custom built font. Our icons can be used on any page by calling them with our pre-built syntax.
-              = Pygments.highlight("<span aria-hidden='true' class='se7en-icon-name'></span>", lexer: 'html')
+              = Pygments.highlight("<span aria-hidden='true' class='hightop-icon-name'></span>", lexer: 'html')
 
-              p These are all the included se7en icons:
-              span aria-hidden="true" class="se7en-flag" style="font-size:28px;margin-right:20px;"
-              span aria-hidden="true" class="se7en-envelope" style="font-size:28px;margin-right:20px;"
-              span aria-hidden="true" class="se7en-gear" style="font-size:28px;margin-right:20px;"
-              span aria-hidden="true" class="se7en-home" style="font-size:28px;margin-right:20px;"
-              span aria-hidden="true" class="se7en-feed" style="font-size:28px;margin-right:20px;"
-              span aria-hidden="true" class="se7en-star" style="font-size:28px;margin-right:20px;"
-              span aria-hidden="true" class="se7en-forms" style="font-size:28px;margin-right:20px;"
-              span aria-hidden="true" class="se7en-tables" style="font-size:28px;margin-right:20px;"
-              span aria-hidden="true" class="se7en-charts" style="font-size:28px;margin-right:20px;"
-              span aria-hidden="true" class="se7en-pages" style="font-size:28px;margin-right:20px;"
-              span aria-hidden="true" class="se7en-gallery" style="font-size:28px;margin-right:20px;"
+              p These are all the included hightop icons:
+              span aria-hidden="true" class="hightop-flag" style="font-size:28px;margin-right:20px;"
+              span aria-hidden="true" class="hightop-envelope" style="font-size:28px;margin-right:20px;"
+              span aria-hidden="true" class="hightop-gear" style="font-size:28px;margin-right:20px;"
+              span aria-hidden="true" class="hightop-home" style="font-size:28px;margin-right:20px;"
+              span aria-hidden="true" class="hightop-feed" style="font-size:28px;margin-right:20px;"
+              span aria-hidden="true" class="hightop-star" style="font-size:28px;margin-right:20px;"
+              span aria-hidden="true" class="hightop-forms" style="font-size:28px;margin-right:20px;"
+              span aria-hidden="true" class="hightop-tables" style="font-size:28px;margin-right:20px;"
+              span aria-hidden="true" class="hightop-charts" style="font-size:28px;margin-right:20px;"
+              span aria-hidden="true" class="hightop-pages" style="font-size:28px;margin-right:20px;"
+              span aria-hidden="true" class="hightop-gallery" style="font-size:28px;margin-right:20px;"
               br
               br
 
               p They can also be scaled infinitely and changed to any color directly in the css.
 
               .nav-icons
-                span aria-hidden="true" class="se7en-feed" style="font-size:112px;"
-                span aria-hidden="true" class="se7en-feed" style="font-size:56px;margin-right:5px;"
-                span aria-hidden="true" class="se7en-feed" style="font-size:28px;margin-right:25px;"
+                span aria-hidden="true" class="hightop-feed" style="font-size:112px;"
+                span aria-hidden="true" class="hightop-feed" style="font-size:56px;margin-right:5px;"
+                span aria-hidden="true" class="hightop-feed" style="font-size:28px;margin-right:25px;"
 
-                span aria-hidden="true" class="se7en-feed" style="font-size:112px;color:#007aff;"
-                span aria-hidden="true" class="se7en-feed" style="font-size:56px;margin-right:5px;color:#007aff;"
-                span aria-hidden="true" class="se7en-feed" style="font-size:28px;color:#007aff;"
+                span aria-hidden="true" class="hightop-feed" style="font-size:112px;color:#007aff;"
+                span aria-hidden="true" class="hightop-feed" style="font-size:56px;margin-right:5px;color:#007aff;"
+                span aria-hidden="true" class="hightop-feed" style="font-size:28px;color:#007aff;"
 
       .row
         .col-lg-12
@@ -252,8 +252,8 @@ html
               i.fa.fa-home style="font-size:28px;"
               = Pygments.highlight("<span class='fa fa-home'></span>", lexer: 'html')
 
-              p 
-                | For more information on how to use their icons, visit  
+              p
+                | For more information on how to use their icons, visit
                 = link_to "Font Awesome", "http://fortawesome.github.io/Font-Awesome/examples/", :target => "_blank"
                 | .
 
@@ -264,7 +264,7 @@ html
               | Glyphicons
 
             .widget-content.padded
-              p We've also included 180 glyphs in font format from the Glyphicon Halflings set. Glyphicons Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost. 
+              p We've also included 180 glyphs in font format from the Glyphicon Halflings set. Glyphicons Halflings are normally not available for free, but their creator has made them available for Bootstrap free of cost.
 
               p To use a Font Awesome icon, simply use this class:
               = Pygments.highlight("<span class='glyphicon glyphicon-'></span>", lexer: 'html')
@@ -273,8 +273,8 @@ html
               span.glyphicon.glyphicon-user style="font-size:28px;"
               = Pygments.highlight("<span class='glyphicon glyphicon-user'></span>", lexer: 'html')
 
-              p 
-                | For more information on how to use Glyphicons, visit  
+              p
+                | For more information on how to use Glyphicons, visit
                 = link_to "Bootstrap's Documentation", "http://getbootstrap.com/components/#glyphicons", :target => "_blank"
                 | .
 
@@ -360,15 +360,15 @@ html
               a href="http://jqueryui.com/slider/" class="pull-right" target="_blank" Full documentation
 
             .widget-content.padded
-              button.btn.btn-primary.ladda-button data-style="expand-left" 
+              button.btn.btn-primary.ladda-button data-style="expand-left"
                 span.ladda-label Expand left
               = Pygments.highlight("<button class='btn ladda-button' data-style='expand-left'><span class='ladda-label'>Expand left</span></button>", lexer: 'html')
 
-              button.btn.btn-primary.ladda-button data-style="expand-right" 
+              button.btn.btn-primary.ladda-button data-style="expand-right"
                 span.ladda-label Expand right
               = Pygments.highlight("<button class='btn ladda-button' data-style='expand-right'><span class='ladda-label'>Expand left</span></button>", lexer: 'html')
 
-              button.btn.btn-danger.ladda-button.progress-demo data-style="expand-left" 
+              button.btn.btn-danger.ladda-button.progress-demo data-style="expand-left"
                 span.ladda-label Progress left
               = Pygments.highlight("<button class='btn ladda-button progress-demo' data-style='expand-right'><span class='ladda-label'>Progress left</span></button>", lexer: 'html')
 
@@ -581,7 +581,7 @@ html
                 .col-sm-4
                   input#cp2.form-control data-color-format="rgba" type="text" value="rgb(0,194,255,0.78)"
               = Pygments.highlight("$('#colorpicker2').colorpicker({ format: 'hex' });", lexer: 'javascript')
-              
+
               p As a component
               .row style="margin-bottom: 20px;"
                 .col-sm-4

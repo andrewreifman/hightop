@@ -4,7 +4,7 @@
       ul.nav.navbar-nav.pull-right
         li.dropdown.notifications.hidden-xs
           a.dropdown-toggle data-toggle="dropdown" href="#"
-            span aria-hidden="true" class="se7en-icon"
+            span aria-hidden="true" class="hightop-icon"
             .sr-only Notifications
             p.counter 4
           ul.dropdown-menu
@@ -21,7 +21,7 @@
 
         li.dropdown.messages.hidden-xs
           a.dropdown-toggle data-toggle="dropdown" href="#"
-            span aria-hidden="true" class="se7en-icon"
+            span aria-hidden="true" class="hightop-icon"
             .sr-only Messages
             p.counter 3
           ul.dropdown-menu.messages
@@ -31,7 +31,7 @@
               | Message...
             li= link_to
               | Message...
-        
+
         li.dropdown.user.hidden-xs
           = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" do
             = image_tag "avatar-male.jpg", width: "34", height: "34"
@@ -67,16 +67,16 @@
       ul.nav
         li
           a href='index.html'
-            span aria-hidden="true" class="se7en-home"
+            span aria-hidden="true" class="hightop-home"
             | Home
         li
           = link_to 'page.html' do
-            span aria-hidden="true" class="se7en-icon"
+            span aria-hidden="true" class="hightop-icon"
             | Link
 
         li.dropdown *{ class: "#{cp 'page.html'}" }
           = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" do
-            span aria-hidden="true" class="se7en-icon"
+            span aria-hidden="true" class="hightop-icon"
             | Dropdown Link
             b.caret
           ul.dropdown-menu
@@ -86,20 +86,20 @@
 
         li
           = link_to 'page.html' do
-            span aria-hidden="true" class="se7en-icon"
-            | Link
-        
-        li
-          = link_to 'page.html' do
-            span aria-hidden="true" class="se7en-icon"
+            span aria-hidden="true" class="hightop-icon"
             | Link
 
         li
           = link_to 'page.html' do
-            span aria-hidden="true" class="se7en-icon"
+            span aria-hidden="true" class="hightop-icon"
             | Link
 
         li
           = link_to 'page.html' do
-            span aria-hidden="true" class="se7en-icon"
+            span aria-hidden="true" class="hightop-icon"
+            | Link
+
+        li
+          = link_to 'page.html' do
+            span aria-hidden="true" class="hightop-icon"
             | Link

@@ -5,7 +5,7 @@
       ul.nav.navbar-nav.pull-right
         li.dropdown.notifications.hidden-xs
           a.dropdown-toggle data-toggle="dropdown" href="#"
-            span aria-hidden="true" class="se7en-flag"
+            span aria-hidden="true" class="hightop-flag"
             .sr-only Notifications
             p.counter 4
           ul.dropdown-menu
@@ -24,7 +24,7 @@
 
         li.dropdown.messages.hidden-xs
           a.dropdown-toggle data-toggle="dropdown" href="#"
-            span aria-hidden="true" class="se7en-envelope"
+            span aria-hidden="true" class="hightop-envelope"
             .sr-only Messages
             p.counter 3
           ul.dropdown-menu
@@ -73,15 +73,15 @@
       ul.nav
         li
           a href='index.html' class=cp('index.html')
-            span aria-hidden="true" class="se7en-home"
+            span aria-hidden="true" class="hightop-home"
             | Dashboard
         li
           = link_to 'social.html', class: cp('social.html') do
-            span aria-hidden="true" class="se7en-feed"
+            span aria-hidden="true" class="hightop-feed"
             | Social Feed
         li.dropdown *{ class: "#{cp 'buttons.html'}" }
           = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('buttons.html') || cp('fontawesome.html') || cp('glyphicons.html') || cp('components.html') || cp('widgets.html') || cp('typo.html') || cp('grid.html') || cp('nestable-lists.html') do
-            span aria-hidden="true" class="se7en-star"
+            span aria-hidden="true" class="hightop-star"
             | UI Features
             b.caret
           ul.dropdown-menu
@@ -96,7 +96,7 @@
 
         li.dropdown *{ class: "#{cp 'form-components.html'}" }
           = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('form-components.html') || cp('form-advanced.html') do
-            span aria-hidden="true" class="se7en-forms"
+            span aria-hidden="true" class="hightop-forms"
             | Forms
             b.caret
           ul.dropdown-menu
@@ -108,7 +108,7 @@
 
         li.dropdown *{ class: "#{cp 'tables.html'}" }
           = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('tables.html') || cp('datatables.html') || cp('datatables-editable.html') do
-            span aria-hidden="true" class="se7en-tables"
+            span aria-hidden="true" class="hightop-tables"
             | Tables
             b.caret
           ul.dropdown-menu
@@ -118,11 +118,11 @@
 
         li
           = link_to 'charts.html', class: cp('charts.html') do
-            span aria-hidden="true" class="se7en-charts"
+            span aria-hidden="true" class="hightop-charts"
             | Charts
         li.dropdown *{ class: "#{cp 'chat.html'}" }
           = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('filters.html') || cp('calendar.html') || cp('invoice.html') || cp('faq.html') || cp('chat.html') || cp('timeline.html') do
-            span aria-hidden="true" class="se7en-pages"
+            span aria-hidden="true" class="hightop-pages"
             | Pages
             b.caret
           ul.dropdown-menu
@@ -142,6 +142,6 @@
             li= link_to "500 Error", '500-page.html', class: cp('500-page.html')
         li
           = link_to 'gallery.html', class: cp('gallery.html') do
-            span aria-hidden="true" class="se7en-gallery"
+            span aria-hidden="true" class="hightop-gallery"
             | Gallery
 <!-- End Navigation -->
