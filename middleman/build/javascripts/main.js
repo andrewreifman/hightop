@@ -1,9 +1,9 @@
-/*
-# =============================================================================
-#   Sparkline Linechart JS
-# =============================================================================
-*/
 
+/*
+ * =============================================================================
+ *   Sparkline Linechart JS
+ * =============================================================================
+ */
 
 (function() {
   var linechartResize;
@@ -133,12 +133,12 @@
   };
 
   $(document).ready(function() {
-    /*
-    # =============================================================================
-    #   Sparkline Linechart JS
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Sparkline Linechart JS
+     * =============================================================================
+     */
     var $alpha, $container, $container2, addEvent, buildMorris, checkin, checkout, d, date, handleDropdown, initDrag, m, now, nowTemp, timelineAnimate, updateOutput, y;
     $("#barcharts").sparkline([190, 220, 210, 220, 220, 260, 300, 220, 240, 240, 220, 200, 240, 260, 210], {
       type: "bar",
@@ -170,12 +170,12 @@
       spotRadius: 0,
       chartRangeMin: 0
     });
-    /*
-    # =============================================================================
-    #   Easy Pie Chart
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Easy Pie Chart
+     * =============================================================================
+     */
     $(".pie-chart1").easyPieChart({
       size: 200,
       lineWidth: 12,
@@ -200,12 +200,12 @@
       animate: 800,
       scaleColor: false
     });
-    /*
-    # =============================================================================
-    #   Navbar scroll animation
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Navbar scroll animation
+     * =============================================================================
+     */
     $(".page-header-fixed .navbar.scroll-hide").mouseover(function() {
       $(".page-header-fixed .navbar.scroll-hide").removeClass("closed");
       return setTimeout((function() {
@@ -232,21 +232,21 @@
         return lastScrollTop = st;
       });
     });
-    /*
-    # =============================================================================
-    #   Mobile Nav
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Mobile Nav
+     * =============================================================================
+     */
     $('.navbar-toggle').click(function() {
       return $('body, html').toggleClass("nav-open");
     });
-    /*
-    # =============================================================================
-    #   Style Selector
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Style Selector
+     * =============================================================================
+     */
     $(".style-selector select").each(function() {
       return $(this).find("option:first").attr("selected", "selected");
     });
@@ -299,22 +299,22 @@
       $(this).addClass("active");
       return $("body").addClass($(this).attr("id"));
     });
-    /*
-    # =============================================================================
-    #   Sparkline Resize Script
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Sparkline Resize Script
+     * =============================================================================
+     */
     linechartResize();
     $(window).resize(function() {
       return linechartResize();
     });
-    /*
-    # =============================================================================
-    #   Form wizard
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Form wizard
+     * =============================================================================
+     */
     $("#wizard").bootstrapWizard({
       nextSelector: ".btn-next",
       previousSelector: ".btn-previous",
@@ -347,12 +347,12 @@
         return $("#wizard").find(".progress-bar").css("width", $percent + "%");
       }
     });
-    /*
-    # =============================================================================
-    #   DataTables
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   DataTables
+     * =============================================================================
+     */
     $("#dataTable1").dataTable({
       "sPaginationType": "full_numbers",
       aoColumnDefs: [
@@ -375,12 +375,12 @@
         }
       });
     });
-    /*
-    # =============================================================================
-    #   jQuery UI Sliders
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   jQuery UI Sliders
+     * =============================================================================
+     */
     $(".slider-basic").slider({
       range: "min",
       value: 50,
@@ -406,33 +406,33 @@
       }
     });
     $(".slider-range-amount").html("$" + $(".slider-range").slider("values", 0) + " - $" + $(".slider-range").slider("values", 1));
-    /*
-    # =============================================================================
-    #   Bootstrap Tabs
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Bootstrap Tabs
+     * =============================================================================
+     */
     $("#myTab a:last").tab("show");
-    /*
-    # =============================================================================
-    #   Bootstrap Popover
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Bootstrap Popover
+     * =============================================================================
+     */
     $(".popover-trigger").popover();
-    /*
-    # =============================================================================
-    #   Bootstrap Tooltip
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Bootstrap Tooltip
+     * =============================================================================
+     */
     $(".tooltip-trigger").tooltip();
-    /*
-    # =============================================================================
-    #   jQuery VMap
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   jQuery VMap
+     * =============================================================================
+     */
     if ($("#vmap").length) {
       $("#vmap").vectorMap({
         map: "world_en",
@@ -447,35 +447,35 @@
         normalizeFunction: "polynomial"
       });
     }
-    /*
-    # =============================================================================
-    #   Full Calendar
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Full Calendar
+     * =============================================================================
+     */
     date = new Date();
     d = date.getDate();
     m = date.getMonth();
     y = date.getFullYear();
     initDrag = function(el) {
-      /*
-      # create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
-      # it doesn't need to have a start or end
-      */
 
+      /*
+       * create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+       * it doesn't need to have a start or end
+       */
       var eventObject;
       eventObject = {
         title: $.trim(el.text())
       };
-      /*
-      # store the Event Object in the DOM element so we can get to it later
-      */
 
+      /*
+       * store the Event Object in the DOM element so we can get to it later
+       */
       el.data("eventObject", eventObject);
-      /*
-      # make the event draggable using jQuery UI
-      */
 
+      /*
+       * make the event draggable using jQuery UI
+       */
       return el.draggable({
         zIndex: 999,
         revert: true,
@@ -499,10 +499,10 @@
       priority = $("#event_priority").val();
       return addEvent(title, priority);
     });
-    /*
-    # modify chosen options
-    */
 
+    /*
+     * modify chosen options
+     */
     handleDropdown = function() {
       $("#event_priority_chzn .chzn-search").hide();
       $("#event_priority_chzn_o_1").html("<span class=\"label label-default\">" + $("#event_priority_chzn_o_1").text() + "</span>");
@@ -512,10 +512,10 @@
       return $("#event_priority_chzn_o_5").html("<span class=\"label label-important\">" + $("#event_priority_chzn_o_5").text() + "</span>");
     };
     $("#event_priority_chzn").click(handleDropdown);
-    /*
-    # predefined events
-    */
 
+    /*
+     * predefined events
+     */
     addEvent("My Event 1", "primary");
     addEvent("My Event 2", "success");
     addEvent("My Event 3", "info");
@@ -531,35 +531,35 @@
       editable: true,
       droppable: true,
       drop: function(date, allDay) {
-        /*
-        # retrieve the dropped element's stored Event Object
-        */
 
+        /*
+         * retrieve the dropped element's stored Event Object
+         */
         var copiedEventObject, originalEventObject;
         originalEventObject = $(this).data("eventObject");
-        /*
-        # we need to copy it, so that multiple events don't have a reference to the same object
-        */
 
+        /*
+         * we need to copy it, so that multiple events don't have a reference to the same object
+         */
         copiedEventObject = $.extend({}, originalEventObject);
-        /*
-        # assign it the date that was reported
-        */
 
+        /*
+         * assign it the date that was reported
+         */
         copiedEventObject.start = date;
         copiedEventObject.allDay = allDay;
         copiedEventObject.className = $(this).attr("data-class");
-        /*
-        # render the event on the calendar
-        # the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
-        */
 
+        /*
+         * render the event on the calendar
+         * the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+         */
         $("#calendar").fullCalendar("renderEvent", copiedEventObject, true);
-        /*
-        # is the "remove after drop" checkbox checked?
-        # if so, remove the element from the "Draggable Events" list
-        */
 
+        /*
+         * is the "remove after drop" checkbox checked?
+         * if so, remove the element from the "Draggable Events" list
+         */
         if ($("#drop-remove").is(":checked")) {
           return $(this).remove();
         }
@@ -612,12 +612,12 @@
         }
       ]
     });
-    /*
-    # =============================================================================
-    #   Isotope
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Isotope
+     * =============================================================================
+     */
     $container = $(".gallery-container");
     $container.isotope({});
     $(".gallery-filters a").click(function() {
@@ -630,19 +630,19 @@
       });
       return false;
     });
-    /*
-    # =============================================================================
-    #   Popover JS
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Popover JS
+     * =============================================================================
+     */
     $('#popover').popover();
-    /*
-    # =============================================================================
-    #   Fancybox Modal
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Fancybox Modal
+     * =============================================================================
+     */
     $(".fancybox").fancybox({
       maxWidth: 700,
       height: 'auto',
@@ -657,12 +657,12 @@
         }
       }
     });
-    /*
-    # =============================================================================
-    #   Morris Chart JS
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Morris Chart JS
+     * =============================================================================
+     */
     $(window).resize(function(e) {
       var morrisResize;
       clearTimeout(morrisResize);
@@ -852,26 +852,26 @@
         });
       }
     };
-    /*
-    # =============================================================================
-    #   Select2
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Select2
+     * =============================================================================
+     */
     $('.select2able').select2();
-    /*
-    # =============================================================================
-    #   Isotope with Masonry
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Isotope with Masonry
+     * =============================================================================
+     */
     $alpha = $('#hidden-items');
     $container2 = $('#social-container');
     $(window).load(function() {
-      /*
-      # init isotope, then insert all items from hidden alpha
-      */
 
+      /*
+       * init isotope, then insert all items from hidden alpha
+       */
       $container2.isotope({
         itemSelector: '.item'
       }).isotope('insert', $alpha.find('.item'));
@@ -886,12 +886,12 @@
       tmp = $().add(item1).add(item2).add(item3);
       return $container2.isotope('insert', tmp);
     });
-    /*
-    # =============================================================================
-    #   WYSIWYG Editor
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   WYSIWYG Editor
+     * =============================================================================
+     */
     if ($('#summernote').length) {
       $('#summernote').summernote({
         height: 300,
@@ -899,12 +899,12 @@
         toolbar: [['style', ['style']], ['style', ['bold', 'italic', 'underline', 'clear']], ['fontsize', ['fontsize']], ['color', ['color']], ['para', ['ul', 'ol', 'paragraph']], ['height', ['height']], ['insert', ['picture', 'link']], ['table', ['table']], ['fullscreen', ['fullscreen']]]
       });
     }
-    /*
-    # =============================================================================
-    #   Typeahead
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Typeahead
+     * =============================================================================
+     */
     if ($('.typeahead').length) {
       $(".states.typeahead").typeahead({
         name: "states",
@@ -915,19 +915,19 @@
         local: ["Andorra", "United Arab Emirates", "Afghanistan", "Antigua and Barbuda", "Anguilla", "Albania", "Armenia", "Angola", "Antarctica", "Argentina", "American Samoa", "Austria", "Australia", "Aruba", "Ã…land", "Azerbaijan", "Bosnia and Herzegovina", "Barbados", "Bangladesh", "Belgium", "Burkina Faso", "Bulgaria", "Bahrain", "Burundi", "Benin", "Saint BarthÃ©lemy", "Bermuda", "Brunei", "Bolivia", "Bonaire", "Brazil", "Bahamas", "Bhutan", "Bouvet Island", "Botswana", "Belarus", "Belize", "Canada", "Cocos [Keeling] Islands", "Congo", "Central African Republic", "Republic of the Congo", "Switzerland", "Ivory Coast", "Cook Islands", "Chile", "Cameroon", "China", "Colombia", "Costa Rica", "Cuba", "Cape Verde", "Curacao", "Christmas Island", "Cyprus", "Czechia", "Germany", "Djibouti", "Denmark", "Dominica", "Dominican Republic", "Algeria", "Ecuador", "Estonia", "Egypt", "Western Sahara", "Eritrea", "Spain", "Ethiopia", "Finland", "Fiji", "Falkland Islands", "Micronesia", "Faroe Islands", "France", "Gabon", "United Kingdom", "Grenada", "Georgia", "French Guiana", "Guernsey", "Ghana", "Gibraltar", "Greenland", "Gambia", "Guinea", "Guadeloupe", "Equatorial Guinea", "Greece", "South Georgia and the South Sandwich Islands", "Guatemala", "Guam", "Guinea-Bissau", "Guyana", "Hong Kong", "Heard Island and McDonald Islands", "Honduras", "Croatia", "Haiti", "Hungary", "Indonesia", "Ireland", "Israel", "Isle of Man", "India", "British Indian Ocean Territory", "Iraq", "Iran", "Iceland", "Italy", "Jersey", "Jamaica", "Jordan", "Japan", "Kenya", "Kyrgyzstan", "Cambodia", "Kiribati", "Comoros", "Saint Kitts and Nevis", "North Korea", "South Korea", "Kuwait", "Cayman Islands", "Kazakhstan", "Laos", "Lebanon", "Saint Lucia", "Liechtenstein", "Sri Lanka", "Liberia", "Lesotho", "Lithuania", "Luxembourg", "Latvia", "Libya", "Morocco", "Monaco", "Moldova", "Montenegro", "Saint Martin", "Madagascar", "Marshall Islands", "Macedonia", "Mali", "Myanmar [Burma]", "Mongolia", "Macao", "Northern Mariana Islands", "Martinique", "Mauritania", "Montserrat", "Malta", "Mauritius", "Maldives", "Malawi", "Mexico", "Malaysia", "Mozambique", "Namibia", "New Caledonia", "Niger", "Norfolk Island", "Nigeria", "Nicaragua", "Netherlands", "Norway", "Nepal", "Nauru", "Niue", "New Zealand", "Oman", "Panama", "Peru", "French Polynesia", "Papua New Guinea", "Philippines", "Pakistan", "Poland", "Saint Pierre and Miquelon", "Pitcairn Islands", "Puerto Rico", "Palestine", "Portugal", "Palau", "Paraguay", "Qatar", "RÃ©union", "Romania", "Serbia", "Russia", "Rwanda", "Saudi Arabia", "Solomon Islands", "Seychelles", "Sudan", "Sweden", "Singapore", "Saint Helena", "Slovenia", "Svalbard and Jan Mayen", "Slovakia", "Sierra Leone", "San Marino", "Senegal", "Somalia", "Suriname", "South Sudan", "SÃ£o TomÃ© and PrÃ­ncipe", "El Salvador", "Sint Maarten", "Syria", "Swaziland", "Turks and Caicos Islands", "Chad", "French Southern Territories", "Togo", "Thailand", "Tajikistan", "Tokelau", "East Timor", "Turkmenistan", "Tunisia", "Tonga", "Turkey", "Trinidad and Tobago", "Tuvalu", "Taiwan", "Tanzania", "Ukraine", "Uganda", "U.S. Minor Outlying Islands", "United States", "Uruguay", "Uzbekistan", "Vatican City", "Saint Vincent and the Grenadines", "Venezuela", "British Virgin Islands", "U.S. Virgin Islands", "Vietnam", "Vanuatu", "Wallis and Futuna", "Samoa", "Kosovo", "Yemen", "Mayotte", "South Africa", "Zambia", "Zimbabwe"]
       });
     }
-    /*
-    # =============================================================================
-    #   Form Input Masks
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Form Input Masks
+     * =============================================================================
+     */
     $(":input").inputmask();
-    /*
-    # =============================================================================
-    #   Validation
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Validation
+     * =============================================================================
+     */
     $("#validate-form").validate({
       rules: {
         firstname: "required",
@@ -969,12 +969,12 @@
         email: "Please enter a valid email address"
       }
     });
-    /*
-    # =============================================================================
-    #   Drag and drop files
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Drag and drop files
+     * =============================================================================
+     */
     $(".single-file-drop").each(function() {
       var $dropbox;
       $dropbox = $(this);
@@ -1003,12 +1003,12 @@
         return false;
       };
     });
-    /*
-    # =============================================================================
-    #   Datepicker
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Datepicker
+     * =============================================================================
+     */
     $('.datepicker').datepicker();
     nowTemp = new Date();
     now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
@@ -1041,12 +1041,12 @@
     }).on("changeDate", function(ev) {
       return checkout.hide();
     }).data("datepicker");
-    /*
-    # =============================================================================
-    #   Daterange Picker
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Daterange Picker
+     * =============================================================================
+     */
     $(".date-range").daterangepicker({
       format: "MM/dd/yyyy",
       separator: " to ",
@@ -1057,12 +1057,12 @@
       minDate: "01/01/2012",
       maxDate: "12/31/2014"
     });
-    /*
-    # =============================================================================
-    #   Timepicker
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Timepicker
+     * =============================================================================
+     */
     $("#timepicker-default").timepicker();
     $("#timepicker-24h").timepicker({
       minuteStep: 1,
@@ -1087,12 +1087,12 @@
     });
     $("#cp2").colorpicker();
     $("#cp3").colorpicker();
-    /*
-    # =============================================================================
-    #   Skycons
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Skycons
+     * =============================================================================
+     */
     $('.skycons-element').each(function() {
       var canvasId, skycons, weatherSetting;
       skycons = new Skycons({
@@ -1103,28 +1103,28 @@
       skycons.add(canvasId, Skycons[weatherSetting]);
       return skycons.play();
     });
-    /*
-    # =============================================================================
-    #   Login/signup animation
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Login/signup animation
+     * =============================================================================
+     */
     $(window).load(function() {
       return $(".login-container").addClass("active");
     });
-    /*
-    # =============================================================================
-    #   FitVids
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   FitVids
+     * =============================================================================
+     */
     $(".timeline-content").fitVids();
-    /*
-    # =============================================================================
-    #   Timeline animation
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Timeline animation
+     * =============================================================================
+     */
     timelineAnimate = function(elem) {
       return $(".timeline.animated li").each(function(i) {
         var bottom_of_object, bottom_of_window;
@@ -1139,12 +1139,12 @@
     $(window).scroll(function() {
       return timelineAnimate();
     });
-    /*
-    # =============================================================================
-    #   Input placeholder fix
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Input placeholder fix
+     * =============================================================================
+     */
     if (!Modernizr.input.placeholder) {
       $("[placeholder]").focus(function() {
         var input;
@@ -1171,12 +1171,12 @@
         });
       });
     }
-    /*
-    # =============================================================================
-    #   Ladda loading buttons
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Ladda loading buttons
+     * =============================================================================
+     */
     Ladda.bind(".ladda-button:not(.progress-demo)", {
       timeout: 2000
     });
@@ -1194,22 +1194,22 @@
         }, 200);
       }
     });
-    /*
-    # =============================================================================
-    #   Dropzone File Upload
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Dropzone File Upload
+     * =============================================================================
+     */
     Dropzone.options.dropzoneDemo = {
       paramName: "upload[file]",
       addRemoveLinks: true
     };
-    /*
-    # =============================================================================
-    #   Nestable
-    # =============================================================================
-    */
 
+    /*
+     * =============================================================================
+     *   Nestable
+     * =============================================================================
+     */
     if ($('.nestable-list').length) {
       updateOutput = function(e) {
         var list, output;
