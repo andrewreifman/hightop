@@ -139,7 +139,7 @@
     # =============================================================================
     */
 
-    var $alpha, $container, $container2, addEvent, buildMorris, checkin, checkout, d, date, handleDropdown, initDrag, m, now, nowTemp, timelineAnimate, y;
+    var $alpha, $container, $container2, addEvent, buildMorris, checkin, checkout, d, date, handleDropdown, initDrag, m, now, nowTemp, timelineAnimate, updateOutput, y;
     $("#barcharts").sparkline([190, 220, 210, 220, 220, 260, 300, 220, 240, 240, 220, 200, 240, 260, 210], {
       type: "bar",
       height: "100",
@@ -1200,10 +1200,48 @@
     # =============================================================================
     */
 
-    return Dropzone.options.dropzoneDemo = {
+    Dropzone.options.dropzoneDemo = {
       paramName: "upload[file]",
       addRemoveLinks: true
     };
+    /*
+    # =============================================================================
+    #   Nestable
+    # =============================================================================
+    */
+
+    if ($('.nestable-list').length) {
+      updateOutput = function(e) {
+        var list, output;
+        list = (e.length ? e : $(e.target));
+        output = list.data("output");
+        if (window.JSON) {
+          return output.val(window.JSON.stringify(list.nestable("serialize")));
+        } else {
+          return output.val("JSON browser support required for this demo.");
+        }
+      };
+      $("#nestable").nestable({
+        group: 1
+      }).on("change", updateOutput);
+      $("#nestable2").nestable({
+        group: 1
+      }).on("change", updateOutput);
+      updateOutput($("#nestable").data("output", $("#nestable-output")));
+      updateOutput($("#nestable2").data("output", $("#nestable2-output")));
+    }
+    $("#nestable-menu").on("click", function(e) {
+      var action, target;
+      target = $(e.target);
+      action = target.data("action");
+      if (action === "expand-all") {
+        $(".dd").nestable("expandAll");
+      }
+      if (action === "collapse-all") {
+        return $(".dd").nestable("collapseAll");
+      }
+    });
+    return $("#nestable3").nestable();
   });
 
 }).call(this);

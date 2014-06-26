@@ -27,7 +27,7 @@
             span aria-hidden="true" class="se7en-envelope"
             .sr-only Messages
             p.counter 3
-          ul.dropdown-menu.messages
+          ul.dropdown-menu
             li= link_to
               = image_tag "avatar-male2.png", width: "34", height: "34"
               | Could we meet today? I wanted...
@@ -119,7 +119,7 @@
             li= link_to 'dropzone-file-upload.html', class: cp('dropzone-file-upload.html') do
               .notifications.label.label-warning New
               p Dropzone File Upload
-        
+
         li.dropdown *{ class: "#{cp 'tables.html'}" }
           = link_to "#", "data-toggle" => "dropdown", class: "dropdown-toggle" && cp('tables.html') || cp('datatables.html') || cp('datatables-editable.html') do
             span aria-hidden="true" class="se7en-tables"
