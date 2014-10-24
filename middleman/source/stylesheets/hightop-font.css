@@ -75,6 +75,6 @@ you can use the generic selector below, but it's slower:
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
   font-family: 'hightop';
-  src: url('../font/hightop.svg#hightop') format('svg');
+  src: url('../fonts/hightop.svg#hightop') format('svg');
   }
 }
