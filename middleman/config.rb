@@ -25,6 +25,10 @@ page "signup2.html", :layout => false
 page "404-page.html", :layout => false
 page "500-page.html", :layout => false
 page "docs/index.html", :layout => false
+page "respond-perfect/questions-index.html", :layout => false
+page "respond-perfect/questions-detail.html", :layout => false
+page "respond-perfect/slides-index.html", :layout => false
+page "respond-perfect/slides-detail.html", :layout => false
 #
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout

@@ -1,0 +1,437 @@
+doctype html
+html
+  head
+    title Respond Perfect - Questions
+
+    link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all"
+    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="all"
+    link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" media="all"
+    = stylesheet_link_tag "style", media: "all"
+    link rel="stylesheet" href="respond-perfect.css" media="all"
+
+    script src="http://code.jquery.com/jquery-1.10.2.min.js"
+    script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"
+    script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
+    = javascript_include_tag "modernizr.custom"
+    = javascript_include_tag "main"
+
+    meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
+
+  body.page-header-fixed.bg-1
+    .modal-shiftfix
+
+      .navbar.navbar-fixed-top
+        .container-fluid
+          .pull-right
+            a.export-btn.btn.btn-primary.btn-lg.pull-right href="#"
+              i.fa.fa-cloud-upload
+              span Export
+
+            .dropdown.notifications
+              a.dropdown-toggle data-toggle="dropdown" href="#"
+                i.fa.fa-bell
+                .sr-only Notifications
+                p.counter 4
+              ul.dropdown-menu.dropdown-menu-right
+                li= link_to
+                  p New user added: Jane Smith
+                li= link_to
+                  p Sales targets available
+
+          button.navbar-toggle
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+
+          a.back-btn.btn.btn-default-outline href="#"
+            i.fa.fa-long-arrow-left
+            span Back
+
+          h3.text-primary Questions
+
+
+      .container-fluid.main-content
+
+        .widget-container.questions-list.with-filters.open
+          .heading
+            .row
+              .col-md-5.col-sm-6
+                .input-group
+                  .input-group-btn
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      | Filter
+                      span.caret
+                    ul.dropdown-menu role="menu"
+                      li
+                        a href="#"  Action
+                      li
+                        a href="#"  Another action
+                      li
+                        a href="#"  Something else here
+                  input.form-control type="text"
+                  .input-group-btn
+                    button.btn.btn-info
+                      i.fa.fa-search
+
+              .pull-right
+                a.btn.btn-warning href="#"
+                  span.badge.pull-right 22
+                  | My Questions
+
+                button.add-question-btn.btn.btn-primary
+                  i.fa.fa-plus
+
+            .row.filter-tags
+              .col-lg-12
+                span.label.label-default
+                  | John Smith
+                  button.close
+                    span aria-hidden="true" &times;
+
+                span.label.label-default
+                  | Jamie Rogers
+                  button.close
+                    span aria-hidden="true" &times;
+
+                span.label.label-success
+                  | Complete
+                  button.close
+                    span aria-hidden="true" &times;
+
+                span.label.label-danger
+                  | Overdue
+                  button.close
+                    span aria-hidden="true" &times;
+
+
+          .widget-content
+            table.table
+              thead
+                th width="10"
+                th width="10"
+                th width="10"
+                th width="40"
+                th Question
+                th Assigned to
+                th align="right" Due date
+                th width="40"
+              tbody
+                tr
+                  td.status.complete
+                    span
+                  td.message-notice
+                    span
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+                    span
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status.overdue
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+                    span
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status.complete
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status.complete
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+
+
+        .question-detail-wrapper
+          .question-detail
+
+            h2
+              | Aliquam tincidunt mauris eu risus esti bulum auctor dapibus neque?
+              button.close
+                span aria-hidden="true" &times;
+
+            ul#tabs.nav.nav-tabs data-tabs="tabs"
+              li.active
+                a data-toggle="tab" href="#details"
+                  span Details
+              li
+                a data-toggle="tab" href="#related"
+                  span Related
+              li
+                a data-toggle="tab" href="#comments"
+                  span Comments
+                  span.badge 3
+              li
+                a data-toggle="tab" href="#collaborators"
+                  span Collaborators
+
+            .question-tabs.tab-content
+              #details.tab-pane.active
+                button.btn.btn-default.btn-sm.follow-btn
+                  span Follow
+                  i.fa.fa-plus
+
+                form.answer-field action="#"
+                  button.btn.btn-default-outline.pull-right.attachment-btn
+                    i.fa.fa-paperclip
+                  .form-group
+                    label.control-label Answer
+                    textarea.form-control rows="3"
+
+                h4 Type
+                p Accounting
+
+                h4 Status
+                p
+                  .pull-right
+                    button.btn.btn-success.btn-sm Accept
+                    button.btn.btn-danger.btn-sm Reject
+                  | Complete
+
+                h4 Assigned to
+                p
+                  img.img-circle.avatar src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" width="30"
+                  | Brad Frost
+
+                h4 Due date
+                p October 24, 2014
+
+                h4 Date assigned
+                p October 10, 2014
+
+              #related.tab-pane
+                #accordion.panel-group
+                  .panel
+                    .panel-heading
+                      .panel-title
+                        a.accordion-toggle.collapsed data-parent="#accordion" data-toggle="collapse" href="#collapseOne"
+                          .caret.pull-right
+                          | Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam?
+                    #collapseOne.panel-collapse.collapse
+                      .panel-body
+                        p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+
+                        button.btn.btn-primary.btn-sm Use this answer
+
+                  .panel
+                    .panel-heading
+                      .panel-title
+                        a.accordion-toggle.collapsed data-parent="#accordion" data-toggle="collapse" href="#collapseTwo"
+                          .caret.pull-right
+                          | Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat?
+                    #collapseTwo.panel-collapse.collapse
+                      .panel-body
+                        p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+
+                        button.btn.btn-primary.btn-sm Use this answer
+
+                  .panel
+                    .panel-heading
+                      .panel-title
+                        a.accordion-toggle.collapsed data-parent="#accordion" data-toggle="collapse" href="#collapseThree"
+                          .caret.pull-right
+                          | Aliquam quam lectus facilisis auctor ultrices ut elementum
+                    #collapseThree.panel-collapse.collapse
+                      .panel-body
+                        p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+
+                        button.btn.btn-primary.btn-sm Use this answer
+
+              #comments.tab-pane
+                ul
+                  li
+                    img.img-circle.avatar.pull-left src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" width="30"
+                    .comment-info
+                      h3 Brad Frost
+                      em October 10, 2014
+                      p Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Donec odio. Quis que volutpat mattis eros.
+                  li
+                    img.img-circle.avatar.pull-left src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" width="30"
+                    .comment-info
+                      h3 Brad Frost
+                      em October 10, 2014
+                      p Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Donec odio. Quis que volutpat mattis eros.
+                  li
+                    img.img-circle.avatar.pull-left src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" width="30"
+                    .comment-info
+                      h3 Brad Frost
+                      em October 10, 2014
+                      p Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Donec odio. Quis que volutpat mattis eros.
+
+                .input-group
+                  input.form-control type="text" placeholder="Add a comment"
+                  .input-group-btn
+                    button.btn.btn-info Add
+
+              #collaborators.tab-pane
+                .input-group
+                  input.form-control type="text" placeholder="Search"
+                  .input-group-btn
+                    button.btn.btn-info
+                      i.fa.fa-search
+
+                ul
+                  li
+                    a href="#"
+                      img.img-circle.avatar src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" width="40"
+                      | Brad Frost
+                  li
+                    a href="#"
+                      img.img-circle.avatar src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" width="40"
+                      | Brad Frost
+                  li
+                    a href="#"
+                      img.img-circle.avatar src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" width="40"
+                      | Brad Frost

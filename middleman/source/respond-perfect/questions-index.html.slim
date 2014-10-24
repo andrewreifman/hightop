@@ -1,0 +1,294 @@
+doctype html
+html
+  head
+    title Respond Perfect - Questions
+
+    link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all"
+    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="all"
+    link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" media="all"
+    = stylesheet_link_tag "style", media: "all"
+    link rel="stylesheet" href="respond-perfect.css" media="all"
+
+    script src="http://code.jquery.com/jquery-1.10.2.min.js"
+    script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"
+    script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
+    = javascript_include_tag "modernizr.custom"
+    = javascript_include_tag "main"
+
+    meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
+
+  body.page-header-fixed.bg-1
+    .modal-shiftfix
+
+      .navbar.navbar-fixed-top
+        .container-fluid
+          .pull-right
+            a.export-btn.btn.btn-primary.btn-lg.pull-right href="#"
+              i.fa.fa-cloud-upload
+              span Export
+
+            .dropdown.notifications
+              a.dropdown-toggle data-toggle="dropdown" href="#"
+                i.fa.fa-bell
+                .sr-only Notifications
+                p.counter 4
+              ul.dropdown-menu.dropdown-menu-right
+                li= link_to
+                  p New user added: Jane Smith
+                li= link_to
+                  p Sales targets available
+
+          button.navbar-toggle
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+
+          a.back-btn.btn.btn-default-outline href="#"
+            i.fa.fa-long-arrow-left
+            span Back
+
+          h3.text-primary Questions
+
+
+      .container-fluid.main-content
+
+        .widget-container.questions-list.with-filters
+          .heading
+            .row
+              .col-md-5.col-sm-6
+                .input-group
+                  .input-group-btn
+                    button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                      | Filter
+                      span.caret
+                    ul.dropdown-menu role="menu"
+                      li
+                        a href="#"  Action
+                      li
+                        a href="#"  Another action
+                      li
+                        a href="#"  Something else here
+                  input.form-control type="text"
+                  .input-group-btn
+                    button.btn.btn-info
+                      i.fa.fa-search
+
+              .pull-right
+                a.btn.btn-warning href="#"
+                  span.badge.pull-right 22
+                  | My Questions
+
+                button.add-question-btn.btn.btn-primary
+                  i.fa.fa-plus
+
+            .row.filter-tags
+              .col-lg-12
+                span.label.label-default
+                  | John Smith
+                  button.close
+                    span aria-hidden="true" &times;
+
+                span.label.label-default
+                  | Jamie Rogers
+                  button.close
+                    span aria-hidden="true" &times;
+
+                span.label.label-success
+                  | Complete
+                  button.close
+                    span aria-hidden="true" &times;
+
+                span.label.label-danger
+                  | Overdue
+                  button.close
+                    span aria-hidden="true" &times;
+
+
+          .widget-content
+            table.table
+              thead
+                th width="10"
+                th width="10"
+                th width="10"
+                th width="40"
+                th Question
+                th Assigned to
+                th align="right" Due date
+                th width="40"
+              tbody
+                tr
+                  td.status.complete
+                    span
+                  td.message-notice
+                    span
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+                    span
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status.overdue
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+                    span
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status.complete
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status.complete
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip
+                tr
+                  td.status
+                    span
+                  td.message-notice
+
+                  td
+                    label.checkbox
+                      input type="checkbox"
+                      span
+                  td.favorite
+                    i.fa.fa-star-o
+                  td Lorem ipsum dolor sit amet, consectetuer adipiscing elit?
+                  td John Smith
+                  td 10/20/2014
+                  td
+                    i.fa.fa-paperclip

@@ -21,7 +21,7 @@
 
 .dd-item > button { display: block; position: relative; cursor: pointer; float: left; width: 25px; height: 20px; margin: 5px 0; padding: 0; text-indent: 100%; white-space: nowrap; overflow: hidden; border: 0; background: transparent; font-size: 12px; line-height: 1; text-align: center; font-weight: bold; }
 .dd-item > button:before { content: '+'; display: block; position: absolute; width: 100%; text-align: center; text-indent: 0; }
-.dd-item > button[data-action="collapse"]:before { content: '—'; }
+.dd-item > button[data-action="collapse"]:before { content: '\2014'; }
 
 .dd-placeholder,
 .dd-empty { margin: 5px 0; padding: 0; min-height: 30px; background: #f2fbff; border: 1px dashed #b6bcbf;}
@@ -46,10 +46,10 @@
 
 .nestable-output {
   margin-bottom: 10px;
-  width: 100%; 
-  height: 7em; 
-  font-size: 0.75em; 
-  line-height: 1.333333em; 
+  width: 100%;
+  height: 7em;
+  font-size: 0.75em;
+  line-height: 1.333333em;
   font-family: Consolas, monospace; padding: 5px;
 }
 
@@ -77,12 +77,12 @@
 
 .dd3-item > button { margin-left: 34px; }
 
-.dd3-handle { 
-  position: absolute; 
-  margin: 0; 
-  left: 0; 
-  top: 0; 
-  cursor: move; 
+.dd3-handle {
+  position: absolute;
+  margin: 0;
+  left: 0;
+  top: 0;
+  cursor: move;
   width: 34px;
   font-size: 14px;
   color: #777;
@@ -90,7 +90,7 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
-.dd3-handle:hover { 
+.dd3-handle:hover {
   background: #ebebeb;
   color: #999;
 }

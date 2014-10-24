@@ -1,0 +1,214 @@
+doctype html
+html
+  head
+    title Respond Perfect - Questions
+
+    link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all"
+    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="all"
+    link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" media="all"
+    = stylesheet_link_tag "style", media: "all"
+    link rel="stylesheet" href="respond-perfect.css" media="all"
+
+    script src="http://code.jquery.com/jquery-1.10.2.min.js"
+    script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"
+    script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
+    = javascript_include_tag "modernizr.custom"
+
+    script src="main.js"
+
+    meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
+
+  body.page-header-fixed.bg-1
+    .modal-shiftfix
+
+      .navbar.navbar-fixed-top
+        .container-fluid
+          .navbar-buttons.pull-right
+            a.btn.btn-primary.btn-lg.pull-right href="#"
+              i.fa.fa-archive
+              span Package
+
+            a.btn.btn-default-outline.btn-lg.pull-right href="#"
+              i.fa.fa-eye
+              span Preview
+
+            .dropdown.notifications
+              a.dropdown-toggle data-toggle="dropdown" href="#"
+                i.fa.fa-bell
+                .sr-only Notifications
+                p.counter 4
+              ul.dropdown-menu.dropdown-menu-right
+                li= link_to
+                  p New user added: Jane Smith
+                li= link_to
+                  p Sales targets available
+
+          button.navbar-toggle
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+
+          a.back-btn.btn.btn-default-outline href="#"
+            i.fa.fa-long-arrow-left
+            span Back
+
+          h3.text-primary Slide Deck Name
+
+
+      .container-fluid.main-content.slides-main
+
+        .slide-deck
+          .heading.clearfix
+            h2
+              i.fa.fa-files-o
+              | Deck
+
+            .input-group
+              .input-group-btn
+                button.btn.btn-default.dropdown-toggle data-toggle="dropdown" type="button"
+                  | Filter
+                  span.caret
+                ul.dropdown-menu role="menu"
+                  li
+                    a href="#"  Action
+                  li
+                    a href="#"  Another action
+                  li
+                    a href="#"  Something else here
+              input.form-control type="text"
+              .input-group-btn
+                button.btn.btn-info
+                  i.fa.fa-search
+
+          .slides-carousel
+            .prev
+              i.fa.fa-angle-left
+            .next
+              i.fa.fa-angle-right
+
+            .slide.status-complete
+              img src="http://placehold.it/270x196"
+              = partial "slide_overlay.html"
+
+            .slide.status-overdue
+              img src="http://placehold.it/270x196"
+              = partial "slide_overlay.html"
+
+            .slide
+              img src="http://placehold.it/270x196"
+              = partial "slide_overlay.html"
+
+
+        .widget-container.scrollable.incoming-content
+          .heading
+            i.fa.fa-inbox
+            | Incoming content
+
+          .widget-content
+            .slide
+              img.img-responsive src="http://placehold.it/300x200"
+              = partial "slide_overlay_sm.html"
+            .slide
+              img.img-responsive src="http://placehold.it/300x200"
+              = partial "slide_overlay_sm.html"
+            .slide
+              img.img-responsive src="http://placehold.it/300x200"
+              = partial "slide_overlay_sm.html"
+            .slide
+              img.img-responsive src="http://placehold.it/300x200"
+              = partial "slide_overlay_sm.html"
+            .slide
+              img.img-responsive src="http://placehold.it/300x200"
+              = partial "slide_overlay_sm.html"
+            .slide
+              img.img-responsive src="http://placehold.it/300x200"
+              = partial "slide_overlay_sm.html"
+
+        .slide-library
+          .widget-container.scrollable
+            .heading
+              .pull-right
+                button.btn.btn-primary
+                  i.fa.fa-upload>
+                  | Upload
+
+                .size-slider
+                  i.fa.fa-image.sm
+                  .slider
+                  i.fa.fa-image.lg
+
+                .input-group
+                  input.form-control type="text" placeholder="Search"
+                  .input-group-btn
+                    button.btn.btn-info
+                      i.fa.fa-search
+
+              i.fa.fa-th-large
+              | Library
+
+            .widget-content
+              .row
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"
+                .col-sm-6.col-md-4.col-lg-3
+                  .slide
+                    img.img-responsive src="http://placehold.it/300x200"
+                    = partial "slide_overlay_sm.html"

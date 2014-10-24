@@ -1111,15 +1111,15 @@ th:active {
     width: 100%;
     font-weight: 400;
     margin: 0; }
-    .widget-container .heading [class^="fa"], .widget-container .heading [class*="fa"] {
+    .widget-container .heading [class^="fa-"], .widget-container .heading [class*="fa-"] {
       margin-right: 10px;
       font-size: 14px; }
-      .widget-container .heading [class^="fa"].pull-right, .widget-container .heading [class*="fa"].pull-right {
+      .widget-container .heading [class^="fa-"].pull-right, .widget-container .heading [class*="fa-"].pull-right {
         margin-right: 0px;
         margin-left: 15px;
         opacity: 0.35;
         font-size: 1.1em; }
-      .widget-container .heading [class^="fa"]:hover, .widget-container .heading [class*="fa"]:hover {
+      .widget-container .heading [class^="fa-"]:hover, .widget-container .heading [class*="fa-"]:hover {
         cursor: pointer;
         opacity: 1; }
   .widget-container .tabs {

@@ -1,0 +1,169 @@
+doctype html
+html
+  head
+    title Respond Perfect - Questions
+
+    link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all"
+    link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" media="all"
+    link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" media="all"
+    = stylesheet_link_tag "style", media: "all"
+    link rel="stylesheet" href="respond-perfect.css" media="all"
+
+    script src="http://code.jquery.com/jquery-1.10.2.min.js"
+    script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"
+    script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
+    = javascript_include_tag "modernizr.custom"
+
+    script src="main.js"
+
+    meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"
+
+  body.page-header-fixed.bg-1
+    .modal-shiftfix
+
+      .navbar.navbar-fixed-top
+        .container-fluid
+          .navbar-buttons.pull-right
+            a.btn.btn-primary.btn-lg.pull-right href="#"
+              i.fa.fa-archive
+              span Package
+
+            a.btn.btn-default-outline.btn-lg.pull-right href="#"
+              i.fa.fa-eye
+              span Preview
+
+            .dropdown.notifications
+              a.dropdown-toggle data-toggle="dropdown" href="#"
+                i.fa.fa-bell
+                .sr-only Notifications
+                p.counter 4
+              ul.dropdown-menu.dropdown-menu-right
+                li= link_to
+                  p New user added: Jane Smith
+                li= link_to
+                  p Sales targets available
+
+          button.navbar-toggle
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+
+          a.back-btn.btn.btn-default-outline href="#"
+            i.fa.fa-long-arrow-left
+            span Back
+
+          h3.text-primary Slide Deck Name
+
+
+      .container-fluid.main-content.slides-detail
+
+        .slide-detail-left
+          .actions.clearfix
+            button.close.pull-left
+              span aria-hidden="true" &times;
+
+            p.annotate-label.pull-left Click and drag to annotate
+
+            .action-buttons.pull-right
+              span.dropdown
+                a.btn.btn-sm.btn-default-outline.dropdown-toggle href="#" data-toggle="dropdown" type="button"
+                  | v3 – 7/31/2014
+                  span.caret
+                ul.dropdown-menu.dropdown-menu-right
+                  li role="presentation"
+                    a href="#" role="menuitem" tabindex="-1"
+                      | v2 - 7/20/2014
+                  li role="presentation"
+                    a href="#" role="menuitem" tabindex="-1"
+                      | v1 - 7/18/2014
+
+              a.btn.btn-sm.btn-default-outline.active href="#"
+                i.fa.fa-file-text-o
+              a.btn.btn-sm.btn-default-outline href="#"
+                i.fa.fa-star-o
+
+              span.dropdown
+                a.btn.btn-sm.btn-default-outline.dropdown-toggle href="#" data-toggle="dropdown" type="button"
+                  i.fa.fa-bars
+                ul.dropdown-menu.dropdown-menu-right
+                  li role="presentation"
+                    a href="#" role="menuitem" tabindex="-1" Edit
+                  li role="presentation"
+                    a href="#" role="menuitem" tabindex="-1" Related content
+                  li role="presentation"
+                    a href="#" role="menuitem" tabindex="-1" Delete
+
+          .main-image
+            .prev
+              i.fa.fa-angle-left
+            .next
+              i.fa.fa-angle-right
+
+            img.img-responsive src="http://placehold.it/1200x800"
+
+          .slide-thumbs
+            .slide-thumbs-inner
+              .prev
+                i.fa.fa-angle-left
+
+              a href="#"
+                img src="http://placehold.it/100x70"
+              a.selected href="#"
+                img src="http://placehold.it/100x70"
+              a href="#"
+                img src="http://placehold.it/100x70"
+              a href="#"
+                img src="http://placehold.it/100x70"
+              a href="#"
+                img src="http://placehold.it/100x70"
+              a href="#"
+                img src="http://placehold.it/100x70"
+
+              .next
+                i.fa.fa-angle-right
+
+        .slide-detail-right
+          h2 Slide Title
+          p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis consectetur sed, voluptatum minus facilis saepe neque, asperiores qui sunt quasi dicta fugit eum atque sapiente vitae quia eligendi.
+
+          h4 Assigned to
+          p
+            a href="#"
+              img.img-circle.avatar src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" width="30"
+              | Brad Frost
+
+          h4 Due date
+          p October 24, 2014
+
+          h4 Status
+          p
+            .pull-right
+              button.btn.btn-success.btn-sm Accept
+              button.btn.btn-danger.btn-sm Reject
+            | Complete
+
+          ul.comments
+            h4 Comments
+            li
+              img.img-circle.avatar.pull-left src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" width="30"
+              .comment-info
+                h3 Brad Frost
+                em October 10, 2014
+                p Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Donec odio. Quis que volutpat mattis eros.
+            li
+              img.img-circle.avatar.pull-left src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" width="30"
+              .comment-info
+                h3 Brad Frost
+                em October 10, 2014
+                p Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Donec odio. Quis que volutpat mattis eros.
+            li
+              img.img-circle.avatar.pull-left src="https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg" width="30"
+              .comment-info
+                h3 Brad Frost
+                em October 10, 2014
+                p Lorem ipsum dolor sit amet, consec tetuer adipiscing elit. Donec odio. Quis que volutpat mattis eros.
+
+          .input-group
+            input.form-control type="text" placeholder="Add a comment"
+            .input-group-btn
+              button.btn.btn-info Add
